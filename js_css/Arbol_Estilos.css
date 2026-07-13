@@ -1,0 +1,212 @@
+ /****  ul, li, y hidden que es el formato que hace que se oculte o visualice los nodos del arbol.  ****/ 
+
+     ul {
+            list-style-type: none; /* Elimina los iconos predeterminados de <li> */
+            padding-left: 5px;
+        }
+
+     li {           
+            padding-left: 5px;
+        }
+
+
+    .hidden {
+            display: none;
+        } 
+       
+    .header {
+            background: #2635b7;
+            padding: 10px;    
+            color: white;        
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+/**** otros  ****/ 
+  
+       .tree {
+            list-style: none;
+            padding-left: 0px;
+            position: relative;
+            overflow: auto;
+            }
+
+      .tree-node {            
+            cursor: pointer;
+            padding: 0px;
+            display: inline-block;
+            align-items: left;
+            position: relative;
+            /*left: -10px;*/
+        }
+
+       .tree-node:hover, .selected { background: #cde8f1; }
+ 
+
+     
+       /* formatos de la carpeta y el nombre*/
+
+       .folder {
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0px;
+            align-items: left;
+            position: relative;
+            left: 0px;
+            /*margin-right: 5px;*/
+   
+        }
+        .folder:hover, .selected { background: #b9e7f4;}
+
+     /* Estilo para que el cursor indique que es interactivo */
+       .folder, .tree-node {
+             cursor: pointer;
+             display: flex;
+             /* align-items: center;
+             gap: 5px; */
+ 
+         }
+
+
+
+       .Arbol_Codigo {
+             font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman';              
+             display: inline-block;            
+        }
+
+
+       .Arbol_Nombre {            
+             font-weight: bold;
+             cursor:pointer;
+	     color: purple;
+	     font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman'; 	
+	     background-color: transparent;
+             display: inline-block;	
+        }
+    
+     .Arbol_Nombre_1 {            
+             font-weight: bold;
+             cursor:pointer;
+	     color: #BF0202; /*purple;*/
+	     font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman'; 	
+	     background-color: transparent;
+             display: inline-block;	
+        }
+
+      .Arbol_Nombre_1_verde {            
+             font-weight: bold;
+             cursor:pointer;
+	     color:#008080; /* #2E8B57; #008B8B;*/
+	     font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman'; 	
+	     background-color: transparent;
+             display: inline-block;	
+        }
+
+       .Arbol_Nombre_1_naranja {            
+             font-weight: bold;
+             cursor:pointer;
+	     color: #E36A10;
+	     font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman'; 	
+	     background-color: transparent;
+             display: inline-block;	
+        }
+
+      .Arbol_Nombre_1_blue {            
+             font-weight: bold;
+             cursor:pointer;
+	     color: navy;
+	     font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman'; 	
+	     background-color: transparent;
+             display: inline-block;	
+        }
+
+
+       .Arbol_Nombre_2 {            
+             font-weight: bold;
+             cursor:pointer;
+	     color: navy;
+	     font-size: 12pt; 
+	     font-weight: bold; 
+	     font-family: 'Times New Roman'; 	
+	     background-color: transparent;
+             display: inline-block;	
+        }
+
+   .Arbol_Nombre_3 {            
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 12pt; 
+       font-weight: bold;   /* Negrita */
+       font-style: italic;  /* Itálica (Cursiva) */
+       color: navy;
+       cursor: pointer;
+       background-color: transparent;
+       display: inline-block;    
+      }
+
+     .Arbol_Nombre_4 {            
+           font-family: 'Times New Roman', Times, serif;
+           font-size: 12pt;               
+           color: navy;
+           cursor: pointer;
+           background-color: transparent;
+           display: inline-block;  
+        }
+
+     .Arbol_Nombre_5 {            
+           font-family: 'Times New Roman', Times, serif;
+           font-size: 12pt;               
+           color: navy;
+           cursor: pointer;
+           background-color: transparent;
+           display: inline-block;  
+        }
+
+      .icon {
+            margin-right: 5px;
+        } 
+      
+      .icono-svg {
+        top:    -5px;
+        width:  25px;  /*14px; 18 Ancho deseado */
+        height: 25px; /*18px; 18 Alto deseado */
+        cursor:pointer;
+       }
+
+     .manImg {
+        top:    10px;
+        width:  25px;  /* 18 Ancho deseado */
+        height: 25px; /* 18 Alto deseado */
+        cursor:pointer;
+       }
+
+     .icono-cabecera {
+        top: 10px;
+       /* margin-right: 20px;*/
+        width: 40px;  /* 18 Ancho deseado */
+        height: 40px; /* 18 Alto deseado */
+        cursor:pointer;
+       }
+
+     .icono-cabecera:hover {
+        transform: scale(1.05);
+      }
+
+
+
+
+
+      

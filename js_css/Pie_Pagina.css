@@ -1,0 +1,42 @@
+/* Estilos para el div del pie de página */
+/* CSS que necesitas añadir o modificar */
+
+/* 5. SOLUCIÓN PARA ALINEAR IMAGEN Y TEXTO DENTRO DEL PÁRRAFO */
+.piepagina_fijo {
+       /* 2. Dimensiones */
+    width: 100%;
+    height: 70px;
+
+    /* 3. Colores y Tipografía */
+    background-color: #2635b7; 
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+
+    /* 4. Alineación del contenido (Centrado Vertical y Horizontal del Párrafo) */
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centrado vertical del <p> dentro del <div> */
+    text-align: center;
+    padding: 5px 0;
+
+     /*    line-height: 70px;       Centra el texto verticalmente si la altura es 50px */    
+     flex-shrink: 0;      /* El pie de página se mantendrá siempre en el fondo */
+}
+
+
+.piepagina_fijo img {
+    vertical-align: middle; /* <-- ¡Esta es la clave! */
+}
+
+.piepagina_fijo a {
+    color: #00FFFF;              /* Turquesa/Cian brillante. Puedes elegir otro color */
+    text-decoration: underline; /* Opcional: Asegura que el enlace esté subrayado */
+}
+
+/* Opcional: Estilo al pasar el ratón (hover) para dar feedback al usuario */
+.piepagina_fijo a:hover {
+    color: #FFD700;          /* Dorado para el efecto hover */
+}
+
+
+
