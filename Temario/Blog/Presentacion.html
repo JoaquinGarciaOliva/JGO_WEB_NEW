@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de presentación del Blog de Matemáticas de Joaquín">
+    <title>Presentación - Blog de Matemáticas de Joaquín</title>
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #d97706;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Cabecera superior */
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        /* Secciones del texto */
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* Cajas destacadas */
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-warning {
+            background-color: #fffbe2;
+            border-left-color: var(--accent-color);
+        }
+
+        .callout-ai {
+            background-color: #f0fdf4;
+            border-left: 5px solid #16a34a;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge de Desarrollo */
+        .badge-dev {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .badge-link {
+            background-color: #e0e7ff;
+            color: #3730a3;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- CABECERA DE BIENVENIDA -->
+    <header>
+        <h1>¡Hola! Soy Joaquín</h1>
+        <p class="subtitle">Matemático y Profesor de Matemáticas de Secundaria</p>
+        <p>Bienvenido/a a mi blog educativo. Esta página nace como una plataforma de presentación y un recurso pedagógico pensado principalmente para facilitar el aprendizaje de las matemáticas en la educación secundaria.</p>
+    </header>
+
+    <!-- AVISO SOBRE LA IA Y EL DESARROLLO -->
+    <div class="section">
+        <h2>Nota sobre el desarrollo y el uso de Inteligencia Artificial</h2>
+        <div class="callout-ai">
+            <strong>Desarrollo asistido por IA:</strong> Una parte muy sustancial de este proyecto (código, maquetación y generación de contenidos) se ha llevado a cabo utilizando herramientas de <strong>Inteligencia Artificial</strong>. 
+            <br><br>
+            Dado el gran volumen de material necesario para cubrir la materia, <strong>aún no he podido revisar y comprobar la totalidad de los contenidos expuestos</strong>. Iré repasando, corrigiendo y refinando cada apartado progresivamente, pero tenlo en cuenta si encuentras algún pequeño error o imprecisión durante tu lectura.
+        </div>
+    </div>
+
+    <!-- FILOSOFÍA Y NAVEGACIÓN DEL SITIO -->
+    <div class="section">
+        <h2>Cómo funciona la web y el compromiso del estudiante</h2>
+        
+        <div class="callout callout-warning">
+            <strong>Importante para los alumnos:</strong> Esta página está dirigida a estudiantes que verdaderamente tengan ganas de aprender. Hay que recordar que <em>no se aprende solo jugando</em>. Las actividades interactivas son una buena ayuda, pero para asimilar las matemáticas es imprescindible estudiar y <strong>hacer ejercicios de forma constante</strong>.
+        </div>
+
+        <p>A lo largo de las distintas pestañas de la web encontrarás contenidos organizados con botones o imágenes que actuarán como enlaces. Al pulsar sobre ellos, <strong>se abrirá una ventana o pestaña nueva en tu navegador</strong> para llevarte a la página específica donde se desarrolla ese tema en profundidad.</p>
+    </div>
+
+    <!-- ESTRUCTURA Y CONTENIDOS DE LA WEB -->
+    <div class="section">
+        <h2>Estructura de secciones del Blog</h2>
+        <p>El sitio se encuentra <span class="badge-dev">En Desarrollo</span>. Los temas se irán desplegando poco a poco e incluirán vídeos explicativos, textos conceptuales, ejemplos resueltos, ejercicios prácticos y, en ocasiones, actividades interactivas.</p>
+        
+        <h3>Pestañas Principales:</h3>
+        <ul>
+            <li>
+                <strong>Secundaria:</strong> Contiene todo (o casi todo) el currículo de secundaria. En este apartado me enfocaré en que comprendas los conceptos antes que en la rigidez formal. Sin embargo, en momentos puntuales sí insistiré en el formalismo matemático y en corregir esas habituales "faltas de ortografía" matemáticas que tanto se repiten.
+            </li>
+            
+            <li>
+                <strong>Primaria (Conocimientos Mínimos):</strong> Centrada en las operaciones básicas (suma, resta, multiplicación y división) y en el dominio imprescindible de las <strong>tablas de multiplicar</strong>. Cuando un alumno llega a secundaria sin esta base sólida, le cuesta un enorme esfuerzo adaptarse al ritmo de la materia.
+            </li>
+            
+            <li>
+                <strong>Juegos:</strong> Una sección con dinámicas para ejercitar el cálculo y la agilidad mental de forma diferente.
+            </li>
+            
+            <li>
+                <strong>Divagaciones:</strong> Mi espacio personal para compartir impresiones sobre las matemáticas y su didáctica. No se trata de un foro de debate, sino simplemente de mis reflexiones docentes, con las que libremente se puede estar de acuerdo o no.
+            </li>
+        </ul>
+    </div>
+
+    <!-- REFLEXIONES / DIVAGACIONES -->
+    <div class="section">
+        <h2>Reflexión de Presentación: ¿Son las matemáticas fáciles o difíciles?</h2>
+        <p>Dentro de mis <em>Divagaciones</em>, suelo abordar la eterna pregunta de si las matemáticas son difíciles. Mi visión es que <strong>no todo lo antiguo era malo</strong> y que a veces, al cambiar las formas de enseñar o escribir, dificultamos sin querer el aprendizaje.</p>
+
+        <div class="callout">
+            <h3>Un ejemplo: La lectura de números grandes</h3>
+            <p>El sistema para escribir números que me enseñaron en primaria me parece mucho más eficiente que el actual. Antiguamente se utilizaban subíndices para señalar los millones, billones, etc., junto con puntos para separar los millares.</p>
+            <p>Al ir desapareciendo los subíndices y eliminar los puntos de separación de los miles (dejando solo espacios o nada), la lectura se ha vuelto mucho más compleja. Hoy en día, el alumno no puede leer el número de un vistazo; se ve obligado a contar posiciones y pensar qué lugar ocupa cada cifra antes de saber cómo pronunciarlo.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; Joaquín García Oliva - Blog Educativo de Matemáticas</p>
+</footer>
+
+</body>
+</html>
