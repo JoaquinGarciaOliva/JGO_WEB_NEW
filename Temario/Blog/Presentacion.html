@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de presentación del Blog de Matemáticas de Joaquín">
     <title>Presentación - Blog de Matemáticas de Joaquín</title>
-    
+    <link rel="stylesheet" href="..\..\js_css\Ventana_Modal.css">
     <style>
         :root {
             --primary-color: #1e3a8a;
             --secondary-color: #2563eb;
             --accent-color: #d97706;
-            --bg-color: #f8fafc;
+            --bg-color: #fef9c3; /* Fondo amarillo apagado / suave */
             --card-bg: #ffffff;
             --text-color: #334155;
             --border-color: #cbd5e1;
@@ -32,7 +32,7 @@
             margin: 0 auto;
         }
 
-        /* Cabecera superior */
+        /* Cabecera superior ajustada con Flexbox */
         header {
             background: var(--card-bg);
             padding: 30px;
@@ -40,6 +40,27 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border-color);
             margin-bottom: 25px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-btn-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .header-btn-img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
         h1 {
@@ -136,15 +157,31 @@
             font-size: 0.9rem;
             color: #64748b;
         }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
 
-    <!-- CABECERA DE BIENVENIDA -->
+    <!-- CABECERA DE BIENVENIDA Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.1.Naturales_Suma_Video.mp4 -->
     <header>
-        <h1>¡Hola! Soy Joaquín</h1>
+        <div class="header-top">
+            <h1>¡Hola! Soy Joaquín</h1>
+            <!-- Reemplaza "url_de_tu_imagen.jpg" por la ruta/URL de tu imagen y ajusta la función JavaScript -->
+            <img id="ayuda"
+                src="../../Imagenes/play_video.png" 
+                alt="Acción" 
+                class="header-btn-img" 
+                onclick="ventanamodal('../Matematicas/Pagina_video.html?videoId=../Blog/Presentacion.mp4');" 
+                title="Hacer clic aquí"
+            >
+        </div>
         <p class="subtitle">Matemático y Profesor de Secundaria</p>
         <p>Bienvenido/a a mi blog educativo. Esta página nace como una plataforma de presentación y un recurso pedagógico pensado principalmente para facilitar el aprendizaje de las matemáticas en la educación secundaria.</p>
     </header>
@@ -199,7 +236,23 @@
 
 <footer>
     <p>&copy; Joaquín García Oliva - Blog Educativo de Matemáticas</p>
+    <p class="footer-note">* Esta página principal está alojada en Blogger; las páginas y recursos externos están desarrollados en HTML, CSS y JS.</p>
 </footer>
 
+   <div id="myModal" class="modal-backdrop">       
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+           <div class="piepagina_fijo"  id="piepagina2">
+ 
+           </div>
+        </div>
+   
+    </div>
+
+
+   <script src="..\..\js_css\Ventana_Modal.js" type="text/javascript"></script> 
 </body>
 </html>
