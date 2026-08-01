@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juegos y Estrategias de Cálculo Mental Elementales - Blog de Matemáticas de Joaquín">
+    <title>Juegos de Cálculo Mental - Blog de Matemáticas de Joaquín</title>
+    <link rel="stylesheet" href="../../js_css/Ventana_Modal.css">
+    <style>
+        :root {
+            --primary-color: #0f172a;       /* Azul marino muy oscuro / Slate 900 */
+            --secondary-color: #0284c7;     /* Azul medio / Sky 600 */
+            --light-blue: #38bdf8;          /* Azul claro para acentos / Sky 400 */
+            --accent-color: #b91c1c;        /* Rojo/granate para avisos */
+            --bg-color: #fdf2f2;            /* Fondo rojizo muy diluido / suave rosa pastel para contrastar con azul */
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #e2e8f0;
+            --strategy-bg: #fff8f8;
+            --highlight-bg: #e0f2fe;        /* Fondo sutil azul claro para destacar cajas */
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Cabecera superior */
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--secondary-color);
+            margin-bottom: 25px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-btn-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .header-btn-img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        /* Secciones */
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.15rem;
+            margin-top: 20px;
+        }
+
+        /* Cajas destacadas */
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-strategy {
+            background-color: var(--strategy-bg);
+            border-left: 5px solid var(--secondary-color);
+            padding: 18px 22px;
+            border-radius: 6px;
+            margin: 18px 0;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+        }
+
+        .strategy-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 12px;
+        }
+
+        .example-badge {
+            display: inline-block;
+            background-color: var(--highlight-bg);
+            color: #0369a1;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .cards-modes-box {
+            background-color: #fff5f5;
+            border: 1px solid #fecdd3;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 15px;
+        }
+
+        .cards-modes-box ul {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Rejilla de Tarjetas para Juegos (Ahora 3 principales) */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .game-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border-color: var(--secondary-color);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #f8fafc;
+        }
+
+        .game-card .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .game-card .card-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+
+        .game-card .card-btn {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .game-card:hover .card-btn {
+            background-color: #0369a1;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- CABECERA -->
+    <header>
+        <div class="header-top">
+            <h1>Cálculo Mental y Juegos Matemáticos</h1>
+            <img id="ayuda"
+                src="../../Imagenes/play_video.png" 
+                alt="Ver presentación" 
+                class="header-btn-img" 
+                onclick="ventanamodal('../Matematicas/Pagina_video.html?videoId=../Blog/Presentacion.mp4');" 
+                title="Hacer clic aquí para ver la presentación"
+            >
+        </div>
+        <p class="subtitle">Estrategias de agilidad mental y recursos interactivos para un cálculo elemental intuitivo</p>
+        <p>Esta sección proporciona una colección de juegos prácticos diseñados para agilizar las destrezas de cálculo mental elemental, acompañados de pautas para desarrollar estrategias eficientes de pensamiento numérico.</p>
+    </header>
+
+    <!-- INTRODUCCIÓN Y ESTRATEGIAS -->
+    <div class="section">
+        <h2>Reflexión Inicial: El juego como apoyo, no como único aprendizaje</h2>
+        
+        <div class="callout-alert">
+            <strong>Aviso importante:</strong> <em>Con solo jugar no se aprende.</em> El juego constituye una excelente herramienta de consolidación, motivación y refuerzo, pero no sustituye la comprensión de los conceptos numéricos ni el esfuerzo consciente en el aprendizaje de las estrategias.
+        </div>
+
+        <p>Para conseguir un cálculo rápido y eficaz no se trata de contar con los dedos ni de realizar el algoritmo formal en la cabeza, sino de emplear <strong>atajos y estrategias mentales</strong> que simplifican las operaciones complejas adaptándolas a números más sencillos.</p>
+
+        <h3>Estrategias clave de cálculo mental:</h3>
+
+        <div class="callout-strategy">
+            <strong>1. Estrategia para la Suma (Paso por la decena / Reorganización):</strong>
+            <p>Para sumar números que se aproximan a la decena, resulta mucho más rápido "completar" primero la decena más cercana quitando la cantidad necesaria al otro sumando.</p>
+            <div class="strategy-box">
+                <p><strong>Ejemplo práctico:</strong> Para realizar la suma <span class="example-badge">8 + 7</span>:</p>
+                <ul>
+                    <li>Le "pasamos" 2 del 7 al 8 para transformar el 8 en un 10 (ya que 8 + 2 = 10).</li>
+                    <li>Al 7 le quedan ahora 5 (7 - 2 = 5).</li>
+                    <li>La operación se transforma en la suma directa: <span class="example-badge">10 + 5 = 15</span>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout-strategy">
+            <strong>2. Estrategia para la Resta (Paso por la decena / Diferencia hacia la decena):</strong>
+            <p>En restas de dos cifras menos una cifra con paso por la decena, es más ágil calcular la distancia al 10 desde el sustraendo y sumársela a la unidad del minuendo.</p>
+            <div class="strategy-box">
+                <p><strong>Ejemplo práctico:</strong> Para realizar la resta <span class="example-badge">12 - 7</span>:</p>
+                <ul>
+                    <li>Calculamos cuánto le falta al 7 para llegar al 10: le faltan <strong>3</strong>.</li>
+                    <li>Del 10 al 12 hay <strong>2</strong> unidades.</li>
+                    <li>La resta se transforma en la simple suma: <span class="example-badge">2 + 3 = 5</span>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout-strategy">
+            <strong>3. Multiplicación y División: Automatización indispensable</strong>
+            <p>A diferencia de la suma y la resta, donde las estrategias de descomposición son fluidas, en la <strong>multiplicación y la división elemental es imprescindible saberse las tablas de memoria</strong>. Las tablas de multiplicar son la piedra angular sobre la que se fundamenta la división y todo el cálculo algebraico posterior en secundaria.</p>
+        </div>
+    </div>
+
+    <!-- RESEÑA SOBRE LOS JUEGOS DE CARTAS -->
+    <div class="section">
+        <h2>Modalidades de Juego: Tarjetas de Operaciones Básicas</h2>
+        <p>Los <strong>juegos de cartas</strong> están diseñados para trabajar de forma específica y progresiva las operaciones básicas de cálculo (suma de una cifra, suma de dos cifras, restas, tablas de multiplicar, divisiones de las tablas y sencillas operaciones de números enteros).</p>
+        
+        <div class="cards-modes-box">
+            <p>Cada una de las modalidades de cartas cuenta habitualmente con <strong>tres versiones o modos de juego</strong> adaptados al aula y al trabajo individual:</p>
+            <ul>
+                <li><strong>Versión Clase:</strong> Diseñada para proyectar en el aula. En la pantalla se muestran varias cartas simultáneamente para que todos los alumnos de la clase puedan ir rellenando una ficha de trabajo individual con las soluciones y, posteriormente, ellos mismos cuenten sus aciertos.</li>
+                <li><strong>Versión Un Jugador:</strong> Ideal para interactuar de forma individual directamente sobre la pantalla digital o dispositivo, respondiendo las cartas a su propio ritmo.</li>
+                <li><strong>Versión Dos Jugadores:</strong> Permite competir por turnos o por velocidad frente a otro compañero en la misma pantalla digital, dinamizando la práctica diaria.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ENLACES A JUEGOS Y RECURSOS (SOLO 3 ENLACES) -->
+    <div class="section">
+        <h2>Acceso a los Juegos Matemáticos</h2>
+        <p>Haz clic en cualquiera de las siguientes tarjetas para acceder directamente al recurso interactivo correspondiente:</p>
+
+        <div class="games-grid">
+            
+            <!-- 1. JUEGO DE CARTAS -->
+            <a href="https://ejemplo.com/juegos#juego-de-cartas" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="juego_cartas.jpg" alt="Juego de Cartas de Operaciones Básicas">
+                <div class="card-title">Juego de Cartas</div>
+                <div class="card-desc">Colección interactiva de cartas para practicar sumas, restas, multiplicaciones, divisiones y números enteros en sus modalidades de Clase, Un Jugador y Dos Jugadores.</div>
+                <span class="card-btn">Acceder al Juego de Cartas</span>
+            </a>
+
+            <!-- 2. BINGO MATEMÁTICO -->
+            <a href="https://ejemplo.com/juegos#bingo-matematico" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="bingo_matematico.jpg" alt="Bingo Matemático">
+                <div class="card-title">Bingo Matemático</div>
+                <div class="card-desc">Juego dinámico para emparejar los resultados del cálculo mental rápido con las casillas de los cartones numéricos.</div>
+                <span class="card-btn">Acceder al Bingo Matemático</span>
+            </a>
+
+            <!-- 3. PETANCA MATEMÁTICA -->
+            <a href="https://ejemplo.com/juegos#petanca-matematica" target="_blank" rel="noopener noreferrer" class="game-card">
+                <img src="petanca_matematica.jpg" alt="Petanca Matemática">
+                <div class="card-title">Petanca Matemática</div>
+                <div class="card-desc">Juego de aproximación y estimación de cálculo en el que deberás acercarte lo máximo posible al número objetivo.</div>
+                <span class="card-btn">Acceder a la Petanca</span>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; Joaquín García Oliva - Blog Educativo de Matemáticas</p>
+    <p class="footer-note">* Las páginas y recursos interactivos externos están desarrollados en HTML, CSS y JS.</p>
+</footer>
+
+<div id="myModal" class="modal-backdrop">       
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-body">
+            <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="piepagina_fijo" id="piepagina2"></div>
+    </div>
+</div>
+
+<script src="../../js_css/Ventana_Modal.js" type="text/javascript"></script> 
+
+</body>
+</html>
