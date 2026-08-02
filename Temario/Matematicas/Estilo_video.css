@@ -12,8 +12,8 @@ body {
 /* Estilos para las imágenes de las esquinas */
 .corner-image {
     position: fixed; /* O 'absolute' si prefieres que se desplacen con el contenido */
-    width: 100px; /* Tamaño de las imágenes, ajusta si es necesario */
-    height: 100px;
+    width: 70px; /* Tamaño de las imágenes, ajusta si es necesario */
+    height: 70px;
     z-index: 10; /* Asegura que estén por encima de otros elementos */
     border: 0px solid #333; /* Borde para visualización */
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
