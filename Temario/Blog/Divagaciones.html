@@ -128,7 +128,7 @@
             flex: 1;
             min-width: 150px;
             padding: 12px 18px;
-            background-color: var(--secondary-color);
+            background-color: #16A2DB; /*--secondary-color);*/
             color: #ffffff;
             border: none;
             border-radius: 8px;
@@ -153,29 +153,40 @@
             box-shadow: none;
         }
 
-        /* Tabla de Debates y Reflexiones */
-        .table-container {
-            overflow-x: auto;
+        /* -------------------------------------------------------------
+           CONTENEDOR DE LA TABLA CON SCROLL INTERNO Y ENCABEZADO FIJO
+        ------------------------------------------------------------- */
+        .table-scroll-container {
+            max-height: 275px; /* Altura calculada para mostrar exactamente 5 filas (~55px/fila) */
+            overflow-y: auto;
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            background: #ffffff;
         }
 
         .debates-table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate; /* Necesario para que la cabecera fija mantenga bordes limpios */
+            border-spacing: 0;
             text-align: left;
         }
 
+        /* Cabecera Fija (Sticky) */
         .debates-table th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
             background-color: var(--primary-color);
             color: #ffffff;
             padding: 14px 16px;
             font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
         }
 
         .debates-table td {
             padding: 14px 16px;
             border-bottom: 1px solid var(--border-color);
+            height: 25px; /* Mantiene la altura de fila constante */
         }
 
         /* Ocultar columnas con URLs */
@@ -223,13 +234,7 @@
             text-align: right;
             font-style: italic;
         }
-       .status-info2 {
-            font-size: 0.85rem;
-            color: var(--primary-color);
-            margin-top: 8px;
-            text-align: right;
-            font-style: italic;
-        }
+
         /* Pie de página */
         footer {
             text-align: center;
@@ -252,14 +257,7 @@
     <!-- CABECERA -->
     <header>
         <div class="header-top">
-            <h1>Divagaciones Pedagógicas</h1>
-            <a href="https://joaquingarciaoliva.github.io/JGO_WEB_NEW/Indices.html" target="_blank">
-                <img id="jgoweb"
-                     src="logo_jgo_3_1.png"                 
-                     class="header-btn-img" 
-                     title="Ir a JGO - WEB: Primaria"> 
-            </a>
-
+            <h1>Divagaciones Pedagógicas</h1>           
             <img id="ayuda"
                  src="../../Imagenes/play_video.png" 
                  alt="Acción" 
@@ -295,25 +293,25 @@
     <!-- TABLA DE DEBATES Y BOTONES SUPERIORES / PARTE 2 -->
     <div class="section">
         <h2>Listado de reflexiones y temas a debate</h2>
-        <p>Selecciona una fila de la lista haciendo clic sobre ella y haz clic en cualquiera de los tres botones superiores para abrir el recurso asociado en una nueva pestaña:</p>
+        <p>Selecciona una fila de la lista haciendo clic sobre ella y utiliza cualquiera de los tres botones superiores para acceder al contenido correspondiente:</p>
 
         <!-- Tres botones siempre visibles -->
         <div class="action-buttons-bar">
             <button id="btnOption1" class="btn-action" disabled onclick="openSelectedUrl(1)">
-                📄 Artículo
-            </button>
-            <button id="btnOption3" class="btn-action" disabled onclick="openSelectedUrl(3)">
-                📊 Material Extra / Anexo
+                📄 Artículo / Reflexión
             </button>
             <button id="btnOption2" class="btn-action" disabled onclick="openSelectedUrl(2)">
                 🎥 Vídeo / Presentación
             </button>
-            
-           <div id="statusInfo2" class="status-info2"></div>
+         
+         <!--  <button id="btnOption3" class="btn-action" disabled onclick="openSelectedUrl(3)">
+                📊 Material Extra / Anexo
+            </button>
+          -->
         </div>
 
-        <!-- Tabla interactiva con columnas ocultas para URLs -->
-        <div class="table-container">
+        <!-- Contenedor con Scroll para limitar a 5 filas visibles con cabecera fija -->
+        <div class="table-scroll-container">
             <table class="debates-table" id="debatesTable">
                 <thead>
                     <tr>
@@ -325,100 +323,100 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Fila 1 (Par: row-even) -->
+                    <!-- Fila 1 -->
                     <tr class="row-even" 
                         data-url1="https://ejemplo.com/articulo-matematicas" 
                         data-url2="https://ejemplo.com/video-matematicas" 
                         data-url3="https://ejemplo.com/pdf-matematicas">
                         <td class="col-num">1</td>
-                        <td>El papel del método clásico en la enseñanza de las Matemáticas actuales</td>
+                        <td>¿Las matemáticas son fáciles o difíciles?</td>
                         <td class="col-hidden">https://ejemplo.com/articulo-matematicas</td>
                         <td class="col-hidden">https://ejemplo.com/video-matematicas</td>
                         <td class="col-hidden">https://ejemplo.com/pdf-matematicas</td>
                     </tr>
                     
-                    <!-- Fila 2 (Impar: row-odd) -->
+                    <!-- Fila 2 -->
                     <tr class="row-odd" 
                         data-url1="https://ejemplo.com/articulo-bilingue" 
                         data-url2="https://ejemplo.com/video-bilingue" 
                         data-url3="https://ejemplo.com/pdf-bilingue">
                         <td class="col-num">2</td>
-                        <td>Propuestas de reestructuración para el programa Bilingüe en Secundaria</td>
+                        <td>Matemáticas en Bilingüe</td>
                         <td class="col-hidden">https://ejemplo.com/articulo-bilingue</td>
                         <td class="col-hidden">https://ejemplo.com/video-bilingue</td>
                         <td class="col-hidden">https://ejemplo.com/pdf-bilingue</td>
                     </tr>
 
-                    <!-- Fila 3 (Par: row-even) -->
+                    <!-- Fila 3 -->
                     <tr class="row-even" 
                         data-url1="https://ejemplo.com/articulo-investigacion" 
                         data-url2="https://ejemplo.com/video-investigacion" 
                         data-url3="https://ejemplo.com/pdf-investigacion">
                         <td class="col-num">3</td>
-                        <td>El enfoque real que debería tener el Bachillerato de Investigación</td>
+                        <td>Matemáticas según el perfil del alumno en Secundaria</td>
                         <td class="col-hidden">https://ejemplo.com/articulo-investigacion</td>
                         <td class="col-hidden">https://ejemplo.com/video-investigacion</td>
                         <td class="col-hidden">https://ejemplo.com/pdf-investigacion</td>
                     </tr>
 
-                    <!-- Fila 4 (Impar: row-odd) -->
+                    <!-- Fila 4 -->
                     <tr class="row-odd" 
                         data-url1="https://ejemplo.com/articulo-promocion" 
                         data-url2="https://ejemplo.com/video-promocion" 
                         data-url3="https://ejemplo.com/pdf-promocion">
                         <td class="col-num">4</td>
-                        <td>Criterios de promoción escolar: ¿ayuda o perjuicio al alumnado?</td>
+                        <td>Criterios de promoción escolar. ¿Promocionar con pendientes?</td>
                         <td class="col-hidden">https://ejemplo.com/articulo-promocion</td>
                         <td class="col-hidden">https://ejemplo.com/video-promocion</td>
                         <td class="col-hidden">https://ejemplo.com/pdf-promocion</td>
                     </tr>
 
-                    <!-- Fila 5 (Par: row-even) -->
+                    <!-- Fila 5 -->
                     <tr class="row-even" 
                         data-url1="https://ejemplo.com/articulo-redistribucion" 
                         data-url2="https://ejemplo.com/video-redistribucion" 
                         data-url3="https://ejemplo.com/pdf-redistribucion">
                         <td class="col-num">5</td>
-                        <td>Redistribución de la ESO atendiendo a los intereses del alumnado</td>
+                        <td>Bachillerato de Investigación</td>
                         <td class="col-hidden">https://ejemplo.com/articulo-redistribucion</td>
                         <td class="col-hidden">https://ejemplo.com/video-redistribucion</td>
                         <td class="col-hidden">https://ejemplo.com/pdf-redistribucion</td>
                     </tr>
- <!-- Fila 5 (Par: row-even) -->
-                    <tr class="row-even" 
-                        data-url1="https://ejemplo.com/articulo-redistribucion" 
-                        data-url2="https://ejemplo.com/video-redistribucion" 
-                        data-url3="https://ejemplo.com/pdf-redistribucion">
-                        <td class="col-num">5</td>
-                        <td>Redistribución de la ESO atendiendo a los intereses del alumnado</td>
-                        <td class="col-hidden">https://ejemplo.com/articulo-redistribucion</td>
-                        <td class="col-hidden">https://ejemplo.com/video-redistribucion</td>
-                        <td class="col-hidden">https://ejemplo.com/pdf-redistribucion</td>
-                    </tr>
- <!-- Fila 5 (Par: row-even) -->
-                    <tr class="row-even" 
-                        data-url1="https://ejemplo.com/articulo-redistribucion" 
-                        data-url2="https://ejemplo.com/video-redistribucion" 
-                        data-url3="https://ejemplo.com/pdf-redistribucion">
-                        <td class="col-num">5</td>
-                        <td>Redistribución de la ESO atendiendo a los intereses del alumnado</td>
-                        <td class="col-hidden">https://ejemplo.com/articulo-redistribucion</td>
-                        <td class="col-hidden">https://ejemplo.com/video-redistribucion</td>
-                        <td class="col-hidden">https://ejemplo.com/pdf-redistribucion</td>
-                    </tr>
- <!-- Fila 5 (Par: row-even) -->
-                    <tr class="row-even" 
-                        data-url1="https://ejemplo.com/articulo-redistribucion" 
-                        data-url2="https://ejemplo.com/video-redistribucion" 
-                        data-url3="https://ejemplo.com/pdf-redistribucion">
-                        <td class="col-num">5</td>
-                        <td>Redistribución de la ESO atendiendo a los intereses del alumnado</td>
-                        <td class="col-hidden">https://ejemplo.com/articulo-redistribucion</td>
-                        <td class="col-hidden">https://ejemplo.com/video-redistribucion</td>
-                        <td class="col-hidden">https://ejemplo.com/pdf-redistribucion</td>
-                    </tr>
- 
 
+                    <!-- Fila 6 (Demostración de scroll) -->
+                    <tr class="row-odd" 
+                        data-url1="https://ejemplo.com/articulo-pantallas" 
+                        data-url2="https://ejemplo.com/video-pantallas" 
+                        data-url3="https://ejemplo.com/pdf-pantallas">
+                        <td class="col-num">6</td>
+                        <td>Enseñanza por proyectos o ¿Pseudoproyectos?</td>
+                        <td class="col-hidden">https://ejemplo.com/articulo-pantallas</td>
+                        <td class="col-hidden">https://ejemplo.com/video-pantallas</td>
+                        <td class="col-hidden">https://ejemplo.com/pdf-pantallas</td>
+                    </tr>
+
+                    <!-- Fila 7 (Demostración de scroll) -->
+                    <tr class="row-even" 
+                        data-url1="https://ejemplo.com/articulo-extraescolares" 
+                        data-url2="https://ejemplo.com/video-extraescolares" 
+                        data-url3="https://ejemplo.com/pdf-extraescolares">
+                        <td class="col-num">7</td>
+                        <td>Matemáticas: Definición - Cálculo - Atajos </td>
+                        <td class="col-hidden">https://ejemplo.com/articulo-extraescolares</td>
+                        <td class="col-hidden">https://ejemplo.com/video-extraescolares</td>
+                        <td class="col-hidden">https://ejemplo.com/pdf-extraescolares</td>
+                    </tr>
+                  <!-- Fila 8 (Demostración de scroll) -->
+                    <tr class="row-odd" 
+                        data-url1="https://ejemplo.com/articulo-extraescolares" 
+                        data-url2="https://ejemplo.com/video-extraescolares" 
+                        data-url3="https://ejemplo.com/pdf-extraescolares">
+                        <td class="col-num">7</td>
+                        <td> Bachillerato: ¿Dónde están los teoremos y las demostraciones? </td>
+                        <td class="col-hidden">https://ejemplo.com/articulo-extraescolares</td>
+                        <td class="col-hidden">https://ejemplo.com/video-extraescolares</td>
+                        <td class="col-hidden">https://ejemplo.com/pdf-extraescolares</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -445,7 +443,6 @@
 <script src="..\..\js_css\Ventana_Modal.js" type="text/javascript"></script> 
 
 <script>
-    // Variables de control de estado
     let selectedRowData = null;
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -456,18 +453,12 @@
             document.getElementById("btnOption3")
         ];
         const statusInfo = document.getElementById("statusInfo");
-        const statusInfo2 = document.getElementById("statusInfo2");
 
-        // Agregar evento de clic a cada fila
         tableRows.forEach(row => {
             row.addEventListener("click", function () {
-                // Quitar clase 'selected' de las demás filas
                 tableRows.forEach(r => r.classList.remove("selected"));
-
-                // Resaltar la fila seleccionada
                 this.classList.add("selected");
 
-                // Obtener URLs de los atributos data-url o de las celdas ocultas
                 selectedRowData = {
                     num: this.children[0].textContent,
                     title: this.children[1].textContent,
@@ -476,37 +467,33 @@
                     url3: this.dataset.url3 || this.children[4].textContent
                 };
 
-                // Habilitar botones superiores
                 buttons.forEach(btn => btn.disabled = false);
-
-                // Actualizar texto informativo inferior
                 statusInfo.textContent = `Tema seleccionado nº ${selectedRowData.num}: "${selectedRowData.title}"`;
-                statusInfo2.textContent = `Tema seleccionado nº ${selectedRowData.num}: "${selectedRowData.title}"`;
             });
         });
     });
 
-    // Función para abrir la URL correspondiente al botón pulsado
     function openSelectedUrl(optionIndex) {
         if (!selectedRowData) return;
 
         let targetUrl = "";
-        switch (optionIndex) {
+       switch (optionIndex) {
             case 1:
-                targetUrl = selectedRowData.url1;
-                window.open(targetUrl, "_blank");
+                targetUrl = selectedRowData.url1; 
+                targetUrl = '../Blog/Divagaciones/'+ targetUrl ;              
+                ventanamodal(targetUrl);
                 break;
             case 2:
                 targetUrl = selectedRowData.url2;
-                targetUrl = 'Primaria.mp4';
-                ventanamodal('../Matematicas/Pagina_video.html?videoId=' + targetUrl);
+                targetUrl = '../Blog/Divagaciones/';
+                targetUrl = '../Matematicas/Pagina_video.html?videoId=' +targetUrl ;                                      
+                ventanamodal(targetUrl); 
                 break;
             case 3: 
                 targetUrl = selectedRowData.url3;
-                ventanamodal(targetUrl);
+                window.open(targetUrl, "_blank");
                 break;
         }
-      
     }
 </script>
 
