@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Mínimo Común Múltiplo (m.c.m.)</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 110px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+            width: 20px;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #2d3748; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #e53e3e;
+            font-weight: bold;
+            background-color: #fff5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #fed7d7;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Mínimo Común Múltiplo (m.c.m.)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Qué es el Mínimo Común Múltiplo?</h2>
+            <p>El <strong>mínimo común múltiplo (m.c.m.)</strong> de dos o más números es el número más pequeño (distinto de cero) que es múltiplo de todos ellos a la vez. Para entenderlo de forma sencilla, su propio nombre nos desglosa el significado:</p>
+            <ul>
+                <li><strong>Múltiplos:</strong> Los números que obtienes cuando multiplicas un número por 1, 2, 3, 4, etc. (su tabla de multiplicar).</li>
+                <li><strong>Común:</strong> Que aparece en las listas de múltiplos de todos los números evaluados al mismo tiempo (se repiten).</li>
+                <li><strong>Mínimo:</strong> De todos los números que se repiten en las listas, nos interesa estrictamente el <strong>menor</strong> de ellos.</li>
+            </ul>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. Ejemplo práctico con dos números: m.c.m. (4, 6)</div>
+                <div class="regla-box">
+                    <strong>Método de listas:</strong> Escribimos los múltiplos de cada número hasta hallar el primer valor que coincida en ambas filas.
+                </div>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">Múltiplos de 4</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">4, 8, <span class="highlight">12</span>, 16, 20, 24, 28...</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Múltiplos de 6</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas"><span class="highlight">12</span>, 18, 24, 30, 36...</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del proceso:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Al listar los múltiplos, vemos que hay varios números que se repiten en ambas listas, como el 12 y el 24.</li>
+                            <li><strong>Paso 2:</strong> Buscamos el primero de ellos, es decir, el menor valor común sin contar el cero.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> El menor múltiplo que se repite es el 12. Por lo tanto: <br>$$\text{m.c.m.}(4, 6) = 12$$
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Ejemplo práctico: m.c.m. (12, 15)</div>
+                <div class="regla-box">
+                    <strong>Método de listas:</strong> Avanzamos en las tablas de multiplicar de ambos números grandes hasta encontrar la primera coincidencia exacta.
+                </div>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">Múltiplos de 12</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">12, 24, 36, 48, <span class="highlight">60</span>, 72, 84...</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Múltiplos de 15</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">15, 30, 45, <span class="highlight">60</span>, 75, 90...</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del proceso:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Desplegamos los múltiplos de 12 y 15.</li>
+                            <li><strong>Paso 2:</strong> Observamos detenidamente las secuencias numéricas. El número <span class="highlight">60</span> es el primer elemento coincidente que comparten las dos series de datos.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> El menor de los múltiplos comunes es 60. Por lo tanto: <br>$$\text{m.c.m.}(12, 15) = 60$$
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">3. Ejemplo con tres números: m.c.m. (2, 6, 10)</div>
+                <div class="regla-box">
+                    <strong>Regla general:</strong> Cuando tenemos tres números, el procedimiento es exactamente el mismo: el múltiplo común debe repetirse de manera obligatoria en las <strong>tres listas</strong> a la vez.
+                </div>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">Múltiplos de 2</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">2, 4, 6... 26, 28, <span class="highlight">30</span>, 32...</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Múltiplos de 6</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">6, 12, 18, 24, <span class="highlight">30</span>, 36...</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Múltiplos de 10</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">10, 20, <span class="highlight">30</span>, 40, 50...</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del proceso:</strong><br>
+                        <ul>
+                            <li><strong>Nota importante:</strong> Aunque el número 6 se repite entre el 2 y el 6, no aparece en la lista del 10. Por tanto, no sirve.</li>
+                            <li><strong>Paso clave:</strong> El número <span class="highlight">30</span> es el primer número que logramos ubicar de forma simultánea dentro de los tres conjuntos de múltiplos.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> El menor múltiplo común de los tres es 30. Por lo tanto: <br>$$\text{m.c.m.}(2, 6, 10) = 30$$
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">4. Caso Especial: El m.c.m. es uno de los propios números</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>¿Qué pasa si un número es múltiplo del otro?</strong> Si el número mayor es divisible exactamente entre el menor, el número más grande será automáticamente el mínimo común múltiplo.
+                </div>
+                <p><strong>Ejemplo práctico:</strong> Determinemos el m.c.m. de los números <span class="highlight" style="color: #00769d; background-color: #e6f7ff; border-color: #bae7ff;">4 y 12</span>.</p>
+                
+                <div class="division-table-container" style="background: #f0fdfa;">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">Múltiplos de 4</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">4, 8, <span class="highlight">12</span>, 16, 20, 24...</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Múltiplos de 12</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas"><span class="highlight">12</span>, 24, 36, 48...</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Evaluación paso a paso:</strong><br>
+                        <ul>
+                            <li><strong>Observación:</strong> Al escribir los múltiplos de 4, descubrimos que el propio <span class="highlight" style="color: #00769d; background-color: #e6f7ff; border-color: #bae7ff;">12</span> forma parte de su lista natural de multiplicación (\(4 \times 3 = 12\)).</li>
+                            <li><strong>Resultado inmediato:</strong> Como 12 es el primer número de su propia lista, se convierte automáticamente en el menor múltiplo que comparten.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> No hace falta buscar más allá; el número mayor es el m.c.m. Por lo tanto: <br>$$\text{m.c.m.}(4, 12) = 12$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
