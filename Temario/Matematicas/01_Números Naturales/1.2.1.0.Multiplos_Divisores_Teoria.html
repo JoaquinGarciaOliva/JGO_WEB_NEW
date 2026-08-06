@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Múltiplos y Divisores de un Número</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Múltiplos y Divisores</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Qué son los Múltiplos y los Divisores?</h2>
+            <p>Los múltiplos y los divisores son conceptos numéricos estrechamente vinculados mediante la operación de la <strong>división exacta</strong>. Nos permiten entender cómo se estructuran y relacionan los números enteros entre sí.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. Los Múltiplos de un Número</div>
+                <div class="regla-box">
+                    <strong>Regla general:</strong> Los múltiplos de un número son los resultados de multiplicarlo por cada uno de los números naturales ($0, 1, 2, 3, \dots$). Por lo tanto, <strong>la lista de múltiplos es infinita</strong>.
+                </div>
+                <p><strong>Comprobación clave:</strong> La manera de comprobar si un número es múltiplo de otro es haciendo la división. Decimos que <strong>un múltiplo es divisible por el número original</strong> porque al dividirlos el resto siempre es cero.</p>
+                
+                <p><strong>Estrategias de cálculo:</strong> Para hallar los múltiplos de un número, disponemos de dos métodos equivalentes:</p>
+                <ul>
+                    <li><strong>Por multiplicación:</strong> Multiplicando el número en estudio por la sucesión de números naturales: $\times 0, \times 1, \times 2, \times 3 \dots$</li>
+                    <li><strong>Por suma consecutiva:</strong> Empezando desde el cero e incorporando o sumando el propio número en estudio al resultado inmediatamente anterior.</li>
+                </ul>
+
+                <p><strong>Ejemplos prácticos (Listado de los 12 primeros múltiplos):</strong></p>
+                
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Múltiplos del 6:</strong><br>
+                        $\text{M}(6) = \{0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, \dots\}$
+                        <ul style="margin-top: 10px;">
+                            <li><i>Cálculo multiplicativo:</i> $6 \times 0 = 0$, $6 \times 1 = 6$, $6 \times 2 = 12$, $6 \times 3 = 18\dots$</li>
+                            <li><i>Cálculo sumativo:</i> $0 + 6 = \mathbf{6} \rightarrow 6 + 6 = \mathbf{12} \rightarrow 12 + 6 = \mathbf{18}\dots$</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Múltiplos del 10:</strong><br>
+                        $\text{M}(10) = \{0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, \dots\}$
+                        <ul style="margin-top: 10px;">
+                            <li><i>Cálculo multiplicativo:</i> $10 \times 0 = 0$, $10 \times 1 = 10$, $10 \times 2 = 20\dots$</li>
+                            <li><i>Cálculo sumativo:</i> $0 + 10 = \mathbf{10} \rightarrow 10 + 10 = \mathbf{20} \rightarrow 20 + 10 = \mathbf{30}\dots$</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Los Divisores de un Número</div>
+                <div class="regla-box">
+                    <strong>Regla general:</strong> Los divisores de un número son todos aquellos números enteros que lo dividen en partes exactas. Al contrario que los múltiplos, <strong>la lista de divisores es finita</strong>, ya que el divisor más grande posible es el propio número.
+                </div>
+                <p><strong>Relación de reciprocidad:</strong> Si un número es divisor de otro, automáticamente el primer número es <strong>múltiplo de su divisor</strong> (por ejemplo, si 2 es divisor de 6, entonces 6 es múltiplo de 2).</p>
+            </div>
+
+       <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. Método Eficiente: Obtención de divisores por parejas</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Procedimiento:</strong> Para no olvidar ningún divisor, los buscamos por <strong>parejas asociadas</strong> mediante la multiplicación. En cada paso que encontramos una nueva pareja exacta, los anotamos <strong>intercalándolos en medio</strong> de la lista de forma simétrica.
+                </div>
+                
+                <p><strong>Ejemplo 1:</strong> Busquemos los divisores del número <span class="highlight">6</span> paso a paso.</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 30px;">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 140px;">Paso 1 (Extremos):</td>
+                            <td class="col-digito" style="color: #2635b7;">[1]</td>
+                            
+                            <td class="col-digito" style="color: #2635b7;">[6]</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>                            
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Porque \(1 \times 6 = 6\)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2 (Intercalar):</td>
+                            <td class="col-digito">1,</td>
+                            <td class="col-digito" style="color: #e53e3e;">[2,</td>
+                            <td class="col-digito" style="color: #e53e3e;">3],</td>
+                            <td class="col-digito">6</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Porque \(2 \times 3 = 6\)</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                   <p>
+                    <div >
+                        $\text{Divisores de 6} = \{1, 2, 3, 6\}$.
+                    </div>
+                    </p>
+                <p><strong>Ejemplo 2:</strong> Busquemos los divisores del número <span class="highlight">20</span> paso a paso.</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 30px;">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 140px;">Paso 1 (Extremos):</td>
+                            <td class="col-digito" style="color: #2635b7;">[1]</td>
+                            <td class="col-digito" style="color: #2635b7;">[20]</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>                            
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Pareja inicial (\(1 \times 20\))</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2 (Intercalar):</td>
+                            <td class="col-digito">1,</td>
+                            <td class="col-digito" style="color: #e53e3e;">[2]</td>                                           
+                            <td class="col-digito" style="color: #e53e3e;">[10],</td>
+                            <td class="col-digito">20</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Siguiente pareja (\(2 \times 10\))</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 3 (Intercalar):</td>
+                            <td class="col-digito">1,</td>
+                            <td class="col-digito">2,</td>
+                            <td class="col-digito" style="color: #00769d;">[4,</td>
+                            <td class="col-digito" style="color: #00769d;">5],</td>
+                            <td class="col-digito">10,</td>
+                            <td class="col-digito">20</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">El 3 no funciona. Próxima (\(4 \times 5\))</td>
+                        </tr>
+                    </table>
+                  
+                </div>
+                   <p> <div >
+                        $\text{Divisores de 20} = \{1, 2, 4, 5, 10, 20\}$.
+                    </div></p>
+                <p><strong>Ejemplo 3:</strong> Busquemos los divisores del número <span class="highlight">35</span> paso a paso.</p>
+                <div class="division-table-container" style="background: #f0f7f9;">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 140px;">Paso 1 (Extremos):</td>
+                            <td class="col-digito" style="color: #2635b7;">[1]</td>                           
+                            <td class="col-digito" style="color: #2635b7;">[35]</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Pareja inicial (\(1 \times 35\))</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2 (Intercalar):</td>
+                            <td class="col-digito">1,</td>
+                            <td class="col-digito" style="color: #e53e3e;">[5,</td>
+                            <td class="col-digito" style="color: #e53e3e;">7],</td>
+                            <td class="col-digito">35</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Ni 2, 3 ni 4 son exactos. Pareja (\(5 \times 7\))</td>
+                        </tr>
+                    </table>
+                  
+                </div>
+                 <p> <div >
+                        <ul>
+                            <li><strong>Nota:</strong> Entre el 5 y el 7 solo queda evaluar el número 6 ($35 \div 6$ no es exacta), por lo que la búsqueda concluye de inmediato.</li>
+                        </ul>
+                        $\text{Divisores de 35} = \{1, 5, 7, 35\}$.
+                    </div></p>
+            </div>
+    
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #00769d;">4. Propiedades fundamentales de la relación Múltiplo-Divisor</div>
+                
+                <p><strong>A) Dos caras de la misma moneda:</strong></p>
+                <div class="regla-box" style="background-color: #f7fafc; border-left-color: #4a5568;">
+                    Ser múltiplo y ser divisor son simplemente <strong>dos formas diferentes de expresar la misma relación</strong> matemática entre dos números dependientes. 
+                </div>
+                <ul>
+                    <li>Si decimos que el $9$ es <strong>múltiplo</strong> de $3$, automáticamente sabemos que el $3$ es <strong>divisor</strong> del $9$.</li>
+                    <li>Si el $35$ es <strong>múltiplo</strong> de $5$, se entiende que el $5$ es <strong>divisor</strong> del $35$.</li>
+                </ul>
+
+                <p><strong>B) Propiedad transitiva de los múltiplos (Anidación):</strong></p>
+                <div class="regla-box">
+                    Si un número es múltiplo de otro, entonces <strong>todos los múltiplos del número mayor también serán múltiplos del número menor</strong>.
+                </div>
+                <ul>
+                    <li><strong>Ejemplo 1:</strong> Como el $12$ es múltiplo de $3$, cualquier número que sea múltiplo del $12$ (como el $24$, $36$ o $48$) será de forma obligatoria múltiplo del $3$.</li>
+                    <li><strong>Ejemplo 2:</strong> Como el $10$ es múltiplo de $5$, todos los múltiplos de $10$ ($\{20, 30, 40, \dots\}$) terminan siendo también múltiplos de $5$.</li>
+                </ul>
+
+                <p><strong>C) Propiedad transitiva de los divisores:</strong></p>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    Si un número divide a otro, <strong>todos los divisores del primer número también dividirán exactamente al segundo</strong>.
+                </div>
+                <ul>
+                    <li><strong>Ejemplo 1:</strong> Como el $6$ divide al $18$, todos los divisores del $6$ ($\{1, 2, 3, 6\}$) dividen también de forma exacta al número $18$.</li>
+                    <li><strong>Ejemplo 2:</strong> Como el $10$ divide al $40$, cualquier divisor de $10$ ($\{1, 2, 5, 10\}$) dividirá perfectamente al $40$.</li>
+                </ul>
+            </div>
+
+             
+        </div>
+    </div>
+
+</body>
+</html>

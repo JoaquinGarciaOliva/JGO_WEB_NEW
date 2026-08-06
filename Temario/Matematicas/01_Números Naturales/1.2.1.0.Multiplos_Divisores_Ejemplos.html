@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (MathJax)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+   
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+	
+	 // <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+	 
+    window.MathJax = {
+            tex: {
+                // Habilita el entorno 'flalign'
+                packages: {'[+]': ['ams']}, 
+                // Define los delimitadores para ecuaciones en bloque
+               inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            // Configuración para el renderizado HTML (CHTML)
+            chtml: {
+                // Fuerza la alineación a la izquierda para los bloques de ecuaciones
+                displayAlign: "left"
+            },
+            // Asegura que el proceso de renderizado se ejecute automáticamente
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+      
+    </script>
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Múltiplos y Divisores para 1º y 2º ESO</h1>
+
+        <ol class="mi-lista">
+            
+            <li>
+                Escribe los 6 primeros múltiplos del número 7.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Para encontrar los primeros múltiplos de 7, multiplicamos el 7 por los números naturales del 1 al 6:
+                            $$ 7 \times 1 = 7 $$
+                            $$ 7 \times 2 = 14 $$
+                            $$ 7 \times 3 = 21 $$
+                            $$ 7 \times 4 = 28 $$
+                            $$ 7 \times 5 = 35 $$
+                            $$ 7 \times 6 = 42 $$
+                        </li>
+                        <li>Los 6 primeros múltiplos de 7 son:
+                            $$ M(7) = \{7, 14, 21, 28, 35, 42\} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra los 5 primeros múltiplos del número 12.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Multiplicamos el número 12 por 1, 2, 3, 4 y 5:
+                            $$ 12 \times 1 = 12 $$
+                            $$ 12 \times 2 = 24 $$
+                            $$ 12 \times 3 = 36 $$
+                            $$ 12 \times 4 = 48 $$
+                            $$ 12 \times 5 = 60 $$
+                        </li>
+                        <li>Los 5 primeros múltiplos de 12 son:
+                            $$ M(12) = \{12, 24, 36, 48, 60\} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula todos los divisores del número 20.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Buscamos las parejas de números naturales que al multiplicarse dan 20:
+                            $$ 1 \times 20 = 20 \implies 1 \text{ y } 20 \text{ son divisores.} $$
+                            $$ 2 \times 10 = 20 \implies 2 \text{ y } 10 \text{ son divisores.} $$
+                            $$ 4 \times 5 = 20 \implies 4 \text{ y } 5 \text{ son divisores.} $$
+                        </li>
+                        <li>Anotamos todos los divisores ordenados de menor a mayor:
+                            $$ D(20) = \{1, 2, 4, 5, 10, 20\} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra todos los divisores del número 24.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Hacemos las divisiones de 24 entre los números naturales para ver cuáles son exactas:
+                            $$ 24 \div 1 = 24 \quad | \quad 24 \div 2 = 12 $$
+                            $$ 24 \div 3 = 8 \quad | \quad 24 \div 4 = 6 $$
+                        </li>
+                        <li>Todos los divisores exactos de 24 son:
+                            $$ D(24) = \{1, 2, 3, 4, 6, 8, 12, 24\} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número 135 es múltiplo de 9.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Para saber si un número es múltiplo de otro, realizamos la división entre ambos:
+                            $$ 135 \div 9 = 15 $$
+                        </li>
+                        <li>Como el resultado es un número entero y el residuo es cero, la división es exacta ($9 \times 15 = 135$).</li>
+                        <li>**Respuesta:** Sí, 135 es múltiplo de 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Averigua si el número 86 es múltiplo de 6.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Dividimos 86 entre 6 para comprobar si obtenemos una división exacta:
+                            $$ 86 \div 6 = 14 \text{ y el residuo es } 2 $$
+                        </li>
+                        <li>Como el residuo no es cero, la división resulta inexacta y no hay ningún número entero que multiplicado por 6 dé 86.</li>
+                        <li>**Respuesta:** No, 86 no es múltiplo de 6.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número 8 es divisor de 72.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Para que 8 sea divisor de 72, al dividir 72 entre 8 el residuo debe ser cero:
+                            $$ 72 \div 8 = 9 $$
+                        </li>
+                        <li>Dado que obtenemos un cociente entero sin residuo, el 8 divide a 72 de forma exacta.</li>
+                        <li>**Respuesta:** Sí, 8 es divisor de 72.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número 7 es divisor de 45.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Realizamos la división de 45 entre 7:
+                            $$ 45 \div 7 = 6 \text{ y el residuo es } 3 $$
+                        </li>
+                        <li>Como la división no es exacta (el residuo es distinto de cero), el 7 no puede dividir al 45 en partes enteras iguales.</li>
+                        <li>**Respuesta:** No, 7 no es divisor de 45.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Escribe todos los múltiplos de 11 que estén comprendidos entre los números 30 y 70.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Buscamos los resultados de la tabla del 11 que se encuentren en ese rango:
+                            $$ 11 \times 2 = 22 \quad (\text{No sirve, es menor que 30}) $$
+                            $$ 11 \times 3 = 33 $$
+                            $$ 11 \times 4 = 44 $$
+                            $$ 11 \times 5 = 55 $$
+                            $$ 11 \times 6 = 66 $$
+                            $$ 11 \times 7 = 77 \quad (\text{No sirve, es mayor que 70}) $$
+                        </li>
+                        <li>Los múltiplos que cumplen la condición son:
+                            $$ \{33, 44, 55, 66\} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                De todos los divisores del número 36, escribe únicamente aquellos que sean mayores que 5 pero menores que 20.
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Primero, encontramos la lista completa con todos los divisores de 36:
+                            $$ D(36) = \{1, 2, 3, 4, 6, 9, 12, 18, 36\} $$
+                        </li>
+                        <li>Ahora, seleccionamos solo los valores que están dentro del rango solicitado, es decir, que cumplen con $5 < \text{divisor} < 20$:
+                            $$ 6 \quad (\text{es mayor que 5 y menor que 20}) $$
+                            $$ 9 \quad (\text{es mayor que 5 y menor que 20}) $$
+                            $$ 12 \quad (\text{es mayor que 5 y menor que 20}) $$
+                            $$ 18 \quad (\text{es mayor que 5 y menor que 20}) $$
+                        </li>
+                        <li>Los divisores en ese rango específico son:
+                            $$ \{6, 9, 12, 18\} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        </ol>
+    </div>
+
+</body>
+</html>

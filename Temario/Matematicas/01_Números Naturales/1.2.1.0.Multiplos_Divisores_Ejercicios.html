@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (Imagen con Tooltip)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Ejercicios de Múltiplos y Divisores (1º y 2º ESO)</h1>
+   
+    <div class="exercise-list">
+       
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Escribe los 5 primeros múltiplos del número $6$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p>Multiplicamos el número 6 por los primeros números naturales:</p>
+                <p>$6 \times 1 = 6$, $6 \times 2 = 12$, $6 \times 3 = 18$, $6 \times 4 = 24$, $6 \times 5 = 30$.</p>
+                <p>Los primeros 5 múltiplos de 6 son: **$M(6) = \{6, 12, 18, 24, 30\}$**.</p>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Encuentra los 5 primeros múltiplos de $9$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p>$9 \times 1 = 9$, $9 \times 2 = 18$, $9 \times 3 = 27$, $9 \times 4 = 36$, $9 \times 5 = 45$.</p>
+                <p>Los múltiplos buscados son: **$M(9) = \{9, 18, 27, 36, 45\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Escribe los 6 primeros múltiplos de $4$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p>$4 \times 1 = 4$, $4 \times 2 = 8$, $4 \times 3 = 12$, $4 \times 4 = 16$, $4 \times 5 = 20$, $4 \times 6 = 24$.</p>
+                <p>Los 6 primeros múltiplos de 4 son: **$M(4) = \{4, 8, 12, 16, 20, 24\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Calcula los primeros 5 múltiplos del número $11$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p>Multiplicamos de 1 a 5: $11, 22, 33, 44, 55$.</p>
+                <p>El conjunto es: **$M(11) = \{11, 22, 33, 44, 55\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Escribe los 5 primeros múltiplos de $15$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p>$15 \times 1 = 15$, $15 \times 2 = 30$, $15 \times 3 = 45$, $15 \times 4 = 60$, $15 \times 5 = 75$.</p>
+                <p>Resultado: **$M(15) = \{15, 30, 45, 60, 75\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Encuentra todos los divisores del número $8$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p>Buscamos las divisiones exactas: $8 \div 1 = 8$, $8 \div 2 = 4$.</p>
+                <p>Los divisores de 8 son: **$D(8) = \{1, 2, 4, 8\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Calcula todos los divisores de $10$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p>Las parejas multiplicativas que dan 10 son $1 \times 10$ y $2 \times 5$.</p>
+                <p>Los divisores son: **$D(10) = \{1, 2, 5, 10\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Escribe todos los divisores del número $15$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p>Dividimos de forma exacta: $15 \div 1 = 15$, $15 \div 3 = 5$.</p>
+                <p>Los divisores de 15 son: **$D(15) = \{1, 3, 5, 15\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Averigua todos los divisores del número primo $7$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p>Al ser un número primo, solo se puede dividir exactamente entre la unidad y él mismo.</p>
+                <p>Los divisores son: **$D(7) = \{1, 7\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Comprueba mediante una división si $40$ es múltiplo de $5$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p>Hacemos la operación: $40 \div 5 = 8$.</p>
+                <p>Como el residuo es $0$, la división es exacta. Por tanto, **sí es múltiplo** ($5 \times 8 = 40$).</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Determina si $24$ es múltiplo de $4$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p>Dividimos: $24 \div 4 = 6$.</p>
+                <p>El residuo es cero. **Sí**, 24 es múltiplo de 4.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">¿Es el número $35$ múltiplo de $7$?</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p>Operamos: $35 \div 7 = 5$.</p>
+                <p>Dado que la división da un número entero exacto, **sí**, 35 es múltiplo de 7.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Comprueba si $3$ es divisor de $21$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <p>Dividimos el número mayor entre el menor: $21 \div 3 = 7$.</p>
+                <p>Al ser una división exacta, **sí**, 3 es divisor de 21.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Determina si el número $6$ es divisor de $42$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <p>Dividimos: $42 \div 6 = 7$.</p>
+                <p>Como el resto es cero, **sí**, 6 es divisor de 42.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">¿Es el número $9$ divisor de $54$?</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <p>Hacemos el cálculo: $54 \div 9 = 6$.</p>
+                <p>La división es exacta, por lo que **sí**, 9 es divisor de 54.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Escribe los múltiplos de $5$ que sean menores que $25$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <p>Buscamos múltiplos de 5 sin incluir al 25 ni superiores: $5 \times 1 = 5$, $5 \times 2 = 10$, $5 \times 3 = 15$, $5 \times 4 = 20$.</p>
+                <p>Los números son: **$\{5, 10, 15, 20\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Muestra los múltiplos de $10$ que se encuentran por debajo de $45$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <p>Multiplicamos por 10 consecutivamente: $10, 20, 30, 40$. El siguiente es 50 (se pasa).</p>
+                <p>El conjunto es: **$\{10, 20, 30, 40\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Escribe todos los divisores de $12$ que sean menores que $5$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <p>Los divisores completos de 12 son $\{1, 2, 3, 4, 6, 12\}$. Seleccionamos los menores que 5.</p>
+                <p>Resultado: **$\{1, 2, 3, 4\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Encuentra todos los divisores del número $18$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <p>Buscamos las parejas que multiplicadas den 18: $1 \times 18$, $2 \times 9$, $3 \times 6$.</p>
+                <p>Ordenamos el conjunto final: **$D(18) = \{1, 2, 3, 6, 9, 18\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Calcula todos los divisores del número $28$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <p>Dividimos el número 28 de forma exacta: $28 \div 1 = 28$, $28 \div 2 = 14$, $28 \div 4 = 7$.</p>
+                <p>Los divisores de 28 son: **$D(28) = \{1, 2, 4, 7, 14, 28\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Encuentra todos los divisores del número $30$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <p>Buscamos combinaciones exactas: $1 \times 30$, $2 \times 15$, $3 \times 10$, $5 \times 6$.</p>
+                <p>Los divisores ordenados son: **$D(30) = \{1, 2, 3, 5, 6, 10, 15, 30\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Determina todos los divisores del número $36$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <p>Hacemos las divisiones exactas correspondientes: $1, 2, 3, 4, 6, 9, 12, 18, 36$.</p>
+                <p>El conjunto completo es: **$D(36) = \{1, 2, 3, 4, 6, 9, 12, 18, 36\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Escribe los múltiplos de $8$ que estén comprendidos entre $20$ y $50$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <p>Revisamos la tabla del 8: $8 \times 3 = 24$, $8 \times 4 = 32$, $8 \times 5 = 40$, $8 \times 6 = 48$.</p>
+                <p>Los múltiplos en ese rango son: **$\{24, 32, 40, 48\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Escribe todos los múltiplos de $12$ que se encuentren entre los números $30$ y $80$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+                <p><strong>Solución Ejercicio 24:</strong></p>
+                <p>Multiplicamos el 12: $12 \times 3 = 36$, $12 \times 4 = 48$, $12 \times 5 = 60$, $12 \times 6 = 72$.</p>
+                <p>Los valores del rango son: **$\{36, 48, 60, 72\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Comprueba mediante una división si el número $114$ es múltiplo de $6$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+                <p><strong>Solución Ejercicio 25:</strong></p>
+                <p>Efectuamos el cálculo de la división: $114 \div 6 = 19$.</p>
+                <p>El residuo es exactamente cero. Por lo tanto, **sí**, 114 es múltiplo de 6.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Averigua si el número $138$ es múltiplo de $8$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+                <p><strong>Solución Ejercicio 26:</strong></p>
+                <p>Hacemos la división: $138 \div 8 = 17$ con residuo de $2$.</p>
+                <p>Al no ser una división exacta (residuo diferente de cero), **no**, 138 no es múltiplo de 8.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Determina si el número $14$ es divisor de $154$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+                <p><strong>Solución Ejercicio 27:</strong></p>
+                <p>Efectuamos el cálculo: $154 \div 14 = 11$.</p>
+                <p>La división da un número entero exacto sin residuo. Por consiguiente, **sí**, 14 es divisor de 154.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Comprueba si el número $15$ es divisor de $230$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+                <p><strong>Solución Ejercicio 28:</strong></p>
+                <p>Dividimos los dos números: $230 \div 15 = 15$ con residuo de $5$.</p>
+                <p>Como hay un residuo sobrante, la división es inexacta. **No**, 15 no es divisor de 230.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Escribe los múltiplos de $15$ comprendidos en el rango de $40$ a $100$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+                <p><strong>Solución Ejercicio 29:</strong></p>
+                <p>Calculamos la tabla del 15 a partir de 40: $15 \times 3 = 45$, $15 \times 4 = 60$, $15 \times 5 = 75$, $15 \times 6 = 90$.</p>
+                <p>Los números situados en este rango son: **$\{45, 60, 75, 90\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Identifica todos los múltiplos de $25$ situados entre el $60$ y el $160$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+                <p><strong>Solución Ejercicio 30:</strong></p>
+                <p>Múltiplos de 25 en el intervalo: $25 \times 3 = 75$, $25 \times 4 = 100$, $25 \times 5 = 125$, $25 \times 6 = 150$.</p>
+                <p>Los valores correctos son: **$\{75, 100, 125, 150\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">31.</span>
+            <p class="exercise-statement">De entre todos los divisores de $40$, ¿cuáles son mayores que $6$?</p>
+            <div class="solution-trigger-container" data-solution-id="solution31">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution31" style="display: none;">
+                <p><strong>Solución Ejercicio 31:</strong></p>
+                <p>Primero listamos los divisores de 40: $\{1, 2, 4, 5, 8, 10, 20, 40\}$.</p>
+                <p>Filtramos aquellos que superen al número 6: **$\{8, 10, 20, 40\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">32.</span>
+            <p class="exercise-statement">Encuentra los divisores de $48$ que sean también múltiplos del número $3$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution32">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution32" style="display: none;">
+                <p><strong>Solución Ejercicio 32:</strong></p>
+                <p>Los divisores de 48 son $\{1, 2, 3, 4, 6, 8, 12, 16, 24, 48\}$.</p>
+                <p>Seleccionamos los que pertenezcan a la tabla del 3: **$\{3, 6, 12, 24, 48\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">33.</span>
+            <p class="exercise-statement">Escribe los 5 primeros múltiplos de dos cifras del número $7$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution33">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution33" style="display: none;">
+                <p><strong>Solución Ejercicio 33:</strong></p>
+                <p>El primer múltiplo de 7 con dos cifras es $14$ ($7 \times 2$). A partir de ahí listamos cinco seguidos:</p>
+                <p>$14, 21, 28, 35, 42$.</p>
+                <p>Resultado: **$\{14, 21, 28, 35, 42\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">34.</span>
+            <p class="exercise-statement">Calcula todos los divisores de $50$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution34">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution34" style="display: none;">
+                <p><strong>Solución Ejercicio 34:</strong></p>
+                <p>Buscamos descomposiciones exactas en parejas: $1 \times 50$, $2 \times 25$, $5 \times 10$.</p>
+                <p>El listado final ordenado es: **$D(50) = \{1, 2, 5, 10, 25, 50\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">35.</span>
+            <p class="exercise-statement">¿Es $210$ un múltiplo de $14$? Compruébalo analíticamente.</p>
+            <div class="solution-trigger-container" data-solution-id="solution35">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution35" style="display: none;">
+                <p><strong>Solución Ejercicio 35:</strong></p>
+                <p>Dividimos el valor: $210 \div 14 = 15$.</p>
+                <p>Puesto que el resto es $0$, confirmamos de manera clara que **sí es múltiplo** ($14 \times 15 = 210$).</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">36.</span>
+            <p class="exercise-statement">Escribe los divisores de $60$ que terminen en la cifra cero.</p>
+            <div class="solution-trigger-container" data-solution-id="solution36">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution36" style="display: none;">
+                <p><strong>Solución Ejercicio 36:</strong></p>
+                <p>Los divisores completos de 60 son $\{1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60\}$.</p>
+                <p>Filtramos los acabados en 0: **$\{10, 20, 30, 60\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">37.</span>
+            <p class="exercise-statement">Calcula de forma ordenada la lista de todos los divisores de $64$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution37">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution37" style="display: none;">
+                <p><strong>Solución Ejercicio 37:</strong></p>
+                <p>Buscamos las divisiones exactas: $64 \div 1=64$, $64 \div 2=32$, $64 \div 4=16$, $64 \div 8=8$.</p>
+                <p>Los divisores ordenados son: **$D(64) = \{1, 2, 4, 8, 16, 32, 64\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">38.</span>
+            <p class="exercise-statement">Encuentra todos los divisores del número $72$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution38">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution38" style="display: none;">
+                <p><strong>Solución Ejercicio 38:</strong></p>
+                <p>Parejas que dan 72: $1 \times 72$, $2 \times 36$, $3 \times 24$, $4 \times 18$, $6 \times 12$, $8 \times 9$.</p>
+                <p>Reunimos el conjunto ordenado: **$D(72) = \{1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">39.</span>
+            <p class="exercise-statement">Determina todos los divisores del número $90$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution39">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution39" style="display: none;">
+                <p><strong>Solución Ejercicio 39:</strong></p>
+                <p>Buscamos los factores divisores: $1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90$.</p>
+                <p>El conjunto de divisores es: **$D(90) = \{1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">40.</span>
+            <p class="exercise-statement">Encuentra todos los múltiplos de $18$ que estén comprendidos entre $50$ y $150$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution40">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution40" style="display: none;">
+                <p><strong>Solución Ejercicio 40:</strong></p>
+                <p>Multiplicamos sucesivamente: $18 \times 3 = 54$, $18 \times 4 = 72$, $18 \times 5 = 90$, $18 \times 6 = 108$, $18 \times 7 = 126$, $18 \times 8 = 144$.</p>
+                <p>Los números dentro del rango son: **$\{54, 72, 90, 108, 126, 144\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">41.</span>
+            <p class="exercise-statement">Escribe los múltiplos de $23$ que tengan tres cifras pero sean menores de $150$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution41">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution41" style="display: none;">
+                <p><strong>Solución Ejercicio 41:</strong></p>
+                <p>Multiplicamos: $23 \times 4 = 92$ (dos cifras), $23 \times 5 = 115$ (tres cifras), $23 \times 6 = 138$ (tres cifras), $23 \times 7 = 161$ (se pasa).</p>
+                <p>Los únicos elementos válidos son: **$\{115, 138\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">42.</span>
+            <p class="exercise-statement">Comprueba mediante divisiones si el número $357$ es divisible (múltiplo) por $17$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution42">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution42" style="display: none;">
+                <p><strong>Solución Ejercicio 42:</strong></p>
+                <p>Realizamos la operación de división de forma directa: $357 \div 17 = 21$.</p>
+                <p>Dado que el residuo obtenido es exactamente cero, **sí**, el número 357 es múltiplo de 17.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">43.</span>
+            <p class="exercise-statement">Averigua si el número $27$ es un divisor exacto de $442$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution43">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution43" style="display: none;">
+                <p><strong>Solución Ejercicio 43:</strong></p>
+                <p>Planteamos la división: $442 \div 27 = 16$ con un residuo de $10$.</p>
+                <p>La división no es exacta por haber residuo, con lo cual **no**, 27 no es divisor de 442.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">44.</span>
+            <p class="exercise-statement">Encuentra todos los múltiplos del número de dos cifras $31$ que estén entre $50$ y $200$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution44">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution44" style="display: none;">
+                <p><strong>Solución Ejercicio 44:</strong></p>
+                <p>Multiplicamos el 31 consecutivamente: $31 \times 2 = 62$, $31 \times 3 = 93$, $31 \times 4 = 124$, $31 \times 5 = 155$, $31 \times 6 = 186$.</p>
+                <p>Los múltiplos comprendidos en el rango son: **$\{62, 93, 124, 155, 186\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">45.</span>
+            <p class="exercise-statement">Halla todos los divisores del número $100$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution45">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution45" style="display: none;">
+                <p><strong>Solución Ejercicio 45:</strong></p>
+                <p>Establecemos las combinaciones del número 100: $1 \times 100$, $2 \times 50$, $4 \times 25$, $5 \times 20$, $10 \times 10$.</p>
+                <p>La lista de divisores definitiva es: **$D(100) = \{1, 2, 4, 5, 10, 20, 25, 50, 100\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">46.</span>
+            <p class="exercise-statement">De todos los divisores del número $84$, escribe los que estén situados en el rango de $10$ a $30$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution46">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution46" style="display: none;">
+                <p><strong>Solución Ejercicio 46:</strong></p>
+                <p>Divisores totales de 84: $\{1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84\}$.</p>
+                <p>Seleccionamos únicamente los que cumplen con $10 \le \text{divisor} \le 30$: **$\{12, 14, 21, 28\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">47.</span>
+            <p class="exercise-statement">Identifica el único número que es a la vez divisor de $45$, múltiplo de $3$ y que se encuentra comprendido entre $10$ y $20$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution47">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution47" style="display: none;">
+                <p><strong>Solución Ejercicio 47:</strong></p>
+                <p>Los divisores de 45 son $\{1, 3, 5, 9, 15, 45\}$. De ellos, los que están entre 10 y 20 es solo el $15$.</p>
+                <p>Comprobamos la condición restante: $15$ es múltiplo de 3 ($3 \times 5 = 15$). El número buscado es el **$15$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">48.</span>
+            <p class="exercise-statement">Escribe de menor a mayor los divisores impares del número $90$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution48">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution48" style="display: none;">
+                <p><strong>Solución Ejercicio 48:</strong></p>
+                <p>Los divisores completos de 90 son $\{1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90\}$.</p>
+                <p>Separamos exclusivamente los números impares de esa lista: **$\{1, 3, 5, 9, 15, 45\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">49.</span>
+            <p class="exercise-statement">Encuentra los múltiplos de $13$ que sumados a $10$ den un resultado situado entre $50$ y $100$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution49">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution49" style="display: none;">
+                <p><strong>Solución Ejercicio 49:</strong></p>
+                <p>Evaluamos los múltiplos de 13 y les sumamos 10:</p>
+                <p>$13 \times 3 = 39 \implies 39 + 10 = 49$ (No llega)</p>
+                <p>$13 \times 4 = 52 \implies 52 + 10 = 62$ (Válido)</p>
+                <p>$13 \times 5 = 65 \implies 65 + 10 = 75$ (Válido)</p>
+                <p>$13 \times 6 = 78 \implies 78 + 10 = 88$ (Válido)</p>
+                <p>$13 \times 7 = 91 \implies 91 + 10 = 101$ (Se pasa)</p>
+                <p>Los múltiplos de 13 que cumplen la condición inicial son: **$\{52, 65, 78\}$**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">50.</span>
+            <p class="exercise-statement">Determina todos los divisores de $120$ de dos cifras que empiecen por la cifra $2$ o por la cifra $3$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution50">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution50" style="display: none;">
+                <p><strong>Solución Ejercicio 50:</strong></p>
+                <p>Los divisores de dos cifras de 120 son $\{10, 12, 15, 20, 24, 30, 40, 60\}$.</p>
+                <p>Filtramos aquellos cuya primera cifra sea un 2 o un 3:</p>
+                <p>Con 2: $20, 24$. Con 3: $30$.</p>
+                <p>El resultado ordenado es: **$\{20, 24, 30\}$**.</p>
+            </div> 
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>
