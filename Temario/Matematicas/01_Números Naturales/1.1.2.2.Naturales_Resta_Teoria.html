@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: La Resta de Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .sub-step {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 15px;
+        }
+        .sub-step:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .step-num {
+            display: inline-block;
+            background: #00769d;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: La Resta de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Operaciones Básicas: La Resta o Sustracción</h2>
+            <p>La resta es la segunda operación matemática fundamental que aprendemos. Nos permite calcular lo que queda después de quitar una cantidad, o bien descubrir la diferencia que existe entre dos números.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. Definición de la Resta</div>
+                <div class="regla-box">
+                    <strong>¿Qué significa restar?</strong> Restar es un proceso matemático con dos enfoques principales: por un lado, significa <strong>quitar</strong> elementos de una colección; por otro, equivale a <strong>contar lo que le falta</strong> a una cantidad pequeña para llegar a ser igual a una cantidad mayor.
+                </div>
+                <p><strong>Enfoque 1 (Quitar):</strong> Si tienes una cesta con $7$ manzanas y decides comerte o quitar $3$, calculas cuántas te quedan. El resultado es $4$.</p>
+                <p><strong>Enfoque 2 (Cuánto falta para llegar):</strong> Si estás en el escalón número $3$ y quieres alcanzar el escalón número $7$, calculas cuántos pasos te faltan por subir. Del $3$ al $7$ faltan $4$ escalones.</p>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Las Partes de la Resta</div>
+                <div class="regla-box">
+                    <strong>Condición crucial en Números Naturales:</strong> El <strong>Minuendo</strong> obligatoriamente debe ser <strong>mayor o igual</strong> que el <strong>Sustraendo</strong> ($Minuendo \geq Sustraendo$). De lo contrario, la operación no se puede realizar dentro de este conjunto numérico.
+                </div>
+                <p>Los términos de una resta reciben nombres específicos según su posición y función:</p>
+                <ul>
+                    <li><strong>Minuendo:</strong> La cantidad inicial, que se coloca arriba.</li>
+                    <li><strong>Sustraendo:</strong> La cantidad que se va a restar o quitar, situada abajo.</li>
+                    <li><strong>Diferencia:</strong> El resultado final de la operación.</li>
+                </ul>
+
+                <p>Por ejemplo, si planteamos la operación en vertical:</p>
+                <div class="division-table-container">
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                        &nbsp;&nbsp;7&nbsp;&nbsp;<span style="font-size: 1rem; font-family: sans-serif; color: #4a5568;">(Minuendo)</span><br>
+                        -&nbsp;3&nbsp;&nbsp;<span style="font-size: 1rem; font-family: sans-serif; color: #4a5568;">(Sustraendo)</span><br>
+                        ---<br>
+                        &nbsp;&nbsp;4&nbsp;&nbsp;<span style="font-size: 1rem; font-family: sans-serif; color: #4a5568;">(Diferencia)</span>
+                    </div>
+                </div>
+
+                <p style="color: #e53e3e; font-weight: bold;">¡Importante! Una operación como $2 - 5$ NO se puede realizar en los números naturales, porque no es posible quitarle 5 unidades a un grupo que sólo tiene 2.</p>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. La Prueba de la Resta</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Regla de oro:</strong> Para comprobar que una resta es correcta, realizamos la operación inversa (la suma). Si sumamos el <strong>Sustraendo</strong> y la <strong>Diferencia</strong>, el resultado obtenido debe ser igual al <strong>Minuendo</strong>.
+                </div>
+                <p>$$\text{Sustraendo} + \text{Diferencia} = \text{Minuendo}$$</p>
+                <p><strong>Ejemplo de comprobación:</strong> Tomemos la resta $9 - 6 = 3$. Si sumamos el sustraendo ($6$) con el resultado obtenido ($3$):</p>
+                <p>$$6 + 3 = 9$$</p>
+                <p>Como obtenemos el minuendo original ($9$), demostramos que la resta se calculó de forma correcta.</p>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">4. Restas por Nivel de Dificultad</div>
+                
+                <h3>4.1 Restas de un Solo Dígito</h3>
+                <p>Constituyen el nivel básico. Son operaciones directas resueltas mentalmente o mediante apoyos visuales elementales, donde ambos números ponen una sola cifra.</p>
+                <p>$$8 - 5 = 3$$</p>
+
+                <h3>4.2 Restas de Varios Dígitos sin Llevadas</h3>
+                <p>Se alinean las cifras verticalmente de derecha a izquierda (unidades, decenas, centenas...). Cada dígito del minuendo es mayor o igual que el que tiene debajo, efectuándose la resta columna por columna.</p>
+                
+                <p><strong>Ejemplo:</strong> $87 - 34$</p>
+                <div class="division-table-container" style="background: #f0f7f9;">
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                        &nbsp;&nbsp;87<br>
+                        -&nbsp;34<br>
+                        -----<br>
+                        &nbsp;&nbsp;53
+                    </div>
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li><strong>Unidades:</strong> $7 - 4 = 3$. Se anota el $3$.</li>
+                            <li><strong>Decenas:</strong> $8 - 3 = 5$. Se anota el $5$.</li>
+                            <li>El resultado es <span class="highlight">53</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>4.3 Restas con Llevadas (Sustraendo de un Solo Dígito)</h3>
+                <p>Cuando la cifra de las unidades del minuendo es menor que la del sustraendo, se le añaden mentalmente $10$ unidades al minuendo. <strong>Utilizando el método tradicional</strong>, esa decena añadida se "devuelve" sumándola al dígito del sustraendo de la siguiente columna (izquierda).</p>
+                
+                <p><strong>Ejemplo paso a paso:</strong> $23 - 7$</p>
+                
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Columna de las Unidades</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;2&nbsp;<span style="background: #fff3cd; padding: 0 2px;">3</span><br>
+                            -&nbsp;&nbsp;&nbsp;<span style="background: #fff3cd; padding: 0 2px;">7</span><br>
+                            -----<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            A $3$ no podemos restarle $7$. Por lo tanto, le añadimos una decena mentalmente para convertirlo en $13$.<br>
+                            Calculamos: <strong>de $7$ a $13$ van <span class="highlight">6</span></strong>. Anotamos el $6$ en el resultado de las unidades.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Mecanismo de la Llevada (El 0 se convierte en 1)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;2&nbsp;3<br>
+                            -&nbsp;<span style="color: red; font-size: 1.1rem; font-weight: bold; vertical-align: super;">1</span><span style="text-decoration: line-through; color: #a0aec0; font-size: 1.2rem;">0</span>&nbsp;7<br>
+                            -----<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Como hemos dicho $13$, nos <strong>"llevamos 1"</strong>. Esa unidad se la sumamos al dígito invisible de las decenas en el sustraendo (que inicialmente vale $0$). <br>
+                            El <span style="text-decoration: line-through;">0</span> desaparece visualmente y <strong>se transforma en el $1$ rojo</strong> de la llevada.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Columna de las Decenas</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;<span style="background: #e2e8f0; padding: 0 2px;">2</span>&nbsp;3<br>
+                            -&nbsp;<span style="background: #e2e8f0; color: red; font-size: 1.1rem; font-weight: bold; vertical-align: super;">1</span>&nbsp;7<br>
+                            -----<br>
+                            &nbsp;&nbsp;<span class="highlight">1</span>&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Ahora resolvemos la columna de las decenas: restamos la cifra del minuendo ($2$) menos el nuevo valor de nuestra llevada ($1$).<br>
+                            Calculamos: <strong>$2 - 1 = $<span class="highlight">1</span></strong>. Anotamos el $1$ y obtenemos el resultado final: <span class="highlight">16</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <h3>4.4 Restas de Varios Dígitos con Llevadas</h3>
+                <p>Aplicamos el método tradicional de forma sucesiva en números de más cifras, desplazando y acumulando las llevadas columna por columna de derecha a izquierda.</p>
+                
+                <p><strong>Ejemplo paso a paso:</strong> $624 - 258$</p>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Columna de las Unidades</span>
+                    <div class="division-table-container" style="background: #f0f7f9;">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;6&nbsp;&nbsp;2&nbsp;&nbsp;<span style="background: #fff3cd; padding: 0 2px;">4</span><br>
+                            -&nbsp;2&nbsp;&nbsp;5&nbsp;&nbsp;<span style="background: #fff3cd; padding: 0 2px;">8</span><br>
+                            --------<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            A $4$ no podemos restarle $8$. Lo convertimos mentalmente en $14$.<br>
+                            Calculamos: <strong>de $8$ a $14$ van <span class="highlight">6</span></strong>. Escribimos el $6$ abajo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Primera llevada abajo</span>
+                    <div class="division-table-container" style="background: #f0f7f9;">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;6&nbsp;&nbsp;2&nbsp;&nbsp;4<br>
+                            -&nbsp;2&nbsp;<span style="color: red; font-size: 1.1rem; font-weight: bold; vertical-align: super;">1</span>5&nbsp;&nbsp;8<br>
+                            --------<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Como dijimos $14$, nos llevamos $1$, que viaja a la columna izquierda de abajo (las decenas del sustraendo) colocándose como un <strong>$1$ rojo</strong> junto al $5$.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Columna de las Decenas</span>
+                    <div class="division-table-container" style="background: #f0f7f9;">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;6&nbsp;&nbsp;<span style="background: #fff3cd; padding: 0 2px;">2</span>&nbsp;&nbsp;4<br>
+                            -&nbsp;2&nbsp;&nbsp;<span style="background: #fff3cd; padding: 0 2px;">6</span>&nbsp;&nbsp;8&nbsp;&nbsp;<br>
+                            --------<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Sumamos la llevada al sustraendo: $5 + 1 = 6$. Ahora tenemos que restar $2 - 6$.<br>
+                            Como a $2$ no le podemos quitar $6$, lo convertimos en $12$.<br>
+                            Calculamos: <strong>de $6$ a $12$ van <span class="highlight">6</span></strong>. Anotamos el $6$ abajo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 4: Segunda llevada abajo</span>
+                    <div class="division-table-container" style="background: #f0f7f9;">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;6&nbsp;&nbsp;2&nbsp;&nbsp;4<br>
+                            -&nbsp;<span style="color: red; font-size: 1.1rem; font-weight: bold; vertical-align: super;">1</span>2&nbsp;6&nbsp;&nbsp;8<br>
+                            --------<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Al decir $12$, nos volvemos a llevar $1$. Esta nueva unidad viaja abajo hacia la siguiente columna (las centenas) y se coloca como un <strong>$1$ rojo</strong> junto al $2$.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 5: Columna de las Centenas</span>
+                    <div class="division-table-container" style="background: #f0f7f9;">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;<span style="background: #e2e8f0; padding: 0 2px;">6</span>&nbsp;&nbsp;2&nbsp;&nbsp;4<br>
+                            -&nbsp;<span style="background: #e2e8f0; padding: 0 2px;">3</span>&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;<br>
+                            --------<br>
+                            &nbsp;&nbsp;<span class="highlight">3</span>&nbsp;&nbsp;6&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Sumamos la llevada al sustraendo de las centenas: $2 + 1 = 3$.<br>
+                            Efectuamos la resta final de esa columna: <strong>$6 - 3 = $<span class="highlight">3</span></strong>.<br>
+                            El resultado final de la operación es <span class="highlight">366</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">5. Método Alternativo: Restar la Llevada en el Minuendo (Llevadas Arriba)</div>
+                <div class="regla-box" style="background-color: #fffaf0; border-left-color: #dd6b20;">
+                    <strong>Nota del Autor:</strong> Aunque este procedimiento es común, y es el que mejor explica la funcionalidad de la resta, se recomenienda el método anterior debido a que no requiere tachaduras, se puede realizar el incremento de uno mentalmente, modificando los números del minuendo original a medida que avanza el cálculo, y siendo un método más rápido con la práctica.
+                </div>
+                <p>En este sistema, en lugar de sumar la unidad abajo, se **resta directamente** al dígito del minuendo situado en la columna de la izquierda (se descompone la cifra superior de forma inmediata).</p>
+                
+                <p><strong>Mismo ejemplo paso a paso:</strong> $624 - 258$</p>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Modificación de Unidades y Decenas</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;6&nbsp;&nbsp;<span style="color: blue; font-weight: bold;">1</span><span style="text-decoration: line-through; color: #a0aec0;">2</span>&nbsp;<span style="color: blue; font-weight: bold;">14</span><span style="text-decoration: line-through; color: #a0aec0;">4</span><br>
+                            -&nbsp;2&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;8<br>
+                            ------------<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            El $4$ no puede restar al $8$, por lo que le "pide prestada" una unidad a su vecino, el $2$. <br>
+                            Al hacerlo, el $4$ se transforma en <strong>$14$</strong>. Su vecino de las decenas pierde una unidad, por lo que <strong>el $2$ desaparece (se tacha) y se convierte en un $1$ azul</strong>.<br>
+                            Restamos las unidades: <strong>$14 - 8 =$ <span class="highlight">6</span></strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Modificación de Decenas y Centenas</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;<span style="color: blue; font-weight: bold;">5</span><span style="text-decoration: line-through; color: #a0aec0;">6</span>&nbsp;<span style="color: blue; font-weight: bold;">11</span><span style="text-decoration: line-through; color: #a0aec0;">1</span>&nbsp;14<br>
+                            -&nbsp;2&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;8<br>
+                            ------------<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            En las decenas ahora nos queda un $1$, al cual no podemos quitarle $5$. Le pide una unidad prestada a su vecino de las centenas (el $6$).<br>
+                            Así, el $1$ de las decenas se convierte en un <strong>$11$ azul</strong>. El vecino de las centenas, al prestar la unidad, <strong>desaparece (se tacha el $6$) y se transforma en un $5$ azul</strong>.<br>
+                            Restamos las decenas: <strong>$11 - 5 =$ <span class="highlight">6</span></strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Resolución de Centenas</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                            &nbsp;&nbsp;5&nbsp;&nbsp;11&nbsp;14<br>
+                            -&nbsp;<span style="background: #e2e8f0; padding: 0 2px;">2</span>&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;8<br>
+                            ------------<br>
+                            &nbsp;&nbsp;<span class="highlight">3</span>&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;6
+                        </div>
+                        <div class="explicacion-lateral">
+                            Finalmente resolvemos la columna de las centenas utilizando únicamente los valores supervivientes del minuendo superior.<br>
+                            Restamos el valor transformado ($5$) menos el sustraendo ($2$):<br>
+                            Calculamos: <strong>$5 - 2 =$ <span class="highlight">3</span></strong>. Llegamos al mismo resultado final limpio de <span class="highlight">366</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #00769d;">6. Cálculo Rápido de Restas (Transformación en Suma)</div>
+                <div class="regla-box" style="background-color: #f7fafc; border-left-color: #4a5568;">
+                    <strong>El truco mental:</strong> El cerebro calcula sumas con mayor agilidad que restas. Esta técnica consiste en saltar desde el sustraendo hasta el número $10$ mediante una suma elemental, y posteriormente añadir lo que resta para alcanzar el minuendo final.
+                </div>
+                
+                <p><strong>Ejemplo Base:</strong> Deseamos calcular mentalmente $15 - 7$</p>
+                <ul>
+                    <li><strong>Paso A:</strong> Evaluamos cuánto le falta al sustraendo ($7$) para llegar a $10$. Sabemos que faltan <span style="color: #2635b7; font-weight: bold;">3</span>.</li>
+                    <li><strong>Paso B:</strong> Evaluamos cuánto falta desde el $10$ hasta nuestro minuendo ($15$). Faltan <span style="color: #00769d; font-weight: bold;">5</span>.</li>
+                    <li><strong>Paso C:</strong> Sumamos ambos puentes numéricos obtenidos de manera inmediata:
+                        $$3 + 5 = 8$$
+                        Por lo tanto: $15 - 7 = 8$.
+                    </li>
+                </ul>
+
+                <hr style="border: 0; border-top: 1px dashed #cbd5e0; margin: 20px 0;">
+                <p><strong>Aplicación práctica en restas largas:</strong> Este cálculo veloz es extremadamente útil para agilizar las operaciones columna por columna en restas de varios dígitos con llevadas, eliminando la necesidad de contar con los dedos.</p>
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+</html>

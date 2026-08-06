@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Restas de Números Naturales con Soluciones</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],               
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+    <style>
+        /* Estilos mezclados del segundo documento para enriquecer las soluciones paso a paso */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95rem;
+        }
+        .regla-box strong { color: #2635b7; }
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 15px 0;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+        .explicacion-lateral {
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.4;
+        }
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Restas de Números Naturales con Soluciones</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Calcula la siguiente resta directa de un solo dígito: \( 9 - 4 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Es una operación básica directa que se resuelve mentalmente:</p>
+                    $$ 9 - 4 = 5 $$
+                    <div class="regla-box">
+                        <strong>Prueba de la resta:</strong> Sumamos el sustraendo y la diferencia: \( 4 + 5 = 9 \) (coincide con el minuendo).
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Encuentra la diferencia de la siguiente expresión: \( 7 - 3 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Quitamos 3 unidades a un conjunto inicial de 7 elementos:</p>
+                    $$ 7 - 3 = 4 $$
+                </div>
+            </li>
+
+            <li>
+                Resuelve: \( 8 - 5 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Buscamos cuánto le falta al 5 para llegar a ser igual a 8:</p>
+                    $$ 8 - 5 = 3 $$
+                </div>
+            </li>
+
+            <li>
+                Calcula el valor resultante de: \( 6 - 6 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Cuando el minuendo y el sustraendo son iguales, el resultado en los números naturales es cero:</p>
+                    $$ 6 - 6 = 0 $$
+                </div>
+            </li>
+
+            <li>
+                Determina el resultado de: \( 5 - 1 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Restar 1 equivale a hallar el número natural anterior o antecesor de 5:</p>
+                    $$ 5 - 1 = 4 $$
+                </div>
+            </li>
+
+            <li>
+                Efectúa la resta alineando los dígitos verticalmente: \( 48 - 23 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Alineamos las cifras de derecha a izquierda y restamos columna por columna sin necesidad de llevadas:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;48<br>
+                            -&nbsp;23<br>
+                            ----<br>
+                            &nbsp;&nbsp;25
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 8 - 3 = 5 \). Se anota el 5.</li>
+                                <li><strong>Decenas:</strong> \( 4 - 2 = 2 \). Se anota el 2.</li>
+                                <li>El resultado final es <span class="highlight">25</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula la diferencia entre los números \( 95 \) y \( 41 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Efectuamos la operación de forma vertical:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;95<br>
+                            -&nbsp;41<br>
+                            ----<br>
+                            &nbsp;&nbsp;54
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 5 - 1 = 4 \)</li>
+                                <li><strong>Decenas:</strong> \( 9 - 4 = 5 \)</li>
+                                <li>Diferencia resultante: <span class="highlight">54</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la resta de tres cifras sin llevadas: \( 764 - 523 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Operamos de derecha a izquierda en cada una de las posiciones:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;764<br>
+                            -&nbsp;523<br>
+                            -----<br>
+                            &nbsp;&nbsp;241
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 4 - 3 = 1 \)</li>
+                                <li><strong>Decenas:</strong> \( 6 - 2 = 4 \)</li>
+                                <li><strong>Centenas:</strong> \( 7 - 5 = 2 \)</li>
+                                <li>Resultado: <span class="highlight">241</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el resultado de restar \( 102 \) a \( 895 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Planteamos el cálculo matemático de manera ordenada:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;895<br>
+                            -&nbsp;102<br>
+                            -----<br>
+                            &nbsp;&nbsp;793
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li>\( 5 - 2 = 3 \) en las unidades.</li>
+                                <li>\( 9 - 0 = 9 \) en las decenas.</li>
+                                <li>\( 8 - 1 = 7 \) en las centenas.</li>
+                                <li>Resultado final: <span class="highlight">793</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la siguiente sustracción de números grandes: \( 6589 - 3140 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Cada número de la parte superior es mayor que su correspondiente inferior:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;6589<br>
+                            -&nbsp;3140<br>
+                            ------<br>
+                            &nbsp;&nbsp;3449
+                        </div>
+                        <div class="explicacion-lateral">
+                            Unidades: \(9-0=9\) | Decenas: \(8-4=4\) | Centenas: \(5-1=4\) | Unidades de millar: \(6-3=3\).<br>
+                            El valor final obtenido es <span class="highlight">3449</span>.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la resta con llevada utilizando el método tradicional: \( 32 - 7 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Analizamos la operación por columnas:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;32<br>
+                            -&nbsp;&nbsp;7<br>
+                            ----<br>
+                            &nbsp;&nbsp;25
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> A 2 no podemos restarle 7. Añadimos 10 mentalmente convirtiéndolo en 12. De 7 a 12 van <span class="highlight">5</span>.</li>
+                                <li><strong>Mecanismo de llevada:</strong> Como dijimos 12, nos llevamos 1. Se lo sumamos al valor invisible (0) de las decenas de abajo, transformándolo en 1.</li>
+                                <li><strong>Decenas:</strong> Restamos el minuendo menos la llevada: \( 3 - 1 = 2 \).</li>
+                                <li>Resultado: <span class="highlight">25</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula paso a paso empleando cálculo rápido o puentes: \( 14 - 8 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Aplicando el truco mental de transformación en suma explicado en la teoría:</p>
+                    <ul>
+                        <li><strong>Paso A:</strong> Evaluamos cuánto le falta al sustraendo (8) para llegar a 10. Faltan <span class="highlight">2</span>.</li>
+                        <li><strong>Paso B:</strong> Evaluamos cuánto falta desde el 10 hasta nuestro minuendo (14). Faltan <span class="highlight">4</span>.</li>
+                        <li><strong>Paso C:</strong> Sumamos ambos puentes: \( 2 + 4 = 6 \).</li>
+                    </ul>
+                    $$ 14 - 8 = 6 $$
+                </div>
+            </li>
+
+            <li>
+                Determina el valor exacto de la operación: \( 53 - 5 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;53<br>
+                            -&nbsp;&nbsp;5<br>
+                            ----<br>
+                            &nbsp;&nbsp;48
+                        </div>
+                        <div class="explicacion-lateral">
+                            Como a 3 no le podemos quitar 5, pensamos en 13. De 5 a 13 van <strong>8</strong>. Nos llevamos 1 abajo. En la siguiente columna restamos \( 5 - 1 = 4 \). El número final es <span class="highlight">48</span>.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Efectúa la siguiente sustracción: \( 81 - 9 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Operamos aplicando descomposiciones numéricas:</p>
+                    $$ 81 - 9 = 72 $$
+                    <div class="regla-box">
+                        <strong>Comprobación inversa:</strong> Si sumamos la diferencia y el sustraendo: \( 72 + 9 = 81 \). La operación es correcta.
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula el valor residual de: \( 24 - 6 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Convertimos el 4 en 14 para poder sustraer las unidades:</p>
+                    $$ 24 - 6 = 18 $$
+                </div>
+            </li>
+
+            <li>
+                Resuelve la resta con múltiples llevadas sucesivas: \( 423 - 157 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Desarrollamos el método tradicional columna por columna:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;423<br>
+                            -&nbsp;157<br>
+                            -----<br>
+                            &nbsp;&nbsp;266
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 13 - 7 = 6 \). Nos llevamos 1 abajo que se suma al 5 (se vuelve 6).</li>
+                                <li><strong>Decenas:</strong> A 2 no podemos quitarle 6. Lo convertimos en 12. \( 12 - 6 = 6 \). Nos llevamos 1 abajo que se suma al 1 (se vuelve 2).</li>
+                                <li><strong>Centenas:</strong> Operamos los elementos resultantes: \( 4 - 2 = 2 \).</li>
+                                <li>Diferencia total: <span class="highlight">266</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Encuentra la solución para la operación vertical: \( 612 - 345 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Efectuamos el cálculo aplicando de forma rigurosa las reglas aritméticas:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;612<br>
+                            -&nbsp;345<br>
+                            -----<br>
+                            &nbsp;&nbsp;267
+                        </div>
+                        <div class="explicacion-lateral">
+                            De 5 a 12 faltan <strong>7</strong> (llevamos 1).<br>
+                            El 4 inferior se transforma en 5. De 5 a 11 faltan <strong>6</strong> (llevamos 1).<br>
+                            El 3 inferior se transforma en 4. Finalmente, \( 6 - 4 = 2 \). El resultado es <span class="highlight">267</span>.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula la diferencia entre \( 805 \) y \( 438 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Prestamos especial atención al dígito cero en la posición de las decenas:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;805<br>
+                            -&nbsp;438<br>
+                            -----<br>
+                            &nbsp;&nbsp;367
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li>\( 15 - 8 = 7 \) (llevamos 1).</li>
+                                <li>El 3 de abajo se convierte en 4. Decimos \( 10 - 4 = 6 \) (llevamos 1).</li>
+                                <li>El 4 de abajo se convierte en 5. Decimos \( 8 - 5 = 3 \).</li>
+                                <li>Resultado: <span class="highlight">367</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Resuelve empleando el método alternativo (llevadas arriba / pidiendo prestado al vecino): \( 734 - 289 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Descomponemos los dígitos superiores directamente tal como se detalló en el apartado 5 de la teoría:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;[6][12][14]<br>
+                            -&nbsp;&nbsp;2&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;9<br>
+                            ------------<br>
+                            &nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;5
+                        </div>
+                        <div class="explicacion-lateral">
+                            El 4 pide prestado y se vuelve 14: \( 14 - 9 = 5 \).<br>
+                            El 3 se redujo a 2, pide prestado al vecino y se vuelve 12: \( 12 - 8 = 4 \).<br>
+                            El 7 de las centenas prestó una unidad, quedando en 6: \( 6 - 2 = 4 \).<br>
+                            Solución final limpia: <span class="highlight">445</span>.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula la solución final para la siguiente resta de cuatro cifras: \( 5241 - 2876 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Operamos de forma encadenada aplicando las llevadas tradicionales en cada nivel:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2;">
+                            &nbsp;&nbsp;5241<br>
+                            -&nbsp;2876<br>
+                            ------<br>
+                            &nbsp;&nbsp;2365
+                        </div>
+                        <div class="explicacion-lateral">
+                            \( 11 - 6 = 5 \) (llevada = 1) <br>
+                            \( 14 - (7+1) = 14 - 8 = 6 \) (llevada = 1) <br>
+                            \( 12 - (8+1) = 12 - 9 = 3 \) (llevada = 1) <br>
+                            \( 5 - (2+1) = 5 - 3 = 2 \). <br>
+                            El número natural obtenido es <span class="highlight">2365</span>.
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
