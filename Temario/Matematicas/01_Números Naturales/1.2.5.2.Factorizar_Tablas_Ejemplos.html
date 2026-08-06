@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (MathJax)</title>
+    <link rel="stylesheet" href="../Estilo_Ejemplos.css">
+    
+   
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                // Habilita el entorno 'flalign'
+                packages: {'[+]': ['ams']}, 
+                // Define los delimitadores para ecuaciones en bloque
+   inlineMath: [['$', '$'], ['\\(', '\\)']],             
+   displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            // Configuración para el renderizado HTML (CHTML)
+            chtml: {
+                // Fuerza la alineación a la izquierda para los bloques de ecuaciones
+                displayAlign: "left"
+            },
+            // Asegura que el proceso de renderizado se ejecute automáticamente
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Descomposición en Factores Primos mediante Tablas de Multiplicar</h1>
+
+        <ol class="mi-lista">
+
+<li> Descomponer en factores primos el siguiente número utilizando las tablas de multiplicar: \( 42 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Buscamos un producto conocido de las tablas de multiplicar que dé como resultado el número y luego descomponemos sus factores compuestos en factores primos:</p>
+        \[
+        \begin{flalign*}
+        & 42 = 6 \cdot 7 = (2 \cdot 3) \cdot 7 = 2 \cdot 3 \cdot 7 &
+        \end{flalign*}
+        \]
+        <p>Por lo tanto, la expresión final del número es:</p>
+        \[
+        \begin{flalign*}
+        & 42 = 2 \cdot 3 \cdot 7 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número utilizando las tablas de multiplicar: \( 60 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Asociamos el número a un producto directo de las tablas (por ejemplo, \(6 \times 10\)) y después reducimos cada término a números primos:</p>
+        \[
+        \begin{flalign*}
+        & 60 = 6 \cdot 10 = (2 \cdot 3) \cdot (2 \cdot 5) = 2 \cdot 2 \cdot 3 \cdot 5 &
+        \end{flalign*}
+        \]
+        <p>Agrupando los factores comunes en forma de potencia obtenemos:</p>
+        \[
+        \begin{flalign*}
+        & 60 = 2^2 \cdot 3 \cdot 5 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número utilizando las tablas de multiplicar: \( 72 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Identificamos el número dentro de la tabla del 8 o del 9 (\(8 \times 9\)) y descomponemos ambos factores de manera sucesiva:</p>
+        \[
+        \begin{flalign*}
+        & 72 = 8 \cdot 9 = (2 \cdot 4) \cdot (3 \cdot 3) = 2 \cdot (2 \cdot 2) \cdot 3 \cdot 3 = 2 \cdot 2 \cdot 2 \cdot 3 \cdot 3 &
+        \end{flalign*}
+        \]
+        <p>Expresamos el resultado final combinando los factores primos en potencias:</p>
+        \[
+        \begin{flalign*}
+        & 72 = 2^3 \cdot 3^2 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número utilizando las tablas de multiplicar: \( 90 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Separamos el número a partir de un producto evidente como lo es la tabla del 9 (\(9 \times 10\)) para luego llegar a los componentes primos mínimos:</p>
+        \[
+        \begin{flalign*}
+        & 90 = 9 \cdot 10 = (3 \cdot 3) \cdot (2 \cdot 5) = 2 \cdot 3 \cdot 3 \cdot 5 &
+        \end{flalign*}
+        \]
+        <p>La descomposición organizada de menor a mayor en factores primos es:</p>
+        \[
+        \begin{flalign*}
+        & 90 = 2 \cdot 3^2 \cdot 5 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número utilizando las tablas de multiplicar: \( 1200 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Asociamos el número a un producto directo de las tablas (por ejemplo, \(12 \times 100\)) y después reducimos cada término a números primos:</p>
+        \[
+        \begin{flalign*}
+        & 1200 = 12 \cdot 100 = (3 \cdot 4) \cdot (10 \cdot 10) = (3 \cdot 2 \cdot 2) \cdot (2 \cdot 5 \cdot 2 \cdot 5) = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 3 \cdot 5 \cdot 5 &
+        \end{flalign*}
+        \]
+        <p>Agrupando los factores comunes en forma de potencia obtenemos:</p>
+        \[
+        \begin{flalign*}
+        & 1200 = 2^4 \cdot 3 \cdot 5^2 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+
+        </ol>
+    </div>
+
+</body>
+</html>

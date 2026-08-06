@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa: Factorización Directa con Tablas de Multiplicar</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+inlineMath: [['$', '$'], ['\\(', '\\)']],                
+displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid  #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE COLUMNAS ASIMÉTRICAS PARA EL ARRAY DE DÍGITOS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columnas para los Superíndices de los Restos (Estrechas) */
+        .col-superindice {
+            width: 5px;
+            font-size: 0.85rem;
+            color: purple;
+            font-weight: 900;
+            vertical-align: top;
+            text-align: right;
+            padding-top: 0px;
+            display: inline-block;
+            transform: translateY(-4px);
+        }
+
+        /* Columna para el signo igual (=) que sustituye la barra vertical */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Línea de desarrollo de los factores primos */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Descomposición Factorial</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Método de Factorización por Sustitución de Productos</h2>
+            <p>Este método permite descomponer un número compuesto reemplazándolo sucesivamente por sus factores equivalentes de las <strong>tablas de multiplicar</strong>. En lugar de usar una barra de división, utilizamos el **signo igual (=)** de forma encadenada. Así se hace evidente cómo cada número compuesto se "desarma" en multiplicaciones más pequeñas hasta que la expresión queda formada únicamente por números primos, los cuales finalmente se agrupan mediante potencias.</p>
+            
+            <hr>
+
+            <div class="step-block">
+                <div class="step-title">Ejemplo 1: Factorización del número 24</div>
+                <p>Buscamos un producto de las tablas que dé <span class="highlight">24</span> (por ejemplo, \(6 \times 4\)) y luego transformamos sus partes:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="col-superindice"></td><td class="col-digito">4</td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">6 · 4</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">2 · 3 · 2 · 2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">2³ · 3</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Mecánica de la transformación:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Reemplazamos el 24 por su pareja de la tabla de multiplicar: \(24 = 6 \cdot 4\).</li>
+                            <li><strong>Paso 2:</strong> Desarmamos los números compuestos que quedan: el 6 se sustituye por \(2 \cdot 3\) y el 4 se sustituye por \(2 \cdot 2\). Obtenemos la cadena de primos: \(2 \cdot 3 \cdot 2 \cdot 2\).</li>
+                            <li><strong>Paso 3:</strong> Como ya no quedan números compuestos, contamos cuántas veces se repite el 2 (tres veces, o sea, <em>dos al cubo</em>) para simplificar la expresión.</li>
+                        </ul>
+                        <strong>Expresión final:</strong>
+                        \[ 24 = 2^3 \cdot 3 \]
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">Ejemplo 2: Factorización del número 45</div>
+                <p>Relacionamos el número <span class="highlight">45</span> directamente con la tabla del 5, sabiendo que es el resultado de \(9 \times 5\):</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">4</td>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">9 · 5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">3 · 3 · 5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">3² · 5</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Mecánica de la transformación:</strong>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Escribimos el 45 como el producto conocido de las tablas: \(45 = 9 \cdot 5\).</li>
+                            <li><strong>Paso 2:</strong> El 5 ya es primo, pero el 9 es compuesto. Lo sustituimos por su desglose de la tabla del 3: \(9 = 3 \cdot 3\). La expresión pasa a ser \(3 \cdot 3 \cdot 5\).</li>
+                            <li><strong>Paso 3:</strong> Agrupamos los factores repetidos convirtiendo el par de treses en potencia (<em>tres al cuadrado</em>).</li>
+                        </ul>
+                        <strong>Resultado de la factorización:</strong>
+                        \[ 45 = 3^2 \cdot 5 \]
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">Ejemplo 3: Factorización del número 60</div>
+                <p>Para el número <span class="highlight">60</span>, podemos usar el producto de la tabla del 10, recordando que proviene de \(10 \times 6\):</p>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">6</td>
+                            <td class="col-superindice"></td><td class="col-digito">0</td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">10 · 6</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">(5 · 2) · (2 · 3)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">2 · 2 · 3 · 5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">2² · 3 · 5</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Mecánica de la transformación:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Descomponemos el 60 en su primer par de factores conocidos: \(10 \cdot 6\).</li>
+                            <li><strong>Paso 2:</strong> Reemplazamos ambos números por sus equivalentes primos de las tablas: el 10 cambia a \(5 \cdot 2\) y el 6 cambia a \(2 \cdot 3\).</li>
+                            <li><strong>Paso 3:</strong> Quitamos los paréntesis asociativos y ordenamos los factores primos de menor a mayor para que sea más claro: \(2 \cdot 2 \cdot 3 \cdot 5\).</li>
+                            <li><strong>Paso 4:</strong> Reducimos los términos idénticos usando exponentes (el 2 aparece dos veces, quedando como <em>dos al cuadrado</em>).</li>
+                        </ul>
+                        <strong>Resultado de la factorización:</strong>
+                        \[ 60 = 2^2 \cdot 3 \cdot 5 \]
+                    </div>
+                </div>
+            </div>
+
+
+HTML
+<div class="step-block">
+    <div class="step-title">Ejemplo: Factorización del número 2500</div>
+    <p>Buscamos un producto de las tablas que dé <span class="highlight">2500</span> (por ejemplo, \(25 \times 100\)) y luego transformamos sus partes:</p>
+    
+    <div class="division-table-container">
+        <table class="factor-table">
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito">2</td>
+                <td class="col-superindice"></td><td class="col-digito">5</td>
+                <td class="col-superindice"></td><td class="col-digito">0</td>
+                <td class="col-superindice"></td><td class="col-digito">0</td>
+                <td class="col-igual">=</td>
+                <td class="barra-primas">25 · 100</td>
+            </tr>
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-igual">=</td>
+                <td class="barra-primas">(5 · 5) · (10 · 10)</td>
+            </tr>
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-igual">=</td>
+                <td class="barra-primas">5 · 5 · (2 · 5) · (2 · 5)</td>
+            </tr>
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-igual">=</td>
+                <td class="barra-primas">2 · 2 · 5 · 5 · 5 · 5</td>
+            </tr>
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-igual">=</td>
+                <td class="barra-primas">2² · 5⁴</td>
+            </tr>
+        </table>
+
+        <div class="explicacion-lateral">
+            <strong>Mecánica de la transformación:</strong><br>
+            <ul>
+                <li><strong>Paso 1:</strong> Reemplazamos el 2500 por una descomposición intuitiva basada en ceros: \(2500 = 25 \cdot 100\).</li>
+                <li><strong>Paso 2:</strong> Desarmamos los números compuestos: el 25 se sustituye por \(5 \cdot 5\) y el 100 se abre en las tablas como \(10 \cdot 10\).</li>
+                <li><strong>Paso 3:</strong> Continuamos reduciendo los términos compuestos restantes: cada 10 se convierte en \(2 \cdot 5\). Al juntar todo, ordenamos la cadena completa de números primos: \(2 \cdot 2 \cdot 5 \cdot 5 \cdot 5 \cdot 5\).</li>
+                <li><strong>Paso 4:</strong> Agrupamos los factores repetidos contando cuántas veces aparece cada base: el 2 se repite dos veces y el 5 se repite cuatro veces.</li>
+            </ul>
+            <strong>Expresión final:</strong>
+            \[ 2500 = 2^2 \cdot 5^4 \]
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+</body>
+</html>
