@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Mínimo Común Múltiplo (m.c.m.) por Factorización</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],               
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Mínimo Común Múltiplo (m.c.m.) por Factorización</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Calcula el mínimo común múltiplo de los números 12 y 18: \(\text{m.c.m.}(12, 18)\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Descomponemos ambos números en sus factores primos:
+                            $$ 12 = 2^2 \times 3 $$
+                            $$ 18 = 2 \times 3^2 $$
+                        </li>
+                        <li>Identificamos los factores primos comunes y no comunes con su mayor exponente:
+                            <ul>
+                                <li>Para el factor 2: el mayor exponente es \(2^2\)</li>
+                                <li>Para el factor 3: el mayor exponente es \(3^2\)</li>
+                            </ul>
+                        </li>
+                        <li>Multiplicamos los factores seleccionados para hallar el m.c.m.:
+                            $$ \text{m.c.m.}(12, 18) = 2^2 \times 3^2 = 4 \times 9 = 36 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el mínimo común múltiplo de 24 y 36: \(\text{m.c.m.}(24, 36)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Realizamos la descomposición factorial:
+                            $$ 24 = 2^3 \times 3 $$
+                            $$ 36 = 2^2 \times 3^2 $$
+                        </li>
+                        <li>Seleccionamos los factores comunes y no comunes al mayor exponente:
+                            <ul>
+                                <li>Del factor 2, tomamos \(2^3\)</li>
+                                <li>Del factor 3, tomamos \(3^2\)</li>
+                            </ul>
+                        </li>
+                        <li>Calculamos el resultado final:
+                            $$ \text{m.c.m.}(24, 36) = 2^3 \times 3^2 = 8 \times 9 = 72 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina el m.c.m. de los siguientes números: \(\text{m.c.m.}(9, 15)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Factorizamos cada número de manera independiente:
+                            $$ 9 = 3^2 $$
+                            $$ 15 = 3 \times 5 $$
+                        </li>
+                        <li>Tomamos todos los factores primos distintos elevados a su máxima potencia:
+                            <ul>
+                                <li>Del factor 3 (común), el mayor exponente es \(3^2\)</li>
+                                <li>Del factor 5 (no común), tomamos \(5\)</li>
+                            </ul>
+                        </li>
+                        <li>Efectuamos el producto:
+                            $$ \text{m.c.m.}(9, 15) = 3^2 \times 5 = 9 \times 5 = 45 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el m.c.m. de 20 y 50: \(\text{m.c.m.}(20, 50)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Descomponemos en factores primos:
+                            $$ 20 = 2^2 \times 5 $$
+                            $$ 50 = 2 \times 5^2 $$
+                        </li>
+                        <li>Elegimos los factores primos al mayor exponente:
+                            <ul>
+                                <li>El factor 2 con su mayor potencia es \(2^2\)</li>
+                                <li>El factor 5 con su mayor potencia es \(5^2\)</li>
+                            </ul>
+                        </li>
+                        <li>Multiplicamos los valores obtenidos:
+                            $$ \text{m.c.m.}(20, 50) = 2^2 \times 5^2 = 4 \times 25 = 100 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Halla el mínimo común múltiplo entre 8, 12 y 20: \(\text{m.c.m.}(8, 12, 20)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Factorizamos los tres números:
+                            $$ 8 = 2^3 $$
+                            $$ 12 = 2^2 \times 3 $$
+                            $$ 20 = 2^2 \times 5 $$
+                        </li>
+                        <li>Seleccionamos los factores primos comunes y no comunes al mayor exponente:
+                            <ul>
+                                <li>Para el factor 2: el mayor exponente es \(2^3\)</li>
+                                <li>Para el factor 3: tomamos \(3\)</li>
+                                <li>Para el factor 5: tomamos \(5\)</li>
+                            </ul>
+                        </li>
+                        <li>Resolvemos la multiplicación:
+                            $$ \text{m.c.m.}(8, 12, 20) = 2^3 \times 3 \times 5 = 8 \times 3 \times 5 = 120 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el valor del m.c.m. para 14, 21 y 28: \(\text{m.c.m.}(14, 21, 28)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Obtenemos los factores de cada término:
+                            $$ 14 = 2 \times 7 $$
+                            $$ 21 = 3 \times 7 $$
+                            $$ 28 = 2^2 \times 7 $$
+                        </li>
+                        <li>Extraemos los factores al exponente más alto:
+                            <ul>
+                                <li>Factor 2: el mayor es \(2^2\)</li>
+                                <li>Factor 3: tomamos \(3\)</li>
+                                <li>Factor 7: el mayor exponente es 1, tomamos \(7\)</li>
+                            </ul>
+                        </li>
+                        <li>Calculamos el producto final:
+                            $$ \text{m.c.m.}(14, 21, 28) = 2^2 \times 3 \times 7 = 4 \times 3 \times 7 = 84 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina el m.c.m. de los números primos entre sí 15 y 16: \(\text{m.c.m.}(15, 16)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Descomponemos ambos números:
+                            $$ 15 = 3 \times 5 $$
+                            $$ 16 = 2^4 $$
+                        </li>
+                        <li>Al no tener factores comunes, seleccionamos todos los factores no comunes existentes:
+                            <ul>
+                                <li>Tomamos \(2^4\), \(3\) y \(5\)</li>
+                            </ul>
+                        </li>
+                        <li>Multiplicamos los factores descompuestos:
+                            $$ \text{m.c.m.}(15, 16) = 2^4 \times 3 \times 5 = 16 \times 3 \times 5 = 240 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el m.c.m. de la siguiente terna numérica: \(\text{m.c.m.}(10, 25, 40)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Buscamos los factores primos de cada uno:
+                            $$ 10 = 2 \times 5 $$
+                            $$ 25 = 5^2 $$
+                            $$ 40 = 2^3 \times 5 $$
+                        </li>
+                        <li>Extraemos los primos con la potencia máxima encontrada:
+                            <ul>
+                                <li>Del factor 2: elegimos \(2^3\)</li>
+                                <li>Del factor 5: elegimos \(5^2\)</li>
+                            </ul>
+                        </li>
+                        <li>Operamos para hallar el mínimo común múltiplo:
+                            $$ \text{m.c.m.}(10, 25, 40) = 2^3 \times 5^2 = 8 \times 25 = 200 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el m.c.m. de los números 18, 30 y 45: \(\text{m.c.m.}(18, 30, 45)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Descomponemos factorialmente:
+                            $$ 18 = 2 \times 3^2 $$
+                            $$ 30 = 2 \times 3 \times 5 $$
+                            $$ 45 = 3^2 \times 5 $$
+                        </li>
+                        <li>Aplicamos el criterio de comunes y no comunes al mayor exponente:
+                            <ul>
+                                <li>Factor 2: tomamos \(2\)</li>
+                                <li>Factor 3: el mayor exponente es \(3^2\)</li>
+                                <li>Factor 5: tomamos \(5\)</li>
+                            </ul>
+                        </li>
+                        <li>Efectuamos la operación matemática:
+                            $$ \text{m.c.m.}(18, 30, 45) = 2 \times 3^2 \times 5 = 2 \times 9 \times 5 = 90 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Halla el mínimo común múltiplo para los números 60 y 90: \(\text{m.c.m.}(60, 90)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Descomponemos en factores primos:
+                            $$ 60 = 2^2 \times 3 \times 5 $$
+                            $$ 90 = 2 \times 3^2 \times 5 $$
+                        </li>
+                        <li>Seleccionamos las mayores potencias de cada base prima:
+                            <ul>
+                                <li>Para el factor 2: tomamos \(2^2\)</li>
+                                <li>Para el factor 3: tomamos \(3^2\)</li>
+                                <li>Para el factor 5: tomamos \(5\)</li>
+                            </ul>
+                        </li>
+                        <li>Multiplicamos para resolver el ejercicio:
+                            $$ \text{m.c.m.}(60, 90) = 2^2 \times 3^2 \times 5 = 4 \times 9 \times 5 = 180 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>

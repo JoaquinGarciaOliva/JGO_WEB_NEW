@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Mínimo Común Múltiplo (m.c.m.) por Factorización</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+  
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 110px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+            width: 20px;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #2d3748; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #e53e3e;
+            font-weight: bold;
+            background-color: #fff5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #fed7d7;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Mínimo Común Múltiplo (m.c.m.): MÉTODO POR FACTORIZACIÓN </h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Cálculo del m.c.m. mediante Descomposición en Factores Primos</h2>
+            <p>Cuando trabajamos con números grandes o con más de dos valores, el método de listar múltiplos se vuelve ineficiente. El método definitivo consiste en <strong>factorizar</strong> los números (descomponerlos en sus factores primos) y aplicar una regla matemática precisa basada en sus exponentes.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">La Regla de Oro del m.c.m.</div>
+                <div class="regla-box">
+                    <strong>Regla fundamental:</strong> Una vez descompuestos los números en factores primos, el mínimo común múltiplo se obtiene multiplicando los <strong>factores primos comunes y no comunes, elevados al mayor exponente</strong> con el que aparezcan.
+                </div>
+                <ul>
+                    <li><strong>Comunes:</strong> Los factores primos que se repiten en todas las descomposiciones.</li>
+                    <li><strong>No comunes:</strong> Los factores primos que aparecen solo en algunos de los números.</li>
+                    <li><strong>Al mayor exponente:</strong> Si un factor aparece varias veces con diferentes exponentes, se elige estrictamente el que tenga la potencia más alta.</li>
+                </ul>
+				 <div class="regla-box">
+                    <strong>Regla fundamental:</strong> Una vez descompuestos los números en factores primos, el mínimo común múltiplo se obtiene multiplicando <strong> todos los factores primos una única vez, pero elevados al mayor exponente </strong> con el que aparezcan.
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">Ejemplo 1: m.c.m. (12, 15) por Factorización</div>
+                <div class="regla-box">
+                    <strong>Paso 1:</strong> Factorizamos de manera independiente el 12 y el 15 para expresarlos como potencias de números primos.
+                </div>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">Factorizar 12</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">\(12 = \mathbf{2^2} \times 3\)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Factorizar 15</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">\(15 = 3 \times \mathbf{5}\)</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Aplicación de la regla:</strong><br>
+                        <ul>
+                            <li>El factor <strong>2</strong> solo está en el 12 (no común). Su mayor exponente es <span class="highlight">\(\mathbf{2^2}\)</span>.</li>
+                            <li>El factor <strong>3</strong> se repite en ambos (común). Como en los dos casos tiene exponente 1, tomamos <span class="highlight">3</span>.</li>
+                            <li>El factor <strong>5</strong> solo está en el 15 (no común). Tomamos <span class="highlight">5</span>.</li>
+                        </ul>
+                        <strong>Cálculo final:</strong> Multiplicamos todos los factores seleccionados:
+                        <br>
+                        $$\text{m.c.m.}(12, 15) = 2^2 \times 3 \times 5 = 4 \times 3 \times 5 = 60$$
+                    </div>
+                </div>
+            </div>
+<div class="step-block">
+                <div class="step-title">Ejemplo 2: m.c.m. (4, 6, 10) con tres números</div>
+                <div class="regla-box">
+                    <strong>Paso 1:</strong> Descomponemos los tres números de forma simultánea en factores primos para comparar sus potencias.
+                </div>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">Factorizar 4</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">\(4 = \mathbf{2^2}\)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Factorizar 6</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">\(6 = 2 \times \mathbf{3}\)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">Factorizar 10</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">\(10 = 2 \times \mathbf{5}\)</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis de factores primos:</strong><br>
+                        <ul>
+                            <li><strong>El primo 2:</strong> Aparece en las tres factorizaciones. Los exponentes son \(2^2\), \(2^1\) y \(2^1\). Elegimos el mayor: <span class="highlight">\(2^2\</span>.</li>
+                            <li><strong>El primo 3:</strong> Solo aparece en el 6. Lo tomamos con su exponente: <span class="highlight">3</span>.</li>
+                            <li><strong>El primo 5:</strong> Solo aparece en el 10. Lo tomamos con su exponente: <span class="highlight">5</span>.</li>
+                        </ul>
+                        <strong>Cálculo final:</strong> Multiplicamos los primos seleccionados al mayor exponente:
+                        <br>
+                        $$\text{m.c.m.}(4, 6, 10) = 2^2 \times 3 \times 5 = 4 \times 3 \times 5 = 60$$
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">Resumen Metodológico</div>
+                <p>El uso de la factorización evita tener que calcular infinitas series de números y reduce el problema a tres fases mecánicas:</p>
+                <ol>
+                    <li>Efectuar de manera correcta la factorización de los números.</li>
+                    <li>Hacer un barrido visual tomando <strong>cada número primo que aparezca al menos una vez</strong>, asegurándonos de que si compiten entre sí, gane el que tenga el <strong>exponente más alto</strong>.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
