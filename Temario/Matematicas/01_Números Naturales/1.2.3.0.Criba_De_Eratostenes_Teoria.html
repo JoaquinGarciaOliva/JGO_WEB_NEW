@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: La Criba de Eratóstenes</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales */
+        .col-digito {
+            width: auto;
+            padding: 6px 4px !important;
+            color: #2d3748;
+        }
+
+        /* Columna para las comas de separación */
+        .col-coma {
+            padding-right: 12px !important;
+            color: #2d3748;
+        }
+
+        /* ESTILO: El número 1 (Especial: ni primo ni compuesto) */
+        .unidad-especial {
+            background-color: #fef3c7 !important; /* Amarillo suave */
+            color: #b45309 !important; /* Texto ocre / marrón dorado */
+            border-radius: 4px;
+            padding: 2px 6px !important;
+        }
+
+        /* ESTILO CLAVE: Números compuestos tachados */
+        .tachado {
+            color: #e53e3e !important; /* Número en color Rojo */
+            text-decoration: line-through !important; /* Activa la línea de tachado */
+            text-decoration-color: #1a2a6c !important; /* Línea en color Azul Oscuro */
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Búsqueda de Números Primos</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Algoritmo de la Criba de Eratóstenes</h2>
+            <p>Ir probando número a número si una cantidad es divisible por otra puede llevarnos una eternidad. Por suerte, disponemos de métodos sistemáticos globales que nos permiten construir listas completas de números primos de manera eficiente.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #2635b7;">¿Cómo funciona la Criba de Eratóstenes?</div>
+                
+                <p>La <strong>Criba de Eratóstenes</strong> es un algoritmo ideado por el sabio griego Eratóstenes de Cirene hace más de 2000 años. Funciona como un "colador" o filtro mecánico que nos permite hallar todos los números primos hasta un límite determinado, descartando de forma progresiva y en cadena a los números compuestos.</p>
+
+                <div class="regla-box" style="border-left-color: #2635b7; background-color: #f0f4ff;">
+                    <strong>El procedimiento paso a paso consiste en:</strong>
+                    <ol style="margin: 5px 0 0 0; padding-left: 20px;">
+                        <li>Escribir una lista ordenada con los números naturales desde el $1$ hasta el número límite deseado $n$.</li>
+                        <li>Dejar constancia de que el $1$ no se evalúa por ser la unidad (no es primo ni compuesto).</li>
+                        <li>Tomar el primer número válido que no esté tachado (inicialmente el $2$) y declararlo como <strong>número primo</strong>.</li>
+                        <li>Tachar o eliminar de la lista todos los múltiplos de ese número (excepto el número mismo).</li>
+                        <li>Repetir el proceso con el siguiente número que encontremos libre en la lista.</li>
+                        <li><strong>Criterio de parada definitivo:</strong> El proceso de filtrado termina de forma segura en el momento en que el número primo que estamos evaluando es mayor que la raíz cuadrada del límite ($\sqrt{n}$). Todos los números restantes que queden sin tachar son declarados primos de forma automática.</li>
+                    </ol>
+                </div>
+
+                <h3>Ejemplo práctico 1: Criba de Eratóstenes hasta el número 10</h3>
+                <p>Buscamos determinar con exactitud el conjunto de números primos en el rango del $1$ al $10$. El número $1$ se resalta en amarillo por ser la unidad elemental.</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                            <td class="col-digito">2</td><td class="col-coma">,</td>
+                            <td class="col-digito">3</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                            <td class="col-digito">5</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                            <td class="col-digito">7</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">10</td>
+                        </tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <strong>Desarrollo del algoritmo:</strong>
+                        <ul>
+                            <li><strong>Lista inicial:</strong> Disponemos los valores del intervalo: $\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$.</li>
+                            <li><strong>Aviso inicial:</strong> El $1$ se descarta del análisis (no es primo ni compuesto).</li>
+                            <li><strong>Filtro del 2:</strong> El $2$ se queda (primer primo). Tachamos sus múltiplos directos en la lista: el $4, 6, 8$ y $10$.</li>
+                            <li><strong>Filtro del 3:</strong> El siguiente número libre es el $3$ (segundo primo). Tachamos sus múltiplos: el $6$ (ya estaba tachado) y el $9$.</li>
+                            <li><strong>Parada por raíz:</strong> Calculamos la raíz del límite: $\sqrt{10} \approx 3.16$. Como el próximo número libre es el $5$, y este es mayor que $3.16$, finalizamos el proceso de descarte manual.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Resultado final en el rango analizado: <br><span class="highlight">$\text{Primos hasta el 10} = \{2, 3, 5, 7\}$</span></p>
+
+                <h3 style="margin-top: 25px;">Ejemplo práctico 2: Criba de Eratóstenes hasta el número 20</h3>
+                <p>Ampliamos el rango de filtrado numérico para limpiar los elementos del algoritmo hasta alcanzar el número $20$, estructurando la cuadrícula en filas completas de 10 dígitos.</p>
+
+                <div class="division-table-container" style="flex-direction: column; align-items: flex-start;">
+                    <table class="factor-table" style="margin-bottom: 10px;">
+                        <tr>
+                            <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                            <td class="col-digito">2</td><td class="col-coma">,</td>
+                            <td class="col-digito">3</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                            <td class="col-digito">5</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                            <td class="col-digito">7</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">10</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">11</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                            <td class="col-digito">13</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">14</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">15</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">16</td><td class="col-coma">,</td>
+                            <td class="col-digito">17</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">18</td><td class="col-coma">,</td>
+                            <td class="col-digito">19</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">20</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Desarrollo del algoritmo:</strong>
+                        <ul>
+                            <li><strong>Estructura visual:</strong> Gracias al espacio reservado para el $1$, la tabla se divide perfectamente: la primera fila contiene los dígitos del 1 al 10 y la segunda del 11 al 20.</li>
+                            <li><strong>Filtro del 2:</strong> Almacenamos el $2$ como primo. Tachamos todos los números pares que le siguen: $4, 6, 8, 10, 12, 14, 16, 18, 20$.</li>
+                            <li><strong>Filtro del 3:</strong> Almacenamos el $3$ como primo. Descartamos sus múltiplos impares en el tablero: el $9$ ($3 \times 3$) y el $15$ ($3 \times 5$).</li>
+                            <li><strong>Filtro del 5:</strong> El $5$ se guarda como primo. Su primer múltiplo compuesto no tachado sería el $25$ ($5 \times 5$), que ya sobrepasa nuestro rango de estudio.</li>
+                            <li><strong>Parada por raíz:</strong> La raíz de control es $\sqrt{20} \approx 4.47$. Como el siguiente primo potencial es el $5$, y $5 > 4.47$, detenemos las operaciones. Los números que quedan sin tachar (exceptuando el 1) se validan como primos automáticamente.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Todos los valores supervivientes al filtrado sistemático componen la solución:</p>
+                <p><span class="highlight">$\text{Primos hasta el 20} = \{2, 3, 5, 7, 11, 13, 17, 19\}$</span></p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

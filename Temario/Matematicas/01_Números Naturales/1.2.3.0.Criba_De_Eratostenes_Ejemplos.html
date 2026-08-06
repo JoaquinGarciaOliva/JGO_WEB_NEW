@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (MathJax) - Criba de Eratóstenes</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+    
+    <style>
+        /* Estilos integrados para las tablas de la criba */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 15px 0;
+            background: #f8fafc;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px dashed #cbd5e0;
+        }
+        .factor-table td {
+            padding: 4px 2px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .col-digito {
+            color: #2d3748;
+        }
+        .col-coma {
+            padding-right: 10px !important;
+            color: #2d3748;
+        }
+        .unidad-especial {
+            background-color: #fef3c7 !important;
+            color: #b45309 !important;
+            border-radius: 4px;
+            padding: 1px 4px !important;
+        }
+        .tachado {
+            color: #e53e3e !important;
+            text-decoration: line-through !important;
+            text-decoration-color: #1a2a6c !important;
+        }
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios Prácticos: La Criba de Eratóstenes</h1>
+
+        <ol class="mi-lista">
+            
+            <li>
+                Utiliza el algoritmo de la Criba de Eratóstenes para encontrar todos los números primos hasta el $35$.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Construimos la tabla organizando los números en filas de 10 elementos. El número $1$ se marca de forma especial por ser la unidad.</li>
+                        <li><strong>Paso 1:</strong> Mantenemos el $2$ y tachamos todos sus múltiplos pares.</li>
+                        <li><strong>Paso 2:</strong> Mantenemos el $3$ y tachamos sus múltiplos ($9, 15, 21, 27, 33$).</li>
+                        <li><strong>Paso 3:</strong> Mantenemos el $5$ y tachamos sus múltiplos ($25, 35$).</li>
+                        <li><strong>Criterio de parada:</strong> Como $\sqrt{35} \approx 5.91$, el siguiente primo libre es el $7$. Al ser $7 > 5.91$, el proceso de descarte termina aquí.</li>
+                    </ul>
+
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                            <td class="col-digito">2</td><td class="col-coma">,</td>
+                            <td class="col-digito">3</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                            <td class="col-digito">5</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                            <td class="col-digito">7</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">10</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">11</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                            <td class="col-digito">13</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">14</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">15</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">16</td><td class="col-coma">,</td>
+                            <td class="col-digito">17</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">18</td><td class="col-coma">,</td>
+                            <td class="col-digito">19</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">20</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">21</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">22</td><td class="col-coma">,</td>
+                            <td class="col-digito">23</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">24</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">25</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">26</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">27</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">28</td><td class="col-coma">,</td>
+                            <td class="col-digito">29</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">30</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">31</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">32</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">33</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">34</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">35</td>
+                        </tr>
+                    </table>
+
+                    <p>Los números que no han sido tachados son los primos en este rango:</p>
+                    <p><span class="highlight">$\text{Primos hasta 35} = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31\}$</span></p>
+                </div>
+            </li>
+
+            <li>
+                Aplica la Criba de Eratóstenes para hallar los números primos comprendidos entre el $1$ y el $50$.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Extendemos la rejilla numérica hasta el número $50$, distribuyéndola en filas exactas de 10 dígitos.</li>
+                        <li><strong>Filtrado activo:</strong> Tachamos múltiplos del $2$ (pares), del $3$ (como $9, 15, 21...$) y del $5$ (terminados en $5$ o $0$ restantes, como $25, 35, 45$).</li>
+                        <li><strong>Criterio de parada:</strong> Calculamos la raíz límite: $\sqrt{50} \approx 7.07$. Esto significa que el último número del que debemos comprobar y tachar sus múltiplos es el número primo $7$ ($7 \times 7 = 49$, el cual se tacha). El siguiente primo es $11 > 7.07$, por lo que nos detenemos.</li>
+                    </ul>
+
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                            <td class="col-digito">2</td><td class="col-coma">,</td>
+                            <td class="col-digito">3</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                            <td class="col-digito">5</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                            <td class="col-digito">7</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">10</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">11</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                            <td class="col-digito">13</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">14</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">15</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">16</td><td class="col-coma">,</td>
+                            <td class="col-digito">17</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">18</td><td class="col-coma">,</td>
+                            <td class="col-digito">19</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">20</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">21</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">22</td><td class="col-coma">,</td>
+                            <td class="col-digito">23</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">24</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">25</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">26</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">27</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">28</td><td class="col-coma">,</td>
+                            <td class="col-digito">29</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">30</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">31</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">32</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">33</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">34</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">35</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">36</td><td class="col-coma">,</td>
+                            <td class="col-digito">37</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">38</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">39</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">40</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">41</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                            <td class="col-digito">43</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">44</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">45</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">46</td><td class="col-coma">,</td>
+                            <td class="col-digito">47</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">48</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">49</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">50</td>
+                        </tr>
+                    </table>
+
+                    <p>El conjunto resultante de números primos es:</p>
+                    <p><span class="highlight">$\text{Primos hasta 50} = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47\}$</span></p>
+                </div>
+            </li>
+
+            <li>
+                Desarrolla la Criba de Eratóstenes para obtener la lista ordenada de números primos hasta el $60$.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Disponemos los números del $1$ al $60$. Al igual que en el caso anterior, la raíz de control es $\sqrt{60} \approx 7.74$.</li>
+                        <li>Por tanto, realizamos exactamente el mismo procedimiento de cribado que en el ejercicio anterior (múltiplos de $2, 3, 5$ y $7$). Al llegar a la última fila, descartamos los nuevos números compuestos del rango ($51, 52, 54, 55, 56, 57, 58, 60$).</li>
+                    </ul>
+
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                            <td class="col-digito">2</td><td class="col-coma">,</td>
+                            <td class="col-digito">3</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                            <td class="col-digito">5</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                            <td class="col-digito">7</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">10</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">11</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                            <td class="col-digito">13</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">14</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">15</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">16</td><td class="col-coma">,</td>
+                            <td class="col-digito">17</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">18</td><td class="col-coma">,</td>
+                            <td class="col-digito">19</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">20</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">21</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">22</td><td class="col-coma">,</td>
+                            <td class="col-digito">23</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">24</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">25</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">26</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">27</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">28</td><td class="col-coma">,</td>
+                            <td class="col-digito">29</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">30</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">31</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">32</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">33</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">34</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">35</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">36</td><td class="col-coma">,</td>
+                            <td class="col-digito">37</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">38</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">39</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">40</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">41</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">42</td><td class="col-coma">,</td>
+                            <td class="col-digito">43</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">44</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">45</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">46</td><td class="col-coma">,</td>
+                            <td class="col-digito">47</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">48</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">49</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">50</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">51</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">52</td><td class="col-coma">,</td>
+                            <td class="col-digito">53</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">54</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">55</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">56</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">57</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">58</td><td class="col-coma">,</td>
+                            <td class="col-digito">59</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">60</td>
+                        </tr>
+                    </table>
+
+                    <p>Los números primos supervivientes son:</p>
+                    <p><span class="highlight">$\text{Primos hasta 60} = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59\}$</span></p>
+                </div>
+            </li>
+
+            <li>
+                Utiliza la Criba de Eratóstenes para encontrar todos los números primos hasta el $84$.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Escribimos la lista completa de números hasta el $84$ distribuidos de 10 en 10.</li>
+                        <li><strong>Criterio de parada por raíz:</strong> Evaluamos el límite del algoritmo: $\sqrt{84} \approx 9.16$. Los números primos menores que $9.16$ son **$2, 3, 5$ y $7$**.</li>
+                        <li>Esto significa que, a pesar de ser una tabla mucho más grande, **no necesitamos buscar nuevos primos divisores**. Siguiendo el mismo patrón de descarte de múltiplos de $2, 3, 5$ y $7$, eliminaremos elementos más altos como el $77$ ($7 \times 11$) o el $realmente 9$ duplicado. Cualquier número libre que quede después del filtro del $7$ se confirmará automáticamente como primo.</li>
+                    </ul>
+
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                            <td class="col-digito">2</td><td class="col-coma">,</td>
+                            <td class="col-digito">3</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                            <td class="col-digito">5</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                            <td class="col-digito">7</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">10</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">11</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                            <td class="col-digito">13</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">14</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">15</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">16</td><td class="col-coma">,</td>
+                            <td class="col-digito">17</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">18</td><td class="col-coma">,</td>
+                            <td class="col-digito">19</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">20</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">21</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">22</td><td class="col-coma">,</td>
+                            <td class="col-digito">23</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">24</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">25</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">26</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">27</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">28</td><td class="col-coma">,</td>
+                            <td class="col-digito">29</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">30</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">31</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">32</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">33</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">34</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">35</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">36</td><td class="col-coma">,</td>
+                            <td class="col-digito">37</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">38</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">39</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">40</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">41</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">42</td><td class="col-coma">,</td>
+                            <td class="col-digito">43</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">44</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">45</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">46</td><td class="col-coma">,</td>
+                            <td class="col-digito">47</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">48</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">49</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">50</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">51</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">52</td><td class="col-coma">,</td>
+                            <td class="col-digito">53</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">54</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">55</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">56</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">57</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">58</td><td class="col-coma">,</td>
+                            <td class="col-digito">59</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">60</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">61</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">62</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">63</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">64</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">65</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">66</td><td class="col-coma">,</td>
+                            <td class="col-digito">67</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">68</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">69</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">70</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito">71</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">72</td><td class="col-coma">,</td>
+                            <td class="col-digito">73</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">74</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">75</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">76</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">77</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">78</td><td class="col-coma">,</td>
+                            <td class="col-digito">79</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">80</td><td class="col-coma">,</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito tachado">81</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">82</td><td class="col-coma">,</td>
+                            <td class="col-digito">83</td><td class="col-coma">,</td>
+                            <td class="col-digito tachado">84</td>
+                        </tr>
+                    </table>
+
+                    <p>La lista de números primos localizados hasta el 84 es:</p>
+                    <p><span class="highlight">$\text{Primos hasta 84} = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83\}$</span></p>
+                </div>
+            </li>
+            
+        </ol>
+    </div>
+
+</body>
+</html>

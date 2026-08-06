@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (Imagen con Tooltip)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+    <style>
+        /* Estilos integrados para las tablas de la criba dentro del modal/solución */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin: 15px 0;
+            background: #f8fafc;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px dashed #cbd5e0;
+        }
+        .factor-table td {
+            padding: 4px 2px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .col-digito {
+            color: #2d3748;
+        }
+        .col-coma {
+            padding-right: 8px !important;
+            color: #2d3748;
+        }
+        .unidad-especial {
+            background-color: #fef3c7 !important;
+            color: #b45309 !important;
+            border-radius: 4px;
+            padding: 1px 4px !important;
+        }
+        .tachado {
+            color: #e53e3e !important;
+            text-decoration: line-through !important;
+            text-decoration-color: #1a2a6c !important;
+        }
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicios de Matemáticas: La Criba de Eratóstenes</h1>
+   
+    <div class="exercise-list">
+
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement"><strong>[Práctico Avanzado]</strong> Desarrolla la Criba de Eratóstenes completa para encontrar todos los números primos hasta el número $70$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 3 (Difícil)</span>
+            </div>
+          
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p>Para $n = 70$, calculamos su raíz: $\sqrt{70} \approx 8.36$. Filtramos los múltiplos de los primos menores o iguales (2, 3, 5 y 7). Al terminar con el 7, el proceso finaliza.</p>
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito"><span class="unidad-especial">1</span></td><td class="col-coma">,</td>
+                        <td class="col-digito">2</td><td class="col-coma">,</td>
+                        <td class="col-digito">3</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">4</td><td class="col-coma">,</td>
+                        <td class="col-digito">5</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">6</td><td class="col-coma">,</td>
+                        <td class="col-digito">7</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">8</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">9</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">10</td><td class="col-coma">,</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">11</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">12</td><td class="col-coma">,</td>
+                        <td class="col-digito">13</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">14</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">15</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">16</td><td class="col-coma">,</td>
+                        <td class="col-digito">17</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">18</td><td class="col-coma">,</td>
+                        <td class="col-digito">19</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">20</td><td class="col-coma">,</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito tachado">21</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">22</td><td class="col-coma">,</td>
+                        <td class="col-digito">23</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">24</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">25</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">26</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">27</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">28</td><td class="col-coma">,</td>
+                        <td class="col-digito">29</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">30</td><td class="col-coma">,</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">31</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">32</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">33</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">34</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">35</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">36</td><td class="col-coma">,</td>
+                        <td class="col-digito">37</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">38</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">39</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">40</td><td class="col-coma">,</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">41</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">42</td><td class="col-coma">,</td>
+                        <td class="col-digito">43</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">44</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">45</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">46</td><td class="col-coma">,</td>
+                        <td class="col-digito">47</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">48</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">49</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">50</td><td class="col-coma">,</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito tachado">51</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">52</td><td class="col-coma">,</td>
+                        <td class="col-digito">53</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">54</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">55</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">56</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">57</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">58</td><td class="col-coma">,</td>
+                        <td class="col-digito">59</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">60</td><td class="col-coma">,</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">61</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">62</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">63</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">64</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">65</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">66</td><td class="col-coma">,</td>
+                        <td class="col-digito">67</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">68</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">69</td><td class="col-coma">,</td>
+                        <td class="col-digito tachado">70</td>
+                    </tr>
+                </table>
+                <p><span class="highlight">Primos hasta 70 = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67}</span></p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement"><strong>[Práctico Avanzado]</strong> Aplica el algoritmo de la Criba de Eratóstenes para deducir todos los primos existentes hasta el número $100$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 3 (Difícil)</span>
+            </div>
+          
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p>Para $n = 100$, evaluamos hasta $\sqrt{100} = 10$. Los primos divisores son 2, 3, 5 y 7. Se tachan de forma encadenada todos sus múltiplos hasta rellenar la rejilla centesimal entera.</p>
+                <p>Estructurando las 10 filas completas de 10 columnas y aplicando los filtros, el resultado final es:</p>
+                <p><span class="highlight">Primos hasta 100 = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97}</span></p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement"><strong>[Práctico Avanzado]</strong> Extiende el análisis computacional manual de la criba hasta alcanzar el límite máximo de $150$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 3 (Difícil)</span>
+            </div>
+          
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p>Para $n = 150$, calculamos el punto de parada seguro: $\sqrt{150} \approx 12.24$. Esto implica que, además de los múltiplos de 2, 3, 5 y 7, <strong>debemos comprobar y tachar de forma obligatoria los múltiplos del número primo 11</strong> (por ejemplo: $11 \times 11 = 121$ y $11 \times 13 = 143$).</p>
+                <p>Tras limpiar de forma rigurosa las 15 filas de la tabla de diez dígitos, obtenemos la lista definitiva:</p>
+                <p><span class="highlight">Primos hasta 150 = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149}</span></p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Si aplicamos la Criba de Eratóstenes hasta el número $30$, ¿cuál es el último número primo del que necesitaremos tachar sus múltiplos antes de detenernos?</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p>Calculamos la raíz cuadrada del límite máximo: $\sqrt{30} \approx 5.47$. Los números primos menores o iguales a $5.47$ son el $2$, el $3$ y el $5$. Por lo tanto, el último número primo del que buscaremos y tacharemos sus múltiplos es el <strong>5</strong>.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">¿Por qué el número $1$ se descarta o recibe un color especial al inicio del algoritmo de la Criba de Eratóstenes?</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p>Porque el número $1$ representa la unidad elemental aritmética. Por definición, no se clasifica ni como número primo ni como número compuesto, de modo que el proceso de cribado real debe comenzar siempre a partir del número $2$.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Al ejecutar la criba hasta el número $15$, determina qué números del rango $[2, 15]$ quedan eliminados directamente durante el primer paso de filtrado (múltiplos del $2$).</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p>El primer paso consiste en mantener el $2$ y tachar todos sus múltiplos pares mayores que él. En el intervalo hasta el $15$, los números descartados son: <strong>4, 6, 8, 10, 12 y 14</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Si calculamos los números primos hasta el $n = 100$, ¿cuál es el criterio matemático exacto que nos indica que podemos dejar de buscar nuevos primos divisores?</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p>El algoritmo establece que nos detenemos cuando el número primo evaluado supera la raíz cuadrada del límite de la criba. Como $\sqrt{100} = 10$, el último primo cuyos múltiplos se tachan es el $7$. Al pasar al siguiente primo ($11$), como $11 > 10$, detenemos el proceso.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">En una criba organizada en filas de 10 dígitos, ¿en qué fila se ubica el número compuesto $27$ y por el filtro de qué número primo es tachado?</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p>El número $27$ se ubica en la **tercera fila** (que abarca los números del 21 al 30). Es un número impar que resulta de la operación $3 \times 9$, por lo que es tachado de la lista durante el filtrado de los múltiplos del **3**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Determina cuáles son los números primos que sobreviven al filtro de la criba en el intervalo cerrado de números del $1$ al $12$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p>Escribiendo la lista y aplicando los descartes del $2$ y del $3$, los números primos que quedan sin tachar son: <strong>{2, 3, 5, 7, 11}</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Durante el filtrado de los múltiplos del número primo $3$, el primer múltiplo que se tacha que *no* haya sido eliminado previamente por el $2$ es el $9$. ¿Cuál es el primer múltiplo compuesto del $5$ que se tacha por primera vez en la criba?</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p>El primer múltiplo que se elimina de forma exclusiva al evaluar un número primo $p$ es su cuadrado ($p^2$). Para el número $5$, sus múltiplos menores como $10$, $15$ y $20$ ya estaban tachados. Por lo tanto, el primero en caer exclusivamente por el filtro del 5 es $5 \times 5 = \mathbf{25}$.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Si realizamos una criba hasta el número $40$, explica detalladamente por qué no es necesario comprobar de forma manual si el número $37$ es primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p>Como $\sqrt{40} \approx 6.32$, el algoritmo asegura que tras limpiar los múltiplos de $2, 3$ y $5$, cualquier número restante libre es primo automáticamente. Al ser $37$ menor que 40 y no ser divisible por 2, 3 ni 5, queda validado por defecto.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Encuentra todos los números primos comprendidos entre $20$ y $35$ utilizando el principio de exclusión de la criba.</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p>Evaluamos los impares del rango descartando múltiplos de $3$ y $5$. Los números primos supervivientes en ese intervalo son: <strong>23, 29 y 31</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Si el límite superior de nuestra criba es $n = 144$, ¿cuál es el número primo más alto cuyos múltiplos deben ser tachados obligatoriamente?</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <p>Calculamos la raíz exacta del límite: $\sqrt{144} = 12$. El número primo inmediato menor o igual a 12 es el <strong>11</strong>. Por lo tanto, debemos procesar y tachar los múltiplos del 11 de la lista antes de concluir.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Aplica los pasos del algoritmo para deducir si el número $49$ permanece libre o es tachado en una criba extendida hasta el $50$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <p>El número $49$ es un número impar que no es divisible ni por $3$ ni por $5$. Sin embargo, al alcanzar el filtro del número primo $7$ ($7 \le \sqrt{50}$), calculamos sus múltiplos: $7 \times 7 = 49$. Por lo tanto, el $49$ **es tachado por el filtro del 7**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">¿Cuántos números primos existen en la primera fila (del 1 al 10) y cuántos en la segunda fila (del 11 al 20) de una criba numérica?</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <p>Ambas filas contienen exactamente la misma cantidad de números primos de la siguiente forma:</p>
+                <ul>
+                    <li>Fila 1 (1-10): $\{2, 3, 5, 7\}$ $\rightarrow$ <strong>4 primos</strong>.</li>
+                    <li>Fila 2 (11-20): $\{11, 13, 17, 19\}$ $\rightarrow$ <strong>4 primos</strong>.</li>
+                </ul>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">¿Qué ocurre con el número $53$ en una criba de Eratóstenes que llega hasta el número $60$?</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <p>Dado que $\sqrt{60} \approx 7.74$, los únicos primos filtrantes son $2, 3, 5$ y $7$. Como el número $53$ no es divisible de forma exacta por ninguno de ellos, permanece sin tachar al final del algoritmo y se cataloga como <strong>número primo</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Si se construye una criba hasta el número $22$, menciona el orden secuencial de los números que se declaran primos por el algoritmo.</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <p>El orden de descubrimiento es directo de menor a mayor al avanzar por las casillas libres: primero el $2$, luego el $3$, seguido del $5$, $7$, $11$, $13$, $17$ y finalmente el $19$. La lista final es: <strong>{2, 3, 5, 7, 11, 13, 17, 19}</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Indica razonadamente si el número compuesto $57$ se elimina de la criba en la etapa del $2$, del $3$ o del $5$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <p>Sumamos las cifras del número: $5 + 7 = 12$. Como $12$ es un múltiplo de $3$, el número entero es divisible por 3 ($3 \times 19 = 57$). Por lo tanto, el $57$ <strong>se tacha en la etapa del número primo 3</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">¿Cuál es la propiedad fundamental que comparten todos los números que acaban tachados en la criba?</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <p>La propiedad compartida es que todos ellos poseen **más de dos divisores** distintos (ellos mismos y la unidad), lo que significa que son matemáticamente **números compuestos**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Si extendemos los límites de la Criba de Eratóstenes hasta el número $45$, ¿cuántas filas completas de 10 números necesitaremos diseñar en nuestra cuadrícula de visualización?</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <p>Para albergar de forma ordenada hasta el número $45$ organizando celdas de diez en diez, necesitaremos estructurar un total de <strong>5 filas</strong> (4 filas completas de la decena del 1 al 40 y la última fila incompleta del 41 al 45).</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Explica qué ocurre con el número compuesto $35$ durante la aplicación del algoritmo de la criba.</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 1 (Fácil)</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <p>El número $35$ termina en la cifra $5$, lo que indica que es un múltiplo directo de este número primo ($5 \times 7 = 35$). Por consiguiente, <strong>es tachado durante la ejecución del filtro del 5</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Determina el conjunto completo de números primos que se localizan en la tercera fila de la criba (rango numérico del $21$ al $30$).</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 2 (Media)</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <p>Tras descartar los pares ($22, 24, 26, 28, 30$), los múltiplos de tres ($21, 27$) y el múltiplo de cinco ($25$), los únicos números que no sufren ningún tipo de tachado en dicha fila son el <strong>23 y el 29</strong>.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">¿Cuál es el beneficio o ventaja computacional principal de usar la Criba de Eratóstenes frente a verificar la divisibilidad de cada número uno por uno?</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Dificultad 3 (Difícil)</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <p>La ventaja principal radica en que la criba funciona mediante descartes por **adición y marcado repetitivo de múltiplos (sumas numéricas básicas)** en lugar de tener que realizar complejas operaciones individuales de división por cada número de la lista, lo que optimiza drásticamente el rendimiento computacional.</p>
+            </div> 
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>
