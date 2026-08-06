@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Criterios de Divisibilidad del 2, 3 y 5</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+inlineMath: [['$', '$'], ['\\(', '\\)']],                
+displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 10px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Criterios de Divisibilidad</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Qué son los Criterios de Divisibilidad?</h2>
+            <p>Son reglas particulares que nos permiten saber de forma inmediata si un número entero se puede dividir entre otro de manera exacta (es decir, con un resto igual a cero). Conocer los criterios del <strong>2, 3 y 5</strong> es una herramienta indispensable para agilizar el cálculo mental y descomponer números compuestos de forma eficiente.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. Criterio de Divisibilidad del 2</div>
+                <div class="regla-box">
+                    <strong>Regla general:</strong> Un número es divisible entre 2 si termina en <strong>0, 2, 4, 6 o 8</strong> (es decir, si su última cifra es par).
+                </div>
+                <p><strong>Ejemplo práctico:</strong> Analicemos el número compuesto <span class="highlight">364</span>.</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">3</td>
+                            <td class="col-digito">6</td>
+                            <td class="col-digito">4</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">¿Última cifra es par?</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">4 (Es par)</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del proceso:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Nos fijamos únicamente en el dígito de las unidades del número original. Las centenas y decenas no afectan la propiedad de este criterio.</li>
+                            <li><strong>Paso 2:</strong> Evaluamos dicha cifra. Como termina en <span class="highlight">4</span> y el 4 es un número par, el criterio se cumple con éxito.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> El número 364 se puede dividir exactamente entre 2 (\(364 \div 2 = 182\)).
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Criterio de Divisibilidad del 3</div>
+                <div class="regla-box">
+                    <strong>Regla general:</strong> Un número es divisible entre 3 si la <strong>suma de todos sus dígitos</strong> da como resultado un múltiplo de 3 (un número de la tabla del 3).
+                </div>
+                <p><strong>Ejemplo práctico:</strong> Analicemos el número compuesto <span class="highlight">279</span>.</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">2</td>
+                            <td class="col-digito">7</td>
+                            <td class="col-digito">9</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">2 + 7 + 9</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">18</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">3 · 6</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del proceso:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Descomponemos el número sumando cada uno de sus componentes mediante una transformación conceptual: \(2 + 7 + 9 = 18\).</li>
+                            <li><strong>Paso 2:</strong> Comprobamos si el resultado intermedio (\(18\)) es un múltiplo del 3. Al revisar la tabla del 3, sabemos que \(3 \times 6 = 18\), por lo que es correcto.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> Al ser la suma digital un múltiplo exacto de 3, el número original 279 es divisible entre 3 (\(279 \div 3 = 93\)).
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">3. Criterio de Divisibilidad del 5</div>
+                <div class="regla-box">
+                    <strong>Regla general:</strong> Un número es divisible entre 5 si su última cifra de la derecha es <strong>0 o 5</strong>.
+                </div>
+                <p><strong>Ejemplo práctico:</strong> Analicemos el número compuesto <span class="highlight">840</span>.</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">8</td>
+                            <td class="col-digito">4</td>
+                            <td class="col-digito">0</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas">¿Termina en 0 o en 5?</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">=</td>
+                            <td class="barra-primas">Termina en 0</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del proceso:</strong><br>
+                        <ul>
+                            <li><strong>Paso 1:</strong> Llevamos la atención directamente a la última cifra posicional, correspondiente a las unidades.</li>
+                            <li><strong>Paso 2:</strong> Verificamos la regla. El número acaba exactamente en <span class="highlight">0</span>, cumpliendo perfectamente con el patrón característico de la tabla de multiplicar del 5.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> El número compuesto 840 es completamente divisible entre 5 (\(840 \div 5 = 168\)).
+                    </div>
+                </div>
+            </div>
+
+
+<div class="step-block" style="border-color: #e53e3e;">
+                <div class="step-title" style="color: #e53e3e;">4. Caso Especial: Número que NO cumple ningún criterio</div>
+                <div class="regla-box" style="background-color: #fff5f5; border-left-color: #e53e3e;">
+                    <strong>¿Qué pasa si no cumple ninguna regla?</strong> Si un número no pasa ninguno de los tres criterios, significa que no es divisible ni por 2, ni por 3, ni por 5. Por tanto, no debemos usar esos números en su descomposición.
+                </div>
+                <p><strong>Ejemplo práctico:</strong> Analicemos el número compuesto <span class="highlight" style="color: #e53e3e;">713</span>.</p>
+                
+                <div class="division-table-container" style="background: #fffafb;">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-digito">7</td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito">3</td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #4a5568;">Análisis de sus propiedades:</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #e53e3e;">¿Termina en par? No (Termina en 3)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #e53e3e;">7 + 1 + 3 = 11 (No está en la tabla del 3)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">→</td>
+                            <td class="barra-primas" style="color: #e53e3e;">¿Termina en 0 o 5? No (Termina en 3)</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Evaluación paso a paso:</strong><br>
+                        <ul>
+                            <li><strong>Prueba del 2:</strong> Su última cifra es <span class="highlight" style="color: #e53e3e;">3</span> (impar). Por tanto, <strong>no</strong> se puede dividir entre 2.</li>
+                            <li><strong>Prueba del 3:</strong> Sumamos sus dígitos: \(7 + 1 + 3 = 11\). Como el 11 no es múltiplo de 3, el número <strong>no</strong> se puede dividir entre 3.</li>
+                            <li><strong>Prueba del 5:</strong> La última cifra es 3, de modo que tampoco cumple la regla de terminar en 0 o 5. <strong>No</strong> se puede dividir entre 5.</li>
+                        </ul>
+                        <strong>Conclusión:</strong> El número 713 **no es divisible** entre 2, 3 ni 5. Si estuviéramos haciendo su factorización, tendríamos que probar con los siguientes primos mayores (como el 7, 11, 13, 17, etc.).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

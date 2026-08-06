@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (MathJax)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+   
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],               
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejemplos de Criterios de Divisibilidad (2, 3 y 5)</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Comprueba si el número <strong>135</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Observamos su última cifra, la cual es \(5\). Como es un número impar:
+                            $$ \text{Última cifra} = 5 \quad \Rightarrow \quad \text{No es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Sumamos los dígitos que componen el número:
+                            $$ 1 + 3 + 5 = 9 $$
+                            Como el \(9\) es un múltiplo exacto de 3 (\(3 \times 3 = 9\)):
+                            $$ \text{Suma} = 9 \quad \Rightarrow \quad \text{Sí es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Analizamos si su última cifra termina en 0 o en 5:
+                            $$ \text{Última cifra} = 5 \quad \Rightarrow \quad \text{Sí es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>180</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Evaluamos la última cifra del número, que es \(0\):
+                            $$ \text{Última cifra} = 0 \text{ (par)} \quad \Rightarrow \quad \text{Sí es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Realizamos la suma de sus valores absolutos:
+                            $$ 1 + 8 + 0 = 9 $$
+                            Dado que el \(9\) se encuentra en la tabla del 3:
+                            $$ \text{Suma} = 9 \quad \Rightarrow \quad \text{Sí es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Revisamos el dígito final para ver si coincide con la regla:
+                            $$ \text{Última cifra} = 0 \quad \Rightarrow \quad \text{Sí es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>42</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Su última cifra es \(2\):
+                            $$ \text{Última cifra} = 2 \text{ (par)} \quad \Rightarrow \quad \text{Sí es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Sumamos las cifras que estructuran el valor numérico:
+                            $$ 4 + 2 = 6 $$
+                            Puesto que \(6\) es múltiplo de 3 (\(3 \times 2 = 6\)):
+                            $$ \text{Suma} = 6 \quad \Rightarrow \quad \text{Sí es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Verificamos si termina en la cifra 0 o en 5:
+                            $$ \text{Última cifra} = 2 \quad \Rightarrow \quad \text{No es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>70</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> La cifra en la posición de las unidades es \(0\):
+                            $$ \text{Última cifra} = 0 \text{ (par)} \quad \Rightarrow \quad \text{Sí es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Ejecutamos la suma aritmética de sus dígitos:
+                            $$ 7 + 0 = 7 $$
+                            Al notar que el \(7\) no es un múltiplo exacto de 3:
+                            $$ \text{Suma} = 7 \quad \Rightarrow \quad \text{No es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Comprobamos la restricción del dígito terminal:
+                            $$ \text{Última cifra} = 0 \quad \Rightarrow \quad \text{Sí es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>713</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Observamos el dígito final de las unidades, que corresponde a \(3\):
+                            $$ \text{Última cifra} = 3 \text{ (impar)} \quad \Rightarrow \quad \text{No es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Sumamos consecutivamente todas sus cifras individuales:
+                            $$ 7 + 1 + 3 = 11 $$
+                            El valor \(11\) no resulta ser divisible por el número 3:
+                            $$ \text{Suma} = 11 \quad \Rightarrow \quad \text{No es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Validamos si el último dígito termina de acuerdo a la norma:
+                            $$ \text{Última cifra} = 3 \quad \Rightarrow \quad \text{No es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>95</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Estudiamos el último componente numérico, que es \(5\):
+                            $$ \text{Última cifra} = 5 \text{ (impar)} \quad \Rightarrow \quad \text{No es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Operamos sumando las cifras internas:
+                            $$ 9 + 5 = 14 $$
+                            Dado que el número \(14\) no es divisible de forma exacta entre 3:
+                            $$ \text{Suma} = 14 \quad \Rightarrow \quad \text{No es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Comparamos la terminación para certificar la regla:
+                            $$ \text{Última cifra} = 5 \quad \Rightarrow \quad \text{Sí es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>312</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Identificamos la cifra terminal de la derecha, calculada en \(2\):
+                            $$ \text{Última cifra} = 2 \text{ (par)} \quad \Rightarrow \quad \text{Sí es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Adicionamos algebraicamente cada uno de los guarismos:
+                            $$ 3 + 1 + 2 = 6 $$
+                            Como el \(6\) pertenece a los múltiplos enteros de 3 (\(3 \times 2 = 6\)):
+                            $$ \text{Suma} = 6 \quad \Rightarrow \quad \text{Sí es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Miramos si la última cifra se ajusta a lo requerido:
+                            $$ \text{Última cifra} = 2 \quad \Rightarrow \quad \text{No es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>225</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Su cifra extrema derecha es el \(5\):
+                            $$ \text{Última cifra} = 5 \text{ (impar)} \quad \Rightarrow \quad \text{No es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Evaluamos sumando el conjunto de valores de sus posiciones:
+                            $$ 2 + 2 + 5 = 9 $$
+                            Puesto que la suma genera un \(9\), que es múltiplo directo de 3:
+                            $$ \text{Suma} = 9 \quad \Rightarrow \quad \text{Sí es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> La última posición numérica termina explícitamente en:
+                            $$ \text{Última cifra} = 5 \quad \Rightarrow \quad \text{Sí es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>60</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Inspeccionamos la posición de unidades, cuyo valor es \(0\):
+                            $$ \text{Última cifra} = 0 \text{ (par)} \quad \Rightarrow \quad \text{Sí es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Desarrollamos la suma de las magnitudes que lo componen:
+                            $$ 6 + 0 = 6 $$
+                            Como el \(6\) se localiza dentro de la secuencia del 3:
+                            $$ \text{Suma} = 6 \quad \Rightarrow \quad \text{Sí es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Nos fijamos si su cifra final concluye en 0 o en 5:
+                            $$ \text{Última cifra} = 0 \quad \Rightarrow \quad \text{Sí es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número <strong>88</strong> cumple los criterios de divisibilidad del 2, 3 y 5 de forma simultánea.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Criterio del 2:</strong> Comprobamos el último de los dígitos, el cual equivale a \(8\):
+                            $$ \text{Última cifra} = 8 \text{ (par)} \quad \Rightarrow \quad \text{Sí es divisible entre 2} $$
+                        </li>
+                        <li><strong>Criterio del 3:</strong> Hacemos el cómputo global añadiendo sus valores posicionales:
+                            $$ 8 + 8 = 16 $$
+                            Sabiendo que el \(16\) no resulta ser múltiplo entero de 3:
+                            $$ \text{Suma} = 16 \quad \Rightarrow \quad \text{No es divisible entre 3} $$
+                        </li>
+                        <li><strong>Criterio del 5:</strong> Inspeccionamos si la parte terminal respeta la propiedad fija:
+                            $$ \text{Última cifra} = 8 \quad \Rightarrow \quad \text{No es divisible entre 5} $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
