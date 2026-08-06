@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Múltiplos y Divisores de un Número</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .excepcion-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #dd6b20;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+        .excepcion-box strong {
+            color: #dd6b20;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Números Primos y Compuestos</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Qué son los Números Primos y los Números Compuestos?</h2>
+            <p>Estos conceptos están estrechamente relacionados con los de múltiplos y divisores del punto anterior, 
+            y por lo tanto vinculados mediante la operación de la <strong>división exacta</strong>. 
+            Nos permiten entender cómo se estructuran y relacionan los números enteros entre sí.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #2635b7;">1. Clasificación: Números Primos y Compuestos</div>
+                
+                <p>Dependiendo de la cantidad de divisores que tenga un número entero positivo, podemos clasificarlo en dos categorías principales. Esta distinción es fundamental para la BAM (Descomposición factorial).</p>
+
+                <div class="excepcion-box">
+                    <strong>¡Atención! Excepción muy importante:</strong> El número <strong>$1$ no es primo ni compuesto</strong>. 
+                    ¿Por qué? Porque el número $1$ solamente tiene un único divisor (él mismo). Para ser primo necesita exactamente dos divisores distintos, y para ser compuesto requiere más de dos.
+                </div>
+
+                <h3>A) Números Primos</h3>
+                <div class="regla-box" style="border-left-color: #00769d; background-color: #f0f9ff;">
+                    <strong>Definición:</strong> Un número es <strong>primo</strong> si es mayor que $1$ y <strong>sólo tiene dos divisores distintos</strong>: el $1$ y él mismo.
+                </div>
+                
+                <p><strong>Propiedades clave de los números primos:</strong></p>
+                <ul>
+                    <li><strong>La lista de números primos es infinita:</strong> No existe un "último" número primo; por más que avancemos en la recta numérica, siempre seguiremos encontrando más.</li>
+                    <li><strong>Números primos del 1 al 20:</strong> Si analizamos los primeros veinte números, los que cumplen la condición de ser primos son únicamente estos ocho enteros:
+                        <br><span class="highlight">$\text{Primos del 1 al 20} = \{2, 3, 5, 7, 11, 13, 17, 19\}$</span>
+                    </li>
+                </ul>
+
+                <div class="excepcion-box" style="background-color: #f0fdf4; border-left-color: #16a34a;">
+                    <strong style="color: #16a34a;">Consejo práctico de estudio:</strong> Para trabajar con agilidad en los ejercicios de matemáticas, es muy importante aprenderse de memoria, como mínimo, los primeros cinco números primos: <strong>$2, 3, 5, 7$ y $11$</strong>. Son los que más utilizarás en clase.
+                </div>
+
+                <p>Si intentamos dividir un número primo por cualquier otro número que no sea el $1$ o él mismo, la división nunca será exacta (el resto no será cero).</p>
+                
+                <p><strong>Ejemplos reales:</strong></p>
+                <ul>
+                    <li><strong>El número $5$:</strong> Si calculamos sus divisores, vemos que solo se puede dividir de forma exacta entre $1$ y $5$. <br>$\text{D}(5) = \{1, 5\}$ $\rightarrow$ Tiene 2 divisores. Por tanto, <strong>$5$ es primo</strong>.</li>
+                    <li><strong>El número $7$:</strong> No está en ninguna tabla de multiplicar más que en la suya propia. Sus únicos divisores son el $1$ y el $7$. <br>$\text{D}(7) = \{1, 7\}$ $\rightarrow$ Tiene 2 divisores. Por tanto, <strong>$7$ es primo</strong>.</li>
+                </ul>
+
+                <h3 style="margin-top: 25px;">B) Números Compuestos</h3>
+                <div class="regla-box">
+                    <strong>Definición:</strong> Un número es <strong>compuesto</strong> si tiene <strong>más de dos divisores</strong>. Esto significa que posee al menos un divisor diferente al $1$ y a él mismo.
+                </div>
+                <p>Cualquier número compuesto se puede expresar como el resultado de multiplicar otros números enteros más pequeños.</p>
+                
+                <p><strong>Ejemplos reales:</strong></p>
+                <ul>
+                    <li><strong>El número $6$:</strong> Como hemos visto en los pasos anteriores, se puede dividir exactamente por $1$ y por $6$, pero también por $2$ y por $3$. <br>$\text{D}(6) = \{1, 2, 3, 6\}$ $\rightarrow$ Tiene 4 divisores. Por tanto, <strong>$6$ es compuesto</strong>.</li>
+                    <li><strong>El número $15$:</strong> Además de dividirse por $1$ y $15$, podemos hacer grupos exactos de $3$ y de $5$ ($3 \times 5 = 15$). <br>$\text{D}(15) = \{1, 3, 5, 15\}$ $\rightarrow$ Tiene 4 divisores. Por tanto, <strong>$15$ es compuesto</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">2. Estrategias avanzadas para comprobar si un número es Primo</div>
+                <p>Para saber si un número grande es primo, ir probando a dividirlo número a número hasta llegar a él puede llevarnos una eternidad. Por suerte, las matemáticas nos ofrecen varias <strong>propiedades de ahorro de cálculo</strong> muy potentes:</p>
+
+                <p><strong>Propiedad 1: El límite de la mitad del número</strong></p>
+                <div class="regla-box" style="background-color: #f7fafc; border-left-color: #4a5568;">
+                    Además de comprobar que no se puede dividir por $1$ ni por él mismo, <strong>no existe ningún divisor entero que sea mayor que la mitad de dicho número</strong>. Por lo tanto, basta con realizar las comprobaciones entre el $1$ y el número dividido entre dos ($n/2$).
+                </div>
+                <ul>
+                    <li><strong>Ejemplo:</strong> Imaginemos que queremos saber si el número <strong>$14$</strong> es primo. Su mitad es $14 \div 2 = 7$. No hace falta que intentemos dividirlo por $8, 9, 10, 11, 12$ ni $13$ ya que es matemáticamente imposible que den divisiones exactas. Comprobando los números hasta el $7$, vemos que $14 \div 2 = 7$ (exacta), por lo que determinamos rápidamente que es compuesto.</li>
+                </ul>
+
+                <p><strong>Propiedad 2: El límite definitivo de la raíz cuadrada</strong></p>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    ¡Podemos acotar el cálculo todavía más! Si un número no tiene divisores exactos menores o iguales a su <strong>raíz cuadrada ($\sqrt{n}$)</strong>, entonces el número es totalmente seguro que es primo. No es necesario comprobar ningún número superior a su raíz.
+                </div>
+                <ul>
+                    <li><strong>Ejemplo:</strong> Analicemos el número <strong>$53$</strong>. Calculamos mentalmente su raíz aproximada: como $7 \times 7 = 49$ y $8 \times 8 = 64$, sabemos que $\sqrt{53} \approx 7.2$. ¡Sobra con verificar que no es divisible por los números menores o iguales a $7$ (es decir: $2, 3, 4, 5, 6, 7$)! Al ver que ninguna división es exacta, aseguramos que el $53$ es primo sin tener que probar hasta el $52$.</li>
+                </ul>
+
+                <p><strong>Propiedad 3: El filtro definitivo (Solo probar números primos)</strong></p>
+                <div class="regla-box" style="border-left-color: #16a34a; background-color: #f0fdf4;">
+                    <strong>La regla del máximo ahorro:</strong> En los estudios anteriores no hace falta ir probando con absolutamente todos los números enteros de la lista. <strong>Basta con probar únicamente con los números primos menores que su raíz cuadrada</strong>. Si no es divisible por ningún primo en ese rango, el número es primo.
+                </div>
+                <ul>
+                    <li><strong>Ejemplo:</strong> Queremos evaluar el número <strong>$101$</strong>. Su raíz cuadrada aproximada es $\sqrt{101} \approx 10$ (ya que $10 \times 10 = 100$). Los números primos menores que $10$ son solamente el **$2, 3, 5$ y $7$**. 
+                        <ul>
+                            <li>¿Es divisible entre $2$? No (no termina en cifra par).</li>
+                            <li>¿Es divisible entre $3$? No (la suma de sus cifras $1+0+1=2$, no es múltiplo de 3).</li>
+                            <li>¿Es divisible entre $5$? No (no termina ni en 0 ni en 5).</li>
+                            <li>¿Es divisible entre $7$? No ($101 \div 7 = 14$ con resto $3$).</li>
+                        </ul>
+                    ¡Como no es divisible por ninguno de esos cuatro números primos, podemos afirmar al 100% que **$101$ es un número primo** haciendo poquísimos cálculos!
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
