@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="description" content="Juego para aprender sumas con múltiples sumandos y llevadas">   
+    <title>Juego de Sumas Multisumando</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <div class="contenedor-principal">
+    
+    <header>
+        <h1>Práctica de Sumas 
+            <label class="player-score">Puntuación: <span id="playerScore">0 / 0</span></label>
+        </h1>
+    </header>
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="cifrasSelect" class="control-label">Cifras:</label>
+            <select id="cifrasSelect">
+                <option value="1">1 Cifra</option>
+                <option value="2" selected>2 Cifras</option>
+                <option value="3">3 Cifras</option>
+                <option value="4">4 Cifras</option>
+                <option value="5">5 Cifras</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="sumandosSelect" class="control-label">Sumandos:</label>
+            <select id="sumandosSelect">
+                <option value="2">2 números</option>
+                <option value="3" selected>3 números</option>
+                <option value="4">4 números</option>
+                <option value="5">5 números</option>
+            </select>
+        </div>
+        
+        <button id="newOperationButton" class="btn-action">Nueva Suma</button>
+    </div>
+    
+    <main class="contenido-principal">
+        <div id="sumaContainer" class="suma-container"></div>
+
+        <div class="score-buttons">
+            <div class="button-row">
+                <button class="digit-btn">1</button>
+                <button class="digit-btn">2</button>
+                <button class="digit-btn">3</button>
+                <button class="digit-btn">4</button>
+                <button class="digit-btn">5</button>
+            </div>
+            <div class="button-row">
+                <button class="digit-btn">6</button>
+                <button class="digit-btn">7</button>
+                <button class="digit-btn">8</button>
+                <button class="digit-btn">9</button>
+                <button class="digit-btn">0</button>
+            </div>                    
+        </div>
+    </main>
+ </div>
+   
+ <script src="script.js"></script>
+</body>
+</html>
