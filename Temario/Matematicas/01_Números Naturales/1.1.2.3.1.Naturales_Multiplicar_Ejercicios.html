@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Resueltos: La Multiplicación</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            chtml: { displayAlign: "left" },
+            startup: { ready: () => { MathJax.startup.defaultReady(); } }
+        };
+    </script>
+    <style>
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .factor-table td { padding: 3px 0; text-align: center; vertical-align: middle; }
+        .col-digito { width: 26px; color: #2d3748; }
+        .col-signo { width: 26px; text-align: center; color: #2635b7; }
+        .linea-llevada { color: #e53e3e; font-size: 0.95rem; }
+        .resultado-final { color: #2635b7; }
+        .resultado-verde { color: #16a34a; }
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicios de Matemáticas: Multiplicaciones</h1>
+   
+    <div class="exercise-list">
+       
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $213 \times 3$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">9</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $142 \times 2$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito">1</td><td class="col-digito">4</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">4</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $516 \times 4$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">1</td><td class="col-digito">6</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">4</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $435 \times 5$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">3</td><td class="col-digito">5</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">5</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $608 \times 7$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">0</td><td class="col-digito">8</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">7</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">6</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $729 \times 6$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito">4</td><td class="col-digito">1</td><td class="col-digito">5</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">7</td><td class="col-digito">2</td><td class="col-digito">9</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">4</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $841 \times 8$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">3</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">4</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">8</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">8</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $392 \times 9$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito">3</td><td class="col-digito">8</td><td class="col-digito">1</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">9</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">8</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $950 \times 4$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <table class="factor-table">
+                    <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito">3</td><td class="col-digito">2</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">5</td><td class="col-digito">0</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">0</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $803 \times 3$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">0</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">9</td><td class="col-digito"></td></tr>
+                </table>
+            </div>           
+        </div>
+
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $312 \times 12$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">2</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">3</td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">4</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $423 \times 21$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">1</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">8</td><td class="col-digito">4</td><td class="col-digito">6</td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">3</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $512 \times 34$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">4</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">4</td><td class="col-digito">8</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">5</td><td class="col-digito">3</td><td class="col-digito">6</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">8</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $625 \times 43$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">2</td><td class="col-digito">5</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">3</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">8</td><td class="col-digito">7</td><td class="col-digito">5</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">5</td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">5</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $704 \times 52$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">7</td><td class="col-digito">0</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">5</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">5</td><td class="col-digito">2</td><td class="col-digito">0</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">3</td><td class="col-digito">5</td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">0</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $841 \times 26$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">4</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">6</td><td class="col-digito">8</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">6</td><td class="col-digito">8</td><td class="col-digito">2</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">2</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $936 \times 45$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">3</td><td class="col-digito">6</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">5</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">6</td><td class="col-digito">8</td><td class="col-digito">0</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">3</td><td class="col-digito">7</td><td class="col-digito">4</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">0</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $158 \times 67$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">5</td><td class="col-digito">8</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">7</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">1</td><td class="col-digito">0</td><td class="col-digito">6</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">4</td><td class="col-digito">8</td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">6</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $267 \times 83$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">6</td><td class="col-digito">7</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">3</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">0</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">3</td><td class="col-digito">6</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">1</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $489 \times 91$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">8</td><td class="col-digito">9</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">1</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">8</td><td class="col-digito">9</td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">4</td><td class="col-digito">4</td><td class="col-digito">0</td><td class="col-digito">1</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">9</td><td class="col-digito resultado-final">9</td></tr>
+                </table>
+            </div>           
+        </div>
+
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $123 \times 121$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">1</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">6</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">3</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">8</td><td class="col-digito resultado-verde">8</td><td class="col-digito resultado-verde">3</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $214 \times 111$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">1</td><td class="col-digito">1</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">4</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">7</td><td class="col-digito resultado-verde">5</td><td class="col-digito resultado-verde">4</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $312 \times 202$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">2</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">6</td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">6</td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">4</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $405 \times 124$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+                <p><strong>Solución Ejercicio 24:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">0</td><td class="col-digito">5</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">4</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">6</td><td class="col-digito">2</td><td class="col-digito">0</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">1</td><td class="col-digito">0</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">4</td><td class="col-digito">0</td><td class="col-digito">5</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">5</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">0</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $521 \times 231$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+                <p><strong>Solución Ejercicio 25:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">2</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">3</td><td class="col-digito">1</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">2</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">5</td><td class="col-digito">6</td><td class="col-digito">3</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">0</td><td class="col-digito">4</td><td class="col-digito">2</td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">5</td><td class="col-digito resultado-verde">1</td><td class="col-digito"></td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $612 \times 342$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+                <p><strong>Solución Ejercicio 26:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">4</td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">2</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">4</td><td class="col-digito">8</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">8</td><td class="col-digito">3</td><td class="col-digito">6</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">4</td><td class="col-digito"></td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $734 \times 152$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+                <p><strong>Solución Ejercicio 27:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">7</td><td class="col-digito">3</td><td class="col-digito">4</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">5</td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">4</td><td class="col-digito">6</td><td class="col-digito">8</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">6</td><td class="col-digito">7</td><td class="col-digito">0</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito"></td><td class="col-digito">7</td><td class="col-digito">3</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">5</td><td class="col-digito resultado-verde">6</td><td class="col-digito resultado-verde">8</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $851 \times 243$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+                <p><strong>Solución Ejercicio 28:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">5</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">3</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">5</td><td class="col-digito">5</td><td class="col-digito">3</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">4</td><td class="col-digito">0</td><td class="col-digito">4</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">7</td><td class="col-digito">0</td><td class="col-digito">2</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">6</td><td class="col-digito resultado-verde">7</td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">3</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $906 \times 512$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+                <p><strong>Solución Ejercicio 29:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">0</td><td class="col-digito">6</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">8</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">0</td><td class="col-digito">6</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">4</td><td class="col-digito">5</td><td class="col-digito">3</td><td class="col-digito">0</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">6</td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">8</td><td class="col-digito resultado-verde">7</td><td class="col-digito resultado-verde">2</td></tr>
+                </table>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Calcula el producto de la siguiente operación: $999 \times 999$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="Ver Solución" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+                <p><strong>Solución Ejercicio 30:</strong></p>
+                <table class="factor-table">
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">9</td><td class="col-digito">9</td></tr>
+                    <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">9</td><td class="col-digito">9</td></tr>
+                    <tr style="border-top: 2px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">9</td><td class="col-digito">9</td><td class="col-digito">1</td></tr>
+                    <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">9</td><td class="col-digito">9</td><td class="col-digito">1</td><td class="col-digito"></td></tr>
+                    <tr><td class="col-signo">+</td><td class="col-digito">8</td><td class="col-digito">9</td><td class="col-digito">9</td><td class="col-digito">1</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">8</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">1</td></tr>
+                </table>
+            </div>           
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+</body>
+</html>

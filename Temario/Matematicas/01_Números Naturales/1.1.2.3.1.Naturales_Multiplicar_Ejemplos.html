@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Resueltos: La Multiplicación</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            chtml: { displayAlign: "left" },
+            startup: { ready: () => { MathJax.startup.defaultReady(); } }
+        };
+    </script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 15px 0;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 3px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Ancho fijo estricto para que todas las columnas midan exactamente igual */
+        .col-digito { width: 26px; color: #2d3748; }
+        .col-signo { width: 26px; text-align: center; color: #2635b7; }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.4;
+            max-width: 550px;
+        }
+
+        .linea-llevada { color: #e53e3e; font-size: 0.95rem; }
+        .resultado-final { color: #2635b7; }
+        .resultado-verde { color: #16a34a; }
+    </style>
+</head>
+<body>
+
+    <h1>Banco de Ejemplos: Multiplicaciones de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>15 Ejemplos Prácticos Desarrollados Paso a Paso</h2>
+            <p>A continuación se presentan quince operaciones organizadas por niveles de dificultad. La cuadrícula asegura la perfecta alineación vertical de unidades, decenas, centenas y millares.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">Bloque 1: Multiplicaciones por Una Cifra</div>
+
+                <h3>Ejemplo 1: $132 \times 3$ (Sin llevadas)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito">1</td><td class="col-digito">3</td><td class="col-digito">2</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">9</td><td class="col-digito resultado-final">6</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Multiplicamos el 3 directo por cada unidad: $3\times2=6$, $3\times3=9$ y $3\times1=3$.</div>
+                </div>
+
+                <h3>Ejemplo 2: $428 \times 2$ (Con llevada)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito">4</td><td class="col-digito">2</td><td class="col-digito">8</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">6</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">$2\times8 = 16$ (apuntamos el 6, nos llevamos 1). Luego $2\times2 = 4 + 1 = 5$. Finalmente $2\times4 = 8$.</div>
+                </div>
+
+                <h3>Ejemplo 3: $571 \times 4$ (Con llevadas)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">7</td><td class="col-digito">1</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">4</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">$4\times1 = 4$. Después $4\times7 = 28$ (escribimos el 8, nos llevamos 2). $4\times5 = 20 + 2 = 22$.</div>
+                </div>
+
+                <h3>Ejemplo 4: $806 \times 7$ (Ceros intermedios)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">8</td><td class="col-digito">0</td><td class="col-digito">6</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">7</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">2</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">$7\times6 = 42$ (escribimos 2, nos llevamos 4). $7\times0 = 0 + 4 = 4$. Por último, $7\times8 = 56$.</div>
+                </div>
+
+                <h3>Ejemplo 5: $935 \times 6$ (Llevadas continuas)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr class="linea-llevada"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">3</td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">3</td><td class="col-digito">5</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">1</td><td class="col-digito resultado-final">0</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">$6\times5 = 30$ (llevamos 3). $6\times3 = 18 + 3 = 21$ (llevamos 2). $6\times9 = 54 + 2 = 56$.</div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #dd6b20;">
+                <div class="step-title" style="color: #dd6b20;">Bloque 2: Multiplicaciones por Dos Cifras</div>
+
+                <h3>Ejemplo 6: $214 \times 12$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">2</td><td class="col-digito">8</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">4</td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">8</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Fila 1: $214 \times 2 = 428$. Fila 2: $214 \times 1 = 214$ (desplazado un lugar). Sumamos en vertical.</div>
+                </div>
+
+                <h3>Ejemplo 7: $342 \times 23$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">4</td><td class="col-digito">2</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito">1</td><td class="col-digito">0</td><td class="col-digito">2</td><td class="col-digito">6</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">6</td><td class="col-digito">8</td><td class="col-digito">4</td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">6</td><td class="col-digito resultado-final">6</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Fila 1: $342 \times 3 = 1026$. Fila 2: $342 \times 2 = 684$ (dejando el hueco de las unidades vacío).</div>
+                </div>
+
+                <h3>Ejemplo 8: $516 \times 44$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">1</td><td class="col-digito">6</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">4</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">6</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">6</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                      
+  <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">4</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Al multiplicar por cifras iguales (4), ambos sumandos parciales dan $2064$, escalonándose correctamente.</div>
+                </div>
+
+                <h3>Ejemplo 9: $689 \times 37$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">8</td><td class="col-digito">9</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">7</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">8</td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">6</td><td class="col-digito">7</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">9</td><td class="col-digito resultado-final">3</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Operación con altas llevadas: $689\times7 = 4823$. Luego $689\times3 = 2067$.</div>
+                </div>
+
+                <h3>Ejemplo 10: $704 \times 58$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">7</td><td class="col-digito">0</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">8</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">5</td><td class="col-digito">6</td><td class="col-digito">3</td><td class="col-digito">2</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">3</td><td class="col-digito">5</td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">0</td><td class="col-digito resultado-final">8</td><td class="col-digito resultado-final">3</td><td class="col-digito resultado-final">2</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Se calcula $704\times8 = 5632$. Después $704\times5 = 3520$. Observa la alineación estricta de las columnas.</div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #4a5568;">
+                <div class="step-title" style="color: #4a5568;">Bloque 3: Multiplicaciones por Tres Cifras o Más</div>
+
+                <h3>Ejemplo 11: $123 \times 112$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">6</td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">3</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">3</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">7</td><td class="col-digito resultado-verde">7</td><td class="col-digito resultado-verde">6</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Tres niveles ordenados: Fila del 2 ($246$). Fila del 1 ($123$ corrida 1 hueco). Fila del siguiente 1 ($123$ corrida 2 huecos).</div>
+                </div>
+
+                <h3>Ejemplo 12: $415 \times 203$ (Con cero intermedio)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">1</td><td class="col-digito">5</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">3</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">5</td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">8</td><td class="col-digito">3</td><td class="col-digito">0</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">8</td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">5</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">La fila intermedia del 0 se puede rellenar con ceros para mantener el orden de las posiciones de manera visual perfecta.</div>
+                </div>
+
+                <h3>Ejemplo 13: $322 \times 314$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">2</td><td class="col-digito">2</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">1</td><td class="col-digito">4</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">8</td><td class="col-digito">8</td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">2</td><td class="col-digito">2</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">9</td><td class="col-digito">6</td><td class="col-digito">6</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">0</td><td class="col-digito resultado-verde">8</td><td class="col-signo"></td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Los sumandos intermedios son $1288$, $322$ y $966$. Al sumarlos respetando los huecos, obtenemos $101108$.</div>
+                </div>
+
+                <h3>Ejemplo 14: $608 \times 245$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">0</td><td class="col-digito">8</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">5</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">0</td><td class="col-digito">4</td><td class="col-digito">0</td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td><td class="col-digito">3</td><td class="col-digito">2</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">6</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">8</td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">6</td><td class="col-digito resultado-verde">0</td><td class="col-digito"></td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Alineación rigurosa paso a paso. El 2 de la tercera fila queda exactamente encima del 4 de la segunda fila y del 3 de la primera.</div>
+                </div>
+
+                <h3>Ejemplo 15: $2034 \times 121$ (Multiplicando de 4 cifras)</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">3</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td><td class="col-digito">1</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">3</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">0</td><td class="col-digito">6</td><td class="col-digito">8</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">2</td><td class="col-digito">0</td><td class="col-digito">3</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">6</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">4</td><td class="col-digito"></td></tr>
+                    </table>
+                    <div class="explicacion-lateral">Aunque el número de arriba sea más largo, la estructura de "escalera" hacia la izquierda se mantiene inalterada.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

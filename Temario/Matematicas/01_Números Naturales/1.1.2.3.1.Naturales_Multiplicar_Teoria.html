@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: La Multiplicación de Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 3px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas y fijas para perfecta alineación) */
+        .col-digito {
+            width: 26px;
+            color: #2d3748;
+        }
+
+        /* Columna para el signo de operación */
+        .col-signo {
+            width: 26px;
+            text-align: center;
+            color: #2635b7;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .excepcion-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #dd6b20;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+        .excepcion-box strong {
+            color: #dd6b20;
+        }
+
+        /* Estilos específicos para la cuadrícula de las tablas de multiplicar */
+        .tablas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tabla-individual {
+            background: #f7fafc;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+        }
+
+        .tabla-individual h4 {
+            margin: 0 0 8px 0;
+            color: #2635b7;
+            text-align: center;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 3px;
+        }
+
+        .linea-llevada {
+            color: #e53e3e;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: La Multiplicación de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Qué es la Multiplicación?</h2>
+            <p>La multiplicación es una operación matemática fundamental que nos permite resolver situaciones de adición repetitiva de manera mucho más rápida y eficiente. Es una de las herramientas más utilizadas en la vida diaria.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #2635b7;">1. Significado de la Multiplicación y las Tablas</div>
+                
+                <p>Multiplicar consiste en <strong>sumar un mismo número (llamado multiplicando) varias veces</strong>, tantas como indique otro número (llamado multiplicador).</p>
+
+                <div class="regla-box" style="border-left-color: #00769d; background-color: #f0f9ff;">
+                    <strong>Ejemplo conceptual:</strong> Si tenemos $3$ bolsas con $5$ manzanas cada una, para saber el total sumamos:
+                    <br><span class="highlight">$5 + 5 + 5 = 15$</span>
+                    <br>Esto es lo mismo que abreviar sumando tres veces el cinco: <strong>$5 \times 3 = 15$</strong>.
+                </div>
+
+                <div class="excepcion-box">
+                    <strong>¡Nota aclaratoria fundamental!</strong> Para poder operar con fluidez y resolver problemas rápidamente, <strong>es absolutamente necesario aprenderse las tablas de multiplicar de memoria</strong>. Son los "ladrillos" con los que construirás el resto de tus conocimientos matemáticos.
+                </div>
+
+                <h3>La Propiedad Conmutativa: Tu gran aliada</h3>
+                <p>Esta propiedad dice que <strong>"el orden de los factores no altera el producto"</strong>. Es decir, da el mismo resultado multiplicar $A \times B$ que $B \times A$.</p>
+                <ul>
+                    <li>Por ejemplo: $4 \times 3 = 12$ y $3 \times 4 = 12$.</li>
+                    <li><strong>¿Por qué hace más fácil aprender de memoria?</strong> ¡Porque reduce el trabajo casi a la mitad! Si ya te sabes cuánto es $7 \times 8$, automáticamente te sabes cuánto es $8 \times 7$. ¡No necesitas memorizar ambos de forma separada!</li>
+                </ul>
+
+                <h3>Las Tablas de Multiplicar (del 0 al 10)</h3>
+                <div class="tablas-grid">
+                    <div class="tabla-individual">
+                        <h4>Tabla del 0</h4>
+                        0 × 0 = 0<br>0 × 1 = 0<br>0 × 2 = 0<br>0 × 3 = 0<br>0 × 4 = 0<br>0 × 5 = 0<br>0 × 6 = 0<br>0 × 7 = 0<br>0 × 8 = 0<br>0 × 9 = 0<br>0 × 10 = 0
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 1</h4>
+                        1 × 0 = 0<br>1 × 1 = 1<br>1 × 2 = 2<br>1 × 3 = 3<br>1 × 4 = 4<br>1 × 5 = 5<br>1 × 6 = 6<br>1 × 7 = 7<br>1 × 8 = 8<br>1 × 9 = 9<br>1 × 10 = 10
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 2</h4>
+                        2 × 0 = 0<br>2 × 1 = 2<br>2 × 2 = 4<br>2 × 3 = 6<br>2 × 4 = 8<br>2 × 5 = 10<br>2 × 6 = 12<br>2 × 7 = 14<br>2 × 8 = 16<br>2 × 9 = 18<br>2 × 10 = 20
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 3</h4>
+                        3 × 0 = 0<br>3 × 1 = 3<br>3 × 2 = 6<br>3 × 3 = 9<br>3 × 4 = 12<br>3 × 5 = 15<br>3 × 6 = 18<br>3 × 7 = 21<br>3 × 8 = 24<br>3 × 9 = 27<br>3 × 10 = 30
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 4</h4>
+                        4 × 0 = 0<br>4 × 1 = 4<br>4 × 2 = 8<br>4 × 3 = 12<br>4 × 4 = 16<br>4 × 5 = 20<br>4 × 6 = 24<br>4 × 7 = 28<br>4 × 8 = 32<br>4 × 9 = 36<br>4 × 10 = 40
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 5</h4>
+                        5 × 0 = 0<br>5 × 1 = 5<br>5 × 2 = 10<br>5 × 3 = 15<br>5 × 4 = 20<br>5 × 5 = 25<br>5 × 6 = 30<br>5 × 7 = 35<br>5 × 8 = 40<br>5 × 9 = 45<br>5 × 10 = 50
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 6</h4>
+                        6 × 0 = 0<br>6 × 1 = 6<br>6 × 2 = 12<br>6 × 3 = 18<br>6 × 4 = 24<br>6 × 5 = 30<br>6 × 6 = 36<br>6 × 7 = 42<br>6 × 8 = 48<br>6 × 9 = 54<br>6 × 10 = 60
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 7</h4>
+                        7 × 0 = 0<br>7 × 1 = 7<br>7 × 2 = 14<br>7 × 3 = 21<br>7 × 4 = 28<br>7 × 5 = 35<br>7 × 6 = 42<br>7 × 7 = 49<br>7 × 8 = 56<br>7 × 9 = 63<br>7 × 10 = 70
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 8</h4>
+                        8 × 0 = 0<br>8 × 1 = 8<br>8 × 2 = 16<br>8 × 3 = 24<br>8 × 4 = 32<br>8 × 5 = 40<br>8 × 6 = 48<br>8 × 7 = 56<br>8 × 8 = 64<br>8 × 9 = 72<br>8 × 10 = 80
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 9</h4>
+                        9 × 0 = 0<br>9 × 1 = 9<br>9 × 2 = 18<br>9 × 3 = 27<br>9 × 4 = 36<br>9 × 5 = 45<br>9 × 6 = 54<br>9 × 7 = 63<br>9 × 8 = 72<br>9 × 9 = 81<br>9 × 10 = 90
+                    </div>
+                    <div class="tabla-individual">
+                        <h4>Tabla del 10</h4>
+                        10 × 0 = 0<br>10 × 1 = 10<br>10 × 2 = 20<br>10 × 3 = 30<br>10 × 4 = 40<br>10 × 5 = 50<br>10 × 6 = 60<br>10 × 7 = 70<br>8 × 8 = 80<br>10 × 9 = 90<br>10 × 10 = 100
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">2. Multiplicar por una Cifra</div>
+                
+                <p>Para multiplicar un número de varias cifras por otro de una sola cifra, multiplicamos de derecha a izquierda (empezando por las unidades).</p>
+
+                <h3>A) Ejemplo SIN Llevadas: $421 \times 2$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-signo"></td>
+                            <td class="col-digito">4</td>
+                            <td class="col-digito">2</td>
+                            <td class="col-digito">1</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">×</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">2</td>
+                        </tr>
+                        <tr style="border-top: 2px solid #2d3748;">
+                            <td class="col-signo"></td>
+                            <td class="col-digito" style="color: #00769d;">8</td>
+                            <td class="col-digito" style="color: #00769d;">4</td>
+                            <td class="col-digito" style="color: #00769d;">2</td>
+                        </tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <strong>Paso a paso:</strong>
+                        <ul>
+                            <li>$2 \times 1 = 2$. Escribimos el $2$ abajo en las unidades.</li>
+                            <li>$2 \times 2 = 4$. Escribimos el $4$ en las decenas.</li>
+                            <li>$2 \times 4 = 8$. Escribimos el $8$ en las centenas.</li>
+                            <li>Resultado final: <strong>842</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>B) Ejemplo CON Llevadas: $364 \times 3$</h3>
+                <div class="excepcion-box" style="background-color: #f0fdf4; border-left-color: #16a34a;">
+                    <strong style="color: #16a34a;">¿Qué es la llevada y cómo gestionarla?</strong> Cuando el resultado de multiplicar una columna es igual o mayor que 10, escribimos sólo la cifra de la derecha (unidades) y <strong>la decena la apuntamos encima de la siguiente columna</strong>. También puedes ayudarte levantando los dedos de la mano para no olvidarla, evitando escribir de más o intentar memorizar demasiados datos a la vez.
+                </div>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr class="linea-llevada">
+                            <td class="col-signo"></td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito"></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo"></td>
+                            <td class="col-digito">3</td>
+                            <td class="col-digito">6</td>
+                            <td class="col-digito">4</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">×</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">3</td>
+                        </tr>
+                        <tr style="border-top: 2px solid #2d3748;">
+                            <td class="col-signo" style="color: #e53e3e;">1</td>
+                            <td class="col-digito" style="color: #e53e3e;">0</td>
+                            <td class="col-digito" style="color: #e53e3e;">9</td>
+                            <td class="col-digito" style="color: #e53e3e;">2</td>
+                            <td class="col-digito" style="color: #e53e3e;"></td>
+                        </tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <strong>Paso a paso:</strong>
+                        <ul>
+                            <li>$3 \times 4 = 12$. Escribimos el $2$ y <strong>nos llevamos 1</strong> (la anotamos arriba del 6).</li>
+                            <li>$3 \times 6 = 18$. Le sumamos la que nos llevábamos: $18 + 1 = 19$. Escribimos el $9$ y <strong>nos llevamos 1</strong> (la anotamos arriba del 3).</li>
+                            <li>$3 \times 3 = 9$. Le sumamos la que nos llevábamos: $9 + 1 = 10$. Como ya no hay más cifras, escribimos el $10$ completo.</li>
+                            <li>Resultado final: <strong>1092</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #dd6b20;">
+                <div class="step-title" style="color: #dd6b20;">3. Multiplicar por Dos Cifras</div>
+                
+                <p>Cuando multiplicamos por un número de dos cifras, calculamos dos productos intermedios y luego los sumamos. La regla clave es que al multiplicar la segunda cifra (las decenas), debemos <strong>mover el resultado una posición hacia la izquierda</strong>, dejando un hueco vacío a la derecha.</p>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-signo"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito">4</td>
+                            <td class="col-digito">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">×</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">2</td>
+                            <td class="col-digito">5</td>
+                        </tr>
+                        <tr style="border-top: 2px solid #cbd5e0;">
+                            <td class="col-signo"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">7</td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito">5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">+</td>
+                            <td class="col-digito">2</td>
+                            <td class="col-digito">8</td>
+                            <td class="col-digito">6</td>
+                            <td class="col-digito"></td> </tr>
+                        <tr style="border-top: 2px solid #2d3748;">
+                            <td class="col-signo"></td>
+                            <td class="col-digito" style="color: #2635b7;">3</td>
+                            <td class="col-digito" style="color: #2635b7;">5</td>
+                            <td class="col-digito" style="color: #2635b7;">7</td>
+                            <td class="col-digito" style="color: #2635b7;">5</td>
+                        </tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <strong>Paso a paso ($143 \times 25$):</strong>
+                        <ul>
+                            <li><strong>Multiplicamos por 5 (unidades):</strong> $143 \times 5 = 715$. Lo escribimos alineado a la derecha.</li>
+                            <li><strong>Multiplicamos por 2 (decenas):</strong> $143 \times 2 = 286$. Lo escribimos dejando el hueco de la derecha libre. ¡Míralo en la tabla, el 6 queda debajo del 1!</li>
+                            <li><strong>Sumamos:</strong> Realizamos la suma en vertical de ambas columnas.</li>
+                            <li>Resultado final: <strong>3575</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block" style="border-color: #4a5568;">
+                <div class="step-title" style="color: #4a5568;">4. Multiplicar por Más de Dos Cifras</div>
+                
+                <p>Para multiplicar por factores de tres cifras o más, <strong>se aplica exactamente el mismo método</strong>. Cada vez que pasamos a una nueva cifra del multiplicador, abrimos una nueva fila y movemos su resultado un espacio más hacia la izquierda.</p>
+
+                <div class="regla-box" style="background-color: #f7fafc; border-left-color: #4a5568;">
+                    <strong>Regla de oro de la posición en la suma:</strong> 
+                    <br>• Cifra 1 (Unidades) $\rightarrow$ Alineado completamente a la derecha.
+                    <br>• Cifra 2 (Decenas) $\rightarrow$ Dejamos <span class="highlight">1 hueco</span> a la derecha.
+                    <br>• Cifra 3 (Centenas) $\rightarrow$ Dejamos <span class="highlight">2 huecos</span> a la derecha.
+                </div>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-signo"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">2</td>
+                            <td class="col-digito">3</td>
+                            <td class="col-digito">1</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">×</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito">3</td>
+                            <td class="col-digito">2</td>
+                        </tr>
+                        <tr style="border-top: 2px solid #cbd5e0;">
+                            <td class="col-signo"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">4</td>
+                            <td class="col-digito">6</td>
+                            <td class="col-digito">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito">6</td>
+                            <td class="col-digito">9</td>
+                            <td class="col-digito">3</td>
+                            <td class="col-digito"></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">+</td>
+                            <td class="col-digito">2</td>
+                            <td class="col-digito">3</td>
+                            <td class="col-digito">1</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                        </tr>
+                        <tr style="border-top: 2px solid #2d3748;">
+                            <td class="col-signo"></td>
+                            <td class="col-digito" style="color: #16a34a;">3</td>
+                            <td class="col-digito" style="color: #16a34a;">0</td>
+                            <td class="col-digito" style="color: #16a34a;">4</td>
+                            <td class="col-digito" style="color: #16a34a;">9</td>
+                            <td class="col-digito" style="color: #16a34a;">2</td>
+                        </tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo ($231 \times 132$):</strong>
+                        <ul>
+                            <li>Fila 1: Multiplicamos por el $2$ de las unidades $\rightarrow$ $462$.</li>
+                            <li>Fila 2: Multiplicamos por el $3$ de las decenas $\rightarrow$ $693$ (dejando un hueco al final).</li>
+                            <li>Fila 3: Multiplicamos por el $1$ de las centenas $\rightarrow$ $231$ (dejando dos huecos al final).</li>
+                            <li>Sumamos los tres resultados respetando escrupulosamente sus columnas.</li>
+                            <li>Resultado final: <strong>30492</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
