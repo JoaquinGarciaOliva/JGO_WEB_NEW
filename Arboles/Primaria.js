@@ -113,7 +113,7 @@
   </div></li></ul>
  <li>
   <div class="folder"
-       id="4.3."
+       id="4."
        nivel="1"
        imagen="Imagenes/arbol/hoja.png"
        imagen2="Imagenes/"
@@ -123,10 +123,10 @@
        ejemplos=""
        ejercicios=""
        interactivo=""
-       onclick="toggleVisibility2(this,'4.3.')">
+       onclick="toggleVisibility2(this,'4.')">
 
     <img  class="manImg" src="Imagenes/arbol/hoja.png">
-    <span style="display: none;">4.3.</span>
+    <span style="display: none;">4.</span>
     <span class="Arbol_Nombre_2">División. Prueba de la división.</span>
   </div></li></ul>`; 
     const Arbol = document.getElementById('Arbol'); 
