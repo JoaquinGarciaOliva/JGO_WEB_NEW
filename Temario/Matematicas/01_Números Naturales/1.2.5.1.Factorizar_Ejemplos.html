@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (MathJax)</title>
+    <link rel="stylesheet" href="../Estilo_Ejemplos.css">
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                // Habilita el entorno 'flalign'
+                packages: {'[+]': ['ams']}, 
+                // Define los delimitadores para ecuaciones en bloque
+ inlineMath: [['$', '$'], ['\\(', '\\)']],               
+ displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            // Configuración para el renderizado HTML (CHTML)
+            chtml: {
+                // Fuerza la alineación a la izquierda para los bloques de ecuaciones
+                displayAlign: "left"
+            },
+            // Asegura que el proceso de renderizado se ejecute automáticamente
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Descomposición en Factores Primos</h1>
+
+        <ol class="mi-lista">
+
+<li>  Descomponer en factores primos el siguiente número: \( 60 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Realizamos las divisiones sucesivas empleando los números primos más pequeños posibles (2, 3, 5, ...):</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        60 & 2 \\
+        30 & 2 \\
+        15 & 3 \\
+        5 & 5 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Por lo tanto, la expresión del número en potencias de sus factores primos es:</p>
+        \[
+        \begin{flalign*}
+        & 60 = 2^2 \cdot 3 \cdot 5 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 180 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Dividimos sucesivamente el número entre sus divisores primos:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        180 & 2 \\
+        90 & 2 \\
+        45 & 3 \\
+        15 & 3 \\
+        5 & 5 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Agrupando los factores primos idénticos en forma de potencia obtenemos:</p>
+        \[
+        \begin{flalign*}
+        & 180 = 2^2 \cdot 3^2 \cdot 5 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos los siguientes números: \[ 42; \; 84; \; 126; \; 300 \]
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <ul>
+            <p>Calculamos las descomposiciones correspondientes empleando las barras de división:</p>
+            \[
+            \begin{flalign*}
+            & \begin{array}{r|l} 42 & 2 \\ 21 & 3 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 42 = 2 \cdot 3 \cdot 7 & \\
+            \\
+            & \begin{array}{r|l} 84 & 2 \\ 42 & 2 \\ 21 & 3 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 84 = 2^2 \cdot 3 \cdot 7 & \\
+            \\
+            & \begin{array}{r|l} 126 & 2 \\ 63 & 3 \\ 21 & 3 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 126 = 2 \cdot 3^2 \cdot 7 & \\
+            \\
+            & \begin{array}{r|l} 300 & 2 \\ 150 & 2 \\ 75 & 3 \\ 25 & 5 \\ 5 & 5 \\ 1 & \end{array} \quad \implies 300 = 2^2 \cdot 3 \cdot 5^2 &
+            \end{flalign*}
+            \]
+        </ul>
+    </div>
+</li>
+
+       
+
+
+
+<li> Descomponer en factores primos el siguiente número: \( 154 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Dividimos el número de forma sucesiva utilizando sus divisores primos (notando que contiene al 7 y al 11):</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        154 & 2 \\
+        77 & 7 \\
+        11 & 11 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>La expresión del número en sus factores primos es:</p>
+        \[
+        \begin{flalign*}
+        & 154 = 2 \cdot 7 \cdot 11 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 507 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Buscamos los factores primos del número (la suma de sus cifras es 12, por lo tanto es divisible por 3):</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        507 & 3 \\
+        169 & 13 \\
+        13 & 13 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Agrupando los factores primos en forma de potencia obtenemos:</p>
+        \[
+        \begin{flalign*}
+        & 507 = 3 \cdot 13^2 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 340 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Realizamos las divisiones sucesivas empleando el número primo de dos cifras 17:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        340 & 2 \\
+        170 & 2 \\
+        85 & 5 \\
+        17 & 17 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Por lo tanto, su descomposición factorial es:</p>
+        \[
+        \begin{flalign*}
+        & 340 = 2^2 \cdot 5 \cdot 17 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 114 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Dividimos el número sucesivamente empleando el factor primo de dos cifras 19:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        114 & 2 \\
+        57 & 3 \\
+        19 & 19 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>La expresión final del número es:</p>
+        \[
+        \begin{flalign*}
+        & 114 = 2 \cdot 3 \cdot 19 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 276 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Descomponemos el número identificando el número primo de dos cifras 23 en el proceso:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        276 & 2 \\
+        138 & 2 \\
+        69 & 3 \\
+        23 & 23 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Expresamos el resultado final combinando los factores comunes:</p>
+        \[
+        \begin{flalign*}
+        & 276 = 2^2 \cdot 3 \cdot 23 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 203 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Al probar los criterios de divisibilidad, encontramos que es divisible por el número primo 7 y por el primo superior 29:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        203 & 7 \\
+        29 & 29 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Por lo tanto, el número queda expresado como:</p>
+        \[
+        \begin{flalign*}
+        & 203 = 7 \cdot 29 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 310 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Extraemos de forma ordenada los factores primos, incluyendo el primo de dos cifras 31:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        310 & 2 \\
+        155 & 5 \\
+        31 & 31 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>La descomposición en factores primos es:</p>
+        \[
+        \begin{flalign*}
+        & 310 = 2 \cdot 5 \cdot 31 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 1001 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Este número es un caso clásico que resulta del producto consecutivo de tres números primos muy importantes (\(7, 11\) y \(13\)):</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        1001 & 7 \\
+        143 & 11 \\
+        13 & 13 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>La descomposición en factores primos es:</p>
+        \[
+        \begin{flalign*}
+        & 1001 = 7 \cdot 11 \cdot 13 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos el siguiente número: \( 546 \)
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <p>Efectuamos el cálculo aplicando las reglas de división sucesiva:</p>
+        \[
+        \begin{flalign*}
+        & \begin{array}{r|l}
+        546 & 2 \\
+        273 & 3 \\
+        91 & 7 \\
+        13 & 13 \\
+        1 & 
+        \end{array} &
+        \end{flalign*}
+        \]
+        <p>Por lo tanto, expresamos el número como el producto de sus factores:</p>
+        \[
+        \begin{flalign*}
+        & 546 = 2 \cdot 3 \cdot 7 \cdot 13 &
+        \end{flalign*}
+        \]
+    </div>
+</li>
+
+<li> Descomponer en factores primos los siguientes números: \[ 363; \; 539; \; 637 \]
+    <div class="solution-box">
+        <h3>Solución</h3>
+        <ul>
+            <p>Calculamos por separado la descomposición en bloques de factores repetidos aplicando potencias:</p>
+            \[
+            \begin{flalign*}
+            & \begin{array}{r|l} 363 & 3 \\ 121 & 11 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 363 = 3 \cdot 11^2 & \\
+            \\
+            & \begin{array}{r|l} 539 & 11 \\ 49 & 7 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 539 = 7^2 \cdot 11 & \\
+            \\
+            & \begin{array}{r|l} 637 & 7 \\ 91 & 7 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 637 = 7^2 \cdot 13 &
+            \end{flalign*}
+            \]
+        </ul>
+    </div>
+</li>
+
+
+	   </ol>
+    </div>
+
+</body>
+</html>

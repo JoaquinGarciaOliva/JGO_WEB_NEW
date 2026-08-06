@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (Imagen con Tooltip)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                 inlineMath: [['$', '$'], ['\\(', '\\)']],
+                 displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Ejercicios de Matemáticas: Descomposición Factorial</h1>
+   
+    <div class="exercise-list">
+       
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 12 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol1">
+                <img src="../../../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol1" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 12 & 2 \\ 6 & 2 \\ 3 & 3 \\ 1 & \end{array} \quad \implies 12 = 2^2 \cdot 3 &
+                \end{flalign*}
+                \]
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 18 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol2">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol2" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 18 & 2 \\ 9 & 3 \\ 3 & 3 \\ 1 & \end{array} \quad \implies 18 = 2 \cdot 3^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 28 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol3">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol3" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 28 & 2 \\ 14 & 2 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 28 = 2^2 \cdot 7 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 33 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol4" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 33 & 3 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 33 = 3 \cdot 11 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 39 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol5">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol5" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 39 & 3 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 39 = 3 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 45 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol6">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol6" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 45 & 3 \\ 15 & 3 \\ 5 & 5 \\ 1 & \end{array} \quad \implies 45 = 3^2 \cdot 5 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 50 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol7" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 50 & 2 \\ 25 & 5 \\ 5 & 5 \\ 1 & \end{array} \quad \implies 50 = 2 \cdot 5^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 56 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol8">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol8" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 56 & 2 \\ 28 & 2 \\ 14 & 2 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 56 = 2^3 \cdot 7 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 63 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol9">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol9" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 63 & 3 \\ 21 & 3 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 63 = 3^2 \cdot 7 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 70 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol10" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 70 & 2 \\ 35 & 5 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 70 = 2 \cdot 5 \cdot 7 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 75 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol11">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol11" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 75 & 3 \\ 25 & 5 \\ 5 & 5 \\ 1 & \end{array} \quad \implies 75 = 3 \cdot 5^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 85 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol12">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol12" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 85 & 5 \\ 17 & 17 \\ 1 & \end{array} \quad \implies 85 = 5 \cdot 17 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 98 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol13">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol13" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 98 & 2 \\ 49 & 7 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 98 = 2 \cdot 7^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 99 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol14">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol14" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 99 & 3 \\ 33 & 3 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 99 = 3^2 \cdot 11 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 114 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol15">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol15" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 114 & 2 \\ 57 & 3 \\ 19 & 19 \\ 1 & \end{array} \quad \implies 114 = 2 \cdot 3 \cdot 19 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 117 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol16">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol16" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 117 & 3 \\ 39 & 3 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 117 = 3^2 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 121 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol17">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol17" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 121 & 11 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 121 = 11^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 138 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol18">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol18" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 138 & 2 \\ 69 & 3 \\ 23 & 23 \\ 1 & \end{array} \quad \implies 138 = 2 \cdot 3 \cdot 23 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 143 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol19">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol19" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 143 & 11 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 143 = 11 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 147 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol20">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol20" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 147 & 3 \\ 49 & 7 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 147 = 3 \cdot 7^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 154 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol21">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol21" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 154 & 2 \\ 77 & 7 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 154 = 2 \cdot 7 \cdot 11 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 165 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol22">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol22" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 165 & 3 \\ 55 & 5 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 165 = 3 \cdot 5 \cdot 11 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 169 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol23">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol23" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 169 & 13 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 169 = 13^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 175 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol24">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol24" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 175 & 5 \\ 35 & 5 \\ 7 & 7 \\ 1 & \end{array} \quad \implies 175 = 5^2 \cdot 7 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 187 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol25">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol25" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 187 & 11 \\ 17 & 17 \\ 1 & \end{array} \quad \implies 187 = 11 \cdot 17 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 203 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol26">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol26" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 203 & 7 \\ 29 & 29 \\ 1 & \end{array} \quad \implies 203 = 7 \cdot 29 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 209 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol27">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol27" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 209 & 11 \\ 19 & 19 \\ 1 & \end{array} \quad \implies 209 = 11 \cdot 19 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 221 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol28">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol28" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 221 & 13 \\ 17 & 17 \\ 1 & \end{array} \quad \implies 221 = 13 \cdot 17 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 231 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol29">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol29" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 231 & 3 \\ 77 & 7 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 231 = 3 \cdot 7 \cdot 11 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 242 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol30">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol30" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 242 & 2 \\ 121 & 11 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 242 = 2 \cdot 11^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">31.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 247 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol31">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol31" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 247 & 13 \\ 19 & 19 \\ 1 & \end{array} \quad \implies 247 = 13 \cdot 19 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">32.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 273 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol32">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol32" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 273 & 3 \\ 91 & 7 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 273 = 3 \cdot 7 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">33.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 310 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol33">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol33" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 310 & 2 \\ 155 & 5 \\ 31 & 31 \\ 1 & \end{array} \quad \implies 310 = 2 \cdot 5 \cdot 31 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">34.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 323 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol34">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol34" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 323 & 17 \\ 19 & 19 \\ 1 & \end{array} \quad \implies 323 = 17 \cdot 19 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">35.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 340 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol35">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol35" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 340 & 2 \\ 170 & 2 \\ 85 & 5 \\ 17 & 17 \\ 1 & \end{array} \quad \implies 340 = 2^2 \cdot 5 \cdot 17 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">36.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 363 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol36">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol36" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 363 & 3 \\ 121 & 11 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 363 = 3 \cdot 11^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">37.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 391 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol37">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol37" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 391 & 17 \\ 23 & 23 \\ 1 & \end{array} \quad \implies 391 = 17 \cdot 23 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">38.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 407 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol38">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol38" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 407 & 11 \\ 37 & 37 \\ 1 & \end{array} \quad \implies 407 = 11 \cdot 37 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">39.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 451 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol39">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol39" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 451 & 11 \\ 41 & 41 \\ 1 & \end{array} \quad \implies 451 = 11 \cdot 41 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">40.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 481 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol40">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol40" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 481 & 13 \\ 37 & 37 \\ 1 & \end{array} \quad \implies 481 = 13 \cdot 37 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">41.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 507 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol41">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol41" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 507 & 3 \\ 169 & 13 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 507 = 3 \cdot 13^2 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">42.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 539 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol42">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol42" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 539 & 7 \\ 77 & 7 \\ 11 & 11 \\ 1 & \end{array} \quad \implies 539 = 7^2 \cdot 11 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">43.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 559 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol43">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol43" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 559 & 13 \\ 43 & 43 \\ 1 & \end{array} \quad \implies 559 = 13 \cdot 43 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">44.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 611 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol44">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol44" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 611 & 13 \\ 47 & 47 \\ 1 & \end{array} \quad \implies 611 = 13 \cdot 47 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">45.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 637 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol45">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol45" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 637 & 7 \\ 91 & 7 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 637 = 7^2 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">46.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 646 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol46">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol46" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 646 & 2 \\ 323 & 17 \\ 19 & 19 \\ 1 & \end{array} \quad \implies 646 = 2 \cdot 17 \cdot 19 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">47.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 715 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol47">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol47" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 715 & 5 \\ 143 & 11 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 715 = 5 \cdot 11 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">48.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 805 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol48">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol48" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 805 & 5 \\ 161 & 7 \\ 23 & 23 \\ 1 & \end{array} \quad \implies 805 = 5 \cdot 7 \cdot 23 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">49.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 935 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol49">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol49" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 935 & 5 \\ 187 & 11 \\ 17 & 17 \\ 1 & \end{array} \quad \implies 935 = 5 \cdot 11 \cdot 17 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">50.</span>
+            <p class="exercise-statement">Descomponer en factores primos el siguiente número: \( 1001 \)</p>
+            <div class="solution-trigger-container" data-solution-id="sol50">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="sol50" style="display: none;">
+                \[
+                \begin{flalign*}
+                & \begin{array}{r|l} 1001 & 7 \\ 143 & 11 \\ 13 & 13 \\ 1 & \end{array} \quad \implies 1001 = 7 \cdot 11 \cdot 13 &
+                \end{flalign*}
+                \]
+            </div>
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa: Factorización Dígito a Dígito con Restos Parciales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+inlineMath: [['$', '$'], ['\\(', '\\)']],                
+displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+<style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7; /* #00769d;*/
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid  #2635b7; /*#e2e8f0;*/
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE COLUMNAS ASIMÉTRICAS PARA EL ARRAY DE DÍGITOS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columnas para los Superíndices de los Restos (Estrechas) */
+        .col-superindice {
+            width: 5px;
+            font-size: 0.85rem;
+            color: purple; /*#e53e3e;*/
+            font-weight: 900;
+            vertical-align: top; /* Hace que el resto flote arriba de manera natural */
+			text-align: right;
+            padding-top: 0px;
+			display: inline-block; /* Permite que el transform actúe correctamente */
+            transform: translateY(-4px); /* Modifica este valor para subirlo (-) o bajarlo (+) */
+        }
+
+        /* Línea vertical divisoria de la factorización */
+        .factor-table td.barra-primas {
+            border-left: 4px solid #2d3748;
+            padding-left: 15px;
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+
+   </head>
+<body>
+
+    <h1>Descomposición Factorial </h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Método de Descomposición</h2>
+               <p> En la columna de la derecha sólo se pueden poner números primos que dividan al número de la izquierda, por lo que los criterios de divisibilidad del 2, 3 y 5 son muy utilies, y por eso se estudian antes de factorizar.</p>
+              <p>Al realizar la factorización manual por divisiones sucesivas, el cálculo se ejecuta de izquierda a derecha dígito a dígito. Cuando una división intermedia no es exacta, el resto obtenido se desplaza hacia la derecha colocándose como un <strong>superíndice pequeño</strong> 
+			   inmediatamente antes del siguiente dígito. Esto altera su valor posicional (en el ejemplo siguiente, un \(6\) precedido de un resto de \(1\) pasa a leerse como un \(16\)).</p>
+              <p> En los ejemplos vamos apuntando los restos en la descomposición factorial, pero con el tiempo, no será necesario, ya que seremos capaces de hacerlo mentalmente.</p>
+            <hr>
+
+           
+     <div class="step-block">
+                <div class="step-title">Ejemplo 1 - paso 1: Factorización del número 36</div>
+                <p>Queremos dividir el número compuesto <span class="highlight">36</span> entre su menor divisor primo, el <span class="highlight">2</span>:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Mecánica del paso 1 (\(36 \div 2\)):</strong><br>
+                        <li> <strong>Primera columna de dígitos (\(3\)):</strong> \(3 \div 2 = \mathbf{1}\). Nos <strong>sobra 1</strong>.<br></li>
+                        <li> Ese \(1\) se anota en la columna de superíndice contigua. Al leerse junto al \(6\) de la siguiente celda, se transforma mentalmente en un <span class="highlight">16</span>.<br></li>                                             
+                    </div>
+                </div>
+                
+              
+                <div class="step-title">Ejemplo 1 - paso 2: Factorización del número 36</div>
+                <p>Queremos dividir el número compuesto <span class="highlight">36</span> entre su menor divisor primo, el <span class="highlight">2</span>:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">                       
+                        <li> <strong>Segunda columna de dígitos (\(16\)):</strong> \(16 \div 2 = \mathbf{8}\) (resto 0).<br></li>
+                        El cociente resultante que se escribe en la línea inferior es <strong>18</strong>.
+                    </div>
+                </div>
+                <p>Desarrollo completo de las divisiones sucesivas para el número 36:</p>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice"></td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">9</td>
+                            <td class="barra-primas">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="barra-primas">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                         <strong>Seguimos la descomposición:</strong><br>
+                         <li> <strong>18 es divisible por 2:</strong> \(18 \div 2 = \mathbf{9}\). No sobra nada.<br></li>
+                         <li> <strong>9 es divisible por 3:</strong> \(9 \div 3 = \mathbf{3}\). No sobra nada.<br></li>
+                         <li> <strong>3 es divisible por 2:</strong> \(3 \div 3 = \mathbf{1}\). No sobra nada.<br></li>
+                        <strong>Expresión polinómica final:</strong><br>
+                        Agrupamos los factores idénticos utilizando potencias:
+                        \[ 36 = 2^2 \cdot 3^2 \]
+                    </div>
+                </div>
+            </div>
+
+   
+
+
+            <div class="step-block">
+                <div class="step-title">Ejemplo 2 - Paso 1: Factorización del número 352</div>
+                <p>Analizamos el número par <span class="highlight">352</span> reduciéndolo de forma sucesiva entre el número primo <span class="highlight">2</span>. Este caso destaca por arrastrar varios residuos encadenados:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose analítico de los restos:</strong>
+                        <ul>
+                            <li><strong>En la fila 1 (\(352 \div 2\)):</strong> El \(3\) deja un resto de \(1\) que convierte al \(5\) en <span class="highlight">15</span>. 
+                        </ul>                       
+                    </div>
+                </div>
+                             
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="col-superindice">1</td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                       
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose analítico de los restos:</strong>
+                        <ul>
+                            <li><strong>En la fila 1 (\(352 \div 2\)):</strong>  \(15 \div 2 = 7\) y vuelve a sobrar \(1\), lo que transforma el último \(2\) en un <span class="highlight">12</span>.</li>
+                         </ul>                       
+                    </div>
+                </div>
+ 
+                      
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="col-superindice">1</td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="col-superindice"></td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                      
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose analítico de los restos:</strong>
+                        <ul>
+                            <li> Finalmente (\(12 \div 2 = 6\)). Obtenemos <strong>176</strong>.</li>
+                            <li>se debe repetir el proceso realizado con el 352 ahora con el nuevo número <strong> 176 </strong></li>                            
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+
+<div class="step-block">
+                <div class="step-title">Ejemplo 2 - paso 2: Factorización del número 352</div>
+                <p>Se repite el proceso, ahora con el número <span class="highlight">176</span>, que como es par, podemos dividirlo por el número primo <span class="highlight">2</span>. Este caso destaca por arrastrar varios residuos encadenados:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="col-superindice">1</td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="col-superindice">1</td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                      
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose analítico de los restos:</strong>
+                        <ul>
+                            <li><strong>En la fila 2 (\(176 \div 2\)):</strong> El \(1\) es menor que el divisor, por lo que unimos las dos primeras columnas activas (<span class="highlight">17</span>). \(17 \div 2 = 8\) (sobra \(1\)), convirtiendo la última celda en un <span class="highlight">16</span> (\(16 \div 2 = 8\)). Obtenemos <strong>88</strong>.</li>
+                            </ul>
+                        </div>
+                </div>
+           
+
+                
+                     
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="col-superindice">1</td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="col-superindice">1</td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                       
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose analítico de los restos:</strong>
+                        <ul>
+                            <li><strong>En la fila 2 (\(176 \div 2\)):</strong> El \(1\) es menor que el divisor, por lo que unimos las dos primeras columnas activas (<span class="highlight">17</span>). \(17 \div 2 = 8\) (sobra \(1\)), convirtiendo la última celda en un <span class="highlight">16</span> (\(16 \div 2 = 8\)). Obtenemos <strong>88</strong>.</li>
+                         </ul>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+
+<div class="step-block">
+                <div class="step-title">Ejemplo 2 - Pasos finales: Factorización del número 352</div>
+                <p>Analizamos el número par <span class="highlight">88</span> reduciéndolo de forma sucesiva entre el número primo <span class="highlight">2</span>. Y así sucesivamente:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="col-superindice">1</td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice">1</td><td class="col-digito">7</td>
+                            <td class="col-superindice">1</td><td class="col-digito">6</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">4</td>
+                            <td class="col-superindice"></td><td class="col-digito">4</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="barra-primas">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-col-digito"></td><td class="col-digito">1</td>
+                            <td class="barra-primas">11</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose analítico de los restos:</strong>
+                        <ul>
+                             <li>Las filas de 88, 44 y 22 son exactas (los superíndices quedan vacíos). Al llegar a 11, dividimos por el propio número primo <strong>11</strong>.</li>
+                        </ul>
+                        <strong>Resultado de la factorización:</strong>
+                        \[ 352 = 2^5 \cdot 11 \]
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="step-block">
+                <div class="step-title">Ejemplo 3: Factorización del número 539</div>
+                <p>Terminamos analizando el número <span class="highlight">539</span>. Mediante criterios de divisibilidad descartamos los primeros primos y operamos directamente con el primo <span class="highlight">7</span>:</p>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="col-superindice"></td><td class="col-digito">3</td>
+                            <td class="col-superindice">4</td><td class="col-digito">9</td>
+                            <td class="barra-primas">7</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="barra-primas">7</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="barra-primas">11</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Análisis del resto de mayor escala:</strong><br>
+                        1. Como el \(5\) inicial es inferior a \(7\), se unifican las dos primeras posiciones del array para comenzar operando con el bloque <span class="highlight">53</span>.<br>
+                        2. Calculamos: \(53 \div 7 = \mathbf{7}\). Sabiendo que \(7 \times 7 = 49\), calculamos la diferencia hasta \(53\), lo que nos da un **resto de 4**.<br>
+                        3. El número \(4\) se escribe de forma aislada en la columna del superíndice. El \(9\) final se convierte instantáneamente en un <span class="highlight">49</span>.<br>
+                        4. Finalizamos la fila haciendo \(49 \div 7 = \mathbf{7}\). El número resultante es el <strong>77</strong>, que se descompone de forma directa en los siguientes pasos.<br><br>
+                        <strong>Resultado de la factorización:</strong>
+                        \[ 539 = 7^2 \cdot 11 \]
+                    </div>
+                </div>
+            </div>
+
+
+
+<div class="step-block">
+                <div class="step-title">Ejemplo 4: Factorización del número 825</div>
+                <p>Analizamos el número impar <span class="highlight">825</span>. Como no termina en cifra par, no es divisible entre 2. Sumamos sus dígitos (\(8 + 2 + 5 = 15\)), por lo que sabemos que es divisible entre el primo <span class="highlight">3</span>:</p>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">8</td>
+                            <td class="col-superindice">2</td><td class="col-digito">2</td>
+                            <td class="col-superindice">1</td><td class="col-digito">5</td>
+                            <td class="barra-primas">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="col-superindice">2</td><td class="col-digito">7</td>
+                            <td class="col-superindice">2</td><td class="col-digito">5</td>
+                            <td class="barra-primas">5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="barra-primas">5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="barra-primas">11</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Desglose de restos paso a paso:</strong>
+                        <ul>
+                            <li><strong>Fila 1 (\(825 \div 3\)):</strong> <br>
+                            • \(8 \div 3 = \mathbf{2}\) y **sobran 2**, que pasan al lado del siguiente dígito formando un <span class="highlight">22</span>.<br>
+                            • \(22 \div 3 = \mathbf{7}\) y **sobra 1**, que pasa al lado del último dígito formando un <span class="highlight">15</span>.<br>
+                            • \(15 \div 3 = \mathbf{5}\) (resto 0). El resultado es <strong>275</strong>.</li>
+                            
+                            <li><strong>Fila 2 (\(275 \div 5\)):</strong> El 275 ya no divide entre 3 (\(2+7+5=14\)), pero termina en 5, así que usamos el primo <span class="highlight">5</span>.<br>
+                            • Tomamos el bloque de las dos primeras columnas (<span class="highlight">27</span>): \(27 \div 5 = \mathbf{5}\) y **sobran 2**, que se colocan junto al 5 final formando un <span class="highlight">25</span>.<br>
+                            • \(25 \div 5 = \mathbf{5}\). El resultado es <strong>55</strong>.</li>
+                            
+                            <li><strong>Fila 3 (\(55 \div 5\)):</strong> Dividimos entre <span class="highlight">5</span> de forma exacta: \(5 \div 5 = 1\) (resto 0) y \(5 \div 5 = 1\) (resto 0). Obtenemos <strong>11</strong>.</li>
+                            <li><strong>Fila 4 (\(11 \div 11\)):</strong> Como 11 es primo, cerramos la descomposición dividiendo entre 11 para obtener el 1 final.</li>
+                        </ul>
+                        <strong>Resultado de la factorización:</strong>
+                        \[ 825 = 3 \cdot 5^2 \cdot 11 \]
+                    </div>
+                </div>
+            </div>
+			
+			
+        </div>
+    </div>
+
+</body>
+</html>
