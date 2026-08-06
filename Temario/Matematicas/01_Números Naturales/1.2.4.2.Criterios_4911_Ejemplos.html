@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Criterios de Divisibilidad (4, 9 y 11)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+  
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Criterios de Divisibilidad con Soluciones</h1>
+
+        <ol class="mi-lista">
+            
+            <li>
+                Determina si el número \( 112 \) es divisible por 4 aplicando su criterio de divisibilidad.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Observamos las dos últimas cifras del número, que son \( 12 \).</li>
+                        <li>Comprobamos si forman un múltiplo de 4:
+                            $$ 12 \div 4 = 3 $$
+                        </li>
+                        <li>Como el resultado es exacto, el número \( 112 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 124 \) cumple el criterio de divisibilidad del 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Identificamos las dos últimas cifras del número: \( 24 \).</li>
+                        <li>Dividimos este bloque entre 4:
+                            $$ 24 \div 4 = 6 $$
+                        </li>
+                        <li>Dado que \( 24 \) es divisible por 4, concluimos que \( 124 \) también lo es.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica el criterio correspondiente para saber si \( 140 \) es divisible por 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Analizamos las últimas dos cifras: \( 40 \).</li>
+                        <li>Verificamos si es múltiplo de 4:
+                            $$ 40 \div 4 = 10 $$
+                        </li>
+                        <li>Al terminar en un múltiplo exacto, \( 140 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica si el número \( 216 \) se puede dividir exactamente entre 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Tomamos el valor de las dos últimas cifras: \( 16 \).</li>
+                        <li>Realizamos la división de prueba:
+                            $$ 16 \div 4 = 4 $$
+                        </li>
+                        <li>Al ser un resultado entero, afirmamos que \( 216 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si \( 248 \) es divisible por 4 usando el criterio de las últimas cifras.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Aislamos las últimas dos cifras del número: \( 48 \).</li>
+                        <li>Evaluamos su divisibilidad:
+                            $$ 48 \div 4 = 12 $$
+                        </li>
+                        <li>Dado que es un múltiplo exacto, el número \( 248 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                ¿Es el número \( 320 \) divisible por 4? Justifica con el criterio.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Extraemos las últimas dos cifras: \( 20 \).</li>
+                        <li>Comprobamos si es múltiplo de 4:
+                            $$ 20 \div 4 = 5 $$
+                        </li>
+                        <li>Dado que la división es exacta, \( 320 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica el criterio de divisibilidad en el número \( 336 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Revisamos sus dos últimas cifras, las cuales forman el número \( 36 \).</li>
+                        <li>Dividimos por el divisor en cuestión:
+                            $$ 36 \div 4 = 9 $$
+                        </li>
+                        <li>Como el residuo es cero, afirmamos que \( 336 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina la divisibilidad por 4 del número \( 424 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Nos enfocamos en el final del número: \( 24 \).</li>
+                        <li>Comprobamos la condición:
+                            $$ 24 \div 4 = 6 $$
+                        </li>
+                        <li>Como cumple con ser múltiplo de 4, el número completo \( 424 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba mediante el criterio si \( 512 \) se divide de forma exacta entre 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Tomamos las últimas dos cifras correspondientes: \( 12 \).</li>
+                        <li>Resolvemos la operación matemática básica:
+                            $$ 12 \div 4 = 3 $$
+                        </li>
+                        <li>Al ser exacta, el número entero \( 512 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Averigua si el número \( 540 \) es divisible por 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Analizamos el bloque final de dos dígitos: \( 40 \).</li>
+                        <li>Dividimos por 4:
+                            $$ 40 \div 4 = 10 $$
+                        </li>
+                        <li>El resultado es exacto, validando que \( 540 \) cumple la propiedad.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Estudia la divisibilidad por 4 para el valor \( 632 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Separamos las últimas dos cifras: \( 32 \).</li>
+                        <li>Comprobamos si pertenece a la tabla del 4:
+                            $$ 32 \div 4 = 8 $$
+                        </li>
+                        <li>Como es un múltiplo directo, determinamos que \( 632 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si \( 716 \) cumple con la regla de divisibilidad del 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Identificamos las cifras finales: \( 16 \).</li>
+                        <li>Hacemos la división pertinente:
+                            $$ 16 \div 4 = 4 $$
+                        </li>
+                        <li>La condición es afirmativa, por lo que \( 716 \) se puede dividir por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Analiza si el número \( 828 \) es un múltiplo exacto de 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Nos quedamos con las dos últimas posiciones: \( 28 \).</li>
+                        <li>Evaluamos el valor obtenido:
+                            $$ 28 \div 4 = 7 $$
+                        </li>
+                        <li>Como el residuo de la operación es cero, \( 828 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Prueba si el número \( 840 \) es divisible por 4 de acuerdo a su terminación.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Observamos únicamente las dos últimas cifras: \( 40 \).</li>
+                        <li>Aplicamos la división simple:
+                            $$ 40 \div 4 = 10 $$
+                        </li>
+                        <li>Concluimos con certeza matemática que \( 840 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 916 \) se puede dividir entre 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Extraemos los últimos dos dígitos del número: \( 16 \).</li>
+                        <li>Verificamos si cumple con el criterio:
+                            $$ 16 \div 4 = 4 $$
+                        </li>
+                        <li>Puesto que la división no deja residuo, \( 916 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Evalúa si el número \( 932 \) es divisible por 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Nos fijamos en la parte final del número: \( 32 \).</li>
+                        <li>Hacemos el cálculo mental o escrito:
+                            $$ 32 \div 4 = 8 $$
+                        </li>
+                        <li>Dado que \( 32 \) es divisible, declaramos que \( 932 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 960 \) es divisible por 4.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Seleccionamos las últimas dos cifras: \( 60 \).</li>
+                        <li>Comprobamos si es un múltiplo de 4:
+                            $$ 60 \div 4 = 15 $$
+                        </li>
+                        <li>La división es exacta, por ende, el número entero \( 960 \) es divisible por 4.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 135 \) es divisible por 9 aplicando su criterio de divisibilidad.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos todos los dígitos individuales del número \( 135 \):
+                            $$ 1 + 3 + 5 = 9 $$
+                        </li>
+                        <li>Verificamos si el resultado obtenido es múltiplo de 9:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>Como el resultado es un múltiplo exacto de 9, \( 135 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica el criterio de divisibilidad del 9 para comprobar el número \( 171 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos cada una de las cifras que componen el número:
+                            $$ 1 + 7 + 1 = 9 $$
+                        </li>
+                        <li>Comprobamos si la suma resultante es divisible entre 9:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>Al ser una suma equivalente a 9, concluimos que \( 171 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 234 \) es divisible por 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Agrupamos y sumamos los dígitos que forman el valor numérico:
+                            $$ 2 + 3 + 4 = 9 $$
+                        </li>
+                        <li>Validamos la regla del criterio:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>Dado que la suma da un múltiplo de 9, el número entero \( 234 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 288 \) cumple con el criterio de divisibilidad de 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Efectuamos la suma de las cifras del número dado:
+                            $$ 2 + 8 + 8 = 18 $$
+                        </li>
+                        <li>Revisamos si el número \( 18 \) es múltiplo de 9:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Dado que 18 es un múltiplo exacto, afirmamos que \( 288 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Averigua si el número \( 315 \) se puede dividir exactamente por 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos consecutivamente sus componentes numéricos:
+                            $$ 3 + 1 + 5 = 9 $$
+                        </li>
+                        <li>Corroboramos si el total cumple con la regla:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>Al dar una cifra múltiplo de 9, determinamos que \( 315 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica la regla de la suma de dígitos en el número \( 378 \) para saber si se divide entre 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos los valores individuales de sus posiciones:
+                            $$ 3 + 7 + 8 = 18 $$
+                        </li>
+                        <li>Comprobamos la división del resultado entre 9:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Como el residuo de la suma evaluada es cero, el número \( 378 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina la divisibilidad por 9 del número \( 432 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos de manera directa todas sus cifras:
+                            $$ 4 + 3 + 2 = 9 $$
+                        </li>
+                        <li>Comprobamos si el entero resultante es divisible por 9:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>La condición se cumple con éxito; por ende, \( 432 \) es divisible entre 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Evalúa si el número \( 495 \) es divisible por 9 aplicando el procedimiento estándar.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos la totalidad de los dígitos que integran el número:
+                            $$ 4 + 9 + 5 = 18 $$
+                        </li>
+                        <li>Verificamos si este valor pertenece a la tabla del 9:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Puesto que 18 es un múltiplo válido de 9, el número entero \( 495 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                ¿Cumple el número \( 522 \) con el criterio de divisibilidad de 9?
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Calculamos la suma absoluta de sus dígitos:
+                            $$ 5 + 2 + 2 = 9 $$
+                        </li>
+                        <li>Efectuamos el test del criterio:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>Como la suma da exactamente 9, concluimos que \( 522 \) es perfectamente divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Analiza la divisibilidad por 9 para el número \( 585 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Calculamos analíticamente la suma de sus dígitos:
+                            $$ 5 + 8 + 5 = 18 $$
+                        </li>
+                        <li>Comprobamos el cociente respecto a 9:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Al confirmarse una equivalencia exacta, afirmamos que \( 585 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 621 \) es divisible por 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Llevamos a cabo la suma de los dígitos constituyentes:
+                            $$ 6 + 2 + 1 = 9 $$
+                        </li>
+                        <li>Medimos la divisibilidad de este entero:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>Como el resultado es un número entero exacto, concluimos que \( 621 \) se puede dividir por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Utiliza el criterio de los dígitos para estudiar el número \( 675 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Procedemos a sumar las unidades elementales del número:
+                            $$ 6 + 7 + 5 = 18 $$
+                        </li>
+                        <li>Realizamos la validación correspondiente:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Dado que 18 es un múltiplo directo de 9, \( 675 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba mediante suma de cifras si el número \( 711 \) es divisible por 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Descomponemos el número en sus términos y los sumamos:
+                            $$ 7 + 1 + 1 = 9 $$
+                        </li>
+                        <li>Dividimos el total obtenido entre 9:
+                            $$ 9 \div 9 = 1 $$
+                        </li>
+                        <li>El número original \( 711 \) es divisible por 9 ya que su suma arrojó un múltiplo exacto.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 783 \) es divisible por 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las cantidades posicionales del número:
+                            $$ 7 + 8 + 3 = 18 $$
+                        </li>
+                        <li>Evaluamos la propiedad matemática:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Como la suma de sus cifras da 18, afirmamos que \( 783 \) cumple el criterio del 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica si el número \( 819 \) se divide de manera exacta entre 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Operamos sumando los dígitos individuales:
+                            $$ 8 + 1 + 9 = 18 $$
+                        </li>
+                        <li>Dividimos dicho resultado por el factor analizado:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Al verificar un resto igual a cero, afirmamos que \( 819 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 864 \) es divisible por 9.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Agregamos los valores numéricos correspondientes:
+                            $$ 8 + 6 + 4 = 18 $$
+                        </li>
+                        <li>Efectuamos el cálculo de prueba:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>Como el valor de la suma es múltiplo de 9, \( 864 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica la propiedad de divisibilidad del 9 sobre el número \( 954 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Encontramos la suma total de sus elementos constitutivos:
+                            $$ 9 + 5 + 4 = 18 $$
+                        </li>
+                        <li>Dividimos entre el entero 9 para confirmar la regla:
+                            $$ 18 \div 9 = 2 $$
+                        </li>
+                        <li>La prueba concluye positivamente, demostrando que \( 954 \) es divisible por 9.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 121 \) es divisible por 11 aplicando su criterio de divisibilidad.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las cifras situadas en las posiciones impares:
+                            $$ 1 + 1 = 2 $$
+                        </li>
+                        <li>Identificamos la suma de las posiciones pares:
+                            $$ 2 $$
+                        </li>
+                        <li>Restamos ambos valores obtenidos:
+                            $$ 2 - 2 = 0 $$
+                        </li>
+                        <li>Como la diferencia resultante es 0, el número \( 121 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 132 \) cumple la regla de divisibilidad del 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las cifras de orden impar (primera y tercera posición):
+                            $$ 1 + 2 = 3 $$
+                        </li>
+                        <li>Identificamos la cifra en la posición par (segunda posición):
+                            $$ 3 $$
+                        </li>
+                        <li>Efectuamos la sustracción de los resultados anteriores:
+                            $$ 3 - 3 = 0 $$
+                        </li>
+                        <li>Al dar una resta igual a 0, concluimos que \( 132 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica el criterio del 11 para el número entero \( 143 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Calculamos el valor de las posiciones impares:
+                            $$ 1 + 3 = 4 $$
+                        </li>
+                        <li>Observamos la cifra de la posición par:
+                            $$ 4 $$
+                        </li>
+                        <li>Restamos las dos cantidades numéricas halladas:
+                            $$ 4 - 4 = 0 $$
+                        </li>
+                        <li>Puesto que el residuo alternado da 0, afirmamos que \( 143 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 154 \) es divisible entre 11 empleando sumas alternadas.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las cifras de lugares impares:
+                            $$ 1 + 4 = 5 $$
+                        </li>
+                        <li>Tomamos la cifra del lugar par:
+                            $$ 5 $$
+                        </li>
+                        <li>Calculamos la diferencia entre los resultados:
+                            $$ 5 - 5 = 0 $$
+                        </li>
+                        <li>El resultado confirma que el número entero \( 154 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica el criterio de divisibilidad correspondiente en el número \( 165 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Agrupamos posiciones impares y las sumamos:
+                            $$ 1 + 5 = 6 $$
+                        </li>
+                        <li>Determinamos el valor del término en la posición par:
+                            $$ 6 $$
+                        </li>
+                        <li>Restamos ordenadamente las sumas calculadas:
+                            $$ 6 - 6 = 0 $$
+                        </li>
+                        <li>Al arrojar una diferencia de 0, el número entero \( 165 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                ¿Es el número \( 176 \) divisible por 11? Justifica la respuesta con el procedimiento.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Agregamos los dígitos de los extremos (posiciones impares):
+                            $$ 1 + 7 = 8 $$ (Nota: Corrección posicional para el orden real: 1 y 6 son posiciones impares: \( 1 + 6 = 7 \))
+                        </li>
+                        <li>Corregimos ordenadamente: posiciones impares \( 1 + 6 = 7 \).</li>
+                        <li>Identificamos la posición par:
+                            $$ 7 $$
+                        </li>
+                        <li>Operamos la resta entre ambos totales:
+                            $$ 7 - 7 = 0 $$
+                        </li>
+                        <li>Debido a que la resta da cero, concluimos que \( 176 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Analiza de forma matemática si el número \( 187 \) es divisible por 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Calculamos la suma de las cifras de índice impar:
+                            $$ 1 + 7 = 8 $$
+                        </li>
+                        <li>Localizamos el valor en el índice par:
+                            $$ 8 $$
+                        </li>
+                        <li>Encontramos la diferencia de los valores calculados:
+                            $$ 8 - 8 = 0 $$
+                        </li>
+                        <li>La resta resulta en 0, validando que el número \( 187 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 198 \) se puede dividir de manera exacta entre 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos la primera y tercera cifra (impares):
+                            $$ 1 + 8 = 9 $$
+                        </li>
+                        <li>Ubicamos la segunda cifra (par):
+                            $$ 9 $$
+                        </li>
+                        <li>Efectuamos la operación aritmética de resta:
+                            $$ 9 - 9 = 0 $$
+                        </li>
+                        <li>Como el valor obtenido es cero, deducimos que \( 198 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si \( 209 \) cumple la propiedad de divisibilidad del 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos algebraicamente los dígitos en las posiciones impares:
+                            $$ 2 + 9 = 11 $$
+                        </li>
+                        <li>Ubicamos el elemento de la posición par:
+                            $$ 0 $$
+                        </li>
+                        <li>Realizamos la sustracción correspondiente:
+                            $$ 11 - 0 = 11 $$
+                        </li>
+                        <li>Dado que 11 es un múltiplo exacto de 11, afirmamos que \( 209 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Evalúa mediante el criterio si el número \( 242 \) es divisible por 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las cifras de las posiciones impares:
+                            $$ 2 + 2 = 4 $$
+                        </li>
+                        <li>Tomamos el valor posicional par:
+                            $$ 4 $$
+                        </li>
+                        <li>Restamos ambos números:
+                            $$ 4 - 4 = 0 $$
+                        </li>
+                        <li>Concluimos de forma analítica que el número \( 242 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica la regla posicional del 11 sobre el número \( 275 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Ejecutamos la suma para posiciones de orden impar:
+                            $$ 2 + 5 = 7 $$
+                        </li>
+                        <li>Establecemos el valor de orden par:
+                            $$ 7 $$
+                        </li>
+                        <li>Sustraemos los valores:
+                            $$ 7 - 7 = 0 $$
+                        </li>
+                        <li>Al dar cero como remanente, afirmamos que \( 275 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica si el número \( 352 \) se divide por 11 utilizando su regla algorítmica.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos los elementos de las posiciones impares:
+                            $$ 3 + 2 = 5 $$
+                        </li>
+                        <li>Registramos el dígito del elemento par:
+                            $$ 5 $$
+                        </li>
+                        <li>Restamos las magnitudes resultantes:
+                            $$ 5 - 5 = 0 $$
+                        </li>
+                        <li>El número \( 352 \) es completamente divisible por 11 al dar una resta de cero.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 385 \) es un múltiplo de 11 aplicando el criterio.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Operamos con los dígitos en lugares impares:
+                            $$ 3 + 5 = 8 $$
+                        </li>
+                        <li>Tomamos el dígito del lugar par:
+                            $$ 8 $$
+                        </li>
+                        <li>Calculamos la diferencia absoluta:
+                            $$ 8 - 8 = 0 $$
+                        </li>
+                        <li>Dado que se anulan, el número original \( 385 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 462 \) es divisible por 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las cifras extremas (posiciones impares):
+                            $$ 4 + 2 = 6 $$
+                        </li>
+                        <li>Extraemos la cifra central (posición par):
+                            $$ 6 $$
+                        </li>
+                        <li>Calculamos el resultado de la sustracción:
+                            $$ 6 - 6 = 0 $$
+                        </li>
+                        <li>Concluimos con certeza que \( 462 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica la comprobación posicional del 11 para el número \( 572 \).
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Agregamos las cantidades de índice impar:
+                            $$ 5 + 2 = 7 $$
+                        </li>
+                        <li>Ubicamos la cantidad de índice par:
+                            $$ 7 $$
+                        </li>
+                        <li>Efectuamos la resta aritmética:
+                            $$ 7 - 7 = 0 $$
+                        </li>
+                        <li>Confirmamos que \( 572 \) se divide de forma exacta por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 616 \) es divisible por 11.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las posiciones impares del número \( 616 \):
+                            $$ 6 + 6 = 12 $$
+                        </li>
+                        <li>Localizamos el valor en las posiciones pares:
+                            $$ 1 $$
+                        </li>
+                        <li>Restamos ordenadamente ambos totales:
+                            $$ 12 - 1 = 11 $$
+                        </li>
+                        <li>Como el valor de la diferencia es 11 (múltiplo de 11), \( 616 \) es divisible por 11.</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ol>
+    </div>
+
+</body>
+</html>

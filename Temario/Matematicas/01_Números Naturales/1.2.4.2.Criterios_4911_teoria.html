@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa: Criterios de Divisibilidad (4, 9 y 11)</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7; /* #00769d;*/
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid  #2635b7; /*#e2e8f0;*/
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE COLUMNAS ASIMÉTRICAS PARA EL ARRAY DE DÍGITOS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columnas para los Superíndices de los Restos (Estrechas) */
+        .col-superindice {
+            width: 5px;
+            font-size: 0.85rem;
+            color: purple; /*#e53e3e;*/
+            font-weight: 900;
+            vertical-align: top; /* Hace que el resto flote arriba de manera natural */
+            text-align: right;
+            padding-top: 0px;
+            display: inline-block; /* Permite que el transform actúe correctamente */
+            transform: translateY(-4px); /* Modifica este valor para subirlo (-) o bajarlo (+) */
+        }
+
+        /* Línea vertical divisoria de la factorización */
+        .factor-table td.barra-primas {
+            border-left: 4px solid #2d3748;
+            padding-left: 15px;
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estudio de Divisibilidad</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Criterios de Divisibilidad Fundamentales</h2>
+            <p>Los criterios de divisibilidad nos permiten saber si un número es divisible por otro sin necesidad de realizar la división completa. A continuación, analizamos las reglas aritméticas para los divisores <span class="highlight">4</span>, <span class="highlight">9</span> y <span class="highlight">11</span>, verificando su exactitud mediante el método manual de división de izquierda a derecha con arrastre de restos parciales.</p>
+            
+            <hr>
+
+            <div class="step-block">
+                <div class="step-title">1. Criterio de Divisibilidad del 4</div>
+                <p>Un número es divisible por 4 si sus <strong>dos últimas cifras</strong> son ceros (\(00\)) o forman un número que es múltiplo de 4.</p>
+                <p><strong>Ejemplo:</strong> Analicemos el número <span class="highlight">516</span>. Sus dos últimas cifras son \(16\), y como \(16 \div 4 = 4\) es exacta, el número completo debe ser divisible por 4. Comprobemos la mecánica dígito a dígito:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="col-superindice">1</td><td class="col-digito">1</td>
+                            <td class="col-superindice">3</td><td class="col-digito">6</td>
+                            <td class="barra-primas">4</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="col-superindice"></td><td class="col-digito">9</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Verificación por división (\(516 \div 4\)):</strong><br>
+                        <ul>
+                            <li><strong>Primera columna (\(5\)):</strong> \(5 \div 4 = \mathbf{1}\). Nos <strong>sobra 1</strong>, que se desplaza como superíndice.</li>
+                            <li><strong>Segunda columna (\(1\)):</strong> Unido al resto anterior se lee como <span class="highlight">11</span>. \(11 \div 4 = \mathbf{2}\) y nos <strong>sobran 3</strong>.</li>
+                            <li><strong>Tercera columna (\(6\)):</strong> Junto al resto acumulado forma un <span class="highlight">36</span>. \(36 \div 4 = \mathbf{9}\) con resto 0.</li>
+                        </ul>
+                        El cociente es exacto (\(129\)), confirmando el criterio.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Criterio de Divisibilidad del 9</div>
+                <p>Un número es divisible por 9 si la <strong>suma de todas sus cifras</strong> es un múltiplo de 9.</p>
+                <p><strong>Ejemplo:</strong> Evaluamos el número <span class="highlight">468</span>. Aplicando la regla sumamos sus dígitos: \[ 4 + 6 + 8 = 18 \] Como \(18\) es un múltiplo directo de 9 (\(9 \times 2 = 18\)), confirmamos la regla realizando la descomposición posicional:</p>
+                
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">4</td>
+                            <td class="col-superindice"></td><td class="col-digito">6</td>
+                            <td class="col-superindice">1</td><td class="col-digito">8</td>
+                            <td class="barra-primas">9</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="col-superindice"></td><td class="col-digito">2</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Verificación por división (\(468 \div 9\)):</strong><br>
+                        <ul>
+                            <li><strong>Bloque Inicial:</strong> Como el \(4\) es menor que 9, unificamos mentalmente las dos primeras posiciones para operar directamente con <span class="highlight">46</span>.</li>
+                            <li><strong>Cálculo central:</strong> \(46 \div 9 = \mathbf{5}\). Sabiendo que \(9 \times 5 = 45\), nos <strong>sobra 1</strong> que se desplaza a la derecha.</li>
+                            <li><strong>Última columna (\(8\)):</strong> Con el resto previo se convierte en <span class="highlight">18</span>. Operamos \(18 \div 9 = \mathbf{2}\) de forma exacta.</li>
+                        </ul>
+                        El cociente final es <strong>52</strong> con residuo cero.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">3. Criterio de Divisibilidad del 11</div>
+                <p>Un número es divisible por 11 si la <strong>diferencia</strong> entre la suma de las cifras que ocupan los <strong>lugares impares</strong> y la suma de las que ocupan los <strong>lugares pares</strong> (comenzando por la izquierda) es igual a \(0\) o a un múltiplo de \(11\).</p>
+                <p><strong>Ejemplo:</strong> Analicemos el número compuesto <span class="highlight">715</span>. 
+                <ul>
+                    <li>Suma de posiciones impares (1ª y 3ª cifra): \(7 + 5 = 12\)</li>
+                    <li>Suma de posiciones pares (2ª cifra): \(1\)</li>
+                    <li>Diferencia absoluta: \[ 12 - 1 = 11 \]</li>
+                </ul>
+                Dado que el resultado es \(11\), el número es divisible. Lo comprobamos con la tabla de restos parciales:</p>
+
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito">7</td>
+                            <td class="col-superindice"></td><td class="col-digito">1</td>
+                            <td class="col-superindice">5</td><td class="col-digito">5</td>
+                            <td class="barra-primas">11</td>
+                        </tr>
+                        <tr>
+                            <td class="col-superindice"></td><td class="col-digito"></td>
+                            <td class="col-superindice"></td><td class="col-digito">6</td>
+                            <td class="col-superindice"></td><td class="col-digito">5</td>
+                            <td class="barra-primas"></td>
+                        </tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <strong>Verificación por división (\(715 \div 11\)):</strong><br>
+                        <ul>
+                            <li><strong>Primer bloque:</strong> El \(7\) es menor que el divisor, por lo que agrupamos las primeras dos cifras activas formando el número <span class="highlight">71</span>.</li>
+                            <li><strong>Operación de arrastre:</strong> \(71 \div 11 = \mathbf{6}\). Como \(11 \times 6 = 66\), calculamos la diferencia hasta 71, obteniendo un <strong>resto de 5</strong>.</li>
+                            <li><strong>Fase final:</strong> El superíndice \(5\) altera el último dígito convirtiéndolo en un <span class="highlight">55</span>. Resolvemos \(55 \div 11 = \mathbf{5}\).</li>
+                        </ul>
+                        Conseguimos un cociente exacto de <strong>65</strong>.
+                    </div>
+                </div>
+            </div>
+
+
+<div class="step-block">
+    <div class="step-title">Ejemplo 4: Criterio del 11 con Resta Igual a 0</div>
+    <p>Analicemos ahora el número compuesto <span class="highlight">363</span>. Aplicamos la regla sumando las cifras según su posición posicional de izquierda a derecha:</p>
+    <ul>
+        <li>Suma de posiciones impares (1ª y 3ª cifra): \(3 + 3 = 6\)</li>
+        <li>Suma de posiciones pares (2ª cifra): \(6\)</li>
+        <li>Diferencia absoluta: \[ 6 - 6 = 0 \]</li>
+    </ul>
+    <p>Como el resultado de la resta es exactamente \(0\), el criterio se cumple perfectamente y nos asegura que el número es divisible por 11. Lo verificamos mediante la tabla de divisiones sucesivas dígito a dígito:</p>
+
+    <div class="division-table-container">
+        <table class="factor-table">
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito">3</td>
+                <td class="col-superindice"></td><td class="col-digito">6</td>
+                <td class="col-superindice">3</td><td class="col-digito">3</td>
+                <td class="barra-primas">11</td>
+            </tr>
+            <tr>
+                <td class="col-superindice"></td><td class="col-digito"></td>
+                <td class="col-superindice"></td><td class="col-digito">3</td>
+                <td class="col-superindice"></td><td class="col-digito">3</td>
+                <td class="barra-primas"></td>
+            </tr>
+        </table>
+
+        <div class="explicacion-lateral">
+            <strong>Verificación por división (\(363 \div 11\)):</strong><br>
+            <ul>
+                <li><strong>Primer bloque:</strong> Como el primer dígito (\(3\)) es menor que nuestro divisor, unificamos las dos primeras posiciones del array para operar con el bloque <span class="highlight">36</span>.</li>
+                <li><strong>Arrastre del resto:</strong> Buscamos el múltiplo más cercano: \(36 \div 11 = \mathbf{3}\). Sabiendo que \(11 \times 3 = 33\), calculamos la diferencia restante (\(36 - 33\)), lo que nos genera un <strong>resto de 3</strong>.</li>
+                <li><strong>Fase final:</strong> El residuo anotado en el superíndice se lee en conjunción con la última cifra activa, formando un <span class="highlight">33</span>. Concluimos operando \(33 \div 11 = \mathbf{3}\) sin residuo.</li>
+            </ul>
+            El cociente resultante es un valor exacto de <strong>33</strong>.
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+</body>
+</html>

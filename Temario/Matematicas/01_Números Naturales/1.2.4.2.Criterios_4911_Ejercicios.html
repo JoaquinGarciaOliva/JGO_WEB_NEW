@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (Imagen con Tooltip)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Ejercicios de Divisibilidad (Criterios del 4, 9 y 11)</h1>
+   
+    <div class="exercise-list">
+       
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $396$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+          
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p><strong>Criterio del 4:</strong> Sus dos últimas cifras son $96$. Como $96 \div 4 = 24$, <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Sumamos sus cifras: $3 + 9 + 6 = 18$. Como $18 \div 9 = 2$, <strong>sí</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma de cifras en posiciones impares minus pares: $(3 + 6) - 9 = 9 - 9 = 0$. Al dar 0, <strong>sí</strong> es divisible por 11.</p>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $132$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+             
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p><strong>Criterio del 4:</strong> Sus dos últimas cifras son $32$. Como $32 \div 4 = 8$, <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Sumamos sus cifras: $1 + 3 + 2 = 6$. Como 6 no es múltiplo de 9, <strong>no</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 2) - 3 = 3 - 3 = 0$. Al dar 0, <strong>sí</strong> es divisible por 11.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $180$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+        
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p><strong>Criterio del 4:</strong> Sus dos últimas cifras son $80$. Como $80 \div 4 = 20$, <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Sumamos sus cifras: $1 + 8 + 0 = 9$. Como $9 \div 9 = 1$, <strong>sí</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 0) - 8 = 1 - 8 = -7$ (o bien $8 - 1 = 7$). No es 0 ni múltiplo de 11, por lo que <strong>no</strong> es divisible por 11.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $198$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p><strong>Criterio del 4:</strong> Sus dos últimas cifras son $98$. Como $98 \div 4 = 24.5$ (no exacta), <strong>no</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Sumamos sus cifras: $1 + 9 + 8 = 18$. Como $18 \div 9 = 2$, <strong>sí</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - 9 = 9 - 9 = 0$. Al dar 0, <strong>sí</strong> es divisible por 11.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $432$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas dos cifras $32$. Como $32 \div 4 = 8$, <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Suma de cifras: $4 + 3 + 2 = 9$. Es múltiplo de 9, por tanto <strong>sí</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(4 + 2) - 3 = 6 - 3 = 3$. No es múltiplo de 11, <strong>no</strong> es divisible por 11.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $528$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $28$. divisible por 4 ($28 \div 4 = 7$), <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $5 + 2 + 8 = 15$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(5 + 8) - 2 = 13 - 2 = 11$. Como da 11, <strong>sí</strong> es divisible por 11.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $792$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p><strong>Criterio del 4:</strong> Cifras finales $92$. Como $92 \div 4 = 23$, <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $7 + 9 + 2 = 18$. Al ser múltiplo de 9, <strong>sí</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(7 + 2) - 9 = 9 - 9 = 0$. Por lo tanto, <strong>sí</strong> es divisible por 11.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $100$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p><strong>Criterio del 4:</strong> Termina en doble cero ($00$), por lo tanto <strong>sí</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 0 + 0 = 1$. No es múltiplo de 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 0) - 0 = 1$. No es múltiplo de 11, <strong>no</strong> lo es.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $117$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p><strong>Criterio del 4:</strong> Cifras finales $17$. No es divisible por 4, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 1 + 7 = 9$. Es múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 7) - 1 = 7$. No es múltiplo de 11, <strong>no</strong> lo es.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $121$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $21$. No es divisible por 4, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma de cifras: $1 + 2 + 1 = 4$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 1) - 2 = 0$. Al dar 0, <strong>sí</strong> es divisible por 11.</p>
+            </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $216$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $16$. Como $16 \div 4 = 4$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $2 + 1 + 6 = 9$. Es múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(2 + 6) - 1 = 7$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $352$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $52$. Como $52 \div 4 = 13$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $3 + 5 + 2 = 10$. No es múltiplo de 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(3 + 2) - 5 = 0$. Da 0, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $495$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $95$. Impar, <strong>no</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $4 + 9 + 5 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(4 + 5) - 9 = 0$. Da 0, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $504$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $04$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $5 + 0 + 4 = 9$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(5 + 4) - 0 = 9$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $704$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $04$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $7 + 0 + 4 = 11$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(7 + 4) - 0 = 11$. Da 11, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $891$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $91$. Impar, <strong>no</strong> es divisible por 4.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $8 + 9 + 1 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(8 + 1) - 9 = 0$. Da 0, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1188$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $88$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 1 + 8 + 8 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - (1 + 8) = 9 - 9 = 0$. Da 0, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $124$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $24$. Como $24 \div 4 = 6$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 2 + 4 = 7$. No es múltiplo de 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 4) - 2 = 3$. No es múltiplo de 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $153$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $53$. Impar, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 5 + 3 = 9$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 3) - 5 = -1$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $253$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $53$. Impar, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $2 + 5 + 3 = 10$. No lo es, <strong>no</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(2 + 3) - 5 = 0$. Da 0, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $240$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $40$. Como $40 \div 4 = 10$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $2 + 4 + 0 = 6$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(2 + 0) - 4 = -2$. No es múltiplo de 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $333$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $33$. Impar, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $3 + 3 + 3 = 9$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(3 + 3) - 3 = 3$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $407$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $07$. No es divisible por 4, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $4 + 0 + 7 = 11$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(4 + 7) - 0 = 11$. Al ser 11, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $612$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+                <p><strong>Solución Ejercicio 24:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $12$. Como $12 \div 4 = 3$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $6 + 1 + 2 = 9$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(6 + 2) - 1 = 7$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $836$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+                <p><strong>Solución Ejercicio 25:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $36$. Como $36 \div 4 = 9$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $8 + 3 + 6 = 17$. No lo es, <strong>no</strong> es divisible por 9.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(8 + 6) - 3 = 11$. Da 11, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $990$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+                <p><strong>Solución Ejercicio 26:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $90$. No es divisible por 4 ($90 \div 4 = 22.5$), <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $9 + 9 + 0 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(9 + 0) - 9 = 0$. Da 0, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1584$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+                <p><strong>Solución Ejercicio 27:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $84$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 5 + 8 + 4 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - (5 + 4) = 9 - 9 = 0$. Da 0, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $312$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+                <p><strong>Solución Ejercicio 28:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $12$. divisible por 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $3 + 1 + 2 = 6$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(3 + 2) - 1 = 4$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $441$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+                <p><strong>Solución Ejercicio 29:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $41$. Impar, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $4 + 4 + 1 = 9$. Múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(4 + 1) - 4 = 1$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $517$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+                <p><strong>Solución Ejercicio 30:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $17$. No es divisible por 4, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $5 + 1 + 7 = 13$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(5 + 7) - 1 = 11$. Da 11, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">31.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $720$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution31">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution31" style="display: none;">
+                <p><strong>Solución Ejercicio 31:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $20$. Como $20 \div 4 = 5$, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $7 + 2 + 0 = 9$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(7 + 0) - 2 = 5$. No lo es, <strong>no</strong> es divisible por 11.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">32.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $924$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution32">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution32" style="display: none;">
+                <p><strong>Solución Ejercicio 32:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $24$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $9 + 2 + 4 = 15$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(9 + 4) - 2 = 11$. Da 11, por lo tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">33.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1089$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution33">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution33" style="display: none;">
+                <p><strong>Solución Ejercicio 33:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $89$. Impar, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 0 + 8 + 9 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - (0 + 9) = 9 - 9 = 0$. Da 0, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">34.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1980$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution34">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution34" style="display: none;">
+                <p><strong>Solución Ejercicio 34:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $80$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 9 + 8 + 0 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - (9 + 0) = 9 - 9 = 0$. Da 0, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">35.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $416$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution35">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution35" style="display: none;">
+                <p><strong>Solución Ejercicio 35:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $16$. Múltiplo de 4, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $4 + 1 + 6 = 11$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(4 + 6) - 1 = 9$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">36.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $639$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution36">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution36" style="display: none;">
+                <p><strong>Solución Ejercicio 36:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $39$. Impar, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $6 + 3 + 9 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(6 + 9) - 3 = 12$. No lo es, <strong>no</strong> es divisible por 11.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">37.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $649$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution37">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution37" style="display: none;">
+                <p><strong>Solución Ejercicio 37:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $49$. Impar, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $6 + 4 + 9 = 19$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(6 + 9) - 4 = 11$. Al dar 11, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">38.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $812$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution38">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution38" style="display: none;">
+                <p><strong>Solución Ejercicio 38:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $12$. divisible por 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $8 + 1 + 2 = 11$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(8 + 2) - 1 = 9$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">39.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $711$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution39">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution39" style="display: none;">
+                <p><strong>Solución Ejercicio 39:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $11$. Impar, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $7 + 1 + 1 = 9$. Múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(7 + 1) - 1 = 7$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">40.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $803$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution40">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution40" style="display: none;">
+                <p><strong>Solución Ejercicio 40:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $03$. No es divisible por 4, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $8 + 0 + 3 = 11$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(8 + 3) - 0 = 11$. Al ser 11, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">41.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $936$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution41">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution41" style="display: none;">
+                <p><strong>Solución Ejercicio 41:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $36$. Múltiplo de 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $9 + 3 + 6 = 18$. Múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(9 + 6) - 3 = 12$. No lo es, <strong>no</strong> es divisible por 11.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">42.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1012$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution42">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution42" style="display: none;">
+                <p><strong>Solución Ejercicio 42:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $12$. Múltiplo de 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 0 + 1 + 2 = 4$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 1) - (0 + 2) = 2 - 2 = 0$. Da 0, por tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">43.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1287$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution43">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution43" style="display: none;">
+                <p><strong>Solución Ejercicio 43:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $87$. Impar, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 2 + 8 + 7 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - (2 + 7) = 9 - 9 = 0$. Da 0, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">44.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $2376$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution44">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution44" style="display: none;">
+                <p><strong>Solución Ejercicio 44:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $76$. Múltiplo de 4 ($76 \div 4 = 19$), <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $2 + 3 + 7 + 6 = 18$. Múltiplo de 9, <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(2 + 7) - (3 + 6) = 9 - 9 = 0$. Da 0, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">45.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $204$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution45">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution45" style="display: none;">
+                <p><strong>Solución Ejercicio 45:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $04$. Múltiplo de 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $2 + 0 + 4 = 6$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(2 + 4) - 0 = 6$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">46.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $810$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution46">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution46" style="display: none;">
+                <p><strong>Solución Ejercicio 46:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $10$. No es divisible por 4, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $8 + 1 + 0 = 9$. Múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(8 + 0) - 1 = 7$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">47.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $913$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution47">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution47" style="display: none;">
+                <p><strong>Solución Ejercicio 47:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $13$. Impar, por tanto <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $9 + 1 + 3 = 13$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(9 + 3) - 1 = 11$. Al ser 11, <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">48.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1044$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution48">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution48" style="display: none;">
+                <p><strong>Solución Ejercicio 48:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $44$. Múltiplo de 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 0 + 4 + 4 = 9$. Múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 4) - (0 + 4) = 5 - 4 = 1$. No es divisible por 11, <strong>no</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">49.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1144$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution49">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution49" style="display: none;">
+                <p><strong>Solución Ejercicio 49:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $44$. Múltiplo de 4, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 1 + 4 + 4 = 10$. No es divisible por 9, <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 4) - (1 + 4) = 5 - 5 = 0$. Da 0, por tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">50.</span>
+            <p class="exercise-statement">Aplica los criterios de divisibilidad del 4, 9 y 11 para evaluar el número $1386$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution50">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution50" style="display: none;">
+                <p><strong>Solución Ejercicio 50:</strong></p>
+                <p><strong>Criterio del 4:</strong> Últimas cifras $86$. No es divisible por 4 ($86 \div 4 = 21.5$), <strong>no</strong> lo es.</p>
+                <p><strong>Criterio del 9:</strong> Suma: $1 + 3 + 8 + 6 = 18$. Múltiplo de 9, por tanto <strong>sí</strong> lo es.</p>
+                <p><strong>Criterio del 11:</strong> Suma alternada: $(1 + 8) - (3 + 6) = 9 - 9 = 0$. Da 0, por tanto <strong>sí</strong> lo es.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>
