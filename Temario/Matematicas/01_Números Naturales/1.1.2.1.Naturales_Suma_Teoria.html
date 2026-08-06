@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: La Suma de Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: La Suma de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Operaciones Básicas: La Suma o Adición</h2>
+            <p>La suma es la primera operación matemática fundamental que aprendemos. Nos permite agrupar, añadir y cuantificar elementos de una misma naturaleza en un único total numérico.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. Significado de la Suma</div>
+                <div class="regla-box">
+                    <strong>¿Qué significa sumar?</strong> Sumar significa <strong>unir, juntar o agrupar</strong> dos o más colecciones de cosas para obtener una cantidad total. Los números que se suman se llaman <strong>sumandos</strong> y el resultado se llama <strong>suma o total</strong>.
+                </div>
+                <p><strong>Ejemplo práctico:</strong> Imagina que tienes un grupo con $2$ manzanas y otro grupo con $3$ manzanas. Si decides unirlas todas en una sola cesta, el resultado final será de $5$ manzanas.</p>
+                
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Representación matemática:</strong><br>
+                        $$2 + 3 = 5$$
+                        <ul style="margin-top: 10px;">
+                            <li>$2$ y $3$ son los <strong>sumandos</strong>.</li>
+                            <li>$5$ es la <strong>suma o resultado final</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Sumas de un Solo Dígito</div>
+                <div class="regla-box">
+                    <strong>Concepto clave:</strong> Son las sumas más sencillas donde los sumandos son números del $0$ al $9$. El resultado puede ser un número de una o de dos cifras.
+                </div>
+                <p>Para resolver estas sumas de forma rápida, es muy útil memorizar las tablas de sumar o apoyarnos visualmente en el conteo seguido de elementos.</p>
+                
+                <p><strong>Ejemplos prácticos:</strong></p>
+                <ul>
+                    <li>$4 + 4 = 8$ (Resultado de un solo dígito)</li>
+                    <li>$8 + 7 = 15$ (Resultado de dos dígitos)</li>
+                </ul>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. Suma de Dos Dígitos o Más sin Llevadas</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Procedimiento:</strong> Colocamos los números en vertical, de forma que coincidan las <strong>unidades con unidades</strong>, las <strong>decenas con decenas</strong>, y así sucesivamente. Después, sumamos de derecha a izquierda cada columna de forma independiente.
+                </div>
+                
+                <p><strong>Ejemplo paso a paso:</strong> Vamos a realizar la suma de $42 + 25$.</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 20px;">
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                        &nbsp;&nbsp;42<br>
+                        +&nbsp;25<br>
+                        -----<br>
+                        &nbsp;&nbsp;67
+                    </div>
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li><strong>Columna de las Unidades (derecha):</strong> $2 + 5 = 7$. Ponemos el $7$ abajo.</li>
+                            <li><strong>Columna de las Decenas (izquierda):</strong> $4 + 2 = 6$. Ponemos el $6$ abajo.</li>
+                            <li>El resultado total es <span class="highlight">67</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">4. Sumas de Dos Dígitos o Más con Llevadas</div>
+                <div class="regla-box">
+                    <strong>¿Qué es una llevada?</strong> Cuando la suma de una columna es igual o mayor que $10$, escribimos solo la cifra de las unidades del resultado. La cifra de las decenas (el "1" o el "2") se añade arriba de la siguiente columna de la izquierda como una <strong>llevada</strong>.
+                </div>
+                
+                <p><strong>Ejemplo paso a paso:</strong> Vamos a realizar la suma de $57 + 28$.</p>
+                <div class="division-table-container">
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                        &nbsp;<span style="color: red; font-size: 0.9rem; vertical-align: super;">1</span>&nbsp;&nbsp;<br>
+                        &nbsp;57<br>
+                        +28<br>
+                        ---<br>
+                        &nbsp;85
+                    </div>
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li><strong>Paso 1 (Unidades):</strong> Sumamos $7 + 8 = 15$. Como pasamos de 9, colocamos el $5$ abajo y anotamos la llevada <span style="color: red; font-weight: bold; font-size: 0.85em;">1</span> arriba de las decenas en tamaño pequeño.</li>
+                            <li><strong>Paso 2 (Decenas):</strong> Sumamos la llevada y las decenas: <span style="color: red; font-weight: bold;">1</span> + $5 + 2 = 8$. Colocamos el $8$ abajo.</li>
+                            <li>El resultado final es <span class="highlight">85</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">5. Suma de Más de Dos Números</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Estrategia:</strong> El procedimiento en vertical sigue siendo exactamente el mismo. Se alinean todos los números por la derecha y sumamos los dígitos de cada columna de arriba hacia abajo, sumando las llevadas correspondientes si el total de la columna supera las 9 unidades.
+                </div>
+                
+                <p><strong>Ejemplo paso a paso:</strong> Vamos a realizar la suma de $14 + 38 + 23$.</p>
+                <div class="division-table-container" style="background: #f0f7f9;">
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 5px; line-height: 1.2;">
+                        &nbsp;<span style="color: red; font-size: 0.9rem; vertical-align: super;">1</span>&nbsp;&nbsp;<br>
+                        &nbsp;14<br>
+                        &nbsp;38<br>
+                        +23<br>
+                        ---<br>
+                        &nbsp;75
+                    </div>
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li><strong>Columna de las Unidades:</strong> Sumamos $4 + 8 = 12$, y luego $12 + 3 = 15$. Dejamos el $5$ abajo y nos llevamos <span style="color: red; font-weight: bold; font-size: 0.85em;">1</span> a las decenas.</li>
+                            <li><strong>Columna de las Decenas:</strong> Sumamos la llevada con el resto: <span style="color: red; font-weight: bold;">1</span> + $1 + 3 + 2 = 7$. Colocamos el $7$.</li>
+                            <li>El resultado final es <span class="highlight">75</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">6. Sumas de Dos Números en Línea (Horizontal)</div>
+                <div class="regla-box">
+                    <strong>Definición:</strong> Es la resolución de la suma de forma horizontal, sin necesidad de colocar los números uno encima de otro en vertical. Es una habilidad ideal para desarrollar la agilidad mental.
+                </div>
+                <p>Para resolver $34 + 52$ en línea, lo explicamos cifra a cifra:</p>
+                <ul>
+                    <li><strong>Paso 1: Identificar y sumar las unidades.</strong> Las cifras de la derecha son el $4$ (del 34) y el $2$ (del 52). Hacemos la operación: $$4 + 2 = \mathbf{6}$$ Esta será la última cifra del resultado.</li>
+                    <li><strong>Paso 2: Identificar y sumar las decenas.</strong> Las cifras de la izquierda son el $3$ (del 34) y el $5$ (del 52). Hacemos la operación: $$3 + 5 = \mathbf{8}$$ Esta será la primera cifra del resultado.</li>
+                    <li><strong>Paso 3: Unir el resultado.</strong> Juntando las decenas y las unidades, obtenemos de manera directa: $$34 + 52 = \mathbf{86}$$</li>
+                </ul>
+				
+				<p><strong>Ejemplo avanzado (tres dígitos con llevadas):</strong> Vamos a resolver paso a paso la suma en línea de $457 + 285$.</p>
+<ul style="list-style-type: none; padding-left: 10px;">
+    <li style="margin-bottom: 12px;">
+        <strong>Paso 1: Sumar las unidades (cifras de la derecha).</strong><br>
+        Sumamos $7$ y $5$: 
+        $$7 + 5 = \mathbf{12}$$
+        Colocamos el <strong>2</strong> en la posición de las unidades del resultado final y nos guardamos una llevada de <span style="color: red; font-weight: bold;">1</span> para las decenas.<br>
+        <small style="color: #4a5568;">Resultado provisional: <span class="highlight">_ _ 2</span></small>
+    </li>
+    <li style="margin-bottom: 12px;">
+        <strong>Paso 2: Sumar las decenas (cifras del centro) + la llevada.</strong><br>
+        Sumamos $5$ y $8$, y no olvidamos añadir el <span style="color: red; font-weight: bold;">1</span> que nos llevábamos: 
+        $$5 + 8 + \color{red}{1}\color{black}{} = \mathbf{14}$$
+        Colocamos el <strong>4</strong> en la posición de las decenas del resultado y nos guardamos una nueva llevada de <span style="color: red; font-weight: bold;">1</span> para las centenas.<br>
+        <small style="color: #4a5568;">Resultado provisional: <span class="highlight">_ 4 2</span></small>
+    </li>
+    <li style="margin-bottom: 12px;">
+        <strong>Paso 3: Sumar las centenas (cifras de la izquierda) + la nueva llevada.</strong><br>
+        Sumamos $4$ y $2$, junto con el <span style="color: red; font-weight: bold;">1</span> de la última llevada: 
+        $$4 + 2 + \color{red}{1}\color{black}{} = \mathbf{7}$$
+        Colocamos el <strong>7</strong> en la posición de las centenas.<br>
+        <small style="color: #4a5568;">Resultado final: <span class="highlight">7 4 2</span></small>
+    </li>
+    <li style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #cbd5e0;">
+        <strong>Operación completa resumida de un vistazo:</strong>
+        $$457 + 285 = \mathbf{742}$$
+    </li>
+</ul>
+
+            </div>
+
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #00769d;">7. Cálculo Rápido de Sumas (Completando a Múltiplos de 10)</div>
+                <div class="regla-box" style="background-color: #f7fafc; border-left-color: #4a5568;">
+                    <strong>El truco mental:</strong> A nuestro cerebro le resulta mucho más fácil sumar números redondos que terminen en cero ($10, 20, 30 \dots$). Esta estrategia consiste en "quitarle" un poquito a un sumando para "dárselo" al otro y así redondearlo. El resultado total no cambia.
+                </div>
+                
+                <p><strong>Caso 1: Completar a la decena más cercana</strong></p>
+                <p>Queremos calcular rápidamente $7 + 9$. Al número $9$ le falta solo $1$ para convertirse en un cómodo $10$. Se lo pedimos prestado al $7$ (que se transforma en $6$):</p>
+                <ul>
+                    <li>$$7 + 9 = 6 + 10 = 16$$</li>
+                </ul>
+
+                <p><strong>Caso 2: Aplicación con números de dos dígitos</strong></p>
+                <p>Queremos calcular rápidamente $25 + 18$. Al número $18$ le faltan $2$ unidades para transformarse en el múltiplo de diez más próximo, que es el $20$. Le restamos esos $2$ al $25$ (se queda en $23$) y se los sumamos al $18$:</p>
+                <ul>
+                    <li>$$25 + 18 = 23 + 20 = 43$$</li>
+                </ul>
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+</html>

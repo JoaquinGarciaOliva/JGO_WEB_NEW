@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones: La Suma</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],               
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Suma de Números Naturales con Soluciones</h1>
+
+        <h2>Nivel 1: Significado y un solo dígito (Ejercicios 1 al 5)</h2>
+        <ol class="mi-lista">
+            <li>
+                Representa y resuelve el significado de unir un grupo de 3 lápices con otro de 4 lápices.
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Identificamos los sumandos: el primer grupo tiene 3 elementos y el segundo tiene 4.</li>
+                        <li>Unimos ambas cantidades mediante la operación de sumar:
+                            $$ 3 + 4 = 7 $$
+                        </li>
+                        <li>El resultado total es de 7 lápices.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la siguiente suma de un dígito: $5 + 3$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Contamos 3 unidades a partir del número 5: $6, 7, 8$.</li>
+                        <li>Por lo tanto:
+                            $$ 5 + 3 = 8 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la siguiente suma de un dígito cuyo resultado tiene dos cifras: $7 + 6$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos las unidades directamente:
+                            $$ 7 + 6 = 13 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve sumando con el elemento neutro (cero): $9 + 0$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Cualquier número natural sumado a cero da como resultado el propio número:
+                            $$ 9 + 0 = 9 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el total de la siguiente adición de dígitos: $8 + 8$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Realizamos el cálculo mental sumando los dos dígitos iguales:
+                            $$ 8 + 8 = 16 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+
+        <h2>Nivel 2: Dos dígitos o más sin llevadas (Ejercicios 6 al 10)</h2>
+        <ol class="mi-lista" start="6">
+            <li>
+                Resuelve la suma en vertical de dos dígitos sin llevadas: $23 + 14$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Colocamos y sumamos por columnas de derecha a izquierda:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  23
++ 14
+----
+  37</pre>
+                        </li>
+                        <li>Unidades: $3 + 4 = 7$. Decenas: $2 + 1 = 3$. El resultado es $37$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la suma de $51 + 36$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Disponemos la operación de forma vertical:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  51
++ 36
+----
+  87</pre>
+                        </li>
+                        <li>Sumamos unidades ($1+6=7$) y decenas ($5+3=8$). El total es $87$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el total de la suma de tres dígitos sin llevadas: $142 + 235$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Alineamos las unidades, decenas y centenas:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  142
++ 235
+-----
+  377</pre>
+                        </li>
+                        <li>Efectuamos por columnas: Unidades ($2+5=7$), Decenas ($4+3=7$), Centenas ($1+2=3$). Resultado: $377$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la suma de un número de tres dígitos y uno de dos dígitos sin llevadas: $613 + 72$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Colocamos correctamente alineando a la derecha:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  613
++  72
+-----
+  685</pre>
+                        </li>
+                        <li>Unidades: $3+2=5$; Decenas: $1+7=8$; Centenas: $6+0=6$. El total es $685$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la suma de cuatro cifras sin llevadas: $4025 + 1952$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos de derecha a izquierda:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  4025
++ 1952
+------
+  5977</pre>
+                        </li>
+                        <li>El resultado final es $5977$.</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+
+        <h2>Nivel 3: Dos dígitos o más con llevadas (Ejercicios 11 al 15)</h2>
+        <ol class="mi-lista" start="11">
+            <li>
+                Resuelve la suma con una llevada en las decenas: $47 + 25$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Colocamos en vertical anotando la llevada arriba en rojo y más pequeña:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 0.8rem; vertical-align: super;">1</span>
+  47
++ 25
+----
+  72</pre>
+                        </li>
+                        <li>Unidades: $7 + 5 = 12$ (ponemos el 2 y nos llevamos 1). Decenas: $4 + 2 + \color{red}{1} = 7$. Resultado: $72$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la siguiente suma con llevadas: $68 + 19$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Disponemos la operación en vertical:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 0.8rem; vertical-align: super;">1</span>
+  68
++ 19
+----
+  87</pre>
+                        </li>
+                        <li>Unidades: $8 + 9 = 17$ (escribimos 7, llevamos 1). Decenas: $6 + 1 + \color{red}{1} = 8$. Resultado: $87$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la suma de tres cifras con llevada intermedia: $258 + 124$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Operamos columna por columna:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  &nbsp;<span style="color: red; font-size: 0.8rem; vertical-align: super;">1</span>
+  258
++ 124
+-----
+  382</pre>
+                        </li>
+                        <li>Unidades: $8 + 4 = 12$ (llevamos 1). Decenas: $5 + 2 + \color{red}{1} = 8$. Centenas: $2 + 1 = 3$. Resultado: $382$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula una suma con múltiples llevadas consecutivas: $467 + 285$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Colocamos las llevadas en sus respectivas posiciones superiores:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 1rem; vertical-align: super;">1</span><span style="color: red; font-size: 1rem; vertical-align: super;">1</span>
+  467
++ 285
+-----
+  752</pre>
+                        </li>
+                        <li>Unidades: $7+5=12$ (llevamos 1). Decenas: $6+8+\color{red}{1}=15$ (llevamos 1). Centenas: $4+2+\color{red}{1}=7$. Total: $752$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la suma de cuatro dígitos con llevadas: $3749 + 2583$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Efectuamos el algoritmo vertical anotando las tres llevadas generadas:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 1rem; vertical-align: super;">1</span><span style="color: red; font-size: 1rem; vertical-align: super;">1</span><span style="color: red; font-size: 1rem; vertical-align: super;">1</span>
+  3749
++ 2583
+------
+  6332</pre>
+                        </li>
+                        <li>El total acumulado es $6332$.</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+
+        <h2>Nivel 4: Suma de más de dos números (Ejercicios 16 al 20)</h2>
+        <ol class="mi-lista" start="16">
+            <li>
+                Suma tres números de un solo dígito de manera consecutiva: $4 + 3 + 6$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Podemos agrupar de arriba a abajo en formato vertical:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  4
+  3
++ 6
+---
+  13</pre>
+                        </li>
+                        <li>Sumamos progresivamente: $4 + 3 = 7$; luego $7 + 6 = 13$. El resultado es $13$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la suma vertical de tres sumandos de dos cifras sin llevadas: $12 + 21 + 34$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Disponemos los tres números alineados por la derecha:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  12
+  21
++ 34
+----
+  67</pre>
+                        </li>
+                        <li>Unidades: $2 + 1 + 4 = 7$. Decenas: $1 + 2 + 3 = 6$. Total: $67$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la suma de tres números con llevadas acumuladas: $25 + 47 + 16$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos la columna de las unidades: $5 + 7 + 6 = 18$. Ponemos el 8 y nos llevamos <span style="color: red; font-weight: bold;">1</span>.
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 0.8rem; vertical-align: super;">1</span>
+  25
+  47
++ 16
+----
+  88</pre>
+                        </li>
+                        <li>Decenas: $2 + 4 + 1 + \color{red}{1} = 8$. El total obtenido es $88$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula la suma de cuatro sumandos con una llevada mayor que uno: $38 + 26 + 17 + 19$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Sumamos la primera columna: $8 + 6 + 7 + 9 = 30$. Colocamos el 0 y la llevada es <span style="color: red; font-weight: bold;">3</span>.
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 0.8rem; vertical-align: super;">3</span>
+  38
+  26
+  17
++ 19
+----
+  100</pre>
+                        </li>
+                        <li>Sumamos las decenas junto a la llevada: $3 + 2 + 1 + 1 + \color{red}{3} = 10$. El resultado es $100$.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Efectúa la suma combinada de tres números de diferente cantidad de cifras: $145 + 68 + 7$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Es crucial ordenar los números alineados de forma estricta a la derecha:
+                            <pre style="font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 4px; line-height: 1.1;">
+  <span style="color: red; font-size: 1rem; vertical-align: super;">1</span><span style="color: red; font-size: 1rem; vertical-align: super;">2</span>
+  145
+   68
++   7
+-----
+  220</pre>
+                        </li>
+                        <li>Unidades: $5+8+7=20$ (escribimos 0, llevamos 2). Decenas: $4+6+\color{red}{2}=12$ (escribimos 2, llevamos 1). Centenas: $1+\color{red}{1}=2$. Resultado: $220$.</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+
+        <h2>Nivel 5: Sumas en línea paso a paso (Ejercicios 21 al 25)</h2>
+        <ol class="mi-lista" start="21">
+            <li>
+                Resuelve en línea cifra a cifra y sin llevadas: $43 + 21$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Paso 1 (Unidades):</strong> Identificamos las cifras de la derecha: $3$ y $1$. Sumamos: $3 + 1 = \mathbf{4}$.</li>
+                        <li><strong>Paso 2 (Decenas):</strong> Identificamos las cifras de la izquierda: $4$ y $2$. Sumamos: $4 + 2 = \mathbf{6}$.</li>
+                        <li>Unimos los valores para el total:
+                            $$ 43 + 21 = 64 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve de forma horizontal con llevada en unidades: $56 + 27$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Paso 1 (Unidades):</strong> Sumamos las unidades del extremo derecho: $6 + 7 = 13$. Escribimos el <strong>3</strong> al final y guardamos una llevada de $\color{red}{1}$.</li>
+                        <li><strong>Paso 2 (Decenas):</strong> Sumamos las decenas agregando la llevada que guardamos: $5 + 2 + \color{red}{1} = \mathbf{8}$.</li>
+                        <li>Concluimos la expresión en línea:
+                            $$ 56 + 27 = 83 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula en línea una suma de tres dígitos sin llevadas: $135 + 423$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Unidades:</strong> $5 + 3 = \mathbf{8}$</li>
+                        <li><strong>Decenas:</strong> $3 + 2 = \mathbf{5}$</li>
+                        <li><strong>Centenas:</strong> $1 + 4 = \mathbf{5}$</li>
+                        <li>Agrupamos las cifras ordenadamente de izquierda a derecha:
+                            $$ 135 + 423 = 558 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve de manera horizontal con dígitos asimétricos y llevadas: $248 + 65$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Unidades:</strong> $8 + 5 = 13$ (anotamos el <strong>3</strong>, nos llevamos $\color{red}{1}$).</li>
+                        <li><strong>Decenas:</strong> $4 + 6 + \color{red}{1} = 11$ (anotamos el <strong>1</strong>, nos llevamos $\color{red}{1}$).</li>
+                        <li><strong>Centenas:</strong> El segundo número no tiene centenas ($0$). Sumamos: $2 + 0 + \color{red}{1} = \mathbf{3}$.</li>
+                        <li>Unimos las tres posiciones:
+                            $$ 248 + 65 = 313 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula paso a paso la siguiente suma en línea de tres dígitos: $376 + 158$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li><strong>Unidades:</strong> $6 + 8 = 14$ (escribimos <strong>4</strong>, llevada = $\color{red}{1}$).</li>
+                        <li><strong>Decenas:</strong> $7 + 5 + \color{red}{1} = 13$ (escribimos <strong>3</strong>, llevada = $\color{red}{1}$).</li>
+                        <li><strong>Centenas:</strong> $3 + 1 + \color{red}{1} = \mathbf{5}$.</li>
+                        <li>Escribimos la igualdad final limpia:
+                            $$ 376 + 158 = 534 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+
+        <h2>Nivel 6: Cálculo rápido completando múltiplos de 10 (Ejercicios 26 al 30)</h2>
+        <ol class="mi-lista" start="26">
+            <li>
+                Aplica la estrategia de cálculo rápido redondeando a la decena más cercana: $6 + 9$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Al número $9$ le falta $1$ unidad para convertirse en el múltiplo redondo $10$.</li>
+                        <li>Le quitamos $1$ al $6$ (que se queda en $5$) y se lo damos al $9$:
+                            $$ 6 + 9 = 5 + 10 = 15 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula de forma rápida por descomposición mental el total de: $28 + 15$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>El número $28$ está muy cerca de convertirse en $30$. Le hacen falta exactamente $2$ unidades.</li>
+                        <li>Tomamos prestadas esas $2$ unidades del $15$ (convirtiéndolo en $13$):
+                            $$ 28 + 15 = 30 + 13 = 43 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Utiliza la estrategia de completar múltiplos de diez para resolver: $49 + 36$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>El número $49$ se redondea al múltiplo $50$ sumándole $1$.</li>
+                        <li>Restamos $1$ de las unidades de $36$ (quedando en $35$) y lo transferimos:
+                            $$ 49 + 36 = 50 + 35 = 85 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica el redondeo rápido de sumandos con números mayores: $77 + 45$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Buscamos el múltiplo de diez más próximo a $77$, que es $80$ (sumándole $3$).</li>
+                        <li>Extraemos esos $3$ del segundo sumando, de forma que $45$ pasa a ser $42$:
+                            $$ 77 + 45 = 80 + 42 = 122 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Resuelve mediante cálculo veloz completando a la centena o múltiplo mayor: $95 + 67$
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Aprovechamos que $95$ se encuentra a tan solo $5$ unidades del número clave e idóneo $100$.</li>
+                        <li>Modificamos los dos sumandos de forma simétrica restando $5$ al número $67$ (pasa a ser $62$):
+                            $$ 95 + 67 = 100 + 62 = 162 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>

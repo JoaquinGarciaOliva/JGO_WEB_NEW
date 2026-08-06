@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (Imagen con Tooltip)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Ejercicios de Matemáticas: Bloques de Sumas</h1>
+   
+    <div class="exercise-list">
+       
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas sencillas (Nivel 1):<br>
+            a) $3 + 4$<br>b) $5 + 2$<br>c) $7 + 1$<br>d) $6 + 3$<br>e) $2 + 6$</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+             <div id="solution1" style="display: none;">
+              <p><strong>Solución Ejercicio 1:</strong></p>
+              <p>a) $3 + 4 = 7$<br>b) $5 + 2 = 7$<br>c) $7 + 1 = 8$<br>d) $6 + 3 = 9$<br>e) $2 + 6 = 8$</p>
+           </div>               
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas de dos dígitos sin llevadas (Nivel 2):<br>
+            a) $23 + 14$<br>b) $41 + 35$<br>c) $52 + 26$<br>d) $17 + 72$<br>e) $64 + 31$</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+             <div id="solution2" style="display: none;">
+              <p><strong>Solución Ejercicio 2:</strong></p>
+              <p>
+              a) $\begin{array}{r} 23 \\ + 14 \\ \hline 37 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 41 \\ + 35 \\ \hline 76 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 52 \\ + 26 \\ \hline 78 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 17 \\ + 72 \\ \hline 89 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 64 \\ + 31 \\ \hline 95 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas con llevadas (Nivel 3):<br>
+            a) $48 + 25$<br>b) $67 + 19$<br>c) $56 + 38$<br>d) $75 + 46$<br>e) $89 + 23$</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution3" style="display: none;">
+              <p><strong>Solución Ejercicio 3:</strong></p>
+              <p>
+              a) $\begin{array}{r} 48 \\ + 25 \\ \hline 73 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 67 \\ + 19 \\ \hline 86 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 56 \\ + 38 \\ \hline 94 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 75 \\ + 46 \\ \hline 121 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 89 \\ + 23 \\ \hline 112 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas sencillas (Nivel 1):<br>
+            a) $8 + 1$<br>b) $4 + 4$<br>c) $9 + 0$<br>d) $5 + 5$<br>e) $3 + 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution4" style="display: none;">
+              <p><strong>Solución Ejercicio 4:</strong></p>
+              <p>a) $8 + 1 = 9$<br>b) $4 + 4 = 8$<br>c) $9 + 0 = 9$<br>d) $5 + 5 = 10$<br>e) $3 + 5 = 8$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas de tres dígitos sin llevadas (Nivel 2):<br>
+            a) $123 + 312$<br>b) $405 + 182$<br>c) $251 + 534$<br>d) $612 + 275$<br>e) $730 + 149$</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution5" style="display: none;">
+              <p><strong>Solución Ejercicio 5:</strong></p>
+              <p>
+              a) $\begin{array}{r} 123 \\ + 312 \\ \hline 435 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 405 \\ + 182 \\ \hline 587 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 251 \\ + 534 \\ \hline 785 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 612 \\ + 275 \\ \hline 887 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 730 \\ + 149 \\ \hline 879 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas de tres dígitos con llevadas (Nivel 3):<br>
+            a) $347 + 285$<br>b) $569 + 174$<br>c) $486 + 375$<br>d) $298 + 415$<br>e) $657 + 286$</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution6" style="display: none;">
+              <p><strong>Solución Ejercicio 6:</strong></p>
+              <p>
+              a) $\begin{array}{r} 347 \\ + 285 \\ \hline 632 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 569 \\ + 174 \\ \hline 743 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 486 \\ + 375 \\ \hline 861 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 298 \\ + 415 \\ \hline 713 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 657 \\ + 286 \\ \hline 943 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas con paso de decena (Nivel 1):<br>
+            a) $7 + 5$<br>b) $8 + 4$<br>c) $9 + 6$<br>d) $6 + 8$<br>e) $9 + 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution7" style="display: none;">
+              <p><strong>Solución Ejercicio 7:</strong></p>
+              <p>a) $7 + 5 = 12$<br>b) $8 + 4 = 12$<br>c) $9 + 6 = 15$<br>d) $6 + 8 = 14$<br>e) $9 + 9 = 18$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas combinadas sin llevadas (Nivel 2):<br>
+            a) $14 + 81$<br>b) $32 + 55$<br>c) $104 + 73$<br>d) $210 + 68$<br>e) $423 + 51$</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution8" style="display: none;">
+              <p><strong>Solución Ejercicio 8:</strong></p>
+              <p>
+              a) $\begin{array}{r} 14 \\ + 81 \\ \hline 95 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 32 \\ + 55 \\ \hline 87 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 104 \\ + 73 \\ \hline 177 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 210 \\ + 68 \\ \hline 278 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 423 \\ + 51 \\ \hline 474 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas de tres sumandos (Nivel 3):<br>
+            a) $15 + 27 + 34$<br>b) $42 + 18 + 26$<br>c) $55 + 19 + 12$<br>d) $63 + 29 + 41$<br>e) $71 + 36 + 45$</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution9" style="display: none;">
+              <p><strong>Solución Ejercicio 9:</strong></p>
+              <p>
+              a) $\begin{array}{r} 15 \\ 27 \\ + 34 \\ \hline 76 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 42 \\ 18 \\ + 26 \\ \hline 86 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 55 \\ 19 \\ + 12 \\ \hline 86 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 63 \\ 29 \\ + 41 \\ \hline 133 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 71 \\ 36 \\ + 45 \\ \hline 152 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Resuelve las siguientes adiciones básicas (Nivel 1):<br>
+            a) $1 + 9$<br>b) $2 + 8$<br>c) $3 + 7$<br>d) $4 + 6$<br>e) $5 + 0$</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution10" style="display: none;">
+              <p><strong>Solución Ejercicio 10:</strong></p>
+              <p>a) $1 + 9 = 10$<br>b) $2 + 8 = 10$<br>c) $3 + 7 = 10$<br>d) $4 + 6 = 10$<br>e) $5 + 0 = 5$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas de cuatro dígitos sin llevadas (Nivel 2):<br>
+            a) $1023 + 2341$<br>b) $4512 + 1325$<br>c) $5104 + 3782$<br>d) $6230 + 1547$<br>e) $7115 + 2642$</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution11" style="display: none;">
+              <p><strong>Solución Ejercicio 11:</strong></p>
+              <p>
+              a) $\begin{array}{r} 1023 \\ + 2341 \\ \hline 3364 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 4512 \\ + 1325 \\ \hline 5837 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 5104 \\ + 3782 \\ \hline 8886 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 6230 \\ + 1547 \\ \hline 7777 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 7115 \\ + 2642 \\ \hline 9757 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de sumas de cuatro dígitos con llevadas (Nivel 3):<br>
+            a) $2845 + 1378$<br>b) $4692 + 2539$<br>c) $5718 + 3495$<br>d) $6384 + 1756$<br>e) $7529 + 1883$</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution12" style="display: none;">
+              <p><strong>Solución Ejercicio 12:</strong></p>
+              <p>
+              a) $\begin{array}{r} 2845 \\ + 1378 \\ \hline 4223 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 4692 \\ + 2539 \\ \hline 7231 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 5718 \\ + 3495 \\ \hline 9213 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 6384 \\ + 1756 \\ \hline 8140 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 7529 \\ + 1883 \\ \hline 9412 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque sumando tres números pequeños (Nivel 1):<br>
+            a) $2 + 3 + 4$<br>b) $1 + 5 + 2$<br>c) $3 + 3 + 3$<br>d) $4 + 1 + 5$<br>e) $6 + 0 + 2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution13" style="display: none;">
+              <p><strong>Solución Ejercicio 13:</strong></p>
+              <p>a) $2 + 3 + 4 = 9$<br>b) $1 + 5 + 2 = 8$<br>c) $3 + 3 + 3 = 9$<br>d) $4 + 1 + 5 = 10$<br>e) $6 + 0 + 2 = 8$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque en línea sin llevadas (Nivel 2):<br>
+            a) $33 + 22$<br>b) $51 + 14$<br>c) $62 + 25$<br>d) $44 + 43$<br>e) $71 + 17$</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution14" style="display: none;">
+              <p><strong>Solución Ejercicio 14:</strong></p>
+              <p>a) $33 + 22 = 55$<br>b) $51 + 14 = 65$<br>c) $62 + 25 = 87$<br>d) $44 + 43 = 87$<br>e) $71 + 17 = 88$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Aplica cálculo rápido completando decenas (Nivel 3):<br>
+            a) $29 + 14$<br>b) $38 + 25$<br>c) $47 + 16$<br>d) $59 + 23$<br>e) $68 + 17$</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution15" style="display: none;">
+              <p><strong>Solución Ejercicio 15:</strong></p>
+              <p>a) $29 + 14 = 30 + 13 = 43$<br>b) $38 + 25 = 40 + 23 = 63$<br>c) $47 + 16 = 50 + 13 = 63$<br>d) $59 + 23 = 60 + 22 = 82$<br>e) $68 + 17 = 70 + 15 = 85$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque (Nivel 1):<br>
+            a) $7 + 2$<br>b) $4 + 5$<br>c) $1 + 8$<br>d) $6 + 2$<br>e) $3 + 6$</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution16" style="display: none;">
+              <p><strong>Solución Ejercicio 16:</strong></p>
+              <p>a) $7 + 2 = 9$<br>b) $4 + 5 = 9$<br>c) $1 + 8 = 9$<br>d) $6 + 2 = 8$<br>e) $3 + 6 = 9$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Resuelve las siguientes sumas de decenas completas (Nivel 2):<br>
+            a) $20 + 30$<br>b) $50 + 40$<br>c) $70 + 10$<br>d) $60 + 20$<br>e) $80 + 10$</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution17" style="display: none;">
+              <p><strong>Solución Ejercicio 17:</strong></p>
+              <p>a) $20 + 30 = 50$<br>b) $50 + 40 = 90$<br>c) $70 + 10 = 80$<br>d) $60 + 20 = 80$<br>e) $80 + 10 = 90$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Resuelve sumas de cuatro sumandos con múltiples llevadas (Nivel 3):<br>
+            a) $25 + 36 + 14 + 18$<br>b) $42 + 55 + 19 + 23$<br>c) $17 + 28 + 39 + 41$<br>d) $53 + 16 + 27 + 34$<br>e) $61 + 19 + 22 + 15$</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution18" style="display: none;">
+              <p><strong>Solución Ejercicio 18:</strong></p>
+              <p>
+              a) $\begin{array}{r} 25 \\ 36 \\ 14 \\ + 18 \\ \hline 93 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 42 \\ 55 \\ 19 \\ + 23 \\ \hline 139 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 17 \\ 28 \\ 39 \\ + 41 \\ \hline 125 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 53 \\ 16 \\ 27 \\ + 34 \\ \hline 130 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 61 \\ 19 \\ 22 \\ + 15 \\ \hline 117 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Suma de dobles idénticos (Nivel 1):<br>
+            a) $2 + 2$<br>b) $4 + 4$<br>c) $6 + 6$<br>d) $7 + 7$<br>e) $9 + 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution19" style="display: none;">
+              <p><strong>Solución Ejercicio 19:</strong></p>
+              <p>a) $2 + 2 = 4$<br>b) $4 + 4 = 8$<br>c) $6 + 6 = 12$<br>d) $7 + 7 = 14$<br>e) $9 + 9 = 18$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Resuelve sumas horizontales de centenas completas (Nivel 2):<br>
+            a) $100 + 400$<br>b) $200 + 500$<br>c) $300 + 300$<br>d) $600 + 200$<br>e) $700 + 100$</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution20" style="display: none;">
+              <p><strong>Solución Ejercicio 20:</strong></p>
+              <p>a) $100 + 400 = 500$<br>b) $200 + 500 = 700$<br>c) $300 + 300 = 600$<br>d) $600 + 200 = 800$<br>e) $700 + 100 = 800$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Resuelve sumas asimétricas con llevadas consecutivas (Nivel 3):<br>
+            a) $458 + 74$<br>b) $675 + 87$<br>c) $289 + 93$<br>d) $847 + 66$<br>e) $392 + 59$</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution21" style="display: none;">
+              <p><strong>Solución Ejercicio 21:</strong></p>
+              <p>
+              a) $\begin{array}{r} 458 \\ + 74 \\ \hline 532 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 675 \\ + 87 \\ \hline 762 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 289 \\ + 93 \\ \hline 382 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 847 \\ + 66 \\ \hline 913 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 392 \\ + 59 \\ \hline 451 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Suma de tres números de un dígito (Nivel 1):<br>
+            a) $5 + 1 + 3$<br>b) $2 + 4 + 2$<br>c) $6 + 1 + 1$<br>d) $3 + 0 + 5$<br>e) $7 + 2 + 0$</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution22" style="display: none;">
+              <p><strong>Solución Ejercicio 22:</strong></p>
+              <p>a) $5 + 1 + 3 = 9$<br>b) $2 + 4 + 2 = 8$<br>c) $6 + 1 + 1 = 8$<br>d) $3 + 0 + 5 = 8$<br>e) $7 + 2 + 0 = 9$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Resuelve sumando unidades a decenas sin llevadas (Nivel 2):<br>
+            a) $21 + 7$<br>b) $43 + 5$<br>c) $62 + 6$<br>d) $84 + 3$<br>e) $95 + 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution23" style="display: none;">
+              <p><strong>Solución Ejercicio 23:</strong></p>
+              <p>a) $21 + 7 = 28$<br>b) $43 + 5 = 48$<br>c) $62 + 6 = 68$<br>d) $84 + 3 = 87$<br>e) $95 + 4 = 99$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Resuelve sumas con el número 99 aplicando redondeo mental (Nivel 3):<br>
+            a) $99 + 45$<br>b) $99 + 63$<br>c) $99 + 28$<br>d) $99 + 87$<br>e) $99 + 54$</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution24" style="display: none;">
+              <p><strong>Solución Ejercicio 24:</strong></p>
+              <p>a) $99 + 45 = 100 + 44 = 144$<br>b) $99 + 63 = 100 + 62 = 162$<br>c) $99 + 28 = 100 + 27 = 127$<br>d) $99 + 87 = 100 + 86 = 186$<br>e) $99 + 54 = 100 + 53 = 153$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Resuelve las siguientes operaciones básicas (Nivel 1):<br>
+            a) $4 + 2$<br>b) $3 + 3$<br>c) $2 + 5$<br>d) $1 + 6$<br>e) $7 + 1$</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution25" style="display: none;">
+              <p><strong>Solución Ejercicio 25:</strong></p>
+              <p>a) $4 + 2 = 6$<br>b) $3 + 3 = 6$<br>c) $2 + 5 = 7$<br>d) $1 + 6 = 7$<br>e) $7 + 1 = 8$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Resuelve las siguientes operaciones de tres cifras en línea (Nivel 2):<br>
+            a) $204 + 103$<br>b) $510 + 240$<br>c) $302 + 405$<br>d) $621 + 134$<br>e) $815 + 112$</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution26" style="display: none;">
+              <p><strong>Solución Ejercicio 26:</strong></p>
+              <p>a) $204 + 103 = 307$<br>b) $510 + 240 = 750$<br>c) $302 + 405 = 707$<br>d) $621 + 134 = 755$<br>e) $815 + 112 = 927$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Resuelve las siguientes sumas con el resultado en millares (Nivel 3):<br>
+            a) $850 + 250$<br>b) $670 + 430$<br>c) $920 + 180$<br>d) $550 + 650$<br>e) $780 + 340$</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution27" style="display: none;">
+              <p><strong>Solución Ejercicio 27:</strong></p>
+              <p>
+              a) $\begin{array}{r} 850 \\ + 250 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 670 \\ + 430 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 920 \\ + 180 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 550 \\ + 650 \\ \hline 1200 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 780 \\ + 340 \\ \hline 1120 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Resuelve sumas con paso de decena del número 8 (Nivel 1):<br>
+            a) $8 + 3$<br>b) $8 + 5$<br>c) $8 + 7$<br>d) $8 + 6$<br>e) $8 + 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution28" style="display: none;">
+              <p><strong>Solución Ejercicio 28:</strong></p>
+              <p>a) $8 + 3 = 11$<br>b) $8 + 5 = 13$<br>c) $8 + 7 = 15$<br>d) $8 + 6 = 14$<br>e) $8 + 9 = 17$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Resuelve sumas de números gemelos de dos dígitos sin llevadas (Nivel 2):<br>
+            a) $22 + 22$<br>b) $33 + 33$<br>c) $44 + 44$<br>d) $11 + 11$<br>e) $24 + 24$</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution29" style="display: none;">
+              <p><strong>Solución Ejercicio 29:</strong></p>
+              <p>a) $22 + 22 = 44$<br>b) $33 + 33 = 66$<br>c) $44 + 44 = 88$<br>d) $11 + 11 = 22$<br>e) $24 + 24 = 48$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Resuelve las siguientes sumas de tres dígitos con dobles llevadas (Nivel 3):<br>
+            a) $378 + 456$<br>b) $269 + 574$<br>c) $485 + 237$<br>d) $197 + 685$<br>e) $586 + 279$</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution30" style="display: none;">
+              <p><strong>Solución Ejercicio 30:</strong></p>
+              <p>
+              a) $\begin{array}{r} 378 \\ + 456 \\ \hline 834 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 269 \\ + 574 \\ \hline 843 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 485 \\ + 237 \\ \hline 722 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 197 \\ + 685 \\ \hline 882 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 586 \\ + 279 \\ \hline 865 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">31.</span>
+            <p class="exercise-statement">Suma de un número y su consecutivo (Nivel 1):<br>
+            a) $3 + 4$<br>b) $5 + 6$<br>c) $2 + 3$<br>d) $7 + 8$<br>e) $4 + 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution31">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution31" style="display: none;">
+              <p><strong>Solución Ejercicio 31:</strong></p>
+              <p>a) $3 + 4 = 7$<br>b) $5 + 6 = 11$<br>c) $2 + 3 = 5$<br>d) $7 + 8 = 15$<br>e) $4 + 5 = 9$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">32.</span>
+            <p class="exercise-statement">Suma de números capicúas sin llevadas (Nivel 2):<br>
+            a) $121 + 212$<br>b) $343 + 111$<br>c) $505 + 232$<br>d) $414 + 151$<br>e) $626 + 131$</p>
+            <div class="solution-trigger-container" data-solution-id="solution32">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution32" style="display: none;">
+              <p><strong>Solución Ejercicio 32:</strong></p>
+              <p>
+              a) $\begin{array}{r} 121 \\ + 212 \\ \hline 333 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 343 \\ + 111 \\ \hline 454 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 505 \\ + 232 \\ \hline 737 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 414 \\ + 151 \\ \hline 565 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 626 \\ + 131 \\ \hline 757 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">33.</span>
+            <p class="exercise-statement">Resuelve sumas de cinco números en columna (Nivel 3):<br>
+            a) $12 + 15 + 18 + 21 + 14$<br>b) $23 + 11 + 34 + 16 + 25$<br>c) $40 + 15 + 22 + 13 + 17$<br>d) $31 + 29 + 12 + 18 + 24$<br>e) $16 + 26 + 36 + 10 + 12$</p>
+            <div class="solution-trigger-container" data-solution-id="solution33">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution33" style="display: none;">
+              <p><strong>Solución Ejercicio 33:</strong></p>
+              <p>
+              a) $\begin{array}{r} 12 \\ 15 \\ 18 \\ 21 \\ + 14 \\ \hline 80 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 23 \\ 11 \\ 34 \\ 16 \\ + 25 \\ \hline 109 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 40 \\ 15 \\ 22 \\ 13 \\ + 17 \\ \hline 107 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 31 \\ 29 \\ 12 \\ 18 \\ + 24 \\ \hline 114 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 16 \\ 26 \\ 36 \\ 10 \\ + 12 \\ \hline 100 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">34.</span>
+            <p class="exercise-statement">Resuelve con la propiedad del elemento neutro (Nivel 1):<br>
+            a) $12 + 0$<br>b) $0 + 45$<br>c) $78 + 0$<br>d) $0 + 99$<br>e) $150 + 0$</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution34" style="display: none;">
+              <p><strong>Solución Ejercicio 34:</strong></p>
+              <p>a) $12 + 0 = 12$<br>b) $0 + 45 = 45$<br>c) $78 + 0 = 78$<br>d) $0 + 99 = 99$<br>e) $150 + 0 = 150$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">35.</span>
+            <p class="exercise-statement">Suma de números de tres cifras terminados en cero sin llevadas (Nivel 2):<br>
+            a) $130 + 220$<br>b) $410 + 350$<br>c) $540 + 120$<br>d) $620 + 260$<br>e) $730 + 150$</p>
+            <div class="solution-trigger-container" data-solution-id="solution35">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution35" style="display: none;">
+              <p><strong>Solución Ejercicio 35:</strong></p>
+              <p>
+              a) $\begin{array}{r} 130 \\ + 220 \\ \hline 350 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 410 \\ + 350 \\ \hline 760 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 540 \\ + 120 \\ \hline 660 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 620 \\ + 260 \\ \hline 880 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 730 \\ + 150 \\ \hline 880 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">36.</span>
+            <p class="exercise-statement">Resuelve sumas de grandes bloques con números de cinco cifras (Nivel 3):<br>
+            a) $12500 + 13200$<br>b) $24600 + 15800$<br>c) $35150 + 22950$<br>d) $47800 + 12400$<br>e) $59900 + 11100$</p>
+            <div class="solution-trigger-container" data-solution-id="solution36">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution36" style="display: none;">
+              <p><strong>Solución Ejercicio 36:</strong></p>
+              <p>
+              a) $\begin{array}{r} 12500 \\ + 13200 \\ \hline 25700 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 24600 \\ + 15800 \\ \hline 40400 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 35150 \\ + 22950 \\ \hline 58100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 47800 \\ + 12400 \\ \hline 60200 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 59900 \\ + 11100 \\ \hline 71000 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">37.</span>
+            <p class="exercise-statement">Suma de números en progresión (Nivel 1):<br>
+            a) $1 + 2 + 3$<br>b) $2 + 3 + 4$<br>c) $3 + 4 + 5$<br>d) $4 + 5 + 6$<br>e) $5 + 6 + 7$</p>
+            <div class="solution-trigger-container" data-solution-id="solution37">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution37" style="display: none;">
+              <p><strong>Solución Ejercicio 37:</strong></p>
+              <p>a) $1 + 2 + 3 = 6$<br>b) $2 + 3 + 4 = 9$<br>c) $3 + 4 + 5 = 12$<br>d) $4 + 5 + 6 = 15$<br>e) $5 + 6 + 7 = 18$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">38.</span>
+            <p class="exercise-statement">Suma de unidades a números de tres cifras sin llevadas (Nivel 2):<br>
+            a) $142 + 5$<br>b) $253 + 4$<br>c) $361 + 7$<br>d) $480 + 9$<br>e) $574 + 3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution38">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution38" style="display: none;">
+              <p><strong>Solución Ejercicio 38:</strong></p>
+              <p>a) $142 + 5 = 147$<br>b) $253 + 4 = 257$<br>c) $361 + 7 = 368$<br>d) $480 + 9 = 489$<br>e) $574 + 3 = 577$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">39.</span>
+            <p class="exercise-statement">Cálculo rápido completando a la centena superior (Nivel 3):<br>
+            a) $198 + 45$<br>b) $297 + 36$<br>c) $395 + 18$<br>d) $499 + 62$<br>e) $596 + 27$</p>
+            <div class="solution-trigger-container" data-solution-id="solution39">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution39" style="display: none;">
+              <p><strong>Solución Ejercicio 39:</strong></p>
+              <p>a) $198 + 45 = 200 + 43 = 243$<br>b) $297 + 36 = 300 + 33 = 333$<br>c) $395 + 18 = 400 + 13 = 413$<br>d) $499 + 62 = 500 + 61 = 561$<br>e) $596 + 27 = 600 + 23 = 623$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">40.</span>
+            <p class="exercise-statement">Suma de números impares pequeños (Nivel 1):<br>
+            a) $1 + 3$<br>b) $3 + 5$<br>c) $5 + 7$<br>d) $7 + 9$<br>e) $1 + 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution40">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution40" style="display: none;">
+              <p><strong>Solución Ejercicio 40:</strong></p>
+              <p>a) $1 + 3 = 4$<br>b) $3 + 5 = 8$<br>c) $5 + 7 = 12$<br>d) $7 + 9 = 16$<br>e) $1 + 5 = 6$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">41.</span>
+            <p class="exercise-statement">Suma en línea de decenas a centenas sin llevadas (Nivel 2):<br>
+            a) $200 + 35$<br>b) $400 + 72$<br>c) $600 + 18$<br>d) $800 + 44$<br>e) $900 + 91$</p>
+            <div class="solution-trigger-container" data-solution-id="solution41">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution41" style="display: none;">
+              <p><strong>Solución Ejercicio 41:</strong></p>
+              <p>a) $200 + 35 = 235$<br>b) $400 + 72 = 472$<br>c) $600 + 18 = 618$<br>d) $800 + 44 = 844$<br>e) $900 + 91 = 991$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">42.</span>
+            <p class="exercise-statement">Suma de tres cifras con llevada exclusiva en la centena (Nivel 3):<br>
+            a) $650 + 410$<br>b) $730 + 320$<br>c) $840 + 250$<br>d) $910 + 140$<br>e) $570 + 510$</p>
+            <div class="solution-trigger-container" data-solution-id="solution42">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution42" style="display: none;">
+              <p><strong>Solución Ejercicio 42:</strong></p>
+              <p>
+              a) $\begin{array}{r} 650 \\ + 410 \\ \hline 1060 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 730 \\ + 320 \\ \hline 1050 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 840 \\ + 250 \\ \hline 1090 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 910 \\ + 140 \\ \hline 1050 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 570 \\ + 510 \\ \hline 1080 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">43.</span>
+            <p class="exercise-statement">Suma de números pares pequeños (Nivel 1):<br>
+            a) $2 + 4$<br>b) $4 + 6$<br>c) $6 + 8$<br>d) $2 + 8$<br>e) $4 + 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution43">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution43" style="display: none;">
+              <p><strong>Solución Ejercicio 43:</strong></p>
+              <p>a) $2 + 4 = 6$<br>b) $4 + 6 = 10$<br>c) $6 + 8 = 14$<br>d) $2 + 8 = 10$<br>e) $4 + 8 = 12$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">44.</span>
+            <p class="exercise-statement">Suma de números alternos de dos dígitos sin llevadas (Nivel 2):<br>
+            a) $13 + 24$<br>b) $35 + 42$<br>c) $57 + 21$<br>d) $26 + 63$<br>e) $48 + 11$</p>
+            <div class="solution-trigger-container" data-solution-id="solution44">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution44" style="display: none;">
+              <p><strong>Solución Ejercicio 44:</strong></p>
+              <p>
+              a) $\begin{array}{r} 13 \\ + 24 \\ \hline 37 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 35 \\ + 42 \\ \hline 77 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 57 \\ + 21 \\ \hline 78 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 26 \\ + 63 \\ \hline 89 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 48 \\ + 11 \\ \hline 59 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">45.</span>
+            <p class="exercise-statement">Sumas encadenadas de números crecientes (Nivel 3):<br>
+            a) $10 + 20 + 30 + 40$<br>b) $15 + 25 + 35 + 45$<br>c) $12 + 22 + 32 + 42$<br>d) $5 + 15 + 25 + 35$<br>e) $11 + 21 + 31 + 41$</p>
+            <div class="solution-trigger-container" data-solution-id="solution45">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution45" style="display: none;">
+              <p><strong>Solución Ejercicio 45:</strong></p>
+              <p>
+              a) $\begin{array}{r} 10 \\ 20 \\ 30 \\ + 40 \\ \hline 100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 15 \\ 25 \\ 35 \\ + 45 \\ \hline 120 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 12 \\ 22 \\ 32 \\ + 42 \\ \hline 108 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 5 \\ 15 \\ 25 \\ + 35 \\ \hline 80 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 11 \\ 21 \\ 31 \\ + 41 \\ \hline 104 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">46.</span>
+            <p class="exercise-statement">Suma de números pequeños con resultado menor de 5 (Nivel 1):<br>
+            a) $1 + 1$<br>b) $2 + 1$<br>c) $1 + 3$<br>d) $2 + 2$<br>e) $3 + 1$</p>
+            <div class="solution-trigger-container" data-solution-id="solution46">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution46" style="display: none;">
+              <p><strong>Solución Ejercicio 46:</strong></p>
+              <p>a) $1 + 1 = 2$<br>b) $2 + 1 = 3$<br>c) $1 + 3 = 4$<br>d) $2 + 2 = 4$<br>e) $3 + 1 = 4$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">47.</span>
+            <p class="exercise-statement">Suma de tres dígitos intercalando el cero sin llevadas (Nivel 2):<br>
+            a) $201 + 304$<br>b) $402 + 107$<br>c) $505 + 203$<br>d) $608 + 101$<br>e) $704 + 205$</p>
+            <div class="solution-trigger-container" data-solution-id="solution47">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution47" style="display: none;">
+              <p><strong>Solución Ejercicio 47:</strong></p>
+              <p>
+              a) $\begin{array}{r} 201 \\ + 304 \\ \hline 505 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 402 \\ + 107 \\ \hline 509 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 505 \\ + 203 \\ \hline 708 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 608 \\ + 101 \\ \hline 709 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 704 \\ + 205 \\ \hline 909 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">48.</span>
+            <p class="exercise-statement">Suma de tres cifras con llevada en el último orden (Nivel 3):<br>
+            a) $950 + 150$<br>b) $860 + 240$<br>c) $770 + 330$<br>d) $680 + 420$<br>e) $590 + 510$</p>
+            <div class="solution-trigger-container" data-solution-id="solution48">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution48" style="display: none;">
+              <p><strong>Solución Ejercicio 48:</strong></p>
+              <p>
+              a) $\begin{array}{r} 950 \\ + 150 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              b) $\begin{array}{r} 860 \\ + 240 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              c) $\begin{array}{r} 770 \\ + 330 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              d) $\begin{array}{r} 680 \\ + 420 \\ \hline 1100 \end{array}$ &nbsp;&nbsp;&nbsp;&nbsp;
+              e) $\begin{array}{r} 590 \\ + 510 \\ \hline 1100 \end{array}$
+              </p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">49.</span>
+            <p class="exercise-statement">Sumas sencillas complementarias a 6 (Nivel 1):<br>
+            a) $5 + 1$<br>b) $4 + 2$<br>c) $3 + 3$<br>d) $2 + 4$<br>e) $1 + 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution49">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution49" style="display: none;">
+              <p><strong>Solución Ejercicio 49:</strong></p>
+              <p>a) $5 + 1 = 6$<br>b) $4 + 2 = 6$<br>c) $3 + 3 = 6$<br>d) $2 + 4 = 6$<br>e) $1 + 5 = 6$</p>
+           </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">50.</span>
+            <p class="exercise-statement">Resuelve en línea números ordenados de dos dígitos sin llevadas (Nivel 2):<br>
+            a) $12 + 34$<br>b) $56 + 12$<br>c) $34 + 54$<br>d) $23 + 45$<br>e) $71 + 22$</p>
+            <div class="solution-trigger-container" data-solution-id="solution50">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution50" style="display: none;">
+              <p><strong>Solución Ejercicio 50:</strong></p>
+              <p>a) $12 + 34 = 46$<br>b) $56 + 12 = 68$<br>c) $34 + 54 = 88$<br>d) $23 + 45 = 68$<br>e) $71 + 22 = 93$</p>
+           </div> 
+        </div>
+
+      </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>
