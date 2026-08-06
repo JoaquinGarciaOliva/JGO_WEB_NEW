@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (MathJax) - Criterios de Divisibilidad</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+   
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],               
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Criterios de Divisibilidad (6, 10 y 15) con Soluciones</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Determina si el número \( 84 \) es divisible entre 6 aplicando sus criterios básicos.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: El número termina en 4, que es una cifra par. Por tanto, es divisible entre 2.
+                        </li>
+                        <li>Comprobamos el criterio del 3: Sumamos sus dígitos:
+                            $$ 8 + 4 = 12 $$
+                            Como 12 es un múltiplo de 3 (\(3 \times 4 = 12\)), es divisible entre 3.
+                        </li>
+                        <li>Conclusión: Al cumplir simultáneamente ambos criterios, \( 84 \) es divisible entre 6:
+                            $$ 84 \div 6 = 14 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica las reglas de divisibilidad para comprobar si el número \( 234 \) se puede dividir exactamente entre 6.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: Su última cifra es 4 (par), lo que significa que es divisible entre 2.
+                        </li>
+                        <li>Comprobamos el criterio del 3: Sumamos la totalidad de sus cifras:
+                            $$ 2 + 3 + 4 = 9 $$
+                            Como 9 es divisible entre 3, el número completo también lo es.
+                        </li>
+                        <li>Conclusión: Al ser divisible por 2 y por 3, el número \( 234 \) es divisible entre 6:
+                            $$ 234 \div 6 = 39 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Analiza si el número entero \( 1620 \) cumple el criterio de divisibilidad del 6.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: Termina en 0, que cumple la condición de ser cifra par. Es divisible entre 2.
+                        </li>
+                        <li>Comprobamos el criterio del 3: Realizamos la suma digital:
+                            $$ 1 + 6 + 2 + 0 = 9 $$
+                            El resultado es múltiplo de 3, por lo que pasa la segunda prueba.
+                        </li>
+                        <li>Conclusión: Dado que satisface de forma simultánea los dos criterios de los factores primos, \( 1620 \) es divisible entre 6:
+                            $$ 1620 \div 6 = 270 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica mediante sus propiedades fundamentales si \( 408 \) es divisible entre 6.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: Su última cifra es 8, que es un número par. Pasa la prueba de divisibilidad del 2.
+                        </li>
+                        <li>Comprobamos el criterio del 3: Efectuamos la suma de sus componentes numéricos:
+                            $$ 4 + 0 + 8 = 12 $$
+                            Como 12 es divisible entre 3, el número aprueba la condición.
+                        </li>
+                        <li>Conclusión: Al resultar divisible tanto por 2 como por 3, concluimos que \( 408 \) es divisible entre 6:
+                            $$ 408 \div 6 = 68 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Averigua si el número \( 5316 \) se puede dividir de manera exacta entre 6.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: Su dígito de las unidades es 6. Al ser par, es divisible entre 2.
+                        </li>
+                        <li>Comprobamos el criterio del 3: Sumamos los dígitos de su estructura posicional:
+                            $$ 5 + 3 + 1 + 6 = 15 $$
+                            Dado que 15 es un múltiplo exacto de 3 (\(3 \times 5 = 15\)), cumple la regla del 3.
+                        </li>
+                        <li>Conclusión: Al validar ambos criterios individuales, determinamos que \( 5316 \) es divisible entre 6:
+                            $$ 5316 \div 6 = 886 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 90 \) es divisible entre 10 aplicando sus criterios correspondientes.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2 y del 5: Observamos su última cifra. Termina en 0.
+                        </li>
+                        <li>Análisis conceptual: Al terminar en 0, es una cifra par (divisible entre 2) y a su vez cumple con la regla de terminar en 0 o 5 (divisible entre 5).
+                        </li>
+                        <li>Conclusión: Al unificar las condiciones del 2 y del 5 en la terminación obligatoria en cero, \( 90 \) es divisible entre 10:
+                            $$ 90 \div 10 = 9 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina si el número \( 750 \) cumple con la condición general para ser divisible entre 10.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: Su última cifra es 0, por lo que es un número par y divisible entre 2.
+                        </li>
+                        <li>Comprobamos el criterio del 5: Su última cifra es 0, lo que valida que es divisible entre 5.
+                        </li>
+                        <li>Conclusión: Como finaliza en la cifra 0, satisface ambas propiedades a la vez. Por lo tanto, \( 750 \) es divisible entre 10:
+                            $$ 750 \div 10 = 75 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica si el número \( 3200 \) se puede dividir exactamente entre 10.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Análisis de la última cifra: Evaluamos la posición de las unidades del número original, observando que es un 0.
+                        </li>
+                        <li>Validación: El dígito 0 cumple el criterio del 2 (es par) y el criterio del 5 (termina en 0 o 5).
+                        </li>
+                        <li>Conclusión: Cualquier número que termine en cero es divisible entre 10 de forma directa. Así, \( 3200 \) es divisible entre 10:
+                            $$ 3200 \div 10 = 320 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Aplica las reglas de divisibilidad del 2 y del 5 para demostrar si \( 8410 \) es divisible entre 10.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 2: Termina en 0, por lo tanto la cifra es par y el número es divisible por 2.
+                        </li>
+                        <li>Comprobamos el criterio del 5: La cifra final es 0, lo que garantiza que es divisible por 5.
+                        </li>
+                        <li>Conclusión: Al confirmarse ambas condiciones mediante su terminación en 0, el número \( 8410 \) es divisible entre 10:
+                            $$ 8410 \div 10 = 841 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Analiza el número \( 12690 \) para determinar si admite una división exacta entre 10.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Análisis de su última cifra: El número presenta un 0 en el lugar de las unidades.
+                        </li>
+                        <li>Comprobación teórica: Terminar en cero asegura que el número es par (divisible entre 2) y que pertenece al patrón de la tabla del 5 (divisible entre 5).
+                        </li>
+                        <li>Conclusión: Al unificar los dos criterios, se confirma que \( 12690 \) es divisible entre 10:
+                            $$ 12690 \div 10 = 1269 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Comprueba si el número \( 135 \) es divisible entre 15 aplicando sus reglas combinadas.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 3: Sumamos todos sus dígitos constituyentes:
+                            $$ 1 + 3 + 5 = 9 $$
+                            Como 9 es un múltiplo de 3 (\(3 \times 3 = 9\)), el número es divisible entre 3.
+                        </li>
+                        <li>Comprobamos el criterio del 5: Revisamos la cifra de las unidades. El número termina en 5, por lo que es divisible entre 5.
+                        </li>
+                        <li>Conclusión: Al cumplir con éxito los criterios del 3 y del 5 simultáneamente, el número \( 135 \) es divisible entre 15:
+                            $$ 135 \div 15 = 9 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina mediante criterios aritméticos si el número \( 420 \) es divisible entre 15.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 3: Sumamos los dígitos que componen la cifra:
+                            $$ 4 + 2 + 0 = 6 $$
+                            El resultado es 6, el cual pertenece a la tabla del 3. Por tanto, es divisible entre 3.
+                        </li>
+                        <li>Comprobamos el criterio del 5: Analizamos la última cifra de la derecha. Termina en 0, cumpliendo el requisito del 5.
+                        </li>
+                        <li>Conclusión: Al satisfacer ambas reglas de manera conjunta, afirmamos que \( 420 \) es divisible entre 15:
+                            $$ 420 \div 15 = 28 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Averigua si el número compuesto \( 915 \) cumple el criterio para ser divisible entre 15.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 3: Efectuamos la suma digital correspondiente:
+                            $$ 9 + 1 + 5 = 15 $$
+                            Puesto que 15 es múltiplo de 3 (\(3 \times 5 = 15\)), el criterio se valida correctamente.
+                        </li>
+                        <li>Comprobamos el criterio del 5: Nos fijamos en las unidades del número original. Termina en 5, lo que aprueba la condición del 5.
+                        </li>
+                        <li>Conclusión: Al responder positivamente a las exigencias del 3 y del 5, determinamos que \( 915 \) es divisible entre 15:
+                            $$ 915 \div 15 = 61 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Verifica si el número \( 2130 \) es divisible exactamente entre 15.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 3: Calculamos la suma de sus unidades relativas:
+                            $$ 2 + 1 + 3 + 0 = 6 $$
+                            Como 6 es un múltiplo exacto de 3, el número es divisible por 3.
+                        </li>
+                        <li>Comprobamos el criterio del 5: Observamos el dígito final. El número termina en 0, por lo que es divisible por 5.
+                        </li>
+                        <li>Conclusión: Al resultar divisible de forma paralela por 3 y por 5, el valor \( 2130 \) es divisible entre 15:
+                            $$ 2130 \div 15 = 142 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Analiza si el número de cuatro cifras \( 3450 \) admite una división exacta al dividirse entre 15.
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Comprobamos el criterio del 3: Ejecutamos la suma analítica de sus componentes:
+                            $$ 3 + 4 + 5 + 0 = 12 $$
+                            Dado que 12 es divisible entre 3, el número completo cumple la propiedad.
+                        </li>
+                        <li>Comprobamos el criterio del 5: Estudiamos la cifra terminal del extremo derecho. Termina en 0, lo que confirma su divisibilidad entre 5.
+                        </li>
+                        <li>Conclusión: Debido a que cumple las condiciones de ambos factores primos (3 y 5), aseguramos que \( 3450 \) es divisible entre 15:
+                            $$ 3450 \div 15 = 230 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
