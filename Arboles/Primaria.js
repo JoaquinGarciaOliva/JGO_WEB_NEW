@@ -82,10 +82,10 @@
        imagen="Imagenes/Primaria/hoja_red.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'3.2.')">
 
