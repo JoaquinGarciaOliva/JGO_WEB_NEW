@@ -1,7 +1,7 @@
 function cambiarImagen(element) {
     let img = element;        
-    const imagen1 = selectedcarpeta.getAttribute('imagen'); // Ejemplo: "img/foto1.jpg"
-    const imagen2 = selectedcarpeta.getAttribute('imagen2'); // Ejemplo: "foto2.jpg"
+    const imagen1 = selectedcarpeta.getAttribute('imagen');   // Ejemplo: "img/foto1.jpg"
+    const imagen2 = selectedcarpeta.getAttribute('imagen2');  // Ejemplo: "foto2.jpg"
 
     // Función interna para extraer solo el nombre del archivo (ej: "foto.jpg")
     const extraerNombre = (ruta) => {
@@ -18,23 +18,46 @@ function cambiarImagen(element) {
     if (nombreActual === nombreRef2) {  img.src = imagen1; }
 }
 
- function cambiarPropiedad(Codigosel) {
+
+function cambiarPropiedad(Codigosel) {
     const origen = document.getElementById(Codigosel);
     const Datossel = document.getElementById('DivHeader');
     
     if (!origen) return;
 
     // Lista de atributos a copiar
-    const atributos = ['Youtube', 'teoria', 'ejemplos', 'ejercicios'];
+    const atributos = ['Youtube', 'teoria', 'ejemplos', 'ejercicios', 'interactivo'];
     
-    atributos.forEach(attr => {
+    // Nombres concretos de los divs asociados a cada atributo (en el mismo orden)
+    const idsDivs = ['div-youtube', 'div-teoria', 'div-ejemplos', 'div-ejercicios', 'div-interactivo'];
+    
+    let primerVisible = null; // Guardará el número del primer div visible (1 a 5)
+
+    atributos.forEach((attr, index) => {             
         const valor = origen.getAttribute(attr) || '';
         Datossel.setAttribute(attr, valor);
+
+        // Obtenemos el div correspondiente
+        const divAsociado = document.getElementById(idsDivs[index]);
+
+        if (divAsociado) {
+            // Si tiene contenido (no está vacío), se muestra; si no, se oculta
+            if (valor.trim() !== '') {
+                divAsociado.style.display = ''; // O 'flex', 'grid', etc., según tu diseño
+                
+                // Si todavía no hemos encontrado ningún div visible, este es el primero
+                if (primerVisible === null) {
+                    primerVisible = index + 1; // Sumamos 1 porque el índice empieza en 0
+                }
+            } else {
+                divAsociado.style.display = 'none';
+            }
+        }
     });
 
-    Mostrar_Web(1); // Por defecto muestra video al hacer clic
-  }
-
+    // Ejecuta Mostrar_Web con el primer div visible o 1 por defecto si todos están vacíos
+    Mostrar_Web(primerVisible || 1);
+}
 
 function Mostrar_Web(Tiposel) {
     const Datossel = document.getElementById('DivHeader');
@@ -42,10 +65,11 @@ function Mostrar_Web(Tiposel) {
     
     // Mapeo de botones e iconos para evitar tantos "if"
     const configs = {
-        1: { attr: 'Youtube',    id: 'iconvideo',      img: 'play_video' },
-        2: { attr: 'teoria',     id: 'iconteoria',     img: 'teoria' },
-        3: { attr: 'ejemplos',   id: 'iconejemplos',   img: 'ejemplos' },
-        4: { attr: 'ejercicios', id: 'iconejercicios', img: 'ejercicios' }
+        1: { attr: 'Youtube',     id: 'iconvideo',       img: 'play_video' },
+        2: { attr: 'teoria',      id: 'iconteoria',      img: 'teoria' },
+        3: { attr: 'ejemplos',    id: 'iconejemplos',    img: 'ejemplos' },
+        4: { attr: 'ejercicios',  id: 'iconejercicios',  img: 'ejercicios' },
+        5: { attr: 'interactivo', id: 'iconinteractivo', img: 'ejerinteractivo' }
     };
 
     // Actualizar todos los iconos a su estado normal y el seleccionado a "down"
@@ -113,8 +137,52 @@ function Mostrar_Web(Tiposel) {
 
 
  
+ 
+//  ************************* seleccionarYDesplegarNodo ***************
 
-  
+function seleccionarYDesplegarNodo(nodoId) {
+    // 1. Buscar el elemento div del nodo por su ID exacto
+    const nodoDiv = document.getElementById(nodoId);
+    if (!nodoDiv) return;
+
+    // 2. Marcar visualmente como seleccionado (puedes adaptar la clase a tu CSS)
+    nodoDiv.classList.add('selected');
+
+    // 3. Desplegar los padres y cambiar sus iconos a imagen abierta
+    let elementoActual = nodoDiv.parentElement; // Esto es el <li>
+    
+    while (elementoActual) {
+        // Si el li contiene un ul oculto, lo mostramos
+        const ulOculto = elementoActual.querySelector(':scope > ul.hidden');
+        if (ulOculto) {
+            ulOculto.classList.remove('hidden');
+        }
+
+        // Si el elemento superior tiene un div desplegable, actualizamos su imagen a 'imagen2'
+        const divPadre = elementoActual.parentElement?.previousElementSibling;
+        if (divPadre && divPadre.hasAttribute('imagen2')) {
+            const imgPadre = divPadre.querySelector('.manImg');
+            const imgOpen = divPadre.getAttribute('imagen2');
+            if (imgPadre && imgOpen && imgOpen !== "Imagenes/") {
+                imgPadre.src = imgOpen;
+            }
+        }
+
+        // Subimos un nivel en el árbol del DOM
+        elementoActual = elementoActual.parentElement?.closest('li');
+    }
+
+    // 4. Si el propio nodo seleccionado es una carpeta y tiene hijos, lo abrimos también
+    const ulHijoPropio = nodoDiv.nextElementSibling;
+    if (ulHijoPropio && ulHijoPropio.tagName === 'UL') {
+        ulHijoPropio.classList.remove('hidden');
+        const imgPropia = nodoDiv.querySelector('.manImg');
+        const imgOpenPropia = nodoDiv.getAttribute('imagen2');
+        if (imgPropia && imgOpenPropia && imgOpenPropia !== "Imagenes/") {
+            imgPropia.src = imgOpenPropia;
+        }
+    }
+}
 
 
 
