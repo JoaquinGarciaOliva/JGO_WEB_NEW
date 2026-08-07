@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Uso - JGO WEB</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .help-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 0;
+            color: #64748b;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .button-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .button-card img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .button-card-content h3 {
+            margin: 0 0 4px 0;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .button-card-content p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: #475569;
+        }
+
+        .important-note {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .filter-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            background: #f8fafc;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .filter-item img {
+            width: 18px;
+            height: 18px;
+        }
+
+        ol {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="help-container">
+
+    <header>
+        <h1>Guía de Uso de la Web</h1>
+        <p>Aprende a navegar y aprovechar todos los recursos educativos disponibles.</p>
+    </header>
+
+    <!-- Paso 1: Selección de Contenido -->
+    <div class="section">
+        <h2>1. Estructura y Selección de Temas</h2>
+        <ol>
+            <li>En el <strong>panel izquierdo</strong> encontrarás el árbol de contenidos organizado por temas, capítulos y apartados.</li>
+            <li>Haz clic sobre cualquier <strong>nodo o tema</strong> para cargarlo. Los datos asociados al contenido seleccionado se actualizarán automáticamente.</li>
+            <li>Al seleccionar un tema, los botones con recursos disponibles aparecerán en la <strong>barra superior derecha</strong>.</li>
+        </ol>
+    </div>
+
+    <!-- Paso 2: Tipos de Recursos -->
+    <div class="section">
+        <h2>2. Recursos de la Cabecera Derecha</h2>
+        <p>Una vez seleccionado un tema, puedes alternar entre sus diferentes contenidos pulsando sobre los siguientes iconos:</p>
+        
+        <div class="grid-buttons">
+            
+            <div class="button-card">
+                <img src="../Imagenes/play_video.png" alt="Vídeo Explicativo">
+                <div class="button-card-content">
+                    <h3>Vídeo Explicativo</h3>
+                    <p>Muestra un vídeo explicativo detallado sobre la materia del nodo seleccionado.</p>
+                </div>
+            </div>
+
+            <div class="button-card">
+                <img src="../Imagenes/teoria.png" alt="Explicación Teoría">
+                <div class="button-card-content">
+                    <h3>Explicación Teórica</h3>
+                    <p>Acceso a apuntes, esquemas y conceptos teóricos fundamentales.</p>
+                </div>
+            </div>
+
+            <div class="button-card">
+                <img src="../Imagenes/ejemplos.png" alt="Ejemplos">
+                <div class="button-card-content">
+                    <h3>Ejemplos</h3>
+                    <p>Muestra ejercicios resueltos paso a paso para facilitar la comprensión.</p>
+                </div>
+            </div>
+
+            <div class="button-card">
+                <img src="../Imagenes/ejercicios.png" alt="Ejercicios Soluciones">
+                <div class="button-card-content">
+                    <h3>Ejercicios y Soluciones</h3>
+                    <p>Listado de problemas propuestos con sus correspondientes soluciones.</p>
+                </div>
+            </div>
+
+            <div class="button-card">
+                <img src="../Imagenes/ejerinteractivo.png" alt="Ejercicios Interactivos">
+                <div class="button-card-content">
+                    <h3>Ejercicios Interactivos</h3>
+                    <p>Actividades interactivas para practicar y autoevaluar tus conocimientos.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="important-note">
+            <strong> Importante:</strong> Si el nodo seleccionado no contiene alguno de estos materiales (por ejemplo, si no dispone de vídeo explicativo), el botón correspondiente <strong>se ocultará automáticamente</strong> de la barra superior.
+        </div>
+    </div>
+
+    <!-- Paso 3: Filtrado -->
+    <div class="section">
+        <h2>3. Filtros del Árbol (Cabecera Izquierda)</h2>
+        <p>En el panel del árbol de la izquierda dispones de flechas de colores para filtrar los contenidos según su nivel de prioridad:</p>
+        
+        <div class="filter-list">
+            <div class="filter-item">
+                <img src="../Imagenes/flecha_red.png" alt="Imprescindible">
+                <span><strong>Rojo:</strong> Imprescindible</span>
+            </div>
+            <div class="filter-item">
+                <img src="../Imagenes/flecha_blue.png" alt="Prioritario">
+                <span><strong>Azul:</strong> Prioritario</span>
+            </div>
+            <div class="filter-item">
+                <img src="../Imagenes/flecha_green.png" alt="Esencial">
+                <span><strong>Verde:</strong> Esencial</span>
+            </div>
+            <div class="filter-item">
+                <img src="../Imagenes/flecha_lila_down.png" alt="Profundizar">
+                <span><strong>Lila:</strong> Profundizar</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
