@@ -7,7 +7,7 @@
   <div class="folder"
        id="1."
        nivel="1"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/Primaria/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.1.Naturales_Suma_Video.mp4"
@@ -17,25 +17,25 @@
        interactivo="Temario/Interactivos/1.1.2.1.Naturales_Suma/3_sumandos/suma3_aprender.html"
        onclick="toggleVisibility2(this,'1.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/Primaria/hoja_green.png">
     <span style="display: none;">1.</span>
-    <span class="Arbol_Nombre_1">Suma</span>
+    <span class="Arbol_Nombre_2">Suma</span>
   </div></li>
  <li>
   <div class="folder"
        id="2."
        nivel="1"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/Primaria/hoja_blue.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.2.Naturales_Resta_Video.mp4"
        teoria="Temario/Matematicas/01_Números Naturales/1.1.2.2.Naturales_Resta_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.2.Naturales_Resta_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.2.Naturales_Resta_Ejercicios.html"
-       interactivo=""
+       interactivo="Temario/Interactivos/1.1.2.2.Naturales_Resta/resta_aprender.html"
        onclick="toggleVisibility2(this,'2.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/Primaria/hoja_blue.png">
     <span style="display: none;">2.</span>
     <span class="Arbol_Nombre_2">Resta. Prueba de la resta.</span>
   </div></li>
@@ -43,8 +43,8 @@
   <div class="folder"
        id="3."
        nivel="1"
-       imagen="Imagenes/arbol/capitulo12.png"
-       imagen2="Imagenes/arbol/capitulo12_open.png"
+       imagen="Imagenes/Primaria/carpeta.png"
+       imagen2="Imagenes/Primaria/carpeta_open.png"
        Tipo=""
        Youtube=""
        teoria=""
@@ -53,33 +53,33 @@
        interactivo=""
        onclick="toggleVisibility2(this,'3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/capitulo12.png">
+    <img  class="manImg" src="Imagenes/Primaria/carpeta.png">
     <span style="display: none;">3.</span>
     <span class="Arbol_Nombre_2">Multiplicación.</span>
   </div><ul  class="hidden">
  <li>
   <div class="tree-node"
-       id="3.1"
+       id="3.1."
        nivel="2"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/Primaria/hoja_yellow.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Video.mp4"
        teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Ejercicios.html"
-       interactivo=""
-       onclick="toggleVisibility2(this,'3.1')">
+       interactivo="Temario/Interactivos/1.1.2.3.1.Naturales_Multiplicar/Multiplicar_aprender.html"
+       onclick="toggleVisibility2(this,'3.1.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
-    <span style="display: none;">3.1</span>
+    <img  class="manImg" src="Imagenes/Primaria/hoja_yellow.png">
+    <span style="display: none;">3.1.</span>
     <span class="Arbol_Nombre_2">Genérica.</span>
   </div></li>
  <li>
   <div class="tree-node"
-       id="3.2"
+       id="3.2."
        nivel="2"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/Primaria/hoja_red.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube=""
@@ -87,17 +87,17 @@
        ejemplos=""
        ejercicios=""
        interactivo=""
-       onclick="toggleVisibility2(this,'3.2')">
+       onclick="toggleVisibility2(this,'3.2.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
-    <span style="display: none;">3.2</span>
+    <img  class="manImg" src="Imagenes/Primaria/hoja_red.png">
+    <span style="display: none;">3.2.</span>
     <span class="Arbol_Nombre_2">En línea.</span>
   </div></li>
  <li>
   <div class="tree-node"
        id="3.3."
        nivel="2"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/Primaria/hoja.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube=""
@@ -107,7 +107,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'3.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/Primaria/hoja.png">
     <span style="display: none;">3.3.</span>
     <span class="Arbol_Nombre_2">Por Potencias de 10.</span>
   </div></li></ul>
@@ -115,7 +115,7 @@
   <div class="folder"
        id="4."
        nivel="1"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/Primaria/hoja.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube=""
@@ -125,7 +125,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'4.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/Primaria/hoja.png">
     <span style="display: none;">4.</span>
     <span class="Arbol_Nombre_2">División. Prueba de la división.</span>
   </div></li></ul>`; 
