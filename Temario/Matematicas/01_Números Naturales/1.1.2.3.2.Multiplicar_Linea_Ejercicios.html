@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Soluciones (Imagen con Tooltip)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Ejercicios de Matemáticas: Multiplicaciones en Línea por Un Dígito</h1>
+   
+    <div class="exercise-list">
+       
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de multiplicaciones básicas (Nivel 1):<br>
+            a) $3 \times 2$<br>b) $4 \times 5$<br>c) $6 \times 3$<br>d) $7 \times 2$<br>e) $5 \times 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution1" style="display: none;">
+              <p><strong>Solución Ejercicio 1:</strong></p>
+              <p>a) $3 \times 2 = 6$<br>b) $4 \times 5 = 20$<br>c) $6 \times 3 = 18$<br>d) $7 \times 2 = 14$<br>e) $5 \times 5 = 25$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de multiplicaciones de dos dígitos sin llevadas (Nivel 2):<br>
+            a) $12 \times 3$<br>b) $21 \times 4$<br>c) $32 \times 3$<br>d) $43 \times 2$<br>e) $14 \times 2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution2" style="display: none;">
+              <p><strong>Solución Ejercicio 2:</strong></p>
+              <p>a) $12 \times 3 = 36$<br>b) $21 \times 4 = 84$<br>c) $32 \times 3 = 96$<br>d) $43 \times 2 = 86$<br>e) $14 \times 2 = 28$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de multiplicaciones con llevadas (Nivel 3):<br>
+            a) $15 \times 4$<br>b) $26 \times 3$<br>c) $38 \times 2$<br>d) $47 \times 5$<br>e) $59 \times 3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution3" style="display: none;">
+              <p><strong>Solución Ejercicio 3:</strong></p>
+              <p>a) $15 \times 4 = 60$<br>b) $26 \times 3 = 78$<br>c) $38 \times 2 = 76$<br>d) $47 \times 5 = 235$<br>e) $59 \times 3 = 177$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Resuelve las siguientes multiplicaciones por 0 y 1 (Nivel 1):<br>
+            a) $8 \times 1$<br>b) $9 \times 0$<br>c) $1 \times 7$<br>d) $0 \times 6$<br>e) $5 \times 1$</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution4" style="display: none;">
+              <p><strong>Solución Ejercicio 4:</strong></p>
+              <p>a) $8 \times 1 = 8$<br>b) $9 \times 0 = 0$<br>c) $1 \times 7 = 7$<br>d) $0 \times 6 = 0$<br>e) $5 \times 1 = 5$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Resuelve las siguientes multiplicaciones por decenas completas (Nivel 2):<br>
+            a) $20 \times 3$<br>b) $40 \times 2$<br>c) $30 \times 3$<br>d) $50 \times 4$<br>e) $60 \times 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution5" style="display: none;">
+              <p><strong>Solución Ejercicio 5:</strong></p>
+              <p>a) $20 \times 3 = 60$<br>b) $40 \times 2 = 80$<br>c) $30 \times 3 = 90$<br>d) $50 \times 4 = 200$<br>e) $60 \times 5 = 300$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de multiplicaciones de tres dígitos con llevadas (Nivel 3):<br>
+            a) $128 \times 3$<br>b) $246 \times 4$<br>c) $315 \times 5$<br>d) $409 \times 6$<br>e) $537 \times 2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution6" style="display: none;">
+              <p><strong>Solución Ejercicio 6:</strong></p>
+              <p>a) $128 \times 3 = 384$<br>b) $246 \times 4 = 984$<br>c) $315 \times 5 = 1575$<br>d) $409 \times 6 = 2454$<br>e) $537 \times 2 = 1074$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de la tabla del 6 y del 7 (Nivel 1):<br>
+            a) $6 \times 4$<br>b) $7 \times 3$<br>c) $6 \times 7$<br>d) $7 \times 5$<br>e) $6 \times 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution7" style="display: none;">
+              <p><strong>Solución Ejercicio 7:</strong></p>
+              <p>a) $6 \times 4 = 24$<br>b) $7 \times 3 = 21$<br>c) $6 \times 7 = 42$<br>d) $7 \times 5 = 35$<br>e) $6 \times 8 = 48$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones de tres dígitos sin llevadas (Nivel 2):<br>
+            a) $123 \times 2$<br>b) $312 \times 3$<br>c) $201 \times 4$<br>d) $421 \times 2$<br>e) $111 \times 7$</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution8" style="display: none;">
+              <p><strong>Solución Ejercicio 8:</strong></p>
+              <p>a) $123 \times 2 = 246$<br>b) $312 \times 3 = 936$<br>c) $201 \times 4 = 804$<br>d) $421 \times 2 = 842$<br>e) $111 \times 7 = 777$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones con el dígito 9 con llevadas (Nivel 3):<br>
+            a) $64 \times 9$<br>b) $83 \times 9$<br>c) $127 \times 9$<br>d) $245 \times 9$<br>e) $380 \times 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution9" style="display: none;">
+              <p><strong>Solución Ejercicio 9:</strong></p>
+              <p>a) $64 \times 9 = 576$<br>b) $83 \times 9 = 747$<br>c) $127 \times 9 = 1143$<br>d) $245 \times 9 = 2205$<br>e) $380 \times 9 = 3420$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de la tabla del 8 y del 9 (Nivel 1):<br>
+            a) $8 \times 2$<br>b) $9 \times 3$<br>c) $8 \times 6$<br>d) $9 \times 7$<br>e) $8 \times 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution10" style="display: none;">
+              <p><strong>Solución Ejercicio 10:</strong></p>
+              <p>a) $8 \times 2 = 16$<br>b) $9 \times 3 = 27$<br>c) $8 \times 6 = 48$<br>d) $9 \times 7 = 63$<br>e) $8 \times 9 = 72$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones horizontales de cuatro dígitos sin llevadas (Nivel 2):<br>
+            a) $1023 \times 2$<br>b) $2130 \times 3$<br>c) $3102 \times 2$<br>d) $4112 \times 2$<br>e) $1201 \times 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 11)</span>
+            </div>
+            <div id="solution11" style="display: none;">
+              <p><strong>Solución Ejercicio 11:</strong></p>
+              <p>a) $1023 \times 2 = 2046$<br>b) $2130 \times 3 = 6390$<br>c) $3102 \times 2 = 6204$<br>d) $4112 \times 2 = 8224$<br>e) $1201 \times 4 = 4804$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones de números terminados en cero con llevadas (Nivel 3):<br>
+            a) $150 \times 6$<br>b) $280 \times 4$<br>c) $370 \times 5$<br>d) $460 \times 8$<br>e) $790 \times 3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution12" style="display: none;">
+              <p><strong>Solución Ejercicio 12:</strong></p>
+              <p>a) $150 \times 6 = 900$<br>b) $280 \times 4 = 1120$<br>c) $370 \times 5 = 1850$<br>d) $460 \times 8 = 3680$<br>e) $790 \times 3 = 2370$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones dobles de un solo dígito (Nivel 1):<br>
+            a) $2 \times 2$<br>b) $3 \times 3$<br>c) $4 \times 4$<br>d) $6 \times 6$<br>e) $7 \times 7$</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution13" style="display: none;">
+              <p><strong>Solución Ejercicio 13:</strong></p>
+              <p>a) $2 \times 2 = 4$<br>b) $3 \times 3 = 9$<br>c) $4 \times 4 = 16$<br>d) $6 \times 6 = 36$<br>e) $7 \times 7 = 49$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones con factores repetidos sin llevadas (Nivel 2):<br>
+            a) $22 \times 4$<br>b) $33 \times 3$<br>c) $44 \times 2$<br>d) $11 \times 8$<br>e) $22 \times 3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution14" style="display: none;">
+              <p><strong>Solución Ejercicio 14:</strong></p>
+              <p>a) $22 \times 4 = 88$<br>b) $33 \times 3 = 99$<br>c) $44 \times 2 = 88$<br>d) $11 \times 8 = 88$<br>e) $22 \times 3 = 66$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Aplica cálculo rápido multiplicando por 5 (Nivel 3):<br>
+            a) $34 \times 5$<br>b) $68 \times 5$<br>c) $124 \times 5$<br>d) $246 \times 5$<br>e) $482 \times 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution15" style="display: none;">
+              <p><strong>Solución Ejercicio 15:</strong></p>
+              <p>a) $34 \times 5 = 170$<br>b) $68 \times 5 = 340$<br>c) $124 \times 5 = 620$<br>d) $246 \times 5 = 1230$<br>e) $482 \times 5 = 2410$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de la tabla del 5 (Nivel 1):<br>
+            a) $5 \times 3$<br>b) $5 \times 6$<br>c) $5 \times 8$<br>d) $5 \times 7$<br>e) $5 \times 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution16" style="display: none;">
+              <p><strong>Solución Ejercicio 16:</strong></p>
+              <p>a) $5 \times 3 = 15$<br>b) $5 \times 6 = 30$<br>c) $5 \times 8 = 40$<br>d) $5 \times 7 = 35$<br>e) $5 \times 9 = 45$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Resuelve las siguientes multiplicaciones de centenas completas (Nivel 2):<br>
+            a) $200 \times 3$<br>b) $400 \times 2$<br>c) $100 \times 8$<br>d) $300 \times 3$<br>e) $500 \times 1$</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution17" style="display: none;">
+              <p><strong>Solución Ejercicio 17:</strong></p>
+              <p>a) $200 \times 3 = 600$<br>b) $400 \times 2 = 800$<br>c) $100 \times 8 = 800$<br>d) $300 \times 3 = 900$<br>e) $500 \times 1 = 500$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones de dos dígitos con llevada simple en las decenas (Nivel 3):<br>
+            a) $71 \times 6$<br>b) $82 \times 5$<br>c) $93 \times 4$<br>d) $62 \times 8$<br>e) $51 \times 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution18" style="display: none;">
+              <p><strong>Solución Ejercicio 18:</strong></p>
+              <p>a) $71 \times 6 = 426$<br>b) $82 \times 5 = 410$<br>c) $93 \times 4 = 372$<br>d) $62 \times 8 = 496$<br>e) $51 \times 9 = 459$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque con el número 10 (Nivel 1):<br>
+            a) $10 \times 2$<br>b) $10 \times 5$<br>c) $10 \times 7$<br>d) $10 \times 4$<br>e) $10 \times 9$</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution19" style="display: none;">
+              <p><strong>Solución Ejercicio 19:</strong></p>
+              <p>a) $10 \times 2 = 20$<br>b) $10 \times 5 = 50$<br>c) $10 \times 7 = 70$<br>d) $10 \times 4 = 40$<br>e) $10 \times 9 = 90$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Resuelve las siguientes multiplicaciones en línea sin llevadas (Nivel 2):<br>
+            a) $31 \times 3$<br>b) $42 \times 2$<br>c) $13 \times 3$<br>d) $24 \times 2$<br>e) $32 \times 2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution20" style="display: none;">
+              <p><strong>Solución Ejercicio 20:</strong></p>
+              <p>a) $31 \times 3 = 93$<br>b) $42 \times 2 = 84$<br>c) $13 \times 3 = 39$<br>d) $24 \times 2 = 48$<br>e) $32 \times 2 = 64$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones con ceros intermedios y llevadas (Nivel 3):<br>
+            a) $307 \times 4$<br>b) $508 \times 3$<br>c) $609 \times 5$<br>d) $406 \times 7$<br>e) $704 \times 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution21" style="display: none;">
+              <p><strong>Solución Ejercicio 21:</strong></p>
+              <p>a) $307 \times 4 = 1228$<br>b) $508 \times 3 = 1524$<br>c) $609 \times 5 = 3045$<br>d) $406 \times 7 = 2842$<br>e) $704 \times 8 = 5632$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Resuelve combinaciones básicas de las tablas (Nivel 1):<br>
+            a) $3 \times 7$<br>b) $4 \times 8$<br>c) $2 \times 9$<br>d) $5 \times 4$<br>e) $3 \times 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution22" style="display: none;">
+              <p><strong>Solución Ejercicio 22:</strong></p>
+              <p>a) $3 \times 7 = 21$<br>b) $4 \times 8 = 32$<br>c) $2 \times 9 = 18$<br>d) $5 \times 4 = 20$<br>e) $3 \times 8 = 24$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones de números de tres cifras terminados en decenas simples (Nivel 2):<br>
+            a) $110 \times 5$<br>b) $220 \times 4$<br>c) $330 \times 2$<br>d) $410 \times 2$<br>e) $120 \times 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution23" style="display: none;">
+              <p><strong>Solución Ejercicio 23:</strong></p>
+              <p>a) $110 \times 5 = 550$<br>b) $220 \times 4 = 880$<br>c) $330 \times 2 = 660$<br>d) $410 \times 2 = 820$<br>e) $120 \times 4 = 480$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones elevadas por 7 u 8 (Nivel 3):<br>
+            a) $76 \times 7$<br>b) $85 \times 8$<br>c) $94 \times 7$<br>d) $68 \times 8$<br>e) $57 \times 7$</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution24" style="display: none;">
+              <p><strong>Solución Ejercicio 24:</strong></p>
+              <p>a) $76 \times 7 = 532$<br>b) $85 \times 8 = 680$<br>c) $94 \times 7 = 658$<br>d) $68 \times 8 = 544$<br>e) $57 \times 7 = 399$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Resuelve operaciones básicas alternas (Nivel 1):<br>
+            a) $4 \times 3$<br>b) $2 \times 6$<br>c) $5 \times 2$<br>d) $3 \times 9$<br>e) $4 \times 7$</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution25" style="display: none;">
+              <p><strong>Solución Ejercicio 25:</strong></p>
+              <p>a) $4 \times 3 = 12$<br>b) $2 \times 6 = 12$<br>c) $5 \times 2 = 10$<br>d) $3 \times 9 = 27$<br>e) $4 \times 7 = 28$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones de tres dígitos con patrón simétrico sin llevadas (Nivel 2):<br>
+            a) $101 \times 5$<br>b) $202 \times 4$<br>c) $303 \times 3$<br>d) $404 \times 2$<br>e) $212 \times 3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution26" style="display: none;">
+              <p><strong>Solución Ejercicio 26:</strong></p>
+              <p>a) $101 \times 5 = 505$<br>b) $202 \times 4 = 808$<br>c) $303 \times 3 = 909$<br>d) $404 \times 2 = 808$<br>e) $212 \times 3 = 636$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de cuatro dígitos con dobles llevadas (Nivel 3):<br>
+            a) $1245 \times 3$<br>b) $2356 \times 4$<br>c) $1478 \times 2$<br>d) $3164 \times 5$<br>e) $2089 \times 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution27" style="display: none;">
+              <p><strong>Solución Ejercicio 27:</strong></p>
+              <p>a) $1245 \times 3 = 3735$<br>b) $2356 \times 4 = 9424$<br>c) $1478 \times 2 = 2956$<br>d) $3164 \times 5 = 15820$<br>e) $2089 \times 4 = 8356$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Resuelve el siguiente bloque de la tabla del 9 (Nivel 1):<br>
+            a) $9 \times 2$<br>b) $9 \times 4$<br>c) $9 \times 5$<br>d) $9 \times 6$<br>e) $9 \times 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 1)</span>
+            </div>
+            <div id="solution28" style="display: none;">
+              <p><strong>Solución Ejercicio 28:</strong></p>
+              <p>a) $9 \times 2 = 18$<br>b) $9 \times 4 = 36$<br>c) $9 \times 5 = 45$<br>d) $9 \times 6 = 54$<br>e) $9 \times 8 = 72$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Resuelve multiplicaciones dobles de dos dígitos sin llevadas (Nivel 2):<br>
+            a) $41 \times 2$<br>b) $23 \times 3$<br>c) $12 \times 4$<br>d) $34 \times 2$<br>e) $22 \times 2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 2)</span>
+            </div>
+            <div id="solution29" style="display: none;">
+              <p><strong>Solución Ejercicio 29:</strong></p>
+              <p>a) $41 \times 2 = 82$<br>b) $23 \times 3 = 69$<br>c) $12 \times 4 = 48$<br>d) $34 \times 2 = 68$<br>e) $22 \times 2 = 44$</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Resuelve las siguientes multiplicaciones avanzadas con múltiples llevadas (Nivel 3):<br>
+            a) $487 \times 6$<br>b) $694 \times 7$<br>c) $358 \times 8$<br>d) $729 \times 9$<br>e) $865 \times 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución (Nivel 3)</span>
+            </div>
+            <div id="solution30" style="display: none;">
+              <p><strong>Solución Ejercicio 30:</strong></p>
+              <p>a) $487 \times 6 = 2922$<br>b) $694 \times 7 = 4858$<br>c) $358 \times 8 = 2864$<br>d) $729 \times 9 = 6561$<br>e) $865 \times 5 = 4325$</p>
+            </div> 
+        </div>
+
+    </div>
+
+ <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+
+</body>
+</html>

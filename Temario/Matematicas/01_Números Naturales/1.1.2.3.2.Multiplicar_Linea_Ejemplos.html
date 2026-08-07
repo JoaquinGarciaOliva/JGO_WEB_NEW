@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Multiplicación en Línea por Un Dígito con Soluciones</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],               
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+    <style>
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95rem;
+        }
+        .regla-box strong { color: #2635b7; }
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 15px 0;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+        .explicacion-lateral {
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.4;
+        }
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Multiplicación en Línea por Un Dígito con Soluciones</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Calcula la siguiente multiplicación directa en línea: \( 4 \times 2 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Es una operación directa de la tabla de multiplicar que se resuelve de forma mental:</p>
+                    $$ 4 \times 2 = 8 $$
+                    <div class="regla-box">
+                        <strong>Propiedad conmutativa:</strong> El orden de los factores no altera el producto: \( 2 \times 4 = 8 \).
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el producto de la siguiente expresión: \( 7 \times 3 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Multiplicamos 7 por 3 directamente aplicando las tablas de multiplicar:</p>
+                    $$ 7 \times 3 = 21 $$
+                </div>
+            </li>
+
+            <li>
+                Resuelve la multiplicación mental: \( 9 \times 5 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Multiplicar por 5 equivale a calcular la mitad de multiplicar por 10 (es decir, la mitad de 90):</p>
+                    $$ 9 \times 5 = 45 $$
+                </div>
+            </li>
+
+            <li>
+                Calcula la siguiente multiplicación en línea de un número de dos cifras sin llevadas: \( 23 \times 3 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Multiplicamos de derecha a izquierda cada posición del número por el dígito 3:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            23 &times; 3 = 69
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 3 \times 3 = 9 \). Se anota el 9.</li>
+                                <li><strong>Decenas:</strong> \( 2 \times 3 = 6 \). Se anota el 6.</li>
+                                <li>El resultado final es <span class="highlight">69</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Determina el resultado en línea de: \( 41 \times 2 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Efectuamos el cálculo directo de derecha a izquierda multiplicando por 2:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            41 &times; 2 = 82
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 1 \times 2 = 2 \)</li>
+                                <li><strong>Decenas:</strong> \( 4 \times 2 = 8 \)</li>
+                                <li>Producto resultante: <span class="highlight">82</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Resuelve la siguiente multiplicación en línea con una llevada: \( 34 \times 2 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Operamos directamente en línea aplicando el mecanismo de la llevada:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            34 &times; 2 = 68
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 4 \times 2 = 8 \).</li>
+                                <li><strong>Decenas:</strong> \( 3 \times 2 = 6 \).</li>
+                                <li>Resultado: <span class="highlight">68</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula en línea el producto de: \( 46 \times 3 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Multiplicamos paso a paso gestionando las llevadas de las unidades a las decenas:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            46 &times; 3 = 138
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 6 \times 3 = 18 \). Escribimos el 8 y nos llevamos <span class="highlight">1</span>.</li>
+                                <li><strong>Decenas:</strong> \( 4 \times 3 = 12 \). Le sumamos la llevada: \( 12 + 1 = 13 \).</li>
+                                <li>Resultado final: <span class="highlight">138</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Resuelve en línea la multiplicación de tres cifras por un dígito: \( 213 \times 3 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Multiplicamos secuencialmente de derecha a izquierda (unidades, decenas y centenas):</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            213 &times; 3 = 639
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 3 \times 3 = 9 \)</li>
+                                <li><strong>Decenas:</strong> \( 1 \times 3 = 3 \)</li>
+                                <li><strong>Centenas:</strong> \( 2 \times 3 = 6 \)</li>
+                                <li>Resultado: <span class="highlight">639</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Efectúa el cálculo en línea con llevada intermedia: \( 152 \times 4 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Multiplicamos cada posición acumulando las llevadas correspondientes:</p>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            152 &times; 4 = 608
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 2 \times 4 = 8 \).</li>
+                                <li><strong>Decenas:</strong> \( 5 \times 4 = 20 \). Escribimos 0 y nos llevamos <span class="highlight">2</span>.</li>
+                                <li><strong>Centenas:</strong> \( 1 \times 4 = 4 \). Sumamos la llevada: \( 4 + 2 = 6 \).</li>
+                                <li>El valor final obtenido es <span class="highlight">608</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                Calcula en línea la multiplicación con múltiples llevadas: \( 478 \times 5 \)
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <p>Desarrollamos el proceso encadenado de multiplicación mental de derecha a izquierda:</p>
+                    <div class="division-table-container">
+                        <!-- Se agregan 'white-space: nowrap;' y 'flex-shrink: 0;' para forzar una única línea -->
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.3rem; letter-spacing: 3px; line-height: 1.2; white-space: nowrap; flex-shrink: 0;">
+                            478 &times; 5 = 2390
+                        </div>
+                        <div class="explicacion-lateral">
+                            <ul>
+                                <li><strong>Unidades:</strong> \( 8 \times 5 = 40 \). Escribimos 0 y nos llevamos <span class="highlight">4</span>.</li>
+                                <li><strong>Decenas:</strong> \( 7 \times 5 = 35 \). Sumamos llevada: \( 35 + 4 = 39 \). Escribimos 9 y nos llevamos <span class="highlight">3</span>.</li>
+                                <li><strong>Centenas:</strong> \( 4 \times 5 = 20 \). Sumamos llevada: \( 20 + 3 = 23 \).</li>
+                                <li>Solución final limpia: <span class="highlight">2390</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>

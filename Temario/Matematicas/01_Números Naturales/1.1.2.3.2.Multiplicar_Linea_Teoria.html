@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: La Multiplicación en Línea por Una Cifra</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .sub-step {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 15px;
+        }
+        .sub-step:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .step-num {
+            display: inline-block;
+            background: #00769d;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .finger-badge {
+            background-color: #feebc8;
+            color: #c05621;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: La Multiplicación en Línea por Una Cifra</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Operaciones Básicas: Multiplicar Horizontalmente</h2>
+            <p>La multiplicación en línea por una sola cifra es una estrategia de cálculo mental asistido fundamental. Nos enseña a procesar números de derecha a izquierda y prepara a nuestro cerebro para dominar las divisiones avanzadas con soltura.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. ¿Por qué es crucial aprender a multiplicar en línea?</div>
+                <div class="regla-box">
+                    <strong>La clave para las divisiones:</strong> Al dividir por varias cifras, necesitaremos construir de forma rápida "tablas auxiliares" de los divisores (por ejemplo, calcular la tabla del $48$, del $367$ o del $428$)... Saber multiplicar mentalmente en línea evita tener que montar pesadas torres de multiplicaciones verticales en los márgenes de la hoja.
+                </div>
+                <p>Aprender este método agiliza enormemente la resolución de operaciones combinadas, simplifica los cálculos algebraicos futuros y mejora la retención de las llevadas mediante la memoria táctil (los dedos).</p>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. Las Dos Reglas de Oro del Método</div>
+                <ul>
+                    <li><strong>Dirección Obligatoria:</strong> Se empieza a multiplicar siempre por la última cifra del número (las unidades, a la derecha) y se avanza progresivamente hacia la izquierda.</li>
+                    <li><strong>Gestión de las Llevadas con los Dedos:</strong> Como no escribimos los pasos intermedios en papel, <strong>apuntamos la llevada manteniendo levantados los dedos en una mano</strong>. Así no sobrecargamos la memoria de trabajo y evitamos errores.</li>
+                </ul>
+            </div>
+
+            <!-- EJEMPLO 1 -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. Ejemplo 1 Paso a Paso: $367 \times 5$</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Objetivo:</strong> Calcular la operación $367 \times 5$ rellenando el resultado de derecha a izquierda en línea.
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Multiplicar Unidades ($7 \times 5$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            36<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">7</span> $\times$ 5 = ...<span class="highlight">5</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $7 \times 5 = 35$.<br>
+                            • Escribimos la última cifra, el <strong>5</strong>, al final del resultado.<br>
+                            • Nos llevamos $3$. <span class="finger-badge">🖐️ Levantamos 3 dedos</span> en la mano.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Multiplicar Decenas y Sumar Llevada ($6 \times 5 + 3$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            3<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">6</span>7 $\times$ 5 = ..<span class="highlight">35</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $6 \times 5 = 30$.<br>
+                            • Le sumamos los $3$ dedos que tenemos apuntados: $30 + 3 = 33$.<br>
+                            • Escribimos el <strong>3</strong> delante del 5.<br>
+                            • Nos volvemos a llevar $3$. <span class="finger-badge">🖐️ Mantenemos 3 dedos</span> levantados.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Multiplicar Centenas y Sumar Llevada ($3 \times 5 + 3$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            <span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">3</span>67 $\times$ 5 = <span class="highlight">1835</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $3 \times 5 = 15$.<br>
+                            • Le sumamos los $3$ dedos que teníamos levantados: $15 + 3 = 18$.<br>
+                            • Como ya no quedan más números por multiplicar, escribimos el <strong>18</strong> completo al principio.<br>
+                            • Resultado final: <strong>1835</strong>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EJEMPLO 2 -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">4. Ejemplo 2 Paso a Paso: $428 \times 4$</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Objetivo:</strong> Practicar la técnica con llevadas variables en una cifra de tres dígitos: $428 \times 4$.
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Multiplicar Unidades ($8 \times 4$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            42<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">8</span> $\times$ 4 = ...<span class="highlight">2</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $8 \times 4 = 32$.<br>
+                            • Anotamos el <strong>2</strong> en la posición final.<br>
+                            • Nos llevamos $3$. <span class="finger-badge">🖐️ Levantamos 3 dedos</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Multiplicar Decenas y Sumar Llevada ($2 \times 4 + 3$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            4<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">2</span>8 $\times$ 4 = ..<span class="highlight">12</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $2 \times 4 = 8$.<br>
+                            • Sumamos las $3$ que llevábamos: $8 + 3 = 11$.<br>
+                            • Anotamos el <strong>1</strong> delante del 2.<br>
+                            • Nos llevamos $1$. <span class="finger-badge">🖐️ Cambiamos a 1 dedo</span> levantado.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Multiplicar Centenas y Sumar Llevada ($4 \times 4 + 1$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            <span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">4</span>28 $\times$ 4 = <span class="highlight">1712</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $4 \times 4 = 16$.<br>
+                            • Sumamos el $1$ dedo levantado: $16 + 1 = 17$.<br>
+                            • Escribimos el <strong>17</strong> completo al no haber más cifras.<br>
+                            • Resultado final: <strong>1712</strong>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EJEMPLO 3 -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">5. Ejemplo 3 Paso a Paso: $2596 \times 7$</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Objetivo:</strong> Resolver una cifra más larga de cuatro dígitos con llevadas más altas: $2596 \times 7$.
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Multiplicar Unidades ($6 \times 7$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            259<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">6</span> $\times$ 7 = ....<span class="highlight">2</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $6 \times 7 = 42$.<br>
+                            • Anotamos el <strong>2</strong> al final.<br>
+                            • Nos llevamos $4$. <span class="finger-badge">🖐️ Levantamos 4 dedos</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Multiplicar Decenas y Sumar Llevada ($9 \times 7 + 4$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            25<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">9</span>6 $\times$ 7 = ...<span class="highlight">72</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $9 \times 7 = 63$.<br>
+                            • Sumamos los $4$ dedos levantados: $63 + 4 = 67$.<br>
+                            • Anotamos el <strong>7</strong> delante del 2.<br>
+                            • Nos llevamos $6$. <span class="finger-badge">🖐️ Levantamos 6 dedos</span> (o memorizamos 6).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Multiplicar Centenas y Sumar Llevada ($5 \times 7 + 6$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            2<span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">5</span>96 $\times$ 7 = ..<span class="highlight">172</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $5 \times 7 = 35$.<br>
+                            • Sumamos los $6$ que nos llevábamos: $35 + 6 = 41$.<br>
+                            • Anotamos el <strong>1</strong> en el resultado.<br>
+                            • Nos llevamos $4$. <span class="finger-badge">🖐️ Levantamos 4 dedos</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Paso 4: Multiplicar Unidades de Millar y Sumar Llevada ($2 \times 7 + 4$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            <span style="background: #fff3cd; padding: 2px 4px; font-weight: bold;">2</span>596 $\times$ 7 = <span class="highlight">18172</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            Multiplicamos $2 \times 7 = 14$.<br>
+                            • Sumamos los $4$ dedos levantados: $14 + 4 = 18$.<br>
+                            • Escribimos el <strong>18</strong> completo al principio.<br>
+                            • Resultado final: <strong>18172</strong>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">6. Aplicación Práctica: Generación de Tablas para Divisiones</div>
+                <div class="regla-box" style="background-color: #fffaf0; border-left-color: #dd6b20;">
+                    <strong>Ejemplo en la División:</strong> Supón que estás realizando una división complicada entre $367$. Al saber multiplicar en línea, puedes confeccionar rápidamente la tabla del $367$ a un lado de la hoja sin perder tiempo:
+                </div>
+                
+                <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; line-height: 1.8; margin-left: 20px;">
+                    $367 \times 1 = 367$<br>
+                    $367 \times 2 = 734$<br>
+                    $367 \times 3 = 1101$<br>
+                    $367 \times 4 = 1468$<br>
+                    $367 \times 5 = 1835$
+                </div>
+                
+                <p style="margin-top: 15px;">Dominar este cálculo mental en línea garantiza la velocidad necesaria para que las divisiones largas resulten un proceso sencillo, rápido y libre de errores sistemáticos.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
