@@ -1,0 +1,208 @@
+:root {
+    --cell-size: 38px; /* Reducido de 50px */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-principal {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    max-width: 520px; /* Reducido de 650px para adaptarse al diseño más compacto */
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: #0d47a1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em; /* Reducido de 1.35em */
+    margin-bottom: 18px;
+}
+
+.player-score {
+    font-size: 0.75em; /* Reducido de 0.8em */
+    background-color: #e3f2fd;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.control-label {
+    font-weight: bold;
+    color: #0d47a1;
+    font-size: 0.85em; /* Reducido de 0.9em */
+}
+
+#cifrasASelect, #cifrasBSelect {
+    padding: 4px 8px;
+    border: 2px solid #0d47a1;
+    border-radius: 6px;
+    font-size: 0.85em; /* Reducido de 0.95em */
+    cursor: pointer;
+    background-color: white;
+}
+
+.btn-action {
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.85em; /* Reducido de 1em */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-action:hover {
+    background-color: #1565c0;
+}
+
+/* Rejilla de la Multiplicación en Casillas */
+.multi-container {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    font-size: 1.4em; /* Reducido de 2em */
+    font-weight: bold;
+    width: max-content;
+}
+
+.digit-cell, .sign-cell, .meta-cell, .step-dot-cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+}
+
+.sign-cell {
+    color: #d84315;
+}
+
+.step-dot-cell {
+    color: #b0bec5;
+    font-size: 0.75em; /* Ligeramente ajustado */
+}
+
+.num2-line {
+    border-top: 3px solid #212121;
+    height: 0;
+    margin: 4px 0;
+}
+
+/* Estilo Base de las Celdas Interactivas */
+.cell-input {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 2px solid #b0bec5;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.15s ease;
+}
+
+/* Variaciones cromáticas por zonas pedagógicas */
+.cell-input.parcial-cell {
+    background-color: #fff8e1;
+}
+
+.cell-input.total-cell {
+    background-color: #f1f8e9;
+}
+
+/* Estados Dinámicos (Foco, Éxito y Error) */
+.cell-input.active {
+    border: 2.5px solid #0d47a1 !important;
+    background-color: #e3f2fd !important;
+    box-shadow: 0 0 8px rgba(13, 71, 161, 0.4);
+}
+
+.cell-input.correct {
+    border-style: solid;
+    border-color: #2e7d32 !important;
+    background-color: #c8e6c9 !important;
+    color: #1b5e20;
+}
+
+.cell-input.wrong {
+    border-style: solid;
+    border-color: #c62828 !important;
+    background-color: #ffcdd2 !important;
+    color: #b71c1c;
+    animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+/* Estructura de la Botonera */
+.score-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.digit-btn {
+    width: 42px; /* Reducido de 55px */
+    height: 42px; /* Reducido de 55px */
+    border-radius: 8px;
+    border: 2px solid #0d47a1;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.1em; /* Reducido de 1.4em */
+    cursor: pointer;
+    color: #0d47a1;
+    transition: all 0.1s ease;
+}
+
+.digit-btn:hover {
+    background-color: #bbdefb;
+    transform: scale(1.05);
+}
+
+.digit-btn:active {
+    transform: scale(0.95);
+}
