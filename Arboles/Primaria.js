@@ -86,7 +86,7 @@
        teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Ejercicios.html"
-       interactivo=""
+       interactivo="Temario/Interactivos/1.1.2.3.2.Naturales_Multiplicar_Linea/Multiplicar_Linea_aprender.html"
        onclick="toggleVisibility2(this,'3.2.')">
 
     <img  class="manImg" src="Imagenes/Primaria/hoja_red.png">
@@ -100,11 +100,11 @@
        imagen="Imagenes/Primaria/hoja.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Ejercicios.html"
+       interactivo="Temario/Interactivos/1.1.2.3.3.Naturales_Multiplicar_10/Multiplicar_Potencias_10.html"
        onclick="toggleVisibility2(this,'3.3.')">
 
     <img  class="manImg" src="Imagenes/Primaria/hoja.png">
@@ -122,7 +122,7 @@
        teoria=""
        ejemplos=""
        ejercicios=""
-       interactivo=""
+       interactivo="Temario/Interactivos/1.1.2.4.Naturales_Dividir/Dividir_Aprender_1.html"
        onclick="toggleVisibility2(this,'4.')">
 
     <img  class="manImg" src="Imagenes/Primaria/hoja.png">
