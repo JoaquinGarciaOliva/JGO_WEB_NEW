@@ -1,3 +1,25 @@
+document.addEventListener('keydown', (event) => {
+    // Comprueba si la tecla pulsada es un dígito del 0 al 9 (funciona con teclado principal y numérico)
+    if (event.key >= '0' && event.key <= '9') {
+        // Selecciona todos los botones de dígitos
+        const buttons = document.querySelectorAll('.score-buttons .digit-btn');
+        
+        // Busca el botón cuyo texto coincide exactamente con la tecla pulsada
+        const targetButton = Array.from(buttons).find(
+            (btn) => btn.textContent.trim() === event.key
+        );
+
+        // Si se encuentra el botón, simula el clic en pantalla
+        if (targetButton) {
+            targetButton.click();
+            
+            // Opcional: añade un leve efecto visual al pulsar en el teclado
+            targetButton.classList.add('active');
+            setTimeout(() => targetButton.classList.remove('active'), 150);
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const multiContainer = document.getElementById('multiContainer');
     const cifrasASelect = document.getElementById('cifrasASelect');
