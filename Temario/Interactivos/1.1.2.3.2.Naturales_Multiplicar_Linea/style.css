@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-principal {
+    max-width: 650px;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.4rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-score {
+    font-size: 1rem;
+    color: #2e7d32;
+    background: #e8f5e9;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control-label {
+    font-weight: bold;
+    color: #555;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.btn-action {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-action:hover {
+    background-color: #1565c0;
+}
+
+/* Área de multiplicación en línea */
+.multi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+    min-height: 70px;
+}
+
+.inline-operation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.operator-inline {
+    color: #e65100;
+}
+
+.result-inline {
+    display: flex;
+    gap: 6px;
+    margin-left: 5px;
+}
+
+/* Casillas editables del resultado */
+.digit-input {
+    width: 45px;
+    height: 52px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.digit-input.active {
+    border-color: #1976d2;
+    background-color: #e3f2fd;
+    box-shadow: 0 0 8px rgba(25, 118, 210, 0.4);
+    transform: scale(1.05);
+}
+
+.digit-input.correct {
+    border-color: #4caf50;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.digit-input.wrong {
+    border-color: #f44336;
+    background-color: #ffebee;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+/* Teclado en pantalla */
+.score-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.digit-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 1px solid #bbb;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: background 0.1s, transform 0.1s;
+}
+
+.digit-btn:active {
+    background-color: #e0e0e0;
+    transform: translateY(2px);
+}
+
+.btn-del {
+    background-color: #ffcdd2;
+    color: #c62828;
+    border-color: #ef9a9a;
+}
+
+.btn-del:active {
+    background-color: #ef9a9a;
+}
+
+.feedback-msg {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.feedback-msg.success {
+    color: #2e7d32;
+}

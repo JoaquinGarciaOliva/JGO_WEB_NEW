@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="description" content="Juego interactivo para aprender multiplicaciones por potencias de 10 y números seguidos de ceros">   
+    <title>Multiplicación por Ceros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor-principal">
+    <header>
+        <h1>Multiplicación por Ceros
+            <label class="player-score">Puntuación: <span id="playerScore">0 / 0</span></label>
+        </h1>
+    </header>
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="cifrasASelect" class="control-label">Multiplicando:</label>
+            <select id="cifrasASelect">
+                <option value="2">2 Cifras</option>
+                <option value="3" selected>3 Cifras</option>
+                <option value="4">4 Cifras</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="tipoOperadorSelect" class="control-label">Multiplicador:</label>
+            <select id="tipoOperadorSelect">
+                <option value="potencia10" selected>Potencia de 10 (×10, ×100...)</option>
+                <option value="digitoCeros">Dígito + Ceros (×20, ×600...)</option>
+            </select>
+        </div>
+
+        <button id="newOperationButton" class="btn-action">Nueva Multiplicación</button>
+    </div>
+    
+    <main class="contenido-principal">
+        <!-- Rejilla de la multiplicación en línea -->
+        <div id="multiContainer" class="multi-container"></div>
+
+        <!-- Teclado en pantalla -->
+        <div class="score-buttons">
+            <div class="button-row">
+                <button class="digit-btn" data-val="1">1</button>
+                <button class="digit-btn" data-val="2">2</button>
+                <button class="digit-btn" data-val="3">3</button>
+                <button class="digit-btn" data-val="4">4</button>
+                <button class="digit-btn" data-val="5">5</button>
+            </div>
+            <div class="button-row">
+                <button class="digit-btn" data-val="6">6</button>
+                <button class="digit-btn" data-val="7">7</button>
+                <button class="digit-btn" data-val="8">8</button>
+                <button class="digit-btn" data-val="9">9</button>
+                <button class="digit-btn" data-val="0">0</button>
+                <button class="digit-btn btn-del" data-val="backspace">⌫</button>
+            </div>                    
+        </div>
+
+        <div id="feedbackMessage" class="feedback-msg"></div>
+    </main>
+</div>
+    
+<script src="script.js"></script>
+</body>
+</html>

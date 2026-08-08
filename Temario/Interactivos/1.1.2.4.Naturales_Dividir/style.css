@@ -1,0 +1,324 @@
+:root {
+    --box-size: 36px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-principal {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: #0d47a1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.player-score {
+    font-size: 0.8em;
+    background-color: #e3f2fd;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-label {
+    font-weight: bold;
+    color: #0d47a1;
+    font-size: 0.85em;
+}
+
+#cifrasASelect, #cifrasBSelect {
+    padding: 5px 10px;
+    border: 2px solid #0d47a1;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: white;
+}
+
+.btn-action {
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.95em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-action:hover {
+    background-color: #1565c0;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.95em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #bdbdbd;
+}
+
+/* --- NUEVA DISTRIBUCIÓN: BOTONERA A LA IZQUIERDA --- */
+.game-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrado vertical para alinearse con la división */
+    gap: 40px;
+    margin: 25px auto;
+    flex-wrap: wrap;
+}
+
+/* Teclado numérico ultra-compacto de 3x3 + 0 abajo */
+.score-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    width: max-content;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.digit-btn {
+    width: 42px;  /* Botones más pequeños */
+    height: 42px;
+    border-radius: 6px;
+    border: 2px solid #0d47a1;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+    cursor: pointer;
+    color: #0d47a1;
+    transition: all 0.1s ease;
+}
+
+.digit-btn:hover {
+    background-color: #bbdefb;
+    transform: scale(1.04);
+}
+
+.digit-btn:active { transform: scale(0.96); }
+
+
+/* Área de la División */
+.division-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 260px;
+}
+
+/* Bloque Superior Galera */
+.div-header-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 3px;
+}
+
+.left-side-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: var(--box-size); /* Holgura para el signo '-' */
+}
+
+.dividendo-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4px;
+}
+
+.divisor-cociente-box {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid #0d47a1;
+    margin-left: 6px;
+}
+
+.divisor-row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid #0d47a1;
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
+
+.cociente-row {
+    display: flex;
+    flex-direction: row;
+    padding-left: 4px;
+    padding-top: 5px;
+}
+
+/* Bloque de Operaciones */
+.div-body-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.body-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: var(--box-size);
+    margin: 1px 0;
+}
+
+/* Celdas del Tablero */
+.num-cell {
+    width: var(--box-size);
+    height: var(--box-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.static-text {
+    color: #212121;
+}
+
+.empty-space {
+    width: var(--box-size);
+}
+
+.sign-cell {
+    color: #d84315;
+}
+
+/* Renglón separador de las restas */
+.visual-line {
+    border-top: 2.5px solid #212121;
+    height: 0;
+    margin-top: -2px;
+}
+
+/* Estilo de los Cuadros Interactivos */
+.cell-input {
+    border: 1.5px solid #b0bec5;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: calc(var(--box-size) - 4px) !important;
+    height: calc(var(--box-size) - 4px) !important;
+    margin: 2px;
+    font-size: 0.95em;
+    transition: all 0.12s ease;
+}
+
+/* Capas Cromáticas */
+.cell-input.cociente-cell { background-color: #e8f5e9; }
+.cell-input.resta-cell { background-color: #ffe0b2; }
+.cell-input.parcial-cell { background-color: #fffde7; }
+.cell-input.subdiv-cell { background-color: #e1f5fe; } /* Azul: Casilla que baja en la misma línea */
+.cell-input.final-resto-cell { background-color: #fbe9e7; border: 1.5px dashed #d84315; }
+
+/* Estados */
+.cell-input.active {
+    border: 2.5px solid #0d47a1 !important;
+    background-color: #e3f2fd !important;
+    box-shadow: 0 0 6px rgba(13, 71, 161, 0.35);
+}
+
+.cell-input.correct {
+    border-color: #2e7d32 !important;
+    background-color: #c8e6c9 !important;
+    color: #1b5e20;
+}
+
+.cell-input.wrong {
+    border-color: #c62828 !important;
+    background-color: #ffcdd2 !important;
+    color: #b71c1c;
+    animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+/* Tabla Auxiliar de Multiplicar */
+.helper-table-container {
+    background-color: #f9f9f9;
+    border: 2px solid #0d47a1;
+    border-radius: 10px;
+    padding: 10px;
+    width: 135px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.helper-table-container h3 {
+    margin-top: 0;
+    font-size: 0.85em;
+    color: #0d47a1;
+    border-bottom: 2px solid #0d47a1;
+    padding-bottom: 4px;
+}
+
+.table-row {
+    font-size: 0.9em;
+    padding: 2px 0;
+    font-weight: bold;
+    color: #424242;
+    text-align: center;
+}
+
+.hidden { display: none !important; }
