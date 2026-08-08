@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Multiplicación por Potencias de 10 y Números Acabados en Ceros</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .highlight-zeros {
+            color: #e53e3e;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .sub-step {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 15px;
+        }
+        .sub-step:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .step-num {
+            display: inline-block;
+            background: #00769d;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .zero-badge {
+            background-color: #fed7d7;
+            color: #9b2c2c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .note-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #dd6b20;
+            padding: 15px;
+            border-radius: 0 4px 4px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Multiplicación por Potencias de 10 y Números con Ceros Finales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Estrategias de Cálculo Rápido: Multiplicar por Ceros Finales</h2>
+            <p>Saber multiplicar por $10, 100, 1000...$ o por números acabados en ceros es una de las técnicas de cálculo mental más potentes y útiles. Nos permite simplificar operaciones complejas eliminando temporalmente los ceros y añadiéndolos al final de la operación.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- PARTE 1: POTENCIAS DE 10 -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">1. Multiplicación de un Número Natural por Potencias de 10 ($10, 100, 1000...$)</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Regla de Oro:</strong> Para multiplicar un número natural por $10$, $100$, $1000$, etc., se escribe el mismo número y se le <strong>añaden a la derecha tantos ceros como tenga la potencia de 10</strong>.
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo 1.1: Multiplicar por 10 ($1\text{ cero}$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            34 $\times$ 1<span class="highlight-zeros">0</span> = 34<span class="highlight-zeros">0</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            • Mantenemos el número inicial: <strong>34</strong>.<br>
+                            • El número $10$ tiene <span class="zero-badge">1 cero</span>.<br>
+                            • Añadimos $1$ cero al final: <strong>340</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo 1.2: Multiplicar por 100 ($2\text{ ceros}$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            582 $\times$ 1<span class="highlight-zeros">00</span> = 582<span class="highlight-zeros">00</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            • Mantenemos el número inicial: <strong>582</strong>.<br>
+                            • El número $100$ tiene <span class="zero-badge">2 ceros</span>.<br>
+                            • Añadimos $2$ ceros al final: <strong>58.200</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo 1.3: Multiplicar por 1000 ($3\text{ ceros}$)</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            76 $\times$ 1<span class="highlight-zeros">000</span> = 76<span class="highlight-zeros">000</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            • Mantenemos el número inicial: <strong>76</strong>.<br>
+                            • El número $1000$ tiene <span class="zero-badge">3 ceros</span>.<br>
+                            • Añadimos $3$ ceros al final: <strong>76.000</strong>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE 2: NÚMEROS SEGUIDOS DE CEROS (20, 30, 400, 500) -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">2. Multiplicación por un Número de Una Cifra Seguido de Ceros ($20, 30, 400, 500...$)</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Regla de Oro:</strong> Se multiplica el número por la cifra distinta de cero (que al ser de una sola cifra se realiza fácilmente <strong>en línea</strong>) y, al resultado obtenido, se le <strong>añaden al final los ceros</strong> del segundo factor.
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo 2.1: Multiplicar $83 \times 40$</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            83 $\times$ 4<span class="highlight-zeros">0</span> = <span class="highlight">332</span><span class="highlight-zeros">0</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            1. Ignoramos el cero y multiplicamos en línea: $83 \times 4 = 332$.<br>
+                            2. El número $40$ tiene <span class="zero-badge">1 cero</span>.<br>
+                            3. Añadimos el cero al final del resultado: <strong>3.320</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo 2.2: Multiplicar $246 \times 300$</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            246 $\times$ 3<span class="highlight-zeros">00</span> = <span class="highlight">738</span><span class="highlight-zeros">00</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            1. Multiplicamos en línea sin los ceros: $246 \times 3 = 738$.<br>
+                            2. El número $300$ tiene <span class="zero-badge">2 ceros</span>.<br>
+                            3. Añadimos los dos ceros al final: <strong>73.800</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo 2.3: Multiplicar $1205 \times 6000$</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.5rem; letter-spacing: 2px;">
+                            1205 $\times$ 6<span class="highlight-zeros">000</span> = <span class="highlight">7230</span><span class="highlight-zeros">000</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            1. Multiplicamos en línea sin los ceros finales: $1205 \times 6 = 7230$.<br>
+                            2. El número $6000$ tiene <span class="zero-badge">3 ceros</span>.<br>
+                            3. Añadimos los tres ceros al final: <strong>7.230.000</strong>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE 3: AMBOS NÚMEROS CON CEROS -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. Multiplicación de Dos Números cuando Ambos Tienen Ceros Finales</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Regla de Oro:</strong> Se multiplican los números omitiendo todos los ceros finales. Al resultado final se le <strong>añade la suma total de los ceros</strong> que tenían entre los dos números. Esto ahorra muchísimo tiempo de cálculo.
+                </div>
+
+                <div class="sub-step">
+                    <span class="step-num">Ejemplo Detallado: $245000 \times 6700$</span>
+                    <div class="division-table-container">
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.4rem; letter-spacing: 1px;">
+                            245<span class="highlight-zeros">000</span> $\times$ 67<span class="highlight-zeros">00</span> = <span class="highlight">16415</span><span class="highlight-zeros">00000</span>
+                        </div>
+                        <div class="explicacion-lateral">
+                            • <strong>Paso 1:</strong> Contamos los ceros finales de ambos números:<br>
+                            &nbsp;&nbsp;– $245.000$ tiene <span class="zero-badge">3 ceros</span>.<br>
+                            &nbsp;&nbsp;– $6.700$ tiene <span class="zero-badge">2 ceros</span>.<br>
+                            &nbsp;&nbsp;– Total ceros a añadir = $3 + 2 =$ <strong><span class="zero-badge">5 ceros</span></strong>.<br><br>
+                            • <strong>Paso 2:</strong> Multiplicamos solo los números sin los ceros:<br>
+                            &nbsp;&nbsp;$245 \times 67 = 16.415$.<br><br>
+                            • <strong>Paso 3:</strong> Añadimos los $5$ ceros al resultado:<br>
+                            &nbsp;&nbsp;<strong>1.641.500.000</strong> (Mil seisocientos cuarenta y un millones quinientos mil).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOTA FINAL -->
+            <div class="step-block">
+                <div class="step-title">4. Nota Final e Importancia Futura de la Técnica</div>
+                <p>Esta propiedad para trabajar con ceros finales no solo sirve para la multiplicación:</p>
+                
+                <ul>
+                    <li><strong>División:</strong> También se utiliza ampliamente para simplificar divisiones eliminando ceros en dividendo y divisor (aunque este procedimiento se explicará en temas posteriores).</li>
+                    <li><strong>Números Decimales:</strong> El verdadero potencial de esta técnica aparecerá al estudiar los números decimales, donde multiplicar o dividir por potencias de 10 equivale a desplazar la coma hacia la derecha o hacia la izquierda.</li>
+                    <li><strong>Cambios de Unidades:</strong> Es la herramienta indispensable para convertir unidades de medida (pasar de metros a kilómetros, de gramos a miligramos, de litros a centilitros, etc.).</li>
+                </ul>
+
+                <div class="note-box">
+                    <strong>💡 Consejo:</strong> Acostúmbrate a "tachar" o contar mentalmente los ceros antes de empezar a operar en papel. Hará que tus cálculos sean infinitamente más rápidos y cometas menos errores.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

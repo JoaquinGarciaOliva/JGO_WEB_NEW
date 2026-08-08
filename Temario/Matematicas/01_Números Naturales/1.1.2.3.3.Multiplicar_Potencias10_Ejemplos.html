@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicación por Potencias de 10 y Números Seguidos de Ceros</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            chtml: { displayAlign: "left" },
+            startup: { ready: () => { MathJax.startup.defaultReady(); } }
+        };
+    </script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 15px 0;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 3px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .col-digito { width: 26px; color: #2d3748; }
+        .col-signo { width: 26px; text-align: center; color: #2635b7; }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.4;
+            max-width: 550px;
+        }
+
+        .linea-llevada { color: #e53e3e; font-size: 0.95rem; }
+        .resultado-final { color: #2635b7; }
+        .resultado-verde { color: #16a34a; }
+    </style>
+</head>
+<body>
+
+    <h1>Banco de Ejemplos: Potencias de 10 y Números con Ceros Finales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>15 Ejemplos Prácticos Desarrollados Paso a Paso</h2>
+            <p>A continuación se presentan 15 ejemplos organizados en tres bloques temáticos según la estructura y tipo de factores involucrados.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1 -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">Bloque 1: Multiplicaciones Exclusivamente entre Potencias de 10 (3 Ejemplos)</div>
+
+                <h3>Ejemplo 1: $10 \times 100$ y $100 \times 1000$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p><strong>Operación 1:</strong> $10 \times 100 = 1\,000$</p>
+                        <p>Se escribe la base $1$ y se añaden los ceros totales: $1 \text{ cero} + 2 \text{ ceros} = 3 \text{ ceros}$.</p>
+                        <p><strong>Operación 2:</strong> $100 \times 1\,000 = 100\,000$</p>
+                        <p>Se suman los ceros de ambos factores: $2 \text{ ceros} + 3 \text{ ceros} = 5 \text{ ceros}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 2: $10 \times 10 \times 100$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p><strong>Paso 1:</strong> $10 \times 10 = 100$ (se unen $1 + 1 = 2$ ceros).</p>
+                        <p><strong>Paso 2:</strong> $100 \times 100 = 10\,000$ (se unen $2 + 2 = 4$ ceros).</p>
+                        <p><strong>Resultado Global:</strong> $10 \times 10 \times 100 = 10\,000$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 3: $1\,000 \times 10 \times 10\,000$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>Contamos el número total de ceros entre todos los factores:</p>
+                        <ul>
+                            <li>$1\,000 \rightarrow 3$ ceros</li>
+                            <li>$10 \rightarrow 1$ cero</li>
+                            <li>$10\,000 \rightarrow 4$ ceros</li>
+                        </ul>
+                        <p>Total = $3 + 1 + 4 = 8$ ceros. El resultado final es $100\,000\,000$ ($10^8$).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2 -->
+            <div class="step-block" style="border-color: #dd6b20;">
+                <div class="step-title" style="color: #dd6b20;">Bloque 2: Un Factor de Una Cifra Seguido de Ceros (7 Ejemplos)</div>
+
+                <h3>Ejemplo 4: $40 \times 7$ y $40 \times 70$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>• $40 \times 7$: Multiplicamos las cifras distintas de cero ($4 \times 7 = 28$) y añadimos $1$ cero $\rightarrow \mathbf{280}$.</p>
+                        <p>• $40 \times 70$: Multiplicamos $4 \times 7 = 28$ y añadimos $2$ ceros ($1 + 1$) $\rightarrow \mathbf{2\,800}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 5: $600 \times 9$ y $600 \times 90$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>• $600 \times 9$: $6 \times 9 = 54$, más $2$ ceros $\rightarrow \mathbf{5\,400}$.</p>
+                        <p>• $600 \times 90$: $6 \times 9 = 54$, más $3$ ceros ($2 + 1$) $\rightarrow \mathbf{54\,000}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 6: $800 \times 500$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>Multiplicamos los dígitos principales: $8 \times 5 = 40$.</p>
+                        <p>Añadimos los $4$ ceros de los factores ($2$ del 800 y $2$ del 500).</p>
+                        <p><strong>Resultado:</strong> $40 + 0000 = \mathbf{400\,000}$. (<em>Nota: el cero del 40 proviene del producto original</em>).</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 7: $3\,000 \times 40$ y $3\,000 \times 400$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>• $3\,000 \times 40$: $3 \times 4 = 12$, agregamos $3 + 1 = 4$ ceros $\rightarrow \mathbf{120\,000}$.</p>
+                        <p>• $3\,000 \times 400$: $3 \times 4 = 12$, agregamos $3 + 2 = 5$ ceros $\rightarrow \mathbf{1\,200\,000}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 8: $50 \times 20 \times 30$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p><strong>Paso 1:</strong> $50 \times 20 \rightarrow 5 \times 2 = 10$, agregamos $2$ ceros $\rightarrow 1\,000$.</p>
+                        <p><strong>Paso 2:</strong> $1\,000 \times 30 \rightarrow 1 \times 3 = 3$, agregamos $3 + 1 = 4$ ceros $\rightarrow \mathbf{30\,000}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 9: $7\,000 \times 600$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>Multiplicamos la parte numérica principal: $7 \times 6 = 42$.</p>
+                        <p>Contamos los ceros pendientes: $3$ en el primer factor y $2$ en el segundo ($3 + 2 = 5$).</p>
+                        <p><strong>Resultado:</strong> $\mathbf{4\,200\,000}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 10: $90 \times 800 \times 100$</h3>
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <p>Multiplicamos los dígitos principales: $9 \times 8 \times 1 = 72$.</p>
+                        <p>Sumamos la cantidad de ceros: $1 \text{ (del 90)} + 2 \text{ (del 800)} + 2 \text{ (del 100)} = 5 \text{ ceros}$.</p>
+                        <p><strong>Resultado:</strong> $\mathbf{7\,200\,000}$.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3 -->
+            <div class="step-block" style="border-color: #4a5568;">
+                <div class="step-title" style="color: #4a5568;">Bloque 3: Multiplicandos de Varias Cifras con Ceros Finales (5 Ejemplos)</div>
+
+                <h3>Ejemplo 11: $24 \times 300$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final"></td><td class="col-digito resultado-final">7</td><td class="col-digito resultado-final">2</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <p>1. Resolvemos la multiplicación sin ceros: $24 \times 3 = 72$.</p>
+                        <p>2. Agregamos los $2$ ceros del factor $300$ al final.</p>
+                        <p><strong>Resultado:</strong> $72 \text{ con } 2 \text{ ceros} = \mathbf{7\,200}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 12: $132 \times 40$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito">1</td><td class="col-digito">3</td><td class="col-digito">2</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">4</td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">2</td><td class="col-digito resultado-final">8</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <p>1. Operación base: $132 \times 4 = 528$.</p>
+                        <p>2. Agregamos el cero final del $40$.</p>
+                        <p><strong>Resultado:</strong> $528 \text{ con } 1 \text{ cero} = \mathbf{5\,280}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 13: $450 \times 120$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">4</td><td class="col-digito">5</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">2</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">9</td><td class="col-digito">0</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">4</td><td class="col-digito">5</td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-final">5</td><td class="col-digito resultado-final">4</td><td class="col-digito resultado-final">0</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <p>1. Multiplicación parcial sin ceros: $45 \times 12$.</p>
+                        <p>&nbsp;&nbsp;• Fila 1 ($45 \times 2$): $90$</p>
+                        <p>&nbsp;&nbsp;• Fila 2 ($45 \times 1$): $45$ (desplazado)</p>
+                        <p>&nbsp;&nbsp;• Suma parcial: $540$.</p>
+                        <p>2. Añadimos $2$ ceros totales ($1$ de 450 y $1$ de 120): $\mathbf{54\,000}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 14: $2150 \times 2300$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">1</td><td class="col-digito">5</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">2</td><td class="col-digito">3</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">6</td><td class="col-digito">4</td><td class="col-digito">5</td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">4</td><td class="col-digito">3</td><td class="col-digito">0</td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">4</td><td class="col-digito resultado-verde">5</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <p>1. Operación parcial de las cifras significativas: $215 \times 23$.</p>
+                        <p>&nbsp;&nbsp;• $215 \times 3 = 645$</p>
+                        <p>&nbsp;&nbsp;• $215 \times 2 = 430$ (desplazado)</p>
+                        <p>&nbsp;&nbsp;• Suma: $4\,945$.</p>
+                        <p>2. Añadimos los $3$ ceros acumulados ($1$ de $2150$ y $2$ de $2300$): $\mathbf{4\,945\,000}$.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 15: $30400 \times 1050$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">3</td><td class="col-digito">0</td><td class="col-digito">4</td></tr>
+                        <tr><td class="col-signo">×</td><td class="col-digito"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">0</td><td class="col-digito">5</td></tr>
+                        <tr style="border-top: 1px solid #cbd5e0;"><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">1</td><td class="col-digito">5</td><td class="col-digito">2</td><td class="col-digito">0</td></tr>
+                        <tr><td class="col-signo"></td><td class="col-digito"></td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito">0</td><td class="col-digito"></td></tr>
+                        <tr><td class="col-signo">+</td><td class="col-digito">3</td><td class="col-digito">0</td><td class="col-digito">4</td><td class="col-digito"></td><td class="col-digito"></td></tr>
+                        <tr style="border-top: 2px solid #2d3748;"><td class="col-signo"></td><td class="col-digito resultado-verde">3</td><td class="col-digito resultado-verde">1</td><td class="col-digito resultado-verde">9</td><td class="col-digito resultado-verde">2</td><td class="col-digito resultado-verde">0</td></tr>
+                    </table>
+                    <div class="explicacion-lateral">
+                        <p>1. Se multiplican las partes sin los ceros del final: $304 \times 105$.</p>
+                        <p>&nbsp;&nbsp;• Fila del 5: $1520$</p>
+                        <p>&nbsp;&nbsp;• Fila del 0: $000$</p>
+                        <p>&nbsp;&nbsp;• Fila del 1: $304$</p>
+                        <p>&nbsp;&nbsp;• Suma parcial: $31\,920$.</p>
+                        <p>2. Agregamos los $3$ ceros finales omitidos ($2$ del primer factor + $1$ del segundo): $\mathbf{31\,920\,000}$.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
