@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: La División de Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla/caja y la explicación */
+        .division-table-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Caja para la tabla del divisor */
+        .tabla-divisor-box {
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            padding: 12px 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            color: #2d3748;
+            min-width: 140px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .tabla-divisor-title {
+            font-weight: bold;
+            color: #00769d;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 4px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .sub-step {
+            margin-bottom: 25px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 20px;
+        }
+        .sub-step:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .step-num {
+            display: inline-block;
+            background: #00769d;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .math-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            letter-spacing: 1px;
+            background: #ffffff;
+            padding: 12px 18px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            white-space: pre;
+        }
+
+        .flecha-bajada {
+            color: #e53e3e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: La División de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Operaciones Básicas: La División</h2>
+            <p>La división es una operación aritmética fundamental que consiste en repartir una cantidad en partes iguales o averiguar cuántas veces está contenida una cantidad en otra.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- PUNTO 1 -->
+            <div class="step-block">
+                <div class="step-title">1. ¿Qué significa dividir?</div>
+                <div class="regla-box">
+                    <strong>Concepto clave:</strong> Dividir significa <strong>repartir en partes iguales</strong> una cantidad entre un número determinado de elementos.
+                </div>
+                <p><strong>Ejemplo 1 (División inexacta):</strong> Si queremos repartir $7$ caramelos entre $3$ amigos, a cada amigo le tocan $2$ caramelos y nos sobra $1$ caramelo sin repartir.</p>
+                <p><strong>Ejemplo 2 (División exacta):</strong> Si queremos repartir $20$ caramelos entre $5$ amigos, a cada amigo le tocan $4$ caramelos y no sobra ninguno ($0$).</p>
+            </div>
+
+            <!-- PUNTO 2 -->
+            <div class="step-block">
+                <div class="step-title">2. Términos de la División y Cómo se Divide (Una Cifra)</div>
+                <div class="regla-box">
+                    <strong>Los términos de la división:</strong>
+                    <ul>
+                        <li><strong>Dividendo ($D$):</strong> Es la cantidad total que queremos repartir.</li>
+                        <li><strong>Divisor ($d$):</strong> Es el número de partes iguales en las que vamos a repartir.</li>
+                        <li><strong>Cociente ($c$):</strong> Es el resultado, la cantidad que le corresponde a cada parte.</li>
+                        <li><strong>Resto ($r$):</strong> Es lo que queda sin repartir (siempre debe ser menor que el divisor).</li>
+                    </ul>
+                </div>
+
+                <p>Para dividir, utilizamos la <strong>tabla de multiplicar del divisor</strong>. Veamos cómo dividir $13$ entre $3$ ($13 : 3$):</p>
+
+                <div class="division-table-container">
+                    <div class="math-display"> 13 |<u> 3 </u>
+-12   4
+---
+  1</div>
+                    <div class="tabla-divisor-box">
+                        <div class="tabla-divisor-title">Tabla del 3:</div>
+                        3 × 0 = 0<br>
+                        3 × 1 = 3<br>
+                        3 × 2 = 6<br>
+                        3 × 3 = 9<br>
+                        <strong>3 × 4 = 12</strong><br>
+                        3 × 5 = 15
+                    </div>
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li>Buscamos el $13$ en la tabla del $3$. Se encuentra entre $12$ ($3 \times 4$) y $15$ ($3 \times 5$).</li>
+                            <li>Como no podemos pasarnos de $13$, elegimos $3 \times 4 = 12$.</li>
+                            <li>Colocamos el <strong>$4$</strong> en el cociente y restamos $12$ a $13$: $13 - 12 = 1$.</li>
+                            <li>Sobra <strong>$1$</strong>, que es el <strong>resto</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PUNTO 3: Algoritmo paso a paso -->
+            <div class="step-block">
+                <div class="step-title">3. Reglas de Selección Inicial y Bajada de Cifras</div>
+                
+                <div class="regla-box">
+                    <strong>Reglas de oro del algoritmo de la división:</strong>
+                    <ol>
+                        <li><strong>Selección inicial de cifras:</strong> Al empezar, tomamos en el dividendo la <strong>misma cantidad de cifras</strong> que tiene el divisor. Si esa cantidad resulta ser menor que el divisor, entonces tomamos <strong>una cifra más</strong>.</li>
+                        <li><strong>Mecanismo continuo:</strong> A partir de ese momento, el algoritmo avanza bajando <strong>siempre de una cifra en una cifra</strong>.</li>
+                        <li><strong>Obligatoriedad del cociente:</strong> <strong>CADA VEZ que se baja una cifra, es OBLIGATORIO poner un número en el cociente</strong> (si la cantidad obtenida es menor que el divisor, se colocará un $0$ en el cociente).</li>
+                    </ol>
+                </div>
+
+                <h3>Ejemplo 1 (Divisor de 1 cifra): Resolver $2532 : 5$</h3>
+
+                <!-- Paso 1 -->
+                <div class="sub-step">
+                    <span class="step-num">Paso 1: Selección inicial y primer cálculo</span>
+                    <div class="division-table-container">
+                        <div class="math-display"> 2532 |<u> 5 </u>
+-25     5
+---
+  0</div>
+                        <div class="tabla-divisor-box">
+                            <div class="tabla-divisor-title">Tabla del 5:</div>
+                            5 × 0 = 0<br>
+                            5 × 1 = 5<br>
+                            5 × 2 = 10<br>
+                            5 × 3 = 15<br>
+                            5 × 4 = 20<br>
+                            <strong>5 × 5 = 25</strong><br>
+                            5 × 6 = 30
+                        </div>
+                        <div class="explicacion-lateral">
+                            El divisor tiene 1 cifra ($5$). Miramos la primera cifra del dividendo ($2$). Como $2 < 5$, debemos tomar <strong>dos cifras ($25$)</strong>.<br><br>
+                            Buscamos $25$ en la tabla del $5$: $5 \times 5 = 25$. Colocamos el $5$ en el cociente y restamos: $25 - 25 = 0$.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="sub-step">
+                    <span class="step-num">Paso 2: Bajar el 3 (Cero al cociente)</span>
+                    <div class="division-table-container">
+                        <div class="math-display"> 25<span class="flecha-bajada">3</span>2 |<u> 5  </u>
+-25<span class="flecha-bajada">↓</span>   50
+---
+  0<span class="flecha-bajada">3</span>
+ - 0
+ ---
+   3</div>
+                        <div class="tabla-divisor-box">
+                            <div class="tabla-divisor-title">Tabla del 5:</div>
+                            <strong>5 × 0 = 0</strong><br>
+                            5 × 1 = 5<br>
+                            5 × 2 = 10<br>
+                            5 × 3 = 15
+                        </div>
+                        <div class="explicacion-lateral">
+                            Bajamos la siguiente cifra, el <span class="flecha-bajada">3</span>, indicada con la flecha <span class="flecha-bajada">↓</span>.<br><br>
+                            <strong>¡Regla clave!</strong> Como hemos bajado una cifra, <strong>estamos obligados a poner un número en el cociente</strong>. Buscamos en la tabla del $5$ el número que se acerque a $3$ sin pasarse: $5 \times 0 = 0$.<br><br>
+                            Ponemos $0$ en el cociente y restamos: $3 - 0 = 3$.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="sub-step">
+                    <span class="step-num">Paso 3: Bajar el 2 y finalizar</span>
+                    <div class="division-table-container">
+                        <div class="math-display"> 253<span class="flecha-bajada">2</span> |<u> 5   </u>
+-25 |   506
+--- |
+  03<span class="flecha-bajada">↓</span>
+ - 0|
+ ---|
+   3<span class="flecha-bajada">2</span>
+ - 30
+ ----
+    2</div>
+                        <div class="tabla-divisor-box">
+                            <div class="tabla-divisor-title">Tabla del 5:</div>
+                            5 × 4 = 20<br>
+                            5 × 5 = 25<br>
+                            <strong>5 × 6 = 30</strong><br>
+                            5 × 7 = 35
+                        </div>
+                        <div class="explicacion-lateral">
+                            Bajamos la última cifra, el <span class="flecha-bajada">2</span>, con la flecha <span class="flecha-bajada">↓</span>, formando el número $32$.<br><br>
+                            Buscamos $32$ en la tabla del $5$: $5 \times 6 = 30$.<br>
+                            Ponemos el $6$ en el cociente y restamos: $32 - 30 = 2$.<br><br>
+                            <strong>Cociente:</strong> <span class="highlight">506</span> | <strong>Resto:</strong> <span class="highlight">2</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PUNTO 4: Ejemplo con Divisor de 2 Cifras -->
+            <div class="step-block">
+                <div class="step-title">4. División por Divisores de Varias Cifras</div>
+                <p>Aplicamos exactamente el mismo procedimiento con divisores de 2 o más cifras.</p>
+
+                <h3>Ejemplo 2 (Divisor de 2 cifras): Resolver $25034 : 12$</h3>
+
+                <div class="division-table-container">
+                    <div class="math-display"> 25034 |<u> 12   </u>
+-24|||   2086
+---|||
+  1<span class="flecha-bajada">0</span>||
+ - 0||
+ ---||
+  10<span class="flecha-bajada">3</span>|
+ - 96|
+ ----|
+    7<span class="flecha-bajada">4</span>
+  - 72
+ ----
+    2</div>
+                    <div class="tabla-divisor-box">
+                        <div class="tabla-divisor-title">Tabla del 12:</div>
+                        <strong>12 × 0 = 0</strong><br>
+                        12 × 1 = 12<br>
+                        <strong>12 × 2 = 24</strong><br>
+                        12 × 3 = 36<br>
+                        12 × 4 = 48<br>
+                        12 × 5 = 60<br>
+                        <strong>12 × 6 = 72</strong><br>
+                        12 × 7 = 84<br>
+                        <strong>12 × 8 = 96</strong>
+                    </div>
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li><strong>Inicio:</strong> El divisor tiene 2 cifras ($12$). Tomamos 2 cifras en el dividendo ($25$). Como $25 \ge 12$, nos sirve. $12 \times 2 = 24$. Ponemos $2$ en el cociente. Resta: $25 - 24 = 1$.</li>
+                            <li><strong>Bajamos el <span class="flecha-bajada">0</span>:</strong> Formamos $10$. Como bajamos cifra, colocamos obligatoriamente un número en el cociente. Como $10 < 12$, corresponde $12 \times 0 = 0$. Ponemos <strong>$0$</strong> en el cociente. Resta: $10 - 0 = 10$.</li>
+                            <li><strong>Bajamos el <span class="flecha-bajada">3</span>:</strong> Formamos $103$. En la tabla del $12$, $12 \times 8 = 96$. Ponemos $8$ en el cociente. Resta: $103 - 96 = 7$.</li>
+                            <li><strong>Bajamos el <span class="flecha-bajada">4</span>:</strong> Formamos $74$. En la tabla del $12$, $12 \times 6 = 72$. Ponemos $6$ en el cociente. Resta: $74 - 72 = 2$.</li>
+                            <li><strong>Resultado:</strong> Cociente = <span class="highlight">2086</span>, Resto = <span class="highlight">2</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PUNTO 5: Recomendaciones -->
+            <div class="step-block">
+                <div class="step-title">5. Recomendaciones Importantes de Cálculo</div>
+                
+                <div class="regla-box" style="background-color: #fffaf0; border-left-color: #dd6b20;">
+                    <strong>Escribir la resta vs. hacerla de cabeza:</strong><br>
+                    Cuando dividimos por un divisor de <strong>una sola cifra</strong>, las restas se pueden hacer de cabeza. Sin embargo, con divisores de <strong>2, 3 o más cifras NO se debe restar de cabeza</strong>, ya que es muy fácil cometer errores. Es fundamental dejar escrita la resta paso a paso.
+                </div>
+
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Construcción progresiva de la tabla:</strong><br>
+                    Cuando dividimos por un divisor de varias cifras, <strong>no hace falta calcular la tabla completa del 1 al 9 desde el inicio</strong>. Se van realizando los cálculos a un lado según se vayan necesitando durante el desarrollo.
+                </div>
+            </div>
+
+            <!-- PUNTO 6: La Prueba de la División -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">6. La Prueba de la División</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Fórmula fundamental de la comprobación:</strong>
+                    $$\text{Dividendo} = \text{Cociente} \times \text{Divisor} + \text{Resto} \quad (D = c \times d + r)$$
+                </div>
+
+                <h3>6.1 Comprobación del Ejemplo 1 ($2532 : 5$)</h3>
+                <p>Comprobemos la división $2532 : 5$ ($D=2532, d=5, c=506, r=2$):</p>
+                <p>$$\text{Cociente} \times \text{Divisor} + \text{Resto} = 506 \times 5 + 2 = 2530 + 2 = 2532$$</p>
+                <p>Como obtenemos el Dividendo inicial ($2532$), la división está bien resuelta.</p>
+
+                <h3>6.2 Comprobación del Ejemplo 2 ($25034 : 12$)</h3>
+                <p>Comprobemos $25034 : 12$ ($D=25034, d=12, c=2086, r=2$):</p>
+                
+                <p><strong>Paso A: Multiplicación $Cociente \times Divisor$ ($2086 \times 12$):</strong></p>
+                <div class="division-table-container">
+                    <div class="math-display">   2086
+ x   12
+-------
+   4172
++ 2086
+-------
+  25032</div>
+                    <div class="explicacion-lateral">
+                        Multiplicamos el cociente ($2086$) por el divisor ($12$) mediante el algoritmo habitual de la multiplicación. Obtenemos $25032$.
+                    </div>
+                </div>
+
+                <p><strong>Paso B: Suma del Resto:</strong></p>
+                <div class="division-table-container">
+                    <div class="math-display">  25032
++     2
+-------
+  25034</div>
+                    <div class="explicacion-lateral">
+                        Sumamos el resto ($2$) al resultado de la multiplicación ($25032$).<br>
+                        Obtenemos exactamente el Dividendo inicial (<span class="highlight">25034</span>), comprobando que la operación es correcta.
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #cbd5e0; margin: 25px 0;">
+
+                <div class="regla-box" style="background-color: #f7fafc; border-left-color: #4a5568;">
+                    <strong>Nota final importante:</strong><br>
+                    Si el resto de una división es cero ($r = 0$), la división es <strong>exacta</strong> y la fórmula queda:
+                    $$\text{Dividendo} = \text{Cociente} \times \text{Divisor}$$
+                    En este caso, decimos que el <strong>divisor divide al dividendo</strong> de forma exacta.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

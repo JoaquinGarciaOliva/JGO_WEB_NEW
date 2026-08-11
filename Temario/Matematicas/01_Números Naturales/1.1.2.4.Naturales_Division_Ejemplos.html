@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Resueltos: La División</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                 
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            chtml: { displayAlign: "left" },
+            startup: { ready: () => { MathJax.startup.defaultReady(); } }
+        };
+    </script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            margin: 15px 0;
+            background: #f7fafc;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 3px 0;
+            text-align: center;
+            vertical-align: middle;
+            width: 26px; /* Ancho fijo estricto para perfecta alineación de columnas */
+        }
+
+        /* Espacio de separación entre el dividendo/restos y el divisor/cociente */
+        .col-espacio {
+            width: 45px !important;
+        }
+
+        /* Tabla auxiliar con mayor ancho */
+        .tabla-auxiliar {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            min-width: 190px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .tabla-auxiliar td {
+            padding: 5px 12px;
+            border: 1px solid #edf2f7;
+            text-align: center;
+        }
+
+        .col-signo { color: #2635b7; }
+        .border-caja-abajo { border-bottom: 2px solid #2d3748; }
+        .border-caja-izq { border-left: 2px solid #2d3748; } /* Línea vertical exclusiva para el divisor */
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            flex-grow: 1;
+            max-width: 450px;
+        }
+
+        .resultado-final { color: #2635b7; }
+        .resultado-verde { color: #16a34a; }
+        .resto-final { color: #e53e3e; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Banco de Ejemplos: Divisiones de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>10 Ejemplos Prácticos Desarrollados Paso a Paso</h2>
+            <p>A continuación se presentan diez operaciones de división organizadas por niveles de dificultad, con alineación estricta de restas, tablas auxiliares amplias y línea vertical delimitadora únicamente en la caja del divisor.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1 -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">Bloque 1: División por 1 Cifra (Restando)</div>
+
+                <h3>Ejemplo 1: $748 \div 3$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">3</td>
+                            <td class="border-caja-abajo"></td>
+                            <td class="border-caja-abajo"></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>6</td>
+                            <td></td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">2</td>
+                            <td class="resultado-final">4</td>
+                            <td class="resultado-final">9</td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="col-signo">-</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">1</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 3</td></tr>
+                        <tr><td>$3 \times 1$</td><td>3</td></tr>
+                        <tr><td>$3 \times 2$</td><td>6</td></tr>
+                        <tr><td>$3 \times 4$</td><td>12</td></tr>
+                        <tr><td>$3 \times 9$</td><td>27</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos la primera cifra (7). Buscamos en la tabla del 3: $3 \times 2 = 6$. Colocamos 2 en el cociente y restamos $7 - 6 = 1$.<br>
+                        <b>Paso 2:</b> Bajamos el 4 para formar 14. Buscamos en la tabla: $3 \times 4 = 12$. Colocamos 4 en el cociente y restamos $14 - 12 = 2$.<br>
+                        <b>Paso 3:</b> Bajamos el 8 para formar 28. Buscamos en la tabla: $3 \times 9 = 27$. Colocamos 9 en el cociente y restamos $28 - 27 = 1$.<br>
+                        <b>Resultado:</b> Cociente $249$, Resto $1$.
+                    </div>
+                </div>
+
+                <h3>Ejemplo 2: $925 \div 4$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>9</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">4</td>
+                            <td class="border-caja-abajo"></td>
+                            <td class="border-caja-abajo"></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>8</td>
+                            <td></td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">2</td>
+                            <td class="resultado-final">3</td>
+                            <td class="resultado-final">1</td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="col-signo">-</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">1</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 4</td></tr>
+                        <tr><td>$4 \times 1$</td><td>4</td></tr>
+                        <tr><td>$4 \times 2$</td><td>8</td></tr>
+                        <tr><td>$4 \times 3$</td><td>12</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos el 9. En la tabla del 4: $4 \times 2 = 8$. Colocamos 2 en el cociente y restamos $9 - 8 = 1$.<br>
+                        <b>Paso 2:</b> Bajamos la cifra 2 formando 12. En la tabla: $4 \times 3 = 12$. Colocamos 3 en el cociente y restamos $12 - 12 = 0$.<br>
+                        <b>Paso 3:</b> Bajamos la cifra 5 formando 05 (5). En la tabla: $4 \times 1 = 4$. Colocamos 1 en el cociente y restamos $5 - 4 = 1$.<br>
+                        <b>Resultado:</b> Cociente $231$, Resto $1$.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2 -->
+            <div class="step-block" style="border-color: #dd6b20;">
+                <div class="step-title" style="color: #dd6b20;">Bloque 2: División por 1 Cifra (Sin mostrar restas)</div>
+
+                <h3>Ejemplo 3: $836 \div 5$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">5</td>
+                            <td class="border-caja-abajo"></td>
+                            <td class="border-caja-abajo"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">1</td>
+                            <td class="resultado-final">6</td>
+                            <td class="resultado-final">7</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">1</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 5</td></tr>
+                        <tr><td>$5 \times 1$</td><td>5</td></tr>
+                        <tr><td>$5 \times 6$</td><td>30</td></tr>
+                        <tr><td>$5 \times 7$</td><td>35</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos el 8. $5 \times 1 = 5$. De 5 a 8 van 3.<br>
+                        <b>Paso 2:</b> Bajamos el 3 formando 33. $5 \times 6 = 30$. De 30 a 33 van 3.<br>
+                        <b>Paso 3:</b> Bajamos el 6 formando 36. $5 \times 7 = 35$. De 35 a 36 va 1 (resto final).<br>
+                        <b>Resultado:</b> Cociente $167$, Resto $1$.
+                    </div>
+                </div>
+
+                <h3>Ejemplo 4: $642 \div 6$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">6</td>
+                            <td class="border-caja-abajo"></td>
+                            <td class="border-caja-abajo"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>4</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">1</td>
+                            <td class="resultado-final">0</td>
+                            <td class="resultado-final">7</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">0</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 6</td></tr>
+                        <tr><td>$6 \times 0$</td><td>0</td></tr>
+                        <tr><td>$6 \times 1$</td><td>6</td></tr>
+                        <tr><td>$6 \times 7$</td><td>42</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos el 6. $6 \times 1 = 6$. De 6 a 6 va 0.<br>
+                        <b>Paso 2:</b> Bajamos el 4 formando 04 (4). Como 4 es menor que 6, ponemos 0 al cociente ($6 \times 0 = 0$). De 0 a 4 van 4.<br>
+                        <b>Paso 3:</b> Bajamos el 2 formando 42. $6 \times 7 = 42$. De 42 a 42 va 0.<br>
+                        <b>Resultado:</b> Cociente $107$, Resto $0$.
+                    </div>
+                </div>
+
+                <h3>Ejemplo 5: $789 \div 7$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">7</td>
+                            <td class="border-caja-abajo"></td>
+                            <td class="border-caja-abajo"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>8</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">1</td>
+                            <td class="resultado-final">1</td>
+                            <td class="resultado-final">2</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">5</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 7</td></tr>
+                        <tr><td>$7 \times 1$</td><td>7</td></tr>
+                        <tr><td>$7 \times 2$</td><td>14</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos el 7. $7 \times 1 = 7$. De 7 a 7 va 0.<br>
+                        <b>Paso 2:</b> Bajamos el 8 formando 08 (8). $7 \times 1 = 7$. De 7 a 8 va 1.<br>
+                        <b>Paso 3:</b> Bajamos el 9 formando 19. $7 \times 2 = 14$. De 14 a 19 van 5.<br>
+                        <b>Resultado:</b> Cociente $112$, Resto $5$.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3 -->
+            <div class="step-block" style="border-color: #4a5568;">
+                <div class="step-title" style="color: #4a5568;">Bloque 3: División por 2 Cifras (Mostrando restas)</div>
+
+                <h3>Ejemplo 6: $584 \div 12$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">1</td>
+                            <td class="border-caja-abajo">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">4</td>
+                            <td class="resultado-final">8</td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="col-signo">-</td>
+                            <td>9</td>
+                            <td>6</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td>0</td>
+                            <td class="resto-final">8</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 12</td></tr>
+                        <tr><td>$12 \times 4$</td><td>48</td></tr>
+                        <tr><td>$12 \times 8$</td><td>96</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos 2 cifras en el dividendo: 58. En la tabla del 12: $12 \times 4 = 48$. Ponemos 4 en el cociente y restamos $58 - 48 = 10$.<br>
+                        <b>Paso 2:</b> Bajamos la cifra 4 obteniendo 104. Buscamos en la tabla: $12 \times 8 = 96$. Ponemos 8 en el cociente y restamos $104 - 96 = 8$.<br>
+                        <b>Resultado:</b> Cociente $48$, Resto $8$.
+                    </div>
+                </div>
+
+                <h3>Ejemplo 7: $895 \div 23$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>5</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">2</td>
+                            <td class="border-caja-abajo">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>6</td>
+                            <td>9</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">3</td>
+                            <td class="resultado-final">8</td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">2</td>
+                            <td class="resto-final">1</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 23</td></tr>
+                        <tr><td>$23 \times 3$</td><td>69</td></tr>
+                        <tr><td>$23 \times 8$</td><td>184</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos 89. En la tabla del 23: $23 \times 3 = 69$. Colocamos 3 en el cociente y restamos $89 - 69 = 20$.<br>
+                        <b>Paso 2:</b> Bajamos el 5 para formar 205. En la tabla: $23 \times 8 = 184$. Colocamos 8 en el cociente y restamos $205 - 184 = 21$.<br>
+                        <b>Resultado:</b> Cociente $38$, Resto $21$.
+                    </div>
+                </div>
+
+                <h3>Ejemplo 8: $968 \div 41$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>9</td>
+                            <td>6</td>
+                            <td>8</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">4</td>
+                            <td class="border-caja-abajo">1</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>8</td>
+                            <td>2</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-final">2</td>
+                            <td class="resultado-final">3</td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">2</td>
+                            <td class="resto-final">5</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 41</td></tr>
+                        <tr><td>$41 \times 2$</td><td>82</td></tr>
+                        <tr><td>$41 \times 3$</td><td>123</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos 96. En la tabla del 41: $41 \times 2 = 82$. Colocamos 2 en el cociente y restamos $96 - 82 = 14$.<br>
+                        <b>Paso 2:</b> Bajamos el 8 formando 148. Buscamos en la tabla: $41 \times 3 = 123$. Colocamos 3 en el cociente y restamos $148 - 123 = 25$.<br>
+                        <b>Resultado:</b> Cociente $23$, Resto $25$.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 4 -->
+            <div class="step-block" style="border-color: #16a34a;">
+                <div class="step-title" style="color: #16a34a;">Bloque 4: División por 3 Cifras (Mostrando restas)</div>
+
+                <h3>Ejemplo 9: $4892 \div 112$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>2</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">1</td>
+                            <td class="border-caja-abajo">1</td>
+                            <td class="border-caja-abajo">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-verde">4</td>
+                            <td class="resultado-verde">3</td>
+                            <td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="col-signo">-</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">7</td>
+                            <td class="resto-final">6</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 112</td></tr>
+                        <tr><td>$112 \times 3$</td><td>336</td></tr>
+                        <tr><td>$112 \times 4$</td><td>448</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos 3 cifras en el dividendo: 489. En la tabla del 112: $112 \times 4 = 448$. Ponemos 4 en el cociente y restamos $489 - 448 = 41$.<br>
+                        <b>Paso 2:</b> Bajamos el 2 para obtener 412. En la tabla: $112 \times 3 = 336$. Ponemos 3 en el cociente y restamos $412 - 336 = 76$.<br>
+                        <b>Resultado:</b> Cociente $43$, Resto $76$.
+                    </div>
+                </div>
+
+                <h3>Ejemplo 10: $7854 \div 203$</h3>
+                <div class="division-table-container">
+                    <table class="factor-table">
+                        <tr>
+                            <td></td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td class="border-caja-abajo border-caja-izq">2</td>
+                            <td class="border-caja-abajo">0</td>
+                            <td class="border-caja-abajo">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>6</td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td></td>
+                            <td class="col-espacio"></td>
+                            <td class="resultado-verde">3</td>
+                            <td class="resultado-verde">8</td>
+                            <td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-signo">-</td>
+                            <td>1</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                        <tr style="border-top: 1px solid #2d3748;">
+                            <td></td>
+                            <td></td>
+                            <td class="resto-final">1</td>
+                            <td class="resto-final">4</td>
+                            <td class="resto-final">0</td>
+                            <td class="col-espacio"></td>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </table>
+
+                    <table class="tabla-auxiliar">
+                        <tr><td colspan="2" style="font-weight:bold; background:#edf2f7;">Tabla del 203</td></tr>
+                        <tr><td>$203 \times 3$</td><td>609</td></tr>
+                        <tr><td>$203 \times 8$</td><td>1624</td></tr>
+                    </table>
+
+                    <div class="explicacion-lateral">
+                        <b>Paso 1:</b> Tomamos las primeras 3 cifras: 785. Buscamos en la tabla: $203 \times 3 = 609$. Ponemos 3 en el cociente y restamos $785 - 609 = 176$.<br>
+                        <b>Paso 2:</b> Bajamos la cifra 4 para obtener 1764. Buscamos en la tabla: $203 \times 8 = 1624$. Ponemos 8 en el cociente y restamos $1764 - 1624 = 140$.<br>
+                        <b>Resultado:</b> Cociente $38$, Resto $140$.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
