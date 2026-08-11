@@ -1,15 +1,33 @@
+document.addEventListener('keydown', (event) => {
+    if (event.key >= '0' && event.key <= '9') {
+        const buttons = document.querySelectorAll('.score-buttons .digit-btn');
+        const targetButton = Array.from(buttons).find(
+            (btn) => btn.textContent.trim() === event.key
+        );
+
+        if (targetButton) {
+            targetButton.click();
+            targetButton.classList.add('active');
+            setTimeout(() => targetButton.classList.remove('active'), 150);
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const divisionContainer = document.getElementById('divisionContainer');
     const helperTableContainer = document.getElementById('helperTableContainer');
     const cifrasASelect = document.getElementById('cifrasASelect');
     const cifrasBSelect = document.getElementById('cifrasBSelect');
+    const conRestaCheckbox = document.getElementById('conRestaCheckbox');
     const newOperationButton = document.getElementById('newOperationButton');
     const toggleTableButton = document.getElementById('toggleTableButton');
     const playerScoreSpan = document.getElementById('playerScore');
     const digitButtons = document.querySelectorAll('.digit-btn');
+    const keypadWrapper = document.getElementById('keypadWrapper');
 
     let cifrasA = parseInt(cifrasASelect.value);
     let cifrasB = parseInt(cifrasBSelect.value);
+    let conResta = conRestaCheckbox.checked;
     let totalAttempts = 0;
     let successfulHits = 0;
     let showTable = false;
@@ -53,8 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             cocienteCompletoStr += digitoCociente.toString();
 
-            // Guardamos qué carácter del dividendo original se baja en este paso (si no es el primero sin cifra nueva)
-            let cifraBajadaAqui = (index < strA.length) ? strA[index] : "";
+            let cifraBajadaAqui = strA[index];
 
             stepsData.push({
                 subDividendo: currentSubDividendoStr,
@@ -80,10 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
         divisionContainer.innerHTML = '';
         gameSteps = [];
 
-        // --- ENCABEZADO: DIVIDENDO, DIVISOR Y COCIENTE ---
         const headerBlock = document.createElement('div');
         headerBlock.className = 'div-header-block';
 
+        // Lado Izquierdo: Dividendo y todo el cuerpo debajo para mantener alineación estricta
         const leftSideContainer = document.createElement('div');
         leftSideContainer.className = 'left-side-container';
 
@@ -91,13 +108,19 @@ document.addEventListener('DOMContentLoaded', () => {
         dividendoDiv.className = 'dividendo-row';
         for (let char of data.strA) {
             const c = document.createElement('div');
-            c.className = 'num-cell static-text';
+            c.className = 'num-cell static-text dividendo-cell';
             c.textContent = char;
             dividendoDiv.appendChild(c);
         }
         leftSideContainer.appendChild(dividendoDiv);
+
+        const bodyBlock = document.createElement('div');
+        bodyBlock.className = 'div-body-block';
+        leftSideContainer.appendChild(bodyBlock);
+
         headerBlock.appendChild(leftSideContainer);
 
+        // Lado Derecho: Divisor (con raya izquierda y abajo) y Cociente (sin raya izquierda)
         const divisorCocienteBox = document.createElement('div');
         divisorCocienteBox.className = 'divisor-cociente-box';
 
@@ -105,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         divisorRow.className = 'divisor-row';
         for (let char of data.strB) {
             const c = document.createElement('div');
-            c.className = 'num-cell static-text';
+            c.className = 'num-cell static-text divisor-cell';
             c.textContent = char;
             divisorRow.appendChild(c);
         }
@@ -123,64 +146,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         divisorCocienteBox.appendChild(cocienteRow);
         headerBlock.appendChild(divisorCocienteBox);
+
         divisionContainer.appendChild(headerBlock);
 
-        // --- BLOQUE CUERPO: PASOS OPERATIVOS SIMPLIFICADOS ---
-        const bodyBlock = document.createElement('div');
-        bodyBlock.className = 'div-body-block';
-        divisionContainer.appendChild(bodyBlock);
-
+        // --- CONSTRUCCIÓN DEL CUERPO ---
         data.stepsData.forEach((step, stepIdx) => {
-            
-            // 1. FILA DEL SUSTRAENDO (Producto a restar)
-            const rowResta = document.createElement('div');
-            rowResta.className = 'body-row';
-            
-            let offsetResta = step.cifrasBajadas - step.productoResta.length;
-            for(let i = 0; i < offsetResta; i++) {
-                let s = document.createElement('div'); s.className = 'num-cell empty-space';
-                rowResta.appendChild(s);
-            }
-
-            const signMinus = document.createElement('div');
-            signMinus.className = 'num-cell sign-cell';
-            signMinus.textContent = '-';
-            rowResta.insertBefore(signMinus, rowResta.firstChild);
-
             let prodCellsFila = [];
-            for (let i = 0; i < step.productoResta.length; i++) {
-                const cell = document.createElement('div');
-                cell.className = 'num-cell cell-input resta-cell';
-                cell.dataset.expected = step.productoResta[i];
-                rowResta.appendChild(cell);
-                prodCellsFila.push(cell);
+
+            if (conResta) {
+                // 1. FILA DEL SUSTRAENDO (Producto a restar)
+                const rowResta = document.createElement('div');
+                rowResta.className = 'body-row';
+                
+                let offsetResta = step.cifrasBajadas - step.productoResta.length;
+                for (let i = 0; i < offsetResta; i++) {
+                    let s = document.createElement('div'); 
+                    s.className = 'num-cell empty-space';
+                    rowResta.appendChild(s);
+                }
+
+                for (let i = 0; i < step.productoResta.length; i++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'num-cell cell-input resta-cell';
+                    if (i === 0) {
+                        cell.classList.add('resta-cell-first'); // Añade el signo '-' flotante
+                    }
+                    cell.dataset.expected = step.productoResta[i];
+                    rowResta.appendChild(cell);
+                    prodCellsFila.push(cell);
+                }
+                bodyBlock.appendChild(rowResta);
+
+                // 2. LÍNEA HORIZONTAL DE LA RESTA
+                const rowLine = document.createElement('div');
+                rowLine.className = 'body-row';
+                const lineElem = document.createElement('div');
+                lineElem.className = 'visual-line';
+                lineElem.style.marginLeft = `calc(${offsetResta} * (var(--box-size) + var(--cell-gap)))`;
+                lineElem.style.width = `calc(${step.productoResta.length} * var(--box-size) + ${step.productoResta.length - 1} * var(--cell-gap))`;
+                rowLine.appendChild(lineElem);
+                bodyBlock.appendChild(rowLine);
             }
-            bodyBlock.appendChild(rowResta);
 
-            // 2. LÍNEA HORIZONTAL DE LA RESTA
-            const rowLine = document.createElement('div');
-            rowLine.className = 'body-row';
-            const lineElem = document.createElement('div');
-            lineElem.className = 'visual-line';
-            lineElem.style.marginLeft = `calc(var(--box-size) * ${offsetResta + 1})`;
-            lineElem.style.width = `calc(var(--box-size) * ${step.productoResta.length})`;
-            rowLine.appendChild(lineElem);
-            bodyBlock.appendChild(rowLine);
-
-            // 3. FILA UNIFICADA: RESULTADO DE LA RESTA + CASILLA DE BAJAR CIFRA
+            // 3. FILA DEL RESULTADO + CASILLA DE LA CIFRA QUE SE BAJA
             const rowResultado = document.createElement('div');
             rowResultado.className = 'body-row';
-            
-            let dSign = document.createElement('div'); dSign.className = 'num-cell empty-space';
-            rowResultado.appendChild(dSign);
 
             let offsetResto = step.cifrasBajadas - step.resto.length;
-            for(let i = 0; i < offsetResto; i++) {
-                let s = document.createElement('div'); s.className = 'num-cell empty-space';
+            for (let i = 0; i < offsetResto; i++) {
+                let s = document.createElement('div'); 
+                s.className = 'num-cell empty-space';
                 rowResultado.appendChild(s);
             }
 
-            // Celdas del resultado de la resta
             let restoCellsFila = [];
             for (let i = 0; i < step.resto.length; i++) {
                 const cell = document.createElement('div');
@@ -190,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 restoCellsFila.push(cell);
             }
 
-            // ¡Novedad! Si no es la última resta, añadimos la casilla de bajar cifra en este mismo renglón
             let cellBajarCifra = null;
             if (!step.esUltimo) {
                 let proximoStep = data.stepsData[stepIdx + 1];
@@ -202,17 +219,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             bodyBlock.appendChild(rowResultado);
 
-            // --- FLUJO DIDÁCTICO ASIGNADO ---
-            // A) Dígito del Cociente (Izquierda a Derecha)
+            // --- ORDEN DE INTERACCIÓN DEL JUEGO ---
+            // A) Digitar cifra del cociente
             gameSteps.push(cocienteCells[stepIdx]); 
             
-            // B) Multiplicación a restar (Derecha a Izquierda: Unidades, Decenas...)
-            prodCellsFila.reverse().forEach(c => gameSteps.push(c)); 
+            // B) Digitar producto a restar (si aplica)
+            if (conResta) {
+                prodCellsFila.reverse().forEach(c => gameSteps.push(c)); 
+            }
             
-            // C) Resultado de la resta (Derecha a Izquierda: Unidades, Decenas...)
+            // C) Digitar resto de la resta
             restoCellsFila.reverse().forEach(c => gameSteps.push(c)); 
             
-            // D) Si corresponde, se activa la casilla de al lado para bajar la cifra
+            // D) Bajar exactamente una cifra
             if (cellBajarCifra) {
                 gameSteps.push(cellBajarCifra);
             }
@@ -248,7 +267,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.cell-input').forEach(el => el.classList.remove('active'));
 
         if (currentStepIndex < gameSteps.length) {
-            gameSteps[currentStepIndex].classList.add('active');
+            const activeCell = gameSteps[currentStepIndex];
+            activeCell.classList.add('active');
+            
+            // Desplaza la botonera dinámicamente a la altura de la casilla activa
+            const activeRect = activeCell.getBoundingClientRect();
+            const containerRect = divisionContainer.getBoundingClientRect();
+            const offsetTop = activeRect.top - containerRect.top;
+            
+            keypadWrapper.style.transform = `translateY(${Math.max(0, offsetTop)}px)`;
         } else {
             setTimeout(() => {
                 alert('¡Perfecto! Has completado todo el desarrollo de la división.');
@@ -293,6 +320,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cifrasBSelect.addEventListener('change', (e) => {
         cifrasB = parseInt(e.target.value);
+        initGame();
+    });
+
+    conRestaCheckbox.addEventListener('change', (e) => {
+        conResta = e.target.checked;
         initGame();
     });
 

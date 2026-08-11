@@ -9,7 +9,7 @@
 </head>
 <body>
 
- <div class="contenedor-principal">
+<div class="contenedor-principal">
     
     <header>
         <h1>División Paso a Paso 
@@ -34,6 +34,13 @@
                 <option value="2">2 Cifras</option>
             </select>
         </div>
+
+        <div class="control-group checkbox-group">
+            <label for="conRestaCheckbox" class="control-label">
+                <input type="checkbox" id="conRestaCheckbox" checked>
+                Con restas
+            </label>
+        </div>
         
         <button id="newOperationButton" class="btn-action">Nueva División</button>
         <button id="toggleTableButton" class="btn-secondary">Mostrar Tabla</button>
@@ -41,29 +48,39 @@
     
     <main class="contenido-principal">
         <div class="game-layout">
+            <!-- Columna Izquierda: Botonera -->
+            <div id="keypadWrapper" class="keypad-wrapper">
+                <div class="score-buttons">
+                    <div class="button-row">
+                        <button class="digit-btn">1</button>
+                        <button class="digit-btn">2</button>
+                        <button class="digit-btn">3</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="digit-btn">4</button>
+                        <button class="digit-btn">5</button>
+                        <button class="digit-btn">6</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="digit-btn">7</button>
+                        <button class="digit-btn">8</button>
+                        <button class="digit-btn">9</button>
+                    </div>
+                    <div class="button-row">
+                        <button class="digit-btn">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Centro: División -->
             <div id="divisionContainer" class="division-container"></div>
+
+            <!-- Columna Derecha: Tabla auxiliar -->
             <div id="helperTableContainer" class="helper-table-container hidden"></div>
         </div>
-
-        <div class="score-buttons">
-            <div class="button-row">
-                <button class="digit-btn">1</button>
-                <button class="digit-btn">2</button>
-                <button class="digit-btn">3</button>
-                <button class="digit-btn">4</button>
-                <button class="digit-btn">5</button>
-            </div>
-            <div class="button-row">
-                <button class="digit-btn">6</button>
-                <button class="digit-btn">7</button>
-                <button class="digit-btn">8</button>
-                <button class="digit-btn">9</button>
-                <button class="digit-btn">0</button>
-            </div>                    
-        </div>
     </main>
- </div>
-   
- <script src="script.js"></script>
+</div>
+    
+<script src="script.js"></script>
 </body>
 </html>
