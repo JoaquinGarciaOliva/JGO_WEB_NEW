@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Definiciones Numéricas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="..\Principal\Mainstyle.css">
+    <link id='lestilo2'  rel='stylesheet' type='text/css' href='..\..\..\..\js_css\Ventana_Modal.css' />  
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+<style>
+    #nivel1 {
+        width: 50px;   /* ajusta el tamaño */
+        height: auto;   /* mantiene la proporción */
+    }
+</style>
+
+</head>
+<body>
+
+<div class="contenedor-principal">
+ <main class="contenido-principal">
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Historial</h3>
+            <ul id="historial-lista"></ul>
+        </aside>
+
+        <main class="game-area">
+            
+           <h1>    
+                  
+              <div class="tooltip2-container">
+                 <img id="ayuda"   class="button-icon" src="..\Principal\help.png" onclick="ventanamodal('Bingo_Matematico_Manual.html')"></img>
+                 <span class="tooltip2-text">Ayuda</span>
+              </div>
+           
+              
+               BINGO MATEMÁTICO
+
+              <div class="tooltip2-container">
+                 <a href="cartones_todos.pdf" target="_blank">              
+                   <img id="nivel1"  src="bingo.png" onclick=""></img>              
+                 </a>    
+                <span class="tooltip2-text">Cartones</span>
+             </div>
+                          
+             </h1>
+            
+            <div class="settings">
+                <label for="intervalo">Intervalo (segundos):</label>
+                <select id="intervalo">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20" selected>20</option>
+                    <option value="25">25</option> 
+                    <option value="30">30</option> 
+                </select>
+            </div>
+
+            <div id="pantalla-definicion" class="display-box">
+                
+            </div>
+
+            <div class="controls">             
+               
+            <div class="tooltip2-container">
+                <button id="btn-play"> <img id="startButton" src="..\Principal\play-icon.png" alt="Iniciar / Continuar" class="button-icon"> </button>
+                <span class="tooltip2-text">Iniciar / Continuar</span>
+             </div>
+             <div class="tooltip2-container">
+                 <button id="btn-pause" ><img src="..\Principal\pause-icon.png" alt="Pausar" class="button-icon"></button>  
+                <span class="tooltip2-text">Pausar</span>
+             </div>
+             <div class="tooltip2-container">
+                <button id="btn-reset"> <img src="..\Principal/cambiar-icon.png" alt="Reiniciar" class="button-icon"></button> 
+                <span class="tooltip2-text">Reiniciar</span>
+             </div>
+             <div class="tooltip2-container">
+                <button id="btn-check">  <img src="..\Principal\versolucion.png" alt="Comprobar Resultados" class="button-icon"></button>
+                <span class="tooltip2-text">Comprobar Resultados</span>
+             </div>
+
+            </div>
+
+            <div class="check-section">
+                <textarea id="input-comprobar" placeholder="Introduce números separados por comas (ej: 1, 2, 45)"></textarea>               
+                                <div id="resultado-feedback"></div>
+            </div>
+        </main>
+    </div>
+
+    </main>
+    </div>
+
+
+   <div id="myModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="datos.js"></script>
+    <script src="script.js"></script>
+    <script src="..\..\..\..\js_css\Ventana_Modal.js"></script>
+</body>
+
+
+
+</html>
