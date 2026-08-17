@@ -66,7 +66,7 @@
        Tipo=""
        Youtube="Temario/Juegos/01_Cartas/02.2_RESTA/02.2.01_resta_clase_ok/N_Resta_nivel2_Clase.html"
        teoria="Temario/Juegos/01_Cartas/02.2_RESTA/02.2.02_resta_practicar_ok/N_Resta_nivel2_Alumno.html"
-       ejemplos="Temario/Juegos/01_Cartas02.2_RESTA/02.2.03_resta_competicion_ok/N_Resta_nivel2_2Jugadores.html"
+       ejemplos="Temario/Juegos/01_Cartas/02.2_RESTA/02.2.03_resta_competicion_ok/N_Resta_nivel2_2Jugadores.html"
        ejercicios=""
        interactivo=""
        onclick="toggleVisibility2(this,'1.3.')">
