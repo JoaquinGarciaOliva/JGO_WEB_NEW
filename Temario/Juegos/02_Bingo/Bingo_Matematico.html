@@ -6,8 +6,10 @@
     <title>Juego de Definiciones Numéricas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="..\Principal\Mainstyle.css">
-    <link id='lestilo2'  rel='stylesheet' type='text/css' href='..\..\..\..\js_css\Ventana_Modal.css' />  
-    <script>
+    <link id='lestilo2'  rel='stylesheet' type='text/css' href='..\..\..\js_css\Ventana_Modal.css' />  
+    <link rel='stylesheet' type='text/css' href='..\..\..\js_css\ToolTip.css' />  
+  
+   <script>
         window.MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -43,19 +45,19 @@
             
            <h1>    
                   
-              <div class="tooltip2-container">
+              <div class="tooltip-container">
                  <img id="ayuda"   class="button-icon" src="..\Principal\help.png" onclick="ventanamodal('Bingo_Matematico_Manual.html')"></img>
-                 <span class="tooltip2-text">Ayuda</span>
+                 <span class="tooltip-text">Ayuda</span>
               </div>
            
               
                BINGO MATEMÁTICO
 
-              <div class="tooltip2-container">
+              <div class="tooltip-container">
                  <a href="cartones_todos.pdf" target="_blank">              
                    <img id="nivel1"  src="bingo.png" onclick=""></img>              
                  </a>    
-                <span class="tooltip2-text">Cartones</span>
+                <span class="tooltip-text">Cartones</span>
              </div>
                           
              </h1>
@@ -80,21 +82,21 @@
 
             <div class="controls">             
                
-            <div class="tooltip2-container">
+            <div class="tooltip-container">
                 <button id="btn-play"> <img id="startButton" src="..\Principal\play-icon.png" alt="Iniciar / Continuar" class="button-icon"> </button>
-                <span class="tooltip2-text">Iniciar / Continuar</span>
+                <span class="tooltip-text">Iniciar / Continuar</span>
              </div>
-             <div class="tooltip2-container">
+             <div class="tooltip-container">
                  <button id="btn-pause" ><img src="..\Principal\pause-icon.png" alt="Pausar" class="button-icon"></button>  
-                <span class="tooltip2-text">Pausar</span>
+                <span class="tooltip-text">Pausar</span>
              </div>
-             <div class="tooltip2-container">
+             <div class="tooltip-container">
                 <button id="btn-reset"> <img src="..\Principal/cambiar-icon.png" alt="Reiniciar" class="button-icon"></button> 
-                <span class="tooltip2-text">Reiniciar</span>
+                <span class="tooltip-text">Reiniciar</span>
              </div>
-             <div class="tooltip2-container">
+             <div class="tooltip-container">
                 <button id="btn-check">  <img src="..\Principal\versolucion.png" alt="Comprobar Resultados" class="button-icon"></button>
-                <span class="tooltip2-text">Comprobar Resultados</span>
+                <span class="tooltip-text">Comprobar Resultados</span>
              </div>
 
             </div>
@@ -121,7 +123,7 @@
 
     <script src="datos.js"></script>
     <script src="script.js"></script>
-    <script src="..\..\..\..\js_css\Ventana_Modal.js"></script>
+    <script src="..\..\..\js_css\Ventana_Modal.js"></script>
 </body>
 
 
