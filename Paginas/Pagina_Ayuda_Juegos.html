@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Uso - Plataforma de Juegos</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .help-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 0;
+            color: #64748b;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .button-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .button-card img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .button-card-content h3 {
+            margin: 0 0 4px 0;
+            font-size: 1.05rem;
+            color: var(--primary-color);
+        }
+
+        .button-card-content p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: #475569;
+        }
+
+        .rules-list {
+            margin: 8px 0 0 0;
+            padding-left: 18px;
+            font-size: 0.85rem;
+            color: #334155;
+        }
+
+        .rules-list li {
+            margin-bottom: 4px;
+        }
+
+        .important-note {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .alert-note {
+            background-color: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #9a3412;
+        }
+
+        ol {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="help-container">
+
+    <header>
+        <h1>Guía de Uso de la Plataforma de Juegos</h1>
+        <p>Aprende a navegar por el menú interactivo y a jugar en sus diferentes modalidades.</p>
+    </header>
+
+    <!-- Paso 1: Selección del Juego -->
+    <div class="section">
+        <h2>1. Selección de Juegos (Panel Izquierdo)</h2>
+        <ol>
+            <li>En el <strong>panel izquierdo</strong> encontrarás un árbol de navegación con las distintas categorías y juegos disponibles.</li>
+            <li>Haz clic sobre el <strong>juego deseado</strong> para seleccionarlo.</li>
+            <li>Al seleccionar un juego, la parte central/derecha de la pantalla cargará el contenido e indicará los <strong>modos de juego disponibles</strong> para dicha actividad mediante sus botones correspondientes.</li>
+        </ol>
+    </div>
+
+    <!-- Paso 2: Modos de Juego -->
+    <div class="section">
+        <h2>2. Modos de Juego y Botones (Panel Derecho)</h2>
+        <p>Dependiendo de la configuración del juego seleccionado, en la zona superior derecha aparecerán hasta tres botones con las siguientes modalidades:</p>
+        
+        <div class="grid-buttons">
+            
+            <!-- Botón 1: Toda la Clase -->
+            <div class="button-card">
+                <!-- Reemplaza la ruta src por la de tu imagen para 'Clase entera' -->
+                <img src="../Imagenes/Clase2.png" alt="Modo Clase Entera">
+                <div class="button-card-content">
+                    <h3>Modo Clase Entera</h3>
+                    <p>Diseñado para proyectar en el aula y resolver las preguntas o dinámicas de forma grupal y guiada por el docente.</p>
+                </div>
+            </div>
+
+            <!-- Botón 2: Un Jugador -->
+            <div class="button-card">
+                <!-- Reemplaza la ruta src por la de tu imagen para 'Un Jugador' -->
+                <img src="../Imagenes/unapersona.png" alt="Modo Un Jugador">
+                <div class="button-card-content">
+                    <h3>Modo Un Jugador</h3>
+                    <p>Permite la práctica individual del alumno. La puntuación se acumula según los aciertos:</p>
+                    <ul class="rules-list">
+                        <li><strong>Acierto:</strong> Suma 1 punto (+1).</li>
+                        <li><strong>Fallo / Sin responder:</strong> 0 puntos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Botón 3: Dos Jugadores -->
+            <div class="button-card">
+                <!-- Reemplaza la ruta src por la de tu imagen para 'Dos Jugadores' -->
+                <img src="../Imagenes/DosJugadores.png" alt="Modo Dos Jugadores">
+                <div class="button-card-content">
+                    <h3>Modo Dos Jugadores (Competitivo)</h3>
+                    <p>Dos jugadores compiten simultáneamente en la misma pantalla por responder primero:</p>
+                    <ul class="rules-list">
+                        <li><strong>Primer jugador en acertar:</strong> +1 punto.</li>
+                        <li><strong>Primer jugador en fallar:</strong> -1 punto.</li>
+                        <li><strong>Segundo jugador o no responder:</strong> 0 puntos.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="alert-note">
+            <strong> Estrategia en Modo 2 Jugadores:</strong> ¡Ten cuidado al responder! Cometer un error restará puntos. Si no estás seguro de la respuesta, suele ser más ventajoso no responder que arriesgarte a fallar (-1).
+        </div>
+
+        <div class="important-note">
+            <strong> Nota:</strong> Cada juego puede incluir una, dos o las tres modalidades. Los botones que no estén disponibles para un juego específico se ocultarán automáticamente.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
