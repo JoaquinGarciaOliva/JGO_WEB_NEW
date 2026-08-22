@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visión local y visión global en el aprendizaje matemático - Blog de Matemáticas de Joaquín">
+    <title>Visión Local vs. Visión Global en Matemáticas - Blog de Matemáticas de Joaquín</title>
+
+    <!-- Configuración e Integración de MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #b91c1c;
+            --bg-color: #e0f2fe;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --row-even: #f8fafc;
+            --row-odd: #eff6ff;
+            --row-selected: #bfdbfe;
+            --row-selected-border: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-reflexiones {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1> Visión Local y Visión Global</h1>
+        <div class="subtitle">Del paso a paso cotidiano a la perspectiva completa en matemáticas</div>
+    </header>
+
+    <div class="section">
+        <h2>Dos perspectivas complementarias e indispensables</h2>
+        
+        <div class="callout">
+            <strong>Estrategia de comprensión:</strong> Resolver matemáticas requiere alternar entre dos enfoques:
+            la <strong>Visión Local</strong> (entender la validez de cada paso inmediato) y la 
+            <strong>Visión Global</strong> (comprender el propósito completo del procedimiento y su conexión con temas futuros).
+        </div>
+
+        <p>El aprendizaje empieza necesariamente por lo local. Al resolver una ecuación o efectuar una operación combinada de fracciones, el alumno debe centrar toda su atención en el paso a paso: comprender cómo una transformación algebraica o una simplificación da lugar al siguiente renglón. Sin esa solidez local, el resultado final se desmorona.</p>
+
+        <h3>1. La Visión Local en el aula</h3>
+
+        <p>Cuando trabajamos en un ejercicio concreto, la mente del estudiante debe operar en el plano del micro-detalle:</p>
+
+        <ul>
+            <li>
+                <strong>Operaciones con fracciones:</strong> En un encadenado de sumas y productos, se ejecuta una operación individual, se simplifica el resultado intermedio y se comprueba cómo evoluciona la expresión hasta alcanzar la fracción irreducible final.
+            </li>
+            <li>
+                <strong>Resolución de ecuaciones:</strong> Al despejar la incógnita en $3x + 5 = 14$, la mirada local se fija en restar $5$ en ambos lados y luego dividir entre $3$, verificando que cada paso intermedio sea algebraicamente equivalente al anterior.
+            </li>
+        </ul>
+
+        <h3>2. La Visión Global y la perspectiva del docente</h3>
+
+        <p>Una vez dominados los pasos locales de un tema, se produce un salto cualitativo: el estudiante comprende <em>para qué</em> sirve toda esa cadena. En este punto, la <strong>visión del profesor es superior</strong>, ya que conoce la hoja de ruta completa y sabe lo que está por llegar en los cursos siguientes.</p>
+
+        <div class="callout-alert">
+            <strong>Ejemplo en la ESO (Cadena de la Aritmética):</strong>
+            <br>
+            Criterios de divisibilidad (2, 3, 5) $\rightarrow$ Descomposición factorial $\rightarrow$ Cálculo del $\text{mcm}$ $\rightarrow$ Suma de fracciones con distinto denominador.
+            <br><br>
+            Lo que el alumno percibe en 1.º de ESO como piezas aisladas, el profesor lo enseña sabiendo que es el engranaje imprescindible para operar fracciones con garantías.
+        </div>
+
+        <div class="callout-alert">
+            <strong>Ejemplo en Bachillerato (Cadena del Álgebra y el Análisis):</strong>
+            <br>
+            Ecuaciones de 2.º grado $\rightarrow$ Búsqueda de ceros en la derivada de un polinomio de grado 3 $\rightarrow$ Identificación de máximos y mínimos relativos $\rightarrow$ Cálculo de áreas delimitadas e integración en las pruebas de acceso a la universidad (PAU).
+            <br><br>
+            Una simple fórmula cuadrática aprendida en 2.º o 3.º de la ESO se convierte en Bachillerato en la llave para resolver problemas complejos de optimización y geometría analítica.
+        </div>
+
+<div class="callout-alert">
+            <strong>Ejemplo 3: Del Álgebra Básica al Cálculo Integral</strong>
+            <br>
+            Identidades notables $(a+b)^2$ o $a^2-b^2$ en la ESO $\rightarrow$ Factorización de polinomios $\rightarrow$ Descomposición en fracciones simples para el cálculo de Integrales Indefinidas en Bachillerato.
+        </div>
+
+        <div class="callout-alert">
+            <strong>Ejemplo 4: De los Sistemas de Ecuaciones a la Geometría en 3D</strong>
+            <br>
+            Sistemas lineales $2 \times 2$ (compatibles/incompatibles) $\rightarrow$ Discusión de sistemas por el Teorema de Rouché-Fröbenius $\rightarrow$ Determinación de la posición relativa de rectas y planos en el espacio tridimensional para las pruebas de acceso a la universidad.
+        </div>
+
+        <h3>El camino correcto para el estudiante</h3>
+
+        <p>Nadie puede construir una casa empezando por el tejado. Por tanto, el progreso del alumnado debe seguir este orden natural:</p>
+
+        <ul>
+            <li>
+                <strong>Primero, dominar el paso local:</strong> Comprender el mecanismo específico que conecta una línea de trabajo con la siguiente sin cometer errores de cálculo o reglas no permitidas.
+            </li>
+            <li>
+                <strong>Después, dar el salto global:</strong> Tras asimilar los pasos locales de un procedimiento o tema, contemplar la resolución completa en perspectiva para afianzar el razonamiento abstracto y conectar el conocimiento con nuevos retos.
+            </li>
+        </ul>
+
+        <div class="callout-reflexiones">
+            <strong>Conclusión:</strong> El alumno debe trabajar con la lupa en el paso local, mientras el profesor lo guía con el mapa de la visión global. Conectar ambas miradas es lo que transforma la resolución mecánica de ejercicios en un verdadero dominio del lenguaje matemático.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Blog de Matemáticas de Joaquín - Reflexiones docentes sobre el currículo escolar.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

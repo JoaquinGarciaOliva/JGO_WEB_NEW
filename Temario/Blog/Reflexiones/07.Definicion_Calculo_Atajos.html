@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La estructura de cálculo en matemáticas: Definición, Cálculo y Atajos - Blog de Matemáticas de Joaquín">
+    <title>Definición - Cálculo - Atajos: La Estructura del Aprendizaje Matemático</title>
+
+    <!-- Configuración e Integración de MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #b91c1c;
+            --bg-color: #e0f2fe;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --row-even: #f8fafc;
+            --row-odd: #eff6ff;
+            --row-selected: #bfdbfe;
+            --row-selected-border: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-reflexiones {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1> Definición – Cálculo – Atajos</h1>
+        <div class="subtitle">La estructura oculta tras la enseñanza de las matemáticas en la ESO</div>
+    </header>
+
+    <div class="section">
+        <h2>Un patrón que se repite a lo largo de toda la etapa académica</h2>
+        
+        <div class="callout">
+            <strong>Estructura clave:</strong> En la enseñanza de las matemáticas, especialmente en la ESO, la adquisición de procedimientos de cálculo sigue casi siempre una misma secuencia lógica de tres fases: 
+            <strong>1. Definición</strong> (el significado abstracto) $\rightarrow$ 
+            <strong>2. Método de Cálculo</strong> (el algoritmo general y riguroso) $\rightarrow$ 
+            <strong>3. Atajos</strong> (mecanismos de agilización parciales o globales).
+        </div>
+
+        <p>Comprender esta distinción ayuda al alumnado a situar en qué nivel de razonamiento se encuentra en cada momento y evita que confunda la esencia teórica de un concepto con el procedimiento mecánico para resolverlo rápidamente.</p>
+
+        <h3>1. Ejemplo Básico: Criterios de Divisibilidad</h3>
+
+        <p>Para abordar la relación de divisibilidad entre dos números enteros, aplicamos de forma natural estos tres niveles:</p>
+
+        <ul>
+            <li>
+                <strong>Definición:</strong> Decimos que $a$ es divisible por $b$ si al efectuar la división $a \div b$, el residuo es exactamente $0$.
+            </li>
+            <li>
+                <strong>Cálculo:</strong> La forma general de comprobarlo es realizar la división explícita y verificar que el residuo sea cero.
+            </li>
+            <li>
+                <strong>Atajos (parciales):</strong> Para evitar hacer la división con números enteros habituales, empleamos los <em>criterios de divisibilidad</em> (del 2, del 3, del 5, etc.). No sirven para cualquier número primo de forma genérica, pero son atajos rápidos indispensables para la posterior descomposición en factores primos.
+            </li>
+        </ul>
+
+        <h3>2. Ejemplo Estructural: $\text{mcm}$ y $\text{mcd}$</h3>
+
+        <p>El estudio del mínimo común múltiplo ($\text{mcm}$) y el máximo común divisor ($\text{mcd}$) es quizás el caso donde más claramente se aprecia esta trilogía:</p>
+
+        <ul>
+            <li>
+                <strong>Definición:</strong> 
+                El $\text{mcm}(a,b)$ es el menor de los múltiplos comunes positivos de $a$ y $b$. El $\text{mcd}(a,b)$ es el mayor de los divisores comunes. Si quisiéramos hallar el $\text{mcm}(8,6)$ por definición, escribiríamos las listas de sus múltiplos hasta encontrar el primero en coincidir: $24$.
+            </li>
+            <li>
+                <strong>Cálculo:</strong> Si los números son grandes (por ejemplo, $360$ y $540$), escribir listas de múltiplos o divisores llevaría siglos. El **método de cálculo definitivo** consiste en realizar la descomposición en factores primos y aplicar la regla general de tomar los factores comunes y no comunes al mayor o menor exponente según corresponda.
+            </li>
+            <li>
+                <strong>Atajos:</strong>
+                <ul>
+                    <li><strong>Atajo global (números coprimos):</strong> Si dos números son primos entre sí, se cumple siempre que $\text{mcm}(a,b) = a \cdot b$ y $\text{mcd}(a,b) = 1$.</li>
+                    <li><strong>Atajo práctico (cálculo mental mediante agilidad con las tablas):</strong> Con números pequeños como el $8$ y el $6$, un alumno que domine las tablas de multiplicar deduce mentalmente el $\text{mcm}(8,6) = 24$ y el $\text{mcd}(8,6) = 2$ en segundos aplicando la definición, sin necesidad de escribir la factorización completa.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="callout-alert">
+            <strong>El valor práctico de dominar las tablas:</strong> El atajo mental para el $\text{mcm}$ y el $\text{mcd}$ con números pequeños demuestra una vez más por qué dominar las tablas de multiplicar es indispensable. Quien no las domina con fluidez se ve obligado a realizar todo el algoritmo pesado de factorización hasta para los casos más simples.
+        </div>
+
+        <h3>3. Ejemplo Avanzado: La Derivación de Funciones</h3>
+
+        <p>En niveles más avanzados de Secundaria y Bachillerato, la misma estructura continúa vigente al estudiar el cálculo diferencial:</p>
+
+        <ul>
+            <li>
+                <strong>Definición:</strong> La derivada de una función en un punto es el límite del cociente incremental:
+                $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+                Nadie calcula derivadas mediante este límite salvo que el enunciado lo exija expresamente, dada su complejidad algebraica.
+            </li>
+            <li>
+                <strong>Cálculo:</strong> Se aplican las **reglas formales de derivación** fijadas para cada tipo de función (regla del producto, de la cadena, etc.).
+            </li>
+            <li>
+                <strong>Atajo (agrupación de pasos):</strong> Al derivar una expresión como $f(x) = 3x^5$, si aplicáramos estrictamente la regla del producto $u \cdot v$ tendríamos:
+                $$f'(x) = (3)' \cdot x^5 + 3 \cdot (x^5)' = 0 \cdot x^5 + 3 \cdot (5x^4) = 15x^4$$
+                Sin embargo, la práctica nos lleva a usar el atajo directo: "multiplicar el exponente por el coeficiente y restar uno al exponente" ($3 \cdot 5 = 15 \Rightarrow 15x^4$), realizando tres pasos algebraicos en un solo movimiento mental.
+            </li>
+        </ul>
+
+        <div class="callout-reflexiones">
+            <strong>Conclusión:</strong> Un aprendizaje matemático sólido exige conocer la **Definición** para comprender el significado, dominar el método de **Cálculo** para resolver cualquier caso general por complejo que sea, y automatizar los **Atajos** para ganar velocidad y agilidad mental.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Blog de Matemáticas de Joaquín - Reflexiones docentes sobre el currículo escolar.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

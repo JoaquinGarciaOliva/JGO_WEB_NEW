@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Por qué no se deben enseñar los números mixtos en Primaria - Blog de Matemáticas de Joaquín">
+    <title>La problemática de los Números Mixtos - Blog de Matemáticas de Joaquín</title>
+    
+    <!-- Configuración e Integración de MathJax para notación matemática -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #b91c1c;
+            --bg-color: #e0f2fe;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --row-even: #f8fafc;
+            --row-odd: #eff6ff;
+            --row-selected: #bfdbfe;
+            --row-selected-border: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-reflexiones {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Contra la Notación del Número Mixto</h1>
+        <div class="subtitle">Por qué esta notación genera confusión y NO se debería enseñar en Primaria</div>
+    </header>
+
+    <div class="section">
+        <h2>Reflexión sobre una práctica pedagógica errónea</h2>
+        
+        <div class="callout">
+            <strong>Tesis principal:</strong> Los números mixtos no se deben enseñar jamás en la etapa escolar. Una vez que el alumno comprende verdaderamente el concepto de fracción, si en algún momento de su vida adulta se topa con esa notación en un contexto cotidiano, sabrá interpretarla por sí solo sin necesidad de haber perdido tiempo de aprendizaje previo.
+        </div>
+
+        <p>En los currículos de educación primaria es habitual dedicar unidades enteras a enseñar la notación de <strong>número mixto</strong> (es decir, situar la parte entera pegada a la parte fraccionaria) y a realizar operaciones aritméticas de suma y resta directamente sobre esta notación.</p>
+
+        <h3>El origen del problema: Incoherencia y confusión algebraicas</h3>
+
+        <p>El argumento de mayor peso contra esta notación radica en la contradicción formal que introduce con respecto a las reglas universales del lenguaje matemático:</p>
+
+        <ul>
+            <li>
+                <strong>Suma implícita no explicitada:</strong> Lo que pretende representar el número mixto es la suma de una parte entera y una parte fraccionaria. Por tanto, la expresión formalmente correcta debe incluir siempre el operador suma: 
+                $$3 + \frac{1}{2}$$
+            </li>
+            <li>
+                <strong>Colisión con la notación de multiplicación:</strong> En matemáticas formalizadas (especialmente a partir de Secundaria), la yuxtaposición de dos elementos o el uso de un espacio/punto indica una <strong>multiplicación</strong>. De este modo, al escribir:
+                $$3\,\frac{1}{2} \quad \text{o bien} \quad 3 \cdot \frac{1}{2}$$
+                el estudiante instruido en rigor algebraico entenderá correctamente que se trata del producto $3 \times \frac{1}{2} = \frac{3}{2}$, y no de $3 + \frac{1}{2} = \frac{7}{2}$.
+            </li>
+        </ul>
+
+        <div class="callout-alert">
+            <strong>Confusión en la transición a Secundaria:</strong> Enseñar a un niño en primaria que dos números pegados se "suman" crea un obstáculo cognitivo grave cuando en álgebra aprende que $3x$ o $3(a+b)$ representa una multiplicación. Esta inconsistencia obliga al alumnado a "desaprender" una regla equivocada.
+        </div>
+
+        <h3>Una notación innecesaria en el currículo</h3>
+
+        <p>Aprender a operar directamente sobre números mixtos añadiendo reglas artificiales de conversión no aporta ningún valor al razonamiento matemático del alumno:</p>
+
+        <ul>
+            <li>
+                <strong>Doble trabajo sin beneficio:</strong> Se fuerza a los niños a memorizar un algoritmo de transformación a fracción impropia y viceversa, entorpeciendo el cálculo intuitivo.
+            </li>
+            <li>
+                <strong>Falsa necesidad de aprendizaje:</strong> Si un alumno domina el concepto de fracción y comprende el significado de la unidad, entender intuitivamente qué significa en un texto o receta "tres tartas y media" es inmediato. No requiere horas de instrucción en el aula.
+            </li>
+        </ul>
+
+        <div class="callout-reflexiones">
+            <strong>Conclusión:</strong> El número mixto NO es una notación correcta ni rigurosa en matemáticas. Por el bien del desarrollo lógico-matemático del estudiante y para evitar contradicciones con la notación algebraica futura, **no se debería enseñar nunca en el colegio**.
+        </div>
+    </div>
+
+   
+</div>
+
+</body>
+</html>

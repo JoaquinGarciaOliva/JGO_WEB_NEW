@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿El método de Gauss debe enseñarse con o sin matrices en 1º de Bachillerato? - Blog de Matemáticas de Joaquín">
+    <title>Gauss: ¿Con o sin Matrices en 1º de Bachillerato? - Blog de Matemáticas de Joaquín</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #b91c1c;
+            --bg-color: #e0f2fe;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --row-even: #f8fafc;
+            --row-odd: #eff6ff;
+            --row-selected: #bfdbfe;
+            --row-selected-border: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-divagaciones {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1> La resolución de sistemas lineales por Gauss</h1>
+        <div class="subtitle">¿Debemos enseñarlo con o sin matrices en 1º de Bachillerato?</div>
+    </header>
+
+    <div class="section">
+        <h2>El dilema en 1º de Bachillerato: Rigor frente a comodidad</h2>
+        
+        <div class="callout">
+            <strong>Tesis principal:</strong> En 1º de Bachillerato, la resolución de sistemas mediante el método de Gauss <strong>debe explicarse obligatoriamente sin matrices</strong>. Introducir notación matricial antes de tiempo oscurece los conceptos algebraicos de fondo y genera confusiones estructurales en el alumnado.
+        </div>
+
+        <p>Es innegable que utilizar matrices para aplicar Gauss resulta mecánicamente más cómodo e intuitivo para el estudiante, al evitar escribir continuamente las incógnitas. Sin embargo, esta atajo práctico impide que el alumno comprenda las verdaderas implicaciones matemáticas que subyacen a las transformaciones del sistema.</p>
+
+        <h3>Razones fundamentales para no usar matrices en 1º de Bachillerato</h3>
+
+        <ul>
+            <li>
+                <strong>Aprender el sistema real de Gauss:</strong> Trabajar directamente con las ecuaciones permite comprender que se están aplicando operaciones elementales entre igualdades equivalentes, y no manipulando una "caja de números" abstracta sin significado directo para ellos.
+            </li>
+            <li>
+                <strong>Evitar la identificación errónea de conceptos:</strong> Un sistema de ecuaciones y una matriz <em>no son lo mismo</em>. La matriz como entidad algebraica debe ser estudiada formalmente en 2º de Bachillerato, donde la resolución de sistemas pasa a ser simplemente una de sus múltiples aplicaciones.
+            </li>
+        </ul>
+
+        <div class="callout-alert">
+            <strong>Diferencia conceptual crítica:</strong> En un <em>sistema de ecuaciones</em>, podemos permutar filas (ecuaciones) e incluso columnas (incógnitas, siempre que controlemos su posición y no incluyamos la columna de términos independientes) sin alterar la solución. En cambio, en una <em>matriz</em>, al intercambiar dos filas obtenemos una matriz distinta. Confundir la equivalencia de sistemas con la igualdad matricial es un error conceptual grave.
+        </div>
+
+        <h3>El perfil docente y el sesgo didáctico</h3>
+        <p>Existe una tendencia acusada entre el profesorado con formación ajena a la licenciatura/grado en Matemáticas a recurrir directamente a la notación matricial en 1º de Bachillerato. Aunque con la mejor intención pedagógica de facilitar el cálculo al alumno, se incurre en un error de base:</p>
+
+        <ul>
+            <li>Se antepone la rapidez del algoritmo a la comprensión conceptual.</li>
+            <li>Se adelantan herramientas de 2º de Bachillerato sin el marco teórico adecuado.</li>
+            <li>El alumno "mecaniza" sin entender la lógica del algoritmo de eliminación.</li>
+        </ul>
+
+        <div class="callout-divagaciones">
+            <strong>Conclusión:</strong> Enseñar Gauss mediante la escritura completa de las ecuaciones puede requerir más tiempo y esfuerzo de caligrafía en la pizarra, pero garantiza que el estudiante comprenda el significado real del sistema antes de dar el salto al álgebra matricial formal.
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
