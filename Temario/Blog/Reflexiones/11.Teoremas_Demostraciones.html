@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Dónde están los teoremas y las demostraciones en Bachillerato? - Blog de Matemáticas de Joaquín">
+    <title>¿Dónde están los Teoremas y las Demostraciones? - Blog de Matemáticas de Joaquín</title>
+
+    <!-- Configuración e Integración de MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #b91c1c;
+            --bg-color: #e0f2fe;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --row-even: #f8fafc;
+            --row-odd: #eff6ff;
+            --row-selected: #bfdbfe;
+            --row-selected-border: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-reflexiones {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Bachillerato: ¿Dónde están los teoremas y las demostraciones?</h1>
+        <div class="subtitle">Reflexión sobre el vaciamiento del rigor matemático en la etapa preuniversitaria</div>
+    </header>
+
+    <div class="section">
+        <h2>La desnaturalización de la matemática en la etapa escolar</h2>
+        
+        <div class="callout">
+            <strong>Tesis central:</strong> La estructura fundamental de las matemáticas descansa sobre el trípode <strong>Definición – Teorema – Demostración</strong>. Sin embargo, en el Bachillerato actual, esta estructura ha sido sustituida por un aprendizaje utilitarista y algorítmico, donde los teoremas apenas se enuncian para ser aplicados mecánicamente y las demostraciones han desaparecido por completo.
+        </div>
+
+        <p>Un alumno que termina Bachillerato en la actualidad finaliza sus estudios sin conocer realmente qué son las matemáticas. Se ha erosionado progresivamente el razonamiento deductivo, haciendo creer al alumnado que la disciplina consiste únicamente en memorizar fórmulas y ejecutar algoritmos para resolver problemas tipo. Esta desconexión distorsiona la esencia misma del pensamiento científico.</p>
+
+        <h3>1. El choque conceptual en la universidad</h3>
+
+        <p>El vaciamiento de contenidos teóricos crea un abismo insalvable entre la educación secundaria y la formación superior, especialmente para aquellos que optan por grados en Ciencias Exactas:</p>
+
+        <ul>
+            <li>
+                <strong>El abismo del grado en Matemáticas:</strong> Resulta difícil imaginar el choque cultural que sufre un estudiante de primer año de universidad al enfrentarse a la abstracción real. De repente, las asignaturas no piden "calcular una integral", sino demostrar rigurosamente la existencia de un límite o la validez de un espacio vectorial.
+            </li>
+            <li>
+                <strong>Una perspectiva histórica (El antiguo COU):</strong> Incluso en la época del COU (Curso de Orientación Universitaria), donde las demostraciones y el rigor formal sí formaban parte activa del currículo, el salto a la universidad ya exigía un esfuerzo considerable de adaptación. Si entonces resultaba complejo, el escenario actual sitúa al alumnado en una franca desventaja de partida, al no haber visto jamás cómo se construye una verdad matemática.
+            </li>
+        </ul>
+
+        <h3>2. El factor determinante: Una planificación comprimida y sin tiempo</h3>
+
+        <p>Esta degradación del contenido no ocurre por azar ni por falta de vocación docente, sino por una asfixiante presión temporal e institucional que condiciona el día a día en las aulas:</p>
+
+        <div class="callout-alert">
+            <strong>El estrangulamiento del calendario escolar:</strong>
+            <br>
+            Al haber eliminado la convocatoria extraordinaria de septiembre y haber adelantado las fechas de las pruebas de acceso (PAU), el tiempo real de docencia se ha reducido drásticamente:
+            <ul>
+                <li>En <strong>2.º de Bachillerato</strong>, la docencia efectiva finaliza a principios de mayo.</li>
+                <li>En <strong>1.º de Bachillerato</strong>, las clases concluyen a mitad de mayo.</li>
+            </ul>
+            Si descuentanos los días destinados a exámenes, correcciones y repasos indispensables, el margen para profundizar en los conceptos se vuelve insignificante.
+        </div>
+
+        <div class="callout-alert">
+            <strong>La conversión de Bachillerato en un adiestramiento para la PAU:</strong>
+            <br>
+            El profesorado se ve arrastrado por la falta de tiempo a priorizar la supervivencia académica del alumnado. Bachillerato ha dejado de ser una etapa formativa integral para convertirse en una carrera de obstáculos centrada en adiestrar al estudiante para superar la PAU. No hay espacio para detenerse en *por qué* funciona un teorema; únicamente hay tiempo para enseñar *cómo* usarlo para obtener la máxima puntuación en el examen.
+        </div>
+
+        <h3>El resultado: Un formalismo ausente</h3>
+
+        <p>La dinámica actual reduce teoremas fundamentales (como Bolzano, Rolle, el Teorema del Valor Medio o Rouché-Fröbenius) a meras "recetas de cocina":</p>
+
+        <ul>
+            <li>
+                <strong>Se enuncian las hipótesis de forma mecánica:</strong> El alumno memoriza que debe comprobar la continuidad y la derivabilidad como un trámite formal.
+            </li>
+            <li>
+                <strong>Se aplica el resultado sin comprensión estructural:</strong> Se busca la conclusión requerida para despejar una variable o resolver el ejercicio de la prueba de acceso.
+            </li>
+            <li>
+                <strong>Se omite el razonamiento deductivo:</strong> La demostración, que es el motor que justifica la certeza y enseña a pensar con lógica, queda descartada por ser considerada "prescindible" en la evaluación final.
+            </li>
+        </ul>
+
+        <div class="callout-reflexiones">
+            <strong>Conclusión:</strong> El tiempo es escaso y la planificación actual condena al profesorado a una cobertura curricular de mínimos. Al eliminar las demostraciones y reducir los teoremas a meras herramientas de cálculo, privamos al alumnado de descubrir la verdadera belleza y utilidad del pensamiento matemático. Rediseñar la distribución del Bachillerato y reconsiderar los tiempos de la PAU no es una cuestión técnica, sino una necesidad urgente para recuperar la esencia formativa de la disciplina.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Blog de Matemáticas de Joaquín - Reflexiones docentes sobre el currículo escolar.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

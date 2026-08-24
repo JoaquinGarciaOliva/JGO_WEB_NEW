@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joaquín García Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Enseñamos matemáticas o preparamos para la PAU? Reflexión sobre la estructura de Bachillerato - Blog de Matemáticas de Joaquín">
+    <title>¿Enseñamos Matemáticas o Preparamos para la PAU? - Blog de Matemáticas de Joaquín</title>
+
+    <!-- Configuración e Integración de MathJax -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #b91c1c;
+            --bg-color: #e0f2fe;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --row-even: #f8fafc;
+            --row-odd: #eff6ff;
+            --row-selected: #bfdbfe;
+            --row-selected-border: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .callout {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-alert {
+            background-color: #fef2f2;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .callout-reflexiones {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>¿Enseñamos matemáticas o preparamos para la PAU?</h1>
+        <div class="subtitle">La contracción temporal de Bachillerato y las deficiencias de la itineración actual</div>
+    </header>
+
+    <div class="section">
+        <h2>Un diseño curricular al servicio del examen, no del aprendizaje</h2>
+        
+        <div class="callout">
+            <strong>El dilema docente:</strong> El modelo educativo actual ha convertido la etapa preuniversitaria en una apresurada carrera contra el reloj. En lugar de impartir una materia con la profundidad, el rigor y los ritmos que requiere el razonamiento matemático, la labor en el aula se ha reducido a entrenar al alumnado para superar la prueba de acceso a la universidad (PAU).
+        </div>
+
+        <p>La raíz del problema radica en una estructura deficiente que comprime contenidos densos en un intervalo de tiempo irrisorio, mientras arrastra carencias de base generadas por el propio diseño de la Educación Secundaria Obligatoria (ESO).</p>
+
+        <h3>1. La brecha temporal: De los cuatro años de BUP/COU a la urgencia actual</h3>
+
+        <p>Para entender el colapso organizativo de las aulas de Bachillerato, es necesario comparar la carga lectiva y temporal con modelos previos:</p>
+
+        <ul>
+            <li>
+                <strong>El modelo histórico (3 cursos de BUP + 1 curso de COU):</strong> Se disponía de cuatro años específicamente diseñados para asimilar contenidos académicos complejos. Esta extensión permitía abordar los temas en profundidad, consolidar la abstracción y marcar ritmos de aprendizaje adecuados.
+            </li>
+            <li>
+                <strong>El modelo actual (2 años de Bachillerato):</strong> Todo el bloque formativo exigente se condensa en apenas dos cursos. Para empeorar la situación, las clases efectivas terminan a mediados de mayo en 1.º de Bachillerato y a principios de mayo en 2.º de Bachillerato, restando además el tiempo destinado a evaluaciones y repasos. El margen para la enseñanza real ha quedado reducido al mínimo indispensable.
+            </li>
+        </ul>
+
+        <h3>2. El trasvase de contenidos a la ESO y la pérdida de nivel de origen</h3>
+
+        <p>Al reducir la etapa preparatoria a dos años, gran parte de la formación que antes se impartía en los primeros cursos de BUP se desplazó a los últimos cursos de la ESO (3.º y 4.º). Sin embargo, este diseño choca con la realidad del aula obligatoria:</p>
+
+        <div class="callout-alert">
+            <strong>La rebaja de exigencia en la ESO:</strong>
+            <br>
+            Dado que la ESO es una etapa comprensiva e inclusiva donde no todo el alumnado tiene como objetivo cursar un Bachillerato académico, el nivel de exigencia general tiende a suavizarse. Conceptos que antes se estudiaban con solvencia y rigor en 1.º y 2.º de BUP, en la ESO se tratan a menudo de pasada o de forma muy superficial.
+        </div>
+
+        <p>El resultado es directo: los estudiantes llegan a 1.º de Bachillerato sin la solidez conceptual necesaria, sufriendo un fuerte choque de nivel y dificultando la dinámica del curso desde la primera semana.</p>
+
+        <h3>3. Propuestas de solución para una redistribución coherente</h3>
+
+        <p>Para evitar que el profesorado pierda un tiempo valioso nivelando la clase a costa del ritmo del grupo y recuperar el verdadero sentido pedagógico de la asignatura, es urgente abordar reformas estructurales:</p>
+
+        <div class="callout-alert">
+            <strong>Propuesta 1: Itineración previa desde 3.º de la ESO</strong>
+            <br>
+            Recuperar la bifurcación temprana en las matemáticas (como la antigua distinción entre Matemáticas A y B ya en 3.º de ESO). Permitir que el alumnado que proyecta cursar un Bachillerato científico-tecnológico empiece a prepararse con el nivel adecuado desde los 14 años, en lugar de posponer la orientación decisiva a 4.º de la ESO.
+        </div>
+
+        <div class="callout-alert">
+            <strong>Propuesta 2: Requisitos de acceso y pruebas de nivel en Bachillerato</strong>
+            <br>
+            Garantizar el principio de coherencia académica. Del mismo modo que no es posible matricularse en un nivel B2 de un idioma sin acreditar un B1 o superar una prueba de nivel, no debería permitirse el acceso a las Matemáticas avanzadas de Bachillerato sin haber cursado la opción de Matemáticas orientadas a las enseñanzas académicas ("las difíciles") en 4.º de la ESO.
+            <br><br>
+            Para los casos de cambio de itinerario, debería ser obligatorio superar una <strong>prueba de nivel específica</strong> que acredite la competencia mínima indispensable para no paralizar el ritmo de aprendizaje del grupo.
+        </div>
+
+        <div class="callout-reflexiones">
+            <strong>Conclusión:</strong> Enseñar matemáticas requiere tiempo, práctica y una base sólida. Mientras no se reestructure la itineración en la ESO y no se aplique un filtro riguroso de acceso a las asignaturas de Bachillerato, seguiremos atrapados en un sistema que prioriza la instrucción acelerada para la PAU por encima del auténtico conocimiento matemático.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Blog de Matemáticas de Joaquín - Reflexiones docentes sobre el currículo escolar.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
