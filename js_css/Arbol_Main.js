@@ -31,7 +31,8 @@ function cambiarPropiedad(Codigosel) {
     // Nombres concretos de los divs asociados a cada atributo (en el mismo orden)
     const idsDivs = ['div-youtube', 'div-teoria', 'div-ejemplos', 'div-ejercicios', 'div-interactivo'];
     
-    let primerVisible = null; // Guardará el número del primer div visible (1 a 5)
+    let primerVisible = null; // Guardará el número del primer div visible
+    let tieneTeoria = false;  // Indica si la sección de teoría tiene contenido
 
     atributos.forEach((attr, index) => {             
         const valor = origen.getAttribute(attr) || '';
@@ -41,13 +42,17 @@ function cambiarPropiedad(Codigosel) {
         const divAsociado = document.getElementById(idsDivs[index]);
 
         if (divAsociado) {
-            // Si tiene contenido (no está vacío), se muestra; si no, se oculta
             if (valor.trim() !== '') {
-                divAsociado.style.display = ''; // O 'flex', 'grid', etc., según tu diseño
+                divAsociado.style.display = ''; 
                 
-                // Si todavía no hemos encontrado ningún div visible, este es el primero
+                // Guardamos el primer div visible en general
                 if (primerVisible === null) {
-                    primerVisible = index + 1; // Sumamos 1 porque el índice empieza en 0
+                    primerVisible = index + 1; 
+                }
+
+                // Marcamos si la teoría (índice 1 -> opción 2) tiene contenido
+                if (attr === 'teoria') {
+                    tieneTeoria = true;
                 }
             } else {
                 divAsociado.style.display = 'none';
@@ -55,9 +60,12 @@ function cambiarPropiedad(Codigosel) {
         }
     });
 
-    // Ejecuta Mostrar_Web con el primer div visible o 1 por defecto si todos están vacíos
-    Mostrar_Web(primerVisible || 1);
+    // Si hay teoría disponible la abre (2); si no, abre la primera disponible o la 2 por defecto
+    const opcionApertura = tieneTeoria ? 2 : (primerVisible || 2);
+
+    Mostrar_Web(opcionApertura);
 }
+
 
 function Mostrar_Web(Tiposel) {
     const Datossel = document.getElementById('DivHeader');
