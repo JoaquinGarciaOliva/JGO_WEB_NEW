@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.game-container {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 300px; /* Reducido el ancho del contenedor */
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    background: #eef2f5;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.card {
+    min-height: 110px;
+    margin-bottom: 10px;
+}
+
+.question-text {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 5px;
+}
+
+.math-display {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.answer-box {
+    background: #f8fafc;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 1.3rem;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    color: #3b82f6;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.feedback {
+    height: 18px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.feedback.correct { color: #16a34a; }
+.feedback.incorrect { color: #dc2626; }
+
+/* Botonera compacta */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px; /* Separación más pequeña entre botones */
+}
+
+button {
+    background: #f1f5f9;
+    border: none;
+    border-radius: 6px;
+    padding: 8px; /* Padding reducido para achicar los botones */
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente menor */
+    font-weight: bold;
+    color: #334155;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+button:active {
+    background: #cbd5e1;
+}
+
+.btn-action {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-submit {
+    background: #dcfce7;
+    color: #166534;
+}

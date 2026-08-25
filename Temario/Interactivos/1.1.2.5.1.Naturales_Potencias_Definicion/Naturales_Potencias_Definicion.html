@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Potencias</title>
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Práctica de Potencias</h1>
+        
+        <div class="score-board">
+            <span>Puntos: <strong id="score">0</strong></span>
+            <span>Racha: <strong id="streak">0</strong></span>
+        </div>
+
+        <div class="card">
+            <p id="question-text" class="question-text">Cargando...</p>
+            <div id="math-expression" class="math-display"></div>
+            
+            <div class="answer-box">
+                <span id="user-answer"></span><span class="cursor">|</span>
+            </div>
+
+            <p id="feedback" class="feedback"></p>
+        </div>
+
+        <div class="keypad">
+            <button onclick="pressKey('7')">7</button>
+            <button onclick="pressKey('8')">8</button>
+            <button onclick="pressKey('9')">9</button>
+            <button onclick="pressKey('4')">4</button>
+            <button onclick="pressKey('5')">5</button>
+            <button onclick="pressKey('6')">6</button>
+            <button onclick="pressKey('1')">1</button>
+            <button onclick="pressKey('2')">2</button>
+            <button onclick="pressKey('3')">3</button>
+            <button onclick="deleteKey()" class="btn-action">⌫</button>
+            <button onclick="pressKey('0')">0</button>
+            <button onclick="checkAnswer()" class="btn-submit">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
