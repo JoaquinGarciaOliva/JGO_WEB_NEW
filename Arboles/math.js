@@ -104,7 +104,7 @@
        teoria="Temario/Matematicas/01_Números Naturales/1.1.2.2.Naturales_Resta_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.2.Naturales_Resta_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.2.Naturales_Resta_Ejercicios.html"
-       interactivo=""
+       interactivo="Temario/Interactivos/1.1.2.2.Naturales_Resta/resta_aprender.html"
        onclick="toggleVisibility2(this,'1.1.2.2.')">
 
     <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
@@ -140,7 +140,7 @@
        teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Ejercicios.html"
-       interactivo=""
+       interactivo="Temario/Interactivos/1.1.2.3.1.Naturales_Multiplicar/Multiplicar_aprender.html"
        onclick="toggleVisibility2(this,'1.1.2.3.1.')">
 
     <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
@@ -154,11 +154,11 @@
        imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Ejercicios.html"
+       interactivo="Temario/Interactivos/1.1.2.3.2.Naturales_Multiplicar_Linea/Multiplicar_Linea_aprender.html"
        onclick="toggleVisibility2(this,'1.1.2.3.2.')">
 
     <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
@@ -169,17 +169,17 @@
   <div class="tree-node"
        id="1.1.2.3.3."
        nivel="5"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Ejercicios.html"
+       interactivo="Temario/Interactivos/1.1.2.3.3.Naturales_Multiplicar_10/Multiplicar_Potencias_10.html"
        onclick="toggleVisibility2(this,'1.1.2.3.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.2.3.3.</span>
     <span class="Arbol_Nombre_5">Por Potencias de 10.</span>
   </div></li></ul>
@@ -187,17 +187,17 @@
   <div class="tree-node"
        id="1.1.2.4."
        nivel="4"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.4.Naturales_Division_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.4.Naturales_Division_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.4.Naturales_Division_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.4.Naturales_Division_Ejercicios.html"
+       interactivo="Temario/Interactivos/1.1.2.4.Naturales_Dividir/Dividir_Aprender_1.html"
        onclick="toggleVisibility2(this,'1.1.2.4.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.2.4.</span>
     <span class="Arbol_Nombre_4">División. Prueba de la división.</span>
   </div></li>
@@ -205,8 +205,8 @@
   <div class="tree-node"
        id="1.1.2.5."
        nivel="4"
-       imagen="Imagenes/arbol/subapartado2.png"
-       imagen2="Imagenes/arbol/subapartado2_open.png"
+       imagen="Imagenes/arbol/capitulo9.png"
+       imagen2="Imagenes/arbol/capitulo9_open.png"
        Tipo=""
        Youtube=""
        teoria=""
@@ -215,7 +215,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.1.2.5.')">
 
-    <img  class="manImg" src="Imagenes/arbol/subapartado2.png">
+    <img  class="manImg" src="Imagenes/arbol/capitulo9.png">
     <span style="display: none;">1.1.2.5.</span>
     <span class="Arbol_Nombre_4">Potencias</span>
   </div><ul  class="hidden">
@@ -223,17 +223,17 @@
   <div class="tree-node"
        id="1.1.2.5.1."
        nivel="5"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.5.1.Potencias_Definicion_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.5.1.Potencias_Definicion_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.5.1.Potencias_Definicion_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.5.1.Potencias_Definicion_Ejercicios.html"
+       interactivo="Temario/Interactivos/1.1.2.5.1.Naturales_Potencias_Definicion/Naturales_Potencias_Definicion.html"
        onclick="toggleVisibility2(this,'1.1.2.5.1.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.2.5.1.</span>
     <span class="Arbol_Nombre_5">Definición.</span>
   </div></li>
