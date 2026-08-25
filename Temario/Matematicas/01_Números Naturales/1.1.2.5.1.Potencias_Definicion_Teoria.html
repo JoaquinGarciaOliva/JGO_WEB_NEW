@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Potencias en los Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Columnas para los Dígitos Principales (Anchas) */
+        .col-digito {
+            width: 20px;
+            color: #2d3748;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Potencias en los Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Qué es una Potencia?</h2>
+            <p>Una <strong>potencia</strong> es una forma abreviada de escribir una multiplicación en la que todos los factores son iguales. Nos permite representar multiplicaciones repetidas de un mismo número de manera más rápida y sencilla.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <div class="step-block">
+                <div class="step-title">1. Partes de una Potencia</div>
+                <div class="regla-box">
+                    <strong>Estructura general:</strong> Una potencia se expresa de la forma $a^b = c$.
+                </div>
+                
+                <p>En esta estructura general:</p>
+                <ul>
+                    <li><strong>$a$ (Base):</strong> Es el número que se multiplica por sí mismo de forma repetida.</li>
+                    <li><strong>$b$ (Exponente o potencia):</strong> Es el número pequeño (situado en la parte superior derecha) que indica cuántas veces se multiplica la base por sí misma.</li>
+                    <li><strong>$c$ (Valor de la potencia):</strong> Es el resultado final obtenido al realizar la multiplicación.</li>
+                </ul>
+
+                <p>Por ejemplo, en la expresión $2^3 = 2 \cdot 2 \cdot 2 = 8$:</p>
+                <ul>
+                    <li>La <span class="highlight">base</span> ($a$) es $2$.</li>
+                    <li>El <span class="highlight">exponente</span> ($b$) es $3$.</li>
+                    <li>El <span class="highlight">valor de la potencia</span> ($c$) es $8$.</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">2. ¿Cómo se leen las Potencias?</div>
+                <div class="regla-box">
+                    <strong>Lectura general:</strong> Una potencia se lee indicando primero la base, seguida de la expresión «elevado a» y el exponente. Por ejemplo, $2^5$ se lee «dos elevado a cinco».
+                </div>
+
+                <p><strong>Casos especiales:</strong> Existen dos exponentes muy comunes que reciben un nombre especial:</p>
+                <ul>
+                    <li><strong>Elevado a 2 («al cuadrado»):</strong> Cuando el exponente es $2$, se dice que el número está <i>al cuadrado</i>. Por ejemplo, $3^2$ se lee «tres al cuadrado» (significa $3$ elevado a $2$).</li>
+                    <li><strong>Elevado a 3 («al cubo»):</strong> Cuando el exponente es $3$, se dice que el número está <i>al cubo</i>. Por ejemplo, $5^3$ se lee «cinco al cubo» (significa $5$ elevado a $3$).</li>
+                </ul>
+            </div>
+
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. Significado y Cálculo de las Potencias</div>
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    <strong>Importante:</strong> Para denotar la multiplicación en las potencias utilizaremos un <strong>punto ($\cdot$)</strong> en lugar de la letra $x$, ya que el punto es la notación matemática estándar.
+                </div>
+                
+                <p>Observemos qué sucede cuando calculamos potencias decrecientes de base $2$:</p>
+                
+                <ul>
+                    <li><strong>$2^3$ (Dos elevado a tres):</strong> Significa que hay <strong>tres doses</strong> multiplicando.<br>
+                    $$2^3 = 2 \cdot 2 \cdot 2 = 8$$</li>
+                    <li style="margin-top: 10px;"><strong>$2^2$ (Dos elevado a dos o al cuadrado):</strong> Significa que hay <strong>dos doses</strong> multiplicando.<br>
+                    $$2^2 = 2 \cdot 2 = 4$$</li>
+                    <li style="margin-top: 10px;"><strong>$2^1$ (Dos elevado a uno):</strong> Significa que hay <strong>un dos</strong>.<br>
+                    $$2^1 = 2$$</li>
+                </ul>
+            </div>
+
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #00769d;">4. Caso Especial: Exponente 0 ($2^0$)</div>
+                
+                <div class="regla-box">
+                    ¿Qué ocurre con $2^0$? Significa que <strong>no hay ningún dos</strong> multiplicando. Entonces, ¿qué número queda?
+                </div>
+                
+                <p>Para entenderlo, debemos observar que en todas las multiplicaciones anteriores siempre está presente de forma implícita el número <strong>1</strong> (el elemento neutro de la multiplicación). Normalmente no se escribe porque al multiplicar cualquier número por 1 el resultado no cambia, pero siempre está ahí:</p>
+
+                <ul>
+                    <li>$2^3 = 2 \cdot 2 \cdot 2 \cdot 1 = 8 \cdot 1 = 8$</li>
+                    <li>$2^2 = 2 \cdot 2 \cdot 1 = 4 \cdot 1 = 4$</li>
+                    <li>$2^1 = 2 \cdot 1 = 2$</li>
+                </ul>
+
+                <p>Por lo tanto, al llegar a <strong>$2^0$</strong>, al no haber ningún dos multiplicando, el único número que queda en la multiplicación es el <strong>1</strong>:</p>
+
+                <div class="regla-box" style="background-color: #f0f9ff; border-left-color: #00769d;">
+                    $$2^0 = 1$$
+                    En consecuencia, poner el $1$ cobra todo el sentido, pues el $1$ siempre está presente en toda multiplicación. De forma general, cualquier número natural elevado a $0$ es igual a $1$ (por ejemplo, $3^0 = 1$, $5^0 = 1$).
+                </div>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">5. Formas de Agrupar al Calcular Potencias</div>
+                <div class="regla-box">
+                    <strong>Estrategia de cálculo:</strong> A la hora de calcular el valor de una potencia, no es obligatorio realizar las multiplicaciones estrictamente de una en una de izquierda a derecha; se pueden asociar o agrupar los factores en parejas para facilitar la operación.
+                </div>
+
+                <p>Veamos el ejemplo de $2^4$ calculado de dos formas distintas:</p>
+                <ul>
+                    <li><strong>Paso a paso (de uno en uno):</strong><br>
+                    $$2^4 = 2 \cdot 2 \cdot 2 \cdot 2 = 4 \cdot 2 \cdot 2 = 8 \cdot 2 = 16$$</li>
+                    <li style="margin-top: 10px;"><strong>Agrupando factores en parejas:</strong><br>
+                    $$2^4 = 2 \cdot 2 \cdot 2 \cdot 2 = 4 \cdot 4 = 16$$</li>
+                </ul>
+
+                <p>Otros ejemplos de agrupación:</p>
+                <ul>
+                    <li><strong>Ejemplo con $3^4$:</strong><br>
+                    De uno en uno: $3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 9 \cdot 3 \cdot 3 = 27 \cdot 3 = 81$<br>
+                    Agrupando: $3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 9 \cdot 9 = 81$</li>
+                    <li style="margin-top: 10px;"><strong>Ejemplo con $2^5$:</strong><br>
+                    De uno en uno: $2^5 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 4 \cdot 2 \cdot 2 \cdot 2 = 8 \cdot 2 \cdot 2 = 16 \cdot 2 = 32$<br>
+                    Agrupando: $2^5 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 4 \cdot 4 \cdot 2 = 16 \cdot 2 = 32$</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <div class="step-title">6. Ejemplos Prácticos de Cálculo</div>
+                
+                <p>Veamos algunos ejemplos aplicando la definición directa:</p>
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 1: $3^2$ («Tres al cuadrado»)</strong><br>
+                        <ul>
+                            <li><strong>Base:</strong> $3$ | <strong>Exponente:</strong> $2$</li>
+                            <li><strong>Significado:</strong> Hay dos treses multiplicando.</li>
+                            <li><strong>Cálculo:</strong> $3^2 = 3 \cdot 3 = 9$</li>
+                            <li><strong>Valor de la potencia:</strong> $9$</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 2: $5^3$ («Cinco al cubo»)</strong><br>
+                        <ul>
+                            <li><strong>Base:</strong> $5$ | <strong>Exponente:</strong> $3$</li>
+                            <li><strong>Significado:</strong> Hay tres cincos multiplicando.</li>
+                            <li><strong>Cálculo:</strong> $5^3 = 5 \cdot 5 \cdot 5 = 125$</li>
+                            <li><strong>Valor de la potencia:</strong> $125$</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 3: $4^1$ y $4^0$</strong><br>
+                        <ul>
+                            <li>$4^1 = 4$ (Un cuatro).</li>
+                            <li>$4^0 = 1$ (Caso especial: cero cuatros resulta en 1).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+</html>
+
