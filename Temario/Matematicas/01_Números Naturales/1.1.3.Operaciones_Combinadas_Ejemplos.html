@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos: Operaciones Combinadas de Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            width: 100%;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .math-steps {
+            margin: 10px 0;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos Prácticos: Operaciones Combinadas de Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>15 Ejemplos Resueltos en Dos Líneas</h2>
+            <p>A continuación se presentan los 15 ejemplos estructurados con el signo igual al final de la primera línea y el desarrollo encadenado en la segunda.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1: SIN PARÉNTESIS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 1: Operaciones sin Paréntesis (Suma, Resta, Multiplicación y División)</div>
+
+                <!-- Ejemplo 1 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 1:</strong>
+                        <div class="math-steps">
+                            $$12 + 4 \cdot 3 - 10 : 2 =$$
+                            $$12 + 12 - 5 = 24 - 5 = 19$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Primero se realizan multiplicaciones y divisiones de izquierda a derecha; luego sumas y restas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 2:</strong>
+                        <div class="math-steps">
+                            $$20 - 3 \cdot 5 + 16 : 4 =$$
+                            $$20 - 15 + 4 = 5 + 4 = 9$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se calculan los productos y cocientes prioritariamente y se opera de izquierda a derecha.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 3 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 3:</strong>
+                        <div class="math-steps">
+                            $$18 : 3 \cdot 2 + 7 - 5 =$$
+                            $$6 \cdot 2 + 7 - 5 = 12 + 7 - 5 = 14$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La división y multiplicación tienen la misma jerarquía, por lo que se efectúan en orden de aparición.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 4 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 4:</strong>
+                        <div class="math-steps">
+                            $$25 - 4 \cdot 2 + 30 : 6 - 8 =$$
+                            $$25 - 8 + 5 - 8 = 17 + 5 - 8 = 14$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Resolución de bloques multiplicativos previa a la resolución lineal de sumas y restas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 5 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 5:</strong>
+                        <div class="math-steps">
+                            $$9 \cdot 4 : 6 + 15 - 3 \cdot 3 =$$
+                            $$36 : 6 + 15 - 9 = 6 + 15 - 9 = 12$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Jerarquía estándar sin signos de agrupación.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: CON PARÉNTESIS NO ANIDADOS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 2: Operaciones con Uno o Dos Paréntesis (No Anidados)</div>
+
+                <!-- Ejemplo 6 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 6:</strong>
+                        <div class="math-steps">
+                            $$3 \cdot (8 + 4) - 15 : 3 =$$
+                            $$3 \cdot 12 - 15 : 3 = 36 - 5 = 31$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se resuelve el paréntesis completamente en el primer paso sin resolver operaciones externas en paralelo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 7 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 7:</strong>
+                        <div class="math-steps">
+                            $$(18 - 6) : 3 + 4 \cdot (5 + 2) =$$
+                            $$12 : 3 + 4 \cdot 7 = 4 + 28 = 32$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se eliminan primero los dos paréntesis independientes antes de realizar cualquier multiplicación o división externa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 8 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 8:</strong>
+                        <div class="math-steps">
+                            $$50 - (6 \cdot 4 + 2) + 18 : (9 - 3) = 50 - (24 + 2) + 18 : 6 =$$
+                            $$50 - 26 + 18 : 6 = 50 - 26 + 3 = 27$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Resolución estricta de la estructura dentro de los paréntesis antes de operar fuera.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 9 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 9:</strong>
+                        <div class="math-steps">
+                            $$(15 + 5) : (10 - 6) + 4 \cdot 3 =$$
+                            $$20 : 4 + 4 \cdot 3 = 5 + 12 = 17$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Despeje completo de paréntesis, seguido de multiplicaciones/divisiones y finalmente la suma.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 10 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 10:</strong>
+                        <div class="math-steps">
+                            $$7 \cdot (10 - 4 : 2) - 12 =$$
+                            $$7 \cdot (10 - 2) - 12 = 7 \cdot 8 - 12 = 44$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Prioridad de la división interna del paréntesis antes de poder destruir el agrupamiento.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: CON PARÉNTESIS ANIDADOS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 3: Operaciones Complejas con Paréntesis Anidados</div>
+
+                <!-- Ejemplo 11 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 11:</strong>
+                        <div class="math-steps">
+                            $$2 \cdot [15 - (3 + 2 \cdot 4)] + 8 = 2 \cdot [15 - (3 + 8)] + 8 =$$
+                            $$2 \cdot [15 - 11] + 8 = 2 \cdot 4 + 8 = 16$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Trabajo de dentro hacia afuera. No se realiza el producto exterior ni la suma hasta despejar el corchete.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 12 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 12:</strong>
+                        <div class="math-steps">
+                            $$\{35 - [4 \cdot (6 - 2) + 3]\} : 2 = \{35 - [4 \cdot 4 + 3]\} : 2 =$$
+                            $$\{35 - [16 + 3]\} : 2 = 16 : 2 = 8$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Despeje secuencial por niveles de anidación: $( ) \rightarrow [ ] \rightarrow \{ \}$, dejando la división exterior al final.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 13 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 13:</strong>
+                        <div class="math-steps">
+                            $$50 - [2 \cdot (18 - 3 \cdot 4) + (12 : 3 + 1)] = 50 - [2 \cdot (18 - 12) + (4 + 1)] =$$
+                            $$50 - [2 \cdot 6 + 5] = 50 - 17 = 33$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Reducción de paréntesis internos antes de operar los términos dentro del corchete principal.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 14 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 14:</strong>
+                        <div class="math-steps">
+                            $$3 \cdot \{20 - [12 : (5 - 2) + 2 \cdot (7 - 4)\} =$$
+                            $$3 \cdot \{20 - [12 : 3 + 2 \cdot 3 \} = 3 \cdot \{20 - [4 + 6]\} = 3 \cdot 10 = 30$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Proceso riguroso desde el nivel más profundo hasta las operaciones exteriores.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 15 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 15:</strong>
+                        <div class="math-steps">
+                            $$\{[24 : (8 - 2) + 6] \cdot 2 - (10 - 4)\} + 5 =$$
+                            $$\{[24 : 6 + 6] \cdot 2 - 6\} + 5 = \{[4 + 6] \cdot 2 - 6\} + 5 =  \{10 \cdot 2 - 6\} + 5 =  \{20 - 6\} + 5 = 14 + 5 = 19$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Desintegración ordenada de múltiples capas de paréntesis manteniendo la prioridad jerárquica en cada fase.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

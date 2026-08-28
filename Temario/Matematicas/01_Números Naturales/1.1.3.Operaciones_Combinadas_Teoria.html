@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Operaciones Combinadas en los Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Tabla con letra reducida para expresiones largas */
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        /* Columnas para los Dígitos Principales */
+        .col-digito {
+            width: auto;
+            color: #2d3748;
+            padding: 0 5px !important;
+        }
+
+        /* Columna para los signos de relación o igualdad */
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        /* Columna de texto de desarrollo matemático */
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Estilos adicionales para advertencias */
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        /* Comparativa Árbol vs Correcto */
+        .tree-comparison {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tree-box {
+            flex: 1;
+            min-width: 280px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+        }
+
+        .tree-box.wrong {
+            border-color: #e53e3e;
+            background-color: #fff5f5;
+        }
+
+        .tree-box.correct {
+            border-color: #38a169;
+            background-color: #f0fff4;
+        }
+
+        /* Caja de desarrollo en línea continuo */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Operaciones Combinadas en los Números Naturales ($\mathbb{N}$)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Cómo resolver Operaciones Combinadas?</h2>
+            <p>Para resolver correctamente una expresión matemática con varias operaciones combinadas, debemos seguir un estricto <strong>orden de prioridad</strong> (jerarquía de operaciones). Además, en el conjunto de los <strong>números naturales ($\mathbb{N}$)</strong>, debemos prestar especial atención a ciertas restricciones operativas.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: JERARQUÍA -->
+            <div class="step-block">
+                <div class="step-title">1. Orden de Prioridad de las Operaciones</div>
+                <div class="regla-box">
+                    <strong>Jerarquía estándar:</strong>
+                    <ol style="margin-top: 10px; margin-bottom: 0; padding-left: 20px;">
+                        <li><strong>Paréntesis:</strong> Se resuelven de dentro hacia afuera.</li>
+                        <li><strong>Multiplicaciones y Divisiones:</strong> Tienen el mismo nivel de prioridad.</li>
+                        <li><strong>Sumas y Restas:</strong> Tienen el mismo nivel de prioridad.</li>
+                    </ol>
+                </div>
+
+                <p><strong>Regla de Izquierda a Derecha:</strong> Cuando nos encontramos con operaciones que están en el <em>mismo nivel de prioridad</em> (por ejemplo, varias multiplicaciones y divisiones seguidas, o varias sumas y restas), el orden de resolución es estrictamente de <strong>izquierda a derecha</strong>.</p>
+                
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo de igual prioridad (Multiplicación y División):</strong><br>
+                        $$6 \cdot 4 : 12 = 24 : 12 = 2$$
+                        <ul style="margin-top: 10px;">
+                            <li><i>Correcto:</i> Primero hacemos $6 \cdot 4 = 24$ y luego $24 : 12 = 2$.</li>
+                            <li><i>Incorrecto:</i> Hacer primero $4 : 12$ alteraría por completo el resultado.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p><strong>Condiciones clave sobre los Paréntesis:</strong></p>
+                <ul>
+                    <li>Para considerar que hay una operación entre paréntesis a resolver, dentro debe haber <strong>más de un número</strong> (por ejemplo, $(3 + 5)$).</li>
+                    <li>Un paréntesis no se considera completamente resuelto o evaluable como bloque hasta que en su interior no queden más paréntesis anidados.</li>
+                    <li><strong>Notación importante:</strong> Cuando aparece un número pegado a un paréntesis sin signo intermedio, como $2(3)$, equivale exactamente a una multiplicación: $2 \cdot 3 = 6$. Un paréntesis con un solo número no es una operación, es simplemente un factor multiplicado.</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 2: POTENCIAS Y RESTAS EN N -->
+            <div class="step-block">
+                <div class="step-title">2. Notaciones: Potencias y Restas en Números Naturales</div>
+                
+                <p><strong>Tratamiento de las Potencias:</strong></p>
+                <div class="regla-box">
+                    Una potencia es simplemente una <strong>multiplicación abreviada</strong> de factores iguales ($a^n = a \cdot a \dots a$). Por tanto, no requiere un nivel aislado complejo si entendemos lo que representa.
+                </div>
+                <p>Por ejemplo, en la expresión $2 \cdot 3^2$, debemos ser conscientes de lo que tenemos entre manos:</p>
+                <ul>
+                    <li>Podemos resolver primero la potencia como si tuviese prioridad/paréntesis implícito: $2 \cdot (3)^2 = 2 \cdot 9 = 18$.</li>
+                    <li>O bien desarrollar la multiplicación completa de golpe: $2 \cdot 3^2 = 2 \cdot 3 \cdot 3 = 18$.</li>
+                </ul>
+
+                <p><strong>Restricción de la Resta en los Números Naturales ($\mathbb{N}$):</strong></p>
+                <div class="warning-box">
+                    <strong>¡Atención!</strong> En el conjunto de los números naturales ($\mathbb{N} = \{0, 1, 2, 3, \dots\}$), no existen los números negativos. Por tanto, <strong>el resultado de cada resta intermedia debe ser siempre un número positivo o cero</strong>.
+                </div>
+                <ul>
+                    <li><strong>No válido en $\mathbb{N}$:</strong> $2 - 3 + 4$. Al operar de izquierda a derecha, la primera operación sería $2 - 3$, cuyo resultado no existe en los números naturales.</li>
+                    <li><strong>Válido en $\mathbb{N}$:</strong> $2 + 4 - 3$. Al ir de izquierda a derecha, hacemos $2 + 4 = 6$, y luego $6 - 3 = 3$ (perfectamente válido en $\mathbb{N}$).</li>
+                </ul>
+                <p><i>Nota:</i> Las reglas completas y flexibles de las operaciones combinadas (donde restas como $2 - 3$ son válidas) terminan de formalizarse al estudiar el conjunto de los números enteros ($\mathbb{Z}$).</p>
+            </div>
+
+            <!-- SECCIÓN 3: ERRORES COMUNES (MÉTODO EN ÁRBOL) -->
+            <div class="step-block" style="border-color: #e53e3e;">
+                <div class="step-title" style="color: #c53030;">3. Advertencia Fundamental: El "Método en Árbol"</div>
+                <div class="warning-box">
+                    <strong>Prohibido o mal ejecutado en la práctica:</strong> Existe una tendencia pedagógica en Educación Primaria a enseñar a resolver operaciones uniendo números con líneas en forma de "árbol" o V hacia abajo, escribiendo solo los resultados intermedios. <strong>Esto es un error grave de notación matemática.</strong>
+                </div>
+                <p><strong>¿Por qué es un error?</strong> Rompe la cadena de igualdades ($=$) y genera confusión al pasar a números enteros y álgebra en Educación Secundaria. En cada paso de trabajo <strong>deben aparecer transcritos TODOS los números y signos</strong> de la expresión.</p>
+                
+                <div class="tree-comparison">
+                    <div class="tree-box wrong">
+                        <strong style="color: #c53030;">❌ INCORRECTO (Método en árbol):</strong><br><br>
+                        <div style="font-family: monospace; font-size: 1.05rem; line-height: 1.8; white-space: pre;">10 + 12 : 3 · 2 - 5
+      \___/
+        4   · 2 
+         \___/
+10 +        8    
+ \________/
+     18         - 5
+      \___________/
+           13</div>
+                        <p style="font-size: 0.85rem; color: #742a2a; margin-top: 10px;">
+                            <i>Inconveniente:</i> No se mantiene la igualdad completa entre líneas, 'colgando' operaciones aisladas.
+                        </p>
+                    </div>
+
+                    <div class="tree-box correct">
+                        <strong style="color: #276749;">✔ CORRECTO (Escritura en línea completa):</strong><br><br>
+                        <div style="font-family: monospace; font-size: 1rem; line-height: 2;">
+                            10 + <strong>12 : 3</strong> · 2 - 5 =<br>
+                            = 10 + <strong>4 · 2</strong> - 5 =<br>
+                            = <strong>10 + 8</strong> - 5 =<br>
+                            = <strong>18 - 5</strong> =<br>
+                            = <strong>13</strong>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #22543d; margin-top: 15px;">
+                            <i>Ventaja:</i> Cada línea es equivalente a la anterior de principio a fin, manteniendo la estructura matemática.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: EJEMPLOS RESUELTOS PASO A PASO -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">4. Ejemplos Prácticos de Orden de Prioridad</div>
+                
+                <!-- EJEMPLO 1 -->
+                <p><strong>Ejemplo 1: Solo con Sumas y Restas (Izquierda a Derecha)</strong></p>
+                <p>Calcular: $15 - 4 + 6 - 2$</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 15px; overflow-x: auto;">
+                    <table class="factor-table factor-table-small">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 80px;">Paso 1:</td>
+                            <td class="col-digito" style="color: #2635b7;">$15 - 4$</td>
+                            <td class="col-digito">$+ 6 - 2$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$11 + 6 - 2$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Primer bloque de izq. a der.: $15 - 4 = 11$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2:</td>
+                            <td class="col-digito" style="color: #2635b7;">$11 + 6$</td>
+                            <td class="col-digito">$- 2$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$17 - 2$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Siguiente bloque: $11 + 6 = 17$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 3:</td>
+                            <td class="col-digito" style="color: #e53e3e;">$17 - 2$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito" style="color: #e53e3e;">$15$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Resultado final: $15$)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="continuo-box">
+                    Desarrollo: $15 - 4 + 6 - 2 = 11 + 6 - 2 = 17 - 2 = 15$
+                </div>
+
+                <br>
+
+                <!-- EJEMPLO 2 -->
+                <p><strong>Ejemplo 2: Mezclando Multiplicaciones, Divisiones, Sumas y Restas</strong></p>
+                <p>Calcular: $10 + 12 : 3 \cdot 2 - 5$</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 15px; overflow-x: auto;">
+                    <table class="factor-table factor-table-small">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 80px;">Paso 1:</td>
+                            <td class="col-digito">$10 +$</td>
+                            <td class="col-digito" style="color: #2635b7;">$12 : 3$</td>
+                            <td class="col-digito">$\cdot 2 - 5$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$10 + 4 \cdot 2 - 5$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Prioridad mult/div de izq a der: $12:3 = 4$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2:</td>
+                            <td class="col-digito">$10 +$</td>
+                            <td class="col-digito" style="color: #2635b7;">$4 \cdot 2$</td>
+                            <td class="col-digito">$- 5$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$10 + 8 - 5$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Siguiente multiplicación: $4 \cdot 2 = 8$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 3:</td>
+                            <td class="col-digito" style="color: #2635b7;">$10 + 8$</td>
+                            <td class="col-digito">$- 5$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$18 - 5$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Sumas/restas de izq a der: $10 + 8 = 18$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 4:</td>
+                            <td class="col-digito" style="color: #e53e3e;">$18 - 5$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito" style="color: #e53e3e;">$13$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Resultado final: $13$)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="continuo-box">
+                    Desarrollo: $10 + 12 : 3 \cdot 2 - 5 = 10 + 4 \cdot 2 - 5 = 10 + 8 - 5 = 18 - 5 = 13$
+                </div>
+
+                <br>
+
+                <!-- EJEMPLO 3 -->
+                <p><strong>Ejemplo 3: Con Paréntesis, Multiplicaciones, Restas, Sumas y Divisiones</strong></p>
+                <p>Calcular: $4 \cdot (8 - 3) + 18 : (2 + 4)$</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 15px; overflow-x: auto;">
+                    <table class="factor-table factor-table-small">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 80px;">Paso 1:</td>
+                            <td class="col-digito">$4 \cdot$</td>
+                            <td class="col-digito" style="color: #2635b7;">$(8 - 3)$</td>
+                            <td class="col-digito">$+ 18 : (2 + 4)$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$4 \cdot 5 + 18 : (2 + 4)$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Primer paréntesis: $8 - 3 = 5$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2:</td>
+                            <td class="col-digito">$4 \cdot 5 + 18 :$</td>
+                            <td class="col-digito" style="color: #2635b7;">$(2 + 4)$</td>
+                            <td class="col-digito"></td>                           
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$4 \cdot 5 + 18 : 6$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Segundo paréntesis: $2 + 4 = 6$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 3:</td>
+                            <td class="col-digito" style="color: #2635b7;">$4 \cdot 5$</td>
+                            <td class="col-digito">$+ 18 : 6$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$20 + 18 : 6$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Multiplicación de izq a der: $4 \cdot 5 = 20$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 4:</td>
+                            <td class="col-digito">$20 +$</td>
+                            <td class="col-digito" style="color: #2635b7;">$18 : 6$</td>
+                            <td class="col-digito"></td>                           
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$20 + 3$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(División: $18 : 6 = 3$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 5:</td>
+                            <td class="col-digito" style="color: #e53e3e;">$20 + 3$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>                           
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito" style="color: #e53e3e;">$23$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Resultado final: $23$)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="continuo-box">
+                    Desarrollo: $4 \cdot (8 - 3) + 18 : (2 + 4) = 4 \cdot 5 + 18 : 6 = 20 + 3 = 23$
+                </div>
+
+                <br>
+
+                <!-- EJEMPLO 4 -->
+                <p><strong>Ejemplo 4: Paréntesis dentro de otros Paréntesis (Anidados)</strong></p>
+                <p>Calcular: $3 \cdot (15 - 2 \cdot (4 + 1))$</p>
+                <div class="division-table-container" style="background: #f0f7f9; margin-bottom: 15px; overflow-x: auto;">
+                    <table class="factor-table factor-table-small">
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748; width: 80px;">Paso 1:</td>
+                            <td class="col-digito">$3 \cdot (15 - 2 \cdot$</td>
+                            <td class="col-digito" style="color: #2635b7;">$(4 + 1)$</td>
+                            <td class="col-digito">$)$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$3 \cdot (15 - 2 \cdot 5)$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Paréntesis más interno: $4 + 1 = 5$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 2:</td>
+                            <td class="col-digito">$3 \cdot (15 -$</td>
+                            <td class="col-digito" style="color: #2635b7;">$2 \cdot 5$</td>
+                            <td class="col-digito">$)$</td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$3 \cdot (15 - 10)$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Dentro del paréntesis, multiplicación: $2 \cdot 5 = 10$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 3:</td>
+                            <td class="col-digito">$3 \cdot$</td>
+                            <td class="col-digito" style="color: #2635b7;">$(15 - 10)$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito">$3 \cdot 5$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Paréntesis principal: $15 - 10 = 5$)</td>
+                        </tr>
+                        <tr>
+                            <td class="barra-primas" style="color: #2d3748;">Paso 4:</td>
+                            <td class="col-digito" style="color: #e53e3e;">$3 \cdot 5$</td>
+                            <td class="col-digito"></td>
+                            <td class="col-digito"></td>
+                            <td class="col-igual">$=$</td>
+                            <td class="col-digito" style="color: #e53e3e;">$15$</td>
+                            <td class="barra-primas" style="color: #4a5568;">(Resultado final: $15$)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="continuo-box">
+                    Desarrollo: $3 \cdot (15 - 2 \cdot (4 + 1)) = 3 \cdot (15 - 2 \cdot 5) = 3 \cdot (15 - 10) = 3 \cdot 5 = 15$
+                </div>
+
+            </div>
+
+            <!-- SECCIÓN 5: NIVEL AVANZADO / PERFECCIONAMIENTO -->
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #2635b7;">5. Perfeccionamiento: Resolución en Paralelo (Nivel Avanzado)</div>
+                
+                <div class="warning-box" style="border-left-color: #2635b7; background-color: #f0f4ff;">
+                    <strong style="color: #2635b7;">Nota metodológica:</strong> 
+                    Este método está reservado para cuando ya se domina con total fluidez el cálculo por pasos intermedios. Consiste en analizar en qué bloques independientes la matemática <em>permite operar simultáneamente</em> sin violar el orden de prioridad ni interrumpir la dependencia de otros términos.
+                </div>
+
+                <p><strong>Análisis simultáneo de viabilidad de cada operación:</strong></p>
+                <p>Sea la expresión: $$2 + 3 \cdot 4 - 2 \cdot (7 - 2 \cdot 3) - 8 : 2$$</p>
+
+                <ul>
+                    <li><strong>¿Podemos hacer $2 + 3$?</strong> <span style="color: #e53e3e; font-weight: bold;">NO.</span> El $3$ está multiplicando al $4$ y la multiplicación tiene mayor prioridad que la suma.</li>
+                    <li><strong>¿Podemos hacer $3 \cdot 4$?</strong> <span style="color: #38a169; font-weight: bold;">SÍ.</span> Está delimitada por una suma y una resta, por lo que es un término independiente. ($3 \cdot 4 = 12$).</li>
+                    <li><strong>¿Podemos hacer la resta $4 - 2$?</strong> <span style="color: #e53e3e; font-weight: bold;">NO.</span> El $4$ forma parte del término anterior y el $2$ está multiplicando al paréntesis.</li>
+                    <li><strong>¿Podemos multiplicar $2 \cdot (\dots)$?</strong> <span style="color: #e53e3e; font-weight: bold;">NO.</span> Debemos resolver primero el interior del paréntesis.</li>
+                    <li><strong>Dentro del paréntesis $(7 - 2 \cdot 3)$: ¿Podemos hacer $7 - 2$?</strong> <span style="color: #e53e3e; font-weight: bold;">NO.</span> El $2$ está multiplicando al $3$. Primero hacemos $2 \cdot 3 = 6$.</li>
+                    <li><strong>¿Podemos hacer $8 : 2$?</strong> <span style="color: #38a169; font-weight: bold;">SÍ.</span> Es un bloque independiente al final de la expresión separado por una resta. ($8 : 2 = 4$).</li>
+                </ul>
+
+                <p><strong>Desarrollo simultáneo simplificado:</strong></p>
+
+                <div class="continuo-box" style="border-left-color: #38a169;">
+                    $$2 + 3 \cdot 4 - 2 \cdot (7 - 2 \cdot 3) - 8 : 2 =$$
+                    $$= 2 + \mathbf{12} - 2 \cdot (7 - \mathbf{6}) - \mathbf{4} =$$
+                    $$= 2 + 12 - 2 \cdot (\mathbf{1}) - 4 =$$
+                    $$= 2 + 12 - \mathbf{2} - 4 =$$
+                    $$= \mathbf{14} - 2 - 4 = \mathbf{12} - 4 = \mathbf{8}$$
+                </div>
+
+                <p style="margin-top: 15px;"><i>Recomendación pedagógica:</i> Aunque este procedimiento ahorra tiempo y espacio, se sugiere <strong>evitar la mezcla precipitada de pasos</strong> hasta no consolidar el hábito de control de dependencias para no cometer errores operativos.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
