@@ -43,17 +43,17 @@
   <div class="tree-node"
        id="1.1.1."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.1.Defincion_Lectura_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.1.1.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.1.</span>
     <span class="Arbol_Nombre_3">Leer y Escribir los números naturales.</span>
   </div></li>
@@ -241,17 +241,17 @@
   <div class="tree-node"
        id="1.1.2.5.2."
        nivel="5"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.5.2.Potencias_Propiedades_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.2.5.2.Potencias_Propiedades_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.2.5.2.Potencias_Propiedades_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.2.5.2.Potencias_Propiedades_Ejercicios.html"
+       interactivo="Temario/Interactivos/1.1.2.5.2.Naturales_Potencias_Propiedades/Naturales_Potencias_Propiedades.html"
        onclick="toggleVisibility2(this,'1.1.2.5.2.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.2.5.2.</span>
     <span class="Arbol_Nombre_5">Propiedades.  Misma Base, Distinta Base.</span>
   </div></li></ul></li></ul>
@@ -259,17 +259,17 @@
   <div class="tree-node"
        id="1.1.3."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.3.Operaciones_Combinadas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.3.Operaciones_Combinadas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.3.Operaciones_Combinadas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.3.Operaciones_Combinadas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.1.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.3.</span>
     <span class="Arbol_Nombre_3">Operaciones Combinadas.</span>
   </div></li>
@@ -290,6 +290,24 @@
     <img  class="manImg" src="Imagenes/arbol/hoja.png">
     <span style="display: none;">1.1.4.</span>
     <span class="Arbol_Nombre_3">profundización: propiedades y cálculo rápido.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="1.1.5"
+       nivel="3"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'1.1.5')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">1.1.5</span>
+    <span class="Arbol_Nombre_3">Problemas</span>
   </div></li></ul>
  <li>
   <div class="tree-node"
