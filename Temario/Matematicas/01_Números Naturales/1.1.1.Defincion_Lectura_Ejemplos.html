@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos: Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            width: 100%;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .math-steps {
+            margin: 10px 0;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos Prácticos: Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Ejemplos Resueltos de Números Naturales</h2>
+            <p>A continuación se presentan los ejercicios estructurados por bloques: lectura y escritura (en cifras y en letra), descomposición polinómica con pasos intermedios y redondeo a distintos órdenes aplicando el mismo número base.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1: LECTURA Y ESCRITURA -->
+            <div class="step-block">
+                <div class="step-title">Bloque 1: Lectura y Escritura de Números Naturales</div>
+
+                <!-- Ejemplo 1 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 1:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en letra: } 405\ 812 =$$
+                            $$\text{Cuatrocientos cinco mil ochocientos doce.}$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se agrupan las cifras de tres en tres y se nombran los millares al superar el primer tramo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 2:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Siete millones cuarenta mil trescientos dos" =}$$
+                            $$7\ 040\ 302$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se asigna un cero en las centenas de millar para conservar el valor posicional correcto.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 3 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 3:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en letra (notación clásica): } 3.345_2 067.890_1 123.456 =$$
+                            $$\begin{aligned}
+                            &\text{Tres mil trescientos cuarenta y cinco billones} \\
+                            &\text{sesenta y siete mil ochocientos noventa millones} \\
+                            &\text{ciento veintitrés mil cuatrocientos cincuenta y seis.}
+                            \end{aligned}$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> El subíndice $_1$ marca los millones ($10^6$) y el subíndice $_2$ marca los billones ($10^{12}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 4 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 4:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Doce billones trescientos mil millones cinco" =}$$
+                            $$12\ 300\ 000\ 000\ 005$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se emplean espacios en blanco para separar los bloques de tres dígitos según la norma actual.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 5 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 5:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en letra: } 20\ 008\ 500 =$$
+                            $$\text{Veinte millones ocho mil quinientos.}$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se leen los millones, millares y unidades simples, omitiendo las posiciones en cero.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 6 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 6:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Cincuenta y cuatro mil noventa y uno" =}$$
+                            $$54\ 091$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La ausencia de centenas simples requiere colocar un $0$ en dicha posición.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 7 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 7:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Trece millones quinientos mil ochenta" =}$$
+                            $$13\ 500\ 080$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se completan con cero los órdenes vacíos en las decenas de millar, unidades de millar y centenas simples.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 8 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 8:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Ocho billones dos mil millones cuatrocientos mil" =}$$
+                            $$8\ 002\ 000\ 400\ 000$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se mantiene la estructura de 12 ceros a la derecha tras las unidades de billón.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 9 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 9:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Cien mil seiscientos tres" =}$$
+                            $$100\ 603$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se respeta la posición de las decenas escribiendo un $0$.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 10 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 10:</strong>
+                        <div class="math-steps">
+                            $$\text{Escribir en cifras: "Dos millones setenta mil cuatro" =}$$
+                            $$2\ 070\ 004$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Se ubican ceros en las centenas de millar, centenas simples y decenas simples.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: DESCOMPOSICIÓN POLINÓMICA CON PASOS INTERMEDIOS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 2: Descomposición Polinómica y Recomposición</div>
+
+                <!-- Ejemplo 11 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 11:</strong>
+                        <div class="math-steps">
+                            $$\text{Descomponer el número: } 54\ 823 =$$
+                            $$50\ 000 + 4\ 000 + 800 + 20 + 3 = 5 \cdot 10\ 000 + 4 \cdot 1\ 000 + 8 \cdot 100 + 2 \cdot 10 + 3 \cdot 1 =$$
+                            $$5 \cdot 10^4 + 4 \cdot 10^3 + 8 \cdot 10^2 + 2 \cdot 10^1 + 3 \cdot 10^0$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Desarrollo desde el valor aditivo posicional, pasando por el producto de la unidad seguida de ceros, hasta las potencias de base $10$.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 12 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 12:</strong>
+                        <div class="math-steps">
+                            $$\text{Descomponer el número con ceros: } 3\ 040\ 608 =$$
+                            $$3\ 000\ 000 + 40\ 000 + 600 + 8 = 3 \cdot 1\ 000\ 000 + 4 \cdot 10\ 000 + 6 \cdot 100 + 8 \cdot 1 =$$
+                            $$3 \cdot 10^6 + 4 \cdot 10^4 + 6 \cdot 10^2 + 8 \cdot 10^0$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Las posiciones con cifra $0$ se omiten en los pasos intermedios y en el resultado final.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 13 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 13:</strong>
+                        <div class="math-steps">
+                            $$\text{Recomponer el número: } 7 \cdot 10^5 + 2 \cdot 10^4 + 9 \cdot 10^2 + 4 \cdot 10^1 =$$
+                            $$7 \cdot 100\ 000 + 2 \cdot 10\ 000 + 9 \cdot 100 + 4 \cdot 10 = 700\ 000 + 20\ 000 + 900 + 40 =$$
+                            $$720\ 940$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Reconstrucción inversa resolviendo las potencias, luego los productos y finalmente sumando los valores posicionales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 14 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 14:</strong>
+                        <div class="math-steps">
+                            $$\text{Descomponer el número: } 806\ 300 =$$
+                            $$800\ 000 + 6\ 000 + 300 = 8 \cdot 100\ 000 + 6 \cdot 1\ 000 + 3 \cdot 100 =$$
+                            $$8 \cdot 10^5 + 6 \cdot 10^3 + 3 \cdot 10^2$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Identificación del exponente según la cantidad de ceros del factor multiplicativo intermedio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 15 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 15:</strong>
+                        <div class="math-steps">
+                            $$\text{Recomponer el número: } 6 \cdot 10^7 + 1 \cdot 10^5 + 5 \cdot 10^3 + 2 \cdot 10^0 =$$
+                            $$6 \cdot 10\ 000\ 000 + 1 \cdot 100\ 000 + 5 \cdot 1\ 000 + 2 \cdot 1 = 60\ 000\ 000 + 100\ 000 + 5\ 000 + 2 =$$
+                            $$60\ 105\ 002$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> Inserción de ceros en las potencias no representadas ($10^6$, $10^4$, $10^2$, $10^1$).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: REDONDEO DE UN MISMO NÚMERO A DISTINTOS ÓRDENES -->
+            <div class="step-block">
+                <div class="step-title">Bloque 3: Redondeo del número $4\ 583\ 926$ a distintos órdenes</div>
+
+                <!-- Ejemplo 16 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 16:</strong>
+                        <div class="math-steps">
+                            $$\text{Redondear a las decenas (D) el número } 4\ 583\ 926 =$$
+                            $$4\ 583\ 9\mathbf{2}\mathbf{6} \rightarrow 4\ 583\ 930$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La cifra de las unidades es $6 \ge 5$, por lo que se suma $1$ a la decena ($2+1=3$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 17 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 17:</strong>
+                        <div class="math-steps">
+                            $$\text{Redondear a las centenas (C) el número } 4\ 583\ 926 =$$
+                            $$4\ 583\ \mathbf{9}26 \rightarrow 4\ 583\ 900$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La cifra siguiente (decenas) es $2 < 5$, por lo que la cifra de las centenas ($9$) no cambia.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 18 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 18:</strong>
+                        <div class="math-steps">
+                            $$\text{Redondear a las unidades de millar (UM) el número } 4\ 583\ 926 =$$
+                            $$4\ 58\mathbf{3}\ 926 \rightarrow 4\ 584\ 000$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La cifra siguiente (centenas) es $9 \ge 5$, por lo que se suma $1$ a las unidades de millar ($3+1=4$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 19 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 19:</strong>
+                        <div class="math-steps">
+                            $$\text{Redondear a las decenas de millar (DM) el número } 4\ 583\ 926 =$$
+                            $$4\ 5\mathbf{8}3\ 926 \rightarrow 4\ 580\ 000$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La cifra siguiente (unidades de millar) es $3 < 5$, manteniendo intacta la cifra de las decenas de millar ($8$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 20 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 20:</strong>
+                        <div class="math-steps">
+                            $$\text{Redondear a las centenas de millar (CM) el número } 4\ 583\ 926 =$$
+                            $$4\ \mathbf{5}83\ 926 \rightarrow 4\ 600\ 000$$
+                        </div>
+                        <ul>
+                            <li><strong>Regla aplicada:</strong> La cifra siguiente (decenas de millar) es $8 \ge 5$, por lo que se suma $1$ a la centena de millar ($5+1=6$).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Ejercicios de Lectura, Descomposición Polinómica y Redondeo con Niveles de Dificultad</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Ejercicios: Lectura, Escritura, Descomposición Polinómica y Redondeo de Números Naturales</h1>
+    
+    <div class="exercise-list">
+        
+        <!-- BLOQUE 1: LECTURA Y ESCRITURA DE NÚMEROS (Ejercicios 1 a 10) -->
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Escribe en letra el número $14\ 208$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p>Catorce mil doscientos ocho.</p>
+            </div>               
+        </div>
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Escribe en cifras el número: "Trescientos ocho mil quince".</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p>$$308\ 015$$</p>
+            </div>               
+        </div>
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Escribe en letra el número $702\ 540$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p>Setecientos dos mil quinientos cuarenta.</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Escribe en cifras el número: "Un millón cuatrocientos seis mil noventa".</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p>$$1\ 406\ 090$$</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Escribe en letra el número $5\ 030\ 800$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p>Cinco millones treinta mil ochocientos.</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Escribe en cifras el número: "Cincuenta y dos millones cuatrocientos mil tres".</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p>$$52\ 400\ 003$$</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Escribe en letra el número $18\ 005\ 012$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p>Dieciocho millones cinco mil doce.</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Escribe en cifras el número: "Cuatrocientos siete millones ochenta mil cien".</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p>$$407\ 080\ 100$$</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Escribe en letra el número con notación subíndice $2.105_2 040.000_1 008.300$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p>Dos mil ciento cinco billones cuarenta mil millones ocho mil trescientos.</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Escribe en cifras: "Quince billones setenta mil millones trescientos cuatro".</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p>$$15\ 070\ 000\ 000\ 304$$</p>
+            </div>               
+        </div>
+
+        <!-- BLOQUE 2: DESCOMPOSICIÓN Y RECOMPOSICIÓN POLINÓMICA (Ejercicios 11 a 20) -->
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Realiza la descomposición polinómica con pasos intermedios del número $38\ 425$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p>$$38\ 425 = 30\ 000 + 8\ 000 + 400 + 20 + 5 =$$</p>
+                <p>$$= 3 \cdot 10\ 000 + 8 \cdot 1\ 000 + 4 \cdot 100 + 2 \cdot 10 + 5 \cdot 1 =$$</p>
+                <p>$$= 3 \cdot 10^4 + 8 \cdot 10^3 + 4 \cdot 10^2 + 2 \cdot 10^1 + 5 \cdot 10^0$$</p>
+            </div>               
+        </div>
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Escribe la recomposición paso a paso para obtener el número a partir de: $6 \cdot 10^4 + 3 \cdot 10^3 + 2 \cdot 10^2 + 5 \cdot 10^0$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p>$$6 \cdot 10^4 + 3 \cdot 10^3 + 2 \cdot 10^2 + 5 \cdot 10^0 =$$</p>
+                <p>$$= 6 \cdot 10\ 000 + 3 \cdot 1\ 000 + 2 \cdot 100 + 5 \cdot 1 =$$</p>
+                <p>$$= 60\ 000 + 3\ 000 + 200 + 5 = 63\ 205$$</p>
+            </div>               
+        </div>
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Realiza la descomposición polinómica paso a paso del número $507\ 309$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <p>$$507\ 309 = 500\ 000 + 7\ 000 + 300 + 9 =$$</p>
+                <p>$$= 5 \cdot 100\ 000 + 7 \cdot 1\ 000 + 3 \cdot 100 + 9 \cdot 1 =$$</p>
+                <p>$$= 5 \cdot 10^5 + 7 \cdot 10^3 + 3 \cdot 10^2 + 9 \cdot 10^0$$</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Obtén el número reconstruyendo paso a paso la expresión: $9 \cdot 10^6 + 2 \cdot 10^5 + 8 \cdot 10^2 + 3 \cdot 10^1$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <p>$$9 \cdot 10^6 + 2 \cdot 10^5 + 8 \cdot 10^2 + 3 \cdot 10^1 =$$</p>
+                <p>$$= 9 \cdot 1\ 000\ 000 + 2 \cdot 100\ 000 + 8 \cdot 100 + 3 \cdot 10 =$$</p>
+                <p>$$= 9\ 000\ 000 + 200\ 000 + 800 + 30 = 9\ 200\ 830$$</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Descompón polinómicamente mostrando los pasos intermedios el número $4\ 020\ 650$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <p>$$4\ 020\ 650 = 4\ 000\ 000 + 20\ 000 + 600 + 50 =$$</p>
+                <p>$$= 4 \cdot 1\ 000\ 000 + 2 \cdot 10\ 000 + 6 \cdot 100 + 5 \cdot 10 =$$</p>
+                <p>$$= 4 \cdot 10^6 + 2 \cdot 10^4 + 6 \cdot 10^2 + 5 \cdot 10^1$$</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Calcula la recomposición del número: $1 \cdot 10^7 + 5 \cdot 10^4 + 3 \cdot 10^3 + 8 \cdot 10^0$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <p>$$1 \cdot 10^7 + 5 \cdot 10^4 + 3 \cdot 10^3 + 8 \cdot 10^0 =$$</p>
+                <p>$$= 1 \cdot 10\ 000\ 000 + 5 \cdot 10\ 000 + 3 \cdot 1\ 000 + 8 \cdot 1 =$$</p>
+                <p>$$= 10\ 000\ 000 + 50\ 000 + 3\ 000 + 8 = 10\ 053\ 008$$</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Escribe la descomposición polinómica completa de $82\ 004\ 010$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <p>$$82\ 004\ 010 = 80\ 000\ 000 + 2\ 000\ 000 + 4\ 000 + 10 =$$</p>
+                <p>$$= 8 \cdot 10\ 000\ 000 + 2 \cdot 1\ 000\ 000 + 4 \cdot 1\ 000 + 1 \cdot 10 =$$</p>
+                <p>$$= 8 \cdot 10^7 + 2 \cdot 10^6 + 4 \cdot 10^3 + 1 \cdot 10^1$$</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Escribe en forma de número estándar la siguiente expresión: $7 \cdot 10^8 + 3 \cdot 10^6 + 9 \cdot 10^4 + 4 \cdot 10^2$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <p>$$7 \cdot 10^8 + 3 \cdot 10^6 + 9 \cdot 10^4 + 4 \cdot 10^2 =$$</p>
+                <p>$$= 7 \cdot 100\ 000\ 000 + 3 \cdot 1\ 000\ 000 + 9 \cdot 10\ 000 + 4 \cdot 100 =$$</p>
+                <p>$$= 700\ 000\ 000 + 3\ 000\ 000 + 90\ 000 + 400 = 703\ 090\ 400$$</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Descompón en potencias de 10 con todos los pasos el número $600\ 405\ 003$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <p>$$600\ 405\ 003 = 600\ 000\ 000 + 400\ 000 + 5\ 000 + 3 =$$</p>
+                <p>$$= 6 \cdot 100\ 000\ 000 + 4 \cdot 100\ 000 + 5 \cdot 1\ 000 + 3 \cdot 1 =$$</p>
+                <p>$$= 6 \cdot 10^8 + 4 \cdot 10^5 + 5 \cdot 10^3 + 3 \cdot 10^0$$</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Calcula la cifra final reordenando e integrando la descomposición: $2 \cdot 10^9 + 5 \cdot 10^7 + 1 \cdot 10^5 + 6 \cdot 10^1 + 9 \cdot 10^0$.</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <p>$$2 \cdot 10^9 + 5 \cdot 10^7 + 1 \cdot 10^5 + 6 \cdot 10^1 + 9 \cdot 10^0 =$$</p>
+                <p>$$= 2 \cdot 1\ 000\ 000\ 000 + 5 \cdot 10\ 000\ 000 + 1 \cdot 100\ 000 + 6 \cdot 10 + 9 \cdot 1 =$$</p>
+                <p>$$= 2\ 000\ 000\ 000 + 50\ 000\ 000 + 100\ 000 + 60 + 9 = 2\ 050\ 100\ 069$$</p>
+            </div>               
+        </div>
+
+        <!-- BLOQUE 3: REDONDEO MÚLTIPLE DE NÚMEROS (Ejercicios 21 a 30) -->
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Dado el número $68\ 347$, redondéalo a: a) Decenas (D), b) Centenas (C), c) Unidades de millar (UM).</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <p>a) Decenas (D): $68\ 350$ (la cifra de las unidades es $7 \ge 5$).</p>
+                <p>b) Centenas (C): $68\ 300$ (la cifra de las decenas es $4 < 5$).</p>
+                <p>c) Unidades de millar (UM): $68\ 000$ (la cifra de las centenas es $3 < 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Dado el número $14\ 216$, redondéalo a: a) Decenas (D), b) Centenas (C), c) Unidades de millar (UM).</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <p>a) Decenas (D): $14\ 220$ (la cifra de las unidades es $6 \ge 5$).</p>
+                <p>b) Centenas (C): $14\ 200$ (la cifra de las decenas es $1 < 5$).</p>
+                <p>c) Unidades de millar (UM): $14\ 000$ (la cifra de las centenas es $2 < 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Fácil (versolucion.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Dado el número $1\ 572\ 834$, redondéalo a: a) Decenas (D), b) Centenas (C), c) Centenas de millar (CM).</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <p>a) Decenas (D): $1\ 572\ 830$ (la cifra de las unidades es $4 < 5$).</p>
+                <p>b) Centenas (C): $1\ 572\ 800$ (la cifra de las decenas es $3 < 5$).</p>
+                <p>c) Centenas de millar (CM): $1\ 600\ 000$ (la cifra de las DM es $7 \ge 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Dado el número $249\ 582$, redondéalo a: a) Centenas (C), b) Unidades de millar (UM), c) Decenas de millar (DM).</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+                <p><strong>Solución Ejercicio 24:</strong></p>
+                <p>a) Centenas (C): $249\ 600$ (la cifra de las decenas es $8 \ge 5$).</p>
+                <p>b) Unidades de millar (UM): $250\ 000$ (la cifra de las centenas es $5 \ge 5$).</p>
+                <p>c) Decenas de millar (DM): $250\ 000$ (la cifra de las UM es $9 \ge 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Dado el número $34\ 095\ 280$, redondéalo a: a) Decenas de millar (DM), b) Centenas de millar (CM), c) Decenas de millón (D.Mll).</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+                <p><strong>Solución Ejercicio 25:</strong></p>
+                <p>a) Decenas de millar (DM): $34\ 100\ 000$ (la cifra de las UM es $5 \ge 5$).</p>
+                <p>b) Centenas de millar (CM): $34\ 100\ 000$ (la cifra de las DM es $9 \ge 5$).</p>
+                <p>c) Decenas de millón (D.Mll): $30\ 000\ 000$ (la cifra de las U.Mll es $4 < 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Intermedio (versolucion2.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Dado el número $709\ 849\ 602$, redondéalo a: a) Centenas (C), b) Unidades de millar (UM), c) Centenas de millar (CM).</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+                <p><strong>Solución Ejercicio 26:</strong></p>
+                <p>a) Centenas (C): $709\ 849\ 600$ (la cifra de las decenas es $0 < 5$).</p>
+                <p>b) Unidades de millar (UM): $709\ 850\ 000$ (la cifra de las centenas es $6 \ge 5$).</p>
+                <p>c) Centenas de millar (CM): $709\ 800\ 000$ (la cifra de las DM es $4 < 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Dado el número $15\ 499\ 910$, redondéalo a: a) Decenas (D), b) Unidades de millar (UM), c) Decenas de millar (DM).</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+                <p><strong>Solución Ejercicio 27:</strong></p>
+                <p>a) Decenas (D): $15\ 499\ 910$ (la cifra de las unidades es $0$).</p>
+                <p>b) Unidades de millar (UM): $15\ 500\ 000$ (la cifra de las centenas es $9 \ge 5$, acarrea cambio en cadena).</p>
+                <p>c) Decenas de millar (DM): $15\ 500\ 000$ (la cifra de las UM es $9 \ge 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Dado el número $8\ 996\ 415$, redondéalo a: a) Unidades de millar (UM), b) Decenas de millar (DM), c) Unidades de millón (U.Mll).</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+                <p><strong>Solución Ejercicio 28:</strong></p>
+                <p>a) Unidades de millar (UM): $8\ 996\ 000$ (la cifra de las centenas es $4 < 5$).</p>
+                <p>b) Decenas de millar (DM): $9\ 000\ 000$ (la cifra de las UM es $6 \ge 5$, acarrea cambio en cadena).</p>
+                <p>c) Unidades de millón (U.Mll): $9\ 000\ 000$ (la cifra de las CM es $9 \ge 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Dado el número $99\ 995\ 400$, redondéalo a: a) Unidades de millar (UM), b) Centenas de millar (CM), c) Decenas de millón (D.Mll).</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+                <p><strong>Solución Ejercicio 29:</strong></p>
+                <p>a) Unidades de millar (UM): $99\ 995\ 000$ (la cifra de las centenas es $4 < 5$).</p>
+                <p>b) Centenas de millar (CM): $100\ 000\ 000$ (la cifra de las DM es $9 \ge 5$, acarrea cambios continuos).</p>
+                <p>c) Decenas de millón (D.Mll): $100\ 000\ 000$ (la cifra de las U.Mll es $9 \ge 5$).</p>
+            </div>               
+        </div>
+
+        <!-- Difícil (versolucion3.png) -->
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Dado el número $463\ 821\ 509$, redondéalo a: a) Decenas (D), b) Unidades de millar (UM), c) Centenas de millón (C.Mll).</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+                <p><strong>Solución Ejercicio 30:</strong></p>
+                <p>a) Decenas (D): $463\ 821\ 510$ (la cifra de las unidades es $9 \ge 5$).</p>
+                <p>b) Unidades de millar (UM): $463\ 822\ 000$ (la cifra de las centenas es $5 \ge 5$).</p>
+                <p>c) Centenas de millón (C.Mll): $500\ 000\ 000$ (la cifra de las D.Mll es $6 \ge 5$).</p>
+            </div>               
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+</body>
+</html>

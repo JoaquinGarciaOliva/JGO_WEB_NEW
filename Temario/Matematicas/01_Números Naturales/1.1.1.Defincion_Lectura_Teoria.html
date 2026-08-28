@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Los Números Naturales</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+            tex: {
+                packages: {'[+]': ['ams']}, 
+                inlineMath: [['$', '$'], ['\\(', '\\)']],                
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            chtml: {
+                displayAlign: "left"
+            },
+            startup: {
+                ready: () => {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td, .factor-table th {
+            padding: 8px 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Estilos adicionales para advertencias */
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        /* Caja de desarrollo en línea continuo */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        /* Estilos específicos para la tabla posicional */
+        .pos-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #ffffff;
+        }
+
+        .pos-table th {
+            background-color: #2635b7;
+            color: white;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+        }
+
+        .pos-table td {
+            border: 1px solid #cbd5e0;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Los Números Naturales ($\mathbb{N}$)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Conceptos Fundamentales de los Números Naturales</h2>
+            <p>En esta sección estudiaremos la estructura de los números naturales, cómo se leen y escriben, el valor posicional de sus cifras, su descomposición polinómica y las técnicas de redondeo.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: CONJUNTO N -->
+            <div class="step-block">
+                <div class="step-title">1. ¿Qué son los Números Naturales ($\mathbb{N}$)?</div>
+                <div class="regla-box">
+                    El conjunto de los <strong>números naturales</strong> se representa con la letra $\mathbb{N}$ y está formado por los números de toda la vida, los que utilizamos para contar elementos:
+                    $$\mathbb{N} = \{0, 1, 2, 3, 4, 5, 6, 7, \dots\}$$
+                </div>
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>Tienen un primer elemento (el $0$).</li>
+                    <li>Son infinitos: no existe un último número natural, pues a cualquier número siempre le podemos sumar $1$.</li>
+                    <li>Son números enteros y positivos (sin parte decimal).</li>
+                </ul>
+            </div>
+
+           <!-- SECCIÓN 2: ESCRITURA Y LECTURA (NOTACIÓN ANTIGUA VS ACTUAL) -->
+<div class="step-block">
+    <div class="step-title">2. Escritura y Lectura de Números Grandes</div>
+    
+    <p><strong>Fase 1: Notación Antigua (Puntos y Subíndices)</strong></p>
+    <p>Tradicionalmente, para facilitar la lectura de números grandes se utilizaban separadores visuales explícitos:</p>
+    <ul>
+        <li>Un <strong>punto ($.$)</strong> para señalar las millares (miles).</li>
+        <li>Subíndices numéricos para marcar los períodos superiores: $_1$ para los millones, $_2$ para los billones, $_3$ para los trillones, etc.</li>
+    </ul>
+    
+    <div class="continuo-box">
+        Ejemplo antiguo: $3.345_2067.890_1123.456$
+    </div>
+    <p style="font-size: 0.95rem; color: #4a5568; margin-top: 8px; line-height: 1.5;">
+        <i>Lectura completa:</i> Tres mil trescientos cuarenta y cinco billones sesenta y siete mil ochocientos noventa millones ciento veintitrés mil cuatrocientos cincuenta y seis.
+    </p>
+
+    <br>
+
+    <p><strong>Fase 2: Notación Actual (Norma Internacional ISO / RAE)</strong></p>
+    <div class="warning-box">
+        <strong>Cambio de normativa:</strong> En la actualidad, el punto para los miles y los subíndices se han eliminado. Aunque esto hace que la lectura inicial parezca más compleja sin esas "marcas de guía", en realidad no son necesarios y su eliminación evita confusiones con el punto de multiplicación ($a \cdot b$) o la coma decimal.
+    </div>
+    <p>Hoy en día, para facilitar la lectura simplemente se dejan <strong>pequeños espacios en blanco</strong> agrupando las cifras de tres en tres:</p>
+
+    <div class="continuo-box" style="border-left-color: #38a169;">
+        Ejemplo actual: $3\ 345\ 067\ 890\ 123\ 456$
+    </div>
+</div>
+
+            <!-- SECCIÓN 3: UNIDADES, DECENAS, CENTENAS... -->
+            <div class="step-block">
+                <div class="step-title">3. Valor Posicional y Nombre de los Órdenes de Unidad</div>
+                <p>El sistema de numeración es <strong>decimal y posicional</strong>: el valor de cada cifra depende del lugar que ocupa en el número. Cada $10$ unidades de un orden forman $1$ unidad del orden inmediatamente superior.</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="pos-table">
+                        <thead>
+                            <tr>
+                                <th>Unidad de Billón (UB)</th>
+                                <th>Centena de Millón (CMi)</th>
+                                <th>Decena de Millón (DMi)</th>
+                                <th>Unidad de Millón (UMi)</th>
+                                <th>Centena de Millar (CM)</th>
+                                <th>Decena de Millar (DM)</th>
+                                <th>Unidad de Millar (UM)</th>
+                                <th>Centena (C)</th>
+                                <th>Decena (D)</th>
+                                <th>Unidad (U)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$10^{12}$</td>
+                                <td>$10^8$</td>
+                                <td>$10^7$</td>
+                                <td>$10^6$</td>
+                                <td>$10^5$</td>
+                                <td>$10^4$</td>
+                                <td>$10^3$</td>
+                                <td>$10^2$</td>
+                                <td>$10^1$</td>
+                                <td>$10^0$</td>
+                            </tr>
+                            <tr>
+                                <td>1.000.000.000.000</td>
+                                <td>100.000.000</td>
+                                <td>10.000.000</td>
+                                <td>1.000.000</td>
+                                <td>100.000</td>
+                                <td>10.000</td>
+                                <td>1.000</td>
+                                <td>100</td>
+                                <td>10</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: DESCOMPOSICIÓN POLINÓMICA -->
+            <div class="step-block">
+                <div class="step-title">4. Descomposición Polinómica y Potencias de Base 10</div>
+                <p>Un número se puede descomponer sumando el valor de cada una de sus cifras según su posición. Los ceros intercalados no aportan valor a la suma, por lo que se pueden omitir en el desarrollo.</p>
+
+                <p><strong>Ejemplo principal:</strong> Descomponer el número $3\ 345\ 067$</p>
+                
+                <div class="regla-box">
+                    <strong>1. Descomposición aditiva (por valor posicional):</strong><br>
+                    $$3\ 345\ 067 = 3\ 000\ 000 + 300\ 000 + 40\ 000 + 5\ 000 + 60 + 7$$
+                    <p style="font-size: 0.9rem; margin-top: 5px; color: #4a5568;">
+                        *(Observa cómo la centena $0\cdot 100$ se omite en la suma)*.
+                    </p>
+                </div>
+
+                <p><strong>Uso de Potencias de Base 10:</strong></p>
+                <p>Cualquier unidad seguida de ceros se representa de forma compacta multiplicando por una potencia de $10$, donde el exponente equivale al número de ceros:</p>
+                <div class="continuo-box">
+                    $$300\ 000 = 3 \cdot 100\ 000 = 3 \cdot 10^5$$
+                </div>
+
+                <p style="margin-top: 15px;"><strong>2. Descomposición polinómica completa:</strong></p>
+                <div class="continuo-box" style="border-left-color: #2635b7;">
+                    $$3\ 345\ 067 = 3 \cdot 10^6 + 3 \cdot 10^5 + 4 \cdot 10^4 + 5 \cdot 10^3 + 6 \cdot 10^1 + 7 \cdot 10^0$$
+                </div>
+
+                <br>
+
+                <p><strong>Ejemplos prácticos en ambos sentidos:</strong></p>
+
+                <p><strong>Caso A (Obtener la descomposición de un número con ceros):</strong></p>
+                <ul>
+                    <li>Número: $5\ 020\ 804$</li>
+                    <li>Descomposición aditiva: $5\ 000\ 000 + 20\ 000 + 800 + 4$</li>
+                    <li>Descomposición polinómica: $5 \cdot 10^6 + 2 \cdot 10^4 + 8 \cdot 10^2 + 4 \cdot 10^0$</li>
+                </ul>
+
+                <p><strong>Caso B (Obtener el número a partir de la descomposición):</strong></p>
+                <ul>
+                    <li>Expresión: $7 \cdot 10^5 + 4 \cdot 10^3 + 9 \cdot 10^1$</li>
+                    <li>Atención a los órdenes faltantes (se completan con $0$): falta la $10^4$ (DM), la $10^2$ (C) y la $10^0$ (U).</li>
+                    <li>Número obtenido: $704\ 090$</li>
+                </ul>
+            </div>
+
+            <!-- SECCIÓN 5: REDONDEO -->
+            <div class="step-block">
+                <div class="step-title">5. Redondeo de Números Naturales</div>
+                <div class="regla-box">
+                    <strong>Regla del Redondeo:</strong>
+                    <ol style="margin-top: 10px; margin-bottom: 0; padding-left: 20px;">
+                        <li>Identificamos la cifra de la posición a la que queremos redondear (decenas, centenas, millares, etc.).</li>
+                        <li>Nos fijamos en la cifra inmediatamente posterior (a su derecha):
+                            <ul>
+                               <li>Si es <strong>menor que 5</strong> ($0, 1, 2, 3, 4$), la cifra a redondear <strong>se queda igual</strong>.</li>
+                               <li>Si es <strong>igual o mayor que 5</strong> ($5, 6, 7, 8, 9$), la cifra a redondear <strong>se aumenta en 1</strong>.</li>
+                            </ul>
+                        </li>
+                        <li>Cambiamos todas las cifras a la derecha del orden redondeado por <strong>ceros</strong>.</li>
+                    </ol>
+                </div>
+
+                <p><strong>Ejemplo práctico: Redondear el número $47\ 368$ a distintos órdenes</strong></p>
+
+                <div class="division-table-container" style="background: #f0f7f9; overflow-x: auto;">
+                    <table class="factor-table factor-table-small" style="width: 100%;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #cbd5e0;">
+                                <th>Orden deseado</th>
+                                <th>Cifra clave y siguiente</th>
+                                <th>Resultado</th>
+                                <th>Explicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A las <strong>Decenas</strong> (D)</td>
+                                <td>$47\ 3\mathbf{6}\underline{8}$</td>
+                                <td style="color: #2635b7;">$47\ 370$</td>
+                                <td class="explicacion-lateral">La siguiente cifra es $8 \ge 5$, sumamos $1$ a la decena ($6+1=7$).</td>
+                            </tr>
+                            <tr>
+                                <td>A las <strong>Centenas</strong> (C)</td>
+                                <td>$47\ \mathbf{3}\underline{6}8$</td>
+                                <td style="color: #2635b7;">$47\ 400$</td>
+                                <td class="explicacion-lateral">La siguiente cifra es $6 \ge 5$, sumamos $1$ a la centena ($3+1=4$).</td>
+                            </tr>
+                            <tr>
+                                <td>A las <strong>Unidades de Millar</strong> (UM)</td>
+                                <td>$4\mathbf{7}\ \underline{3}68$</td>
+                                <td style="color: #2635b7;">$47\ 000$</td>
+                                <td class="explicacion-lateral">La siguiente cifra es $3 < 5$, el $7$ se queda igual.</td>
+                            </tr>
+                            <tr>
+                                <td>A las <strong>Decenas de Millar</strong> (DM)</td>
+                                <td>$\mathbf{4}\underline{7}\ 368$</td>
+                                <td style="color: #e53e3e;">$50\ 000$</td>
+                                <td class="explicacion-lateral">La siguiente cifra es $7 \ge 5$, sumamos $1$ a la decena de millar ($4+1=5$).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
