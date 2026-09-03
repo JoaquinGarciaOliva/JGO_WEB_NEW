@@ -344,7 +344,421 @@
     <img  class="manImg" src="Imagenes/1ESO/libro1.png">
     <span style="display: none;">2.</span>
     <span class="Arbol_Nombre_2">2. Divisibilidad</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id=""
+       nivel="2"
+       imagen="Imagenes/"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'')">
+
+    <img  class="manImg" src="Imagenes/">
+    <span style="display: none;"></span>
+    <span class="Arbol_Nombre_">Divisibilidad y Factorización.</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.1.1."
+       nivel="3"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.1.0.Multiplos_Divisores_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.1.0.Multiplos_Divisores_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.1.0.Multiplos_Divisores_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.1.0.Multiplos_Divisores_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.1.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.1.</span>
+    <span class="Arbol_Nombre_3">Múltiplos y Divisores de un Número.</span>
   </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.1.2."
+       nivel="3"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.2.0.Primos_Compuestos_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.2.0.Primos_Compuestos_teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.2.0.Primos_Compuestos_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.2.0.Primos_Compuestos_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.2.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.2.</span>
+    <span class="Arbol_Nombre_3">Primo y compuesto.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.1.3."
+       nivel="3"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.3.0.Criba_De_Eratostenes_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.3.0.Criba_De_Eratostenes_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.3.0.Criba_De_Eratostenes_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.3.0.Criba_De_Eratostenes_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.3.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.3.</span>
+    <span class="Arbol_Nombre_3">Criba de Eratóstenes.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.1.4."
+       nivel="3"
+       imagen="Imagenes/arbol/apartado4.png"
+       imagen2="Imagenes/arbol/apartado4_open.png"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.4.')">
+
+    <img  class="manImg" src="Imagenes/arbol/apartado4.png">
+    <span style="display: none;">2.1.4.</span>
+    <span class="Arbol_Nombre_3">Criterios de divisibilidad.</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.1.4.1."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.4.1.Criterios_235_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.4.1.Criterios_235_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.4.1.Criterios_235_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.4.1.Criterios_235_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.4.1.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.4.1.</span>
+    <span class="Arbol_Nombre_4">Criterios divisibilidad del 2, 3, 5.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.1.4.2."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.4.2.Criterios_4911_teoria_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.4.2.Criterios_4911_teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.4.2.Criterios_4911_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.4.2.Criterios_4911_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.4.2.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.4.2.</span>
+    <span class="Arbol_Nombre_4">Otros Criterios divisibilidad del  11, 4, 9.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.1.4.3."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.4.3.Criterios_61015_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.4.3.Criterios_61015_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.4.3.Criterios_61015_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.4.3.Criterios_61015_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.4.3.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.4.3.</span>
+    <span class="Arbol_Nombre_4">Criterios divisilidad compuestos: 6, 10, 15.</span>
+  </div></li></ul>
+ <li>
+  <div class="tree-node"
+       id="2.1.5."
+       nivel="3"
+       imagen="Imagenes/arbol/apartado5.png"
+       imagen2="Imagenes/arbol/apartado5_open.png"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.5.')">
+
+    <img  class="manImg" src="Imagenes/arbol/apartado5.png">
+    <span style="display: none;">2.1.5.</span>
+    <span class="Arbol_Nombre_3">Descomponer un número en factores Primos.</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.1.5.1."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.5.1.Factorizar_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.5.1.Factorizar_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.5.1.Factorizar_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.5.1.Factorizar_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.5.1.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.5.1.</span>
+    <span class="Arbol_Nombre_4">Método General.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.1.5.2."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.2.5.2.Factorizar_Tablas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.2.5.2.Factorizar_Tablas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.2.5.2.Factorizar_Tablas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.2.5.2.Factorizar_Tablas_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.1.5.2.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.1.5.2.</span>
+    <span class="Arbol_Nombre_4">Método de factorizar con las tablas de multiplicar.</span>
+  </div></li></ul></li></ul>
+ <li>
+  <div class="tree-node"
+       id="2.2."
+       nivel="2"
+       imagen="Imagenes/JGO_Mat/capitulo4.png"
+       imagen2="Imagenes/arbol/capitulo3_open.png"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/capitulo4.png">
+    <span style="display: none;">2.2.</span>
+    <span class="Arbol_Nombre_2">Mímimo Común Múltiplo y Máximo Común Divisor.</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.2.1."
+       nivel="3"
+       imagen="Imagenes/arbol/apartado1.png"
+       imagen2="Imagenes/arbol/apartado1_open.png"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.1.')">
+
+    <img  class="manImg" src="Imagenes/arbol/apartado1.png">
+    <span style="display: none;">2.2.1.</span>
+    <span class="Arbol_Nombre_3">Mínimo Común Múltiplo.</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.2.1.1."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.3.1.1.MCM_definicion_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.3.1.1.MCM_definicion_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.3.1.1.MCM_definicion_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.3.1.1.MCM_definicion_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.1.1.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.2.1.1.</span>
+    <span class="Arbol_Nombre_4">Definición.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.2.1.2."
+       nivel="4"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.3.1.2.MCM_Calculo_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.3.1.2.MCM_Calculo_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.3.1.2.MCM_Calculo_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.3.1.2.MCM_Calculo_Ejercicios.html"
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.1.2.')">
+
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <span style="display: none;">2.2.1.2.</span>
+    <span class="Arbol_Nombre_4">Cálculo.</span>
+  </div></li></ul>
+ <li>
+  <div class="tree-node"
+       id="2.2.2."
+       nivel="3"
+       imagen="Imagenes/arbol/apartado2.png"
+       imagen2="Imagenes/arbol/apartado2_open.png"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.2.')">
+
+    <img  class="manImg" src="Imagenes/arbol/apartado2.png">
+    <span style="display: none;">2.2.2.</span>
+    <span class="Arbol_Nombre_3">Máximo Común Divisor.</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.2.2.1."
+       nivel="4"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.2.1.')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">2.2.2.1.</span>
+    <span class="Arbol_Nombre_4">Definición.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.2.2.2."
+       nivel="4"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.2.2.')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">2.2.2.2.</span>
+    <span class="Arbol_Nombre_4">Cálculo.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.2.2.3."
+       nivel="4"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.2.2.3.')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">2.2.2.3.</span>
+    <span class="Arbol_Nombre_4">Método Euclides</span>
+  </div></li></ul></li></ul>
+ <li>
+  <div class="tree-node"
+       id="2.3."
+       nivel="2"
+       imagen="Imagenes/arbol/capitulo1.png"
+       imagen2="Imagenes/arbol/capitulo4_open.png"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.3.')">
+
+    <img  class="manImg" src="Imagenes/arbol/capitulo1.png">
+    <span style="display: none;">2.3.</span>
+    <span class="Arbol_Nombre_2">Problemas</span>
+  </div><ul  class="hidden">
+ <li>
+  <div class="tree-node"
+       id="2.3.1."
+       nivel="3"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.3.1.')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">2.3.1.</span>
+    <span class="Arbol_Nombre_3">Pasos a Seguir.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.3.2."
+       nivel="3"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.3.2.')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">2.3.2.</span>
+    <span class="Arbol_Nombre_3">Problemas del M.C.M.</span>
+  </div></li>
+ <li>
+  <div class="tree-node"
+       id="2.3.3."
+       nivel="3"
+       imagen="Imagenes/arbol/hoja.png"
+       imagen2="Imagenes/"
+       Tipo=""
+       Youtube=""
+       teoria=""
+       ejemplos=""
+       ejercicios=""
+       interactivo=""
+       onclick="toggleVisibility2(this,'2.3.3.')">
+
+    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <span style="display: none;">2.3.3.</span>
+    <span class="Arbol_Nombre_3">Problemas del M.C.D.</span>
+  </div></li></ul></li></ul>
  <li>
   <div class="folder"
        id="3."
