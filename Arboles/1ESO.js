@@ -313,8 +313,8 @@
   <div class="tree-node"
        id=""
        nivel="2"
-       imagen="Imagenes/"
-       imagen2="Imagenes/"
+       imagen="Imagenes/1ESO/capitulo2.png"
+       imagen2="Imagenes/1ESO/capitulo2_open.png"
        Tipo=""
        Youtube=""
        teoria=""
@@ -323,7 +323,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'')">
 
-    <img  class="manImg" src="Imagenes/">
+    <img  class="manImg" src="Imagenes/1ESO/capitulo2.png">
     <span style="display: none;"></span>
     <span class="Arbol_Nombre_">Divisibilidad y Factorización.</span>
   </div><ul  class="hidden">
