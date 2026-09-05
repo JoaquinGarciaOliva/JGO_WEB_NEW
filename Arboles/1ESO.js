@@ -25,56 +25,20 @@
   <div class="tree-node"
        id="1.1."
        nivel="2"
-       imagen="Imagenes/arbol/capitulo3.png"
-       imagen2="Imagenes/arbol/capitulo3_open.png"
-       Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'1.1.')">
-
-    <img  class="manImg" src="Imagenes/arbol/capitulo3.png">
-    <span style="display: none;">1.1.</span>
-    <span class="Arbol_Nombre_2">1. Definición</span>
-  </div><ul  class="hidden">
- <li>
-  <div class="tree-node"
-       id="1.1.1."
-       nivel="3"
        imagen="Imagenes/JGO_Mat/hoja_green.png"
-       imagen2="Imagenes/"
-       Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'1.1.1.')">
-
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
-    <span style="display: none;">1.1.1.</span>
-    <span class="Arbol_Nombre_2">1.1. N</span>
-  </div></li>
- <li>
-  <div class="tree-node"
-       id="1.1.2."
-       nivel="3"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
-       imagen2="Imagenes/"
+       imagen2="Imagenes/JGO_Mat/hoja_green.png"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.1.Defincion_Lectura_Video.mp4"
        teoria="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Ejercicios.html"
        interactivo=""
-       onclick="toggleVisibility2(this,'1.1.2.')">
+       onclick="toggleVisibility2(this,'1.1.')">
 
     <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
-    <span style="display: none;">1.1.2.</span>
-    <span class="Arbol_Nombre_2">1.2. Leer y Escribir números Naturales</span>
-  </div></li></ul>
+    <span style="display: none;">1.1.</span>
+    <span class="Arbol_Nombre_2">1.  N Definición</span>
+  </div></li>
  <li>
   <div class="tree-node"
        id="1.2."
