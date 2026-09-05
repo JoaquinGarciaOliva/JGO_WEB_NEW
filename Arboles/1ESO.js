@@ -25,8 +25,8 @@
   <div class="tree-node"
        id="1.1."
        nivel="2"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
-       imagen2="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja6.png"
+       imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.1.Defincion_Lectura_Video.mp4"
        teoria="Temario/Matematicas/01_Números Naturales/1.1.1.Defincion_Lectura_Teoria.html"
@@ -35,7 +35,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.1.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.1.</span>
     <span class="Arbol_Nombre_2">1.  N Definición</span>
   </div></li>
@@ -43,8 +43,8 @@
   <div class="tree-node"
        id="1.2."
        nivel="2"
-       imagen="Imagenes/arbol/apartado2.png"
-       imagen2="Imagenes/arbol/apartado2_open.png"
+       imagen="Imagenes/1ESO/capitulo2.png"
+       imagen2="Imagenes/1ESO/capitulo2_open.png"
        Tipo=""
        Youtube=""
        teoria=""
@@ -53,7 +53,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.2.')">
 
-    <img  class="manImg" src="Imagenes/arbol/apartado2.png">
+    <img  class="manImg" src="Imagenes/1ESO/capitulo2.png">
     <span style="display: none;">1.2.</span>
     <span class="Arbol_Nombre_2">2. Operaciones</span>
   </div><ul  class="hidden">
@@ -61,7 +61,7 @@
   <div class="tree-node"
        id="1.2.1."
        nivel="3"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.1.Naturales_Suma_Video.mp4"
@@ -71,7 +71,7 @@
        interactivo="Temario/Interactivos/1.1.2.1.Naturales_Suma/3_sumandos/suma3_aprender.html"
        onclick="toggleVisibility2(this,'1.2.1.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.2.1.</span>
     <span class="Arbol_Nombre_2">2.1. Suma</span>
   </div></li>
@@ -79,7 +79,7 @@
   <div class="tree-node"
        id="1.2.2."
        nivel="3"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja5.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.2.Naturales_Resta_Video.mp4"
@@ -89,7 +89,7 @@
        interactivo="Temario/Interactivos/1.1.2.2.Naturales_Resta/resta_aprender.html"
        onclick="toggleVisibility2(this,'1.2.2.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja5.png">
     <span style="display: none;">1.2.2.</span>
     <span class="Arbol_Nombre_2">2.2. Resta. Prueba de la Resta</span>
   </div></li>
@@ -97,8 +97,8 @@
   <div class="tree-node"
        id="1.2.3."
        nivel="3"
-       imagen="Imagenes/arbol/capitulo12.png"
-       imagen2="Imagenes/arbol/capitulo12_open.png"
+       imagen="Imagenes/1ESO/capitulo4.png"
+       imagen2="Imagenes/1ESO/capitulo4_open.png"
        Tipo=""
        Youtube=""
        teoria=""
@@ -107,7 +107,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.2.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/capitulo12.png">
+    <img  class="manImg" src="Imagenes/1ESO/capitulo4.png">
     <span style="display: none;">1.2.3.</span>
     <span class="Arbol_Nombre_2">2.3. Multiplicación</span>
   </div><ul  class="hidden">
@@ -115,7 +115,7 @@
   <div class="tree-node"
        id="1.2.3.1."
        nivel="4"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.1.Naturales_Multiplicar_Video.mp4"
@@ -125,7 +125,7 @@
        interactivo="Temario/Interactivos/1.1.2.3.1.Naturales_Multiplicar/Multiplicar_aprender.html"
        onclick="toggleVisibility2(this,'1.2.3.1.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.2.3.1.</span>
     <span class="Arbol_Nombre_2">2.3.1. Genérica.</span>
   </div></li>
@@ -133,7 +133,7 @@
   <div class="tree-node"
        id="1.2.3.2."
        nivel="4"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja5.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.2.Multiplicar_Linea_Video.mp4"
@@ -143,7 +143,7 @@
        interactivo="Temario/Interactivos/1.1.2.3.2.Naturales_Multiplicar_Linea/Multiplicar_Linea_aprender.html"
        onclick="toggleVisibility2(this,'1.2.3.2.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja5.png">
     <span style="display: none;">1.2.3.2.</span>
     <span class="Arbol_Nombre_2">2.3.2. En línea.</span>
   </div></li>
@@ -151,7 +151,7 @@
   <div class="tree-node"
        id="1.2.3.3."
        nivel="4"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.3.3.Multiplicar_Potencias10_Video.mp4"
@@ -161,7 +161,7 @@
        interactivo="Temario/Interactivos/1.1.2.3.3.Naturales_Multiplicar_10/Multiplicar_Potencias_10.html"
        onclick="toggleVisibility2(this,'1.2.3.3.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.2.3.3.</span>
     <span class="Arbol_Nombre_2">2.3.3. Por Potencias de 10.</span>
   </div></li></ul>
@@ -169,7 +169,7 @@
   <div class="tree-node"
        id="1.2.4."
        nivel="3"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja5.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.4.Naturales_Division_Video.mp4"
@@ -179,7 +179,7 @@
        interactivo="Temario/Interactivos/1.1.2.4.Naturales_Dividir/Dividir_Aprender_1.html"
        onclick="toggleVisibility2(this,'1.2.4.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja5.png">
     <span style="display: none;">1.2.4.</span>
     <span class="Arbol_Nombre_2">2.4. División. Prueba de la División.</span>
   </div></li></ul>
@@ -187,8 +187,8 @@
   <div class="tree-node"
        id="1.3."
        nivel="2"
-       imagen="Imagenes/arbol/capitulo9.png"
-       imagen2="Imagenes/arbol/capitulo9_open.png"
+       imagen="Imagenes/1ESO/capitulo1.png"
+       imagen2="Imagenes/1ESO/capitulo1_open.png"
        Tipo=""
        Youtube=""
        teoria=""
@@ -197,7 +197,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/capitulo9.png">
+    <img  class="manImg" src="Imagenes/1ESO/capitulo1.png">
     <span style="display: none;">1.3.</span>
     <span class="Arbol_Nombre_2">3. Potencias.</span>
   </div><ul  class="hidden">
@@ -205,7 +205,7 @@
   <div class="tree-node"
        id="1.3.1."
        nivel="3"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.5.1.Potencias_Definicion_Video.mp4"
@@ -215,7 +215,7 @@
        interactivo="Temario/Interactivos/1.1.2.5.1.Naturales_Potencias_Definicion/Naturales_Potencias_Definicion.html"
        onclick="toggleVisibility2(this,'1.3.1.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.3.1.</span>
     <span class="Arbol_Nombre_2">3.1. Definción.</span>
   </div></li>
@@ -223,7 +223,7 @@
   <div class="tree-node"
        id="1.3.2."
        nivel="3"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja5.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.2.5.2.Potencias_Propiedades_Video.mp4"
@@ -233,7 +233,7 @@
        interactivo="Temario/Interactivos/1.1.2.5.2.Naturales_Potencias_Propiedades/Naturales_Potencias_Propiedades.html"
        onclick="toggleVisibility2(this,'1.3.2.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja5.png">
     <span style="display: none;">1.3.2.</span>
     <span class="Arbol_Nombre_2">3.2. Propiedades. Misma Base. Distinta Base.</span>
   </div></li></ul>
@@ -241,7 +241,7 @@
   <div class="tree-node"
        id="1.4."
        nivel="2"
-       imagen="Imagenes/JGO_Mat/hoja_green.png"
+       imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.3.Operaciones_Combinadas_Video.mp4"
@@ -251,7 +251,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.4.')">
 
-    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.4.</span>
     <span class="Arbol_Nombre_2">4. Operaciones Combinadas.</span>
   </div></li>
@@ -259,7 +259,7 @@
   <div class="tree-node"
        id="1.5."
        nivel="2"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/1ESO/hoja5.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube=""
@@ -269,7 +269,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.5.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja5.png">
     <span style="display: none;">1.5.</span>
     <span class="Arbol_Nombre_2">5. Profundización y Cálculao Rápido.</span>
   </div></li>
@@ -277,7 +277,7 @@
   <div class="tree-node"
        id="1.6."
        nivel="2"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
        Youtube=""
@@ -287,7 +287,7 @@
        interactivo=""
        onclick="toggleVisibility2(this,'1.6.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/1ESO/hoja6.png">
     <span style="display: none;">1.6.</span>
     <span class="Arbol_Nombre_2">6. Problemas.</span>
   </div></li></ul>
