@@ -7,28 +7,31 @@
     <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
      
    
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+  <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
     <script>
     window.MathJax = {
-            tex: {
-                packages: {'[+]': ['ams']}, 
-                inlineMath: [['$', '$'], ['\\(', '\\)']],               
-                displayMath: [
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ]
-            },
-            chtml: {
-                displayAlign: "left"
-            },
-            startup: {
-                ready: () => {
-                    MathJax.startup.defaultReady();
-                }
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
             }
-        };
+        }
+    };
     </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
