@@ -271,7 +271,7 @@
 
     <img  class="manImg" src="Imagenes/1ESO/hoja5.png">
     <span style="display: none;">1.5.</span>
-    <span class="Arbol_Nombre_2">5. Profundización y Cálculao Rápido.</span>
+    <span class="Arbol_Nombre_2">5. Profundización y Cálculo Rápido.</span>
   </div></li>
  <li>
   <div class="tree-node"
@@ -280,10 +280,10 @@
        imagen="Imagenes/1ESO/hoja6.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.5.N_Problemas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.6.')">
 
@@ -833,42 +833,6 @@
   </div></li>
  <li>
   <div class="folder"
-       id="9."
-       nivel="1"
-       imagen="Imagenes/1ESO/libro5.png"
-       imagen2="Imagenes/1ESO/libro5_open.png"
-       Tipo=""
-       Youtube=""
-       teoria="Temario/Indices/1.09 Algebra.html"
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'9.')">
-
-    <img  class="manImg" src="Imagenes/1ESO/libro5.png">
-    <span style="display: none;">9.</span>
-    <span class="Arbol_Nombre_1">9. Álgebra</span>
-  </div></li>
- <li>
-  <div class="folder"
-       id="10."
-       nivel="1"
-       imagen="Imagenes/1ESO/libro6.png"
-       imagen2="Imagenes/1ESO/libro6_open.png"
-       Tipo=""
-       Youtube=""
-       teoria="Temario/Indices/1.10 Ecuaciones.html"
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'10.')">
-
-    <img  class="manImg" src="Imagenes/1ESO/libro6.png">
-    <span style="display: none;">10.</span>
-    <span class="Arbol_Nombre_1">10. Ecuaciones primer grado</span>
-  </div></li>
- <li>
-  <div class="folder"
        id="11."
        nivel="1"
        imagen="Imagenes/1ESO/libro3.png"
@@ -920,42 +884,6 @@
     <img  class="manImg" src="Imagenes/1ESO/libro3.png">
     <span style="display: none;">13.</span>
     <span class="Arbol_Nombre_1_verde">13. Perimetros, Áreas y Volumen.</span>
-  </div></li>
- <li>
-  <div class="folder"
-       id="14."
-       nivel="1"
-       imagen="Imagenes/1ESO/libro9.png"
-       imagen2="Imagenes/1ESO/libro9_open.png"
-       Tipo=""
-       Youtube=""
-       teoria="Temario/Indices/1.14 Estadistica.html"
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'14.')">
-
-    <img  class="manImg" src="Imagenes/1ESO/libro9.png">
-    <span style="display: none;">14.</span>
-    <span class="Arbol_Nombre_1_naranja">14. Estadística</span>
-  </div></li>
- <li>
-  <div class="folder"
-       id="15."
-       nivel="1"
-       imagen="Imagenes/1ESO/libro1.png"
-       imagen2="Imagenes/1ESO/libro1_open.png"
-       Tipo=""
-       Youtube=""
-       teoria="Temario/Indices/1.15 Graficas de Funciones.html"
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'15.')">
-
-    <img  class="manImg" src="Imagenes/1ESO/libro1.png">
-    <span style="display: none;">15.</span>
-    <span class="Arbol_Nombre_2">15. Gráficas de Funciones</span>
   </div></li></ul>`; 
     const Arbol = document.getElementById('Arbol'); 
     

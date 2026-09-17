@@ -37,7 +37,7 @@
 
     <img  class="manImg" src="Imagenes/arbol/capitulo3.png">
     <span style="display: none;">1.1.</span>
-    <span class="Arbol_Nombre_2">Definición.</span>
+    <span class="Arbol_Nombre_2">Definición y Operaciones.</span>
   </div><ul  class="hidden">
  <li>
   <div class="tree-node"
@@ -295,17 +295,17 @@
   <div class="tree-node"
        id="1.1.5"
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.5.N_Problemas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.1.5')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.1.5</span>
     <span class="Arbol_Nombre_3">Problemas</span>
   </div></li></ul>
