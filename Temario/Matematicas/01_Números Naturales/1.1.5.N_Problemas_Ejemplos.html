@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas de Números Naturales - Dos Formas de Resolución (1º ESO)</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            width: 100%;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .math-steps {
+            margin: 10px 0;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Problemas Prácticos: Dos Formas de Resolución (1º ESO)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>10 Problemas con Operación Combinada y Cálculos Paso a Paso</h2>
+            <p>A continuación se presentan los 10 problemas resueltos mediante las dos metodologías para potenciar la comprensión lectora.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1: NIVEL BÁSICO -->
+            <div class="step-block">
+                <div class="step-title">Bloque 1: Nivel Básico (Situaciones cotidianas sencillas)</div>
+
+                <!-- Problema 1 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 1 (La compra en la frutería):</strong> Marta compra 3 kilos de naranjas a 2 € el kilo y una sandía por 4 €. Si paga con un billete de 20 €, ¿cuánto dinero le devuelven?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$20 - (3 \cdot 2 + 4) = 20 - (6 + 4) = 20 - 10 = 10 \text{ €}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Coste de las naranjas: $3 \cdot 2 = 6 \text{ €}$<br>
+                            2º Coste total de la compra: $6 + 4 = 10 \text{ €}$<br>
+                            3º Dinero devuelto: $20 - 10 = 10 \text{ €}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 2 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 2 (Colección de cromos):</strong> Lucas tiene 45 cromos. Su tío le regala 15 cromos y, después, decide repartir todos sus cromos en partes iguales entre sus 3 mejores amigos. ¿Cuántos cromos recibe cada amigo?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$(45 + 15) : 3 = 60 : 3 = 20 \text{ cromos}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Total de cromos tras el regalo: $45 + 15 = 60 \text{ cromos}$<br>
+                            2º Reparto entre los 3 amigos: $60 : 3 = 20 \text{ cromos para cada uno}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 3 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 3 (Excursión escolar):</strong> Para una excursión se alquilan 4 autobuses. En cada autobús viajan 35 alumnos. Si al llegar se apuntan 12 alumnos más que iban en coche propio, ¿cuántos alumnos participan en total en la excursión?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$4 \cdot 35 + 12 = 140 + 12 = 152 \text{ alumnos}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Alumnos totales en los autobuses: $4 \cdot 35 = 140 \text{ alumnos}$<br>
+                            2º Alumnos totales sumando los de coche: $140 + 12 = 152 \text{ alumnos}$
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: NIVEL INTERMEDIO -->
+            <div class="step-block">
+                <div class="step-title">Bloque 2: Nivel Intermedio (Operaciones combinadas y contextos mixtos)</div>
+
+                <!-- Problema 4 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 4 (Entradas para el teatro):</strong> Una familia compuesta por 2 adultos y 3 niños va al teatro. Las entradas de adulto cuestan 12 € cada una y las de niño cuestan 8 € cada una. Si pagan con un billete de 60 €, ¿cuánto les sobra?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$60 - (2 \cdot 12 + 3 \cdot 8) = 60 - (24 + 24) = 60 - 48 = 12 \text{ €}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Coste de las entradas de adulto: $2 \cdot 12 = 24 \text{ €}$<br>
+                            2º Coste de las entradas de niño: $3 \cdot 8 = 24 \text{ €}$<br>
+                            3º Coste total de las entradas: $24 + 24 = 48 \text{ €}$<br>
+                            4º Dinero sobrante: $60 - 48 = 12 \text{ €}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 5 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 5 (Reparto de libros en la biblioteca):</strong> La biblioteca del instituto recibe 120 libros nuevos. Colocan 45 libros en la estantería principal y los demás los reparten en partes iguales en 5 armarios diferentes. ¿Cuántos libros se guardan en cada armario?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$(120 - 45) : 5 = 75 : 5 = 15 \text{ libros}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Libros restantes tras colocar en la estantería: $120 - 45 = 75 \text{ libros}$<br>
+                            2º Libros guardados por armario: $75 : 5 = 15 \text{ libros}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 6 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 6 (Ahorros mensuales):</strong> Sara ahorra 15 € al mes durante 4 meses. En su cumpleaños gasta 25 € en un regalo para su madre, pero sus abuelos le dan 30 € de propina. ¿Cuánto dinero tiene Sara al final?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$15 \cdot 4 - 25 + 30 = 60 - 25 + 30 = 35 + 30 = 65 \text{ €}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Dinero ahorrado en 4 meses: $15 \cdot 4 = 60 \text{ €}$<br>
+                            2º Dinero tras comprar el regalo: $60 - 25 = 35 \text{ €}$<br>
+                            3º Dinero final tras la propina: $35 + 30 = 65 \text{ €}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 7 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 7 (Paquetes de folios):</strong> En un colegio se compran 8 cajas de folios. Cada caja contiene 10 paquetes y cada paquete tiene 500 hojas. Si se reparten 1200 hojas entre los profesores, ¿cuántas hojas quedan en el almacén?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$8 \cdot 10 \cdot 500 - 1200 = 80 \cdot 500 - 1200 = 40000 - 1200 = 38800 \text{ hojas}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Paquetes totales comprados: $8 \cdot 10 = 80 \text{ paquetes}$<br>
+                            2º Hojas totales en el colegio: $80 \cdot 500 = 40000 \text{ hojas}$<br>
+                            3º Hojas restantes en el almacén: $40000 - 1200 = 38800 \text{ hojas}$
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: NIVEL AVANZADO -->
+            <div class="step-block">
+                <div class="step-title">Bloque 3: Nivel Avanzado (Problemas complejos con varias capas lógicas)</div>
+
+                <!-- Problema 8 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 8 (El club de lectura):</strong> Un club de lectura organiza un campamento. Se apuntan 48 personas y se organizan en grupos. Primero forman 6 equipos iguales y, a cada equipo, se le añaden 2 monitores de apoyo. ¿Cuántas personas forman en total cada uno de los grupos con monitores incluidos?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$(48 : 6) + 2 = 8 + 2 = 10 \text{ personas}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Personas en cada uno de los 6 equipos iniciales: $48 : 6 = 8 \text{ personas}$<br>
+                            2º Total de personas por grupo con los monitores: $8 + 2 = 10 \text{ personas}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 9 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 9 (Gestión del huerto escolar):</strong> Los alumnos de 1º ESO recogen en el huerto escolar 72 patatas. Deciden empaquetar las patatas en bolsas de 6 unidades cada una. Si regalan 4 bolsas a los profesores y venden el resto a 2 € cada bolsa, ¿cuánto dinero recaudan con la venta?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$(72 : 6 - 4) \cdot 2 = (12 - 4) \cdot 2 = 8 \cdot 2 = 16 \text{ €}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Bolsas totales llenadas: $72 : 6 = 12 \text{ bolsas}$<br>
+                            2º Bolsas que quedan para vender: $12 - 4 = 8 \text{ bolsas}$<br>
+                            3º Dinero recaudado con la venta: $8 \cdot 2 = 16 \text{ €}$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problema 10 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Problema 10 (El gran premio y reparto familiar):</strong> Daniel tenía 50 € ahorrados. Compra 3 libros a 4 € cada uno. Su tía le regala el doble del dinero que le sobró tras la compra. Finalmente, junta todo el dinero que tiene ahora y se lo reparte en partes iguales con su hermana (2 personas en total). ¿Cuánto dinero le corresponde a cada uno?
+                        <div class="math-steps">
+                            <strong>Forma A (Operación combinada):</strong><br>
+                            $$[ (50 - 3 \cdot 4) + 2 \cdot (50 - 3 \cdot 4) ] : 2 = [ 38 + 76 ] : 2 = 114 : 2 = 57 \text{ €}$$<br>
+                            <strong>Forma B (Cálculos paso a paso):</strong><br>
+                            1º Coste de los libros: $3 \cdot 4 = 12 \text{ €}$<br>
+                            2º Dinero restante tras la compra: $50 - 12 = 38 \text{ €}$<br>
+                            3º Dinero que le regala la tía (el doble): $2 \cdot 38 = 76 \text{ €}$<br>
+                            4º Dinero total acumulado: $38 + 76 = 114 \text{ €}$<br>
+                            5º Dinero que le corresponde a cada uno: $114 : 2 = 57 \text{ €}$
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

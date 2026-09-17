@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Los Cinco Pasos para Resolver Problemas de Matemáticas</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .col-digito {
+            width: auto;
+            color: #2d3748;
+            padding: 0 5px !important;
+        }
+
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guía Metodológica: Los Cinco Pasos para Resolver Problemas de Matemáticas</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>¿Cómo afrontar cualquier problema matemático con éxito?</h2>
+            <p>Resolver un problema no consiste en aplicar fórmulas de manera mecánica, sino en comprender una situación y traducirla al lenguaje matemático. Estos <strong>cinco pasos</strong> son genéricos y sirven para todos los niveles: desde la ESO, pasando por Bachillerato, hasta la Universidad. Lo único que varía según el nivel es la complejidad del planteamiento y las herramientas matemáticas utilizadas.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: LOS 5 PASOS -->
+            <div class="step-block">
+                <div class="step-title">1. Los Cinco Pasos Fundamentales</div>
+                
+                <div class="regla-box">
+                    <strong>Estrategia global:</strong> Cuantas más veces leas el problema, mejor. Como cuando ves una película que te gusta, la segunda vez detectas detalles que pasaste por alto la primera. La experiencia y la práctica otorgan agilidad mental.
+                </div>
+
+                <ol style="line-height: 1.8; font-size: 1.05rem;">
+                    <li>
+                        <strong>Leer el problema para entender la historia (Los datos no importan al principio):</strong> 
+                        Se puede leer el texto completo sin mirar los números y tratar de comprender de qué trata la historia. Por ejemplo: <em>"Mi madre me manda a comprar cosas a la tienda, me da dinero, compro y después de pagar me devuelven dinero"</em>. Entender la trama es el paso principal.
+                    </li>
+                    <li>
+                        <strong>Volver a leer el problema y apuntar los datos:</strong> 
+                        En esta segunda lectura sí es fundamental anotar los datos numéricos y las magnitudes en un esquema aparte. Así evitamos tener que buscar los números constantemente en el texto largo y queda claro con qué elementos contamos desde el inicio.
+                    </li>
+                    <li>
+                        <strong>Plantear el problema:</strong> 
+                        Dependiendo del tema en el que estemos trabajando, el problema estará relacionado con un bloque concreto. Si estamos en el tema de números naturales, el planteamiento usará operaciones aritméticas; si estamos en ecuaciones o funciones, se planteará algebraicamente. Con el tiempo aprenderás a identificar automáticamente de qué tipo de problema se trata.
+                    </li>
+                    <li>
+                        <strong>Resolver el problema:</strong> 
+                        Una vez establecido el planteamiento (una suma, una multiplicación, una ecuación, un sistema), se realizan de forma rigurosa las operaciones matemáticas necesarias.
+                    </li>
+                    <li>
+                        <strong>Responder a la pregunta:</strong> 
+                        El paso final y obligatorio es responder de manera clara a la pregunta exacta que se formuló en el enunciado. Por ejemplo, si la pregunta es cuánto dinero tengo, la respuesta debe redactarse indicando esa cantidad con su unidad correspondiente.
+                    </li>
+                </ol>
+
+                <p><em>Nota sobre la intuición:</em> En los problemas sencillos de nivel básico, estos cinco pasos ocurren de manera casi instantánea en un segundo. Sin embargo, en problemas avanzados de Bachillerato o Universidad, cada paso requiere un análisis profundo y queda mucho más delimitado y estructurado.</p>
+            </div>
+
+            <!-- SECCIÓN 2: OPERACIONES EN NÚMEROS NATURALES -->
+            <div class="step-block">
+                <div class="step-title">2. Significado de las Operaciones en el Tema de Números Naturales ($\mathbb{N}$)</div>
+                <p>En el estudio actual de los <strong>números naturales</strong>, cada operación básica tiene una interpretación concreta que nos guía en el <em>Paso 3 (Planteamiento)</em>:</p>
+                <ul>
+                    <li><strong>Suma ($+$):</strong> Sirve para unir, agrupar o juntar varias cantidades o cosas.</li>
+                    <li><strong>Resta ($-$):</strong> Se utiliza para calcular la diferencia entre dos cantidades o para averiguar cuánto falta de una a otra.</li>
+                    <li><strong>Multiplicación ($\cdot$):</strong> Permite sumar de forma abreviada una misma cantidad muchas veces.</li>
+                    <li><strong>División ($:$):</strong> Se emplea para repartir una cantidad en partes iguales o agrupar en elementos idénticos.</li>
+                </ul>
+                <p>Hay problemas complejos donde se deben encadenar varias operaciones; por eso, el paso principal es siempre el <strong>Paso 1 (entender la historia)</strong> para saber qué camino seguir.</p>
+            </div>
+
+            <!-- SECCIÓN 3: CINCO EJEMPLOS PRÁCTICOS -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">3. Ejemplos Prácticos Aplicando los 5 Pasos</div>
+                <p>A continuación se presentan 5 ejemplos completos: los primeros cuatro se resuelven utilizando una operación distinta cada uno (suma, resta, multiplicación y división), y el quinto requiere el uso combinado de 3 o 4 operaciones.</p>
+
+                <!-- EJEMPLO 1: SUMA -->
+                <div style="background: #f0f7f9; padding: 15px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Ejemplo 1: Resolución mediante Suma</h3>
+                    <p><strong>Enunciado:</strong> Si mi padre me da 10€ y mi madre me da 7€, ¿cuánto dinero tengo en total?</p>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Paso 1 (Historia):</strong> Recibo dinero de dos fuentes diferentes y quiero calcular el total acumulado.</li>
+                        <li><strong>Paso 2 (Datos):</strong> Dinero del padre = 10€; Dinero de la madre = 7€.</li>
+                        <li><strong>Paso 3 (Planteamiento):</strong> Como se trata de juntar cantidades, corresponde una suma ($10 + 7$).</li>
+                        <li><strong>Paso 4 (Resolución):</strong> $10 + 7 = 17$.</li>
+                        <li><strong>Paso 5 (Respuesta):</strong> Tengo 17€ en total.</li>
+                    </ul>
+                </div>
+
+                <!-- EJEMPLO 2: RESTA -->
+                <div style="background: #f0f7f9; padding: 15px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Ejemplo 2: Resolución mediante Resta</h3>
+                    <p><strong>Enunciado:</strong> Tengo ahorrados 50€ y compro un libro que cuesta 18€. ¿Cuánto dinero me queda?</p>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Paso 1 (Historia):</strong> Tengo una cantidad inicial de dinero y gasto una parte en una compra, por lo que disminuye mi saldo.</li>
+                        <li><strong>Paso 2 (Datos):</strong> Dinero inicial = 50€; Precio del libro = 18€.</li>
+                        <li><strong>Paso 3 (Planteamiento):</strong> Para saber cuánto queda tras un gasto o calcular la diferencia, realizamos una resta ($50 - 18$).</li>
+                        <li><strong>Paso 4 (Resolución):</strong> $50 - 18 = 32$.</li>
+                        <li><strong>Paso 5 (Respuesta):</strong> Me quedan 32€.</li>
+                    </ul>
+                </div>
+
+                <!-- EJEMPLO 3: MULTIPLICACIÓN -->
+                <div style="background: #f0f7f9; padding: 15px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Ejemplo 3: Resolución mediante Multiplicación</h3>
+                    <p><strong>Enunciado:</strong> En una clase hay $6$ filas de pupitres y en cada fila hay $4$ alumnos. ¿Cuántos alumnos hay en total en la clase?</p>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Paso 1 (Historia):</strong> Tenemos elementos distribuidos en filas iguales y queremos calcular el total sumando repetidamente la misma cantidad.</li>
+                        <li><strong>Paso 2 (Datos):</strong> Filas = $6$; Alumnos por fila = $4$.</li>
+                        <li><strong>Paso 3 (Planteamiento):</strong> Para sumar repetidamente un mismo valor usamos la multiplicación ($6 \cdot 4$) .</li>
+                        <li><strong>Paso 4 (Resolución):</strong> $6 \cdot 4 = 24$.</li>
+                        <li><strong>Paso 5 (Respuesta):</strong> Hay $24$ alumnos en total en la clase.</li>
+                    </ul>
+                </div>
+
+                <!-- EJEMPLO 4: DIVISIÓN -->
+                <div style="background: #f0f7f9; padding: 15px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Ejemplo 4: Resolución mediante División</h3>
+                    <p><strong>Enunciado:</strong> Un profesor reparte equitativamente $60$ caramelos entre sus $12$ alumnos. ¿Cuántos caramelos le corresponden a cada uno?</p>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Paso 1 (Historia):</strong> Se dispone de una cantidad total que debe distribuirse en partes iguales entre varios recipientes o personas.</li>
+                        <li><strong>Paso 2 (Datos):</strong> Total de caramelos = $60$; Número de alumnos = $12$.</li>
+                        <li><strong>Paso 3 (Planteamiento):</strong> Para repartir equitativamente utilizamos la división ($60 : 12$).</li>
+                        <li><strong>Paso 4 (Resolución):</strong> $60 : 12 = 5$.</li>
+                        <li><strong>Paso 5 (Respuesta):</strong> A cada alumno le corresponden $5$ caramelos.</li>
+                    </ul>
+                </div>
+
+<!-- EJEMPLO 5: OPERACIONES COMBINADAS Y RESTO -->
+<div style="background: #f0f7f9; padding: 15px; border-radius: 6px; margin-bottom: 0; border-left: 4px solid #2635b7;">
+    <h3 style="margin-top: 0; color: #2635b7;">Ejemplo 5: Problema avanzado con operaciones combinadas y resto</h3>
+    <p><strong>Enunciado:</strong> Ana tenía 50 € en su hucha. Va a la frutería y compra 3 kilogramos de manzanas a 2 € el kilo. Después, su abuela le regala 20 €. Finalmente, reparte todo el dinero restante en partes iguales entre sus 2 hermanos y ella misma (en total, 3 personas). ¿Cuánto dinero le corresponde a cada uno y cuánto sobra?</p>
+    <ul style="margin-bottom: 0;">
+        <li><strong>Paso 1 (Historia):</strong> Partimos de un dinero inicial, restamos lo que cuesta la compra de manzanas, sumamos el regalo de la abuela y, por último, dividimos el resultado final en partes iguales entre tres personas, viendo si sobra algo en el reparto.</li>
+        <li><strong>Paso 2 (Datos):</strong> 
+            <ul>
+                <div>Dinero inicial = 50 €</div>
+                <div>Kilos de manzanas = 3 kg</div>
+                <div>Precio por kilo = 2 €</div>
+                <div>Regalo de la abuela = 20 €</div>
+                <div>Personas a repartir = 3 (2 hermanos + Ana)</div>
+            </ul>
+        </li>
+        <li><strong>Paso 3 (Planteamiento):</strong> Combinamos las operaciones respetando la jerarquía: $$(50 - 3 \cdot 2 + 20) : 3$$</li>
+        <li><strong>Paso 4 (Resolución paso a paso):</strong>
+            <div class="continuo-box" style="margin-top: 10px; margin-bottom: 10px;">
+                1º Multiplicación (coste de las manzanas): $3 \cdot 2 = 6 \text{ €}$<br>
+                2º Operaciones en el paréntesis (de izq. a der.): $(50 - 6 + 20) = (44 + 20) = 64 \text{ €}$<br>
+                3º División final para repartir entre 3: $64 : 3 = 21 \text{ (con un resto de } 1 \text{ €)}$
+            </div>
+        </li>
+        <li><strong>Paso 5 (Respuesta):</strong> A cada uno (a sus dos hermanos y a ella) le corresponden <strong>21 €</strong> y <strong>sobra 1 €</strong> en el reparto.</li>
+    </ul>
+</div>               
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

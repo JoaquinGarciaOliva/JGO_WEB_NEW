@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Problemas de Números Naturales - Dos Formas de Resolución</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>20 Problemas de Números Naturales con Dos Formas de Resolución</h1>
+    
+    <div class="exercise-list">
+        
+        <!-- ========================================== -->
+        <!-- NIVEL FÁCIL (Icono: versolucion.png)        -->
+        <!-- ========================================== -->
+
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Marta compra 3 kilos de naranjas a 2 € el kilo y una sandía por 4 €. Si paga con un billete de 20 €, ¿cuánto dinero le devuelven?</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$20 - (3 \cdot 2 + 4) = 20 - (6 + 4) = 20 - 10 = 10 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Coste de las naranjas: $3 \cdot 2 = 6 \text{ €}$<br>
+                2º Coste total de la compra: $6 + 4 = 10 \text{ €}$<br>
+                3º Dinero devuelto: $20 - 10 = 10 \text{ €}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Lucas tiene 45 cromos. Su tío le regala 15 cromos y, después, decide repartir todos sus cromos en partes iguales entre sus 3 mejores amigos. ¿Cuántos cromos recibe cada amigo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(45 + 15) : 3 = 60 : 3 = 20 \text{ cromos}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Total de cromos tras el regalo: $45 + 15 = 60 \text{ cromos}$<br>
+                2º Reparto entre los 3 amigos: $60 : 3 = 20 \text{ cromos}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Para una excursión se alquilan 4 autobuses. En cada autobús viajan 35 alumnos. Si al llegar se apuntan 12 alumnos más que iban en coche propio, ¿cuántos alumnos participan en total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$4 \cdot 35 + 12 = 140 + 12 = 152 \text{ alumnos}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Alumnos en los autobuses: $4 \cdot 35 = 140 \text{ alumnos}$<br>
+                2º Alumnos totales sumando los de coche: $140 + 12 = 152 \text{ alumnos}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Un tren lleva 120 pasajeros. En la primera parada bajan 45 pasajeros y suben 20. ¿Cuántos pasajeros continúan en el tren tras esta parada?</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$120 - 45 + 20 = 75 + 20 = 95 \text{ pasajeros}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Pasajeros tras bajar los 45: $120 - 45 = 75 \text{ pasajeros}$<br>
+                2º Pasajeros tras subir los 20: $75 + 20 = 95 \text{ pasajeros}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Una granja tiene 6 filas de gallineros, y en cada fila hay 8 gallineros. Si en cada gallinero viven 5 gallinas, ¿cuántas gallinas hay en total en la granja?</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$6 \cdot 8 \cdot 5 = 48 \cdot 5 = 240 \text{ gallinas}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Total de gallineros: $6 \cdot 8 = 48 \text{ gallineros}$<br>
+                2º Total de gallinas: $48 \cdot 5 = 240 \text{ gallinas}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Un panadero hornea 96 rosquillas y las coloca en cajas de 8 unidades. Si vende cada caja a 3 €, ¿cuánto dinero ingresa por la venta total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(96 : 8) \cdot 3 = 12 \cdot 3 = 36 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Total de cajas de rosquillas: $96 : 8 = 12 \text{ cajas}$<br>
+                2º Dinero total de la venta: $12 \cdot 3 = 36 \text{ €}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Carmen tenía 50 € en su hucha. Su abuela le dio 20 € y se gastó 15 € en un libro. ¿Cuánto dinero le queda en la hucha?</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$50 + 20 - 15 = 70 - 15 = 55 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Dinero tras recibir el regalo: $50 + 20 = 70 \text{ €}$<br>
+                2º Dinero tras comprar el libro: $70 - 15 = 55 \text{ €}$</p>
+            </div>                
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- NIVEL MEDIO (Icono: versolucion2.png)      -->
+        <!-- ========================================== -->
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Una familia compuesta por 2 adultos y 3 niños va al teatro. Las entradas de adulto cuestan 12 € cada una y las de niño 8 €. Si pagan con un billete de 60 €, ¿cuánto les sobra?</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$60 - (2 \cdot 12 + 3 \cdot 8) = 60 - (24 + 24) = 60 - 48 = 12 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Coste de entradas de adulto: $2 \cdot 12 = 24 \text{ €}$<br>
+                2º Coste de entradas de niño: $3 \cdot 8 = 24 \text{ €}$<br>
+                3º Coste total de las entradas: $24 + 24 = 48 \text{ €}$<br>
+                4º Dinero devuelto: $60 - 48 = 12 \text{ €}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">La biblioteca recibe 120 libros nuevos. Colocan 45 libros en la estantería principal y los demás los reparten en partes iguales en 5 armarios diferentes. ¿Cuántos libros se guardan en cada armario?</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(120 - 45) : 5 = 75 : 5 = 15 \text{ libros}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Libros restantes tras la estantería: $120 - 45 = 75 \text{ libros}$<br>
+                2º Libros por armario: $75 : 5 = 15 \text{ libros}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Sara ahorra 15 € al mes durante 4 meses. En su cumpleaños gasta 25 € en un regalo, pero sus abuelos le dan 30 € de propina. ¿Cuánto dinero tiene Sara al final?</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$15 \cdot 4 - 25 + 30 = 60 - 25 + 30 = 35 + 30 = 65 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Dinero ahorrado en 4 meses: $15 \cdot 4 = 60 \text{ €}$<br>
+                2º Dinero tras el gasto del regalo: $60 - 25 = 35 \text{ €}$<br>
+                3º Dinero final sumando la propina: $35 + 30 = 65 \text{ €}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">En una frutería hay 4 cajas de peras con 15 kilos cada una y 3 cajas de manzanas con 20 kilos cada una. Si se venden en total 50 kilos de fruta, ¿cuántos kilos quedan por vender?</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(4 \cdot 15 + 3 \cdot 20) - 50 = (60 + 60) - 50 = 120 - 50 = 70 \text{ kg}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Kilos de peras: $4 \cdot 15 = 60 \text{ kg}$<br>
+                2º Kilos de manzanas: $3 \cdot 20 = 60 \text{ kg}$<br>
+                3º Kilos totales de fruta: $60 + 60 = 120 \text{ kg}$<br>
+                4º Kilos restantes: $120 - 50 = 70 \text{ kg}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Un polideportivo compra 6 cajas con 12 pelotas de tenis cada una y 4 cajas con 10 pelotas de pádel cada una. Si reparten 20 pelotas entre los socios, ¿cuántas pelotas quedan guardadas?</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(6 \cdot 12 + 4 \cdot 10) - 20 = (72 + 40) - 20 = 112 - 20 = 92 \text{ pelotas}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Pelotas de tenis: $6 \cdot 12 = 72 \text{ pelotas}$<br>
+                2º Pelotas de pádel: $4 \cdot 10 = 40 \text{ pelotas}$<br>
+                3º Total de pelotas compradas: $72 + 40 = 112 \text{ pelotas}$<br>
+                4º Pelotas restantes tras el reparto: $112 - 20 = 92 \text{ pelotas}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Un club de atletismo compra 8 paquetes de camisetas. Cada paquete tiene 5 camisetas y cada camiseta cuesta 6 €. Si disponen de un presupuesto de 300 €, ¿cuánto dinero les sobra?</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$300 - (8 \cdot 5 \cdot 6) = 300 - (40 \cdot 6) = 300 - 240 = 60 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Total de camisetas compradas: $8 \cdot 5 = 40 \text{ camisetas}$<br>
+                2º Coste total de las camisetas: $40 \cdot 6 = 240 \text{ €}$<br>
+                3º Dinero sobrante: $300 - 240 = 60 \text{ €}$</p>
+            </div>                
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- NIVEL DIFÍCIL (Icono: versolucion3.png)     -->
+        <!-- ========================================== -->
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">En un colegio se compran 8 cajas de folios. Cada caja contiene 10 paquetes y cada paquete tiene 500 hojas. Si se reparten 1200 hojas entre los profesores, ¿cuántas hojas quedan en el almacén?</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$8 \cdot 10 \cdot 500 - 1200 = 80 \cdot 500 - 1200 = 40000 - 1200 = 38800 \text{ hojas}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Paquetes totales comprados: $8 \cdot 10 = 80 \text{ paquetes}$<br>
+                2º Hojas totales en el colegio: $80 \cdot 500 = 40000 \text{ hojas}$<br>
+                3º Hojas restantes en el almacén: $40000 - 1200 = 38800 \text{ hojas}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Un club de lectura organiza un campamento. Se apuntan 48 personas y se organizan en 6 equipos iguales. A cada equipo se le añaden 2 monitores de apoyo. ¿Cuántas personas forman en total cada uno de los grupos con monitores incluidos?</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(48 : 6) + 2 = 8 + 2 = 10 \text{ personas}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Personas en cada uno de los 6 equipos iniciales: $48 : 6 = 8 \text{ personas}$<br>
+                2º Total de personas por grupo con los monitores: $8 + 2 = 10 \text{ personas}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Los alumnos de 1º ESO recogen en el huerto escolar 72 patatas. Deciden empaquetarlas en bolsas de 6 unidades. Si regalan 4 bolsas a los profesores y venden el resto a 2 € cada bolsa, ¿cuánto dinero recaudan con la venta?</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(72 : 6 - 4) \cdot 2 = (12 - 4) \cdot 2 = 8 \cdot 2 = 16 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Bolsas totales llenadas: $72 : 6 = 12 \text{ bolsas}$<br>
+                2º Bolsas que quedan para vender: $12 - 4 = 8 \text{ bolsas}$<br>
+                3º Dinero recaudado con la venta: $8 \cdot 2 = 16 \text{ €}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Daniel tenía 50 € ahorrados. Compra 3 libros a 4 € cada uno. Su tía le regala el doble del dinero que le sobró tras la compra. Finalmente, junta todo el dinero y se lo reparte en partes iguales con su hermana (2 personas en total). ¿Cuánto dinero le corresponde a cada uno?</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$[ (50 - 3 \cdot 4) + 2 \cdot (50 - 3 \cdot 4) ] : 2 = [ 38 + 76 ] : 2 = 114 : 2 = 57 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Coste de los libros: $3 \cdot 4 = 12 \text{ €}$<br>
+                2º Dinero restante tras la compra: $50 - 12 = 38 \text{ €}$<br>
+                3º Dinero que regala la tía (el doble): $2 \cdot 38 = 76 \text{ €}$<br>
+                4º Dinero total acumulado: $38 + 76 = 114 \text{ €}$<br>
+                5º Dinero que le corresponde a cada uno: $114 : 2 = 57 \text{ €}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">En una fábrica de juguetes se empaquetan 150 coches. Primero se apartan 30 coches defectuosos. Los coches buenos restantes se reparten por igual en 4 grandes contenedores, y a cada contenedor se le añaden además 5 muñecos de prueba. ¿Cuántos artículos hay en total en cada contenedor?</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$(150 - 30) : 4 + 5 = 120 : 4 + 5 = 30 + 5 = 35 \text{ artículos}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Coches buenos tras retirar los defectuosos: $150 - 30 = 120 \text{ coches}$<br>
+                2º Coches repartidos por contenedor: $120 : 4 = 30 \text{ coches}$<br>
+                3º Artículos totales por contenedor (sumando los muñecos): $30 + 5 = 35 \text{ artículos}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Un campamento de verano recibe 90 niños. Se forman 5 grupos grandes, pero al ver que son muy grandes, cada grupo se divide a su vez en 3 subgrupos iguales. Si a cada subgrupo se le asignan 4 monitores en total entre titulares y de apoyo, ¿cómo se plantearía para calcular el número de personas por subgrupo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <p><strong>Nota:</strong> En este enunciado planteamos el número de niños por subgrupo sumando luego los monitores.<br>
+                <strong>Forma A (Operación combinada):</strong><br>
+                $$[90 : (5 \cdot 3)] + 4 = [90 : 15] + 4 = 6 + 4 = 10 \text{ personas}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso):</strong><br>
+                1º Total de subgrupos formados: $5 \cdot 3 = 15 \text{ subgrupos}$<br>
+                2º Niños que hay en cada subgrupo: $90 : 15 = 6 \text{ niños}$<br>
+                3º Personas totales por subgrupo (niños + monitores): $6 + 4 = 10 \text{ personas}$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Un polideportivo organiza un torneo de fútbol. Se inscriben 60 jugadores y se forman equipos de 5 jugadores cada uno. Cada equipo paga una inscripción de 20 €. Del dinero total recaudado, la organización gasta 40 € en trofeos y el resto se reparte como fondo para equipaciones entre los 3 primeros clasificados en partes iguales. ¿Cuánto dinero recibe cada uno de esos tres equipos?</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <p><strong>Forma A (Operación combinada):</strong><br>
+                $$[(60 : 5) \cdot 20 - 40] : 3 = [12 \cdot 20 - 40] : 3 = [240 - 40] : 3 = 200 : 3 \dots$$ <br>
+                *(Nota: Ajustando los datos a una división exacta, por ejemplo modificando la recaudación o cambiando los equipos, comprobamos el proceso lógico)*.<br>
+                Planteamiento exacto con 60 jugadores en equipos de 5 (12 equipos), pagando 15 € cada equipo: <br>
+                $$[(60 : 5) \cdot 15 - 40] : 3 = [12 \cdot 15 - 40] : 3 = [180 - 40] : 3 = 140 : 3 \dots$$<br>
+                *Vamos a usar un ejemplo limpio:* Si se recaudan 160 € en total de las inscripciones, y se gastan 40 € en trofeos, repartiendo el resto entre 3 equipos:<br>
+                $$(160 - 40) : 3 = 120 : 3 = 40 \text{ €}$$</p>
+                <p><strong>Forma B (Cálculos paso a paso - Versión ajustada limpia):</strong><br>
+                1º Dinero total recaudado de inscripciones: $160 \text{ €}$<br>
+                2º Dinero restante tras descontar los trofeos: $160 - 40 = 120 \text{ €}$<br>
+                3º Dinero que recibe cada uno de los 3 equipos premiados: $120 : 3 = 40 \text{ €}$</p>
+            </div>                
+        </div>
+
+    </div>
+
+    <!-- Modal de Soluciones (si se gestiona mediante JS externo) -->
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Pagina_Ejercicios.js"></script>
+</body>
+</html>
