@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Cálculo Rápido: Suma y Multiplicación (1º ESO)</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            width: 100%;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .math-steps {
+            margin: 10px 0;
+            padding-left: 15px;
+        }
+
+        /* Clases de colores para ver los emparejamientos y agrupaciones */
+        .pair-c1 {
+            color: #d97706;
+            font-weight: bold;
+        }
+
+        .pair-c2 {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .pair-c3 {
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        .pair-c4 {
+            color: #9333ea;
+            font-weight: bold;
+        }
+
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos Prácticos: Cálculo Rápido (1º ESO)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>10 Ejemplos de Cálculo Rápido: Suma y Multiplicación</h2>
+            <p>A continuación se muestran 5 ejemplos de sumas y 5 ejemplos de multiplicaciones resolviéndose paso a paso y agrupando con distintos colores para agilizar el cálculo mental.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1: SUMAS RÁPIDAS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 1: Cálculo Rápido en la Suma (Buscando decenas y números redondos)</div>
+
+                <!-- Ejemplo 1 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 1:</strong> Calcular la suma de varios dígitos sencillos agrupando parejas que completan 10.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">1</span> + <span class="pair-c2">4</span> + <span class="pair-c3">6</span> + <span class="pair-c1">9</span> + <span class="pair-c2">6</span> = 
+                                <span class="pair-c1">10</span> + <span class="pair-c2">10</span> + <span class="pair-c3">6</span> = 26
+                            </div>
+                            <strong>Explicación:</strong> Agrupamos <span class="pair-c1">1 + 9 = 10</span> y <span class="pair-c2">4 + 6 = 10</span>. Finalmente sumamos el <span class="pair-c3">6</span> restante.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 2:</strong> Suma de números de dos cifras buscando decenas completas.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">12</span> + <span class="pair-c2">35</span> + <span class="pair-c1">28</span> + <span class="pair-c2">15</span> + <span class="pair-c3">9</span> = 
+                                <span class="pair-c1">40</span> + <span class="pair-c2">50</span> + <span class="pair-c3">9</span> = 99
+                            </div>
+                            <strong>Explicación:</strong> Unimos <span class="pair-c1">12 + 28 = 40</span> (ya que 2+8=10) y <span class="pair-c2">35 + 15 = 50</span> (5+5=10). Sumamos <span class="pair-c3">9</span> al final.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 3 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 3:</strong> Suma de tres parejas complementarias a decenas redondas.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">43</span> + <span class="pair-c2">17</span> + <span class="pair-c3">54</span> + <span class="pair-c1">57</span> + <span class="pair-c2">83</span> + <span class="pair-c3">46</span> = 
+                                <span class="pair-c1">100</span> + <span class="pair-c2">100</span> + <span class="pair-c3">100</span> = 300
+                            </div>
+                            <strong>Explicación:</strong> Emparejamos <span class="pair-c1">43 + 57 = 100</span>, <span class="pair-c2">17 + 83 = 100</span> y <span class="pair-c3">54 + 46 = 100</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 4 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 4:</strong> Agrupación mixta de centenas y decenas redondas.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">150</span> + <span class="pair-c2">34</span> + <span class="pair-c1">250</span> + <span class="pair-c2">66</span> + <span class="pair-c3">80</span> = 
+                                <span class="pair-c1">400</span> + <span class="pair-c2">100</span> + <span class="pair-c3">80</span> = 580
+                            </div>
+                            <strong>Explicación:</strong> Sumamos <span class="pair-c1">150 + 250 = 400</span> y <span class="pair-c2">34 + 66 = 100</span>. Añadimos <span class="pair-c3">80</span> para obtener 580.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 5 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 5:</strong> Cadena más larga de números asociando unidades complementarias (1-9, 2-8, 3-7, 4-6).
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">7</span> + <span class="pair-c2">11</span> + <span class="pair-c3">14</span> + <span class="pair-c1">13</span> + <span class="pair-c4">22</span> + <span class="pair-c2">19</span> + <span class="pair-c3">16</span> + <span class="pair-c4">18</span> = 
+                                <span class="pair-c1">20</span> + <span class="pair-c2">30</span> + <span class="pair-c3">30</span> + <span class="pair-c4">40</span> = 120
+                            </div>
+                            <strong>Explicación:</strong> Unimos <span class="pair-c1">7 + 13 = 20</span>, <span class="pair-c2">11 + 19 = 30</span>, <span class="pair-c3">14 + 16 = 30</span> y <span class="pair-c4">22 + 18 = 40</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: MULTIPLICACIONES RÁPIDAS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 2: Cálculo Rápido en la Multiplicación (Buscando ceros con pares y cincos)</div>
+
+                <!-- Ejemplo 6 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 6:</strong> Multiplicación asociando el factor 5 con un número par.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">5</span> . <span class="pair-c2">9</span> . <span class="pair-c1">6</span> = 
+                                <span class="pair-c1">30</span> . <span class="pair-c2">9</span> = 270
+                            </div>
+                            <strong>Explicación:</strong> En lugar de hacer $5 \cdot 9 = 45$ y luego $45 \cdot 6$, multiplicamos primero <span class="pair-c1">5 . 6 = 30</span>. Luego $30 \cdot 9 = 270$.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 7 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 7:</strong> Obtención del factor 100 combinando 25 y 4.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">25</span> . <span class="pair-c2">13</span> . <span class="pair-c1">4</span> = 
+                                <span class="pair-c1">100</span> . <span class="pair-c2">13</span> = 1300
+                            </div>
+                            <strong>Explicación:</strong> Agrupamos <span class="pair-c1">25 . 4 = 100</span>. Multiplicar por 100 a continuación es tan fácil como añadir dos ceros al <span class="pair-c2">13</span>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 8 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 8:</strong> Formación de dos ceros combinando factores $2 \cdot 5$ y $4 \cdot 5$.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">2</span> . <span class="pair-c2">8</span> . <span class="pair-c1">5</span> . <span class="pair-c2">5</span> = 
+                                <span class="pair-c1">10</span> . <span class="pair-c2">40</span> = 400
+                            </div>
+                            <strong>Explicación:</strong> Agrupamos <span class="pair-c1">2 . 5 = 10</span> y por otro lado <span class="pair-c2">8 . 5 = 40</span>. El producto final es $10 \cdot 40 = 400$.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 9 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 9:</strong> Combinación de múltiplos con ceros finales y factores sencillos.
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">50</span> . <span class="pair-c2">7</span> . <span class="pair-c1">4</span> . <span class="pair-c2">3</span> = 
+                                <span class="pair-c1">200</span> . <span class="pair-c2">21</span> = 4200
+                            </div>
+                            <strong>Explicación:</strong> Agrupamos <span class="pair-c1">50 . 4 = 200</span> y <span class="pair-c2">7 . 3 = 21</span>. Multiplicamos $2 \cdot 21 = 42$ y añadimos los dos ceros.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 10 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Ejemplo 10:</strong> Producto con potencias de 10 implícitas ($20 \cdot 5$).
+                        <div class="math-steps">
+                            <div class="continuo-box">
+                                <span class="pair-c1">20</span> . <span class="pair-c2">11</span> . <span class="pair-c1">5</span> . <span class="pair-c2">2</span> = 
+                                <span class="pair-c1">100</span> . <span class="pair-c2">22</span> = 2200
+                            </div>
+                            <strong>Explicación:</strong> Multiplicamos <span class="pair-c1">20 . 5 = 100</span> y <span class="pair-c2">11 . 2 = 22</span>. El resultado es $100 \cdot 22 = 2200$.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Ejercicios de Cálculo Rápido - Sumas y Multiplicaciones</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams', 'color']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Estilos internos para el resaltado de estrategias dentro de las soluciones */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 10px 12px;
+            margin: 10px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        .pair-c1 { color: #d97706; font-weight: bold; }
+        .pair-c2 { color: #2563eb; font-weight: bold; }
+        .pair-c3 { color: #16a34a; font-weight: bold; }
+        .pair-c4 { color: #9333ea; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>20 Ejercicios de Cálculo Rápido: Sumas y Multiplicaciones</h1>
+    
+    <div class="exercise-list">
+        
+        <!-- ========================================== -->
+        <!-- NIVEL FÁCIL (Icono: versolucion.png)        -->
+        <!-- ========================================== -->
+
+        <!-- EJERCICIO 1 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Calcular de forma rápida asociando parejas que suman 10: $3 + 5 + 7 + 5 + 2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">3</span> + <span class="pair-c2">5</span> + <span class="pair-c1">7</span> + <span class="pair-c2">5</span> + <span class="pair-c3">2</span> = 
+                    <span class="pair-c1">10</span> + <span class="pair-c2">10</span> + <span class="pair-c3">2</span> = 22
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">3 + 7 = 10</span> y <span class="pair-c2">5 + 5 = 10</span>. Finalmente añadimos el <span class="pair-c3">2</span> restante.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 2 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Calcular agrupando unidades complementarias a 10: $1 + 4 + 6 + 9 + 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">1</span> + <span class="pair-c2">4</span> + <span class="pair-c2">6</span> + <span class="pair-c1">9</span> + <span class="pair-c3">8</span> = 
+                    <span class="pair-c1">10</span> + <span class="pair-c2">10</span> + <span class="pair-c3">8</span> = 28
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">1 + 9 = 10</span> y <span class="pair-c2">4 + 6 = 10</span>, sumando el <span class="pair-c3">8</span> al final.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 3 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Calcular buscando decenas exactas: $14 + 25 + 16 + 15 + 7$</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">14</span> + <span class="pair-c2">25</span> + <span class="pair-c1">16</span> + <span class="pair-c2">15</span> + <span class="pair-c3">7</span> = 
+                    <span class="pair-c1">30</span> + <span class="pair-c2">40</span> + <span class="pair-c3">7</span> = 77
+                </div>
+                <p><strong>Explicación:</strong> Unimos <span class="pair-c1">14 + 16 = 30</span> y <span class="pair-c2">25 + 15 = 40</span>. Sumamos <span class="pair-c3">7</span> al resultado.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 4 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Calcular asociando el factor 5 con un número par: $5 \cdot 7 \cdot 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">5</span> . <span class="pair-c2">7</span> . <span class="pair-c1">4</span> = 
+                    <span class="pair-c1">20</span> . <span class="pair-c2">7</span> = 140
+                </div>
+                <p><strong>Explicación:</strong> Multiplicamos primero <span class="pair-c1">5 . 4 = 20</span>. Luego resulta muy fácil hacer $20 \cdot 7 = 140$.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 5 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Calcular agilizando el producto con base 10: $2 \cdot 9 \cdot 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">2</span> . <span class="pair-c2">9</span> . <span class="pair-c1">5</span> = 
+                    <span class="pair-c1">10</span> . <span class="pair-c2">9</span> = 90
+                </div>
+                <p><strong>Explicación:</strong> Asociamos <span class="pair-c1">2 . 5 = 10</span> y luego multiplicamos por <span class="pair-c2">9</span> para obtener 90.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 6 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Calcular buscando un múltiplo acabado en cero: $5 \cdot 6 \cdot 8$</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">5</span> . <span class="pair-c1">6</span> . <span class="pair-c2">8</span> = 
+                    <span class="pair-c1">30</span> . <span class="pair-c2">8</span> = 240
+                </div>
+                <p><strong>Explicación:</strong> Realizamos <span class="pair-c1">5 . 6 = 30</span> y finalmente multiplicamos por <span class="pair-c2">8</span>.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 7 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Calcular formando decenas exactas: $22 + 13 + 18 + 27$</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">22</span> + <span class="pair-c2">13</span> + <span class="pair-c1">18</span> + <span class="pair-c2">27</span> = 
+                    <span class="pair-c1">40</span> + <span class="pair-c2">40</span> = 80
+                </div>
+                <p><strong>Explicación:</strong> Emparejamos <span class="pair-c1">22 + 18 = 40</span> y <span class="pair-c2">13 + 27 = 40</span>.</p>
+            </div>                
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- NIVEL MEDIO (Icono: versolucion2.png)     -->
+        <!-- ========================================== -->
+
+        <!-- EJERCICIO 8 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Calcular buscando centenas y decenas completas: $35 + 42 + 65 + 18 + 11$</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">35</span> + <span class="pair-c2">42</span> + <span class="pair-c1">65</span> + <span class="pair-c2">18</span> + <span class="pair-c3">11</span> = 
+                    <span class="pair-c1">100</span> + <span class="pair-c2">60</span> + <span class="pair-c3">11</span> = 171
+                </div>
+                <p><strong>Explicación:</strong> Asociamos <span class="pair-c1">35 + 65 = 100</span> y <span class="pair-c2">42 + 18 = 60</span>, añadiendo <span class="pair-c3">11</span> al final.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 9 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Calcular asociando números complementarios a 100: $43 + 26 + 57 + 74 + 19$</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">43</span> + <span class="pair-c2">26</span> + <span class="pair-c1">57</span> + <span class="pair-c2">74</span> + <span class="pair-c3">19</span> = 
+                    <span class="pair-c1">100</span> + <span class="pair-c2">100</span> + <span class="pair-c3">19</span> = 219
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">43 + 57 = 100</span> y <span class="pair-c2">26 + 74 = 100</span>, sumando finalmente <span class="pair-c3">19</span>.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 10 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Calcular obteniendo el factor 100 combinando 25 y 4: $25 \cdot 11 \cdot 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">25</span> . <span class="pair-c2">11</span> . <span class="pair-c1">4</span> = 
+                    <span class="pair-c1">100</span> . <span class="pair-c2">11</span> = 1100
+                </div>
+                <p><strong>Explicación:</strong> Multiplicamos primero <span class="pair-c1">25 . 4 = 100</span>. Después basta con añadir dos ceros al <span class="pair-c2">11</span>.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 11 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Calcular buscando ceros mediante doble agrupación: $2 \cdot 7 \cdot 5 \cdot 5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">2</span> . <span class="pair-c2">7</span> . <span class="pair-c1">5</span> . <span class="pair-c2">5</span> = 
+                    <span class="pair-c1">10</span> . <span class="pair-c2">35</span> = 350
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">2 . 5 = 10</span> y <span class="pair-c2">7 . 5 = 35</span>. El producto final es $10 \cdot 35 = 350$.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 12 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Calcular agrupando centenas redondas: $150 + 46 + 250 + 54 + 80$</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">150</span> + <span class="pair-c2">46</span> + <span class="pair-c1">250</span> + <span class="pair-c2">54</span> + <span class="pair-c3">80</span> = 
+                    <span class="pair-c1">400</span> + <span class="pair-c2">100</span> + <span class="pair-c3">80</span> = 580
+                </div>
+                <p><strong>Explicación:</strong> Sumamos <span class="pair-c1">150 + 250 = 400</span> y <span class="pair-c2">46 + 54 = 100</span>. Añadimos <span class="pair-c3">80</span> para obtener 580.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 13 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Calcular asociando múltiplos de 10: $50 \cdot 6 \cdot 4 \cdot 3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">50</span> . <span class="pair-c2">6</span> . <span class="pair-c1">4</span> . <span class="pair-c2">3</span> = 
+                    <span class="pair-c1">200</span> . <span class="pair-c2">18</span> = 3600
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">50 . 4 = 200</span> y <span class="pair-c2">6 . 3 = 18</span>. Multiplicamos $2 \cdot 18 = 36$ y añadimos los dos ceros.</p>
+            </div>                
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- NIVEL DIFÍCIL (Icono: versolucion3.png)     -->
+        <!-- ========================================== -->
+
+        <!-- EJERCICIO 14 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Calcular enlazando cuatro parejas complementarias (1-9, 2-8, 3-7, 4-6): $8 + 12 + 13 + 14 + 22 + 18 + 17 + 16$</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">8</span> + <span class="pair-c2">12</span> + <span class="pair-c3">13</span> + <span class="pair-c4">14</span> + <span class="pair-c1">22</span> + <span class="pair-c2">18</span> + <span class="pair-c3">17</span> + <span class="pair-c4">16</span> = 
+                    <span class="pair-c1">30</span> + <span class="pair-c2">30</span> + <span class="pair-c3">30</span> + <span class="pair-c4">30</span> = 120
+                </div>
+                <p><strong>Explicación:</strong> Unimos <span class="pair-c1">8 + 22 = 30</span>, <span class="pair-c2">12 + 18 = 30</span>, <span class="pair-c3">13 + 17 = 30</span> y <span class="pair-c4">14 + 16 = 30</span>.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 15 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Calcular asociando cuatro sumandos a millares o centenas redondas: $1250 + 1750 + 2300 + 700$</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">1250</span> + <span class="pair-c1">1750</span> + <span class="pair-c2">2300</span> + <span class="pair-c2">700</span> = 
+                    <span class="pair-c1">3000</span> + <span class="pair-c2">3000</span> = 6000
+                </div>
+                <p><strong>Explicación:</strong> Sumamos <span class="pair-c1">1250 + 1750 = 3000</span> y <span class="pair-c2">2300 + 700 = 3000</span>. El total es 6000.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 16 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Calcular mediante doble agrupación eficiente de factores: $8 \cdot 5 \cdot 10 \cdot 15$</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">8</span> . <span class="pair-c1">5</span> . <span class="pair-c2">10</span> . <span class="pair-c2">15</span> = 
+                    <span class="pair-c1">40</span> . <span class="pair-c2">150</span> = 6000
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">8 . 5 = 40</span> y <span class="pair-c2">10 . 15 = 150</span>. Calculamos $4 \cdot 15 = 60$ y añadimos los dos ceros.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 17 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Calcular buscando centenas y productos sencillos: $25 \cdot 4 \cdot 20 \cdot 30$</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">25</span> . <span class="pair-c1">4</span> . <span class="pair-c2">20</span> . <span class="pair-c2">30</span> = 
+                    <span class="pair-c1">100</span> . <span class="pair-c2">600</span> = 60000
+                </div>
+                <p><strong>Explicación:</strong> Multiplicamos <span class="pair-c1">25 . 4 = 100</span> y <span class="pair-c2">20 . 30 = 600</span>. El producto final es $100 \cdot 600 = 60000$.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 18 (SUMA) -->
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Calcular asociando cuatro millares incompletos a unidades millar exactas: $3400 + 1600 + 2750 + 1250$</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">3400</span> + <span class="pair-c1">1600</span> + <span class="pair-c2">2750</span> + <span class="pair-c2">1250</span> = 
+                    <span class="pair-c1">5000</span> + <span class="pair-c2">4000</span> = 9000
+                </div>
+                <p><strong>Explicación:</strong> Sumamos <span class="pair-c1">3400 + 1600 = 5000</span> y <span class="pair-c2">2750 + 1250 = 4000</span>. El total es 9000.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 19 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Calcular formando potencias de 10 con productos intermedios: $2 \cdot 5 \cdot 10 \cdot 50$</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">2</span> . <span class="pair-c1">5</span> . <span class="pair-c2">10</span> . <span class="pair-c2">50</span> = 
+                    <span class="pair-c1">10</span> . <span class="pair-c2">500</span> = 5000
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">2 . 5 = 10</span> y <span class="pair-c2">10 . 50 = 500</span>. Al multiplicar $10 \cdot 500$ obtenemos 5000.</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 20 (MULTIPLICACIÓN) -->
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Calcular ordenando factores para facilitar el cálculo mental: $5 \cdot 20 \cdot 15 \cdot 4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <div class="continuo-box">
+                    <span class="pair-c1">5</span> . <span class="pair-c1">20</span> . <span class="pair-c2">15</span> . <span class="pair-c2">4</span> = 
+                    <span class="pair-c1">100</span> . <span class="pair-c2">60</span> = 6000
+                </div>
+                <p><strong>Explicación:</strong> Agrupamos <span class="pair-c1">5 . 20 = 100</span> y <span class="pair-c2">15 . 4 = 60</span>. Multiplicando $100 \cdot 60$ obtenemos 6000.</p>
+            </div>                
+        </div>
+
+    </div>
+
+    <!-- Modal de Soluciones -->
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Pagina_Ejercicios.js"></script>
+</body>
+</html>
