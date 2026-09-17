@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios para Clasificar Números Primos y Compuestos</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+      
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejemplos para Clasificar Números Primos y Compuestos</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Clasifica los siguientes números en primos o compuestos: \(12, 7, 21, 29\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>\(12\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 12 = 6 \cdot 2 $$
+                        </li>
+                        <li>\(7\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                        <li>\(21\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 21 = 3 \cdot 7 $$
+                        </li>
+                        <li>\(29\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Clasifica los siguientes números en primos o compuestos: \(15, 11, 24, 17\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>\(15\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 15 = 3 \cdot 5 $$
+                        </li>
+                        <li>\(11\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                        <li>\(24\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 24 = 4 \cdot 6 $$
+                        </li>
+                        <li>\(17\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Clasifica los siguientes números en primos o compuestos: \(13, 18, 31, 35\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>\(13\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                        <li>\(18\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 18 = 2 \cdot 9 $$
+                        </li>
+                        <li>\(31\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                        <li>\(35\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 35 = 5 \cdot 7 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Clasifica los siguientes números en primos o compuestos: \(9, 23, 30, 41\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>\(9\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 9 = 3 \cdot 3 $$
+                        </li>
+                        <li>\(23\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                        <li>\(30\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 30 = 5 \cdot 6 $$
+                        </li>
+                        <li>\(41\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Clasifica los siguientes números en primos o compuestos: \(16, 19, 27, 37\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>\(16\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 16 = 4 \cdot 4 $$
+                        </li>
+                        <li>\(19\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                        <li>\(27\) es <strong>compuesto</strong>, porque se puede expresar como multiplicación:
+                            $$ 27 = 3 \cdot 9 $$
+                        </li>
+                        <li>\(37\) es <strong>primo</strong>, solo es divisible entre \(1\) y él mismo. No lo divide ningún número menor que él.</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>

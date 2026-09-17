@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Ejercicios de Clasificar Números Primos y Compuestos</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>Ejercicios: Clasificación de Números Primos y Compuestos</h1>
+    
+    <div class="exercise-list">
+        
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Clasifica el número \( 17 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+          
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1 (Número 17):</strong></p>
+                <p>Sus únicos divisores son \(1\) y el propio \(17\).</p>
+                <p>El número **17 es primo**.</p>
+            </div>           
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Clasifica el número \( 21 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+             
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2 (Número 21):</strong></p>
+                <p>Además de \(1\) y \(21\), es divisible entre \(3\) y \(7\) (\(3 \times 7 = 21\)).</p>
+                <p>El número **21 es compuesto**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Clasifica el número \( 29 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+        
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3 (Número 29):</strong></p>
+                <p>No es divisible por ningún número entero positivo aparte de \(1\) y \(29\).</p>
+                <p>El número **29 es primo**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Clasifica el número \( 51 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+                  
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4 (Número 51):</strong></p>
+                <p>La suma de sus cifras es \(5 + 1 = 6\) (múltiplo de 3). Por tanto, es divisible entre \(3\) (\(3 \times 17 = 51\)).</p>
+                <p>El número **51 es compuesto**.</p>
+            </div> 
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Clasifica el número \( 67 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5 (Número 67):</strong></p>
+                <p>Probando divisibilidad entre los primos menores que \(\sqrt{67} \approx 8.18\) (2, 3, 5 y 7), ninguno lo divide de forma exacta.</p>
+                <p>El número **67 es primo**.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Clasifica el número \( 91 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6 (Número 91):</strong></p>
+                <p>Aunque parece primo a simple vista, es divisible entre \(7\) y \(13\) (\(7 \times 13 = 91\)).</p>
+                <p>El número **91 es compuesto**.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Clasifica el número \( 119 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7 (Número 119):</strong></p>
+                <p>Al comprobar divisores primos hasta \(\sqrt{119} \approx 10.9\) (2, 3, 5, 7), encontramos que \(119 \div 7 = 17\).</p>
+                <p>El número **119 es compuesto**.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Clasifica el número \( 127 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8 (Número 127):</strong></p>
+                <p>Evaluamos divisibilidad entre primos menores que \(\sqrt{127} \approx 11.2\) (2, 3, 5, 7, 11). Ninguno produce una división exacta.</p>
+                <p>El número **127 es primo**.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Clasifica el número \( 143 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9 (Número 143):</strong></p>
+                <p>Evaluando primos menores que \(\sqrt{143} \approx 11.95\), encontramos que es divisible entre \(11\) (\(11 \times 13 = 143\)).</p>
+                <p>El número **143 es compuesto**.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Clasifica el número \( 173 \) como primo o compuesto.</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10 (Número 173):</strong></p>
+                <p>Probando divisibilidad entre primos menores que \(\sqrt{173} \approx 13.15\) (2, 3, 5, 7, 11, 13), ninguno resulta en un cociente entero.</p>
+                <p>El número **173 es primo**.</p>
+            </div>                
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>
