@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos: Propiedades de las Potencias</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos Prácticos: Propiedades de las Potencias</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>20 Ejemplos Resueltos en Forma de Potencia</h2>
+            <p>A continuación se presentan 20 ejemplos enfocados en el desarrollo directo de las operaciones hasta su resultado en forma de potencia, indicando al final la propiedad utilizada.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: MISMA BASE -->
+            <div class="step-block">
+                <div class="step-title">Bloque 1: Potencias con la Misma Base</div>
+
+                <!-- Ejemplo 1 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 1:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $2^3 \cdot 2^4 = 2^{3+4} = 2^7$</li>
+                            <li><strong>Propiedad aplicada:</strong> Producto de potencias con la misma base ($a^b \cdot a^c = a^{b+c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 2:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $3^2 \cdot 3^1 \cdot 3^3 = 3^{2+1+3} = 3^6$</li>
+                            <li><strong>Propiedad aplicada:</strong> Producto de múltiples potencias con la misma base ($a^b \cdot a^c \cdot a^d = a^{b+c+d}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 3 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 3:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{5^6}{5^4} = 5^{6-4} = 5^2$</li>
+                            <li><strong>Propiedad aplicada:</strong> Cociente de potencias con la misma base ($\frac{a^b}{a^c} = a^{b-c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 4 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 4:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $7^5 : 7^3 = 7^{5-3} = 7^2$</li>
+                            <li><strong>Propiedad aplicada:</strong> Cociente de potencias con la misma base ($a^b : a^c = a^{b-c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 5 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 5:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $(2^3)^2 = 2^{3 \cdot 2} = 2^6$</li>
+                            <li><strong>Propiedad aplicada:</strong> Potencia de una potencia ($(a^b)^c = a^{b \cdot c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 6 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 6:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $((4^2)^1)^3 = 4^{2 \cdot 1 \cdot 3} = 4^6$</li>
+                            <li><strong>Propiedad aplicada:</strong> Potencias encadenadas ($((a^b)^c)^d = a^{b \cdot c \cdot d}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 7 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 7:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{3^4 \cdot 3^5}{3^6} = \frac{3^{4+5}}{3^6} = \frac{3^9}{3^6} = 3^{9-6} = 3^3$</li>
+                            <li><strong>Propiedades aplicadas:</strong> Producto ($a^b \cdot a^c = a^{b+c}$) y cociente ($\frac{a^b}{a^c} = a^{b-c}$) de potencias con la misma base.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: MISMO EXPONENTE -->
+            <div class="step-block">
+                <div class="step-title">Bloque 2: Potencias con el Mismo Exponente</div>
+
+                <!-- Ejemplo 8 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 8:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $2^3 \cdot 5^3 = (2 \cdot 5)^3 = 10^3$</li>
+                            <li><strong>Propiedad aplicada:</strong> Producto de potencias con el mismo exponente ($a^c \cdot b^c = (a \cdot b)^c$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 9 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 9:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $2^2 \cdot 3^2 \cdot 4^2 = (2 \cdot 3 \cdot 4)^2 = 24^2$</li>
+                            <li><strong>Propiedad aplicada:</strong> Producto de múltiples potencias con el mismo exponente ($a^d \cdot b^d \cdot c^d = (a \cdot b \cdot c)^d$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 10 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 10:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{12^3}{4^3} = \left(\frac{12}{4}\right)^3 = 3^3$</li>
+                            <li><strong>Propiedad aplicada:</strong> Cociente de potencias con el mismo exponente ($\frac{a^c}{b^c} = \left(\frac{a}{b}\right)^c$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 11 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 11:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $20^2 : 5^2 = (20 : 5)^2 = 4^2$</li>
+                            <li><strong>Propiedad aplicada:</strong> Cociente de potencias con el mismo exponente ($a^c : b^c = (a : b)^c$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 12 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 12:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{6^4 \cdot 4^4}{8^4} = \left(\frac{6 \cdot 4}{8}\right)^4 = \left(\frac{24}{8}\right)^4 = 3^4$</li>
+                            <li><strong>Propiedades aplicadas:</strong> Producto ($a^c \cdot b^c = (a \cdot b)^c$) y cociente ($\frac{a^c}{b^c} = \left(\frac{a}{b}\right)^c$) con el mismo exponente.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: CASOS ESPECIALES Y SIMETRÍA -->
+            <div class="step-block">
+                <div class="step-title">Bloque 3: Casos Especiales y Propiedad Simétrica</div>
+
+                <!-- Ejemplo 13 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 13:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{8^4}{8^4} = 8^{4-4} = 8^0$</li>
+                            <li><strong>Propiedad aplicada:</strong> Resta de exponentes de la misma base que da lugar al exponente cero ($\frac{a^b}{a^b} = a^{b-b} = a^0 = 1$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 14 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 14:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{9^3}{9^2} = 9^{3-2} = 9^1$</li>
+                            <li><strong>Propiedad aplicada:</strong> Resta de exponentes de la misma base que da lugar al exponente uno ($\frac{a^b}{a^c} = a^{b-c} = a^1 = a$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 15 -->
+                <div class="division-table-container" style="background: #f0f9ff; border-color: #00769d;">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 15:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $10^4 \cdot 10^2 = 10^{4+2} = 10^6$</li>
+                            <li><strong>Propiedad aplicada:</strong> Producto de potencias de igual base aplicadas a la base 10 ($10^b \cdot 10^c = 10^{b+c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 16 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 16:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $(2 \cdot 3)^5 = 2^5 \cdot 3^5$</li>
+                            <li><strong>Propiedad aplicada:</strong> Distribución del exponente respecto a la multiplicación ($(a \cdot b)^c = a^c \cdot b^c$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 17 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 17:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo (Opción A):</strong> $4^3 \cdot 4^3 = 4^{3+3} = 4^6$</li>
+                            <li><strong>Operación y desarrollo (Opción B):</strong> $4^3 \cdot 4^3 = (4 \cdot 4)^3 = 16^3$</li>
+                            <li><strong>Propiedades aplicadas:</strong> Se puede resolver por igual base ($a^b \cdot a^c = a^{b+c}$) o por igual exponente ($a^c \cdot b^c = (a \cdot b)^c$).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: OPERACIONES COMBINADAS -->
+            <div class="step-block">
+                <div class="step-title">Bloque 4: Operaciones Combinadas Complejas</div>
+
+                <!-- Ejemplo 18 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 18:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $(2^2)^3 \cdot 2^4 = 2^{2 \cdot 3} \cdot 2^4 = 2^6 \cdot 2^4 = 2^{6+4} = 2^{10}$</li>
+                            <li><strong>Propiedades aplicadas:</strong> Potencia de potencia ($(a^b)^c = a^{b \cdot c}$) y producto de igual base ($a^b \cdot a^c = a^{b+c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 19 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 19:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{2^5 \cdot 3^4}{2^3 \cdot 3^2} = 2^{5-3} \cdot 3^{4-2} = 2^2 \cdot 3^2 = (2 \cdot 3)^2 = 6^2$</li>
+                            <li><strong>Propiedades aplicadas:</strong> Cociente de igual base ($\frac{a^b}{a^c} = a^{b-c}$) y producto de igual exponente ($a^c \cdot b^c = (a \cdot b)^c$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 20 -->
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <strong>Ejemplo 20:</strong><br>
+                        <ul>
+                            <li><strong>Operación y desarrollo:</strong> $\frac{(5^2 \cdot 5^3)^2}{5^7} = \frac{(5^{2+3})^2}{5^7} = \frac{(5^5)^2}{5^7} = \frac{5^{5 \cdot 2}}{5^7} = \frac{5^{10}}{5^7} = 5^{10-7} = 5^3$</li>
+                            <li><strong>Propiedades aplicadas:</strong> Producto de igual base ($a^b \cdot a^c = a^{b+c}$), potencia de potencia ($(a^b)^c = a^{b \cdot c}$) y cociente de igual base ($\frac{a^b}{a^c} = a^{b-c}$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

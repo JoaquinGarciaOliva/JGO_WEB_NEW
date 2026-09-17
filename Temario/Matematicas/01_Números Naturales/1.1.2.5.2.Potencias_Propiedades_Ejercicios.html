@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Propiedades de las Potencias</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>Ejercicios de Matemáticas: Propiedades de las Potencias</h1>
+   
+    <div class="exercise-list">
+       
+        <!-- EJERCICIO 1 -->
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Expresa el resultado como una sola potencia utilizando el producto de potencias de la misma base (Nivel 1 - Fácil):<br>
+            a) $2^3 \cdot 2^4$<br>b) $3^5 \cdot 3^2$<br>c) $5^1 \cdot 5^4$<br>d) $7^6 \cdot 7^3$</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+              <p><strong>Solución Ejercicio 1:</strong></p>
+              <p>a) $2^{3+4} = 2^7$<br>b) $3^{5+2} = 3^7$<br>c) $5^{1+4} = 5^5$<br>d) $7^{6+3} = 7^9$</p>
+            </div>                
+        </div>
+
+        <!-- EJERCICIO 2 -->
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Simplifica utilizando el cociente de potencias de la misma base (Nivel 1 - Fácil):<br>
+            a) $4^8 : 4^3$<br>b) $\dfrac{6^7}{6^2}$<br>c) $9^5 : 9^4$<br>d) $\dfrac{10^9}{10^3}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+              <p><strong>Solución Ejercicio 2:</strong></p>
+              <p>a) $4^{8-3} = 4^5$<br>b) $6^{7-2} = 6^5$<br>c) $9^{5-4} = 9^1$<br>d) $10^{9-3} = 10^6$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 3 -->
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Aplica la propiedad de potencia de una potencia (Nivel 1 - Fácil):<br>
+            a) $(2^4)^2$<br>b) $(3^3)^3$<br>c) $(5^2)^5$<br>d) $(8^1)^6$</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+              <p><strong>Solución Ejercicio 3:</strong></p>
+              <p>a) $2^{4 \cdot 2} = 2^8$<br>b) $3^{3 \cdot 3} = 3^9$<br>c) $5^{2 \cdot 5} = 5^{10}$<br>d) $8^{1 \cdot 6} = 8^6$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 4 -->
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Expresa como una sola potencia multiplicando las bases (Nivel 1 - Fácil):<br>
+            a) $2^3 \cdot 3^3$<br>b) $4^2 \cdot 5^2$<br>c) $3^4 \cdot 3^4$<br>d) $2^5 \cdot 10^5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+              <p><strong>Solución Ejercicio 4:</strong></p>
+              <p>a) $(2 \cdot 3)^3 = 6^3$<br>b) $(4 \cdot 5)^2 = 20^2$<br>c) $(3 \cdot 3)^4 = 9^4$<br>d) $(2 \cdot 10)^5 = 20^5$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 5 -->
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Expresa como una sola potencia dividiendo las bases (Nivel 1 - Fácil):<br>
+            a) $12^4 : 4^4$<br>b) $\dfrac{15^3}{5^3}$<br>c) $20^2 : 2^2$<br>d) $\dfrac{18^6}{9^6}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+              <p><strong>Solución Ejercicio 5:</strong></p>
+              <p>a) $(12 : 4)^4 = 3^4$<br>b) $\left(\dfrac{15}{5}\right)^3 = 3^3$<br>c) $(20 : 2)^2 = 10^2$<br>d) $\left(\dfrac{18}{9}\right)^6 = 2^6$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 6 -->
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Simplifica el producto de tres potencias de igual base (Nivel 1 - Fácil):<br>
+            a) $2^2 \cdot 2^3 \cdot 2^4$<br>b) $3^1 \cdot 3^4 \cdot 3^2$<br>c) $5^3 \cdot 5^3 \cdot 5^2$<br>d) $10^2 \cdot 10^4 \cdot 10^1$</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+              <p><strong>Solución Ejercicio 6:</strong></p>
+              <p>a) $2^{2+3+4} = 2^9$<br>b) $3^{1+4+2} = 3^7$<br>c) $5^{3+3+2} = 5^8$<br>d) $10^{2+4+1} = 10^7$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 7 -->
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">Aplica la propiedad del exponente cero o uno para simplificar la expresión a una potencia (Nivel 1 - Fácil):<br>
+            a) $5^4 \cdot 5^0$<br>b) $7^6 : 7^6$<br>c) $2^8 \cdot 2^1$<br>d) $\dfrac{9^3}{9^2}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+              <p><strong>Solución Ejercicio 7:</strong></p>
+              <p>a) $5^{4+0} = 5^4$<br>b) $7^{6-6} = 7^0$<br>c) $2^{8+1} = 2^9$<br>d) $9^{3-2} = 9^1$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 8 -->
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Reduce las operaciones combinadas básicas de izquierda a derecha (Nivel 1 - Fácil):<br>
+            a) $2^8 : 2^3 \cdot 2^2$<br>b) $3^4 \cdot 3^5 : 3^2$<br>c) $5^7 : 5^2 : 5^3$<br>d) $6^2 \cdot 6^6 : 6^4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+              <p><strong>Solución Ejercicio 8:</strong></p>
+              <p>a) $2^{8-3+2} = 2^7$<br>b) $3^{4+5-2} = 3^7$<br>c) $5^{7-2-3} = 5^2$<br>d) $6^{2+6-4} = 6^4$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 9 -->
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Aplica la propiedad distributiva de la potencia sobre el producto (Nivel 1 - Fácil):<br>
+            a) $(2 \cdot 5)^4$<br>b) $(3 \cdot 7)^2$<br>c) $(4 \cdot 6)^3$<br>d) $(5 \cdot 8)^5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+              <p><strong>Solución Ejercicio 9:</strong></p>
+              <p>a) $2^4 \cdot 5^4$<br>b) $3^2 \cdot 7^2$<br>c) $4^3 \cdot 6^3$<br>d) $5^5 \cdot 8^5$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 10 -->
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Descompón la potencia del cociente en cociente de potencias (Nivel 1 - Fácil):<br>
+            a) $(8 : 2)^3$<br>b) $\left(\dfrac{12}{3}\right)^5$<br>c) $(10 : 5)^2$<br>d) $\left(\dfrac{14}{7}\right)^4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+              <p><strong>Solución Ejercicio 10:</strong></p>
+              <p>a) $8^3 : 2^3$<br>b) $\dfrac{12^5}{3^5}$<br>c) $10^2 : 5^2$<br>d) $\dfrac{14^4}{7^4}$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 11 -->
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Simplifica combinando productos y potencias de una potencia (Nivel 2 - Intermedio):<br>
+            a) $(2^3)^2 \cdot 2^4$<br>b) $3^5 \cdot (3^2)^3$<br>c) $(5^4)^2 \cdot 5^3$<br>d) $7^2 \cdot (7^3)^4$</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+              <p><strong>Solución Ejercicio 11:</strong></p>
+              <p>a) $2^6 \cdot 2^4 = 2^{6+4} = 2^{10}$<br>b) $3^5 \cdot 3^6 = 3^{5+6} = 3^{11}$<br>c) $5^8 \cdot 5^3 = 5^{8+3} = 5^{11}$<br>d) $7^2 \cdot 7^{12} = 7^{2+12} = 7^{14}$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 12 -->
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">Simplifica combinando cocientes y potencias de una potencia (Nivel 2 - Intermedio):<br>
+            a) $(4^5)^2 : 4^6$<br>b) $\dfrac{(6^3)^4}{6^8}$<br>c) $(2^8)^2 : 2^{10}$<br>d) $\dfrac{(10^4)^3}{10^7}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+              <p><strong>Solución Ejercicio 12:</strong></p>
+              <p>a) $4^{10} : 4^6 = 4^{10-6} = 4^4$<br>b) $\dfrac{6^{12}}{6^8} = 6^{12-8} = 6^4$<br>c) $2^{16} : 2^{10} = 2^{16-10} = 2^6$<br>d) $\dfrac{10^{12}}{10^7} = 10^{12-7} = 10^5$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 13 -->
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Calcula agrupando términos con el mismo exponente (Nivel 2 - Intermedio):<br>
+            a) $2^4 \cdot 3^4 \cdot 5^4$<br>b) $20^5 : 2^5 : 5^5$<br>c) $2^3 \cdot 4^3 \cdot 3^3$<br>d) $36^2 : 3^2 : 4^2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+              <p><strong>Solución Ejercicio 13:</strong></p>
+              <p>a) $(2 \cdot 3 \cdot 5)^4 = 30^4$<br>b) $(20 : 2 : 5)^5 = 2^5$<br>c) $(2 \cdot 4 \cdot 3)^3 = 24^3$<br>d) $(36 : 3 : 4)^2 = 3^2$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 14 -->
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Reduce reduciendo primero las bases a un mismo número (Nivel 2 - Intermedio):<br>
+            a) $4^2 \cdot 2^3$<br>b) $9^3 : 3^4$<br>c) $25^2 \cdot 5^3$<br>d) $8^2 : 2^5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+              <p><strong>Solución Ejercicio 14:</strong></p>
+              <p>a) $(2^2)^2 \cdot 2^3 = 2^4 \cdot 2^3 = 2^7$<br>b) $(3^2)^3 : 3^4 = 3^6 : 3^4 = 3^2$<br>c) $(5^2)^2 \cdot 5^3 = 5^4 \cdot 5^3 = 5^7$<br>d) $(2^3)^2 : 2^5 = 2^6 : 2^5 = 2^1$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 15 -->
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Simplifica expresiones fraccionarias sencillas (Nivel 2 - Intermedio):<br>
+            a) $\dfrac{2^4 \cdot 2^5}{2^3}$<br>b) $\dfrac{3^8}{3^2 \cdot 3^4}$<br>c) $\dfrac{5^6 \cdot 5^2}{5^5}$<br>d) $\dfrac{7^9}{7^3 \cdot 7^3}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+              <p><strong>Solución Ejercicio 15:</strong></p>
+              <p>a) $\dfrac{2^{4+5}}{2^3} = \dfrac{2^9}{2^3} = 2^{9-3} = 2^6$<br>b) $\dfrac{3^8}{3^{2+4}} = \dfrac{3^8}{3^6} = 3^{8-6} = 3^2$<br>c) $\dfrac{5^{6+2}}{5^5} = \dfrac{5^8}{5^5} = 5^{8-5} = 5^3$<br>d) $\dfrac{7^9}{7^{3+3}} = \dfrac{7^9}{7^6} = 7^{9-6} = 7^3$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 16 -->
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Resuelve paréntesis anidados simples (Nivel 2 - Intermedio):<br>
+            a) $((2^2)^3)^2$<br>b) $((3^1)^4)^3$<br>c) $((5^2)^2)^2$<br>d) $((10^3)^2)^1$</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+              <p><strong>Solución Ejercicio 16:</strong></p>
+              <p>a) $2^{2 \cdot 3 \cdot 2} = 2^{12}$<br>b) $3^{1 \cdot 4 \cdot 3} = 3^{12}$<br>c) $5^{2 \cdot 2 \cdot 2} = 5^8$<br>d) $10^{3 \cdot 2 \cdot 1} = 10^6$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 17 -->
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Aplica propiedades combinando potencias de la misma base y del mismo exponente (Nivel 2 - Intermedio):<br>
+            a) $(2^3 \cdot 3^3)^2$<br>b) $(12^4 : 4^4)^3$<br>c) $(5^2 \cdot 2^2)^4$<br>d) $(18^5 : 6^5)^2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+              <p><strong>Solución Ejercicio 17:</strong></p>
+              <p>a) $(6^3)^2 = 6^{3 \cdot 2} = 6^6$<br>b) $(3^4)^3 = 3^{4 \cdot 3} = 3^{12}$<br>c) $(10^2)^4 = 10^{2 \cdot 4} = 10^8$<br>d) $(3^5)^2 = 3^{5 \cdot 2} = 3^{10}$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 18 -->
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Simplifica combinando el producto de distintas bases agrupables (Nivel 2 - Intermedio):<br>
+            a) $2^3 \cdot 3^3 \cdot 2^4 \cdot 3^4$<br>b) $5^2 \cdot 4^2 \cdot 5^5 \cdot 4^5$<br>c) $7^1 \cdot 2^1 \cdot 7^3 \cdot 2^3$<br>d) $3^6 \cdot 10^6 \cdot 3^2 \cdot 10^2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+              <p><strong>Solución Ejercicio 18:</strong></p>
+              <p>a) $2^{3+4} \cdot 3^{3+4} = 2^7 \cdot 3^7 = (2 \cdot 3)^7 = 6^7$<br>b) $5^{2+5} \cdot 4^{2+5} = 5^7 \cdot 4^7 = (5 \cdot 4)^7 = 20^7$<br>c) $7^{1+3} \cdot 2^{1+3} = 7^4 \cdot 2^4 = (7 \cdot 2)^4 = 14^4$<br>d) $3^{6+2} \cdot 10^{6+2} = 3^8 \cdot 10^8 = (3 \cdot 10)^8 = 30^8$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 19 -->
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Expresa en forma de una única potencia descomponiendo bases compuestas simples (Nivel 2 - Intermedio):<br>
+            a) $8^2 \cdot 4^3$<br>b) $27^2 : 9^2$<br>c) $16^3 : 2^4$<br>d) $81^2 \cdot 3^2$</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+              <p><strong>Solución Ejercicio 19:</strong></p>
+              <p>a) $(2^3)^2 \cdot (2^2)^3 = 2^6 \cdot 2^6 = 2^{12}$<br>b) $(3^3)^2 : (3^2)^2 = 3^6 : 3^4 = 3^2$<br>c) $(2^4)^3 : 2^4 = 2^{12} : 2^4 = 2^8$<br>d) $(3^4)^2 \cdot 3^2 = 3^8 \cdot 3^2 = 3^{10}$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 20 -->
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Aplica la propiedad del cociente en fracciones con operaciones en los términos (Nivel 2 - Intermedio):<br>
+            a) $\dfrac{2^7 \cdot 2^3}{2^4 \cdot 2^2}$<br>b) $\dfrac{3^9 : 3^3}{3^2 \cdot 3^1}$<br>c) $\dfrac{5^5 \cdot 5^5}{5^3 \cdot 5^4}$<br>d) $\dfrac{10^8 : 10^2}{10^2 \cdot 10^3}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+              <p><strong>Solución Ejercicio 20:</strong></p>
+              <p>a) $\dfrac{2^{10}}{2^6} = 2^{10-6} = 2^4$<br>b) $\dfrac{3^6}{3^3} = 3^{6-3} = 3^3$<br>c) $\dfrac{5^{10}}{5^7} = 5^{10-7} = 5^3$<br>d) $\dfrac{10^6}{10^5} = 10^{6-5} = 10^1$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 21 -->
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Simplifica las expresiones reduciendo previamente todas las bases a números primos (Nivel 3 - Difícil):<br>
+            a) $\dfrac{8^3 \cdot 4^2}{2^8}$<br>b) $\dfrac{9^4 \cdot 27^2}{3^{10}}$<br>c) $\dfrac{25^3 \cdot 5^4}{125^2}$<br>d) $\dfrac{16^2 \cdot 32^2}{8^4}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+              <p><strong>Solución Ejercicio 21:</strong></p>
+              <p>a) $\dfrac{(2^3)^3 \cdot (2^2)^2}{2^8} = \dfrac{2^9 \cdot 2^4}{2^8} = \dfrac{2^{13}}{2^8} = 2^5$<br>b) $\dfrac{(3^2)^4 \cdot (3^3)^2}{3^{10}} = \dfrac{3^8 \cdot 3^6}{3^{10}} = \dfrac{3^{14}}{3^{10}} = 3^4$<br>c) $\dfrac{(5^2)^3 \cdot 5^4}{(5^3)^2} = \dfrac{5^6 \cdot 5^4}{5^6} = \dfrac{5^{10}}{5^6} = 5^4$<br>d) $\dfrac{(2^4)^2 \cdot (2^5)^2}{(2^3)^4} = \dfrac{2^8 \cdot 2^{10}}{2^{12}} = \dfrac{2^{18}}{2^{12}} = 2^6$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 22 -->
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Simplifica agrupando por bases distintas y dejando el resultado expresado como producto de potencias (Nivel 3 - Difícil):<br>
+            a) $\dfrac{2^5 \cdot 3^4 \cdot 2^2}{2^3 \cdot 3^2}$<br>b) $\dfrac{5^6 \cdot 7^3 \cdot 5^1}{5^4 \cdot 7^1}$<br>c) $\dfrac{3^8 \cdot 10^5}{3^5 \cdot 10^2 \cdot 10^1}$<br>d) $\dfrac{2^9 \cdot 5^4 \cdot 2^1}{2^6 \cdot 5^2 \cdot 5^1}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+              <p><strong>Solución Ejercicio 22:</strong></p>
+              <p>a) $\dfrac{2^7 \cdot 3^4}{2^3 \cdot 3^2} = 2^{7-3} \cdot 3^{4-2} = 2^4 \cdot 3^2$<br>b) $\dfrac{5^7 \cdot 7^3}{5^4 \cdot 7^1} = 5^{7-4} \cdot 7^{3-1} = 5^3 \cdot 7^2$<br>c) $\dfrac{3^8 \cdot 10^5}{3^5 \cdot 10^3} = 3^{8-5} \cdot 10^{5-3} = 3^3 \cdot 10^2$<br>d) $\dfrac{2^{10} \cdot 5^4}{2^6 \cdot 5^3} = 2^{10-6} \cdot 5^{4-3} = 2^4 \cdot 5^1$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 23 -->
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Simplifica combinando potencias de potencias dentro de fracciones complejas (Nivel 3 - Difícil):<br>
+            a) $\dfrac{(2^3)^4 \cdot (2^2)^2}{(2^4)^3}$<br>b) $\dfrac{(3^5)^2 : (3^2)^3}{(3^1)^2}$<br>c) $\dfrac{(5^3)^3 \cdot 5^2}{(5^2)^4}$<br>d) $\dfrac{(10^2)^5 : (10^3)^2}{(10^1)^3}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+              <p><strong>Solución Ejercicio 23:</strong></p>
+              <p>a) $\dfrac{2^{12} \cdot 2^4}{2^{12}} = \dfrac{2^{16}}{2^{12}} = 2^4$<br>b) $\dfrac{3^{10} : 3^6}{3^2} = \dfrac{3^4}{3^2} = 3^2$<br>c) $\dfrac{5^9 \cdot 5^2}{5^8} = \dfrac{5^{11}}{5^8} = 5^3$<br>d) $\dfrac{10^{10} : 10^6}{10^3} = \dfrac{10^4}{10^3} = 10^1$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 24 -->
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Reduce a una única potencia agrupando bases por igual exponente al final del proceso (Nivel 3 - Difícil):<br>
+            a) $\dfrac{4^3 \cdot 9^3}{6^4}$<br>b) $\dfrac{8^2 \cdot 27^2}{6^3}$<br>c) $\dfrac{12^4}{2^4 \cdot 3^4}$<br>d) $\dfrac{20^5}{4^5 \cdot 5^2}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+              <p><strong>Solución Ejercicio 24:</strong></p>
+              <p>a) $\dfrac{(4 \cdot 9)^3}{6^4} = \dfrac{36^3}{6^4} = \dfrac{(6^2)^3}{6^4} = \dfrac{6^6}{6^4} = 6^2$<br>b) $\dfrac{(8 \cdot 27)^2}{6^3} = \dfrac{216^2}{6^3} = \dfrac{(6^3)^2}{6^3} = \dfrac{6^6}{6^3} = 6^3$<br>c) $\dfrac{12^4}{(2 \cdot 3)^4} = \dfrac{12^4}{6^4} = (12 : 6)^4 = 2^4$<br>d) $\dfrac{(4 \cdot 5)^5}{4^5 \cdot 5^2} = \dfrac{4^5 \cdot 5^5}{4^5 \cdot 5^2} = 5^{5-2} = 5^3$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 25 -->
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Resuelve corchetes con potencias elevadas a otros exponentes (Nivel 3 - Difícil):<br>
+            a) $[(2^3 \cdot 2^2)^2]^3$<br>b) $[(3^8 : 3^5)^2]^2$<br>c) $[(5^4 : 5^1) \cdot 5^2]^2$<br>d) $[(10^2 \cdot 10^3) : 10^4]^5$</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+              <p><strong>Solución Ejercicio 25:</strong></p>
+              <p>a) $[(2^5)^2]^3 = [2^{10}]^3 = 2^{30}$<br>b) $[(3^3)^2]^2 = [3^6]^2 = 3^{12}$<br>c) $[5^3 \cdot 5^2]^2 = [5^5]^2 = 5^{10}$<br>d) $[10^5 : 10^4]^5 = [10^1]^5 = 10^5$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 26 -->
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">Simplifica expresiones con múltiples productos y divisiones compuestas (Nivel 3 - Difícil):<br>
+            a) $\dfrac{(2^4 \cdot 3^4)^2}{6^5}$<br>b) $\dfrac{(4^3 \cdot 5^3)^3}{20^7}$<br>c) $\dfrac{(10^5 : 2^5)^2}{5^6}$<br>d) $\dfrac{(18^4 : 9^4)^3}{2^8}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+              <p><strong>Solución Ejercicio 26:</strong></p>
+              <p>a) $\dfrac{((2 \cdot 3)^4)^2}{6^5} = \dfrac{(6^4)^2}{6^5} = \dfrac{6^8}{6^5} = 6^3$<br>b) $\dfrac{((4 \cdot 5)^3)^3}{20^7} = \dfrac{(20^3)^3}{20^7} = \dfrac{20^9}{20^7} = 20^2$<br>c) $\dfrac{((10 : 2)^5)^2}{5^6} = \dfrac{(5^5)^2}{5^6} = \dfrac{5^{10}}{5^6} = 5^4$<br>d) $\dfrac{((18 : 9)^4)^3}{2^8} = \dfrac{(2^4)^3}{2^8} = \dfrac{2^{12}}{2^8} = 2^4$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 27 -->
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Expresa en forma de una única potencia tras operar bases no primas (Nivel 3 - Difícil):<br>
+            a) $\dfrac{16^2 \cdot 4^4}{8^3}$<br>b) $\dfrac{27^3 \cdot 9^2}{81^2}$<br>c) $\dfrac{36^3 : 6^2}{6^3}$<br>d) $\dfrac{100^4 : 10^3}{10^2}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+              <p><strong>Solución Ejercicio 27:</strong></p>
+              <p>a) $\dfrac{(2^4)^2 \cdot (2^2)^4}{(2^3)^3} = \dfrac{2^8 \cdot 2^8}{2^9} = \dfrac{2^{16}}{2^9} = 2^7$<br>b) $\dfrac{(3^3)^3 \cdot (3^2)^2}{(3^4)^2} = \dfrac{3^9 \cdot 3^4}{3^8} = \dfrac{3^{13}}{3^8} = 3^5$<br>c) $\dfrac{(6^2)^3 : 6^2}{6^3} = \dfrac{6^6 : 6^2}{6^3} = \dfrac{6^4}{6^3} = 6^1$<br>d) $\dfrac{(10^2)^4 : 10^3}{10^2} = \dfrac{10^8 : 10^3}{10^2} = \dfrac{10^5}{10^2} = 10^3$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 28 -->
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Aplica propiedades combinadas en expresiones de tres o más factores distintos en el denominador (Nivel 3 - Difícil):<br>
+            a) $\dfrac{2^8 \cdot 3^5 \cdot 5^4}{2^5 \cdot 3^3 \cdot 5^2}$<br>b) $\dfrac{3^{10} \cdot 7^6 \cdot 2^4}{3^7 \cdot 7^4 \cdot 2^4}$<br>c) $\dfrac{5^7 \cdot 4^5 \cdot 3^3}{5^4 \cdot 4^5 \cdot 3^1}$<br>d) $\dfrac{10^6 \cdot 2^8 \cdot 7^5}{10^4 \cdot 2^6 \cdot 7^5}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+              <p><strong>Solución Ejercicio 28:</strong></p>
+              <p>a) $2^{8-5} \cdot 3^{5-3} \cdot 5^{4-2} = 2^3 \cdot 3^2 \cdot 5^2$<br>b) $3^{10-7} \cdot 7^{6-4} \cdot 2^{4-4} = 3^3 \cdot 7^2 \cdot 2^0 = 3^3 \cdot 7^2$<br>c) $5^{7-4} \cdot 4^{5-5} \cdot 3^{3-1} = 5^3 \cdot 4^0 \cdot 3^2 = 5^3 \cdot 3^2$<br>d) $10^{6-4} \cdot 2^{8-6} \cdot 7^{5-5} = 10^2 \cdot 2^2 \cdot 7^0 = 10^2 \cdot 2^2$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 29 -->
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Simplifica corchetes con potencias complejas divididas por potencias simples (Nivel 3 - Difícil):<br>
+            a) $\dfrac{[(2^4 \cdot 2^3)^2]^2}{2^{20}}$<br>b) $\dfrac{[(3^2)^4 \cdot 3^3]^2}{3^{18}}$<br>c) $\dfrac{[(5^5 : 5^2)^3]^2}{5^{15}}$<br>d) $\dfrac{[(10^3 \cdot 10^1)^3]^2}{10^{20}}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+              <p><strong>Solución Ejercicio 29:</strong></p>
+              <p>a) $\dfrac{[(2^7)^2]^2}{2^{20}} = \dfrac{[2^{14}]^2}{2^{20}} = \dfrac{2^{28}}{2^{20}} = 2^8$<br>b) $\dfrac{[3^8 \cdot 3^3]^2}{3^{18}} = \dfrac{[3^{11}]^2}{3^{18}} = \dfrac{3^{22}}{3^{18}} = 3^4$<br>c) $\dfrac{[(5^3)^3]^2}{5^{15}} = \dfrac{[5^9]^2}{5^{15}} = \dfrac{5^{18}}{5^{15}} = 5^3$<br>d) $\dfrac{[(10^4)^3]^2}{10^{20}} = \dfrac{[10^{12}]^2}{10^{20}} = \dfrac{10^{24}}{10^{20}} = 10^4$</p>
+            </div> 
+        </div>
+
+        <!-- EJERCICIO 30 -->
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Desafío final: Simplifica totalmente la expresión utilizando múltiples propiedades (Nivel 3 - Difícil):<br>
+            a) $\dfrac{(2^3 \cdot 4^2)^2}{(8^2)^2}$<br>b) $\dfrac{(3^2 \cdot 9^2)^3}{(27^2)^2}$<br>c) $\dfrac{(5^1 \cdot 25^2)^2}{(125^1)^3}$<br>d) $\dfrac{(6^2 \cdot 36^1)^3}{(216^1)^2}$</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+              <p><strong>Solución Ejercicio 30:</strong></p>
+              <p>a) $\dfrac{(2^3 \cdot (2^2)^2)^2}{((2^3)^2)^2} = \dfrac{(2^3 \cdot 2^4)^2}{(2^6)^2} = \dfrac{(2^7)^2}{2^{12}} = \dfrac{2^{14}}{2^{12}} = 2^2$<br>b) $\dfrac{(3^2 \cdot (3^2)^2)^3}{((3^3)^2)^2} = \dfrac{(3^2 \cdot 3^4)^3}{(3^6)^2} = \dfrac{(3^6)^3}{3^{12}} = \dfrac{3^{18}}{3^{12}} = 3^6$<br>c) $\dfrac{(5^1 \cdot (5^2)^2)^2}{((5^3)^1)^3} = \dfrac{(5^1 \cdot 5^4)^2}{(5^3)^3} = \dfrac{(5^5)^2}{5^9} = \dfrac{5^{10}}{5^9} = 5^1$<br>d) $\dfrac{(6^2 \cdot 6^2)^3}{((6^3)^1)^2} = \dfrac{(6^4)^3}{(6^3)^2} = \dfrac{6^{12}}{6^6} = 6^6$</p>
+            </div> 
+        </div>
+
+    </div>
+
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>

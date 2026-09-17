@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Propiedades de las Potencias</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box.warning {
+            background-color: #fff5f5;
+            border-left-color: #e53e3e;
+        }
+
+        .regla-box.warning strong {
+            color: #c53030;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Potencias en los Números Naturales</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Propiedades de las Potencias</h2>
+            <p>Las propiedades de las potencias son reglas matemáticas que nos permiten simplificar operaciones complejas de forma rápida. Se dividen principalmente en dos grandes clases: <strong>potencias con la misma base</strong> y <strong>potencias con el mismo exponente</strong>.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1: MISMA BASE -->
+            <div class="step-block">
+                <div class="step-title">1. Potencias con la Misma Base</div>
+                <p>Cuando trabajamos con potencias que tienen la misma base, encontramos tres operaciones fundamentales:</p>
+                <br>
+
+                <!-- 1.1 Multiplicación -->
+                <h3>A) Multiplicación de potencias con la misma base</h3>
+                <div class="regla-box">
+                    <strong>Regla:</strong> Para multiplicar potencias con la misma base, se <strong>conserva la base</strong> y se <strong>suman los exponentes</strong>.
+                    $$a^n \cdot a^m = a^{n+m}$$
+                </div>
+
+                <p>Al principio, detallamos el proceso paso a paso escribiendo la suma en el exponente:</p>
+                $$2^3 \cdot 2^5 = 2^{3+5} = 2^8$$
+
+                <p>Una vez comprendido el concepto, podemos realizar el cálculo directamente:</p>
+                $$2^3 \cdot 2^4 = 2^7$$
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>¿Por qué se suman los exponentes?</strong><br>
+                        La explicación es muy sencilla:
+                        <ul>
+                            <li>$2^3$ significa que tenemos <strong>3 doses</strong> multiplicándose ($2 \cdot 2 \cdot 2$).</li>
+                            <li>$2^5$ significa que tenemos <strong>5 doses</strong> multiplicándose ($2 \cdot 2 \cdot 2 \cdot 2 \cdot 2$).</li>
+                        </ul>
+                        Por lo tanto, $2^3 \cdot 2^5$ representa un producto total de $3 + 5 = 8$ doses multiplicándose entre sí:
+                        $$(2 \cdot 2 \cdot 2) \cdot (2 \cdot 2 \cdot 2 \cdot 2 \cdot 2) = 2^8$$
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #cbd5e0; margin: 20px 0;">
+
+                <!-- 1.2 División -->
+                <h3>B) División de potencias con la misma base</h3>
+                <div class="regla-box">
+                    <strong>Regla:</strong> Para dividir potencias con la misma base, se <strong>conserva la base</strong> y se <strong>restan los exponentes</strong>. La división se puede expresar con dos puntos ($:$) o en forma de fracción.
+                    $$a^n : a^m = \frac{a^n}{a^m} = a^{n-m}$$
+                </div>
+
+                <p>Ejemplo de cálculo directo:</p>
+                $$\frac{2^5}{2^3} = 2^{5-3} = 2^2$$
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>Explicaciones de la propiedad:</strong>
+                        <ul>
+                            <li><strong>Explicación intuitiva (inicial):</strong> Como la división es la operación inversa a la multiplicación, si al multiplicar sumamos los exponentes, al dividir debemos restarlos.</li>
+                            <li><strong>Explicación rigurosa (mediante fracciones):</strong> Si desarrollamos la expresión en forma de fracción:
+                            $$\frac{2^5}{2^3} = \frac{2 \cdot 2 \cdot 2 \cdot 2 \cdot 2}{2 \cdot 2 \cdot 2}$$
+                            Si multiplicamos y dividimos por un mismo número, el resultado no varía (por ejemplo, $\frac{2 \cdot 7}{2} = 7$, no hace falta calcular para saber que el resultado es 7). Por tanto, multiplicar 3 veces por 2 en el numerador y dividir 3 veces por 2 en el denominador se anula mutuamente, quedándonos únicamente dos doses en la parte superior ($2^2$).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #cbd5e0; margin: 20px 0;">
+
+                <!-- 1.3 Potencia de una potencia -->
+                <h3>C) Potencia de una potencia (Exponente de un exponente)</h3>
+                <div class="regla-box">
+                    <strong>Regla:</strong> Para elevar una potencia a otro exponente, se <strong>mantiene la base</strong> y se <strong>multiplican los exponentes</strong>.
+                    $$(a^n)^m = a^{n \cdot m}$$
+                </div>
+
+                <p>Ejemplo práctico:</p>
+                $$(2^3)^4 = 2^{3 \cdot 4} = 2^{12}$$
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <strong>¿Por qué se multiplicaban los exponentes?</strong><br>
+                        La expresión $(2^3)^4$ indica que tenemos el bloque $2^3$ repetido **4 veces** como factor:
+                        $$(2^3)^4 = 2^3 \cdot 2^3 \cdot 2^3 \cdot 2^3$$
+                        Aplicando la regla de la suma de exponentes de la misma base:
+                        $$2^{3+3+3+3}$$
+                        Como sumar 4 veces el mismo número ($3$) equivale a multiplicar $4 \cdot 3$, el resultado final es:
+                        $$2^{4 \cdot 3} = 2^{12}$$
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: MISMO EXPONENTE -->
+            <div class="step-block">
+                <div class="step-title">2. Potencias con el Mismo Exponente</div>
+                
+                <!-- 2.1 Multiplicación -->
+                <h3>A) Multiplicación de potencias con el mismo exponente</h3>
+                <div class="regla-box">
+                    <strong>Regla:</strong> Se <strong>multiplican las bases</strong> y se <strong>mantiene el mismo exponente</strong>.
+                    $$a^c \cdot b^c = (a \cdot b)^c$$
+                </div>
+                <p><strong>Ejemplo:</strong> $2^3 \cdot 5^3 = (2 \cdot 5)^3 = 10^3 = 1000$</p>
+
+                <br>
+
+                <!-- 2.2 División -->
+                <h3>B) División de potencias con el mismo exponente</h3>
+                <div class="regla-box">
+                    <strong>Regla:</strong> Se <strong>dividen las bases</strong> y se <strong>mantiene el mismo exponente</strong>.
+                    $$\frac{a^c}{b^c} = (a : b)^c = \left(\frac{a}{b}\right)^c$$
+                </div>
+                <p><strong>Ejemplo:</strong> $\frac{8^3}{2^3} = \left(\frac{8}{2}\right)^3 = 4^3 = 64$</p>
+            </div>
+
+            <!-- BLOQUE 3: NOTAS IMPORTANTES Y ERRORES FRECUENTES -->
+            <div class="step-block" style="border-color: #e53e3e;">
+                <div class="step-title" style="color: #c53030;">3. Notas Importantes y Advertencias</div>
+
+                <h4>1. Lectura en ambos sentidos (Propiedad simétrica)</h4>
+                <p>Todas las fórmulas matemáticas se pueden leer de izquierda a derecha o de derecha a izquierda. Esto significa que podemos <strong>eliminar o introducir paréntesis</strong> según nos convenga:</p>
+                $$\text{De izquierda a derecha: } a^c \cdot b^c = (a \cdot b)^c$$
+                $$\text{De derecha a izquierda: } (a \cdot b)^c = a^c \cdot b^c$$
+                <p><strong>Ejemplo:</strong> $(3 \cdot 7)^2 = 3^2 \cdot 7^2$. Podemos distribuir el exponente a los elementos que están multiplicando o dividiendo dentro del paréntesis.</p>
+
+                <br>
+
+                <h4>2. ¡ERROR GRAVE! La potencia NO es distributiva respecto a la suma o resta</h4>
+                <div class="regla-box warning">
+                    <strong>¡Atención!</strong> NUNCA se debe aplicar la potencia a los elementos de una suma o resta dentro de un paréntesis. 
+                    $$(a + b)^c \neq a^c + b^c$$
+                </div>
+                <p>En estos casos, no queda más remedio que realizar primero la suma o resta del paréntesis y luego calcular la potencia:</p>
+                $$\text{Correcto: } (2 + 3)^2 = 5^2 = 25$$
+                $$\text{Incorrecto: } (2 + 3)^2 \neq 2^2 + 3^2 \quad (\text{ya que } 4 + 9 = 13 \neq 25)$$
+
+                <br>
+
+                <h4>3. ¿Qué ocurre si coinciden la misma base Y el mismo exponente?</h4>
+                <p>Si te encuentras con una expresión como $2^3 \cdot 2^3$, **puedes aplicar cualquiera de las dos reglas** según te interese:</p>
+                <ul>
+                    <li><strong>Aplicando la regla del mismo exponente:</strong> Multiplicamos las bases y dejamos el exponente $\rightarrow 2^3 \cdot 2^3 = (2 \cdot 2)^3 = 4^3 = 64$.</li>
+                    <li><strong>Aplicando la regla de la misma base:</strong> Dejamos la base y sumamos los exponentes $\rightarrow 2^3 \cdot 2^3 = 2^{3+3} = 2^6 = 64$.</li>
+                </ul>
+                <div class="regla-box">
+                    <strong>Consejo práctico:</strong> Con la práctica verás que, por regla general, siempre es preferible y más cómodo utilizar la <strong>regla de la misma base</strong>.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
