@@ -262,7 +262,7 @@
        imagen="Imagenes/1ESO/hoja5.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.4.N_Calculo_Rapido_Video.mp3"
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.4.N_Calculo_Rapido_Video.mp4"
        teoria="Temario/Matematicas/01_Números Naturales/1.1.4.N_Calculo_Rapido_Teoria.html"
        ejemplos="Temario/Matematicas/01_Números Naturales/1.1.4.N_Calculo_Rapido_Ejemplos.html"
        ejercicios="Temario/Matematicas/01_Números Naturales/1.1.4.N_Calculo_Rapido_Ejercicios.html"
