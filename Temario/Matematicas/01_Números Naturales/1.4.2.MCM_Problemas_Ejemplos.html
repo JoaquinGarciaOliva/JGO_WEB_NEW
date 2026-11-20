@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas de Mínimo Común Múltiplo (m.c.m.) - 1º ESO</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <!-- 1. Configuración de MathJax -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .problem-card {
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .problem-title {
+            font-size: 1.1rem;
+            color: #2635b7;
+            margin-bottom: 12px;
+        }
+
+        .section-box {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #ffffff;
+            border-left: 4px solid #00769d;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .section-box ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .respuesta-box {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #e6fffa;
+            border-left: 4px solid #319795;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #234e52;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Colección de Problemas Resueltos: Mínimo Común Múltiplo</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>10 Problemas Resueltos Paso a Paso Mediante Factorización</h2>
+            <p>A continuación se detallan 10 problemas tipo resueltos mediante la metodología oficial de 1º de ESO: extracción de datos, justificación del planteamiento por palabras clave, descomposición en factores primos para calcular el $\text{m.c.m.}$ y resolución de preguntas complementarias.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- BLOQUE 1: NIVEL BÁSICO -->
+            <div class="step-block">
+                <div class="step-title">Bloque 1: Nivel Básico (Coincidencias temporales sencillas)</div>
+
+                <!-- Problema 1 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 1 (Los autobuses urbanos):</strong> El autobús de la Línea A pasa por la parada central cada 12 minutos y el de la Línea B cada 18 minutos. Si ambos coinciden a las 8:00 de la mañana, ¿cuántos minutos tardarán en volver a coincidir por primera vez? ¿A qué hora exacta ocurrirá?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Autobús Línea A: pasa cada $12\text{ min}$.</li>
+                            <li>Autobús Línea B: pasa cada $18\text{ min}$.</li>
+                            <li>Hora de coincidencia inicial: $8:00\text{ h}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Como los pasos de los autobuses son sucesos que se <em>van repitiendo cíclicamente</em> en el tiempo y el enunciado pregunta cuándo van a <strong>coincidir</strong> de nuevo por primera vez (mínimo tiempo), el problema se plantea calculando el **$\text{m.c.m.}(12, 18)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Descomponemos los números en factores primos:
+                        $$12 = 2^2 \cdot 3$$
+                        $$18 = 2 \cdot 3^2$$
+                        Tomamos los factores primos comunes y no comunes elevados al mayor exponente ($2^2$ y $3^2$):
+                        $$\text{m.c.m.}(12, 18) = 2^2 \cdot 3^2 = 4 \cdot 9 = 36\text{ minutos}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                        - Tiempo transcurrido hasta coincidir: $36\text{ minutos}$.<br>
+                        - Hora exacta de la siguiente coincidencia: $8:00\text{ h} + 36\text{ min} = 8:36\text{ h}$.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Tardarán $36\text{ minutos}$ en volver a coincidir, por lo que volverán a estar juntos en la parada a las **8:36 de la mañana**.
+                    </div>
+                </div>
+
+                <!-- Problema 2 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 2 (Las luces del faro):</strong> Un faro de señalización emite una luz verde cada 10 segundos y una luz roja cada 15 segundos. Si se encienden juntas a las 22:00:00, ¿cada cuántos segundos coinciden encendidas a la vez?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Luz verde: se enciende cada $10\text{ s}$.</li>
+                            <li>Luz roja: se enciende cada $15\text{ s}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        El encendido de cada luz se <em>repite de forma periódica</em>. El enunciado busca el primer momento en el que vuelven a <strong>coincidir</strong> simultáneamente, lo que indica que debemos hallar el **$\text{m.c.m.}(10, 15)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Factorizamos ambos números:
+                        $$10 = 2 \cdot 5$$
+                        $$15 = 3 \cdot 5$$
+                        Seleccionamos los factores comunes y no comunes al mayor exponente ($2, 3, 5$):
+                        $$\text{m.c.m.}(10, 15) = 2 \cdot 3 \cdot 5 = 30\text{ segundos}$$
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Ambas luces coincidirán encendidas a la vez cada **30 segundos**.
+                    </div>
+                </div>
+
+                <!-- Problema 3 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 3 (Visitas a los abuelos):</strong> Alejandro acude a visitar a sus abuelos cada 6 días y su prima Sofia los visita cada 8 días. Si hoy se han encontrado en la casa de sus abuelos, ¿dentro de cuántos días volverán a coincidir?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Frecuencia de visitas de Alejandro: cada $6\text{ días}$.</li>
+                            <li>Frecuencia de visitas de Sofia: cada $8\text{ días}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Las visitas son eventos acumulativos que se <em>repiten cada cierto número de días</em>. La pregunta busca cuándo vuelven a <strong>coincidir</strong> por primera vez en el futuro, por lo que resolvemos mediante el **$\text{m.c.m.}(6, 8)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Descomposición en factores primos:
+                        $$6 = 2 \cdot 3$$
+                        $$8 = 2^3$$
+                        Elegimos los factores con el exponente más alto ($2^3$ y $3$):
+                        $$\text{m.c.m.}(6, 8) = 2^3 \cdot 3 = 8 \cdot 3 = 24\text{ días}$$
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Alejandro y Sofia volverán a coincidir en la casa de sus abuelos dentro de **24 días**.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: NIVEL INTERMEDIO -->
+            <div class="step-block">
+                <div class="step-title">Bloque 2: Nivel Intermedio (Cálculo de paquetes/unidades o 3 elementos)</div>
+
+                <!-- Problema 4 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 4 (Bolsas de golosinas iguales):</strong> Queremos armar bolsitas de regalo. Las nubes de azúcar se venden en paquetes de 10 unidades y los chocolates en paquetes de 25 unidades. ¿Cuál es el número mínimo de golosinas de cada tipo que debemos comprar para tener la misma cantidad de ambas? ¿Cuántos paquetes de cada tipo compraremos?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Unidades por paquete de nubes: $10\text{ nubes}$.</li>
+                            <li>Unidades por paquete de chocolates: $25\text{ chocolates}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Al comprar paquetes, las cantidades de golosinas se van <em>acumulando en múltiplos</em> ($10, 20, 30...$ y $25, 50, 75...$). Queremos obtener una cantidad **común** e **igual** de golosinas comprando el **mínimo** número posible. Por lo tanto, planteamos el **$\text{m.c.m.}(10, 25)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Factorizamos:
+                        $$10 = 2 \cdot 5$$
+                        $$25 = 5^2$$
+                        Tomamos factores comunes y no comunes al mayor exponente ($2$ y $5^2$):
+                        $$\text{m.c.m.}(10, 25) = 2 \cdot 5^2 = 2 \cdot 25 = 50\text{ golosinas}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                        - Paquetes de nubes necesarios: $50 : 10 = 5\text{ paquetes}$.<br>
+                        - Paquetes de chocolates necesarios: $50 : 25 = 2\text{ paquetes}$.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Debemos comprar como mínimo **50 golosinas** de cada tipo. Para ello, compraremos **5 paquetes de nubes** y **2 paquetes de chocolates**.
+                    </div>
+                </div>
+
+                <!-- Problema 5 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 5 (Coincidencia de tres alarmas):</strong> Tres relojes de un laboratorio emiten un pitido: el primero cada 4 minutos, el segundo cada 6 minutos y el tercero cada 8 minutos. Si los tres pitaron a la vez a las 12:00, ¿a qué hora volverán a sonar al mismo tiempo por primera vez?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Reloj 1: pita cada $4\text{ min}$.</li>
+                            <li>Reloj 2: pita cada $6\text{ min}$.</li>
+                            <li>Reloj 3: pita cada $8\text{ min}$.</li>
+                            <li>Hora de inicio simultáneo: $12:00\text{ h}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Tenemos tres frecuencias temporales que se <em>repiten periódicamente</em>. Buscamos el momento **común** en que las tres alarmas vuelvan a **coincidir**, por lo que hay que calcular el **$\text{m.c.m.}(4, 6, 8)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Descomposición de los tres números:
+                        $$4 = 2^2$$
+                        $$6 = 2 \cdot 3$$
+                        $$8 = 2^3$$
+                        Elegimos el mayor exponente para cada factor ($2^3$ y $3$):
+                        $$\text{m.c.m.}(4, 6, 8) = 2^3 \cdot 3 = 8 \cdot 3 = 24\text{ minutos}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a la pregunta:</strong><br>
+                        Sumamos los minutos transcurridos a la hora inicial: $12:00\text{ h} + 24\text{ min} = 12:24\text{ h}$.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Volverán a sonar al mismo tiempo a las **12:24 horas**.
+                    </div>
+                </div>
+
+                <!-- Problema 6 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 6 (Salchichas y panecillos):</strong> Para una fiesta se venden salchichas en paquetes de 8 unidades y panecillos en paquetes de 12 unidades. Si no queremos que sobre ni falte ningún ingrediente (un panecillo por salchicha), ¿cuál es el número mínimo de perritos calientes que podemos preparar y cuántos paquetes de cada tipo debemos comprar?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Paquete de salchichas = $8\text{ unidades}$.</li>
+                            <li>Paquete de panecillos = $12\text{ unidades}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Buscamos una cantidad <em>acumulada igual (común)</em> de ambos productos para que no sobre ninguno, usando la **mínima** cantidad posible. Esto nos indica que el problema se resuelve con el **$\text{m.c.m.}(8, 12)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Factorizamos:
+                        $$8 = 2^3$$
+                        $$12 = 2^2 \cdot 3$$
+                        Tomamos factores comunes y no comunes al mayor exponente ($2^3$ y $3$):
+                        $$\text{m.c.m.}(8, 12) = 2^3 \cdot 3 = 8 \cdot 3 = 24\text{ unidades}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                        - Perritos totales preparados: $24\text{ perritos}$.<br>
+                        - Paquetes de salchichas: $24 : 8 = 3\text{ paquetes}$.<br>
+                        - Paquetes de panecillos: $24 : 12 = 2\text{ paquetes}$.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> El número mínimo de perritos que podemos hacer es **24**. Para ello, compraremos **3 paquetes de salchichas** y **2 paquetes de panecillos**.
+                    </div>
+                </div>
+
+                <!-- Problema 7 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 7 (Entrenamientos de atletismo):</strong> Tres atletas entrenan en una pista circular. El primero tarda 60 segundos en dar una vuelta, el segundo tarda 75 segundos y el tercero 90 segundos. Si parten a la vez de la meta, ¿cuántos minutos tardarán en cruzar juntos la meta de nuevo?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Atleta 1: $60\text{ s}$ por vuelta.</li>
+                            <li>Atleta 2: $75\text{ s}$ por vuelta.</li>
+                            <li>Atleta 3: $90\text{ s}$ por vuelta.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Los atletas van completando vueltas en intervalos de tiempo que se <em>van repitiendo</em>. Queremos averiguar cuándo vuelven a **coincidir** en el punto de salida por primera vez, lo que se calcula hallando el **$\text{m.c.m.}(60, 75, 90)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Descomponemos los tres números en factores primos:
+                        $$60 = 2^2 \cdot 3 \cdot 5$$
+                        $$75 = 3 \cdot 5^2$$
+                        $$90 = 2 \cdot 3^2 \cdot 5$$
+                        Seleccionamos factores al mayor exponente ($2^2, 3^2, 5^2$):
+                        $$\text{m.c.m.}(60, 75, 90) = 2^2 \cdot 3^2 \cdot 5^2 = 4 \cdot 9 \cdot 25 = 900\text{ segundos}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a la pregunta:</strong><br>
+                        Como el enunciado pide la respuesta en minutos, pasamos los segundos a minutos dividiendo entre 60:
+                        $$900 : 60 = 15\text{ minutos}$$
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Los tres atletas tardarán **15 minutos** en cruzar juntos la meta otra vez.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: NIVEL AVANZADO -->
+            <div class="step-block">
+                <div class="step-title">Bloque 3: Nivel Avanzado (Análisis de vueltas, fechas y repartos complejos)</div>
+
+                <!-- Problema 8 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 8 (Rutas de camiones de reparto):</strong> Una empresa de logística envía tres camiones a distintas rutas. El camión A regresa a la central cada 15 días, el B cada 20 días y el C cada 30 días. Si salieron juntos el 1 de octubre, ¿qué día volverán a coincidir todos en la sede? (Nota: Octubre tiene 31 días).</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Camión A: regresa cada $15\text{ días}$.</li>
+                            <li>Camión B: regresa cada $20\text{ días}$.</li>
+                            <li>Camión C: regresa cada $30\text{ días}$.</li>
+                            <li>Fecha de salida conjunta: $1\text{ de octubre}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Las trayectorias de los camiones son eventos cíclicos que se <em>repiten periódicamente</em>. La palabra clave **coincidir** indica que debemos hallar el número de días necesario mediante el **$\text{m.c.m.}(15, 20, 30)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Factorización de las tres cantidades:
+                        $$15 = 3 \cdot 5$$
+                        $$20 = 2^2 \cdot 5$$
+                        $$30 = 2 \cdot 3 \cdot 5$$
+                        Tomamos los factores al mayor exponente ($2^2, 3, 5$):
+                        $$\text{m.c.m.}(15, 20, 30) = 2^2 \cdot 3 \cdot 5 = 4 \cdot 3 \cdot 5 = 60\text{ días}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a la pregunta:</strong><br>
+                        Avanzamos $60\text{ días}$ desde el 1 de octubre:<br>
+                        - Días restantes de octubre: $31 - 1 = 30\text{ días}$ (llegamos al 31 de octubre).<br>
+                        - Quedan por contar: $60 - 30 = 30\text{ días}$ del mes de noviembre.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Coincidirán de nuevo en la central tras $60\text{ días}$, es decir, el **30 de noviembre**.
+                    </div>
+                </div>
+
+                <!-- Problema 9 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 9 (Carrera de coches de slot):</strong> Dos coches eléctricos corren en un circuito. El coche rojo tarda 14 segundos en dar una vuelta y el coche azul tarda 21 segundos. Si salen juntos de la línea de meta, ¿en cuántos segundos coinciden por primera vez y cuántas vueltas habrá dado cada coche en ese instante?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Coche rojo: $14\text{ s}$ por vuelta.</li>
+                            <li>Coche azul: $21\text{ s}$ por vuelta.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Los coches <em>repiten sus tiempos</em> vuelta tras vuelta. El problema nos pide hallar el tiempo en el que vuelven a **coincidir** en la meta, lo que requiere calcular el **$\text{m.c.m.}(14, 21)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Factorizamos ambos tiempos:
+                        $$14 = 2 \cdot 7$$
+                        $$21 = 3 \cdot 7$$
+                        Elegimos factores comunes y no comunes al mayor exponente ($2, 3, 7$):
+                        $$\text{m.c.m.}(14, 21) = 2 \cdot 3 \cdot 7 = 42\text{ segundos}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                        - Tiempo de coincidencia: $42\text{ segundos}$.<br>
+                        - Vueltas del coche rojo: $42 : 14 = 3\text{ vueltas}$.<br>
+                        - Vueltas del coche azul: $42 : 21 = 2\text{ vueltas}$.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Coinciden por primera vez a los **42 segundos**. En ese momento, el coche rojo habrá completado **3 vueltas** y el coche azul **2 vueltas**.
+                    </div>
+                </div>
+
+                <!-- Problema 10 -->
+                <div class="problem-card">
+                    <div class="problem-title"><strong>Problema 10 (Distribución en el almacén de juguetes):</strong> Una fábrica empaqueta muñecas en cajas de 16 unidades, osos de peluche en cajas de 20 unidades y pelotas en cajas de 24 unidades. Se quiere enviar a una tienda la misma cantidad total de cada tipo de juguete usando cajas completas. ¿Cuál es la cantidad mínima de cada juguete que se enviará y cuántas cajas de cada tipo se necesitarán?</div>
+                    
+                    <div class="section-box">
+                        <strong>1. Datos:</strong>
+                        <ul>
+                            <li>Muñecas por caja = $16\text{ unidades}$.</li>
+                            <li>Osos por caja = $20\text{ unidades}$.</li>
+                            <li>Pelotas por caja = $24\text{ unidades}$.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-box">
+                        <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                        Las cantidades de juguetes crecen a medida que añadimos cajas (múltiplos). Como queremos mandar una **misma cantidad igual (común)** para los tres artículos usando el número **mínimo** posible, se plantea calculando el **$\text{m.c.m.}(16, 20, 24)$**.
+                    </div>
+
+                    <div class="section-box">
+                        <strong>3. Factorización y Cálculo del m.c.m.:</strong><br>
+                        Descomposición factorial de las tres cantidades:
+                        $$16 = 2^4$$
+                        $$20 = 2^2 \cdot 5$$
+                        $$24 = 2^3 \cdot 3$$
+                        Tomamos factores comunes y no comunes elevados al mayor exponente ($2^4, 3, 5$):
+                        $$\text{m.c.m.}(16, 20, 24) = 2^4 \cdot 3 \cdot 5 = 16 \cdot 3 \cdot 5 = 240\text{ juguetes}$$
+                    </div>
+
+                    <div class="section-box">
+                        <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                        - Juguetes totales de cada tipo: $240\text{ unidades}$.<br>
+                        - Cajas de muñecas: $240 : 16 = 15\text{ cajas}$.<br>
+                        - Cajas de osos de peluche: $240 : 20 = 12\text{ cajas}$.<br>
+                        - Cajas de pelotas: $240 : 24 = 10\text{ cajas}$.
+                    </div>
+
+                    <div class="respuesta-box">
+                        <strong>Respuesta:</strong> Se enviarán **240 juguetes** de cada tipo. Para ello se necesitarán **15 cajas de muñecas**, **12 cajas de osos** y **10 cajas de pelotas**.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

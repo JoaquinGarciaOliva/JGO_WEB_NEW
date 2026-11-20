@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría y Resolución de Problemas de Mínimo Común Múltiplo (m.c.m.)</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida / Pistas */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .col-digito {
+            width: auto;
+            color: #2d3748;
+            padding: 0 5px !important;
+        }
+
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        .pista-card {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .pista-card h4 {
+            margin-top: 0;
+            color: #2635b7;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guía de Resolución: Problemas de Mínimo Común Múltiplo (m.c.m.)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Estrategia General y Aplicación al $\text{m.c.m.}$</h2>
+            <p>Aprender matemáticas no consiste en memorizar recetas, sino en adquirir una rutina de razonamiento. A continuación, repasaremos el procedimiento universal en <strong>5 pasos</strong> para afrontar cualquier problema y, después, analizaremos las **pistas clave** para identificar y resolver situaciones que involucran el <strong>Mínimo Común Múltiplo ($\text{m.c.m.}$)</strong>.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- ================= PARTE 1 ================= -->
+            <div class="step-block">
+                <div class="step-title">PARTE 1: Recordatorio de los 5 Pasos para Resolver Problemas</div>
+                
+                <div class="regla-box">
+                    <strong>Regla de oro:</strong> Lee el enunciado cuantas veces sea necesario. En la primera lectura comprendes la trama; en la segunda extraes los datos; y solo entonces comienzas a pensar en la herramienta matemática.
+                </div>
+
+                <ol style="line-height: 1.8; font-size: 1.05rem;">
+                    <li>
+                        <strong>Paso 1: Leer el problema para entender la historia (sin mirar los números).</strong><br>
+                        Lee el texto completo omitiendo las cifras para comprender qué está sucediendo. Identifica quiénes son los personajes o elementos y qué acción realizan. <em>(Ejemplo: "Hay unos autobuses que salen periódicamente de una estación y queremos saber cuándo vuelven a juntarse").</em>
+                    </li>
+                    <li>
+                        <strong>Paso 2: Volver a leer para anotar los datos.</strong><br>
+                        Ahora sí importan los números. Anota los datos explícitos (frecuencias, cantidades, unidades) en un esquema claro al margen para no tener que releer el texto largo constantemente.
+                    </li>
+                    <li>
+                        <strong>Paso 3: Plantear el problema.</strong><br>
+                        Determina la herramienta matemática apropiada según el tema. Dependiendo de la situación, puede ser una suma de fracciones, una ecuación o, como en esta unidad, la búsqueda del <strong>mínimo común múltiplo ($\text{m.c.m.}$)</strong>.
+                    </li>
+                    <li>
+                        <strong>Paso 4: Resolver las operaciones.</strong><br>
+                        Aplica los algoritmos aprendidos con rigor (descomposición en factores primos, cálculo de potencias, operaciones combinadas, etc.).
+                    </li>
+                    <li>
+                        <strong>Paso 5: Responder a la pregunta (contextualizar el resultado).</strong><br>
+                        No basta con dejar un número final. Debes escribir una frase completa respondiendo exactamente a lo que se pide, indicando las unidades (minutos, bolsas, días, etc.) y explicando su significado.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- ================= PARTE 2 ================= -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">PARTE 2: Identificación y Pistas en los Problemas de $\text{m.c.m.}$</div>
+                
+                <p>¿Cómo saber si un problema se resuelve calculando el $\text{m.c.m.}$ y no con otra operación? Debemos buscar ciertas <strong>pistas e indicios en el texto</strong>:</p>
+
+                <div class="pista-card">
+                    <h4>1. La palabra clave: "Coincidir" o "Coincidencia"</h4>
+                    <p>Los problemas de $\text{m.c.m.}$ suelen tratar de acciones o eventos que se <strong>repiten de forma periódica en el tiempo o en el espacio</strong>. Buscan averiguar cuándo ocurren simultáneamente en el futuro.</p>
+                    <p><em>Ejemplo clásico:</em> Dos autobuses pasan por la misma parada cada $10$ y $15$ minutos respectivamente. Si salen juntos a las 8:00, ¿cada cuánto tiempo <strong>coinciden</strong> en la parada? ¿Cuántas vueltas da cada uno hasta volver a encontrarse?</p>
+                </div>
+
+                <div class="pista-card">
+                    <h4>2. La palabra "Múltiplo": Acumulación y repetición</h4>
+                    <p>La palabra <em>múltiplo</em> significa que las cantidades dadas se van sumando o multiplicando sucesivamente ($10, 20, 30...$ o $15, 30, 45...$). Van creciendo. Por tanto, el resultado del $\text{m.c.m.}$ será <strong>igual o mayor</strong> que los números iniciales del enunciado.</p>
+                </div>
+
+                <div class="pista-card">
+                    <h4>3. La palabra "Común": Buscar la igualdad</h4>
+                    <p>Buscamos un valor numérico que sea exactamente igual para ambos procesos, es decir, el primer punto donde ambas series de repeticiones se cruzan.</p>
+                    <p><em>Ejemplo de paquetes o lotes:</em> Si doy bolsas de $10$ golosinas a un alumno y bolsas de $25$ golosinas a otro, ¿cuántas golosinas en total y cuántas bolsas debo darle a cada uno para que reciban exactamente la <strong>misma (común)</strong> cantidad?</p>
+                </div>
+
+                <div class="warning-box">
+                    <strong>¡Atención al nombre!</strong> A pesar de llevar la palabra <strong>"mínimo"</strong>, el resultado final será un número <strong>mayor o igual</strong> que los datos del enunciado (es el múltiplo más pequeño donde coinciden, pero sigue siendo un múltiplo grande).
+                </div>
+            </div>
+
+            <!-- ================= SECCIÓN 3: PROBLEMAS RESUELTOS ================= -->
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #2635b7;">Ejemplos Prácticos Resueltos en 5 Pasos</div>
+
+                <!-- PROBLEMA 1: AUTOBUSES -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Problema 1: Coincidencia de Líneas de Autobús</h3>
+                    <p><strong>Enunciado:</strong> En la parada central de una ciudad, la línea A de autobuses pasa cada $10$ minutos y la línea B pasa cada $15$ minutos. Si ambos autobuses coinciden en la parada a las 9:00 de la mañana, ¿a qué hora volverán a coincidir por primera vez? ¿Cuántas vueltas habrá realizado cada autobús hasta ese momento?</p>
+                    
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        Dos autobuses hacen recorridos circulares periódicos. Salen al mismo tiempo y queremos saber cuándo vuelven a encontrarse en el mismo sitio y cuántos viajes ha hecho cada uno.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Frecuencia Autobús A = $10 \text{ min}$<br>
+                        - Frecuencia Autobús B = $15 \text{ min}$<br>
+                        - Hora de coincidencia inicial = $9:00 \text{ h}$</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Como es una repetición periódica en el tiempo y buscamos la primera coincidencia, debemos calcular el <strong>$\text{m.c.m.}(10, 15)$</strong>. Para saber los viajes de cada autobús, dividiremos el tiempo total entre el intervalo de cada línea.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición en factores primos:<br>
+                        $$10 = 2 \cdot 5$$
+                        $$15 = 3 \cdot 5$$
+                        2. Cálculo del $\text{m.c.m.}$ (factores comunes y no comunes al mayor exponente):<br>
+                        $$\text{m.c.m.}(10, 15) = 2 \cdot 3 \cdot 5 = 30 \text{ minutos}$$
+                        3. Vueltas de cada autobús en $30$ minutos:<br>
+                        $$\text{Autobús A} = 30 : 10 = 3 \text{ viajes}$$
+                        $$\text{Autobús B} = 30 : 15 = 2 \text{ viajes}$$
+                        4. Suma del tiempo a la hora inicial: $9:00 + 30 \text{ min} = 9:30 \text{ h}$.</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        Volverán a coincidir en la parada a las <strong>9:30 de la mañana</strong> (tras $30$ minutos). En ese intervalo, el autobús A habrá pasado $3$ veces y el autobús B habrá pasado $2$ veces.</li>
+                    </ul>
+                </div>
+
+                <!-- PROBLEMA 2: BOLSAS DE GOLOSINAS -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Problema 2: Reparto Equitativo de Lotes de Golosinas</h3>
+                    <p><strong>Enunciado:</strong> Un profesor quiere premiar a dos alumnos. A Pedro le regala bolsas cerradas que contienen $10$ golosinas cada una, y a María le entrega bolsas de $25$ golosinas cada una. Si el profesor quiere entregarles exactamente el mismo número total de golosinas a ambos sin abrir ninguna bolsa, ¿cuál es el número mínimo de golosinas que recibirá cada alumno y cuántas bolsas tendrá que darle a cada uno?</p>
+
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        A dos personas se les entregan paquetes con distinto número de golosinas. Queremos dar bolsas enteras de forma que al final ambos tengan la misma cantidad de chucherías en total.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Tamaño de bolsas de Pedro = $10 \text{ golosinas/bolsa}$<br>
+                        - Tamaño de bolsas de María = $25 \text{ golosinas/bolsa}$</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Las golosinas se acumulan en múltiplos de $10$ y de $25$. Como se busca la cantidad mínima común en la que igualan sus totales, se debe calcular el <strong>$\text{m.c.m.}(10, 25)$</strong>. Después, para hallar el número de bolsas, dividiremos esa cantidad total entre el contenido de cada bolsa.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición factorial:<br>
+                        $$10 = 2 \cdot 5$$
+                        $$25 = 5^2$$
+                        2. Cálculo del $\text{m.c.m.}$:<br>
+                        $$\text{m.c.m.}(10, 25) = 2 \cdot 5^2 = 2 \cdot 25 = 50 \text{ golosinas}$$
+                        3. Cálculo del número de bolsas:<br>
+                        $$\text{Bolsas para Pedro} = 50 : 10 = 5 \text{ bolsas}$$
+                        $$\text{Bolsas para María} = 50 : 25 = 2 \text{ bolsas}$$</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        El número mínimo de golosinas que recibirá cada uno es de <strong>$50$ golosinas</strong>. Para ello, el profesor le dará <strong>$5$ bolsas a Pedro</strong> ($5 \cdot 10 = 50$) y <strong>$2$ bolsas a María</strong> ($2 \cdot 25 = 50$).</li>
+                    </ul>
+                </div>
+
+                <!-- PROBLEMA 3: EJEMPLO PROPIO (LUCES / LARA) -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 0; border-left: 4px solid #2635b7;">
+                    <h3 style="margin-top: 0; color: #2635b7;">Problema 3: Programación de Mantenimiento e Iluminación (Ejemplo adicional)</h3>
+                    <p><strong>Enunciado:</strong> En un faro de la costa hay dos luces de señalización marítima. La luz roja parpadea cada $12$ segundos y la luz verde parpadea cada $18$ segundos. Si ambas luces se encienden simultáneamente a las 20:00:00, ¿cada cuántos segundos parpadean a la vez? ¿Cuántas veces habrá parpadeado cada luz al cabo de $2$ minutos?</p>
+
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        Dos luces emiten destellos con frecuencias distintas. Queremos saber cada cuánto tiempo coinciden sus destellos y cuántos parpadeos individuales da cada una en un periodo de tiempo dado.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Frecuencia Luz Roja = $12 \text{ segundos}$<br>
+                        - Frecuencia Luz Verde = $18 \text{ segundos}$<br>
+                        - Tiempo de observación total = $2 \text{ minutos} = 120 \text{ segundos}$</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Calculamos el <strong>$\text{m.c.m.}(12, 18)$</strong> para hallar el intervalo entre coincidencias. Posteriormente, dividiremos el tiempo total ($120 \text{ s}$) entre la frecuencia de cada luz para saber sus destellos totales.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición factorial:<br>
+                        $$12 = 2^2 \cdot 3$$
+                        $$18 = 2 \cdot 3^2$$
+                        2. Cálculo del $\text{m.c.m.}$:<br>
+                        $$\text{m.c.m.}(12, 18) = 2^2 \cdot 3^2 = 4 \cdot 9 = 36 \text{ segundos}$$
+                        3. Parpadeos en $2$ minutos ($120 \text{ s}$):<br>
+                        $$\text{Parpadeos Luz Roja} = 120 : 12 = 10 \text{ veces}$$
+                        $$\text{Parpadeos Luz Verde} = 120 : 18 = 6 \text{ veces (con resto } 12 \text{, completados } 6 \text{)}$$
+                        $$\text{Coincidencias totales} = 120 : 36 = 3 \text{ coincidencias (a los 36s, 72s y 108s)}$$</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        Las dos luces coinciden en su parpadeo cada <strong>$36$ segundos</strong>. Al cabo de $2$ minutos, la luz roja habrá parpadeado <strong>$10$ veces</strong>, la luz verde <strong>$6$ veces</strong> y habrán coincidido juntas en <strong>$3$ ocasiones</strong>.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
