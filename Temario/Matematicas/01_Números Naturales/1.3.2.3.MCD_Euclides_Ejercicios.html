@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Ejercicios de Mínimo Común Múltiplo (m.c.m.)</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<h1>Ejercicios de Máximo Común Divisor (M.C.D.) por el Algoritmo de Euclides</h1>
+
+<div class="exercise-list">
+
+    <!-- ==================== BLOQUE FÁCIL (1 - 10) ==================== -->
+
+    <div class="exercise-item">
+        <span class="exercise-number">1.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 24 y 18 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution1">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution1" style="display: none;">
+            <p><strong>Solución Ejercicio 1:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$24 = 18 \cdot 1 + 6$</p>
+            <p>$18 = 6 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 6.</p>
+            <p>$\text{M.C.D.}(24, 18) = 6$</p>
+            <p>El resultado es **6**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">2.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 30 y 12 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution2">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution2" style="display: none;">
+            <p><strong>Solución Ejercicio 2:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$30 = 12 \cdot 2 + 6$</p>
+            <p>$12 = 6 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 6.</p>
+            <p>$\text{M.C.D.}(30, 12) = 6$</p>
+            <p>El resultado es **6**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">3.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 45 y 20 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution3">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution3" style="display: none;">
+            <p><strong>Solución Ejercicio 3:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$45 = 20 \cdot 2 + 5$</p>
+            <p>$20 = 5 \cdot 4 + 0$</p>
+            <p>El último resto no nulo es 5.</p>
+            <p>$\text{M.C.D.}(45, 20) = 5$</p>
+            <p>El resultado es **5**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">4.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 50 y 15 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution4">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution4" style="display: none;">
+            <p><strong>Solución Ejercicio 4:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$50 = 15 \cdot 3 + 5$</p>
+            <p>$15 = 5 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 5.</p>
+            <p>$\text{M.C.D.}(50, 15) = 5$</p>
+            <p>El resultado es **5**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">5.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 36 y 16 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution5">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution5" style="display: none;">
+            <p><strong>Solución Ejercicio 5:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$36 = 16 \cdot 2 + 4$</p>
+            <p>$16 = 4 \cdot 4 + 0$</p>
+            <p>El último resto no nulo es 4.</p>
+            <p>$\text{M.C.D.}(36, 16) = 4$</p>
+            <p>El resultado es **4**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">6.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 42 y 28 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution6">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution6" style="display: none;">
+            <p><strong>Solución Ejercicio 6:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$42 = 28 \cdot 1 + 14$</p>
+            <p>$28 = 14 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 14.</p>
+            <p>$\text{M.C.D.}(42, 28) = 14$</p>
+            <p>El resultado es **14**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">7.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 64 y 24 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution7">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution7" style="display: none;">
+            <p><strong>Solución Ejercicio 7:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$64 = 24 \cdot 2 + 16$</p>
+            <p>$24 = 16 \cdot 1 + 8$</p>
+            <p>$16 = 8 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 8.</p>
+            <p>$\text{M.C.D.}(64, 24) = 8$</p>
+            <p>El resultado es **8**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">8.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 72 y 30 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution8">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution8" style="display: none;">
+            <p><strong>Solución Ejercicio 8:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$72 = 30 \cdot 2 + 12$</p>
+            <p>$30 = 12 \cdot 2 + 6$</p>
+            <p>$12 = 6 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 6.</p>
+            <p>$\text{M.C.D.}(72, 30) = 6$</p>
+            <p>El resultado es **6**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">9.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 80 y 35 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution9">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution9" style="display: none;">
+            <p><strong>Solución Ejercicio 9:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$80 = 35 \cdot 2 + 10$</p>
+            <p>$35 = 10 \cdot 3 + 5$</p>
+            <p>$10 = 5 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 5.</p>
+            <p>$\text{M.C.D.}(80, 35) = 5$</p>
+            <p>El resultado es **5**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">10.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 90 y 25 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution10">
+            <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution10" style="display: none;">
+            <p><strong>Solución Ejercicio 10:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$90 = 25 \cdot 3 + 15$</p>
+            <p>$25 = 15 \cdot 1 + 10$</p>
+            <p>$15 = 10 \cdot 1 + 5$</p>
+            <p>$10 = 5 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 5.</p>
+            <p>$\text{M.C.D.}(90, 25) = 5$</p>
+            <p>El resultado es **5**.</p>
+        </div>          
+    </div>
+
+    <!-- ==================== BLOQUE MEDIO (11 - 20) ==================== -->
+
+    <div class="exercise-item">
+        <span class="exercise-number">11.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 105 y 45 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution11">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution11" style="display: none;">
+            <p><strong>Solución Ejercicio 11:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$105 = 45 \cdot 2 + 15$</p>
+            <p>$45 = 15 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 15.</p>
+            <p>$\text{M.C.D.}(105, 45) = 15$</p>
+            <p>El resultado es **15**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">12.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 140 y 56 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution12">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution12" style="display: none;">
+            <p><strong>Solución Ejercicio 12:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$140 = 56 \cdot 2 + 28$</p>
+            <p>$56 = 28 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 28.</p>
+            <p>$\text{M.C.D.}(140, 56) = 28$</p>
+            <p>El resultado es **28**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">13.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 180 y 84 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution13">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution13" style="display: none;">
+            <p><strong>Solución Ejercicio 13:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$180 = 84 \cdot 2 + 12$</p>
+            <p>$84 = 12 \cdot 7 + 0$</p>
+            <p>El último resto no nulo es 12.</p>
+            <p>$\text{M.C.D.}(180, 84) = 12$</p>
+            <p>El resultado es **12**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">14.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 210 y 78 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution14">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution14" style="display: none;">
+            <p><strong>Solución Ejercicio 14:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$210 = 78 \cdot 2 + 54$</p>
+            <p>$78 = 54 \cdot 1 + 24$</p>
+            <p>$54 = 24 \cdot 2 + 6$</p>
+            <p>$24 = 6 \cdot 4 + 0$</p>
+            <p>El último resto no nulo es 6.</p>
+            <p>$\text{M.C.D.}(210, 78) = 6$</p>
+            <p>El resultado es **6**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">15.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 252 y 105 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution15">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution15" style="display: none;">
+            <p><strong>Solución Ejercicio 15:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$252 = 105 \cdot 2 + 42$</p>
+            <p>$105 = 42 \cdot 2 + 21$</p>
+            <p>$42 = 21 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 21.</p>
+            <p>$\text{M.C.D.}(252, 105) = 21$</p>
+            <p>El resultado es **21**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">16.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 320 y 130 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution16">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution16" style="display: none;">
+            <p><strong>Solución Ejercicio 16:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$320 = 130 \cdot 2 + 60$</p>
+            <p>$130 = 60 \cdot 2 + 10$</p>
+            <p>$60 = 10 \cdot 6 + 0$</p>
+            <p>El último resto no nulo es 10.</p>
+            <p>$\text{M.C.D.}(320, 130) = 10$</p>
+            <p>El resultado es **10**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">17.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 390 y 150 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution17">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution17" style="display: none;">
+            <p><strong>Solución Ejercicio 17:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$390 = 150 \cdot 2 + 90$</p>
+            <p>$150 = 90 \cdot 1 + 60$</p>
+            <p>$90 = 60 \cdot 1 + 30$</p>
+            <p>$60 = 30 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 30.</p>
+            <p>$\text{M.C.D.}(390, 150) = 30$</p>
+            <p>El resultado es **30**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">18.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 450 y 192 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution18">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution18" style="display: none;">
+            <p><strong>Solución Ejercicio 18:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$450 = 192 \cdot 2 + 66$</p>
+            <p>$192 = 66 \cdot 2 + 60$</p>
+            <p>$66 = 60 \cdot 1 + 6$</p>
+            <p>$60 = 6 \cdot 10 + 0$</p>
+            <p>El último resto no nulo es 6.</p>
+            <p>$\text{M.C.D.}(450, 192) = 6$</p>
+            <p>El resultado es **6**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">19.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 504 y 160 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution19">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution19" style="display: none;">
+            <p><strong>Solución Ejercicio 19:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$504 = 160 \cdot 3 + 24$</p>
+            <p>$160 = 24 \cdot 6 + 16$</p>
+            <p>$24 = 16 \cdot 1 + 8$</p>
+            <p>$16 = 8 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 8.</p>
+            <p>$\text{M.C.D.}(504, 160) = 8$</p>
+            <p>El resultado es **8**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">20.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 588 y 210 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution20">
+            <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution20" style="display: none;">
+            <p><strong>Solución Ejercicio 20:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$588 = 210 \cdot 2 + 168$</p>
+            <p>$210 = 168 \cdot 1 + 42$</p>
+            <p>$168 = 42 \cdot 4 + 0$</p>
+            <p>El último resto no nulo es 42.</p>
+            <p>$\text{M.C.D.}(588, 210) = 42$</p>
+            <p>El resultado es **42**.</p>
+        </div>          
+    </div>
+
+    <!-- ==================== BLOQUE DIFÍCIL (21 - 30) ==================== -->
+
+    <div class="exercise-item">
+        <span class="exercise-number">21.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 1230 y 456 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution21">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution21" style="display: none;">
+            <p><strong>Solución Ejercicio 21:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$1230 = 456 \cdot 2 + 318$</p>
+            <p>$456 = 318 \cdot 1 + 138$</p>
+            <p>$318 = 138 \cdot 2 + 42$</p>
+            <p>$138 = 42 \cdot 3 + 12$</p>
+            <p>$42 = 12 \cdot 3 + 6$</p>
+            <p>$12 = 6 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 6.</p>
+            <p>$\text{M.C.D.}(1230, 456) = 6$</p>
+            <p>El resultado es **6**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">22.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 1575 y 630 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution22">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution22" style="display: none;">
+            <p><strong>Solución Ejercicio 22:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$1575 = 630 \cdot 2 + 315$</p>
+            <p>$630 = 315 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 315.</p>
+            <p>$\text{M.C.D.}(1575, 630) = 315$</p>
+            <p>El resultado es **315**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">23.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 2310 y 858 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution23">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution23" style="display: none;">
+            <p><strong>Solución Ejercicio 23:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$2310 = 858 \cdot 2 + 594$</p>
+            <p>$858 = 594 \cdot 1 + 264$</p>
+            <p>$594 = 264 \cdot 2 + 66$</p>
+            <p>$264 = 66 \cdot 4 + 0$</p>
+            <p>El último resto no nulo es 66.</p>
+            <p>$\text{M.C.D.}(2310, 858) = 66$</p>
+            <p>El resultado es **66**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">24.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 3150 y 1260 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution24">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution24" style="display: none;">
+            <p><strong>Solución Ejercicio 24:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$3150 = 1260 \cdot 2 + 630$</p>
+            <p>$1260 = 630 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 630.</p>
+            <p>$\text{M.C.D.}(3150, 1260) = 630$</p>
+            <p>El resultado es **630**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">25.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 4290 y 1820 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution25">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution25" style="display: none;">
+            <p><strong>Solución Ejercicio 25:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$4290 = 1820 \cdot 2 + 650$</p>
+            <p>$1820 = 650 \cdot 2 + 520$</p>
+            <p>$650 = 520 \cdot 1 + 130$</p>
+            <p>$520 = 130 \cdot 4 + 0$</p>
+            <p>El último resto no nulo es 130.</p>
+            <p>$\text{M.C.D.}(4290, 1820) = 130$</p>
+            <p>El resultado es **130**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">26.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 5460 y 2310 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution26">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution26" style="display: none;">
+            <p><strong>Solución Ejercicio 26:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$5460 = 2310 \cdot 2 + 840$</p>
+            <p>$2310 = 840 \cdot 2 + 630$</p>
+            <p>$840 = 630 \cdot 1 + 210$</p>
+            <p>$630 = 210 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 210.</p>
+            <p>$\text{M.C.D.}(5460, 2310) = 210$</p>
+            <p>El resultado es **210**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">27.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 6930 y 2860 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution27">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution27" style="display: none;">
+            <p><strong>Solución Ejercicio 27:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$6930 = 2860 \cdot 2 + 1210$</p>
+            <p>$2860 = 1210 \cdot 2 + 440$</p>
+            <p>$1210 = 440 \cdot 2 + 330$</p>
+            <p>$440 = 330 \cdot 1 + 110$</p>
+            <p>$330 = 110 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 110.</p>
+            <p>$\text{M.C.D.}(6930, 2860) = 110$</p>
+            <p>El resultado es **110**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">28.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 8190 y 3570 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution28">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution28" style="display: none;">
+            <p><strong>Solución Ejercicio 28:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$8190 = 3570 \cdot 2 + 1050$</p>
+            <p>$3570 = 1050 \cdot 3 + 420$</p>
+            <p>$1050 = 420 \cdot 2 + 210$</p>
+            <p>$420 = 210 \cdot 2 + 0$</p>
+            <p>El último resto no nulo es 210.</p>
+            <p>$\text{M.C.D.}(8190, 3570) = 210$</p>
+            <p>El resultado es **210**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">29.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 9660 y 4140 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution29">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution29" style="display: none;">
+            <p><strong>Solución Ejercicio 29:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$9660 = 4140 \cdot 2 + 1380$</p>
+            <p>$4140 = 1380 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 1380.</p>
+            <p>$\text{M.C.D.}(9660, 4140) = 1380$</p>
+            <p>El resultado es **1380**.</p>
+        </div>          
+    </div>
+
+    <div class="exercise-item">
+        <span class="exercise-number">30.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 11550 y 5040 mediante el algoritmo de Euclides.</p>
+        <div class="solution-trigger-container" data-solution-id="solution30">
+            <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution30" style="display: none;">
+            <p><strong>Solución Ejercicio 30:</strong></p>
+            <p>Aplicamos divisiones sucesivas:</p>
+            <p>$11550 = 5040 \cdot 2 + 1470$</p>
+            <p>$5040 = 1470 \cdot 3 + 630$</p>
+            <p>$1470 = 630 \cdot 2 + 210$</p>
+            <p>$630 = 210 \cdot 3 + 0$</p>
+            <p>El último resto no nulo es 210.</p>
+            <p>$\text{M.C.D.}(11550, 5040) = 210$</p>
+            <p>El resultado es **210**.</p>
+        </div>          
+    </div>
+
+</div>
+
+
+
+
+
+
+ <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>

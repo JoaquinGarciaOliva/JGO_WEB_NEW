@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Máximo Común Divisor (M.C.D.) por el Algoritmo de Euclides</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+
+<!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],               
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    /* Contenedor principal de la explicación */
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Bloque contenedor de cada criterio */
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    /* Tarjeta de Regla Rápida */
+    .regla-box {
+        background-color: #f0f4ff;
+        border-left: 4px solid #2635b7;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+        font-size: 1.05rem;
+    }
+
+    .regla-box strong {
+        color: #2635b7;
+    }
+
+    /* Contenedor flexible para la tabla y la explicación */
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+    .factor-table {
+        border-collapse: collapse;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .factor-table td {
+        padding: 6px 0;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    /* Columnas para los Dígitos Principales */
+    .col-digito {
+        width: 110px;
+        color: #2d3748;
+    }
+
+    /* Columna para los signos de relación o igualdad */
+    .col-igual {
+        padding: 0 15px !important;
+        color: #2635b7;
+        width: 20px;
+    }
+
+    /* Columna de texto de desarrollo matemático */
+    .factor-table td.barra-primas {
+        text-align: left;
+        color: #2d3748; 
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .highlight {
+        color: #e53e3e;
+        font-weight: bold;
+        background-color: #fff5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid #fed7d7;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        max-width: 500px;
+    }
+    
+    .explicacion-lateral ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1> Máximo Común Divisor (M.C.D.): ALGORITMO DE EUCLIDES </h1>
+
+<div class="exercise-list">
+    <div class="tutorial-container">
+        <h2>Cálculo del M.C.D. mediante Divisiones Sucesivas</h2>
+        <p>El <strong>Algoritmo de Euclides</strong> es un método eficiente e histórico para encontrar el Máximo Común Divisor de dos números enteros sin necesidad de descomponerlos en factores primos. Se basa en el principio de que el $\text{M.C.D.}(a, b)$ es el mismo que el $\text{M.C.D.}(b, r)$, donde $r$ es el resto de dividir $a$ entre $b$.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+        <div class="step-block">
+            <div class="step-title">La Regla de Oro del Algoritmo de Euclides</div>
+            <div class="regla-box">
+                <strong>Regla fundamental:</strong> Dividimos el número mayor entre el menor. Si la división es exacta (resto 0), el divisor es el M.C.D. Si no es exacta, pasamos a dividir el **divisor anterior entre el resto obtenido**, repitiendo el proceso hasta obtener un resto igual a **0**. El **último resto distinto de cero** (o el último divisor utilizado) será el M.C.D.
+            </div>
+            <ul>
+                <li><strong>División entera:</strong> Trabajamos únicamente con dividendos, divisores, cocientes y restos enteros ($a = b \cdot q + r$).</li>
+                <li><strong>El resto guía el proceso:</strong> En cada paso, el resto anterior se convierte en el nuevo divisor.</li>
+                <li><strong>Condición de parada:</strong> El proceso termina exactamente cuando obtenemos un resto de $0$.</li>
+            </ul>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Ejemplo 1: M.C.D. (252, 105) por el Algoritmo de Euclides</div>
+            <div class="regla-box">
+                <strong>Procedimiento:</strong> Realizamos divisiones sucesivas reemplazando $(a, b) \to (b, r)$ hasta alcanzar resto 0.
+            </div>
+            
+            <div class="division-table-container">
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito">Paso 1</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(252 = 105 \cdot 2 + 42\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Paso 2</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(105 = 42 \cdot 2 + \mathbf{21}\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Paso 3</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(42 = 21 \cdot 2 + 0\)</td>
+                    </tr>
+                </table>
+
+                <div class="explicacion-lateral">
+                    <strong>Desarrollo paso a paso:</strong><br>
+                    <ul>
+                        <li><strong>Paso 1:</strong> Dividimos $252 \div 105$. Obtenemos cociente $2$ y resto $42$. Como el resto no es $0$, continuamos.</li>
+                        <li><strong>Paso 2:</strong> Dividimos el divisor anterior ($105$) entre el resto ($42$). Obtenemos cociente $2$ y resto <span class="highlight">$\mathbf{21}$</span>.</li>
+                        <li><strong>Paso 3:</strong> Dividimos $42 \div 21$. El cociente es $2$ y el resto es $0$. ¡Hemos terminado!</li>
+                    </ul>
+                    <strong>Cálculo final:</strong> El último resto no nulo fue el 21:
+                    <br>
+                    $$\text{M.C.D.}(252, 105) = 21$$
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Ejemplo 2: M.C.D. (323, 221)</div>
+            <div class="regla-box">
+                <strong>Atención especial:</strong> Este método es ideal cuando la factorización de los números resulta complicada o requiere probar primos grandes.
+            </div>
+            
+            <div class="division-table-container">
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito">Paso 1</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(323 = 221 \cdot 1 + 102\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Paso 2</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(221 = 102 \cdot 2 + \mathbf{17}\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Paso 3</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(102 = 17 \cdot 6 + 0\)</td>
+                    </tr>
+                </table>
+
+                <div class="explicacion-lateral">
+                    <strong>Análisis del proceso:</strong><br>
+                    <ul>
+                        <li><strong>Paso 1:</strong> $323 \div 221 \implies \text{resto} = 102$.</li>
+                        <li><strong>Paso 2:</strong> Dividimos $221 \div 102 \implies \text{resto} = \mathbf{17}$.</li>
+                        <li><strong>Paso 3:</strong> Dividimos $102 \div 17 \implies \text{resto} = 0$. La división es exacta.</li>
+                    </ul>
+                    <strong>Cálculo final:</strong> El último divisor que dio resto cero (o el resto anterior) es $17$:
+                    <br>
+                    $$\text{M.C.D.}(323, 221) = 17$$
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Ejemplo 3: M.C.D. (35, 12) - Números primos entre sí</div>
+            <div class="regla-box">
+                <strong>Caso particular:</strong> ¿Cómo se observa en el Algoritmo de Euclides que dos números no tienen divisores comunes mayores que 1?
+            </div>
+            
+            <div class="division-table-container">
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito">Paso 1</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(35 = 12 \cdot 2 + 11\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Paso 2</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(12 = 11 \cdot 1 + \mathbf{1}\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Paso 3</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(11 = 1 \cdot 11 + 0\)</td>
+                    </tr>
+                </table>
+
+                <div class="explicacion-lateral">
+                    <strong>Análisis de divisiones:</strong><br>
+                    <ul>
+                        <li><strong>Paso 1:</strong> $35 \div 12 \implies \text{resto} = 11$.</li>
+                        <li><strong>Paso 2:</strong> $12 \div 11 \implies \text{resto} = \mathbf{1}$.</li>
+                        <li><strong>Paso 3:</strong> $11 \div 1 \implies \text{resto} = 0$.</li>
+                    </ul>
+                    <strong>Cálculo final:</strong> El último resto no nulo obtenido es $1$. Esto confirma que $35$ y $12$ son <em>primos entre sí</em>:
+                    <br>
+                    $$\text{M.C.D.}(35, 12) = 1$$
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block" style="border-color: #00769d;">
+            <div class="step-title" style="color: #00769d;">Resumen Metodológico</div>
+            <p>Para calcular el M.C.D. de dos números $a$ y $b$ ($a > b$) mediante el Algoritmo de Euclides:</p>
+            <ol>
+                <li>Efectúa la división entera $a \div b$ para hallar el resto $r$.</li>
+                <li>Si $r = 0$, entonces $\text{M.C.D.}(a, b) = b$.</li>
+                <li>Si $r \neq 0$, haz $a = b$ y $b = r$, y vuelve a repetir la división.</li>
+                <li>El M.C.D. será el **último resto diferente de cero** obtenido antes de alcanzar el resto 0.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
