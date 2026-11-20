@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría y Resolución de Problemas de Máximo Común Divisor (M.C.D.)</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida / Pistas */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+        }
+
+        .factor-table td {
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .col-digito {
+            width: auto;
+            color: #2d3748;
+            padding: 0 5px !important;
+        }
+
+        .col-igual {
+            padding: 0 15px !important;
+            color: #2635b7;
+        }
+
+        .factor-table td.barra-primas {
+            text-align: left;
+            color: #e53e3e; 
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        .pista-card {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .pista-card h4 {
+            margin-top: 0;
+            color: #2635b7;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guía de Resolución: Problemas de Máximo Común Divisor (M.C.D.)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Estrategia General y Aplicación al $\text{M.C.D.}$</h2>
+            <p>Aprender matemáticas no consiste en memorizar recetas, sino en adquirir una rutina de razonamiento. A continuación, repasaremos el procedimiento universal en <strong>5 pasos</strong> para afrontar cualquier problema y, después, analizaremos las <strong>pistas clave</strong> para identificar y resolver situaciones que involucran el <strong>Máximo Común Divisor ($\text{M.C.D.}$)</strong>.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- ================= PARTE 1 ================= -->
+            <div class="step-block">
+                <div class="step-title">PARTE 1: Recordatorio de los 5 Pasos para Resolver Problemas</div>
+                
+                <div class="regla-box">
+                    <strong>Regla de oro:</strong> Lee el enunciado cuantas veces sea necesario. En la primera lectura comprendes la trama; en la segunda extraes los datos; y solo entonces comienzas a pensar en la herramienta matemática.
+                </div>
+
+                <ol style="line-height: 1.8; font-size: 1.05rem;">
+                    <li>
+                        <strong>Paso 1: Leer el problema para entender la historia (sin mirar los números).</strong><br>
+                        Lee el texto completo omitiendo las cifras para comprender qué está sucediendo. Identifica quiénes son los personajes o elementos y qué acción realizan. <em>(Ejemplo: "Tenemos varios tipos de objetos o cantidades distintas y queremos dividirlos o repartirlos en grupos exactamente iguales sin que sobre nada").</em>
+                    </li>
+                    <li>
+                        <strong>Paso 2: Volver a leer para anotar los datos.</strong><br>
+                        Ahora sí importan los números. Anota los datos explícitos (cantidades iniciales, unidades, condiciones) en un esquema claro al margen para no tener que releer el texto largo constantemente.
+                    </li>
+                    <li>
+                        <strong>Paso 3: Plantear el problema.</strong><br>
+                        Determina la herramienta matemática apropiada según el tema. Si el problema nos pide dividir o fragmentar varias cantidades en partes iguales buscando la mayor dimensión posible, la herramienta adecuada es el <strong>máximo común divisor ($\text{M.C.D.}$)</strong>.
+                    </li>
+                    <li>
+                        <strong>Paso 4: Resolver las operaciones.</strong><br>
+                        Aplica los algoritmos aprendidos con rigor (descomposición en factores primos, selección de factores comunes al menor exponente y cálculo del producto final).
+                    </li>
+                    <li>
+                        <strong>Paso 5: Responder a la pregunta (contextualizar el resultado).</strong><br>
+                        No basta con dejar un número final. Debes escribir una frase completa respondiendo exactamente a lo que se pide, indicando las unidades (pastas por bolsa, metros de longitud, número de recipientes, etc.) y explicando su significado práctico.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- ================= PARTE 2 ================= -->
+            <div class="step-block" style="border-color: #00769d;">
+                <div class="step-title" style="color: #00769d;">PARTE 2: Identificación y Pistas en los Problemas de $\text{M.C.D.}$</div>
+                
+                <p>¿Cómo detectar si un problema se resuelve calculando el $\text{M.C.D.}$? Debemos buscar tres **palabras clave o pistas fundamentales** escondidas en el texto:</p>
+
+                <div class="pista-card">
+                    <h4>1. La palabra clave: "Repartir", "Dividir" o "Hacer lotes"</h4>
+                    <p>La acción principal del problema casi siempre consiste en <strong>fragmentar, cortar, distribuir, embolsar o empaquetar</strong> dos o más cantidades iniciales en partes más pequeñas sin desperdiciar nada ni mezclar los productos.</p>
+                </div>
+
+                <div class="pista-card">
+                    <h4>2. La palabra clave: "Común" o "Igual"</h4>
+                    <p>Buscamos que la medida, el tamaño o el contenido de los grupos sea <strong>exactamente el mismo para todos los elementos</strong>. Todas las partes cortadas o paquetes creados deben tener la misma dimensión o cantidad.</p>
+                </div>
+
+                <div class="pista-card">
+                    <h4>3. La palabra clave: "Máximo", "El mayor posible" o "Lo más grande posible"</h4>
+                    <p>El enunciado suele exigirnos maximizar el tamaño de las partes (que las bolsas sean lo más grandes posible, que los trozos de tela o madera tengan la mayor longitud posible, etc.).</p>
+                </div>
+
+                <div class="warning-box">
+                    <strong>¡Ojo, la palabra "Máximo" engaña!</strong> Aunque la palabra sugiera un valor gigante, el resultado del $\text{M.C.D.}$ será siempre un número <strong>menor o igual</strong> que los datos que nos han dado en el problema (ya que es un divisor). Significa "el divisor más grande de entre los que son posibles", no un múltiplo enorme.
+                </div>
+            </div>
+
+            <!-- ================= SECCIÓN 3: PROBLEMAS RESUELTOS ================= -->
+            <div class="step-block" style="border-color: #2635b7;">
+                <div class="step-title" style="color: #2635b7;">Ejemplos Prácticos Resueltos en 5 Pasos</div>
+
+                <!-- PROBLEMA 1: PASTELERÍA -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Problema 1: Embolsado de Dulces en una Pastelería</h3>
+                    <p><strong>Enunciado:</strong> En una pastelería fabrican magdalenas y bollos de igual tamaño. En un día fabrican $400$ magdalenas y $168$ bollos. Quieren embolsar los dulces, sin mezclarlos y utilizando el mismo tipo de bolsas para ambos productos. ¿Cuántos dulces deben poner en cada bolsa para que contengan el mayor número posible? ¿Cuántas bolsas necesitarán en total?</p>
+                    
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        Se han fabricado dos tipos de dulces en cantidades distintas. Se quieren repartir en bolsas separadas (sin mezclar), todas con la misma cantidad exacta de piezas y haciendo que cada bolsa contenga lo máximo posible.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Magdalenas = $400$<br>
+                        - Bollos = $168$<br>
+                        - Condición: Mismo número de dulces por bolsa, sin mezclar y bolsas lo más grandes posible.</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Hay que repartir (dividir) en partes iguales (común) buscando el máximo número de dulces por bolsa. Por tanto, debemos calcular el <strong>$\text{M.C.D.}(400, 168)$</strong>. Para calcular el total de bolsas, dividiremos cada cantidad entre el contenido por bolsa y sumaremos los resultados.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición en factores primos:<br>
+                        $$400 = 2^4 \cdot 5^2$$
+                        $$168 = 2^3 \cdot 3 \cdot 7$$
+                        2. Cálculo del $\text{M.C.D.}$ (factores comunes al menor exponente):<br>
+                        $$\text{M.C.D.}(400, 168) = 2^3 = 8 \text{ dulces por bolsa}$$
+                        3. Cálculo del número de bolsas:<br>
+                        $$\text{Bolsas de magdalenas} = 400 : 8 = 50 \text{ bolsas}$$
+                        $$\text{Bolsas de bollos} = 168 : 8 = 21 \text{ bolsas}$$
+                        $$\text{Total de bolsas} = 50 + 21 = 71 \text{ bolsas}$$</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        Deben poner <strong>$8$ dulces en cada bolsa</strong>. En total necesitarán <strong>$71$ bolsas</strong> ($50$ para las magdalenas y $21$ para los bollos).</li>
+                    </ul>
+                </div>
+
+                <!-- PROBLEMA 2: CORTE DE LISTONES/CABLES -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Problema 2: Corte de Cintas de Colores</h3>
+                    <p><strong>Enunciado:</strong> Una modista tiene dos cintas de tela: una roja de $120\text{ cm}$ y una azul de $90\text{ cm}$. Quiere cortarlas en trozos de la misma longitud, lo más largos posible y sin que le sobre ningún pedazo. ¿Cuánto medirá cada trozo? ¿Cuántos trozos obtendrá en total?</p>
+
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        Tenemos dos cintas de longitudes diferentes y se quieren trocear (dividir) en partes iguales sin desperdiciar nada, buscando que cada fragmento sea lo más largo posible.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Cinta roja = $120\text{ cm}$<br>
+                        - Cinta azul = $90\text{ cm}$<br>
+                        - Condición: Trozos de igual longitud, el mayor tamaño posible, sin sobrantes.</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Como debemos fragmentar dos longitudes en partes comunes de máxima longitud, calculamos el <strong>$\text{M.C.D.}(120, 90)$</strong>. Después, dividiremos la longitud de cada cinta entre el tamaño del trozo para hallar el número total de fragmentos.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición factorial:<br>
+                        $$120 = 2^3 \cdot 3 \cdot 5$$
+                        $$90 = 2 \cdot 3^2 \cdot 5$$
+                        2. Cálculo del $\text{M.C.D.}$ (comunes al menor exponente):<br>
+                        $$\text{M.C.D.}(120, 90) = 2 \cdot 3 \cdot 5 = 30\text{ cm}$$
+                        3. Cálculo de trozos:<br>
+                        $$\text{Trozos rojos} = 120 : 30 = 4 \text{ trozos}$$
+                        $$\text{Trozos azules} = 90 : 30 = 3 \text{ trozos}$$
+                        $$\text{Total de trozos} = 4 + 3 = 7 \text{ trozos}$$</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        Cada trozo medirá <strong>$30\text{ cm}$</strong> de longitud. En total obtendrá <strong>$7$ trozos</strong> ($4$ rojos y $3$ azules).</li>
+                    </ul>
+                </div>
+
+                <!-- PROBLEMA 3: CONFIGURACIÓN DE EQUIPOS/GRUPOS -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #00769d;">
+                    <h3 style="margin-top: 0; color: #00769d;">Problema 3: Organización de Equipos de Trabajo</h3>
+                    <p><strong>Enunciado:</strong> En una actividad escolar participan $36$ alumnos de $1.º\text{ ESO}$ y $48$ alumnos de $2.º\text{ ESO}$. Los profesores quieren formar equipos con el mismo número de integrantes, de modo que en ningún equipo se mezclen alumnos de distintos cursos y que los grupos tengan la mayor cantidad de estudiantes posible. ¿Cuántos alumnos habrá en cada equipo? ¿Cuántos equipos se formarán de cada curso?</p>
+
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        Se quiere repartir a los estudiantes de dos cursos en grupos iguales sin mezclarlos entre sí y haciendo que cada grupo sea lo más numeroso posible.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Alumnos de $1.º\text{ ESO} = 36$<br>
+                        - Alumnos de $2.º\text{ ESO} = 48$<br>
+                        - Condición: Grupos iguales, sin mezclar cursos, tamaño máximo.</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Al repartir dos conjuntos de personas en agrupaciones iguales y máximas, calculamos el <strong>$\text{M.C.D.}(36, 48)$</strong>. Para saber el número de equipos de cada curso, dividiremos el alumnado total de cada grupo entre los componentes por equipo.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición factorial:<br>
+                        $$36 = 2^2 \cdot 3^2$$
+                        $$48 = 2^4 \cdot 3$$
+                        2. Cálculo del $\text{M.C.D.}$:<br>
+                        $$\text{M.C.D.}(36, 48) = 2^2 \cdot 3 = 4 \cdot 3 = 12 \text{ alumnos por equipo}$$
+                        3. Cálculo de equipos por curso:<br>
+                        $$\text{Equipos de } 1.º\text{ ESO} = 36 : 12 = 3 \text{ equipos}$$
+                        $$\text{Equipos de } 2.º\text{ ESO} = 48 : 12 = 4 \text{ equipos}$$</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        Cada equipo estará formado por <strong>$12$ alumnos</strong>. Se formarán en total $7$ equipos ($3$ de $1.º\text{ ESO}$ y $4$ de $2.º\text{ ESO}$).</li>
+                    </ul>
+                </div>
+
+                <!-- PROBLEMA 4: RECIPIENTES / BARRACAS DE LÍQUIDOS -->
+                <div style="background: #f0f7f9; padding: 20px; border-radius: 6px; margin-bottom: 0; border-left: 4px solid #2635b7;">
+                    <h3 style="margin-top: 0; color: #2635b7;">Problema 4: Envasado de Aceite en Garrafas</h3>
+                    <p><strong>Enunciado:</strong> Un agricultor ha cosechado dos variedades de aceite: $250\text{ litros}$ de aceite de oliva virgen extra y $375\text{ litros}$ de aceite de oliva suave. Quiere envasar todo el aceite en garrafas iguales de la mayor capacidad posible, sin mezclar las variedades y sin que sobre ningún litro. ¿Qué capacidad debe tener cada garrafa? ¿Cuántas garrafas utilizará en total?</p>
+
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                        <li><strong>Paso 1 (Entender la historia):</strong><br>
+                        Hay dos depósitos con volúmenes de líquido distintos y se quieren verter (dividir) en envases más pequeños iguales, maximizando la capacidad de las garrafas sin mezclar el contenido.</li>
+
+                        <li><strong>Paso 2 (Anotar los datos):</strong><br>
+                        - Aceite virgen extra = $250\text{ L}$<br>
+                        - Aceite suave = $375\text{ L}$<br>
+                        - Condición: Envases de la misma capacidad, la máxima posible, sin desperdicios.</li>
+
+                        <li><strong>Paso 3 (Planteamiento):</strong><br>
+                        Se debe buscar la máxima capacidad común para repartir ambos volúmenes; por tanto, hallamos el <strong>$\text{M.C.D.}(250, 375)$</strong>. Dividiendo la cantidad de cada variedad entre dicha capacidad hallaremos las garrafas necesarias.</li>
+
+                        <li><strong>Paso 4 (Resolución matemática):</strong><br>
+                        1. Descomposición factorial:<br>
+                        $$250 = 2 \cdot 5^3$$
+                        $$375 = 3 \cdot 5^3$$
+                        2. Cálculo del $\text{M.C.D.}$:<br>
+                        $$\text{M.C.D.}(250, 375) = 5^3 = 125\text{ litros}$$
+                        3. Número de garrafas:<br>
+                        $$\text{Garrafas de virgen extra} = 250 : 125 = 2 \text{ garrafas}$$
+                        $$\text{Garrafas de aceite suave} = 375 : 125 = 3 \text{ garrafas}$$
+                        $$\text{Total de garrafas} = 2 + 3 = 5 \text{ garrafas}$$</li>
+
+                        <li><strong>Paso 5 (Respuesta contextualizada):</strong><br>
+                        Cada garrafa debe tener una capacidad de <strong>$125\text{ litros}$</strong>. En total utilizará <strong>$5$ garrafas</strong> ($2$ para el aceite virgen extra y $3$ para el suave).</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

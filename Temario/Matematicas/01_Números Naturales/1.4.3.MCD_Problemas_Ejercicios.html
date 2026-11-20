@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Problemas del Máximo Común Divisor (M.C.D.) - Dos Formas de Resolución</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],             
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>30 Problemas del Máximo Común Divisor (M.C.D.) con Dos Formas de Resolución</h1>
+    
+    <div class="exercise-list">
+        
+        <!-- ========================================== -->
+        <!-- NIVEL FÁCIL (Ejercicios 1 a 10 - versolucion.png) -->
+        <!-- ========================================== -->
+
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <p class="exercise-statement">Una florista tiene 12 rosas rojas y 18 rosas blancas. Quiere hacer ramos iguales con el mayor número de rosas posible sin mezclar colores ni que sobre ninguna. ¿Cuántas rosas tendrá cada ramo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(12) = \{1, 2, 3, 4, \mathbf{6}, 12\}$<br>
+                $\text{Div}(18) = \{1, 2, 3, \mathbf{6}, 9, 18\}$<br>
+                El mayor divisor común es $6$. Cada ramo tendrá $6$ rosas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $12 = 2^2 \cdot 3$<br>
+                $18 = 2 \cdot 3^2$<br>
+                Tomamos solo los factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(12, 18) = 2 \cdot 3 = 6 \text{ rosas}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <p class="exercise-statement">Un profesor tiene 20 lápices y 30 gomas. Desea repartirlos en estuches iguales de modo que cada uno tenga el mismo número de lápices y el mismo número de gomas sin que sobre nada. ¿Cuál es el máximo número de estuches que puede preparar?</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(20) = \{1, 2, 4, 5, \mathbf{10}, 20\}$<br>
+                $\text{Div}(30) = \{1, 2, 3, 5, 6, \mathbf{10}, 15, 30\}$<br>
+                El mayor divisor común es $10$. Se pueden preparar máximo $10$ estuches.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $20 = 2^2 \cdot 5$<br>
+                $30 = 2 \cdot 3 \cdot 5$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(20, 30) = 2 \cdot 5 = 10 \text{ estuches}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <p class="exercise-statement">Tenemos dos cuerdas que miden 15 metros y 25 metros respectivamente. Queremos cortarlas en trozos iguales del mayor tamaño posible sin que sobre nada. ¿Cuánto debe medir cada trozo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(15) = \{1, 3, \mathbf{5}, 15\}$<br>
+                $\text{Div}(25) = \{1, \mathbf{5}, 25\}$<br>
+                El mayor divisor común es $5$. Cada trozo debe medir $5$ metros.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $15 = 3 \cdot 5$<br>
+                $25 = 5^2$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(15, 25) = 5 \text{ metros}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <p class="exercise-statement">Un repostero tiene 24 trufas de chocolate negro y 36 de chocolate blanco. Desea guardarlas en cajas con la misma cantidad de trufas sin mezclar los tipos. ¿Cuál es la máxima cantidad de trufas que puede poner en cada caja?</p>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(24) = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 24\}$<br>
+                $\text{Div}(36) = \{1, 2, 3, 4, 6, 9, \mathbf{12}, 18, 36\}$<br>
+                El mayor divisor común es $12$. Habrá $12$ trufas por caja.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $24 = 2^3 \cdot 3$<br>
+                $36 = 2^2 \cdot 3^2$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(24, 36) = 2^2 \cdot 3 = 4 \cdot 3 = 12 \text{ trufas}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <p class="exercise-statement">Para un proyecto escolar se tienen dos listones de madera de 16 cm y 40 cm. Se quieren cortar en tramos de igual longitud, la mayor posible, sin desperdiciar madera. ¿Cuál será la longitud de cada tramo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(16) = \{1, 2, 4, \mathbf{8}, 16\}$<br>
+                $\text{Div}(40) = \{1, 2, 4, 5, \mathbf{8}, 10, 20, 40\}$<br>
+                El mayor divisor común es $8$. Cada tramo medirá $8$ cm.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $16 = 2^4$<br>
+                $40 = 2^3 \cdot 5$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(16, 40) = 2^3 = 8 \text{ cm}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <p class="exercise-statement">Un panadero prepara 28 panecillos integrales y 42 panecillos de trigo. Quiere colocarlos en bolsas con el mismo número de panecillos sin mezclar clases. ¿Cuántos panecillos habrá como máximo en cada bolsa?</p>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(28) = \{1, 2, 4, 7, \mathbf{14}, 28\}$<br>
+                $\text{Div}(42) = \{1, 2, 3, 6, 7, \mathbf{14}, 21, 42\}$<br>
+                El mayor divisor común es $14$. Habrá máximo $14$ panecillos por bolsa.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $28 = 2^2 \cdot 7$<br>
+                $42 = 2 \cdot 3 \cdot 7$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(28, 42) = 2 \cdot 7 = 14 \text{ panecillos}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <p class="exercise-statement">En una biblioteca hay 32 libros de aventuras y 48 de ciencia ficción. Se quieren organizar en estantes con igual número de libros sin mezclar géneros. ¿Cuál es el mayor número de libros que se pueden poner en cada estante?</p>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(32) = \{1, 2, 4, 8, \mathbf{16}, 32\}$<br>
+                $\text{Div}(48) = \{1, 2, 3, 4, 6, 8, 12, \mathbf{16}, 24, 48\}$<br>
+                El mayor divisor común es $16$. Se pondrán $16$ libros por estante.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $32 = 2^5$<br>
+                $48 = 2^4 \cdot 3$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(32, 48) = 2^4 = 16 \text{ libros}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <p class="exercise-statement">Un agricultor ha cosechado 45 manzanas y 60 naranjas. Desea armar cestas iguales con la máxima cantidad posible de frutas sin mezclarlas y sin que sobre ninguna. ¿Cuántas frutas tendrá cada cesta?</p>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(45) = \{1, 3, 5, 9, \mathbf{15}, 45\}$<br>
+                $\text{Div}(60) = \{1, 2, 3, 4, 5, 6, 10, 12, \mathbf{15}, 20, 30, 60\}$<br>
+                El mayor divisor común es $15$. Cada cesta llevará $15$ frutas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $45 = 3^2 \cdot 5$<br>
+                $60 = 2^2 \cdot 3 \cdot 5$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(45, 60) = 3 \cdot 5 = 15 \text{ frutas}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <p class="exercise-statement">Se disponen de dos rollos de cable de 18 m y 27 m. Se deben cortar en pedazos idénticos lo más largos posible. ¿Qué longitud debe tener cada pedazo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(18) = \{1, 2, 3, 6, \mathbf{9}, 18\}$<br>
+                $\text{Div}(27) = \{1, 3, \mathbf{9}, 27\}$<br>
+                El mayor divisor común es $9$. Cada pedazo medirá $9$ metros.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $18 = 2 \cdot 3^2$<br>
+                $27 = 3^3$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(18, 27) = 3^2 = 9 \text{ metros}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <p class="exercise-statement">Una tienda tiene 22 caramelos de menta y 33 de fresa. Quieren preparar paquetitos idénticos con el máximo número de caramelos de un solo sabor por paquete. ¿Cuántos caramelos llevará cada paquetito?</p>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="Fácil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(22) = \{1, 2, \mathbf{11}, 22\}$<br>
+                $\text{Div}(33) = \{1, 3, \mathbf{11}, 33\}$<br>
+                El mayor divisor común es $11$. Cada paquetito llevará $11$ caramelos.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $22 = 2 \cdot 11$<br>
+                $33 = 3 \cdot 11$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(22, 33) = 11 \text{ caramelos}$$</p>
+            </div>                
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- NIVEL MEDIO (Ejercicios 11 a 20 - versolucion2.png) -->
+        <!-- ========================================== -->
+
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <p class="exercise-statement">Un joyero tiene tres tiras de abalorios de 36 cm, 48 cm y 60 cm. Desea cortarlas en trozos de la misma longitud máxima sin desperdiciar nada. ¿Cuántos trozos obtendrá en total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(36) = \{1, 2, 3, 4, 6, 9, \mathbf{12}, 18, 36\}$<br>
+                $\text{Div}(48) = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 16, 24, 48\}$<br>
+                $\text{Div}(60) = \{1, 2, 3, 4, 5, 6, 10, \mathbf{12}, 15, 20, 30, 60\}$<br>
+                $\text{M.C.D.}(36, 48, 60) = 12$ cm por trozo.<br>
+                Total trozos: $(36/12) + (48/12) + (60/12) = 3 + 4 + 5 = 12$ trozos.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $36 = 2^2 \cdot 3^2$<br>
+                $48 = 2^4 \cdot 3$<br>
+                $60 = 2^2 \cdot 3 \cdot 5$<br>
+                $$\text{M.C.D.}(36, 48, 60) = 2^2 \cdot 3 = 12 \text{ cm}$$
+                Número total de trozos: $\frac{36+48+60}{12} = \frac{144}{12} = 12 \text{ trozos}$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <p class="exercise-statement">En un albergue reparten 40 mantas, 60 chaquetas y 80 pares de calcetines entre varias familias de forma equitativa. ¿A cuántas familias como máximo podrán atender para repartir todo sin residuos?</p>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(40) = \{1, 2, 4, 5, 8, 10, \mathbf{20}, 40\}$<br>
+                $\text{Div}(60) = \{1, 2, 3, 4, 5, 6, 10, 12, 15, \mathbf{20}, 30, 60\}$<br>
+                $\text{Div}(80) = \{1, 2, 4, 5, 8, 10, 16, \mathbf{20}, 40, 80\}$<br>
+                El mayor divisor común es $20$. Se atiende como máximo a $20$ familias.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $40 = 2^3 \cdot 5$<br>
+                $60 = 2^2 \cdot 3 \cdot 5$<br>
+                $80 = 2^4 \cdot 5$<br>
+                $$\text{M.C.D.}(40, 60, 80) = 2^2 \cdot 5 = 20 \text{ familias}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <p class="exercise-statement">Un carpintero tiene un tablero rectangular de 54 cm de largo y 36 cm de ancho. Quiere cortarlo en cuadrados iguales lo más grandes posible sin perder madera. ¿Cuánto medirá el lado de cada cuadrado?</p>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(54) = \{1, 2, 3, 6, 9, \mathbf{18}, 27, 54\}$<br>
+                $\text{Div}(36) = \{1, 2, 3, 4, 6, 9, 12, \mathbf{18}, 36\}$<br>
+                El mayor divisor común es $18$. El lado de cada cuadrado medirá $18$ cm.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $54 = 2 \cdot 3^3$<br>
+                $36 = 2^2 \cdot 3^2$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(54, 36) = 2 \cdot 3^2 = 2 \cdot 9 = 18 \text{ cm}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <p class="exercise-statement">Se quieren empaquetar 45 cuadernos, 75 bolígrafos y 90 carpetas en lotes iguales sin sobrantes. ¿Cuál es el máximo número de lotes que se pueden preparar?</p>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(45) = \{1, 3, 5, 9, \mathbf{15}, 45\}$<br>
+                $\text{Div}(75) = \{1, 3, 5, \mathbf{15}, 25, 75\}$<br>
+                $\text{Div}(90) = \{1, 2, 3, 5, 6, 9, 10, \mathbf{15}, 18, 30, 45, 90\}$<br>
+                El mayor divisor común es $15$. Se pueden formar $15$ lotes.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $45 = 3^2 \cdot 5$<br>
+                $75 = 3 \cdot 5^2$<br>
+                $90 = 2 \cdot 3^2 \cdot 5$<br>
+                $$\text{M.C.D.}(45, 75, 90) = 3 \cdot 5 = 15 \text{ lotes}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <p class="exercise-statement">Un terreno rectangular mide 84 metros de largo y 60 metros de ancho. Se desea cercar colocando postes a distancias iguales de forma que haya uno en cada esquina y la distancia entre postes consecutivos sea la mayor posible. ¿A qué distancia se deben colocar los postes?</p>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(84) = \{1, 2, 3, 4, 6, 7, \mathbf{12}, 14, 21, 28, 42, 84\}$<br>
+                $\text{Div}(60) = \{1, 2, 3, 4, 5, 6, 10, \mathbf{12}, 15, 20, 30, 60\}$<br>
+                El mayor divisor común es $12$. Los postes irán separados $12$ metros.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $84 = 2^2 \cdot 3 \cdot 7$<br>
+                $60 = 2^2 \cdot 3 \cdot 5$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(84, 60) = 2^2 \cdot 3 = 12 \text{ metros}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <p class="exercise-statement">Un depósito contiene 72 litros de jugo de manzana y otro contiene 96 litros de jugo de naranja. Se quiere envasar todo el jugo en garrafas iguales de máxima capacidad sin mezclar los jugos. ¿Qué capacidad tendrá cada garrafa?</p>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(72) = \{1, 2, 3, 4, 6, 8, 9, 12, 18, \mathbf{24}, 36, 72\}$<br>
+                $\text{Div}(96) = \{1, 2, 3, 4, 6, 8, 12, 16, \mathbf{24}, 32, 48, 96\}$<br>
+                El mayor divisor común es $24$. Cada garrafa tendrá una capacidad de $24$ litros.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $72 = 2^3 \cdot 3^2$<br>
+                $96 = 2^5 \cdot 3$<br>
+                $$\text{M.C.D.}(72, 96) = 2^3 \cdot 3 = 8 \cdot 3 = 24 \text{ litros}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <p class="exercise-statement">Un pastelero elabora 64 galletas de chocolate, 80 de vainilla y 112 de limón. Quiere embolsarlas de forma idéntica, con el máximo número de galletas por bolsa y sin mezclarlas. ¿Cuántas galletas contendrá cada bolsa?</p>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(64) = \{1, 2, 4, 8, \mathbf{16}, 32, 64\}$<br>
+                $\text{Div}(80) = \{1, 2, 4, 5, 8, 10, \mathbf{16}, 20, 40, 80\}$<br>
+                $\text{Div}(112) = \{1, 2, 4, 7, 8, 14, \mathbf{16}, 28, 56, 112\}$<br>
+                El mayor divisor común es $16$. Cada bolsa contendrá $16$ galletas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $64 = 2^6$<br>
+                $80 = 2^4 \cdot 5$<br>
+                $112 = 2^4 \cdot 7$<br>
+                $$\text{M.C.D.}(64, 80, 112) = 2^4 = 16 \text{ galletas}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <p class="exercise-statement">Una tienda de telas tiene tres rollos de 42 m, 70 m y 98 m de longitud. Se quiere dividir los rollos en piezas de igual longitud máxima sin desperdiciar nada. ¿Cuántas piezas saldrán de cada rollo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(42) = \{1, 2, 3, 6, 7, \mathbf{14}, 21, 42\}$<br>
+                $\text{Div}(70) = \{1, 2, 5, 7, 10, \mathbf{14}, 35, 70\}$<br>
+                $\text{Div}(98) = \{1, 2, 7, \mathbf{14}, 49, 98\}$<br>
+                $\text{M.C.D.}(42, 70, 98) = 14$ metros.<br>
+                Piezas: $42/14 = 3$ del primer rollo, $70/14 = 5$ del segundo y $98/14 = 7$ del tercero.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $42 = 2 \cdot 3 \cdot 7$<br>
+                $70 = 2 \cdot 5 \cdot 7$<br>
+                $98 = 2 \cdot 7^2$<br>
+                $$\text{M.C.D.}(42, 70, 98) = 2 \cdot 7 = 14 \text{ metros}$$
+                Saldrán $3$ piezas de $42\text{ m}$, $5$ de $70\text{ m}$ y $7$ de $98\text{ m}$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <p class="exercise-statement">Se dispone de 90 bolitas de cristal rojas y 105 azulejos azules. Se quieren guardar en frascos iguales conteniendo el máximo número posible de piezas de un solo color. ¿Cuántas piezas irán en cada frasco?</p>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(90) = \{1, 2, 3, 5, 6, 9, 10, \mathbf{15}, 18, 30, 45, 90\}$<br>
+                $\text{Div}(105) = \{1, 3, 5, 7, \mathbf{15}, 21, 35, 105\}$<br>
+                El mayor divisor común es $15$. Cada frasco llevará $15$ piezas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $90 = 2 \cdot 3^2 \cdot 5$<br>
+                $105 = 3 \cdot 5 \cdot 7$<br>
+                Factores comunes al menor exponente:<br>
+                $$\text{M.C.D.}(90, 105) = 3 \cdot 5 = 15 \text{ piezas}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <p class="exercise-statement">Para una actividad al aire libre acuden 56 alumnos de 1ºA, 64 alumnos de 1ºB y 72 alumnos de 1ºC. Se deben formar equipos con el mismo número de alumnos de cada curso sin mezclarlos. ¿Cuál es el tamaño máximo de cada equipo?</p>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="Medio" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(56) = \{1, 2, 4, \mathbf{8}, 14, 28, 56\}$<br>
+                $\text{Div}(64) = \{1, 2, 4, \mathbf{8}, 16, 32, 64\}$<br>
+                $\text{Div}(72) = \{1, 2, 3, 4, 6, \mathbf{8}, 9, 12, 18, 24, 36, 72\}$<br>
+                El mayor divisor común es $8$. Cada equipo tendrá como máximo $8$ alumnos.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $56 = 2^3 \cdot 7$<br>
+                $64 = 2^6$<br>
+                $72 = 2^3 \cdot 3^2$<br>
+                $$\text{M.C.D.}(56, 64, 72) = 2^3 = 8 \text{ alumnos}$$</p>
+            </div>                
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- NIVEL DIFÍCIL (Ejercicios 21 a 30 - versolucion3.png) -->
+        <!-- ========================================== -->
+
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <p class="exercise-statement">Un pliego de papel cartón rectangular de 120 cm por 144 cm debe dividirse en el menor número posible de cuadraditos iguales completos. ¿Cuántos cuadraditos se obtendrán en total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(120) = \{1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, \mathbf{24}, 30, 40, 60, 120\}$<br>
+                $\text{Div}(144) = \{1, 2, 3, 4, 6, 8, 9, 12, 16, 18, \mathbf{24}, 36, 48, 72, 144\}$<br>
+                $\text{M.C.D.}(120, 144) = 24$ cm de lado.<br>
+                Cuadraditos a lo largo: $144/24 = 6$. A lo ancho: $120/24 = 5$. Total: $6 \times 5 = 30$.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $120 = 2^3 \cdot 3 \cdot 5$<br>
+                $144 = 2^4 \cdot 3^2$<br>
+                $$\text{M.C.D.}(120, 144) = 2^3 \cdot 3 = 24 \text{ cm}$$
+                Número total de cuadraditos: $\frac{120 \cdot 144}{24 \cdot 24} = 5 \cdot 6 = 30 \text{ cuadraditos}$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <p class="exercise-statement">Un almacén de distribuidores de bebidas dispone de 180 botellas de agua, 240 de refresco de cola y 300 de jugo. Quieren empaquetarlas en cajas de idéntica composición máxima sin mezclar productos. ¿Cuántas cajas se necesitarán en total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(180) = \{1, 2, 3, \dots, 30, 45, \mathbf{60}, 90, 180\}$<br>
+                $\text{Div}(240) = \{1, 2, 3, \dots, 40, 48, \mathbf{60}, 80, 120, 240\}$<br>
+                $\text{Div}(300) = \{1, 2, 3, \dots, 30, 50, \mathbf{60}, 75, 100, 150, 300\}$<br>
+                $\text{M.C.D.}(180, 240, 300) = 60$ botellas por caja.<br>
+                Cajas necesarias: $(180/60) + (240/60) + (300/60) = 3 + 4 + 5 = 12$ cajas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $180 = 2^2 \cdot 3^2 \cdot 5$<br>
+                $240 = 2^4 \cdot 3 \cdot 5$<br>
+                $300 = 2^2 \cdot 3 \cdot 5^2$<br>
+                $$\text{M.C.D.}(180, 240, 300) = 2^2 \cdot 3 \cdot 5 = 60 \text{ botellas}$$
+                Número de cajas: $\frac{180+240+300}{60} = \frac{720}{60} = 12 \text{ cajas}$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <p class="exercise-statement">Se quieren empaquetar tres varillas metálicas de 126 cm, 168 cm y 210 cm cortándolas en segmentos de igual longitud sin perder nada. ¿Cuál es la mayor longitud posible de cada segmento?</p>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(126) = \{1, 2, 3, 6, 7, 9, 14, 18, 21, \mathbf{42}, 63, 126\}$<br>
+                $\text{Div}(168) = \{1, 2, 3, 4, 6, 7, 8, 12, 14, 21, 24, 28, \mathbf{42}, 56, 84, 168\}$<br>
+                $\text{Div}(210) = \{1, 2, 3, 5, 6, 7, 10, 14, 15, 21, 30, 35, \mathbf{42}, 70, 105, 210\}$<br>
+                El mayor divisor común es $42$. La mayor longitud posible es $42$ cm.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $126 = 2 \cdot 3^2 \cdot 7$<br>
+                $168 = 2^3 \cdot 3 \cdot 7$<br>
+                $210 = 2 \cdot 3 \cdot 5 \cdot 7$<br>
+                $$\text{M.C.D.}(126, 168, 210) = 2 \cdot 3 \cdot 7 = 42 \text{ cm}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <p class="exercise-statement">Un solar rectangular de 150 m de largo y 90 m de ancho se divide en parcelas cuadradas exactamente iguales lo más grandes posible. ¿Cuál es el área de cada parcela?</p>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+                <p><strong>Solución Ejercicio 24:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(150) = \{1, 2, 3, 5, 6, 10, 15, 25, \mathbf{30}, 50, 75, 150\}$<br>
+                $\text{Div}(90) = \{1, 2, 3, 5, 6, 9, 10, 15, 18, \mathbf{30}, 45, 90\}$<br>
+                Lado del cuadrado: $\text{M.C.D.}(150, 90) = 30$ m.<br>
+                Área de la parcela: $30 \text{ m} \times 30 \text{ m} = 900 \text{ m}^2$.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $150 = 2 \cdot 3 \cdot 5^2$<br>
+                $90 = 2 \cdot 3^2 \cdot 5$<br>
+                $$\text{M.C.D.}(150, 90) = 2 \cdot 3 \cdot 5 = 30 \text{ m}$$
+                Área = $\text{lado}^2 = 30^2 = 900 \text{ m}^2$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <p class="exercise-statement">Tres tanques contienen 210, 315 y 420 litros de aceite vegetal de distinto tipo. Se quiere envasar todo el contenido en recipientes de idéntica capacidad máxima. ¿Cuántos recipientes llenos saldrán en total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+                <p><strong>Solución Ejercicio 25:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(210) = \{1, 2, \dots, 35, 42, 70, \mathbf{105}, 210\}$<br>
+                $\text{Div}(315) = \{1, 3, \dots, 35, 45, 63, \mathbf{105}, 315\}$<br>
+                $\text{Div}(420) = \{1, 2, \dots, 60, 70, 84, \mathbf{105}, 140, 210, 420\}$<br>
+                $\text{M.C.D.}(210, 315, 420) = 105$ litros por recipiente.<br>
+                Recipientes: $(210/105) + (315/105) + (420/105) = 2 + 3 + 4 = 9$ recipientes.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $210 = 2 \cdot 3 \cdot 5 \cdot 7$<br>
+                $315 = 3^2 \cdot 5 \cdot 7$<br>
+                $420 = 2^2 \cdot 3 \cdot 5 \cdot 7$<br>
+                $$\text{M.C.D.}(210, 315, 420) = 3 \cdot 5 \cdot 7 = 105 \text{ litros}$$
+                Número de recipientes: $\frac{210+315+420}{105} = \frac{945}{105} = 9 \text{ recipientes}$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <p class="exercise-statement">En una ONG reciben donaciones de tres empresas: 144 latas de conserva, 192 cajas de leche y 240 paquetes de pasta. Quieren organizar paquetes idénticos con el máximo número de alimentos posible. ¿Cuántas unidades de cada producto habrá por paquete?</p>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+                <p><strong>Solución Ejercicio 26:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(144) = \{1, 2, 3, \dots, 24, 36, \mathbf{48}, 72, 144\}$<br>
+                $\text{Div}(192) = \{1, 2, 3, \dots, 24, 32, \mathbf{48}, 64, 96, 192\}$<br>
+                $\text{Div}(240) = \{1, 2, 3, \dots, 30, 40, \mathbf{48}, 60, 80, 120, 240\}$<br>
+                $\text{M.C.D.}(144, 192, 240) = 48$ paquetes totales.<br>
+                Contenido por paquete: $144/48 = 3$ latas, $192/48 = 4$ leches, $240/48 = 5$ pastas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $144 = 2^4 \cdot 3^2$<br>
+                $192 = 2^6 \cdot 3$<br>
+                $240 = 2^4 \cdot 3 \cdot 5$<br>
+                $$\text{M.C.D.}(144, 192, 240) = 2^4 \cdot 3 = 48 \text{ paquetes}$$
+                Cada paquete contendrá $3$ latas de conserva, $4$ cajas de leche y $5$ paquetes de pasta.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <p class="exercise-statement">Un orfebre tiene tres barras de oro puro de 216 g, 288 g y 360 g. Quiere fundirlas y moldearlas en lingotes idénticos del mayor peso posible sin mezclar ni que sobre oro. ¿Cuánto pesará cada lingote?</p>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+                <p><strong>Solución Ejercicio 27:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(216) = \{1, 2, 3, \dots, 36, 54, \mathbf{72}, 108, 216\}$<br>
+                $\text{Div}(288) = \{1, 2, 3, \dots, 36, 48, \mathbf{72}, 96, 144, 288\}$<br>
+                $\text{Div}(360) = \{1, 2, 3, \dots, 40, 60, \mathbf{72}, 90, 120, 180, 360\}$<br>
+                El mayor divisor común es $72$. Cada lingote pesará $72$ gramos.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $216 = 2^3 \cdot 3^3$<br>
+                $288 = 2^5 \cdot 3^2$<br>
+                $360 = 2^3 \cdot 3^2 \cdot 5$<br>
+                $$\text{M.C.D.}(216, 288, 360) = 2^3 \cdot 3^2 = 8 \cdot 9 = 72 \text{ gramos}$$</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <p class="exercise-statement">Se construyen tres muros utilizando listones rectangulares de longitud 252 cm, 315 cm y 378 cm. Si se deben cortar en segmentos iguales de la mayor longitud realizable, ¿cuántos segmentos se obtendrán en total?</p>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+                <p><strong>Solución Ejercicio 28:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(252) = \{1, 2, 3, \dots, 28, 36, \mathbf{63}, 84, 126, 252\}$<br>
+                $\text{Div}(315) = \{1, 3, 5, \dots, 35, 45, \mathbf{63}, 105, 315\}$<br>
+                $\text{Div}(378) = \{1, 2, 3, \dots, 42, 54, \mathbf{63}, 126, 189, 378\}$<br>
+                $\text{M.C.D.}(252, 315, 378) = 63$ cm.<br>
+                Segmentos totales: $(252/63) + (315/63) + (378/63) = 4 + 5 + 6 = 15$ segmentos.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $252 = 2^2 \cdot 3^2 \cdot 7$<br>
+                $315 = 3^2 \cdot 5 \cdot 7$<br>
+                $378 = 2 \cdot 3^3 \cdot 7$<br>
+                $$\text{M.C.D.}(252, 315, 378) = 3^2 \cdot 7 = 9 \cdot 7 = 63 \text{ cm}$$
+                Número total de segmentos: $\frac{252+315+378}{63} = \frac{945}{63} = 15 \text{ segmentos}$.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <p class="exercise-statement">Una fábrica de azulejos produce piezas de 320 mm por 400 mm. Se quieren embalar sobre paneles cuadrados del mayor tamaño posible sin que sobresalga ni falte espacio. ¿Cuáles serán las dimensiones de dichos paneles?</p>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+                <p><strong>Solución Ejercicio 29:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(320) = \{1, 2, 4, 5, 8, 10, 16, 20, 32, 40, \mathbf{80}, 160, 320\}$<br>
+                $\text{Div}(400) = \{1, 2, 4, 5, 8, 10, 16, 20, 25, 40, 50, \mathbf{80}, 100, 200, 400\}$<br>
+                El mayor divisor común es $80$. Las dimensiones del panel serán $80\text{ mm} \times 80\text{ mm}$.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $320 = 2^6 \cdot 5$<br>
+                $400 = 2^4 \cdot 5^2$<br>
+                $$\text{M.C.D.}(320, 400) = 2^4 \cdot 5 = 16 \cdot 5 = 80 \text{ mm}$$
+                Las dimensiones del panel son de $80 \text{ mm}$ de lado.</p>
+            </div>                
+        </div>
+
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <p class="exercise-statement">Un evento cultural reúne a 360 músicos, 480 bailarines y 600 actores. Se organizan delegaciones idénticas compuestas por personas del mismo colectivo artístico sin mezclar. ¿Cuál es el número máximo de personas que puede integrar cada delegación?</p>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="Difícil" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+                <p><strong>Solución Ejercicio 30:</strong></p>
+                <p><strong>Forma A (Listado de divisores):</strong><br>
+                $\text{Div}(360) = \{1, 2, 3, \dots, 60, 72, 90, \mathbf{120}, 180, 360\}$<br>
+                $\text{Div}(480) = \{1, 2, 3, \dots, 60, 80, 96, \mathbf{120}, 160, 240, 480\}$<br>
+                $\text{Div}(600) = \{1, 2, 3, \dots, 60, 75, 100, \mathbf{120}, 150, 200, 300, 600\}$<br>
+                El mayor divisor común es $120$. Cada delegación tendrá como máximo $120$ personas.</p>
+                <p><strong>Forma B (Descomposición en factores primos):</strong><br>
+                Descomposición:<br>
+                $360 = 2^3 \cdot 3^2 \cdot 5$<br>
+                $480 = 2^5 \cdot 3 \cdot 5$<br>
+                $600 = 2^3 \cdot 3 \cdot 5^2$<br>
+                $$\text{M.C.D.}(360, 480, 600) = 2^3 \cdot 3 \cdot 5 = 8 \cdot 3 \cdot 5 = 120 \text{ personas}$$</p>
+            </div>                
+        </div>
+
+    </div>
+  <!-- Modal de Soluciones (si se gestiona mediante JS externo) -->
+    <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Pagina_Ejercicios.js"></script>
+</body>
+</html>

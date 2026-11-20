@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas de Mínimo Común Múltiplo (m.c.m.) - 1º ESO</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+      
+    <!-- 1. Configuración de MathJax -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .problem-card {
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .problem-title {
+            font-size: 1.1rem;
+            color: #2635b7;
+            margin-bottom: 12px;
+        }
+
+        .section-box {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #ffffff;
+            border-left: 4px solid #00769d;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .section-box ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .respuesta-box {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #e6fffa;
+            border-left: 4px solid #319795;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #234e52;
+        }
+    </style>
+</head>
+<body>
+
+
+     <h1>Colección de Problemas Resueltos: Máximo Común Divisor</h1>
+
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <!-- BLOQUE 1: NIVEL BÁSICO -->
+    <div class="step-block">
+        <div class="step-title">Bloque 1: Nivel Básico (Divisiones y repartos sencillos)</div>
+
+        <!-- Problema 1 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 1 (Cintas de tela):</strong> Una modista tiene dos cintas de tela: una roja de 12 metros y una azul de 18 metros. Quiere cortarlas en trozos de la misma longitud, lo más largos posible y sin que sobre nada de tela. ¿Cuánto medirá cada trozo? ¿Cuántos trozos obtendrá en total?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Cinta roja = $12\text{ m}$.</li>
+                    <li>Cinta azul = $18\text{ m}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Las palabras clave **cortar**, **repartir** o **dividir** objetos en partes **iguales** y de la **máxima longitud posible** indican que debemos calcular el **$\text{M.C.D.}(12, 18)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Descomponemos en factores primos:
+                $$12 = 2^2 \cdot 3$$
+                $$18 = 2 \cdot 3^2$$
+                Tomamos únicamente los factores primos **comunes** elevados al **menor exponente** ($2$ y $3$):
+                $$\text{M.C.D.}(12, 18) = 2 \cdot 3 = 6\text{ metros}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Longitud de cada trozo: $6\text{ m}$.<br>
+                - Trozos de cinta roja: $12 : 6 = 2\text{ trozos}$.<br>
+                - Trozos de cinta azul: $18 : 6 = 3\text{ trozos}$.<br>
+                - Trozos totales: $2 + 3 = 5\text{ trozos}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Cada trozo medirá **6 metros**. En total obtendrá **5 trozos** (2 rojos y 3 azules).
+            </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 2 (Bolsas de caramelos):</strong> Un pastelero ha fabricado 20 caramelos de fresa y 30 caramelos de limón. Quiere embolsarlos en sacos iguales con la misma cantidad de cada sabor, usando el mayor número posible de caramelos por bolsa y sin que sobre ninguno. ¿Cuántos caramelos pondrá en cada bolsa?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Caramelos de fresa = $20\text{ unidades}$.</li>
+                    <li>Caramelos de limón = $30\text{ unidades}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Se trata de **repartir** o **agrupar** cantidades en partes **iguales** buscando la **mayor cantidad** posible dentro de cada grupo. Planteamos el **$\text{M.C.D.}(20, 30)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Factorizamos los dos números:
+                $$20 = 2^2 \cdot 5$$
+                $$30 = 2 \cdot 3 \cdot 5$$
+                Elegimos los factores comunes al menor exponente ($2$ y $5$):
+                $$\text{M.C.D.}(20, 30) = 2 \cdot 5 = 10\text{ bolsas}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Número de bolsas posibles: $10\text{ bolsas}$.<br>
+                - Caramelos por bolsa: $(20 + 30) : 10 = 50 : 10 = 5\text{ caramelos}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Podrá hacer **10 bolsas iguales**, poniendo **5 caramelos en cada una** (2 de fresa y 3 de limón).
+            </div>
+        </div>
+
+        <!-- Problema 3 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 3 (Aulas de extraescolares):</strong> En un colegio hay 16 alumnos en el taller de teatro y 24 en el de pintura. Se quieren formar grupos con el mismo número de estudiantes en cada taller sin mezclar asignaturas, de modo que los grupos sean lo más grandes posible. ¿Cuántos alumnos tendrá cada grupo?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Alumnos de teatro = $16\text{ alumnos}$.</li>
+                    <li>Alumnos de pintura = $24\text{ alumnos}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                El enunciado exige **dividir** a los estudiantes en grupos **iguales** aprovechando el **máximo número** de integrantes por grupo. Calculamos el **$\text{M.C.D.}(16, 24)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Descomposición factorial:
+                $$16 = 2^4$$
+                $$24 = 2^3 \cdot 3$$
+                Tomamos los factores comunes al menor exponente ($2^3$):
+                $$\text{M.C.D.}(16, 24) = 2^3 = 8\text{ alumnos por grupo}$$
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Cada grupo estará formado por **8 alumnos**.
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOQUE 2: NIVEL INTERMEDIO -->
+    <div class="step-block">
+        <div class="step-title">Bloque 2: Nivel Intermedio (Divisiones de 3 cantidades y azulejos)</div>
+
+        <!-- Problema 4 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 4 (Frutas para un buffet):</strong> Para la barra de un restaurante se dispone de 36 manzanas, 48 naranjas y 60 plátanos. Se quieren preparar cestas idénticas con el mayor número posible de frutas de cada tipo y sin que sobre ninguna. ¿Cuántas cestas se pueden preparar y cuántas frutas de cada clase llevará cada cesta?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Manzanas = $36\text{ unidades}$.</li>
+                    <li>Naranjas = $48\text{ unidades}$.</li>
+                    <li>Plátanos = $60\text{ unidades}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Queremos **repartir** tres productos en partes **comunes e iguales**, buscando el **máximo número** de cestas sin restos. Se resuelve hallando el **$\text{M.C.D.}(36, 48, 60)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Factorizamos los tres números:
+                $$36 = 2^2 \cdot 3^2$$
+                $$48 = 2^4 \cdot 3$$
+                $$60 = 2^2 \cdot 3 \cdot 5$$
+                Tomamos los factores comunes presentes en las tres descomposiciones al menor exponente ($2^2$ y $3$):
+                $$\text{M.C.D.}(36, 48, 60) = 2^2 \cdot 3 = 4 \cdot 3 = 12\text{ cestas}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Manzanas por cesta: $36 : 12 = 3\text{ manzanas}$.<br>
+                - Naranjas por cesta: $48 : 12 = 4\text{ naranjas}$.<br>
+                - Plátanos por cesta: $60 : 12 = 5\text{ plátanos}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Se pueden preparar **12 cestas**. Cada cesta llevará **3 manzanas, 4 naranjas y 5 plátanos**.
+            </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 5 (Alicatado de una pared):</strong> Un albañil quiere cubrir una pared rectangular de 120 cm de alto por 180 cm de ancho con azulejos cuadrados lo más grandes posible y sin cortar ninguno. ¿Cuál debe ser la longitud del lado de cada azulejo? ¿Cuántos azulejos se necesitarán en total?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Alto de la pared = $120\text{ cm}$.</li>
+                    <li>Ancho de la pared = $180\text{ cm}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Para encajar cuadrados enteros en una superficie rectangular sin romper azulejos, el lado del cuadrado debe ser un **divisor común** del alto y del ancho. Como deben ser los **más grandes posible**, calculamos el **$\text{M.C.D.}(120, 180)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Descomposición factorial:
+                $$120 = 2^3 \cdot 3 \cdot 5$$
+                $$180 = 2^2 \cdot 3^2 \cdot 5$$
+                Elegimos los factores primos comunes al menor exponente ($2^2, 3, 5$):
+                $$\text{M.C.D.}(120, 180) = 2^2 \cdot 3 \cdot 5 = 4 \cdot 3 \cdot 5 = 60\text{ cm}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Azulejos a lo alto: $120 : 60 = 2\text{ azulejos}$.<br>
+                - Azulejos a lo ancho: $180 : 60 = 3\text{ azulejos}$.<br>
+                - Azulejos totales: $2 \cdot 3 = 6\text{ azulejos}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> El lado de cada azulejo medirá **60 cm** y se necesitarán **6 azulejos** en total para cubrir la pared.
+            </div>
+        </div>
+
+        <!-- Problema 6 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 6 (Garrafas de aceite):</strong> Un agricultor ha cosechado tres variedades de aceite de oliva: 40 litros de picual, 60 litros de arbequina y 100 litros de hojiblanca. Desea envasar todo el aceite en garrafas iguales de la mayor capacidad posible sin mezclar las variedades. ¿Qué capacidad tendrá cada garrafa?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Aceite Picual = $40\text{ L}$.</li>
+                    <li>Aceite Arbequina = $60\text{ L}$.</li>
+                    <li>Aceite Hojiblanca = $100\text{ L}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Buscamos **repartir** volúmenes de líquidos en envases de capacidad **igual y máxima**. Esto requiere calcular el **$\text{M.C.D.}(40, 60, 100)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Factorizamos las tres cantidades:
+                $$40 = 2^3 \cdot 5$$
+                $$60 = 2^2 \cdot 3 \cdot 5$$
+                $$100 = 2^2 \cdot 5^2$$
+                Tomamos los factores primos comunes al menor exponente ($2^2$ y $5$):
+                $$\text{M.C.D.}(40, 60, 100) = 2^2 \cdot 5 = 4 \cdot 5 = 20\text{ litros}$$
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Cada garrafa tendrá una capacidad de **20 litros**.
+            </div>
+        </div>
+
+        <!-- Problema 7 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 7 (Kits de material escolar):</strong> Una ONG ha recibido una donación de 72 cuadernos y 90 bolígrafos. Quieren empaquetarlos en estuches de regalo exactamente iguales con el máximo contenido posible. ¿Cuántos estuches se podrán formar y cuántos cuadernos y bolígrafos incluirá cada uno?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Cuadernos = $72\text{ unidades}$.</li>
+                    <li>Bolígrafos = $90\text{ unidades}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                El objetivo es **agrupar/dividir** dos cantidades en lotes iguales sin que sobre nada, maximizando el número de envases. Calculamos el **$\text{M.C.D.}(72, 90)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Descomposición en factores primos:
+                $$72 = 2^3 \cdot 3^2$$
+                $$90 = 2 \cdot 3^2 \cdot 5$$
+                Factores comunes al menor exponente ($2$ y $3^2$):
+                $$\text{M.C.D.}(72, 90) = 2 \cdot 3^2 = 2 \cdot 9 = 18\text{ estuches}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Cuadernos por estuche: $72 : 18 = 4\text{ cuadernos}$.<br>
+                - Bolígrafos por estuche: $90 : 18 = 5\text{ bolígrafos}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Se podrán formar **18 estuches**. Cada estuche contendrá **4 cuadernos y 5 bolígrafos**.
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOQUE 3: NIVEL AVANZADO -->
+    <div class="step-block">
+        <div class="step-title">Bloque 3: Nivel Avanzado (Geometría de parcelas y cortes complejos)</div>
+
+        <!-- Problema 8 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 8 (División de un terreno agrícola):</strong> Un terreno rectangular que mide 140 metros de largo y 84 metros de ancho se quiere dividir en parcelas cuadradas del mayor tamaño posible para cultivar hortalizas. ¿Cuánto medirá el lado de cada parcela y cuántas parcelas se obtendrán?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Largo del terreno = $140\text{ m}$.</li>
+                    <li>Ancho del terreno = $84\text{ m}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Para descomponer un plano rectangular en cuadrados perfectos sin que sobre tierra, el lado del cuadrado debe **dividir de forma exacta** las dos dimensiones. Al buscar el **mayor tamaño**, planteamos el **$\text{M.C.D.}(140, 84)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Factorizamos ambos números:
+                $$140 = 2^2 \cdot 5 \cdot 7$$
+                $$84 = 2^2 \cdot 3 \cdot 7$$
+                Elegimos los factores comunes al menor exponente ($2^2$ y $7$):
+                $$\text{M.C.D.}(140, 84) = 2^2 \cdot 7 = 4 \cdot 7 = 28\text{ metros}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Parcelas a lo largo: $140 : 28 = 5\text{ parcelas}$.<br>
+                - Parcelas a lo ancho: $84 : 28 = 3\text{ parcelas}$.<br>
+                - Total de parcelas: $5 \cdot 3 = 15\text{ parcelas}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> El lado de cada parcela medirá **28 metros** y se obtendrán **15 parcelas cuadradas**.
+            </div>
+        </div>
+
+        <!-- Problema 9 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 9 (Cables para instalaciones eléctricas):</strong> Un electricista tiene tres rollos de cable que miden 96, 120 y 144 metros. Necesita cortarlos todos en trozos de la misma longitud, lo más largos posible y sin desperdiciar nada de material. ¿Cuál será la longitud de cada pedazo de cable y cuántos trozos obtendrá en total?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Rollo 1 = $96\text{ m}$.</li>
+                    <li>Rollo 2 = $120\text{ m}$.</li>
+                    <li>Rollo 3 = $144\text{ m}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Se solicita **cortar o fraccionar** tres medidas en partes **iguales** y de **máxima longitud**. Hallamos el **$\text{M.C.D.}(96, 120, 144)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Descomponemos los tres números en factores primos:
+                $$96 = 2^5 \cdot 3$$
+                $$120 = 2^3 \cdot 3 \cdot 5$$
+                $$144 = 2^4 \cdot 3^2$$
+                Tomamos los factores primos comunes con menor exponente ($2^3$ y $3$):
+                $$\text{M.C.D.}(96, 120, 144) = 2^3 \cdot 3 = 8 \cdot 3 = 24\text{ metros}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Trozos del rollo 1: $96 : 24 = 4\text{ trozos}$.<br>
+                - Trozos del rollo 2: $120 : 24 = 5\text{ trozos}$.<br>
+                - Trozos del rollo 3: $144 : 24 = 6\text{ trozos}$.<br>
+                - Trozos totales: $4 + 5 + 6 = 15\text{ trozos}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Cada trozo medirá **24 metros** y obtendrá **15 trozos de cable en total**.
+            </div>
+        </div>
+
+        <!-- Problema 10 -->
+        <div class="problem-card">
+            <div class="problem-title"><strong>Problema 10 (Lotes de monedas de colección):</strong> Un coleccionista tiene 150 monedas de bronce, 180 de plata y 210 de oro. Desea guardarlas en estuches idénticos de modo que todos contengan la misma cantidad de monedas de cada metal y se use el menor número de estuches posible. ¿Cuántos estuches usará y cuántas monedas de cada metal habrá en cada uno?</div>
+            
+            <div class="section-box">
+                <strong>1. Datos:</strong>
+                <ul>
+                    <li>Monedas de bronce = $150\text{ unidades}$.</li>
+                    <li>Monedas de plata = $180\text{ unidades}$.</li>
+                    <li>Monedas de oro = $210\text{ unidades}$.</li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <strong>2. Planteamiento y Pistas del Enunciado:</strong><br>
+                Queremos **repartir** las monedas en estuches **iguales**. Para usar el *menor número de estuches posible*, la cantidad de monedas por estuche debe ser la **máxima posible**. Por tanto, calculamos el **$\text{M.C.D.}(150, 180, 210)$**.
+            </div>
+
+            <div class="section-box">
+                <strong>3. Factorización y Cálculo del M.C.D.:</strong><br>
+                Factorizamos las tres cantidades:
+                $$150 = 2 \cdot 3 \cdot 5^2$$
+                $$180 = 2^2 \cdot 3^2 \cdot 5$$
+                $$210 = 2 \cdot 3 \cdot 5 \cdot 7$$
+                Tomamos los factores primos comunes al menor exponente ($2, 3, 5$):
+                $$\text{M.C.D.}(150, 180, 210) = 2 \cdot 3 \cdot 5 = 30\text{ estuches}$$
+            </div>
+
+            <div class="section-box">
+                <strong>4. Cálculos para responder a las preguntas:</strong><br>
+                - Monedas de bronce por estuche: $150 : 30 = 5\text{ monedas}$.<br>
+                - Monedas de plata por estuche: $180 : 30 = 6\text{ monedas}$.<br>
+                - Monedas de oro por estuche: $210 : 30 = 7\text{ monedas}$.
+            </div>
+
+            <div class="respuesta-box">
+                <strong>Respuesta:</strong> Usará **30 estuches**. Cada estuche contendrá **5 monedas de bronce, 6 de plata y 7 de oro**.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
