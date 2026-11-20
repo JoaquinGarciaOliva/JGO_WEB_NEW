@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Los Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td, .factor-table th {
+            padding: 8px 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Estilos adicionales para advertencias */
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        /* Caja de desarrollo en línea continuo */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        /* Estilos específicos para la tabla posicional */
+        .pos-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #ffffff;
+        }
+
+        .pos-table th {
+            background-color: #2635b7;
+            color: white;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+        }
+
+        .pos-table td {
+            border: 1px solid #cbd5e0;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Los Números Enteros ($\mathbb{Z}$)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Definición e Introducción a los Números Enteros</h2>
+            <p>En esta sección veremos por qué surge la necesidad de ampliar el conjunto de los números naturales, qué son los números enteros, cómo se componen y la importancia del signo en las matemáticas.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: ¿POR QUÉ SURGEN LOS NÚMEROS ENTEROS? -->
+            <div class="step-block">
+                <div class="step-title">1. ¿Por qué necesitamos un nuevo conjunto?</div>
+                <p>Si a un niño pequeño le preguntas cuánto es $5 - 3$, responderá sin dudarlo que es $2$. Es una resta fácil dentro de los números que ya conocemos.</p>
+                
+                <p>Sin embargo, si le preguntas cuánto es $3 - 5$, lo más seguro es que responda: <i>«¡Eso no se puede hacer!»</i></p>
+
+                <div class="warning-box">
+                    <strong>¡Tiene toda la razón!</strong> En el conjunto de los números naturales ($\mathbb{N}$), no es posible restar una cantidad mayor a una menor. No existe ningún número en $\mathbb{N}$ que dé resultado a esa operación.
+                </div>
+
+                <p>Para solucionar este problema y poder realizar operaciones como $3 - 5$, es necesario <strong>ampliar el conjunto de los números</strong>. De esta necesidad nace el conjunto de los <strong>Números Enteros ($\mathbb{Z}$)</strong>.</p>
+            </div>
+
+            <!-- SECCIÓN 2: DEFINICIÓN DE Z -->
+            <div class="step-block">
+                <div class="step-title">2. ¿Qué son los Números Enteros ($\mathbb{Z}$)?</div>
+                <div class="regla-box">
+                    El conjunto de los <strong>números enteros</strong> se representa con la letra $\mathbb{Z}$ y está formado por los números positivos, el cero y los números negativos:
+                    $$\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, +1, +2, +3, +4, \dots\}$$
+                </div>
+
+                <p><strong>Composición del conjunto $\mathbb{Z}$:</strong></p>
+                <ul>
+                    <li><strong>Enteros positivos ($\mathbb{Z}^+$):</strong> $+1, +2, +3, +4, \dots$</li>
+                    <li><strong>El cero ($0$):</strong> No es ni positivo ni negativo (es neutro).</li>
+                    <li><strong>Enteros negativos ($\mathbb{Z}^-$):</strong> $-1, -2, -3, -4, \dots$</li>
+                </ul>
+
+                <div class="continuo-box" style="border-left-color: #38a169;">
+                    Conclusión importante: Los números naturales ($\mathbb{N}$) están contenidos dentro de los números enteros ($\mathbb{Z}$). Es decir, $\mathbb{N} \subset \mathbb{Z}$.
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: LOS NÚMEROS YA NO VAN SOLOS (EL SIGNO DE UN NÚMERO) -->
+            <div class="step-block">
+                <div class="step-title">3. Los números no van solos: el signo implícito</div>
+                <p>A partir de ahora, <strong>todos los números llevan pegado un signo</strong> ($+$ o $-$) a su izquierda.</p>
+                
+                <p>Si en algún momento ves un número que parece «ir solo» (sin signo), es porque lleva el signo $+$ de forma invisible:</p>
+
+                <div class="regla-box">
+                    Si no vemos el signo de un número, se entiende que es <strong>positivo ($+$)</strong>.<br>
+                    Ejemplo: $$3 = +3$$
+                </div>
+
+                <p>Por tanto, números como $5$, $12$ o $100$ en realidad representan a $+5$, $+12$ y $+100$.</p>
+            </div>
+
+            <!-- SECCIÓN 4: EL SIGNO TAMPOCO VA SOLO -->
+            <div class="step-block">
+                <div class="step-title">4. El signo tampoco va solo</div>
+                <p>Del mismo modo que un número siempre lleva un signo, <strong>un signo tampoco puede quedarse solo</strong>. Si te encuentras con un signo sin un número explícito a su lado, significa que va acompañado del número $1$:</p>
+
+                <div class="continuo-box" style="border-left-color: #2635b7;">
+                    $$- = -1 \quad \text{y} \quad + = +1$$
+                </div>
+
+                <p style="margin-top: 15px;">Esta propiedad será de gran utilidad más adelante cuando trabajemos con paréntesis, expresiones algebraicas y multiplicación de signos.</p>
+            </div>
+
+            <!-- SECCIÓN 5: TRANSFORMACIÓN DEL LENGUAJE ORDINARIO A NÚMEROS ENTEROS -->
+            <div class="step-block">
+                <div class="step-title">5. Transformación del lenguaje ordinario a números enteros</div>
+                <p>En la vida cotidiana utilizamos los números enteros constantemente sin darnos cuenta. El <strong>signo ($+$ o $-$)</strong> le otorga un significado u orientación al número según un punto de referencia cero ($0$).</p>
+
+                <div class="regla-box">
+                    <ul>
+                        <li><strong>Signo positivo ($+$):</strong> Expresa ganancias, alturas sobre el nivel del mar, temperaturas sobre cero, años después de Cristo, ingresar dinero, subidas o avanzar.</li>
+                        <li><strong>Signo negativo ($-$):</strong> Expresa deudas, profundidades bajo el nivel del mar, temperaturas bajo cero, años antes de Cristo, gastar dinero, bajadas o retroceder.</li>
+                    </ul>
+                </div>
+
+                <p><strong>Ejemplos prácticos:</strong></p>
+                <table class="pos-table">
+                    <thead>
+                        <tr>
+                            <th>Expresión en Lenguaje Ordinario</th>
+                            <th>Expresión Matemática</th>
+                            <th>Significado del Signo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left;">«Voy volando a $100\text{ m}$ sobre el nivel del mar»</td>
+                            <td>$+100\text{ m}$</td>
+                            <td>El signo $+$ indica altura por encima de la referencia ($0\text{ m}$).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">«Debo $23$ euros a un amigo»</td>
+                            <td>$-23\text{ €}$</td>
+                            <td>El signo $-$ expresa una deuda o falta de dinero.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">«Estamos a $5^\circ\text{C}$ bajo cero»</td>
+                            <td>$-5^\circ\text{C}$</td>
+                            <td>El signo $-$ indica una temperatura inferior al punto de congelación ($0^\circ\text{C}$).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">«Ingresé $150\text{ €}$ en mi cuenta bancaria»</td>
+                            <td>$+150\text{ €}$</td>
+                            <td>El signo $+$ representa un aumento o ganancia de saldo.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">«El submarino está sumergido a $80\text{ m}$ de profundidad»</td>
+                            <td>$-80\text{ m}$</td>
+                            <td>El signo $-$ indica posición por debajo de la superficie del agua.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">«Ocurrió en el año $300$ antes de Cristo»</td>
+                            <td>$-300$</td>
+                            <td>El signo $-$ señala una fecha previa al origen del calendario ($0$).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

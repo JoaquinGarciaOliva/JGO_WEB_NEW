@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: El Opuesto de un Número Entero</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Estilos adicionales para advertencias */
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        /* Caja de desarrollo en línea continuo */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        /* Estilos para gráficos e ilustraciones SVG integrados */
+        .svg-container {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            background: #ffffff;
+            padding: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: El Opuesto de un Número Entero ($\mathbb{Z}$)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>El Concepto de Número Opuesto (Simetría en la Recta)</h2>
+            <p>En esta sección aprenderemos qué es el opuesto de un número entero, comprendiéndolo como el número simétrico situado al otro lado del cero a la misma distancia.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: DEFINICIÓN COMO SIMETRÍA RESPECTO AL CERO -->
+            <div class="step-block">
+                <div class="step-title">1. ¿Qué es el opuesto de un número entero?</div>
+                <p>El <strong>opuesto</strong> de un número entero es aquel número que se encuentra en el <strong>lado contrario de la recta real</strong>, pero situado exactamente a la <strong>misma distancia del cero</strong>.</p>
+                
+                <p>Decimos que el opuesto de un número es su <strong>simétrico respecto del punto origen ($0$)</strong>, como si el cero actuase como un espejo.</p>
+
+                <div class="regla-box">
+                    <strong>Regla fundamental del opuesto:</strong><br>
+                    Para hallar el opuesto de un número entero, solo hay que <strong>cambiarle el signo</strong> mantenido su mismo valor absoluto (su misma distancia al cero). Su notación matemática habitual es $\operatorname{Op}(a)$ o simplemente el signo menos delante: $-a$.
+                </div>
+
+                <p>Veamos detalladamente cómo funciona con varios ejemplos:</p>
+
+                <ul>
+                    <li>
+                        <strong>Opuesto de un número negativo, $\operatorname{Op}(-3) = +3$:</strong><br>
+                        El número $-3$ está a $3$ unidades de distancia a la izquierda del cero. Su simétrico al otro lado (a la derecha y a $3$ unidades) es el $+3$.
+                    </li>
+                    <li style="margin-top: 8px;">
+                        <strong>Opuesto de un número positivo, $\operatorname{Op}(+2) = -2$:</strong><br>
+                        El número $+2$ está a $2$ unidades a la derecha del cero. Su simétrico al otro lado (a la izquierda y a $2$ unidades) es el $-2$.
+                    </li>
+                    <li style="margin-top: 8px;">
+                        <strong>Opuesto de un número negativo, $\operatorname{Op}(-5) = 5$:</strong><br>
+                        El número $-5$ está a $5$ unidades a la izquierda. Cruzando al otro lado de la recta a la misma distancia, encontramos el $+5$ (o $5$).
+                    </li>
+                </ul>
+
+                <!-- Ilustración SVG: Simetría de opuestos respecto al cero -->
+                <div class="svg-container">
+                    <svg width="650" height="200" viewBox="0 0 650 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrow-right-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2d3748"/>
+                            </marker>
+                            <marker id="arrow-left-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                                <path d="M 10 0 L 0 5 L 10 10 Z" fill="#2d3748"/>
+                            </marker>
+                        </defs>
+
+                        <!-- Línea de simetría / Espejo en el 0 -->
+                        <line x1="325" y1="20" x2="325" y2="170" stroke="#2635b7" stroke-width="1.5" stroke-dasharray="4,4"/>
+                        <text x="325" y="15" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#2635b7" text-anchor="middle">EJE DE SIMETRÍA (ESPEJO)</text>
+
+                        <!-- Recta numérica base -->
+                        <line x1="30" y1="120" x2="620" y2="120" stroke="#2d3748" stroke-width="3" marker-end="url(#arrow-right-head)" marker-start="url(#arrow-left-head)"/>
+
+                        <!-- Marcas de la recta -->
+                        <!-- -3 -->
+                        <line x1="145" y1="110" x2="145" y2="130" stroke="#e53e3e" stroke-width="2"/>
+                        <circle cx="145" cy="120" r="6" fill="#e53e3e"/>
+                        <text x="145" y="150" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#e53e3e" text-anchor="middle">-3</text>
+
+                        <!-- -2 -->
+                        <line x1="205" y1="110" x2="205" y2="130" stroke="#00769d" stroke-width="2"/>
+                        <circle cx="205" cy="120" r="5" fill="#00769d"/>
+                        <text x="205" y="150" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#00769d" text-anchor="middle">-2</text>
+
+                        <!-- -1 -->
+                        <line x1="265" y1="110" x2="265" y2="130" stroke="#cbd5e0" stroke-width="2"/>
+                        <text x="265" y="150" font-family="Segoe UI, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">-1</text>
+
+                        <!-- 0 -->
+                        <line x1="325" y1="105" x2="325" y2="135" stroke="#2635b7" stroke-width="3"/>
+                        <circle cx="325" cy="120" r="6" fill="#2635b7"/>
+                        <text x="325" y="155" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#2635b7" text-anchor="middle">0</text>
+
+                        <!-- +1 -->
+                        <line x1="385" y1="110" x2="385" y2="130" stroke="#cbd5e0" stroke-width="2"/>
+                        <text x="385" y="150" font-family="Segoe UI, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">+1</text>
+
+                        <!-- +2 -->
+                        <line x1="445" y1="110" x2="445" y2="130" stroke="#00769d" stroke-width="2"/>
+                        <circle cx="445" cy="120" r="5" fill="#00769d"/>
+                        <text x="445" y="150" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#00769d" text-anchor="middle">+2</text>
+
+                        <!-- +3 -->
+                        <line x1="505" y1="110" x2="505" y2="130" stroke="#e53e3e" stroke-width="2"/>
+                        <circle cx="505" cy="120" r="6" fill="#e53e3e"/>
+                        <text x="505" y="150" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#e53e3e" text-anchor="middle">+3</text>
+
+
+                        <!-- Arco de simetría para -3 y +3 -->
+                        <path d="M 145 105 Q 325 25 505 105" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="505,105 497,97 500,107" fill="#e53e3e"/>
+                        <polygon points="145,105 153,97 150,107" fill="#e53e3e"/>
+                        <text x="325" y="45" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#e53e3e" text-anchor="middle">Op(-3) = +3  y  Op(+3) = -3  (Misma distancia: 3 unidades)</text>
+
+                        <!-- Arco de simetría para +2 y -2 -->
+                        <path d="M 205 105 Q 325 55 445 105" fill="none" stroke="#00769d" stroke-width="2"/>
+                        <text x="325" y="75" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#00769d" text-anchor="middle">Op(+2) = -2 (Misma distancia: 2 unidades)</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: EL CASO ESPECIAL DEL CERO -->
+            <div class="step-block">
+                <div class="step-title">2. Caso especial: El opuesto del cero</div>
+                
+                <p>El punto $0$ es el centro de simetría de la recta numérica. Dado que se encuentra a una distancia de $0$ pasos de sí mismo, no tiene otro punto al "otro lado".</p>
+
+                <div class="warning-box">
+                    <strong>Propiedad del Cero:</strong><br>
+                    El cero es el único número entero que es <strong>opuesto de sí mismo</strong>:
+                    $$\operatorname{Op}(0) = 0$$
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: PROPIEDADES Y RESUMEN -->
+            <div class="step-block">
+                <div class="step-title">3. Resumen de propiedades de los opuestos</div>
+
+                <p>Al trabajar con números opuestos, siempre se cumplen las siguientes reglas clave:</p>
+
+                <ul>
+                    <li>Dos números opuestos tienen siempre el <strong>mismo valor absoluto</strong> (están a la misma distancia del cero):
+                        $$|-3| = |+3| = 3$$
+                    </li>
+                    
+                    <li>El <strong>opuesto del opuesto</strong> de un número nos devuelve el número original:
+                        $$\operatorname{Op}(\operatorname{Op}(-5)) = \operatorname{Op}(+5) = -5$$
+                    </li>
+					<li>La <strong>suma de dos números opuestos</strong> siempre es igual a cero.
+   					   Esta propiedad queda en pausa, ya que todavía no se ha explicado la suma. Esta es una de las razones por las que aún no se ha explicado que el opuesto de un número es el número que, al sumarlo, da cero.               
+                    </li>
+                </ul>
+
+                <div class="continuo-box" style="border-left-color: #38a169;">
+                    $$\operatorname{Op}(-3) = +3 \quad | \quad \operatorname{Op}(+2) = -2 \quad | \quad \operatorname{Op}(-5) = 5 \quad | \quad \operatorname{Op}(0) = 0$$
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

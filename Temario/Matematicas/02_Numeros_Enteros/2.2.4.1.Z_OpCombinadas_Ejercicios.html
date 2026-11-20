@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios: Operaciones Combinadas de Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+    <!-- Estilo para asegurar que el contenedor organice los elementos -->
+    <style>
+        .options-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .options-row .exercise-statement {
+            margin: 0;
+        }
+        .solution-step-by-step {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-left: 15px;
+            background-color: #f8fafc;
+            padding: 12px 15px;
+            border-left: 3px solid #2635b7;
+            border-radius: 4px;
+        }
+    </style>
+
+    <!-- 1. Configuración de MathJax -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],                 
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>Ejercicios: Operaciones Combinadas de Números Enteros ($\mathbb{Z}$)</h1>
+    
+    <div class="exercise-list">
+        
+        <!-- ==================== NIVEL FÁCIL (1 - 10) ==================== -->
+
+        <!-- Ejercicio 1 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">1.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas básicas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $5 - 3 \cdot (-2)$</p>
+                    <p class="exercise-statement">b) $-12 : 4 + 7$</p>
+                    <p class="exercise-statement">c) $8 + 2 \cdot (-5)$</p>
+                    <p class="exercise-statement">d) $-15 - 18 : (-3)$</p>
+                    <p class="exercise-statement">e) $-4 \cdot (-3) - 9$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution1">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution1" style="display: none;">
+                <p><strong>Solución Ejercicio 1:</strong></p>
+                <p><strong>a)</strong> $5 - 3 \cdot (-2) = 5 + 6 = 11$</p>
+                <p><strong>b)</strong> $-12 : 4 + 7 = -3 + 7 = 4$</p>
+                <p><strong>c)</strong> $8 + 2 \cdot (-5) = 8 - 10 = -2$</p>
+                <p><strong>d)</strong> $-15 - 18 : (-3) = -15 + 6 = -9$</p>
+                <p><strong>e)</strong> $-4 \cdot (-3) - 9 = 12 - 9 = 3$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 2 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">2.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-6 + 4 \cdot (-3) - 2$</p>
+                    <p class="exercise-statement">b) $20 : (-5) - 8 + 3$</p>
+                    <p class="exercise-statement">c) $7 - 2 \cdot (-4) + 5$</p>
+                    <p class="exercise-statement">d) $-16 : (-2) - 10 - 4$</p>
+                    <p class="exercise-statement">e) $-3 \cdot 5 + 14 : (-2)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution2">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution2" style="display: none;">
+                <p><strong>Solución Ejercicio 2:</strong></p>
+                <p><strong>a)</strong> $-6 + 4 \cdot (-3) - 2 = -6 - 12 - 2 = -20$</p>
+                <p><strong>b)</strong> $20 : (-5) - 8 + 3 = -4 - 8 + 3 = -9$</p>
+                <p><strong>c)</strong> $7 - 2 \cdot (-4) + 5 = 7 + 8 + 5 = 20$</p>
+                <p><strong>d)</strong> $-16 : (-2) - 10 - 4 = 8 - 10 - 4 = -6$</p>
+                <p><strong>e)</strong> $-3 \cdot 5 + 14 : (-2) = -15 - 7 = -22$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 3 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">3.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $10 - 3 \cdot 4 + 2 \cdot (-3)$</p>
+                    <p class="exercise-statement">b) $-24 : 6 - 3 \cdot (-5)$</p>
+                    <p class="exercise-statement">c) $4 \cdot (-2) - 18 : (-9)$</p>
+                    <p class="exercise-statement">d) $-8 - 5 \cdot (-2) + 6$</p>
+                    <p class="exercise-statement">e) $30 : (-3) + 4 \cdot (-2)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution3">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution3" style="display: none;">
+                <p><strong>Solución Ejercicio 3:</strong></p>
+                <p><strong>a)</strong> $10 - 3 \cdot 4 + 2 \cdot (-3) = 10 - 12 - 6 = -8$</p>
+                <p><strong>b)</strong> $-24 : 6 - 3 \cdot (-5) = -4 + 15 = 11$</p>
+                <p><strong>c)</strong> $4 \cdot (-2) - 18 : (-9) = -8 + 2 = -6$</p>
+                <p><strong>d)</strong> $-8 - 5 \cdot (-2) + 6 = -8 + 10 + 6 = 8$</p>
+                <p><strong>e)</strong> $30 : (-3) + 4 \cdot (-2) = -10 - 8 = -18$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 4 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">4.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-14 + 21 : (-7) - 5$</p>
+                    <p class="exercise-statement">b) $6 \cdot (-3) - 4 \cdot (-4)$</p>
+                    <p class="exercise-statement">c) $-35 : (-5) + 3 \cdot (-6)$</p>
+                    <p class="exercise-statement">d) $12 - 8 : (-2) - 15$</p>
+                    <p class="exercise-statement">e) $-2 \cdot (-7) - 5 \cdot 3$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution4">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution4" style="display: none;">
+                <p><strong>Solución Ejercicio 4:</strong></p>
+                <p><strong>a)</strong> $-14 + 21 : (-7) - 5 = -14 - 3 - 5 = -22$</p>
+                <p><strong>b)</strong> $6 \cdot (-3) - 4 \cdot (-4) = -18 + 16 = -2$</p>
+                <p><strong>c)</strong> $-35 : (-5) + 3 \cdot (-6) = 7 - 18 = -11$</p>
+                <p><strong>d)</strong> $12 - 8 : (-2) - 15 = 12 + 4 - 15 = 1$</p>
+                <p><strong>e)</strong> $-2 \cdot (-7) - 5 \cdot 3 = 14 - 15 = -1$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 5 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">5.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $18 : (-3) \cdot 2 - 4$</p>
+                    <p class="exercise-statement">b) $-5 \cdot 3 : (-1) + 8$</p>
+                    <p class="exercise-statement">c) $40 : (-8) - 2 \cdot (-5)$</p>
+                    <p class="exercise-statement">d) $-9 - 3 \cdot (-4) : (-2)$</p>
+                    <p class="exercise-statement">e) $7 \cdot (-2) + 36 : (-6)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution5">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution5" style="display: none;">
+                <p><strong>Solución Ejercicio 5:</strong></p>
+                <p><strong>a)</strong> $18 : (-3) \cdot 2 - 4 = -6 \cdot 2 - 4 = -12 - 4 = -16$</p>
+                <p><strong>b)</strong> $-5 \cdot 3 : (-1) + 8 = -15 : (-1) + 8 = 15 + 8 = 23$</p>
+                <p><strong>c)</strong> $40 : (-8) - 2 \cdot (-5) = -5 + 10 = 5$</p>
+                <p><strong>d)</strong> $-9 - 3 \cdot (-4) : (-2) = -9 - (-12) : (-2) = -9 - 6 = -15$</p>
+                <p><strong>e)</strong> $7 \cdot (-2) + 36 : (-6) = -14 - 6 = -20$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 6 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">6.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-27 : 9 - 4 \cdot (-3) + 1$</p>
+                    <p class="exercise-statement">b) $8 \cdot (-2) : (-4) - 10$</p>
+                    <p class="exercise-statement">c) $-11 + 3 \cdot (-5) - 12 : (-3)$</p>
+                    <p class="exercise-statement">d) $50 : (-10) \cdot (-3) - 7$</p>
+                    <p class="exercise-statement">e) $-4 \cdot (-4) - 30 : (-5)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution6">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution6" style="display: none;">
+                <p><strong>Solución Ejercicio 6:</strong></p>
+                <p><strong>a)</strong> $-27 : 9 - 4 \cdot (-3) + 1 = -3 + 12 + 1 = 10$</p>
+                <p><strong>b)</strong> $8 \cdot (-2) : (-4) - 10 = -16 : (-4) - 10 = 4 - 10 = -6$</p>
+                <p><strong>c)</strong> $-11 + 3 \cdot (-5) - 12 : (-3) = -11 - 15 + 4 = -22$</p>
+                <p><strong>d)</strong> $50 : (-10) \cdot (-3) - 7 = -5 \cdot (-3) - 7 = 15 - 7 = 8$</p>
+                <p><strong>e)</strong> $-4 \cdot (-4) - 30 : (-5) = 16 + 6 = 22$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 7 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">7.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $15 - 3 \cdot (-4) + 10 : (-2)$</p>
+                    <p class="exercise-statement">b) $-32 : (-8) \cdot (-2) + 9$</p>
+                    <p class="exercise-statement">c) $6 \cdot (-5) - 42 : (-7)$</p>
+                    <p class="exercise-statement">d) $-13 - 2 \cdot (-6) - 8 : 4$</p>
+                    <p class="exercise-statement">e) $4 \cdot (-7) + 2 \cdot (-9)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution7">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution7" style="display: none;">
+                <p><strong>Solución Ejercicio 7:</strong></p>
+                <p><strong>a)</strong> $15 - 3 \cdot (-4) + 10 : (-2) = 15 + 12 - 5 = 22$</p>
+                <p><strong>b)</strong> $-32 : (-8) \cdot (-2) + 9 = 4 \cdot (-2) + 9 = -8 + 9 = 1$</p>
+                <p><strong>c)</strong> $6 \cdot (-5) - 42 : (-7) = -30 + 6 = -24$</p>
+                <p><strong>d)</strong> $-13 - 2 \cdot (-6) - 8 : 4 = -13 + 12 - 2 = -3$</p>
+                <p><strong>e)</strong> $4 \cdot (-7) + 2 \cdot (-9) = -28 - 18 = -46$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 8 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">8.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-48 : 6 : (-2) - 5$</p>
+                    <p class="exercise-statement">b) $9 \cdot (-3) + 4 \cdot (-5)$</p>
+                    <p class="exercise-statement">c) $-20 + 60 : (-5) - 3$</p>
+                    <p class="exercise-statement">d) $-2 \cdot (-8) - 3 \cdot (-7)$</p>
+                    <p class="exercise-statement">e) $63 : (-9) \cdot 2 + 11$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution8">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution8" style="display: none;">
+                <p><strong>Solución Ejercicio 8:</strong></p>
+                <p><strong>a)</strong> $-48 : 6 : (-2) - 5 = -8 : (-2) - 5 = 4 - 5 = -1$</p>
+                <p><strong>b)</strong> $9 \cdot (-3) + 4 \cdot (-5) = -27 - 20 = -47$</p>
+                <p><strong>c)</strong> $-20 + 60 : (-5) - 3 = -20 - 12 - 3 = -35$</p>
+                <p><strong>d)</strong> $-2 \cdot (-8) - 3 \cdot (-7) = 16 + 21 = 37$</p>
+                <p><strong>e)</strong> $63 : (-9) \cdot 2 + 11 = -7 \cdot 2 + 11 = -14 + 11 = -3$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 9 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">9.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $5 \cdot (-4) - 18 : 3 + 2$</p>
+                    <p class="exercise-statement">b) $-72 : (-8) - 5 \cdot (-3)$</p>
+                    <p class="exercise-statement">c) $-10 - 4 \cdot (-6) : (-2)$</p>
+                    <p class="exercise-statement">d) $3 \cdot (-9) + 28 : (-4)$</p>
+                    <p class="exercise-statement">e) $-100 : 10 \cdot (-3) - 15$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution9">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution9" style="display: none;">
+                <p><strong>Solución Ejercicio 9:</strong></p>
+                <p><strong>a)</strong> $5 \cdot (-4) - 18 : 3 + 2 = -20 - 6 + 2 = -24$</p>
+                <p><strong>b)</strong> $-72 : (-8) - 5 \cdot (-3) = 9 + 15 = 24$</p>
+                <p><strong>c)</strong> $-10 - 4 \cdot (-6) : (-2) = -10 - (-24) : (-2) = -10 - 12 = -22$</p>
+                <p><strong>d)</strong> $3 \cdot (-9) + 28 : (-4) = -27 - 7 = -34$</p>
+                <p><strong>e)</strong> $-100 : 10 \cdot (-3) - 15 = -10 \cdot (-3) - 15 = 30 - 15 = 15$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 10 (Fácil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">10.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-8 \cdot 3 + 54 : (-6) - 4$</p>
+                    <p class="exercise-statement">b) $14 - 3 \cdot (-8) : (-4)$</p>
+                    <p class="exercise-statement">c) $-36 : (-4) \cdot (-2) + 20$</p>
+                    <p class="exercise-statement">d) $7 \cdot (-3) - 2 \cdot (-10)$</p>
+                    <p class="exercise-statement">e) $-45 : 5 - 6 \cdot (-2)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution10">
+                <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution10" style="display: none;">
+                <p><strong>Solución Ejercicio 10:</strong></p>
+                <p><strong>a)</strong> $-8 \cdot 3 + 54 : (-6) - 4 = -24 - 9 - 4 = -37$</p>
+                <p><strong>b)</strong> $14 - 3 \cdot (-8) : (-4) = 14 - (-24) : (-4) = 14 - 6 = 8$</p>
+                <p><strong>c)</strong> $-36 : (-4) \cdot (-2) + 20 = 9 \cdot (-2) + 20 = -18 + 20 = 2$</p>
+                <p><strong>d)</strong> $7 \cdot (-3) - 2 \cdot (-10) = -21 + 20 = -1$</p>
+                <p><strong>e)</strong> $-45 : 5 - 6 \cdot (-2) = -9 + 12 = 3$</p>
+            </div>                
+        </div>
+
+        <!-- ==================== NIVEL INTERMEDIO (11 - 20) ==================== -->
+
+        <!-- Ejercicio 11 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">11.</span>
+            <div>
+                <p>Calcula introduciendo paréntesis de prioridad de operación:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $4 \cdot (5 - 8) + 6$</p>
+                    <p class="exercise-statement">b) $(-12 + 4) : (-2) - 3$</p>
+                    <p class="exercise-statement">c) $15 - 2 \cdot (3 - 7)$</p>
+                    <p class="exercise-statement">d) $(8 - 14) : 3 \cdot (-5)$</p>
+                    <p class="exercise-statement">e) $-3 \cdot (-2 + 6) - 10$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution11">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution11" style="display: none;">
+                <p><strong>Solución Ejercicio 11:</strong></p>
+                <p><strong>a)</strong> $4 \cdot (5 - 8) + 6 = 4 \cdot (-3) + 6 = -12 + 6 = -6$</p>
+                <p><strong>b)</strong> $(-12 + 4) : (-2) - 3 = (-8) : (-2) - 3 = 4 - 3 = 1$</p>
+                <p><strong>c)</strong> $15 - 2 \cdot (3 - 7) = 15 - 2 \cdot (-4) = 15 + 8 = 23$</p>
+                <p><strong>d)</strong> $(8 - 14) : 3 \cdot (-5) = (-6) : 3 \cdot (-5) = -2 \cdot (-5) = 10$</p>
+                <p><strong>e)</strong> $-3 \cdot (-2 + 6) - 10 = -3 \cdot 4 - 10 = -12 - 10 = -22$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 12 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">12.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas con paréntesis:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $(10 - 16) : (-2) + 4 \cdot (-3)$</p>
+                    <p class="exercise-statement">b) $-5 - 3 \cdot (-4 + 9)$</p>
+                    <p class="exercise-statement">c) $(18 - 3) : (-5) - (-2) \cdot 6$</p>
+                    <p class="exercise-statement">d) $7 \cdot (2 - 5) - (-12) : 3$</p>
+                    <p class="exercise-statement">e) $(-20 + 8) : (-3) \cdot (-2)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution12">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution12" style="display: none;">
+                <p><strong>Solución Ejercicio 12:</strong></p>
+                <p><strong>a)</strong> $(10 - 16) : (-2) + 4 \cdot (-3) = (-6) : (-2) - 12 = 3 - 12 = -9$</p>
+                <p><strong>b)</strong> $-5 - 3 \cdot (-4 + 9) = -5 - 3 \cdot 5 = -5 - 15 = -20$</p>
+                <p><strong>c)</strong> $(18 - 3) : (-5) - (-2) \cdot 6 = 15 : (-5) + 12 = -3 + 12 = 9$</p>
+                <p><strong>d)</strong> $7 \cdot (2 - 5) - (-12) : 3 = 7 \cdot (-3) + 4 = -21 + 4 = -17$</p>
+                <p><strong>e)</strong> $(-20 + 8) : (-3) \cdot (-2) = (-12) : (-3) \cdot (-2) = 4 \cdot (-2) = -8$</p>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 13 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">13.</span>
+            <div>
+                <p>Calcula resolviendo la operación interna del paréntesis primero:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-2 \cdot (3 - 4 \cdot 2) + 5$</p>
+                    <p class="exercise-statement">b) $(15 - 18 : 3) : (-3)$</p>
+                    <p class="exercise-statement">c) $6 + 3 \cdot (-2 + 5 \cdot (-1))$</p>
+                    <p class="exercise-statement">d) $(-24 : 4 + 2) \cdot (-5)$</p>
+                    <p class="exercise-statement">e) $10 - (4 - 2 \cdot 5) \cdot 3$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution13">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution13" style="display: none;">
+                <p><strong>Solución Ejercicio 13:</strong></p>
+                <div  >
+                    a) $-2 \cdot (3 - 4 \cdot 2) + 5 = -2 \cdot (3 - 8) + 5 = -2 \cdot (-5) + 5 = 10 + 5 = 15$<br><br>
+                    b) $(15 - 18 : 3) : (-3) = (15 - 6) : (-3) = 9 : (-3) = -3$<br><br>
+                    c) $6 + 3 \cdot (-2 + 5 \cdot (-1)) = 6 + 3 \cdot (-2 - 5) = 6 + 3 \cdot (-7) = 6 - 21 = -15$<br><br>
+                    d) $(-24 : 4 + 2) \cdot (-5) = (-6 + 2) \cdot (-5) = (-4) \cdot (-5) = 20$<br><br>
+                    e) $10 - (4 - 2 \cdot 5) \cdot 3 = 10 - (4 - 10) \cdot 3 = 10 - (-6) \cdot 3 = 10 + 18 = 28$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 14 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">14.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $(-3 - 2 \cdot 4) \cdot (-2) - 8$</p>
+                    <p class="exercise-statement">b) $30 : (-2 - 3) + 4 \cdot (-4)$</p>
+                    <p class="exercise-statement">c) $-8 + 2 \cdot (-12 + 15 : 3)$</p>
+                    <p class="exercise-statement">d) $(5 \cdot (-3) + 7) : (-4)$</p>
+                    <p class="exercise-statement">e) $-4 \cdot (8 - 14 : (-2)) + 12$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution14">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution14" style="display: none;">    
+                <p><strong>Solución Ejercicio 14:</strong></p>
+                <div  >
+                    a) $(-3 - 2 \cdot 4) \cdot (-2) - 8 = (-3 - 8) \cdot (-2) - 8 $<br>$ = (-11) \cdot (-2) - 8 = 22 - 8 = 14$<br><br>
+                    b) $30 : (-2 - 3) + 4 \cdot (-4) = 30 : (-5) - 16 = -6 - 16 = -22$<br><br>
+                    c) $-8 + 2 \cdot (-12 + 15 : 3) = -8 + 2 \cdot (-12 + 5) $<br>$ = -8 + 2 \cdot (-7) = -8 - 14 = -22$<br><br>
+                    d) $(5 \cdot (-3) + 7) : (-4) = (-15 + 7) : (-4) = (-8) : (-4) = 2$<br><br>
+                    e) $-4 \cdot (8 - 14 : (-2)) + 12 = -4 \cdot (8 + 7) + 12 $<br>$ = -4 \cdot 15 + 12 = -60 + 12 = -48$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 15 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">15.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $(4 - 9) \cdot (3 - 8) - 10$</p>
+                    <p class="exercise-statement">b) $-36 : (-3 + 9) + 5 \cdot (-2)$</p>
+                    <p class="exercise-statement">c) $12 - 3 \cdot (-2 - 4) : (-9)$</p>
+                    <p class="exercise-statement">d) $(-18 + 2 \cdot 5) : (-4) \cdot (-3)$</p>
+                    <p class="exercise-statement">e) $-6 \cdot ( -3 + 12 : (-4) )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution15">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution15" style="display: none;">
+                <p><strong>Solución Ejercicio 15:</strong></p>
+                <div  >
+                    a) $(4 - 9) \cdot (3 - 8) - 10 = (-5) \cdot (-5) - 10 = 25 - 10 = 15$<br><br>
+                    b) $-36 : (-3 + 9) + 5 \cdot (-2) = -36 : 6 - 10 = -6 - 10 = -16$<br><br>
+                    c) $12 - 3 \cdot (-2 - 4) : (-9) = 12 - 3 \cdot (-6) : (-9) $<br>$  = 12 + 18 : (-9) = 12 - 2 = 10$<br><br>
+                    d) $(-18 + 2 \cdot 5) : (-4) \cdot (-3) $<br>$  = (-18 + 10) : (-4) \cdot (-3) = (-8) : (-4) \cdot (-3) = 2 \cdot (-3) = -6$<br><br>
+                    e) $-6 \cdot ( -3 + 12 : (-4) ) = -6 \cdot (-3 - 3) = -6 \cdot (-6) = 36$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 16 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">16.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-5 \cdot ( 2 - 3 \cdot (-2) ) - 4$</p>
+                    <p class="exercise-statement">b) $( -20 : (-4) - 9 ) \cdot (-3)$</p>
+                    <p class="exercise-statement">c) $8 - 2 \cdot ( -6 + 18 : (-3) )$</p>
+                    <p class="exercise-statement">d) $( 3 \cdot (-4) - 2 \cdot (-5) ) : (-2)$</p>
+                    <p class="exercise-statement">e) $-15 + 3 \cdot ( -8 - 12 : (-4) )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution16">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution16" style="display: none;">
+                <p><strong>Solución Ejercicio 16:</strong></p>
+                <div  >
+                    a) $-5 \cdot ( 2 - 3 \cdot (-2) ) - 4 = -5 \cdot (2 + 6) - 4 $<br>$  = -5 \cdot 8 - 4 = -40 - 4 = -44$<br><br>
+                    b) $( -20 : (-4) - 9 ) \cdot (-3) = (5 - 9) \cdot (-3) $<br>$  = (-4) \cdot (-3) = 12$<br><br>
+                    c) $8 - 2 \cdot ( -6 + 18 : (-3) ) = 8 - 2 \cdot (-6 - 6)$<br>$  = 8 - 2 \cdot (-12) = 8 + 24 = 32$<br><br>
+                    d) $( 3 \cdot (-4) - 2 \cdot (-5) ) : (-2) = (-12 + 10) : (-2) = (-2) : (-2) = 1$<br><br>
+                    e) $-15 + 3 \cdot ( -8 - 12 : (-4) ) = -15 + 3 \cdot (-8 + 3)$<br>$  = -15 + 3 \cdot (-5) = -15 - 15 = -30$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 17 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">17.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $( -16 : 4 + 2 \cdot (-3) ) \cdot (-2)$</p>
+                    <p class="exercise-statement">b) $20 - 4 \cdot ( -2 + 5 \cdot (-1) )$</p>
+                    <p class="exercise-statement">c) $( -30 : (-6) - 2 \cdot 4 ) : 3$</p>
+                    <p class="exercise-statement">d) $-7 \cdot ( -3 - 2 \cdot (-4) ) + 10$</p>
+                    <p class="exercise-statement">e) $( 8 - 3 \cdot 4 ) \cdot ( -2 + 7 )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution17">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution17" style="display: none;">
+                <p><strong>Solución Ejercicio 17:</strong></p>
+                <div  >
+                    a) $( -16 : 4 + 2 \cdot (-3) ) \cdot (-2) = (-4 - 6) \cdot (-2)$<br>$  = (-10) \cdot (-2) = 20$<br><br>
+                    b) $20 - 4 \cdot ( -2 + 5 \cdot (-1) ) = 20 - 4 \cdot (-2 - 5)$<br>$  = 20 - 4 \cdot (-7) = 20 + 28 = 48$<br><br>
+                    c) $( -30 : (-6) - 2 \cdot 4 ) : 3 = (5 - 8) : 3 = (-3) : 3 = -1$<br><br>
+                    d) $-7 \cdot ( -3 - 2 \cdot (-4) ) + 10 = -7 \cdot (-3 + 8) + 10 $<br>$  = -7 \cdot 5 + 10 = -35 + 10 = -25$<br><br>
+                    e) $( 8 - 3 \cdot 4 ) \cdot ( -2 + 7 ) = (8 - 12) \cdot 5 = (-4) \cdot 5 = -20$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 18 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">18.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-2 \cdot ( -10 + 4 \cdot (2 - 5) )$</p>
+                    <p class="exercise-statement">b) $( -45 : (-5) - 3 \cdot 3 ) \cdot (-7)$</p>
+                    <p class="exercise-statement">c) $14 - 2 \cdot ( -3 \cdot (-2) - 10 )$</p>
+                    <p class="exercise-statement">d) $( 6 \cdot (-3) - 12 : (-2) ) : (-3)$</p>
+                    <p class="exercise-statement">e) $-4 \cdot ( -2 + 18 : (-6) ) - 9$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution18">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution18" style="display: none;">
+                <p><strong>Solución Ejercicio 18:</strong></p>
+                <div  >
+                    a) $-2 \cdot ( -10 + 4 \cdot (2 - 5) ) = -2 \cdot (-10 + 4 \cdot (-3)) $<br>$  = -2 \cdot (-10 - 12) = -2 \cdot (-22) = 44$<br><br>
+                    b) $( -45 : (-5) - 3 \cdot 3 ) \cdot (-7) = (9 - 9) \cdot (-7)$<br>$   = 0 \cdot (-7) = 0$<br><br>
+                    c) $14 - 2 \cdot ( -3 \cdot (-2) - 10 ) = 14 - 2 \cdot (6 - 10) $<br>$ = 14 - 2 \cdot (-4) = 14 + 8 = 22$<br><br>
+                    d) $( 6 \cdot (-3) - 12 : (-2) ) : (-3) = (-18 + 6) : (-3) $<br>$ = (-12) : (-3) = 4$<br><br>
+                    e) $-4 \cdot ( -2 + 18 : (-6) ) - 9 = -4 \cdot (-2 - 3) - 9 $<br>$  = -4 \cdot (-5) - 9 = 20 - 9 = 11$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 19 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">19.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $( -3 \cdot (-4) - 20 ) \cdot ( -2 + 5 )$</p>
+                    <p class="exercise-statement">b) $-24 : ( -2 - 4 ) - 3 \cdot (-3)$</p>
+                    <p class="exercise-statement">c) $5 - 2 \cdot ( -3 + 4 \cdot (-2) )$</p>
+                    <p class="exercise-statement">d) $( -16 : (-2) - 3 \cdot 4 ) : (-2)$</p>
+                    <p class="exercise-statement">e) $-6 \cdot ( -5 + 2 \cdot (-1) ) - 12$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution19">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution19" style="display: none;">
+                <p><strong>Solución Ejercicio 19:</strong></p>
+                <div  >
+                    a) $( -3 \cdot (-4) - 20 ) \cdot ( -2 + 5 ) = (12 - 20) \cdot 3 = (-8) \cdot 3 = -24$<br><br>
+                    b) $-24 : ( -2 - 4 ) - 3 \cdot (-3) = -24 : (-6) + 9 = 4 + 9 = 13$<br><br>
+                    c) $5 - 2 \cdot ( -3 + 4 \cdot (-2) ) = 5 - 2 \cdot (-3 - 8) = 5 - 2 \cdot (-11) = 5 + 22 = 27$<br><br>
+                    d) $( -16 : (-2) - 3 \cdot 4 ) : (-2) = (8 - 12) : (-2) = (-4) : (-2) = 2$<br><br>
+                    e) $-6 \cdot ( -5 + 2 \cdot (-1) ) - 12 = -6 \cdot (-5 - 2) - 12 = -6 \cdot (-7) - 12 = 42 - 12 = 30$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 20 (Medio) -->
+        <div class="exercise-item">
+            <span class="exercise-number">20.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $( -40 : 8 - 3 \cdot (-2) ) \cdot (-5)$</p>
+                    <p class="exercise-statement">b) $18 - 3 \cdot ( -4 + 2 \cdot (-3) )$</p>
+                    <p class="exercise-statement">c) $( -2 \cdot (-6) - 15 : 3 ) : (-7)$</p>
+                    <p class="exercise-statement">d) $-8 \cdot ( -1 - 3 \cdot (-2) ) + 14$</p>
+                    <p class="exercise-statement">e) $( 10 - 4 \cdot 3 ) \cdot ( -15 : (-3) )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution20">
+                <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution20" style="display: none;">
+                <p><strong>Solución Ejercicio 20:</strong></p>
+                <div  >
+                    a) $( -40 : 8 - 3 \cdot (-2) ) \cdot (-5) = (-5 + 6) \cdot (-5) $<br>$ = 1 \cdot (-5) = -5$<br><br>
+                    b) $18 - 3 \cdot ( -4 + 2 \cdot (-3) ) = 18 - 3 \cdot (-4 - 6)$<br>$  = 18 - 3 \cdot (-10) = 18 + 30 = 48$<br><br>
+                    c) $( -2 \cdot (-6) - 15 : 3 ) : (-7) = (12 - 5) : (-7) = 7 : (-7) = -1$<br><br>
+                    d) $-8 \cdot ( -1 - 3 \cdot (-2) ) + 14 = -8 \cdot (-1 + 6) + 14$<br>$  = -8 \cdot 5 + 14 = -40 + 14 = -26$<br><br>
+                    e) $( 10 - 4 \cdot 3 ) \cdot ( -15 : (-3) ) = (10 - 12) \cdot 5 = (-2) \cdot 5 = -10$
+                </div>
+            </div>                
+        </div>
+
+        <!-- ==================== NIVEL DIFÍCIL (21 - 30) ==================== -->
+
+        <!-- Ejercicio 21 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">21.</span>
+            <div>
+                <p>Calcula con doble nivel de paréntesis/corchetes anidados:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-2 \cdot ( 5 - 2 \cdot (3 - 7) ) + 4$</p>
+                    <p class="exercise-statement">b) $( 12 - 3 \cdot (5 - 2 \cdot 4) ) : (-3)$</p>
+                    <p class="exercise-statement">c) $6 - 2 \cdot ( -3 + 4 \cdot (2 - 5) )$</p>
+                    <p class="exercise-statement">d) $( -18 + 2 \cdot (8 - 5) ) : (-2) \cdot (-3)$</p>
+                    <p class="exercise-statement">e) $-4 \cdot ( 2 - 3 \cdot (-1 - 2) ) - 10$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution21">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution21" style="display: none;">
+                <p><strong>Solución Ejercicio 21:</strong></p>
+                <div  >
+                    a) $-2 \cdot ( 5 - 2 \cdot (3 - 7) ) + 4 = -2 \cdot (5 - 2 \cdot (-4)) + 4$<br>$  = -2 \cdot (5 + 8) + 4 = -2 \cdot 13 + 4 = -26 + 4 = -22$<br><br>
+                    b) $( 12 - 3 \cdot (5 - 2 \cdot 4) ) : (-3) = (12 - 3 \cdot (5 - 8)) : (-3) $<br>$ = (12 - 3 \cdot (-3)) : (-3) = (12 + 9) : (-3) = 21 : (-3) = -7$<br><br>
+                    c) $6 - 2 \cdot ( -3 + 4 \cdot (2 - 5) ) = 6 - 2 \cdot (-3 + 4 \cdot (-3))$<br>$  = 6 - 2 \cdot (-3 - 12) = 6 - 2 \cdot (-15) = 6 + 30 = 36$<br><br>
+                    d) $( -18 + 2 \cdot (8 - 5) ) : (-2) \cdot (-3) = (-18 + 2 \cdot 3) : (-2) \cdot (-3)$<br>$  = (-18 + 6) : (-2) \cdot (-3) = (-12) : (-2) \cdot (-3) = 6 \cdot (-3) = -18$<br><br>
+                    e) $-4 \cdot ( 2 - 3 \cdot (-1 - 2) ) - 10 = -4 \cdot (2 - 3 \cdot (-3)) - 10 $<br>$ = -4 \cdot (2 + 9) - 10 = -4 \cdot 11 - 10 = -44 - 10 = -54$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 22 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">22.</span>
+            <div>
+                <p>Calcula paso a paso las siguientes expresiones combinadas avanzadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $5 - 3 \cdot ( 2 - 2 \cdot (4 - 7) ) + (-8) : 2$</p>
+                    <p class="exercise-statement">b) $( -15 : (2 - 5) + 2 ) \cdot (-4)$</p>
+                    <p class="exercise-statement">c) $20 - ( 4 - 3 \cdot (2 - 5) ) \cdot (-2)$</p>
+                    <p class="exercise-statement">d) $-3 \cdot ( -2 - 2 \cdot (1 - 4) ) - (-12) : (-4)$</p>
+                    <p class="exercise-statement">e) $( (8 - 14) : (-2) + 3 \cdot (-5) ) : (-3)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution22">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution22" style="display: none;">
+                <p><strong>Solución Ejercicio 22:</strong></p>
+                <div  >
+                    a) $5 - 3 \cdot ( 2 - 2 \cdot (4 - 7) ) + (-8) : 2 = 5 - 3 \cdot (2 - 2 \cdot (-3)) - 4 $<br>$ = 5 - 3 \cdot (2 + 6) - 4 = 5 - 3 \cdot 8 - 4 = 5 - 24 - 4 = -23$<br><br>
+                    b) $( -15 : (2 - 5) + 2 ) \cdot (-4) = (-15 : (-3) + 2) \cdot (-4) = (5 + 2) \cdot (-4) $<br>$  = 7 \cdot (-4) = -28$<br><br>
+                    c) $20 - ( 4 - 3 \cdot (2 - 5) ) \cdot (-2) = 20 - (4 - 3 \cdot (-3)) \cdot (-2) $<br>$ = 20 - (4 + 9) \cdot (-2) = 20 - 13 \cdot (-2) = 20 + 26 = 46$<br><br>
+                    d) $-3 \cdot ( -2 - 2 \cdot (1 - 4) ) - (-12) : (-4) = -3 \cdot (-2 - 2 \cdot (-3)) - 3 $<br>$  = -3 \cdot (-2 + 6) - 3 = -3 \cdot 4 - 3 = -12 - 3 = -15$<br><br>
+                    e) $( (8 - 14) : (-2) + 3 \cdot (-5) ) : (-3) = ((-6) : (-2) - 15) : (-3)$<br>$  = (3 - 15) : (-3) = (-12) : (-3) = 4$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 23 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">23.</span>
+            <div>
+                <p>Calcula resolviendo paso a paso los paréntesis encadenados:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-2 \cdot ( 3 - 5 \cdot ( 4 - 2 \cdot 3 ) ) - 4$</p>
+                    <p class="exercise-statement">b) $( 18 - 6 : ( 1 - 3 ) ) : (-7)$</p>
+                    <p class="exercise-statement">c) $4 \cdot ( -3 + 12 : ( 1 - 5 ) )$</p>
+                    <p class="exercise-statement">d) $(-24) : ( 3 - 3 \cdot ( 5 - 2 ) )$</p>
+                    <p class="exercise-statement">e) $-5 - 2 \cdot ( -8 + 4 : ( 1 - 3 ) )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution23">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution23" style="display: none;">
+                <p><strong>Solución Ejercicio 23:</strong></p>
+                <div  >
+                    a) $-2 \cdot ( 3 - 5 \cdot ( 4 - 2 \cdot 3 ) ) - 4 = -2 \cdot (3 - 5 \cdot (4 - 6)) - 4 $<br>$  = -2 \cdot (3 - 5 \cdot (-2)) - 4 = -2 \cdot (3 + 10) - 4 $<br>$  = -2 \cdot 13 - 4 = -26 - 4 = -30$<br><br>
+                    b) $( 18 - 6 : ( 1 - 3 ) ) : (-7) = (18 - 6 : (-2)) : (-7) = (18 - (-3)) : (-7) $<br>$  = (18 + 3) : (-7) = 21 : (-7) = -3$<br><br>
+                    c) $4 \cdot ( -3 + 12 : ( 1 - 5 ) ) = 4 \cdot (-3 + 12 : (-4)) = 4 \cdot (-3 - 3)$<br>$  = 4 \cdot (-6) = -24$<br><br>
+                    d) $(-24) : ( 3 - 3 \cdot ( 5 - 2 ) ) = (-24) : (3 - 3 \cdot 3) = (-24) : (3 - 9)$<br>$  = (-24) : (-6) = 4$<br><br>
+                    e) $-5 - 2 \cdot ( -8 + 4 : ( 1 - 3 ) ) = -5 - 2 \cdot (-8 + 4 : (-2))$<br>$  = -5 - 2 \cdot (-8 - 2) = -5 - 2 \cdot (-10) = -5 + 20 = 15$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 24 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">24.</span>
+            <div>
+                <p>Calcula las siguientes expresiones combinadas con corchetes:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $( 4 - 2 \cdot (8 - 3) ) \cdot ( 3 - 4 \cdot 2 )$</p>
+                    <p class="exercise-statement">b) $( -12 + 4 : ( 3 - 5 ) ) : (-7)$</p>
+                    <p class="exercise-statement">c) $16 : ( -2 - 2 \cdot 1 ) - 3 \cdot (-4)$</p>
+                    <p class="exercise-statement">d) $-3 \cdot ( -4 + 2 \cdot ( 1 - 4 ) )$</p>
+                    <p class="exercise-statement">e) $( -30 : (1 - 6) - 10 ) \cdot (-2)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution24">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution24" style="display: none;">
+                <p><strong>Solución Ejercicio 24:</strong></p>
+                <div  >
+                    a) $( 4 - 2 \cdot (8 - 3) ) \cdot ( 3 - 4 \cdot 2 ) = (4 - 2 \cdot 5) \cdot (3 - 8) $<br>$  = (4 - 10) \cdot (-5) = (-6) \cdot (-5) = 30$<br><br>
+                    b) $( -12 + 4 : ( 3 - 5 ) ) : (-7) = (-12 + 4 : (-2)) : (-7) = (-12 - 2) : (-7) $<br>$  = (-14) : (-7) = 2$<br><br>
+                    c) $16 : ( -2 - 2 \cdot 1 ) - 3 \cdot (-4) = 16 : (-2 - 2) + 12 = 16 : (-4) + 12 $<br>$  = -4 + 12 = 8$<br><br>
+                    d) $-3 \cdot ( -4 + 2 \cdot ( 1 - 4 ) ) = -3 \cdot (-4 + 2 \cdot (-3)) $<br>$  = -3 \cdot (-4 - 6) = -3 \cdot (-10) = 30$<br><br>
+                    e) $( -30 : (1 - 6) - 10 ) \cdot (-2) = (-30 : (-5) - 10) \cdot (-2)$<br>$  = (6 - 10) \cdot (-2) = (-4) \cdot (-2) = 8$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 25 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">25.</span>
+            <div>
+                <p>Calcula las siguientes operaciones combinadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $2 \cdot ( 3 - 2 \cdot (4 - 6) ) - 5$</p>
+                    <p class="exercise-statement">b) $-18 : ( 2 - 4 \cdot (1 - 2) ) + 7$</p>
+                    <p class="exercise-statement">c) $( 5 - 3 \cdot (1 - 3) ) \cdot ( -4 + 1 )$</p>
+                    <p class="exercise-statement">d) $-4 - 2 \cdot ( -3 - 2 \cdot (1 - 5) )$</p>
+                    <p class="exercise-statement">e) $( -20 : (-4) - 3 \cdot (4 - 2) ) \cdot (-8)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution25">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution25" style="display: none;">
+                <p><strong>Solución Ejercicio 25:</strong></p>
+                <div  >
+                    a) $2 \cdot ( 3 - 2 \cdot (4 - 6) ) - 5 = 2 \cdot (3 - 2 \cdot (-2)) - 5 $<br>$  = 2 \cdot (3 + 4) - 5 = 2 \cdot 7 - 5 = 14 - 5 = 9$<br><br>
+                    b) $-18 : ( 2 - 4 \cdot (1 - 2) ) + 7 = -18 : (2 - 4 \cdot (-1)) + 7 $<br>$  = -18 : (2 + 4) + 7 = -18 : 6 + 7 = -3 + 7 = 4$<br><br>
+                    c) $( 5 - 3 \cdot (1 - 3) ) \cdot ( -4 + 1 ) = (5 - 3 \cdot (-2)) \cdot (-3) $<br>$ = (5 + 6) \cdot (-3) = 11 \cdot (-3) = -33$<br><br>
+                    d) $-4 - 2 \cdot ( -3 - 2 \cdot (1 - 5) ) = -4 - 2 \cdot (-3 - 2 \cdot (-4))$<br>$  = -4 - 2 \cdot (-3 + 8) = -4 - 2 \cdot 5 = -4 - 10 = -14$<br><br>
+                    e) $( -20 : (-4) - 3 \cdot (4 - 2) ) \cdot (-8) = (5 - 3 \cdot 2) \cdot (-8)$<br>$  = (5 - 6) \cdot (-8) = (-1) \cdot (-8) = 8$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 26 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">26.</span>
+            <div>
+                <p>Calcula las siguientes expresiones con paréntesis anidados:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-3 \cdot ( 10 - 2 \cdot ( 8 - 3 \cdot 2 ) )$</p>
+                    <p class="exercise-statement">b) $( 15 - 3 \cdot (4 - 7) ) : (-8)$</p>
+                    <p class="exercise-statement">c) $4 - 2 \cdot ( -3 + 2 \cdot ( -5 + 2 ) )$</p>
+                    <p class="exercise-statement">d) $( -36 : (-4) - 2 \cdot ( 5 - 2 ) ) \cdot (-3)$</p>
+                    <p class="exercise-statement">e) $-5 \cdot ( -2 - 3 \cdot ( -4 + 6 ) )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution26">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution26" style="display: none;">
+                <p><strong>Solución Ejercicio 26:</strong></p>
+                <div  >
+                    a) $-3 \cdot ( 10 - 2 \cdot ( 8 - 3 \cdot 2 ) ) = -3 \cdot (10 - 2 \cdot (8 - 6)) $<br>$ = -3 \cdot (10 - 2 \cdot 2) = -3 \cdot (10 - 4) = -3 \cdot 6 = -18$<br><br>
+                    b) $( 15 - 3 \cdot (4 - 7) ) : (-8) = (15 - 3 \cdot (-3)) : (-8) = (15 + 9) : (-8) $<br>$ = 24 : (-8) = -3$<br><br>
+                    c) $4 - 2 \cdot ( -3 + 2 \cdot ( -5 + 2 ) ) = 4 - 2 \cdot (-3 + 2 \cdot (-3)) $<br>$ = 4 - 2 \cdot (-3 - 6) = 4 - 2 \cdot (-9) = 4 + 18 = 22$<br><br>
+                    d) $( -36 : (-4) - 2 \cdot ( 5 - 2 ) ) \cdot (-3) = (9 - 2 \cdot 3) \cdot (-3)$<br>$  = (9 - 6) \cdot (-3) = 3 \cdot (-3) = -9$<br><br>
+                    e) $-5 \cdot ( -2 - 3 \cdot ( -4 + 6 ) ) = -5 \cdot (-2 - 3 \cdot 2) $<br>$ = -5 \cdot (-2 - 6) = -5 \cdot (-8) = 40$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 27 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">27.</span>
+            <div>
+                <p>Calcula el desarrollo en varias líneas de las siguientes operaciones:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $( -2 \cdot (4 - 7) - 10 ) : (-2)$</p>
+                    <p class="exercise-statement">b) $6 - 3 \cdot ( -2 - 2 \cdot ( 3 - 5 ) )$</p>
+                    <p class="exercise-statement">c) $( -40 : (-5) - 3 \cdot (2 - 4) ) \cdot (-2)$</p>
+                    <p class="exercise-statement">d) $-2 \cdot ( -5 + 3 \cdot ( -2 - 1 ) ) - 8$</p>
+                    <p class="exercise-statement">e) $( 24 : (-6) - 2 \cdot (-3) ) \cdot (-5)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution27">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution27" style="display: none;">
+                <p><strong>Solución Ejercicio 27:</strong></p>
+                <div  >
+                    a) $( -2 \cdot (4 - 7) - 10 ) : (-2) = (-2 \cdot (-3) - 10) : (-2) = (6 - 10) : (-2)$<br>$  = (-4) : (-2) = 2$<br><br>
+                    b) $6 - 3 \cdot ( -2 - 2 \cdot ( 3 - 5 ) ) = 6 - 3 \cdot (-2 - 2 \cdot (-2))$<br>$  = 6 - 3 \cdot (-2 + 4) = 6 - 3 \cdot 2 = 6 - 6 = 0$<br><br>
+                    c) $( -40 : (-5) - 3 \cdot (2 - 4) ) \cdot (-2) = (8 - 3 \cdot (-2)) \cdot (-2)$<br>$  = (8 + 6) \cdot (-2) = 14 \cdot (-2) = -28$<br><br>
+                    d) $-2 \cdot ( -5 + 3 \cdot ( -2 - 1 ) ) - 8 = -2 \cdot (-5 + 3 \cdot (-3)) - 8 $<br>$  = -2 \cdot (-5 - 9) - 8 = -2 \cdot (-14) - 8 = 28 - 8 = 20$<br><br>
+                    e) $( 24 : (-6) - 2 \cdot (-3) ) \cdot (-5) = (-4 + 6) \cdot (-5) = 2 \cdot (-5)$<br>$  = -10$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 28 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">28.</span>
+            <div>
+                <p>Calcula las siguientes expresiones combinadas avanzadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-4 \cdot ( -3 + 2 \cdot ( -4 + 3 \cdot 2 ) )$</p>
+                    <p class="exercise-statement">b) $( -18 : ( 2 - 5 ) + 2 \cdot (-3) ) \cdot (-4)$</p>
+                    <p class="exercise-statement">c) $12 - 2 \cdot ( 3 - 4 \cdot ( 2 - 5 ) )$</p>
+                    <p class="exercise-statement">d) $( -30 : (-3) - 2 \cdot ( 8 - 3 ) ) : (-2)$</p>
+                    <p class="exercise-statement">e) $-3 \cdot ( -2 - 2 \cdot ( -3 - 2 ) ) - 15$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution28">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution28" style="display: none;">
+                <p><strong>Solución Ejercicio 28:</strong></p>
+                <div  >
+                    a) $-4 \cdot ( -3 + 2 \cdot ( -4 + 3 \cdot 2 ) ) = -4 \cdot (-3 + 2 \cdot (-4 + 6))$<br>$  = -4 \cdot (-3 + 2 \cdot 2) = -4 \cdot (-3 + 4) = -4 \cdot 1 = -4$<br><br>
+                    b) $( -18 : ( 2 - 5 ) + 2 \cdot (-3) ) \cdot (-4) = (-18 : (-3) - 6) \cdot (-4) $<br>$ = (6 - 6) \cdot (-4) = 0 \cdot (-4) = 0$<br><br>
+                    c) $12 - 2 \cdot ( 3 - 4 \cdot ( 2 - 5 ) ) = 12 - 2 \cdot (3 - 4 \cdot (-3))$<br>$  = 12 - 2 \cdot (3 + 12) = 12 - 2 \cdot 15 = 12 - 30 = -18$<br><br>
+                    d) $( -30 : (-3) - 2 \cdot ( 8 - 3 ) ) : (-2) = (10 - 2 \cdot 5) : (-2) $<br>$ = (10 - 10) : (-2) = 0 : (-2) = 0$<br><br>
+                    e) $-3 \cdot ( -2 - 2 \cdot ( -3 - 2 ) ) - 15 = -3 \cdot (-2 - 2 \cdot (-5)) - 15 $<br>$ = -3 \cdot (-2 + 10) - 15 = -3 \cdot 8 - 15 = -24 - 15 = -39$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 29 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">29.</span>
+            <div>
+                <p>Calcula las siguientes expresiones combinadas avanzadas:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $( -2 \cdot ( -3 + 5 \cdot (-1) ) - 4 ) : (-6)$</p>
+                    <p class="exercise-statement">b) $8 - 2 \cdot ( -3 - 3 \cdot ( -2 + 4 ) )$</p>
+                    <p class="exercise-statement">c) $( -48 : (-6) - 2 \cdot ( 3 - 7 ) ) \cdot (-1)$</p>
+                    <p class="exercise-statement">d) $-5 \cdot ( -2 + 4 \cdot ( -1 - 1 ) ) + 10$</p>
+                    <p class="exercise-statement">e) $( 36 : (-4) + 3 \cdot ( 5 - 2 ) ) \cdot (-9)$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution29">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution29" style="display: none;">
+                <p><strong>Solución Ejercicio 29:</strong></p>
+                <div  >
+                    a) $( -2 \cdot ( -3 + 5 \cdot (-1) ) - 4 ) : (-6) = (-2 \cdot (-3 - 5) - 4) : (-6)$<br>$ = (-2 \cdot (-8) - 4) : (-6) = (16 - 4) : (-6) = 12 : (-6) = -2$<br><br>
+                    b) $8 - 2 \cdot ( -3 - 3 \cdot ( -2 + 4 ) ) = 8 - 2 \cdot (-3 - 3 \cdot 2)$<br>$  = 8 - 2 \cdot (-3 - 6) = 8 - 2 \cdot (-9) = 8 + 18 = 26$<br><br>
+                    c) $( -48 : (-6) - 2 \cdot ( 3 - 7 ) ) \cdot (-1) = (8 - 2 \cdot (-4)) \cdot (-1)$<br>$  = (8 + 8) \cdot (-1) = 16 \cdot (-1) = -16$<br><br>
+                    d) $-5 \cdot ( -2 + 4 \cdot ( -1 - 1 ) ) + 10 = -5 \cdot (-2 + 4 \cdot (-2)) + 10$<br>$  = -5 \cdot (-2 - 8) + 10 = -5 \cdot (-10) + 10 = 50 + 10 = 60$<br><br>
+                    e) $( 36 : (-4) + 3 \cdot ( 5 - 2 ) ) \cdot (-9) = (-9 + 3 \cdot 3) \cdot (-9)$<br>$  = (-9 + 9) \cdot (-9) = 0 \cdot (-9) = 0$
+                </div>
+            </div>                
+        </div>
+
+        <!-- Ejercicio 30 (Difícil) -->
+        <div class="exercise-item">
+            <span class="exercise-number">30.</span>
+            <div>
+                <p>Calcula el valor exacto con triple nivel de anidamiento:</p>
+                <div class="options-row">
+                    <p class="exercise-statement">a) $-2 \cdot ( 5 - 3 \cdot ( 2 - 4 \cdot (-1) ) )$</p>
+                    <p class="exercise-statement">b) $( -60 : (-5) - 2 \cdot ( 8 - 2 \cdot 3 ) ) : (-2)$</p>
+                    <p class="exercise-statement">c) $15 - 3 \cdot ( -2 + 2 \cdot ( -3 - 1 ) )$</p>
+                    <p class="exercise-statement">d) $( -4 \cdot ( -2 - 3 \cdot (-2) ) + 8 ) : (-8)$</p>
+                    <p class="exercise-statement">e) $-3 \cdot ( -4 - 2 \cdot ( -5 + 3 \cdot (-1) ) )$</p>
+                </div>
+            </div>
+            <div class="solution-trigger-container" data-solution-id="solution30">
+                <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+                <span class="solution-tooltip">Solución</span>
+            </div>
+            <div id="solution30" style="display: none;">
+                <p><strong>Solución Ejercicio 30:</strong></p>
+                <div  >
+                    a) $-2 \cdot ( 5 - 3 \cdot ( 2 - 4 \cdot (-1) ) ) = -2 \cdot (5 - 3 \cdot (2 + 4))$<br>$  = -2 \cdot (5 - 3 \cdot 6) = -2 \cdot (5 - 18) = -2 \cdot (-13) = 26$<br><br>
+                    b) $( -60 : (-5) - 2 \cdot ( 8 - 2 \cdot 3 ) ) : (-2) = (12 - 2 \cdot (8 - 6)) : (-2)$<br>$  = (12 - 2 \cdot 2) : (-2) = (12 - 4) : (-2) = 8 : (-2) = -4$<br><br>
+                    c) $15 - 3 \cdot ( -2 + 2 \cdot ( -3 - 1 ) ) = 15 - 3 \cdot (-2 + 2 \cdot (-4))$<br>$  = 15 - 3 \cdot (-2 - 8) = 15 - 3 \cdot (-10) = 15 + 30 = 45$<br><br>
+                    d) $( -4 \cdot ( -2 - 3 \cdot (-2) ) + 8 ) : (-8) = (-4 \cdot (-2 + 6) + 8) : (-8) $<br>$ = (-4 \cdot 4 + 8) : (-8) = (-16 + 8) : (-8) = (-8) : (-8) = 1$<br><br>
+                    e) $-3 \cdot ( -4 - 2 \cdot ( -5 + 3 \cdot (-1) ) ) = -3 \cdot (-4 - 2 \cdot (-5 - 3)) $<br>$ = -3 \cdot (-4 - 2 \cdot (-8)) = -3 \cdot (-4 + 16) = -3 \cdot 12 = -36$
+                </div>
+            </div>                
+        </div>
+
+    </div>
+
+ <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+	
+</body>
+</html>

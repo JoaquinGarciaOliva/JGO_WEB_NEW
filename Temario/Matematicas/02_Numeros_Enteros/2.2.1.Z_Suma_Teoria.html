@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Suma y Unión de Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td, .factor-table th {
+            padding: 8px 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Estilos adicionales para advertencias */
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        /* Caja de desarrollo en línea continuo */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        /* Estilos específicos para la tabla posicional */
+        .pos-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #ffffff;
+        }
+
+        .pos-table th {
+            background-color: #2635b7;
+            color: white;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+        }
+
+        .pos-table td {
+            border: 1px solid #cbd5e0;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Estilos para gráficos e ilustraciones SVG integrados */
+        .svg-container {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            background: #ffffff;
+            padding: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Operaciones con Números Enteros ($\mathbb{Z}$)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Unión de Números Enteros</h2>
+            <p>En esta sección abordaremos las operaciones entre números enteros desde una perspectiva práctica y sencilla, dejando a un lado la notación abstracta y formal.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: UNIR DOS NÚMEROS ENTEROS -->
+            <div class="step-block">
+                <div class="step-title">1. Unir dos números enteros</div>
+                <p>A nivel práctico, ya no hablamos estrictamente de «sumar» o «restar». Lo que hacemos es <strong>unir números enteros</strong>. Al realizar esta unión, el resultado será siempre otro número entero que constará de dos partes: un <strong>signo</strong> y un <strong>número</strong>.</p>
+                
+                <div class="regla-box">
+                    <strong>Criterio práctico para obtener el resultado:</strong><br>
+                    <ul>
+                        <li><strong>El signo:</strong> Se pone el signo del número mayor.</li>
+                        <li><strong>El número:</strong>
+                            <ul>
+                                <li>Si tienen el <strong>mismo signo</strong>, los números se <strong>suman</strong>.</li>
+                                <li>Si tienen <strong>distinto signo</strong>, los números se <strong>restan</strong>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <p>Otra forma equivalente de explicar la misma regla es la siguiente:</p>
+
+                <div class="regla-box" style="background-color: #eefbfb; border-left-color: #00769d;">
+                    <strong>Regla simplificada de signos y operaciones:</strong><br>
+                    <ul>
+                        <li>Si tienen el <strong>mismo signo</strong>: se pone <strong>ese mismo signo</strong> y se <strong>suman</strong> los números.</li>
+                        <li>Si tienen <strong>distinto signo</strong>: se <strong>restan</strong> los números y se pone el <strong>signo del mayor</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong>Nota importante sobre la escritura:</strong><br>
+                    Recuerda que si el primer número es positivo, se puede escribir opcionalmente sin su signo $+$ (por ejemplo, escribir $2$ es equivalente a escribir $+2$).
+                </div>
+
+                <p><strong>Ejemplos prácticos:</strong></p>
+                
+                <table class="pos-table">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Análisis de signos</th>
+                            <th>Acción realizable</th>
+                            <th>Resultado final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$2 + 3$</td>
+                            <td>Mismo signo (positivos)</td>
+                            <td>Se mantiene el $+$, se suman ($2+3$)</td>
+                            <td><span class="highlight">+5</span> (o $5$)</td>
+                        </tr>
+                        <tr>
+                            <td>$-2 - 4$</td>
+                            <td>Mismo signo (negativos)</td>
+                            <td>Se mantiene el $-$, se suman ($2+4$)</td>
+                            <td><span class="highlight">-6</span></td>
+                        </tr>
+                        <tr>
+                            <td>$3 - 2$</td>
+                            <td>Distinto signo ($+3$ y $-2$)</td>
+                            <td>Signo del mayor ($+$), se restan ($3-2$)</td>
+                            <td><span class="highlight">+1</span> (o $1$)</td>
+                        </tr>
+                        <tr>
+                            <td>$5 - 7$</td>
+                            <td>Distinto signo ($+5$ y $-7$)</td>
+                            <td>Signo del mayor ($-$), se restan ($7-5$)</td>
+                            <td><span class="highlight">-2</span></td>
+                        </tr>
+                        <tr>
+                            <td>$-8 + 4$</td>
+                            <td>Distinto signo ($-8$ y $+4$)</td>
+                            <td>Signo del mayor ($-$), se restan ($8-4$)</td>
+                            <td><span class="highlight">-4</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SECCIÓN 2: UNIR MUCHOS NÚMEROS ENTEROS -->
+            <div class="step-block">
+                <div class="step-title">2. Unir muchos números enteros</div>
+                <p>Cuando tenemos una cadena larga de enteros para unir, podemos resolverla utilizando dos estrategias diferentes:</p>
+
+                <!-- MÉTODOS A COMPARAR -->
+                <p><strong>Método A: Agrupar por signos (Positivos y Negativos)</strong></p>
+                <p>Consiste en unir primero todos los números positivos por un lado y todos los negativos por otro. Finalmente, se unen ambos resultados. Este método es muy rápido y sencillo, aunque pueden obtenerse números intermedios algo mayores.</p>
+
+                <p>Ejemplo: Unir la expresión $-2 + 3 - 4 - 3 + 5$</p>
+
+                <ul>
+                    <li><strong>Unir positivos:</strong> $+3 + 5 = +8$</li>
+                    <li><strong>Unir negativos:</strong> $-2 - 4 - 3 = -9$</li>
+                    <li><strong>Mezclar los resultados:</strong> $+8 - 9 = -1$</li>
+                </ul>
+
+                <div class="continuo-box">
+                    $$-2 + 3 - 4 - 3 + 5 = 8 - 9 = -1$$
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #cbd5e0; margin: 25px 0;">
+
+                <p><strong>Método B: Resolver paso a paso de dos en dos</strong></p>
+                <p>Consiste en ir operando en orden de izquierda a derecha, uniendo los números de dos en dos. Aunque es un proceso un poco más largo, tiene la ventaja de trabajar con números más pequeños en todo momento.</p>
+
+                <p>Resolvamos la misma expresión de forma consecutiva ($-2 + 3 - 4 - 3 + 5$):</p>
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral">
+                        <ul>
+                            <li>Unimos $-2 + 3 \Rightarrow \mathbf{+1}$</li>
+                            <li>Unimos $+1 - 4 - 3 \Rightarrow +1 - 7 = \mathbf{-6}$</li>
+                            <li>Unimos $-6 + 5 \Rightarrow \mathbf{-1}$</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="continuo-box" style="border-left-color: #38a169;">
+                    $$-2 + 3 - 4 - 3 + 5 = +1 - 7 + 5 = -6 + 5 = -1$$
+                </div>
+
+                <div class="regla-box">
+                    <strong>Conclusión:</strong> Ambas estrategias conducen exactamente al mismo resultado final ($\mathbf{-1}$). Puedes elegir la que te resulte más cómoda según cada caso.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

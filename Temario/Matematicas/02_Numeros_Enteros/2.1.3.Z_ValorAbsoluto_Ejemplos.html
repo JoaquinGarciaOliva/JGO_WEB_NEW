@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Ejemplos Prácticos de Valor Absoluto de Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+<!-- 1. Configuración de MathJax (Con tags: 'none' para evitar duplicados de numeración) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],               
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ],
+        tags: 'none' /* Desactiva la numeración automática de TeX */
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        width: 100%;
+    }
+    
+    .explicacion-lateral ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+
+    /* Corrección CSS para asegurar solo una numeración en listas ordenadas */
+    .explicacion-lateral ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        margin: 10px 0;
+    }
+
+    .explicacion-lateral ol li::before {
+        content: none !important;
+    }
+
+    .math-steps {
+        margin: 10px 0;
+        padding-left: 15px;
+    }
+
+    .svg-container {
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+        background: #ffffff;
+        padding: 10px 0;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .svg-container svg {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+
+<h1>Ejemplos Prácticos: Números Enteros ($\mathbb{Z}$) - VALOR ABSOLUTO</h1>
+
+<div class="exercise-list">
+<div class="tutorial-container">
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <!-- EJEMPLO 1: CÁLCULO DIRECTO DE VALORES ABSOLUTOS -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 1: Cálculo Directo de Valor Absoluto</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula el valor absoluto de los siguientes números enteros: $$+5, \quad -3, \quad +7, \quad -10, \quad 0$$</p>
+
+                <strong>Resolución:</strong>
+                <div class="math-steps">
+                    $$\begin{aligned}
+                        |+5| &= 5 \quad \text{(distancia de 5 unidades al cero)} \\
+                        |-3| &= 3 \quad \text{(distancia de 3 unidades al cero)} \\
+                        |+7| &= 7 \quad \text{(distancia de 7 unidades al cero)} \\
+                        |-10| &= 10 \quad \text{(distancia de 10 unidades al cero)} \\
+                        |0| &= 0 \quad \text{(distancia de 0 unidades al cero)}
+                    \end{aligned}$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$|+5| = 5, \quad |-3| = 3, \quad |+7| = 7, \quad |-10| = 10, \quad |0| = 0$$
+                </div>
+
+                <ul>
+                    <strong>Regla aplicada:</strong> El valor absoluto de un número representa su distancia al cero en la recta real. Al medir una distancia, el resultado siempre es un número positivo o cero (nunca negativo).
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 2: BUSCAR NÚMEROS A PARTIR DE SU VALOR ABSOLUTO -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 2: Identificar Números Dado su Valor Absoluto</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Responde a las siguientes preguntas justificando tu respuesta:</p>
+                <ol>
+                    <li>¿Qué números enteros tienen como valor absoluto el $3$?</li>
+                    <li>¿Existe algún número entero cuyo valor absoluto sea $-4$?</li>
+                </ol>
+
+                <strong>Resolución paso a paso:</strong>
+                <div class="math-steps">
+                    $$\begin{aligned}
+                        \text{Buscamos números } x \text{ tales que } |x| = 3: & \quad x = +3 \quad \text{y} \quad x = -3 \quad \text{(Pues } |+3| = 3 \text{ y } |-3| = 3\text{)} \\[5pt]
+                        \text{Buscamos números } x \text{ tales que } |x| = -4: & \quad \text{No existe ninguno.}
+                    \end{aligned}$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$\text{a) Los números son } +3 \text{ y } -3. \qquad \text{b) No existe ningún número entero.}$$
+                </div>
+
+                <ul>
+                    <strong>Regla aplicada:</strong> Todo valor absoluto positivo $k > 0$ corresponde a dos números enteros opuestos ($+k$ y $-k$). Además, un valor absoluto nunca puede ser un número negativo.
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 3: INTERPRETACIÓN GRÁFICA DEL VALOR ABSOLUTO -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 3: Interpretación Gráfica del Valor Absoluto</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Representa en la recta real los números $-4$ y $+4$. Muestra gráficamente sus valores absolutos y explica el resultado.</p>
+
+                <strong>Gráfico explicativo:</strong>
+                <div class="svg-container">
+                    <svg width="600" height="130" viewBox="0 0 600 130" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial, sans-serif;">
+                        <!-- Recta principal -->
+                        <line x1="40" y1="70" x2="560" y2="70" stroke="#2635b7" stroke-width="3"/>
+                        <polygon points="40,63 25,70 40,77" fill="#2635b7"/>
+                        <polygon points="560,63 575,70 560,77" fill="#2635b7"/>
+
+                        <!-- Arco distancia -4 al 0 -->
+                        <path d="M 120 58 Q 210 15 300 58" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="4,4"/>
+                        <text x="210" y="30" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="13">|-4| = 4 unidades</text>
+
+                        <!-- Arco distancia +4 al 0 -->
+                        <path d="M 300 58 Q 390 15 480 58" fill="none" stroke="#38a169" stroke-width="2" stroke-dasharray="4,4"/>
+                        <text x="390" y="30" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="13">|+4| = 4 unidades</text>
+
+                        <!-- -4 (DESTACADO) -->
+                        <line x1="120" y1="58" x2="120" y2="82" stroke="#e53e3e" stroke-width="2.5"/>
+                        <circle cx="120" cy="70" r="6" fill="#e53e3e"/>
+                        <text x="120" y="102" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="15">-4</text>
+
+                        <!-- -3, -2, -1 -->
+                        <line x1="165" y1="62" x2="165" y2="78" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="165" y="95" text-anchor="middle" fill="#718096" font-size="12">-3</text>
+
+                        <line x1="210" y1="62" x2="210" y2="78" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="210" y="95" text-anchor="middle" fill="#718096" font-size="12">-2</text>
+
+                        <line x1="255" y1="62" x2="255" y2="78" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="255" y="95" text-anchor="middle" fill="#718096" font-size="12">-1</text>
+
+                        <!-- 0 (REFERENCIA) -->
+                        <line x1="300" y1="55" x2="300" y2="85" stroke="#2635b7" stroke-width="3"/>
+                        <circle cx="300" cy="70" r="6" fill="#2635b7"/>
+                        <text x="300" y="102" text-anchor="middle" fill="#2635b7" font-weight="bold" font-size="15">0</text>
+
+                        <!-- +1, +2, +3 -->
+                        <line x1="345" y1="62" x2="345" y2="78" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="345" y="95" text-anchor="middle" fill="#718096" font-size="12">+1</text>
+
+                        <line x1="390" y1="62" x2="390" y2="78" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="390" y="95" text-anchor="middle" fill="#718096" font-size="12">+2</text>
+
+                        <line x1="435" y1="62" x2="435" y2="78" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="435" y="95" text-anchor="middle" fill="#718096" font-size="12">+3</text>
+
+                        <!-- +4 (DESTACADO) -->
+                        <line x1="480" y1="58" x2="480" y2="82" stroke="#38a169" stroke-width="2.5"/>
+                        <circle cx="480" cy="70" r="6" fill="#38a169"/>
+                        <text x="480" y="102" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="15">+4</text>
+                    </svg>
+                </div>
+
+                <strong>Explicación:</strong>
+                <div class="math-steps">
+                    $$|-4| = |+4| = 4$$
+                </div>
+                <ol>
+                    <li>Tanto el número $-4$ como el número $+4$ se encuentran situados a una distancia exacta de $4$ unidades respecto del origen $0$.</li>
+                    <li>Por ello, dos números opuestos tienen siempre el <strong>mismo valor absoluto</strong>.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 4: COMPARACIÓN DE VALORES ABSOLUTOS -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 4: Comparación entre Números y sus Valores Absolutos</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Dados los números enteros $-8$ y $-2$:</p>
+                <ol>
+                    <li>Compara los números utilizando el símbolo $<$ o $>$.</li>
+                    <li>Calcula sus valores absolutos y compáralos utilizando el símbolo $<$ o $>$.</li>
+                </ol>
+
+                <strong>Resolución paso a paso:</strong>
+                <div class="math-steps">
+                    $$\begin{aligned}
+                        \text{Comparación directa de los números: } & -8 < -2 \quad \text{($-8$ está más a la izquierda en la recta)} \\[5pt]
+                        \text{Calculamos sus valores absolutos: } & |-8| = 8 \quad \text{y} \quad |-2| = 2 \\[5pt]
+                        \text{Comparación de valores absolutos: } & 8 > 2 \longrightarrow |-8| > |-2|
+                    \end{aligned}$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$\text{a) } -8 < -2 \qquad \text{b) } |-8| > |-2|$$
+                </div>
+
+                <ul>
+                    <strong>Propiedad importante:</strong> Entre dos números negativos, el que es <strong>menor</strong> en valor real tiene un <strong>mayor valor absoluto</strong>, porque está situado a mayor distancia del cero.
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 5: EXPRESIONES COMBINADAS CON VALORES ABSOLUTOS -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 5: Operaciones Sencillas con Valores Absolutos</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula el resultado de las siguientes operaciones combinando valores absolutos:</p>
+                <ol>
+                    <li>$|-7| + |+3|$</li>
+                    <li>$|-12| - |-5|$</li>
+                    <li>$|-4| \cdot |-6|$</li>
+                </ol>
+
+                <strong>Resolución paso a paso:</strong>
+                <div class="math-steps">
+                    $$\begin{aligned}
+                        |-7| + |+3| &= 7 + 3 = 10 \\[5pt]
+                        |-12| - |-5| &= 12 - 5 = 7 \\[5pt]
+                        |-4| \cdot |-6| &= 4 \cdot 6 = 24
+                    \end{aligned}$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$\text{a) } 10 \qquad \text{b) } 7 \qquad \text{c) } 24$$
+                </div>
+
+                <ul>
+                    <strong>Procedimiento:</strong> Primero resolvemos los valores absolutos quitando las barras y transformando cada número en su valor positivo. Después realizamos la operación aritmética indicada (suma, resta o multiplicación).
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

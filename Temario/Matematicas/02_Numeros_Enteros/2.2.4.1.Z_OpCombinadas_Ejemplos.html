@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Prácticos: Operaciones Combinadas de Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Ejemplos.css">
+
+<!-- 1. Configuración de MathJax -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],                
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ],
+        tags: 'none' /* Desactiva la numeración automática de TeX */
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        width: 100%;
+    }
+    
+    .explicacion-lateral ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+
+    .explicacion-lateral ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        margin: 10px 0;
+    }
+
+    .explicacion-lateral ol li::before {
+        content: none !important;
+    }
+
+    .math-steps {
+        margin: 10px 0;
+        padding-left: 15px;
+    }
+
+    .continuo-box {
+        background-color: #f8fafc;
+        border-left: 4px solid #2635b7;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        overflow-x: auto;
+    }
+
+    .apartado-block {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+    .apartado-block:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .apartado-title {
+        font-weight: bold;
+        color: #2635b7;
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+
+    .highlight {
+        color: #00769d;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>Ejemplos Prácticos: Operaciones Combinadas en los Números Enteros ($\mathbb{Z}$)</h1>
+
+<div class="exercise-list">
+<div class="tutorial-container">
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <!-- EJEMPLO 1 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 1: Eliminación directa de paréntesis y unión de enteros</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula la siguiente expresión eliminando los paréntesis mediante la multiplicación de signos y uniendo los números enteros enteros resultantes:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$(-5) + (+8) - (-3) - (+4)$$</div>
+                    <ul>
+                        <li><strong>Paso 1 (Multiplicación de signos):</strong> Multiplicamos el signo exterior por el de dentro del paréntesis: $+ (+8) = +8$, $- (-3) = +3$, $- (+4) = -4$.</li>
+                        <li><strong>Paso 2 (Unión de enteros de izq. a der.):</strong> 
+                            <ul>
+                                <li>$-5 + 8 = +3$</li>
+                                <li>$+3 + 3 = +6$</li>
+                                <li>$+6 - 4 = +2$</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-5) + (+8) - (-3) - (+4) = -5 + 8 + 3 - 4 = 3 + 3 - 4 = 6 - 4 = 2$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 2 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 2: Prioridad de multiplicación simple y signo implícito</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve distinguiendo entre paréntesis ortográfico de producto y las operaciones de unión:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$6 - 3(-4) + 2(-5)$$</div>
+                    <ul>
+                        <li><strong>Análisis de paréntesis:</strong> $(-4)$ y $(-5)$ son paréntesis ortográficos/de multiplicación (solo tienen 1 número). Tienen prioridad sobre la unión.</li>
+                        <li><strong>Paso 1 (Multiplicaciones):</strong>
+                            <ul>
+                                <li>$-3(-4) = +12$ (multiplicando el $-3$ por el $-4$).</li>
+                                <li>$+2(-5) = -10$ (multiplicando el $+2$ por el $-5$).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paso 2 (Unión de enteros):</strong> Unimos los valores $6 + 12 - 10$. De izquierda a derecha: $6 + 12 = 18$, y luego $18 - 10 = 8$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$6 - 3(-4) + 2(-5) = 6 + 12 - 10 = 18 - 10 = 8$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 3 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 3: Combinación básica de producto, división y unión</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula aplicando la prioridad de operaciones (primero multiplicaciones y divisiones):</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$-15 : (-3) - 4(-2) + (-12) : (+6)$$</div>
+                    <ul>
+                        <li><strong>Paso 1 (Multiplicaciones y divisiones):</strong>
+                            <ul>
+                                <li>$-15 : (-3) = +5$</li>
+                                <li>$-4(-2) = +8$</li>
+                                <li>$+(-12) : (+6) = -2$</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paso 2 (Unión de enteros):</strong> Unimos los tres resultados obtenidos: $5 + 8 - 2 = 13 - 2 = 11$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-15 : (-3) - 4(-2) + (-12) : (+6) = 5 + 8 - 2 = 13 - 2 = 11$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 4 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 4: Regla de izquierda a derecha en multiplicaciones/divisiones contiguas</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve prestando especial atención al orden de operaciones de igual prioridad cuando están consecutivas:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$-24 : (+4) \cdot (-2) - (-18) : (-3) \cdot (-1)$$</div>
+                    <ul>
+                        <li><strong>Bloque 1 ($-24 : (+4) \cdot (-2)$):</strong>
+                            <ul>
+                                <li>Primero la división por ir a la izquierda: $-24 : (+4) = -6$.</li>
+                                <li>Luego multiplicamos: $-6 \cdot (-2) = +12$.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bloque 2 ($- (-18) : (-3) \cdot (-1)$):</strong>
+                            <ul>
+                                <li>Primero la división: $-18 : (-3) = +6$. Queda $- (+6) \cdot (-1)$.</li>
+                                <li>Multiplicamos: $- (+6) \cdot (-1) = - (-6) = +6$.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paso final (Unión):</strong> $+12 + 6 = 18$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-24 : (+4) \cdot (-2) - (-18) : (-3) \cdot (-1) = -6 \cdot (-2) - (+6) \cdot (-1) = 12 - (-6) = 12 + 6 = 18$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 5 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 5: Paréntesis prioritario que contiene operaciones de unión</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve operando primero el interior del paréntesis que cumple la propiedad de tener más de un número:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$10 - 2 \cdot (5 - 9) + (-3 - 7) : (-2)$$</div>
+                    <ul>
+                        <li><strong>Análisis:</strong> $(5 - 9)$ y $(-3 - 7)$ son paréntesis de operación (contienen más de un número). Se resuelven en primer lugar.</li>
+                        <li><strong>Paso 1 (Paréntesis prioritarios):</strong>
+                            <ul>
+                                <li>$(5 - 9) = -4$</li>
+                                <li>$(-3 - 7) = -10$</li>
+                            </ul>
+                            La expresión queda: $10 - 2(-4) + (-10) : (-2)$.
+                        </li>
+                        <li><strong>Paso 2 (Multiplicación y división):</strong>
+                            <ul>
+                                <li>$-2(-4) = +8$</li>
+                                <li>$(-10) : (-2) = +5$</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paso 3 (Unión de enteros):</strong> $10 + 8 + 5 = 23$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$10 - 2 \cdot (5 - 9) + (-3 - 7) : (-2) = 10 - 2(-4) + (-10) : (-2) = 10 + 8 + 5 = 23$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 6 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 6: Paréntesis prioritarios con multiplicaciones internas</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula aplicando el orden jerárquico también dentro de los propios paréntesis de operación:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$-3 \cdot (-2 - 4 \cdot 3) - (12 - 15 : (-3))$$</div>
+                    <ul>
+                        <li><strong>Paréntesis 1 $(-2 - 4 \cdot 3)$:</strong>
+                            <ul>
+                                <li>Primero la multiplicación interna: $-4 \cdot 3 = -12$.</li>
+                                <li>Unimos el contenido: $-2 - 12 = -14$.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paréntesis 2 $(12 - 15 : (-3))$:</strong>
+                            <ul>
+                                <li>Primero la división interna: $-15 : (-3) = +5$.</li>
+                                <li>Unimos el contenido: $12 + 5 = 17$.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paso final (Operación externa):</strong>
+                            <ul>
+                                <li>La expresión reducida es: $-3(-14) - (17)$.</li>
+                                <li>Multiplicamos y quitamos signo: $+42 - 17 = 25$.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-3 \cdot (-2 - 4 \cdot 3) - (12 - 15 : (-3)) = -3 \cdot (-2 - 12) - (12 + 5) = -3(-14) - (17) = 42 - 17 = 25$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 7 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 7: Paréntesis anidados (paréntesis dentro de paréntesis)</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve de dentro hacia afuera resolviendo primero los paréntesis más internos:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$15 - 2 \cdot (3 - 4 \cdot (2 - 5))$$</div>
+                    <ul>
+                        <li><strong>Análisis:</strong> El paréntesis externo $(3 - 4 \cdot (2 - 5))$ contiene en su interior otro paréntesis: $(2 - 5)$. Por tanto, el externo no se puede evaluar del todo hasta resolver el interno.</li>
+                        <li><strong>Paso 1 (Paréntesis más interno):</strong> $(2 - 5) = -3$.<br>
+                            Sustituimos: $15 - 2 \cdot (3 - 4 \cdot (-3))$.
+                        </li>
+                        <li><strong>Paso 2 (Interior del paréntesis principal):</strong>
+                            <ul>
+                                <li>Multiplicación interna: $-4 \cdot (-3) = +12$.</li>
+                                <li>Unión interna: $(3 + 12) = 15$.</li>
+                            </ul>
+                            Sustituimos: $15 - 2 \cdot (15)$.
+                        </li>
+                        <li><strong>Paso 3 (Operación final):</strong> Multiplicación externa $2 \cdot 15 = 30$. Luego la unión: $15 - 30 = -15$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$15 - 2 \cdot (3 - 4 \cdot (2 - 5)) = 15 - 2 \cdot (3 - 4 \cdot (-3)) = 15 - 2 \cdot (3 + 12) = 15 - 2 \cdot 15 = 15 - 30 = -15$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 8 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 8: Múltiples bloques con paréntesis anidados y divisiones</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula la siguiente expresión estructurada en dos grandes bloques independientes:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$(18 - 3 \cdot (8 - 2 \cdot 5)) : (-3) + 4 \cdot ( -2 + 3 \cdot (-1) )$$</div>
+                    <ul>
+                        <li><strong>Bloque 1 $(18 - 3 \cdot (8 - 2 \cdot 5)) : (-3)$:</strong>
+                            <ul>
+                                <li>Interno: $(8 - 2 \cdot 5) = (8 - 10) = -2$.</li>
+                                <li>Paréntesis: $(18 - 3 \cdot (-2)) = (18 + 6) = 24$.</li>
+                                <li>División externa: $24 : (-3) = -8$.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bloque 2 $+ 4 \cdot ( -2 + 3 \cdot (-1) )$:</strong>
+                            <ul>
+                                <li>Interno: $3 \cdot (-1) = -3$.</li>
+                                <li>Paréntesis: $(-2 - 3) = -5$.</li>
+                                <li>Multiplicación externa: $+4 \cdot (-5) = -20$.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Paso final (Unión):</strong> $-8 - 20 = -28$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(18 - 3 \cdot (8 - 2 \cdot 5)) : (-3) + 4 \cdot ( -2 + 3 \cdot (-1) ) =$$
+                        $$= (18 - 3 \cdot (-2)) : (-3) + 4 \cdot (-2 - 3) =$$
+                        $$= (18 + 6) : (-3) + 4 \cdot (-5) =$$
+                        $$= 24 : (-3) - 20 = -8 - 20 = -28$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 9 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 9: Doble nivel de anidamiento y cadenas de multiplicaciones</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve con máximo rigor en la transcripción de la igualdad línea a línea:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$-2 \cdot ( 5 - 2 \cdot ( 3 - 2 \cdot (4 - 7) ) ) - 3 \cdot (-4)$$</div>
+                    <ul>
+                        <li><strong>Nivel 1 (Paréntesis más profundo $(4 - 7)$):</strong> $(4 - 7) = -3$.<br>
+                            Queda: $-2 \cdot ( 5 - 2 \cdot ( 3 - 2 \cdot (-3) ) ) - 3 \cdot (-4)$.
+                        </li>
+                        <li><strong>Nivel 2 (Paréntesis intermedio $(3 - 2 \cdot (-3))$):</strong>
+                            <ul>
+                                <li>Producto interno: $-2 \cdot (-3) = +6$.</li>
+                                <li>Suma interna: $(3 + 6) = 9$.</li>
+                            </ul>
+                            Queda: $-2 \cdot ( 5 - 2 \cdot 9 ) - 3 \cdot (-4)$.
+                        </li>
+                        <li><strong>Nivel 3 (Paréntesis exterior $(5 - 2 \cdot 9)$):</strong>
+                            <ul>
+                                <li>Producto interno: $-2 \cdot 9 = -18$.</li>
+                                <li>Unión interna: $(5 - 18) = -13$.</li>
+                            </ul>
+                            Queda: $-2 \cdot (-13) - 3 \cdot (-4)$.
+                        </li>
+                        <li><strong>Paso final:</strong> Multiplicaciones finales $+26 + 12 = 38$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-2 \cdot ( 5 - 2 \cdot ( 3 - 2 \cdot (4 - 7) ) ) - 3 \cdot (-4) =$$
+                        $$= -2 \cdot ( 5 - 2 \cdot ( 3 - 2 \cdot (-3) ) ) + 12 =$$
+                        $$= -2 \cdot ( 5 - 2 \cdot ( 3 + 6 ) ) + 12 =$$
+                        $$= -2 \cdot ( 5 - 2 \cdot 9 ) + 12 =$$
+                        $$= -2 \cdot ( 5 - 18 ) + 12 =$$
+                        $$= -2 \cdot (-13) + 12 = 26 + 12 = 38$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 10 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 10: Combinación completa de todos los elementos</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve el siguiente ejercicio avanzado donde se combinan corchetes, paréntesis anidados, notación implícita y todas las jerarquías operativas:</p>
+
+                <div class="apartado-block">
+                    <div class="apartado-title">$$-20 : (-5) \cdot (-2) - ( -3 \cdot ( 10 - 2 \cdot (5 - 9 : (-3)) ) ) : (-6) $$</div>
+                                    
+                    <div class="continuo-box" style="border-left-color: #38a169;">
+                        <strong>Ejercicio Desafío Resuelto Entero Exacto:</strong><br>
+                        $$-20 : (-5) \cdot (-2) - ( -3 \cdot ( 10 - 2 \cdot (5 - 9 : (-3)) ) ) : (-6) =$$
+                        $$= 4 \cdot (-2) - ( -3 \cdot ( 10 - 2 \cdot (5 +3) ) ) : (-6) =$$                       
+                        $$= -8 - ( -3 \cdot ( 10 - 2 \cdot 8 ) ) : (-6) =$$
+                        $$= -8 - ( -3 \cdot ( 10 - 16 ) ) : (-6) =$$
+                        $$= -8 - ( -3 \cdot (-6) ) : (-6) =$$
+                        $$= -8 - ( 18 ) : (-6) =$$
+                        $$= -8 - (-3) = -8 + 3 = -5$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

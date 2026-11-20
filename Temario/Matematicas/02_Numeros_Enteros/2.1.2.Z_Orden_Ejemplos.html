@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Ejercicios de Lectura, Descomposición Polinómica y Redondeo con Niveles de Dificultad</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+<!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],               
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        width: 100%;
+    }
+    
+.explicacion-lateral ul {
+    margin: 5px 0;
+    padding-left: 20px;
+    
+}
+
+    .math-steps {
+        margin: 10px 0;
+        padding-left: 15px;
+    }
+	
+
+</style>
+
+<h1>Ejemplos Prácticos: Números Enteros ($\mathbb{Z}$) - ORDEN</h1>
+
+
+<div class="exercise-list">
+ <div class="tutorial-container">
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <!-- EJEMPLO 1: ORDENAR DE MENOR A MAYOR -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 1: Ordenar Números Enteros de Menor a Mayor</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Ordena de menor a mayor los siguientes números enteros utilizando el símbolo $<$: $$+4, \quad -5, \quad 0, \quad -2, \quad +1, \quad -6$$</p>
+
+                <strong>Resolución:</strong>
+                <div class="math-steps">
+                    $$\text{1. Identificamos los números negativos: } -6, -5, -2$$
+                    $$\text{2. Comparamos los negativos (el más alejado del cero es el menor): } -6 < -5 < -2$$
+                    $$\text{3. El cero se ubica entre los negativos y los positivos: } -2 < 0$$
+                    $$\text{4. Comparamos los positivos: } 0 < +1 < +4$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$-6 < -5 < -2 < 0 < +1 < +4$$
+                </div>
+
+                <ul>
+                    <strong>Regla aplicada:</strong> Cuanto más a la izquierda (o más abajo en el ascensor) esté un número, menor es su valor. Recuerda que entre dos números negativos, es menor el que tiene mayor valor absoluto (está más lejos del $0$).
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 2: ORDENAR DE MAYOR A MENOR -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 2: Ordenar Números Enteros de Mayor a Menor</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Ordena de mayor a menor los siguientes números enteros utilizando el símbolo $>$: $$-3, \quad +5, \quad -1, \quad +2, \quad -7, \quad 0$$</p>
+
+                <strong>Resolución:</strong>
+                <div class="math-steps">
+                    $$\text{1. Identificamos los números positivos y el mayor de ellos: } +5 > +2$$
+                    $$\text{2. Los positivos son mayores que el cero: } +2 > 0$$
+                    $$\text{3. El cero es mayor que cualquier negativo: } 0 > -1$$
+                    $$\text{4. Ordenamos los negativos de mayor a menor (más cerca del cero a más lejos): } -1 > -3 > -7$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$+5 > +2 > 0 > -1 > -3 > -7$$
+                </div>
+
+                <ul>
+                    <strong>Regla aplicada:</strong> Al ordenar de mayor a menor comenzamos por el entero positivo situado más a la derecha y avanzamos hacia la izquierda en la recta real.
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 3: REPRESENTACIÓN GRÁFICA EN LA RECTA REAL -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 3: Representación Gráfica de Enteros en la Recta Real</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Representa en una recta real los siguientes números enteros: $$-4, \quad -1, \quad 0, \quad +3, \quad +5$$</p>
+
+                <strong>Gráfico explicativo:</strong>
+                <div class="svg-container">
+                    <svg width="600" height="110" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial, sans-serif;">
+                        <!-- Línea principal de la recta -->
+                        <line x1="40" y1="50" x2="560" y2="50" stroke="#2635b7" stroke-width="3"/>
+                        <!-- Flechas de la recta -->
+                        <polygon points="40,43 25,50 40,57" fill="#2635b7"/>
+                        <polygon points="560,43 575,50 560,57" fill="#2635b7"/>
+                        
+                        <!-- Marcas e índices (-5 a +6) -->
+                        <!-- -5 -->
+                        <line x1="60" y1="42" x2="60" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="60" y="75" text-anchor="middle" fill="#718096" font-size="12">-5</text>
+                        
+                        <!-- -4 (DESTACADO) -->
+                        <line x1="105" y1="38" x2="105" y2="62" stroke="#e53e3e" stroke-width="2.5"/>
+                        <circle cx="105" cy="50" r="6" fill="#e53e3e"/>
+                        <text x="105" y="80" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="15">-4</text>
+                        
+                        <!-- -3 -->
+                        <line x1="150" y1="42" x2="150" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="150" y="75" text-anchor="middle" fill="#718096" font-size="12">-3</text>
+                        
+                        <!-- -2 -->
+                        <line x1="195" y1="42" x2="195" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="195" y="75" text-anchor="middle" fill="#718096" font-size="12">-2</text>
+                        
+                        <!-- -1 (DESTACADO) -->
+                        <line x1="240" y1="38" x2="240" y2="62" stroke="#e53e3e" stroke-width="2.5"/>
+                        <circle cx="240" cy="50" r="6" fill="#e53e3e"/>
+                        <text x="240" y="80" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="15">-1</text>
+                        
+                        <!-- 0 (DESTACADO) -->
+                        <line x1="285" y1="35" x2="285" y2="65" stroke="#2635b7" stroke-width="3"/>
+                        <circle cx="285" cy="50" r="6" fill="#2635b7"/>
+                        <text x="285" y="80" text-anchor="middle" fill="#2635b7" font-weight="bold" font-size="15">0</text>
+                        
+                        <!-- +1 -->
+                        <line x1="330" y1="42" x2="330" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="330" y="75" text-anchor="middle" fill="#718096" font-size="12">+1</text>
+                        
+                        <!-- +2 -->
+                        <line x1="375" y1="42" x2="375" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="375" y="75" text-anchor="middle" fill="#718096" font-size="12">+2</text>
+                        
+                        <!-- +3 (DESTACADO) -->
+                        <line x1="420" y1="38" x2="420" y2="62" stroke="#38a169" stroke-width="2.5"/>
+                        <circle cx="420" cy="50" r="6" fill="#38a169"/>
+                        <text x="420" y="80" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="15">+3</text>
+                        
+                        <!-- +4 -->
+                        <line x1="465" y1="42" x2="465" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="465" y="75" text-anchor="middle" fill="#718096" font-size="12">+4</text>
+                        
+                        <!-- +5 (DESTACADO) -->
+                        <line x1="510" y1="38" x2="510" y2="62" stroke="#38a169" stroke-width="2.5"/>
+                        <circle cx="510" cy="50" r="6" fill="#38a169"/>
+                        <text x="510" y="80" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="15">+5</text>
+                    </svg>
+                </div>
+
+                <strong>Explicación:</strong>
+                <ul>
+                    <li>Trazamos la recta dividida en marcas equidistantes (a la misma distancia unas de otras).</li>
+                    <li>Situamos el origen $0$ como punto de referencia.</li>
+                    <li>Contamos a la izquierda para los negativos: $-1$ (1 unidad a la izquierda) y $-4$ (4 unidades a la izquierda).</li>
+                    <li>Contamos a la derecha para los positivos: $+3$ (3 unidades a la derecha) y $+5$ (5 unidades a la derecha).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 4: IDENTIFICAR NÚMEROS A PARTIR DE LETRAS EN LA RECTA REAL -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 4: Identificación de Letras en la Recta Real</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Dada la siguiente recta real donde se indica el número de referencia $0$, averigua a qué número entero corresponde cada una de las letras ($A$, $B$, $C$ y $D$):</p>
+
+                <strong>Gráfico del problema:</strong>
+                <div class="svg-container">
+                    <svg width="600" height="110" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial, sans-serif;">
+                        <!-- Línea principal -->
+                        <line x1="40" y1="50" x2="560" y2="50" stroke="#2635b7" stroke-width="3"/>
+                        <polygon points="40,43 25,50 40,57" fill="#2635b7"/>
+                        <polygon points="560,43 575,50 560,57" fill="#2635b7"/>
+                        
+                        <!-- Marcas sin números excepto el 0 -->
+                        <!-- Posición -5 (A) -->
+                        <line x1="90" y1="35" x2="90" y2="65" stroke="#e53e3e" stroke-width="2.5"/>
+                        <circle cx="90" cy="50" r="6" fill="#e53e3e"/>
+                        <text x="90" y="25" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="16">A</text>
+                        
+                        <!-- Posición -4 -->
+                        <line x1="135" y1="42" x2="135" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        
+                        <!-- Posición -3 -->
+                        <line x1="180" y1="42" x2="180" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        
+                        <!-- Posición -2 (B) -->
+                        <line x1="225" y1="35" x2="225" y2="65" stroke="#e53e3e" stroke-width="2.5"/>
+                        <circle cx="225" cy="50" r="6" fill="#e53e3e"/>
+                        <text x="225" y="25" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="16">B</text>
+                        
+                        <!-- Posición -1 -->
+                        <line x1="270" y1="42" x2="270" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        
+                        <!-- Posición 0 (REFERENCIA) -->
+                        <line x1="315" y1="32" x2="315" y2="68" stroke="#2635b7" stroke-width="3"/>
+                        <circle cx="315" cy="50" r="6" fill="#2635b7"/>
+                        <text x="315" y="85" text-anchor="middle" fill="#2635b7" font-weight="bold" font-size="16">0</text>
+                        
+                        <!-- Posición +1 -->
+                        <line x1="360" y1="42" x2="360" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        
+                        <!-- Posición +2 (C) -->
+                        <line x1="405" y1="35" x2="405" y2="65" stroke="#38a169" stroke-width="2.5"/>
+                        <circle cx="405" cy="50" r="6" fill="#38a169"/>
+                        <text x="405" y="25" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="16">C</text>
+                        
+                        <!-- Posición +3 -->
+                        <line x1="450" y1="42" x2="450" y2="58" stroke="#a0aec0" stroke-width="1.5"/>
+                        
+                        <!-- Posición +4 (D) -->
+                        <line x1="495" y1="35" x2="495" y2="65" stroke="#38a169" stroke-width="2.5"/>
+                        <circle cx="495" cy="50" r="6" fill="#38a169"/>
+                        <text x="495" y="25" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="16">D</text>
+                    </svg>
+                </div>
+
+                <strong>Resolución paso a paso:</strong>
+                <div class="math-steps">
+                    $$\begin{aligned}                             \text{Tomando como origen el número } 0: & \\                             \text{Para } B: &\text{ Contamos 2 divisiones hacia la izquierda } \longrightarrow B = -2 \\                             \text{Para } A: &\text{ Contamos 5 divisiones hacia la izquierda } \longrightarrow A = -5 \\                             \text{Para } C: &\text{ Contamos 2 divisiones hacia la derecha } \longrightarrow C = +2 \text{ (o } 2\text{)} \\                             \text{Para } D: &\text{ Contamos 4 divisiones hacia la derecha } \longrightarrow D = +4 \text{ (o } 4\text{)}                         \end{aligned}$$
+                </div>
+
+                <p><strong>Resultado final:</strong></p>
+                <div class="math-steps">
+                    $$A = -5, \quad B = -2, \quad C = +2, \quad D = +4$$
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 5: REPRESENTACIÓN GRÁFICA Y COMPARACIÓN DE DISTANCIAS AL CERO -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 5: Comparación Visual de Números Negativos</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Representa en la recta real los enteros $-2$ y $-6$. Justifica gráficamente cuál de los dos es mayor.</p>
+
+                <strong>Gráfico explicativo:</strong>
+                <div class="svg-container">
+                    <svg width="600" height="120" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial, sans-serif;">
+                        <!-- Recta principal -->
+                        <line x1="40" y1="60" x2="560" y2="60" stroke="#2635b7" stroke-width="3"/>
+                        <polygon points="40,53 25,60 40,67" fill="#2635b7"/>
+                        <polygon points="560,53 575,60 560,67" fill="#2635b7"/>
+                        
+                        <!-- Arco comparativo entre -6 y -2 -->
+                        <path d="M 120 45 Q 260 10 400 45" fill="none" stroke="#00769d" stroke-width="2" stroke-dasharray="4,4"/>
+                        <text x="260" y="22" text-anchor="middle" fill="#00769d" font-weight="bold" font-size="13">-2 está más a la DERECHA que -6</text>
+
+                        <!-- -6 (DESTACADO) -->
+                        <line x1="120" y1="48" x2="120" y2="72" stroke="#e53e3e" stroke-width="2.5"/>
+                        <circle cx="120" cy="60" r="6" fill="#e53e3e"/>
+                        <text x="120" y="90" text-anchor="middle" fill="#e53e3e" font-weight="bold" font-size="15">-6</text>
+                        
+                        <!-- -5, -4, -3 -->
+                        <line x1="190" y1="52" x2="190" y2="68" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="190" y="85" text-anchor="middle" fill="#718096" font-size="12">-5</text>
+                        
+                        <line x1="260" y1="52" x2="260" y2="68" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="260" y="85" text-anchor="middle" fill="#718096" font-size="12">-4</text>
+
+                        <line x1="330" y1="52" x2="330" y2="68" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="330" y="85" text-anchor="middle" fill="#718096" font-size="12">-3</text>
+                        
+                        <!-- -2 (DESTACADO) -->
+                        <line x1="400" y1="48" x2="400" y2="72" stroke="#38a169" stroke-width="2.5"/>
+                        <circle cx="400" cy="60" r="6" fill="#38a169"/>
+                        <text x="400" y="90" text-anchor="middle" fill="#38a169" font-weight="bold" font-size="15">-2</text>
+
+                        <!-- -1 -->
+                        <line x1="470" y1="52" x2="470" y2="68" stroke="#a0aec0" stroke-width="1.5"/>
+                        <text x="470" y="85" text-anchor="middle" fill="#718096" font-size="12">-1</text>
+                        
+                        <!-- 0 (REFERENCIA) -->
+                        <line x1="540" y1="45" x2="540" y2="75" stroke="#2635b7" stroke-width="3"/>
+                        <circle cx="540" cy="60" r="6" fill="#2635b7"/>
+                        <text x="540" y="90" text-anchor="middle" fill="#2635b7" font-weight="bold" font-size="15">0</text>
+                    </svg>
+                </div>
+
+                <strong>Resolución y Justificación:</strong>
+                <div class="math-steps">
+                    $$-2 > -6$$
+                </div>
+                <ul>
+                    <li><strong>Justificación gráfica:</strong> En la recta real, los números aumentan su valor a medida que avanzamos hacia la derecha. Como el punto $-2$ se encuentra más a la derecha que el punto $-6$, concluimos que $-2$ es mayor que $-6$.</li>
+                    <li><strong>Justificación intuitiva (ascensor):</strong> Estar en el sótano $-2$ es estar a mayor altura que estar en el sótano $-6$.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+</div>
+
+</body>
+</html>

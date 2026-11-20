@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Ejercicios de Lectura, Descomposición Polinómica y Redondeo con Niveles de Dificultad</title>
+    <link rel="stylesheet" href="../Estilo_Ejercicios.css">
+
+<!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],               
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        width: 100%;
+    }
+    
+    .explicacion-lateral ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+
+    .math-steps {
+        margin: 10px 0;
+        padding-left: 15px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Ejemplos Prácticos: Números Enteros ($\mathbb{Z}$)</h1>
+
+<div class="exercise-list">
+    <div class="tutorial-container">
+        <h2>Ejemplos Resueltos sobre la Introducción a los Números Enteros</h2>
+        <p>A continuación se presentan cuatro bloques conceptuales resueltos: identificación de signo y número, construcción del número entero, análisis de afirmaciones teóricas (Verdadero/Falso) y la transformación de expresiones del lenguaje ordinario a números enteros.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+        <!-- BLOQUE 1: IDENTIFICACIÓN DE SIGNO Y NÚMERO -->
+        <div class="step-block">
+            <div class="step-title">Bloque 1: Identificación del Signo y el Número</div>
+
+            <!-- Ejemplo 1 -->
+            <div class="division-table-container">
+                <div class="explicacion-lateral">
+                    <strong>Ejemplo 1:</strong>
+                    <div class="math-steps">
+                        $$\text{Dada la lista de números: } -4, \quad +9, \quad 6, \quad -12, \quad 0$$
+                        $$\begin{aligned} 
+                            -4 &\longrightarrow \text{Signo: negativo (-)}, \quad \text{Número: } 4 \\ 
+                            +9 &\longrightarrow \text{Signo: positivo (+)}, \quad \text{Número: } 9 \\ 
+                            6 &\longrightarrow \text{Signo: positivo (+, omitido)}, \quad \text{Número: } 6 \\ 
+                            -12 &\longrightarrow \text{Signo: negativo (-)}, \quad \text{Número: } 12 \\ 
+                            0 &\longrightarrow \text{Signo: no tiene (neutro)}, \quad \text{Número: } 0 
+                        \end{aligned}$$
+                    </div>
+                    <ul>
+                        <strong>Regla aplicada:</strong> Todo número entero está formado por un signo ($+$ o $-$) y un número. Si un número no lleva signo escrito delante (como el $6$), se entiende que es positivo ($+6$). El cero es el único número entero neutro: no es positivo ni negativo.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 2: CONSTRUCCIÓN DEL NÚMERO ENTERO -->
+        <div class="step-block">
+            <div class="step-title">Bloque 2: Formación del Número Entero a partir de Signo y Número</div>
+
+            <!-- Ejemplo 2 -->
+            <div class="division-table-container">
+                <div class="explicacion-lateral">
+                    <strong>Ejemplo 2:</strong>
+                    <div class="math-steps">
+                        $$\text{Escribir el número entero correspondiente a cada descripción:}$$
+                        $$\begin{aligned} 
+                            \text{Signo negativo } (-) \text{ y número } 8 &\longrightarrow -8 \\ 
+                            \text{Signo positivo } (+) \text{ y número } 15 &\longrightarrow +15 \quad (\text{o simplemente } 15) \\ 
+                            \text{Signo negativo } (-) \text{ y número } 3 &\longrightarrow -3 \\ 
+                            \text{Sin signo y número } 0 &\longrightarrow 0 \\ 
+                            \text{Signo positivo } (+) \text{ y número } 1 &\longrightarrow +1 \quad (\text{o simplemente } 1) 
+                        \end{aligned}$$
+                    </div>
+                    <ul>
+                        <strong>Regla aplicada:</strong> Para escribir un entero se coloca primero el signo correspondiente seguido inmediatamente de su número. Los enteros positivos se pueden escribir con o sin el signo $+$.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 3: VERDADERO O FALSO SOBRE CONCEPTOS DE Z Y N -->
+        <div class="step-block">
+            <div class="step-title">Bloque 3: Análisis de Frases Teóricas (Verdadero o Falso)</div>
+
+            <!-- Ejemplo 3 -->
+            <div class="division-table-container">
+                <div class="explicacion-lateral">
+                    <strong>Ejemplo 3:</strong>
+                    <div class="math-steps">
+                        $$\text{Indicar si las siguientes afirmaciones son Verdaderas (V) o Falsas (F):}$$
+                    </div>
+                    <ul>
+                        <strong>a) Todo número natural ($\mathbb{N}$) es también un número entero ($\mathbb{Z}$).</strong><br>
+                        <u>Respuesta:</u> <strong>Verdadero (V)</strong>.<br>
+                        <em>Explicación:</em> El conjunto de los números naturales $\mathbb{N} = \{0, 1, 2, 3, \dots\}$ está contenido dentro del conjunto de los enteros $\mathbb{Z}$, ya que los naturales corresponden a los enteros positivos y el cero ($\mathbb{N} \subset \mathbb{Z}$).
+                    </ul>
+                    <ul>					
+                        <br>
+                        <strong>b) El número $-5$ pertenece al conjunto de los números naturales ($\mathbb{N}$).</strong><br>
+                        <u>Respuesta:</u> <strong>Falso (F)</strong>.<br>
+                        <em>Explicación:</em> Los números naturales solo incluyen valores no negativos ($0$ y positivos). Los números con signo negativo son enteros ($\mathbb{Z}$), pero no naturales.
+                    </ul>
+                    <ul>	   
+                        <br>
+                        <strong>c) El número cero ($0$) tiene signo positivo.</strong><br>
+                        <u>Respuesta:</u> <strong>Falso (F)</strong>.<br>
+                        <em>Explicación:</em> El cero es un elemento neutro; es el único número entero que no es ni positivo ni negativo.
+                    </ul>
+                    <ul>	 
+                        <br>
+                        <strong>d) El conjunto $\mathbb{Z}$ está formado por los enteros positivos, los enteros negativos y el cero.</strong><br>
+                        <u>Respuesta:</u> <strong>Verdadero (V)</strong>.<br>
+                        <em>Explicación:</em> Esta es la definición exacta del conjunto de los números enteros: $\mathbb{Z} = \{\dots, -3, -2, -1, 0, +1, +2, +3, \dots\}$.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 4: TRANSFORMACIÓN DEL LENGUAJE ORDINARIO A NÚMEROS ENTEROS -->
+        <div class="step-block">
+            <div class="step-title">Bloque 4: Transformación del Lenguaje Ordinario a Números Enteros</div>
+
+            <!-- Ejemplo 4 -->
+            <div class="division-table-container">
+                <div class="explicacion-lateral">
+                    <strong>Ejemplo 4:</strong>
+                    <div class="math-steps">
+                        $$\text{Expresa mediante un número entero cada una de las siguientes situaciones cotidianas:}$$
+                        $$\begin{aligned} 
+                            \text{a) Debo } 30 \text{ euros} &\longrightarrow -30 \\ 
+                            \text{b) Tengo } 50 \text{ euros en la cartera} &\longrightarrow +50 \quad (\text{o } 50) \\ 
+                            \text{c) El helicóptero vuela a } 200\text{ m sobre el nivel del mar} &\longrightarrow +200 \\ 
+                            \text{d) Un submarino navega a } 45\text{ m de profundidad} &\longrightarrow -45 \\ 
+                            \text{e) La temperatura es de } 3^\circ\text{C bajo cero} &\longrightarrow -3 \\ 
+                            \text{f) Un ascensor sube a la planta } 4 &\longrightarrow +4 \\ 
+                            \text{g) El aparcamiento está en el segundo sótano} &\longrightarrow -2 
+                        \end{aligned}$$
+                    </div>
+                    <ul>
+                        <strong>Regla aplicada:</strong> 
+                        <ul>
+                            Se asigna el signo <strong>negativo ($-$)</strong> a deudas, profundidades, temperaturas bajo cero, niveles bajo tierra o pérdidas.
+                            Se asigna el signo <strong>positivo ($+$)</strong> a dinero que se posee, alturas sobre el nivel del mar, temperaturas sobre cero, pisos superiores o ganancias.
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

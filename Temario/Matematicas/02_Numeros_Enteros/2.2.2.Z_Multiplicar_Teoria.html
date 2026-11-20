@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Multiplicación y División de Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+   <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['[', ']']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Contenedor principal de la explicación */
+        .tutorial-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 6px solid #2635b7;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bloque contenedor de cada criterio o sección */
+        .step-block {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #2635b7;
+            border-radius: 6px;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            color: #00769d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        /* Tarjeta de Regla Rápida */
+        .regla-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #2635b7;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .regla-box strong {
+            color: #2635b7;
+        }
+
+        /* Contenedor flexible para la tabla y la explicación */
+        .division-table-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed #cbd5e0;
+        }
+
+        /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+        .factor-table {
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .factor-table td, .factor-table th {
+            padding: 8px 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .factor-table-small {
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #00769d;
+            font-weight: bold;
+        }
+
+        .explicacion-lateral {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+            max-width: 550px;
+        }
+        
+        .explicacion-lateral ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Estilos adicionales para advertencias */
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .warning-box strong {
+            color: #c53030;
+        }
+
+        /* Caja de desarrollo en línea continuo */
+        .continuo-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #00769d;
+            padding: 12px 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2d3748;
+            overflow-x: auto;
+        }
+
+        /* Estilos específicos para la tabla posicional */
+        .pos-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #ffffff;
+        }
+
+        .pos-table th {
+            background-color: #2635b7;
+            color: white;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+        }
+
+        .pos-table td {
+            border: 1px solid #cbd5e0;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Estilos para gráficos e ilustraciones SVG integrados */
+        .svg-container {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            background: #ffffff;
+            padding: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.02);
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teoría Aritmética: Operaciones con Números Enteros ($\mathbb{Z}$)</h1>
+
+    <div class="exercise-list">
+        <div class="tutorial-container">
+            <h2>Multiplicación y División de Números Enteros</h2>
+            <p>En esta sección explicaremos cómo multiplicar y dividir números enteros. Veremos la regla de los signos organizada en dos fases, ejemplos con todas las combinaciones posibles, notas aclaratorias esenciales para evitar confusiones frecuentes y un método rápido para multiplicar cadenas largas de números.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+            <!-- SECCIÓN 1: REGLA GENERAL EN DOS FASES -->
+            <div class="step-block">
+                <div class="step-title">1. Regla general en dos fases</div>
+                <p>Para multiplicar o dividir dos números enteros se sigue un procedimiento muy sencillo dividido estrictamente en <strong>dos fases independientes</strong>:</p>
+                
+                <div class="regla-box">
+                    <strong>Procedimiento general de cálculo:</strong><br>
+                    <ul>
+                        <li><strong>Fase 1 (El Signo):</strong> Se determina el signo del resultado aplicando la <strong>Regla de los Signos</strong>:
+                            <ul>
+                                <li>$+\cdot += + \quad \text{y} \quad + : + = +$</li>                                
+                                <li>$+\cdot -= - \quad \text{y} \quad + : - = -$</li>
+                                <li>$-\cdot += - \quad \text{y} \quad - : + = -$</li>
+								<li>$-\cdot -= + \quad \text{y} \quad - : - = +$</li>
+                            </ul>
+                            <em>(En resumen: signos iguales dan positivo $+$, signos distintos dan negativo $-$).</em>
+                        </li>
+                        <li><strong>Fase 2 (El Número):</strong> Se realiza la operación indicada por el operador entre los valores absolutos de los números (se multiplica o se divide normalmente).</li>
+                    </ul>
+                </div>
+
+                <p><strong>Ejemplos con todas las posibilidades:</strong></p>
+
+                <p><strong>A) Multiplicación:</strong></p>
+                <table class="pos-table">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Combinación</th>
+                            <th>Análisis</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$(+6) \cdot (+2)$</td>
+                            <td>$(+) \cdot (+)$</td>
+                            <td>Signos iguales ($+$), multiplicamos $6 \cdot 2$</td>
+                            <td><span class="highlight">+12</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>$(+6) \cdot (-2)$</td>
+                            <td>$(+) \cdot (-)$</td>
+                            <td>Signos distintos ($-$), multiplicamos $6 \cdot 2$</td>
+                            <td><span class="highlight">-12</span></td>
+                        </tr>
+                        <tr>
+                            <td>$(-6) \cdot (+2)$</td>
+                            <td>$(-) \cdot (+)$</td>
+                            <td>Signos distintos ($-$), multiplicamos $6 \cdot 2$</td>
+                            <td><span class="highlight">-12</span></td>
+                        </tr>
+						                        <tr>
+                            <td>$(-6) \cdot (-2)$</td>
+                            <td>$(-) \cdot (-)$</td>
+                            <td>Signos iguales ($+$), multiplicamos $6 \cdot 2$</td>
+                            <td><span class="highlight">+12</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>B) División:</strong></p>
+                <table class="pos-table">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Combinación</th>
+                            <th>Análisis</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$(+6) : (+2)$</td>
+                            <td>$(+) : (+)$</td>
+                            <td>Signos iguales ($+$), dividimos $6 : 2$</td>
+                            <td><span class="highlight">+3</span></td>
+                        </tr>
+                      
+                        <tr>
+                            <td>$(+6) : (-2)$</td>
+                            <td>$(+) : (-)$</td>
+                            <td>Signos distintos ($-$), dividimos $6 : 2$</td>
+                            <td><span class="highlight">-3</span></td>
+                        </tr>
+                        <tr>
+                            <td>$(-6) : (+2)$</td>
+                            <td>$(-) : (+)$</td>
+                            <td>Signos distintos ($-$), dividimos $6 : 2$</td>
+                            <td><span class="highlight">-3</span></td>
+                        </tr>
+						  <tr>
+                            <td>$(-6) : (-2)$</td>
+                            <td>$(-) : (-)$</td>
+                            <td>Signos iguales ($+$), dividimos $6 : 2$</td>
+                            <td><span class="highlight">+3</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- SECCIÓN 2: NOTAS ACLARATORIAS FUNDAMENTALES -->
+            <div class="step-block">
+                <div class="step-title">2. Notas aclaratorias fundamentales</div>
+
+                <div class="warning-box">
+                    <strong>Nota 1: No confundir las reglas (Analogía del Fútbol y Baloncesto)</strong><br>
+                    No hay que confundir jamás las reglas de sumar/unir con las de multiplicar/dividir. Ocurre exactamente igual que con el fútbol y el baloncesto: ambos son deportes de balón, pero cada uno tiene sus propias reglas (en uno se puede coger el balón con las manos y en el otro no). Por tanto, hay que tener perfectamente claro qué operación estamos realizando:
+                    <ul>
+                        <li><strong>Se está multiplicando</strong> si observamos un punto ($\cdot$) o un paréntesis adyacente. Por ejemplo: $2(-3) = -6$. Aunque no se dibuje el punto, al estar el paréntesis pegado se está multiplicando (y el $2$ tiene signo $+$ implícito aunque no se vea).</li>
+                        <li><strong>Se está dividiendo</strong> si observamos los dos puntos ($:$) o una raya de fracción.</li>
+                    </ul>
+                </div>
+
+                <div class="regla-box" style="background-color: #eefbfb; border-left-color: #00769d;">
+                    <strong>Nota 2: Elementos invisibles (Signos $+$ y número $1$)</strong><br>
+                    <ul>
+                        <li>Si <strong>no ves el signo</strong> delante de un número, se entiende que es un $+$.</li>
+                        <li>Si <strong>no ves el número</strong> delante de un paréntesis o expresión, el número es el $1$.</li>
+                    </ul>
+                    <p><em>Ejemplo:</em> Para resolver $-(+3)$, realmente tenemos $-1 \cdot (+3) = -3$. En la práctica, solo vemos el signo $-$, por lo que basta con multiplicar el signo ($- \cdot + = -$). No hace falta preocuparse por el número, ya que cualquier número multiplicado por $1$ sigue siendo el mismo número.</p>
+                </div>
+
+                <div class="regla-box">
+                    <strong>Nota 3: Los signos $+$ y $-$ separan operaciones y el papel del $+1$</strong><br>
+                    Los signos $+$ y $-$ fuera de paréntesis actúan separando términos:
+                    <ul>
+                        <li>La expresión $(-3)2$ indica multiplicación $\Rightarrow -6$.</li>
+                        <li>La expresión $(-3) + 2$ no indica multiplicación, ya que el $+$ intermedio separa los términos y señala una unión de enteros $\Rightarrow -1$.</li>
+                    </ul>
+                    <p><strong>¿Qué multiplicación indica entonces un paréntesis cuando no hay número delante, como $+(-3)$?</strong><br>
+                    Delante del paréntesis, aunque no lo veamos escrito, se encuentra el número $+1$. Al desarrollar $+(-3)$ tenemos en realidad $(+1) \cdot (-3) = -3$. De aquí procede la regla práctica habitual: <em>«un signo $+$ delante de un paréntesis se puede eliminar directamente sin cambiar ni el signo ni el número de su interior»</em> (puesto que multiplicar por $+1$ no altera absolutamente nada).</p>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: MULTIPLICACIÓN DE VARIOS NÚMEROS ENTEROS A LA VEZ -->
+            <div class="step-block">
+                <div class="step-title">3. Multiplicar varios números enteros a la vez</div>
+                <p>Cuando tenemos un producto encadenado de varios números enteros, por ejemplo:</p>
+                
+                <div class="continuo-box">
+                    $$(-1)(-2)(+1)(-4)(-3)(-1)$$
+                </div>
+
+                <p>No es necesario resolverlo paso a paso de dos en dos (aunque se podría hacer). Se puede obtener el resultado de forma **directa y rápida** analizando el signo y los valores numéricos de una sola vez:</p>
+
+                <div class="regla-box" style="background-color: #f0f4ff; border-left-color: #2635b7;">
+                    <strong>Estrategia directa por conteo de signos negativos:</strong><br>
+                    <ul>
+                        <li><strong>Determinación del signo general:</strong> Teniendo en cuenta que $- \cdot - = +$ y que multiplicar por $+$ no modifica el signo, el signo final depende <strong>únicamente del número de signos menos ($-$)</strong> presentes en la cadena:
+                            <ul>
+                                <li>Si el número de signos $-$ es <strong>PAR</strong> $\Rightarrow$ El resultado final es <strong>POSITIVO ($+$)</strong>.</li>
+                                <li>Si el número de signos $-$ es <strong>IMPAR</strong> $\Rightarrow$ El resultado final es <strong>NEGATIVO ($-$)</strong> (queda un signo $-$ desparejado).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Cálculo del número:</strong> Se multiplican todos los valores absolutos entre sí, teniendo en cuenta que el factor $1$ no altera el producto.</li>
+                    </ul>
+                </div>
+
+                <div class="division-table-container">
+                    <div class="explicacion-lateral" style="max-width: 100%;">
+                        <p><strong>Análisis paso a paso del ejemplo $(-1)(-2)(+1)(-4)(-3)(-1)$:</strong></p>
+                        <ul>
+                            <li><strong>Conteo de signos minus ($-$):</strong> Hay exactamente **5 signos negativos** en total. Como el número $5$ es <strong>impar</strong>, el signo global del resultado será <span class="highlight">NEGATIVO ($-$)</span>.</li>
+                            <li><strong>Cálculo de los factores numéricos:</strong> Ignoramos los números $1$ (que no modifican el valor) y multiplicamos el resto: $2 \cdot 4 \cdot 3 = 8 \cdot 3 = \mathbf{24}$.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="continuo-box" style="border-left-color: #38a169;">
+                    $$(-1)(-2)(+1)(-4)(-3)(-1) = -24$$
+                </div>
+
+                <div class="regla-box">
+                    <strong>Conclusión:</strong> Al haber $5$ signos menos (cantidad impar), se obtiene directamente el signo $-$, y al realizar el producto $2 \cdot 4 \cdot 3 = 24$, alcanzamos la solución inmediata $\mathbf{-24}$.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

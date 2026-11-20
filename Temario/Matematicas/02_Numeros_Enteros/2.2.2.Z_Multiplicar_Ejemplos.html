@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Prácticos de Multiplicación y División de Números Enteros</title>
+    <link rel="stylesheet" href="../Estilo_Ejemplos.css">
+
+<!-- 1. Configuración de MathJax -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],                
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ],
+        tags: 'none' /* Desactiva la numeración automática de TeX */
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        width: 100%;
+    }
+    
+    .explicacion-lateral ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+
+    .explicacion-lateral ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        margin: 10px 0;
+    }
+
+    .explicacion-lateral ol li::before {
+        content: none !important;
+    }
+
+    .math-steps {
+        margin: 10px 0;
+        padding-left: 15px;
+    }
+
+    .continuo-box {
+        background-color: #f8fafc;
+        border-left: 4px solid #2635b7;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border-radius: 4px;
+    }
+
+    .apartado-block {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+    .apartado-block:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .apartado-title {
+        font-weight: bold;
+        color: #2635b7;
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Ejemplos Prácticos: Números Enteros ($\mathbb{Z}$) - MULTIPLICACIÓN Y DIVISIÓN</h1>
+
+<div class="exercise-list">
+<div class="tutorial-container">
+
+    <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+    <!-- EJEMPLO 1 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 1: Multiplicaciones sencillas de dos números enteros</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula el resultado de las siguientes multiplicaciones aplicando la regla de los signos en dos fases:</p>
+
+                <!-- Apartado a -->
+                <div class="apartado-block">
+                    <div class="apartado-title">a) $(+5) \cdot (+4)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Misma clase de signo, $(+) \cdot (+) \Rightarrow +$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Multiplicamos valores absolutos $5 \cdot 4 = 20$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+5) \cdot (+4) = +20$$
+                    </div>
+                </div>
+
+                <!-- Apartado b -->
+                <div class="apartado-block">
+                    <div class="apartado-title">b) $(-7) \cdot (+3)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos distintos, $(-) \cdot (+) \Rightarrow -$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Multiplicamos valores absolutos $7 \cdot 3 = 21$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-7) \cdot (+3) = -21$$
+                    </div>
+                </div>
+
+                <!-- Apartado c -->
+                <div class="apartado-block">
+                    <div class="apartado-title">c) $(+8) \cdot (-6)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos distintos, $(+) \cdot (-) \Rightarrow -$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Multiplicamos valores absolutos $8 \cdot 6 = 48$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+8) \cdot (-6) = -48$$
+                    </div>
+                </div>
+
+                <!-- Apartado d -->
+                <div class="apartado-block">
+                    <div class="apartado-title">d) $(-9) \cdot (-5)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos iguales, $(-) \cdot (-) \Rightarrow +$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Multiplicamos valores absolutos $9 \cdot 5 = 45$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-9) \cdot (-5) = +45$$
+                    </div>
+                </div>
+
+                <!-- Apartado e -->
+                <div class="apartado-block">
+                    <div class="apartado-title">e) $(-12) \cdot (+2)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos distintos, $(-) \cdot (+) \Rightarrow -$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Multiplicamos valores absolutos $12 \cdot 2 = 24$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-12) \cdot (+2) = -24$$
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 2 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 2: Divisiones sencillas de dos números enteros</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve las siguientes divisiones aplicando la regla de los signos en dos fases:</p>
+
+                <!-- Apartado a -->
+                <div class="apartado-block">
+                    <div class="apartado-title">a) $(+24) : (+6)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos iguales, $(+) : (+) \Rightarrow +$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Dividimos valores absolutos $24 : 6 = 4$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+24) : (+6) = +4$$
+                    </div>
+                </div>
+
+                <!-- Apartado b -->
+                <div class="apartado-block">
+                    <div class="apartado-title">b) $(-35) : (+5)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos distintos, $(-) : (+) \Rightarrow -$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Dividimos valores absolutos $35 : 5 = 7$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-35) : (+5) = -7$$
+                    </div>
+                </div>
+
+                <!-- Apartado c -->
+                <div class="apartado-block">
+                    <div class="apartado-title">c) $(+48) : (-8)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos distintos, $(+) : (-) \Rightarrow -$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Dividimos valores absolutos $48 : 8 = 6$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+48) : (-8) = -6$$
+                    </div>
+                </div>
+
+                <!-- Apartado d -->
+                <div class="apartado-block">
+                    <div class="apartado-title">d) $(-63) : (-9)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos iguales, $(-) : (-) \Rightarrow +$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Dividimos valores absolutos $63 : 9 = 7$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-63) : (-9) = +7$$
+                    </div>
+                </div>
+
+                <!-- Apartado e -->
+                <div class="apartado-block">
+                    <div class="apartado-title">e) $(-80) : (+10)$</div>
+                    <ul>
+                        <li><strong>Fase 1 (Signo):</strong> Signos distintos, $(-) : (+) \Rightarrow -$.</li>
+                        <li><strong>Fase 2 (Número):</strong> Dividimos valores absolutos $80 : 10 = 8$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-80) : (+10) = -8$$
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 3 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 3: Cadenas de multiplicaciones múltiples</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula el resultado de los siguientes productos múltiples aplicando la estrategia directa por conteo de signos negativos:</p>
+
+                <!-- Apartado a -->
+                <div class="apartado-block">
+                    <div class="apartado-title">a) $(-2) \cdot (-3) \cdot (-4)$</div>
+                    <ul>
+                        <li><strong>Conteo de signos ($-$):</strong> Hay 3 signos negativos (cantidad <strong>impar</strong>) $\Rightarrow$ Signo final: <span class="highlight">NEGATIVO ($-$)</span>.</li>
+                        <li><strong>Multiplicación numérica:</strong> $2 \cdot 3 \cdot 4 = 24$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-2) \cdot (-3) \cdot (-4) = -24$$
+                    </div>
+                </div>
+
+                <!-- Apartado b -->
+                <div class="apartado-block">
+                    <div class="apartado-title">b) $(-1) \cdot (+5) \cdot (-2) \cdot (-3)$</div>
+                    <ul>
+                        <li><strong>Conteo de signos ($-$):</strong> Hay 3 signos negativos (cantidad <strong>impar</strong>) $\Rightarrow$ Signo final: <span class="highlight">NEGATIVO ($-$)</span>.</li>
+                        <li><strong>Multiplicación numérica:</strong> $1 \cdot 5 \cdot 2 \cdot 3 = 30$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-1) \cdot (+5) \cdot (-2) \cdot (-3) = -30$$
+                    </div>
+                </div>
+
+                <!-- Apartado c -->
+                <div class="apartado-block">
+                    <div class="apartado-title">c) $(-2) \cdot (-2) \cdot (-1) \cdot (-3)$</div>
+                    <ul>
+                        <li><strong>Conteo de signos ($-$):</strong> Hay 4 signos negativos (cantidad <strong>par</strong>) $\Rightarrow$ Signo final: <span class="highlight">POSITIVO ($+$)</span>.</li>
+                        <li><strong>Multiplicación numérica:</strong> $2 \cdot 2 \cdot 1 \cdot 3 = 12$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-2) \cdot (-2) \cdot (-1) \cdot (-3) = +12$$
+                    </div>
+                </div>
+
+                <!-- Apartado d -->
+                <div class="apartado-block">
+                    <div class="apartado-title">d) $(+3) \cdot (-1) \cdot (+4) \cdot (-2) \cdot (+1)$</div>
+                    <ul>
+                        <li><strong>Conteo de signos ($-$):</strong> Hay 2 signos negativos (cantidad <strong>par</strong>) $\Rightarrow$ Signo final: <span class="highlight">POSITIVO ($+$)</span>.</li>
+                        <li><strong>Multiplicación numérica:</strong> $3 \cdot 1 \cdot 4 \cdot 2 \cdot 1 = 24$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+3) \cdot (-1) \cdot (+4) \cdot (-2) \cdot (+1) = +24$$
+                    </div>
+                </div>
+
+                <!-- Apartado e -->
+                <div class="apartado-block">
+                    <div class="apartado-title">e) $(-1) \cdot (-1) \cdot (-1) \cdot (-1) \cdot (-1)$</div>
+                    <ul>
+                        <li><strong>Conteo de signos ($-$):</strong> Hay 5 signos negativos (cantidad <strong>impar</strong>) $\Rightarrow$ Signo final: <span class="highlight">NEGATIVO ($-$)</span>.</li>
+                        <li><strong>Multiplicación numérica:</strong> $1 \cdot 1 \cdot 1 \cdot 1 \cdot 1 = 1$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-1) \cdot (-1) \cdot (-1) \cdot (-1) \cdot (-1) = -1$$
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 4 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 4: Cadenas de divisiones encadenadas de izquierda a derecha</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Resuelve las siguientes divisiones múltiples recordando que la división no es asociativa y debe realizarse estrictamente de izquierda a derecha de dos en dos:</p>
+
+                <!-- Apartado a -->
+                <div class="apartado-block">
+                    <div class="apartado-title">a) $(-36) : (+6) : (-2)$</div>
+                    <ul>
+                        <li><strong>Paso 1:</strong> Resolvemos la primera división $(-36) : (+6) = -6$.</li>
+                        <li><strong>Paso 2:</strong> Dividimos el resultado por el siguiente entero $(-6) : (-2) = +3$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-36) : (+6) : (-2) = (-6) : (-2) = +3$$
+                    </div>
+                </div>
+
+                <!-- Apartado b -->
+                <div class="apartado-block">
+                    <div class="apartado-title">b) $(+100) : (-5) : (-2)$</div>
+                    <ul>
+                        <li><strong>Paso 1:</strong> $(+100) : (-5) = -20$.</li>
+                        <li><strong>Paso 2:</strong> $(-20) : (-2) = +10$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+100) : (-5) : (-2) = (-20) : (-2) = +10$$
+                    </div>
+                </div>
+
+                <!-- Apartado c -->
+                <div class="apartado-block">
+                    <div class="apartado-title">c) $(-120) : (-4) : (-5)$</div>
+                    <ul>
+                        <li><strong>Paso 1:</strong> $(-120) : (-4) = +30$.</li>
+                        <li><strong>Paso 2:</strong> $(+30) : (-5) = -6$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-120) : (-4) : (-5) = (+30) : (-5) = -6$$
+                    </div>
+                </div>
+
+                <!-- Apartado d -->
+                <div class="apartado-block">
+                    <div class="apartado-title">d) $(+64) : (-2) : (+4) : (-2)$</div>
+                    <ul>
+                        <li><strong>Paso 1:</strong> $(+64) : (-2) = -32$.</li>
+                        <li><strong>Paso 2:</strong> $(-32) : (+4) = -8$.</li>
+                        <li><strong>Paso 3:</strong> $(-8) : (-2) = +4$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(+64) : (-2) : (+4) : (-2) = (-32) : (+4) : (-2) = (-8) : (-2) = +4$$
+                    </div>
+                </div>
+
+                <!-- Apartado e -->
+                <div class="apartado-block">
+                    <div class="apartado-title">e) $(-200) : (-10) : (-5) : (-2)$</div>
+                    <ul>
+                        <li><strong>Paso 1:</strong> $(-200) : (-10) = +20$.</li>
+                        <li><strong>Paso 2:</strong> $(+20) : (-5) = -4$.</li>
+                        <li><strong>Paso 3:</strong> $(-4) : (-2) = +2$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-200) : (-10) : (-5) : (-2) = (+20) : (-5) : (-2) = (-4) : (-2) = +2$$
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 5 -->
+    <div class="step-block">
+        <div class="step-title">Ejemplo 5: Notación implícita y simplificación de paréntesis</div>
+        <div class="division-table-container">
+            <div class="explicacion-lateral">
+                <strong>Enunciado:</strong>
+                <p>Calcula las siguientes operaciones identificando factores implícitos (como el signo $+$ o el factor $1$) y la presencia de multiplicaciones por paréntesis adyacentes:</p>
+
+                <!-- Apartado a -->
+                <div class="apartado-block">
+                    <div class="apartado-title">a) $3(-4)$</div>
+                    <ul>
+                        <li><strong>Análisis:</strong> El número $3$ no lleva signo explícito, luego es $+3$. Al estar pegado al paréntesis indica multiplicación.</li>
+                        <li><strong>Cálculo:</strong> $(+3) \cdot (-4) = -12$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$3(-4) = (+3) \cdot (-4) = -12$$
+                    </div>
+                </div>
+
+                <!-- Apartado b -->
+                <div class="apartado-block">
+                    <div class="apartado-title">b) $-(-7)$</div>
+                    <ul>
+                        <li><strong>Análisis:</strong> Delante del paréntesis hay un $-1$ implícito. Aplicamos la regla del signo $- \cdot - = +$.</li>
+                        <li><strong>Cálculo:</strong> $(-1) \cdot (-7) = +7$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-(-7) = (-1) \cdot (-7) = +7$$
+                    </div>
+                </div>
+
+                <!-- Apartado c -->
+                <div class="apartado-block">
+                    <div class="apartado-title">c) $(-5)(-2)$</div>
+                    <ul>
+                        <li><strong>Análisis:</strong> Paréntesis pegados sin operador intermedio indican producto directo.</li>
+                        <li><strong>Cálculo:</strong> Signos iguales $(-) \cdot (-) = +$, $5 \cdot 2 = 10$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$(-5)(-2) = +10$$
+                    </div>
+                </div>
+
+                <!-- Apartado d -->
+                <div class="apartado-block">
+                    <div class="apartado-title">d) $-2(-3)(-4)$</div>
+                    <ul>
+                        <li><strong>Análisis:</strong> Tres factores multiplicándose. Hay 3 signos negativos (impar) $\Rightarrow$ resultado negativo.</li>
+                        <li><strong>Cálculo:</strong> $2 \cdot 3 \cdot 4 = 24 \Rightarrow -24$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-2(-3)(-4) = -24$$
+                    </div>
+                </div>
+
+                <!-- Apartado e -->
+                <div class="apartado-block">
+                    <div class="apartado-title">e) $-4(-5) : (-2)$</div>
+                    <ul>
+                        <li><strong>Paso 1 (Multiplicación):</strong> $-4(-5) = +20$.</li>
+                        <li><strong>Paso 2 (División):</strong> $(+20) : (-2) = -10$.</li>
+                    </ul>
+                    <div class="continuo-box">
+                        $$-4(-5) : (-2) = (+20) : (-2) = -10$$
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
