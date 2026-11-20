@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría: Mínimo Común Múltiplo (m.c.m.) por Factorización</title>
+    <link rel="stylesheet" href="../Estilo_Teoria.css">
+    
+  
+
+<!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],               
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+    /* Contenedor principal de la explicación */
+    .tutorial-container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: #fdfdfd;
+        border-left: 6px solid #2635b7;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Bloque contenedor de cada criterio */
+    .step-block {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #2635b7;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 1.4em;
+        color: #00769d;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 5px;
+    }
+
+    /* Tarjeta de Regla Rápida */
+    .regla-box {
+        background-color: #f0f4ff;
+        border-left: 4px solid #2635b7;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+        font-size: 1.05rem;
+    }
+
+    .regla-box strong {
+        color: #2635b7;
+    }
+
+    /* Contenedor flexible para la tabla y la explicación */
+    .division-table-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e0;
+    }
+
+    /* --- CONFIGURACIÓN DE TABLA DE DESCOMPOSICIÓN/ANÁLISIS --- */
+    .factor-table {
+        border-collapse: collapse;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .factor-table td {
+        padding: 6px 0;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    /* Columnas para los Dígitos Principales (Anchas) */
+    .col-digito {
+        width: 110px;
+        color: #2d3748;
+    }
+
+    /* Columna para los signos de relación o igualdad */
+    .col-igual {
+        padding: 0 15px !important;
+        color: #2635b7;
+        width: 20px;
+    }
+
+    /* Columna de texto de desarrollo matemático */
+    .factor-table td.barra-primas {
+        text-align: left;
+        color: #2d3748; 
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .highlight {
+        color: #e53e3e;
+        font-weight: bold;
+        background-color: #fff5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid #fed7d7;
+    }
+
+    .explicacion-lateral {
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+        max-width: 500px;
+    }
+    
+    .explicacion-lateral ul {
+        margin: 5px 0;
+        padding-left: 20px;
+    }
+</style>
+
+
+<h1> Máximo Común Divisor (M.C.D.): MÉTODO POR FACTORIZACIÓN </h1>
+
+<div class="exercise-list">
+    <div class="tutorial-container">
+        <h2>Cálculo del M.C.D. mediante Descomposición en Factores Primos</h2>
+        <p>El Máximo Común Divisor representa el mayor divisor común que comparten dos o más números. Para calcularlo de forma directa, <strong>factorizamos</strong> los números en sus componentes primos y nos quedamos únicamente con aquellos primos que están presentes en todos los números.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 20px 0;">
+
+        <div class="step-block">
+            <div class="step-title">La Regla de Oro del M.C.D.</div>
+            <div class="regla-box">
+                <strong>Regla fundamental:</strong> Una vez descompuestos los números en factores primos, el Máximo Común Divisor se obtiene multiplicando <strong>únicamente los factores primos que están presentes en TODOS los números, elevados al menor exponente</strong> con el que aparezcan.
+            </div>
+            <ul>
+                <li><strong>Estar en todos los números:</strong> No sirve con que un número primo se repita en dos de los números; tiene que formar parte de la descomposición de <em>cada uno</em> de ellos.</li>
+                <li><strong>Al menor exponente:</strong> Si un factor primo aparece en todos los números con exponentes distintos, seleccionamos únicamente la potencia más pequeña.</li>
+                <li><strong>¿Qué pasa con los factores que no están en todos?</strong> Se descartan por completo para el cálculo del M.C.D.</li>
+            </ul>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Ejemplo 1: M.C.D. (24, 36) por Factorización</div>
+            <div class="regla-box">
+                <strong>Paso 1:</strong> Factorizamos el 24 y el 36 para expresarlos como potencias de números primos.
+            </div>
+            
+            <div class="division-table-container">
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito">Factorizar 24</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(24 = 2^3 \cdot \mathbf{3}\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Factorizar 36</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(36 = \mathbf{2^2} \cdot 3^2\)</td>
+                    </tr>
+                </table>
+
+                <div class="explicacion-lateral">
+                    <strong>Aplicación de la regla:</strong><br>
+                    <ul>
+                        <li>El factor <strong>2</strong> está en ambos números (\(2^3\) y \(2^2\)). Elegimos el de menor exponente: <span class="highlight">\(\mathbf{2^2}\)</span>.</li>
+                        <li>El factor <strong>3</strong> está en ambos números (\(3\) y \(3^2\)). Elegimos el de menor exponente: <span class="highlight">\(\mathbf{3}\)</span>.</li>
+                    </ul>
+                    <strong>Cálculo final:</strong> Multiplicamos los primos elegidos con su menor exponente:
+                    <br>
+                    $$\text{M.C.D.}(24, 36) = 2^2 \cdot 3 = 4 \cdot 3 = 12$$
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Ejemplo 2: M.C.D. (10, 30, 12) con tres números</div>
+            <div class="regla-box">
+                <strong>Atención especial:</strong> Un factor debe aparecer en <em>todos</em> los números. Si se repite solo en algunos, no se toma.
+            </div>
+            
+            <div class="division-table-container">
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito">Factorizar 10</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(10 = \mathbf{2} \cdot 5\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Factorizar 30</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(30 = \mathbf{2} \cdot 3 \cdot 5\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Factorizar 12</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(12 = \mathbf{2^2} \cdot 3\)</td>
+                    </tr>
+                </table>
+
+                <div class="explicacion-lateral">
+                    <strong>Análisis de factores primos:</strong><br>
+                    <ul>
+                        <li><strong>El primo 2:</strong> Aparece en los tres números (\(2\), \(2\) y \(2^2\)). Como está en <strong>todos</strong>, lo elegimos al menor exponente: <span class="highlight">\(2\)</span>.</li>
+                        <li><strong>El primo 5:</strong> Aparece en el 10 y en el 30, pero <strong>NO está en el 12</strong>. Aunque se repite, no está en todos, por lo que se descarta.</li>
+                        <li><strong>El primo 3:</strong> Aparece en el 30 y en el 12, pero <strong>NO está en el 10</strong>. Al no estar en todos, se descarta.</li>
+                    </ul>
+                    <strong>Cálculo final:</strong> El único primo presente en todos los números es el 2 al menor exponente:
+                    <br>
+                    $$\text{M.C.D.}(10, 30, 12) = 2$$
+                </div>
+            </div>
+        </div>
+		
+ <div class="step-block">
+            <div class="step-title">Ejemplo 3: M.C.D. (20, 21) - Números primos entre sí</div>
+            <div class="regla-box">
+                <strong>Caso particular:</strong> ¿Qué ocurre cuando no hay ningún factor primo común a todos los números?
+            </div>
+            
+            <div class="division-table-container">
+                <table class="factor-table">
+                    <tr>
+                        <td class="col-digito">Factorizar 20</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(20 = 2^2 \cdot 5\)</td>
+                    </tr>
+                    <tr>
+                        <td class="col-digito">Factorizar 21</td>
+                        <td class="col-igual">→</td>
+                        <td class="barra-primas">\(21 = 3 \cdot 7\)</td>
+                    </tr>
+                </table>
+
+                <div class="explicacion-lateral">
+                    <strong>Análisis de factores primos:</strong><br>
+                    <ul>
+                        <li>El primo <strong>2</strong> y el primo <strong>5</strong> solo están en la descomposición del 20.</li>
+                        <li>El primo <strong>3</strong> y el primo <strong>7</strong> solo están en la descomposición del 21.</li>
+                        <li>No existe ningún factor primo común entre 20 y 21.</li>
+                    </ul>
+                    <strong>Cálculo final:</strong> Cuando no hay primos en común, el único divisor que comparten es el número <strong>1</strong> (ya que el 1 siempre es divisor de todos los números). A estos números se les llama <em>primos entre sí</em>:
+                    <br>
+                    $$\text{M.C.D.}(20, 21) = 1$$
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block" style="border-color: #00769d;">
+            <div class="step-title" style="color: #00769d;">Resumen Metodológico</div>
+            <p>Para calcular el M.C.D. de cualquier grupo de números sigue estos pasos:</p>
+            <ol>
+                <li>Factoriza cada número de manera independiente.</li>
+                <li>Selecciona <strong>únicamente los factores primos que aparezcan en todos los números</strong>, tomando el de <strong>menor exponente</strong>.</li>
+                <li>Si un factor primo no está en alguno de los números, no se incluye en la multiplicación.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Mínimo Común Múltiplo (m.c.m.) por Factorización</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+     
+    
+<!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],                
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="container">
+    <h1>Ejercicios de Máximo Común Divisor (M.C.D.) por Factorización</h1>
+
+    <ol class="mi-lista">
+        <li>
+            Calcula el máximo común divisor de los números 12 y 18: \(\text{M.C.D.}(12, 18)\)
+
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Descomponemos ambos números en sus factores primos:
+                        $$12 = 2^2 \cdot 3$$
+                        $$18 = 2 \cdot 3^2$$
+                    </li>
+                    <li>Identificamos los factores primos <strong>comunes a todos los números con su menor exponente</strong>:
+                        <ul>
+                            <li>Para el factor 2: el menor exponente es \(2\)</li>
+                            <li>Para el factor 3: el menor exponente es \(3\)</li>
+                        </ul>
+                    </li>
+                    <li>Multiplicamos los factores seleccionados para hallar el M.C.D.:
+                        $$\text{M.C.D.}(12, 18) = 2 \cdot 3 = 6$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Encuentra el máximo común divisor de 24 y 36: \(\text{M.C.D.}(24, 36)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Realizamos la descomposición factorial:
+                        $$24 = 2^3 \cdot 3$$
+                        $$36 = 2^2 \cdot 3^2$$
+                    </li>
+                    <li>Seleccionamos únicamente los factores comunes al menor exponente:
+                        <ul>
+                            <li>Del factor 2, el menor exponente es \(2^2\)</li>
+                            <li>Del factor 3, el menor exponente es \(3\)</li>
+                        </ul>
+                    </li>
+                    <li>Calculamos el resultado final:
+                        $$\text{M.C.D.}(24, 36) = 2^2 \cdot 3 = 4 \cdot 3 = 12$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Determina el M.C.D. de los siguientes números: \(\text{M.C.D.}(9, 15)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Factorizamos cada número de manera independiente:
+                        $$9 = 3^2$$
+                        $$15 = 3 \cdot 5$$
+                    </li>
+                    <li>Analizamos la presencia de factores comunes en ambos números:
+                        <ul>
+                            <li>El factor 3 es común en ambos; el menor exponente es \(3\)</li>
+                            <li>El factor 5 solo está en el 15, por lo que <strong>se descarta</strong></li>
+                        </ul>
+                    </li>
+                    <li>Obtenemos el M.C.D.:
+                        $$\text{M.C.D.}(9, 15) = 3$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Calcula el M.C.D. de 20 y 50: \(\text{M.C.D.}(20, 50)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Descomponemos en factores primos:
+                        $$20 = 2^2 \cdot 5$$
+                        $$50 = 2 \cdot 5^2$$
+                    </li>
+                    <li>Elegimos los factores primos comunes al menor exponente:
+                        <ul>
+                            <li>El factor 2 común con menor potencia es \(2\)</li>
+                            <li>El factor 5 común con menor potencia es \(5\)</li>
+                        </ul>
+                    </li>
+                    <li>Multiplicamos los valores obtenidos:
+                        $$\text{M.C.D.}(20, 50) = 2 \cdot 5 = 10$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Halla el máximo común divisor entre 8, 12 y 20: \(\text{M.C.D.}(8, 12, 20)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Factorizamos los tres números:
+                        $$8 = 2^3$$
+                        $$12 = 2^2 \cdot 3$$
+                        $$20 = 2^2 \cdot 5$$
+                    </li>
+                    <li>Seleccionamos los factores que estén presentes en <strong>los tres números</strong> al menor exponente:
+                        <ul>
+                            <li>Para el factor 2: está en los tres números, tomamos \(2^2\)</li>
+                            <li>Para el factor 3: solo está en el 12, se descarta</li>
+                            <li>Para el factor 5: solo está en el 20, se descarta</li>
+                        </ul>
+                    </li>
+                    <li>Resolvemos la operación:
+                        $$\text{M.C.D.}(8, 12, 20) = 2^2 = 4$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Calcula el valor del M.C.D. para 14, 21 y 28: \(\text{M.C.D.}(14, 21, 28)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Obtenemos los factores primos de cada término:
+                        $$14 = 2 \cdot 7$$
+                        $$21 = 3 \cdot 7$$
+                        $$28 = 2^2 \cdot 7$$
+                    </li>
+                    <li>Buscamos los factores presentes en las tres descomposiciones:
+                        <ul>
+                            <li>El factor 2 no está en el 21, se descarta</li>
+                            <li>El factor 3 solo está en el 21, se descarta</li>
+                            <li>El factor 7 aparece en los tres números; tomamos \(7\)</li>
+                        </ul>
+                    </li>
+                    <li>Obtenemos el resultado final:
+                        $$\text{M.C.D.}(14, 21, 28) = 7$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Determina el M.C.D. de los números 15 y 16: \(\text{M.C.D.}(15, 16)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Descomponemos ambos números:
+                        $$15 = 3 \cdot 5$$
+                        $$16 = 2^4$$
+                    </li>
+                    <li>Comprobamos los factores comunes:
+                        <ul>
+                            <li>No existe ningún factor primo compartido entre ambos números</li>
+                        </ul>
+                    </li>
+                    <li>Cuando no hay factores primos comunes, el único divisor común es el 1 (son primos entre sí):
+                        $$\text{M.C.D.}(15, 16) = 1$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Calcula el M.C.D. de la siguiente terna numérica: \(\text{M.C.D.}(10, 25, 40)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Buscamos los factores primos de cada uno:
+                        $$10 = 2 \cdot 5$$
+                        $$25 = 5^2$$
+                        $$40 = 2^3 \cdot 5$$
+                    </li>
+                    <li>Extraemos únicamente los primos que estén presentes en todos los números:
+                        <ul>
+                            <li>El factor 2 no está en el 25, se descarta</li>
+                            <li>El factor 5 está presente en todos; elegimos el de menor exponente: \(5\)</li>
+                        </ul>
+                    </li>
+                    <li>Operamos para hallar el máximo común divisor:
+                        $$\text{M.C.D.}(10, 25, 40) = 5$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Encuentra el M.C.D. de los números 18, 30 y 45: \(\text{M.C.D.}(18, 30, 45)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Descomponemos factorialmente:
+                        $$18 = 2 \cdot 3^2$$
+                        $$30 = 2 \cdot 3 \cdot 5$$
+                        $$45 = 3^2 \cdot 5$$
+                    </li>
+                    <li>Aplicamos el criterio de factores comunes al menor exponente:
+                        <ul>
+                            <li>Factor 2: no está en el 45, se descarta</li>
+                            <li>Factor 3: aparece en todos, tomamos el menor exponente \(3\)</li>
+                            <li>Factor 5: no está en el 18, se descarta</li>
+                        </ul>
+                    </li>
+                    <li>Efectuamos el cálculo final:
+                        $$\text{M.C.D.}(18, 30, 45) = 3$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            Halla el máximo común divisor para los números 60 y 90: \(\text{M.C.D.}(60, 90)\)
+            
+            <div class="solution-box">
+                <h3>Solución</h3>
+                <ul>
+                    <li>Descomponemos en factores primos:
+                        $$60 = 2^2 \cdot 3 \cdot 5$$
+                        $$90 = 2 \cdot 3^2 \cdot 5$$
+                    </li>
+                    <li>Seleccionamos las menores potencias de cada base prima común:
+                        <ul>
+                            <li>Para el factor 2: el menor exponente es \(2\)</li>
+                            <li>Para el factor 3: el menor exponente es \(3\)</li>
+                            <li>Para el factor 5: ambos tienen exponente 1, tomamos \(5\)</li>
+                        </ul>
+                    </li>
+                    <li>Multiplicamos para resolver el ejercicio:
+                        $$\text{M.C.D.}(60, 90) = 2 \cdot 3 \cdot 5 = 30$$
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ol>
+</div>
+
+
+
+
+
+</body>
+</html>
