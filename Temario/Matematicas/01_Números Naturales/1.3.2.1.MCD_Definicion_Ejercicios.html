@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Ejercicios de Mínimo Común Múltiplo con Soluciones</title>
+    <link rel="stylesheet" href="..\Estilo_Ejercicios.css">
+
+
+<!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+<script>
+window.MathJax = {
+    tex: {
+        packages: {'[+]': ['ams']}, 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],               
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    },
+    chtml: {
+        displayAlign: "left"
+    },
+    startup: {
+        pageReady: () => {
+            // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+            return MathJax.startup.defaultPageReady();
+        }
+    }
+};
+</script>
+
+<!-- 2. Carga asíncrona de MathJax v3 -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<h1>Ejercicios de Máximo Común Divisor (M.C.D.) por Definición</h1>
+
+<div class="exercise-list">
+
+    <!-- Ejercicio 1 -->
+    <div class="exercise-item">
+        <span class="exercise-number">1.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de los números 6 y 9 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution1">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution1" style="display: none;">
+            <p><strong>Solución Ejercicio 1:</strong></p>
+            <p>$\text{Divisores de 6} = \{1, 2, \mathbf{3}, 6\}$</p>
+            <p>$\text{Divisores de 9} = \{1, \mathbf{3}, 9\}$</p>
+            <p>El mayor divisor común es el 3. Por lo tanto, el $\text{M.C.D.}(6, 9) = 3$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 2 -->
+    <div class="exercise-item">
+        <span class="exercise-number">2.</span>
+        <p class="exercise-statement">Halla el máximo común divisor de 12 y 18 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution2">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution2" style="display: none;">
+            <p><strong>Solución Ejercicio 2:</strong></p>
+            <p>$\text{Divisores de 12} = \{1, 2, 3, 4, \mathbf{6}, 12\}$</p>
+            <p>$\text{Divisores de 18} = \{1, 2, 3, \mathbf{6}, 9, 18\}$</p>
+            <p>El mayor divisor común en ambas listas es el 6. El $\text{M.C.D.}(12, 18) = 6$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="exercise-item">
+        <span class="exercise-number">3.</span>
+        <p class="exercise-statement">Determina por definición el M.C.D. de 8 y 12.</p>
+        <div class="solution-trigger-container" data-solution-id="solution3">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution3" style="display: none;">
+            <p><strong>Solución Ejercicio 3:</strong></p>
+            <p>$\text{Divisores de 8} = \{1, 2, \mathbf{4}, 8\}$</p>
+            <p>$\text{Divisores de 12} = \{1, 2, 3, \mathbf{4}, 6, 12\}$</p>
+            <p>El divisor común más grande es 4. El $\text{M.C.D.}(8, 12) = 4$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 4 -->
+    <div class="exercise-item">
+        <span class="exercise-number">4.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de 15 y 20.</p>
+        <div class="solution-trigger-container" data-solution-id="solution4">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution4" style="display: none;">
+            <p><strong>Solución Ejercicio 4:</strong></p>
+            <p>$\text{Divisores de 15} = \{1, 3, \mathbf{5}, 15\}$</p>
+            <p>$\text{Divisores de 20} = \{1, 2, 4, \mathbf{5}, 10, 20\}$</p>
+            <p>El mayor divisor común es 5. El $\text{M.C.D.}(15, 20) = 5$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 5 -->
+    <div class="exercise-item">
+        <span class="exercise-number">5.</span>
+        <p class="exercise-statement">Encuentra el M.C.D. de los números 7 y 11.</p>
+        <div class="solution-trigger-container" data-solution-id="solution5">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution5" style="display: none;">
+            <p><strong>Solución Ejercicio 5:</strong></p>
+            <p>$\text{Divisores de 7} = \{\mathbf{1}, 7\}$</p>
+            <p>$\text{Divisores de 11} = \{\mathbf{1}, 11\}$</p>
+            <p>Al ser ambos números primos, su único divisor común es 1. El $\text{M.C.D.}(7, 11) = 1$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 6 -->
+    <div class="exercise-item">
+        <span class="exercise-number">6.</span>
+        <p class="exercise-statement">Halla el M.C.D. de 10 y 25 por el método de listas de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution6">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution6" style="display: none;">
+            <p><strong>Solución Ejercicio 6:</strong></p>
+            <p>$\text{Divisores de 10} = \{1, 2, \mathbf{5}, 10\}$</p>
+            <p>$\text{Divisores de 25} = \{1, \mathbf{5}, 25\}$</p>
+            <p>El divisor común más alto es 5. El $\text{M.C.D.}(10, 25) = 5$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 7 -->
+    <div class="exercise-item">
+        <span class="exercise-number">7.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de 14 y 21.</p>
+        <div class="solution-trigger-container" data-solution-id="solution7">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution7" style="display: none;">
+            <p><strong>Solución Ejercicio 7:</strong></p>
+            <p>$\text{Divisores de 14} = \{1, 2, \mathbf{7}, 14\}$</p>
+            <p>$\text{Divisores de 21} = \{1, 3, \mathbf{7}, 21\}$</p>
+            <p>El mayor de los divisores comunes es 7. El $\text{M.C.D.}(14, 21) = 7$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 8 -->
+    <div class="exercise-item">
+        <span class="exercise-number">8.</span>
+        <p class="exercise-statement">Determina el M.C.D. de los números 16 y 24.</p>
+        <div class="solution-trigger-container" data-solution-id="solution8">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution8" style="display: none;">
+            <p><strong>Solución Ejercicio 8:</strong></p>
+            <p>$\text{Divisores de 16} = \{1, 2, 4, \mathbf{8}, 16\}$</p>
+            <p>$\text{Divisores de 24} = \{1, 2, 3, 4, 6, \mathbf{8}, 12, 24\}$</p>
+            <p>El mayor número coincidente en ambas listas es 8. El $\text{M.C.D.}(16, 24) = 8$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 9 -->
+    <div class="exercise-item">
+        <span class="exercise-number">9.</span>
+        <p class="exercise-statement">Halla por definición el M.C.D. de 9 y 27.</p>
+        <div class="solution-trigger-container" data-solution-id="solution9">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution9" style="display: none;">
+            <p><strong>Solución Ejercicio 9:</strong></p>
+            <p>$\text{Divisores de 9} = \{1, 3, \mathbf{9}\}$</p>
+            <p>$\text{Divisores de 27} = \{1, 3, \mathbf{9}, 27\}$</p>
+            <p>Como 9 divide a 27, el mayor divisor común es el propio 9. El $\text{M.C.D.}(9, 27) = 9$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 10 -->
+    <div class="exercise-item">
+        <span class="exercise-number">10.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de los números 18 y 30.</p>
+        <div class="solution-trigger-container" data-solution-id="solution10">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution10" style="display: none;">
+            <p><strong>Solución Ejercicio 10:</strong></p>
+            <p>$\text{Divisores de 18} = \{1, 2, 3, \mathbf{6}, 9, 18\}$</p>
+            <p>$\text{Divisores de 30} = \{1, 2, 3, 5, \mathbf{6}, 10, 15, 30\}$</p>
+            <p>El mayor divisor que comparten es 6. El $\text{M.C.D.}(18, 30) = 6$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 11 -->
+    <div class="exercise-item">
+        <span class="exercise-number">11.</span>
+        <p class="exercise-statement">Obtén el máximo común divisor de 12 y 15 por extensión de sus divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution11">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution11" style="display: none;">
+            <p><strong>Solución Ejercicio 11:</strong></p>
+            <p>$\text{Divisores de 12} = \{1, 2, \mathbf{3}, 4, 6, 12\}$</p>
+            <p>$\text{Divisores de 15} = \{1, \mathbf{3}, 5, 15\}$</p>
+            <p>El mayor número coincidente es 3. El $\text{M.C.D.}(12, 15) = 3$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 12 -->
+    <div class="exercise-item">
+        <span class="exercise-number">12.</span>
+        <p class="exercise-statement">Calcula por definición el M.C.D. de 20 y 30.</p>
+        <div class="solution-trigger-container" data-solution-id="solution12">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution12" style="display: none;">
+            <p><strong>Solución Ejercicio 12:</strong></p>
+            <p>$\text{Divisores de 20} = \{1, 2, 4, 5, \mathbf{10}, 20\}$</p>
+            <p>$\text{Divisores de 30} = \{1, 2, 3, 5, 6, \mathbf{10}, 15, 30\}$</p>
+            <p>El divisor común de mayor valor es 10. El $\text{M.C.D.}(20, 30) = 10$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 13 -->
+    <div class="exercise-item">
+        <span class="exercise-number">13.</span>
+        <p class="exercise-statement">Encuentra el M.C.D. de 13 y 17.</p>
+        <div class="solution-trigger-container" data-solution-id="solution13">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution13" style="display: none;">
+            <p><strong>Solución Ejercicio 13:</strong></p>
+            <p>$\text{Divisores de 13} = \{\mathbf{1}, 13\}$</p>
+            <p>$\text{Divisores de 17} = \{\mathbf{1}, 17\}$</p>
+            <p>Son números primos entre sí. El mayor divisor común es 1. El $\text{M.C.D.}(13, 17) = 1$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 14 -->
+    <div class="exercise-item">
+        <span class="exercise-number">14.</span>
+        <p class="exercise-statement">Determina el M.C.D. de 24 y 36 por el método de enumeración de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution14">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution14" style="display: none;">
+            <p><strong>Solución Ejercicio 14:</strong></p>
+            <p>$\text{Divisores de 24} = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 24\}$</p>
+            <p>$\text{Divisores de 36} = \{1, 2, 3, 4, 6, 9, \mathbf{12}, 18, 36\}$</p>
+            <p>El divisor más grande presente en ambos conjuntos es 12. El $\text{M.C.D.}(24, 36) = 12$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 15 -->
+    <div class="exercise-item">
+        <span class="exercise-number">15.</span>
+        <p class="exercise-statement">Halla el máximo común divisor de 28 y 42 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution15">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution15" style="display: none;">
+            <p><strong>Solución Ejercicio 15:</strong></p>
+            <p>$\text{Divisores de 28} = \{1, 2, 4, 7, \mathbf{14}, 28\}$</p>
+            <p>$\text{Divisores de 42} = \{1, 2, 3, 6, 7, \mathbf{14}, 21, 42\}$</p>
+            <p>El elemento común más alto es 14. Por lo tanto, $\text{M.C.D.}(28, 42) = 14$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 16 -->
+    <div class="exercise-item">
+        <span class="exercise-number">16.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de los números 16 y 40.</p>
+        <div class="solution-trigger-container" data-solution-id="solution16">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution16" style="display: none;">
+            <p><strong>Solución Ejercicio 16:</strong></p>
+            <p>$\text{Divisores de 16} = \{1, 2, 4, \mathbf{8}, 16\}$</p>
+            <p>$\text{Divisores de 40} = \{1, 2, 4, 5, \mathbf{8}, 10, 20, 40\}$</p>
+            <p>El mayor divisor en común es el 8. El $\text{M.C.D.}(16, 40) = 8$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 17 -->
+    <div class="exercise-item">
+        <span class="exercise-number">17.</span>
+        <p class="exercise-statement">Encuentra el M.C.D. de 35 y 49 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution17">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution17" style="display: none;">
+            <p><strong>Solución Ejercicio 17:</strong></p>
+            <p>$\text{Divisores de 35} = \{1, 5, \mathbf{7}, 35\}$</p>
+            <p>$\text{Divisores de 49} = \{1, \mathbf{7}, 49\}$</p>
+            <p>El mayor divisor compartido es 7. El $\text{M.C.D.}(35, 49) = 7$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 18 -->
+    <div class="exercise-item">
+        <span class="exercise-number">18.</span>
+        <p class="exercise-statement">Determina el M.C.D. de 27 y 45 enumerando sus divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution18">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution18" style="display: none;">
+            <p><strong>Solución Ejercicio 18:</strong></p>
+            <p>$\text{Divisores de 27} = \{1, 3, \mathbf{9}, 27\}$</p>
+            <p>$\text{Divisores de 45} = \{1, 3, 5, \mathbf{9}, 15, 45\}$</p>
+            <p>El divisor común más grande es 9. El $\text{M.C.D.}(27, 45) = 9$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 19 -->
+    <div class="exercise-item">
+        <span class="exercise-number">19.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de 32 y 48 por el método de listas.</p>
+        <div class="solution-trigger-container" data-solution-id="solution19">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution19" style="display: none;">
+            <p><strong>Solución Ejercicio 19:</strong></p>
+            <p>$\text{Divisores de 32} = \{1, 2, 4, 8, \mathbf{16}, 32\}$</p>
+            <p>$\text{Divisores de 48} = \{1, 2, 3, 4, 6, 8, 12, \mathbf{16}, 24, 48\}$</p>
+            <p>El mayor número presente en ambas listas es 16. El $\text{M.C.D.}(32, 48) = 16$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 20 -->
+    <div class="exercise-item">
+        <span class="exercise-number">20.</span>
+        <p class="exercise-statement">Halla el M.C.D. de los números 22 y 33.</p>
+        <div class="solution-trigger-container" data-solution-id="solution20">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution20" style="display: none;">
+            <p><strong>Solución Ejercicio 20:</strong></p>
+            <p>$\text{Divisores de 22} = \{1, 2, \mathbf{11}, 22\}$</p>
+            <p>$\text{Divisores de 33} = \{1, 3, \mathbf{11}, 33\}$</p>
+            <p>El número 11 es el divisor común de mayor valor. El $\text{M.C.D.}(22, 33) = 11$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 21 -->
+    <div class="exercise-item">
+        <span class="exercise-number">21.</span>
+        <p class="exercise-statement">Calcula por definición el M.C.D. de 40 y 60.</p>
+        <div class="solution-trigger-container" data-solution-id="solution21">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution21" style="display: none;">
+            <p><strong>Solución Ejercicio 21:</strong></p>
+            <p>$\text{Divisores de 40} = \{1, 2, 4, 5, 8, 10, \mathbf{20}, 40\}$</p>
+            <p>$\text{Divisores de 60} = \{1, 2, 3, 4, 5, 6, 10, 12, 15, \mathbf{20}, 30, 60\}$</p>
+            <p>El mayor divisor común es 20. El $\text{M.C.D.}(40, 60) = 20$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 22 -->
+    <div class="exercise-item">
+        <span class="exercise-number">22.</span>
+        <p class="exercise-statement">Determina por definición el M.C.D. de 18 y 45.</p>
+        <div class="solution-trigger-container" data-solution-id="solution22">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution22" style="display: none;">
+            <p><strong>Solución Ejercicio 22:</strong></p>
+            <p>$\text{Divisores de 18} = \{1, 2, 3, 6, \mathbf{9}, 18\}$</p>
+            <p>$\text{Divisores de 45} = \{1, 3, 5, \mathbf{9}, 15, 45\}$</p>
+            <p>El mayor número coincidente es el 9. El $\text{M.C.D.}(18, 45) = 9$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 23 -->
+    <div class="exercise-item">
+        <span class="exercise-number">23.</span>
+        <p class="exercise-statement">Halla el M.C.D. de 25 y 50 indicando sus divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution23">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution23" style="display: none;">
+            <p><strong>Solución Ejercicio 23:</strong></p>
+            <p>$\text{Divisores de 25} = \{1, 5, \mathbf{25}\}$</p>
+            <p>$\text{Divisores de 50} = \{1, 2, 5, 10, \mathbf{25}, 50\}$</p>
+            <p>Dado que 25 divide exactamente a 50, el $\text{M.C.D.}(25, 50) = 25$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 24 -->
+    <div class="exercise-item">
+        <span class="exercise-number">24.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de los números 36 y 54.</p>
+        <div class="solution-trigger-container" data-solution-id="solution24">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution24" style="display: none;">
+            <p><strong>Solución Ejercicio 24:</strong></p>
+            <p>$\text{Divisores de 36} = \{1, 2, 3, 4, 6, 9, 12, \mathbf{18}, 36\}$</p>
+            <p>$\text{Divisores de 54} = \{1, 2, 3, 6, 9, \mathbf{18}, 27, 54\}$</p>
+            <p>El divisor común de mayor magnitud es 18. El $\text{M.C.D.}(36, 54) = 18$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 25 -->
+    <div class="exercise-item">
+        <span class="exercise-number">25.</span>
+        <p class="exercise-statement">Encuentra por definición el M.C.D. de 14 y 35.</p>
+        <div class="solution-trigger-container" data-solution-id="solution25">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution25" style="display: none;">
+            <p><strong>Solución Ejercicio 25:</strong></p>
+            <p>$\text{Divisores de 14} = \{1, 2, \mathbf{7}, 14\}$</p>
+            <p>$\text{Divisores de 35} = \{1, 5, \mathbf{7}, 35\}$</p>
+            <p>El mayor de los divisores comunes es 7. El $\text{M.C.D.}(14, 35) = 7$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 26 -->
+    <div class="exercise-item">
+        <span class="exercise-number">26.</span>
+        <p class="exercise-statement">Determina el M.C.D. de 30 y 45 por listas de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution26">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution26" style="display: none;">
+            <p><strong>Solución Ejercicio 26:</strong></p>
+            <p>$\text{Divisores de 30} = \{1, 2, 3, 5, 6, 10, \mathbf{15}, 30\}$</p>
+            <p>$\text{Divisores de 45} = \{1, 3, 5, 9, \mathbf{15}, 45\}$</p>
+            <p>El mayor divisor coincidente es 15. El $\text{M.C.D.}(30, 45) = 15$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 27 -->
+    <div class="exercise-item">
+        <span class="exercise-number">27.</span>
+        <p class="exercise-statement">Halla el M.C.D. de 24 y 60 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution27">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution27" style="display: none;">
+            <p><strong>Solución Ejercicio 27:</strong></p>
+            <p>$\text{Divisores de 24} = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 24\}$</p>
+            <p>$\text{Divisores de 60} = \{1, 2, 3, 4, 5, 6, 10, \mathbf{12}, 15, 20, 30, 60\}$</p>
+            <p>El elemento más alto en común es 12. El $\text{M.C.D.}(24, 60) = 12$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 28 -->
+    <div class="exercise-item">
+        <span class="exercise-number">28.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de 16 y 56.</p>
+        <div class="solution-trigger-container" data-solution-id="solution28">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution28" style="display: none;">
+            <p><strong>Solución Ejercicio 28:</strong></p>
+            <p>$\text{Divisores de 16} = \{1, 2, 4, \mathbf{8}, 16\}$</p>
+            <p>$\text{Divisores de 56} = \{1, 2, 4, 7, \mathbf{8}, 14, 28, 56\}$</p>
+            <p>El divisor común mayor es el 8. El $\text{M.C.D.}(16, 56) = 8$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 29 -->
+    <div class="exercise-item">
+        <span class="exercise-number">29.</span>
+        <p class="exercise-statement">Encuentra el M.C.D. de los números 42 y 70 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution29">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution29" style="display: none;">
+            <p><strong>Solución Ejercicio 29:</strong></p>
+            <p>$\text{Divisores de 42} = \{1, 2, 3, 6, 7, \mathbf{14}, 21, 42\}$</p>
+            <p>$\text{Divisores de 70} = \{1, 2, 5, 7, 10, \mathbf{14}, 35, 70\}$</p>
+            <p>El número 14 es el divisor común mayor. El $\text{M.C.D.}(42, 70) = 14$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 30 -->
+    <div class="exercise-item">
+        <span class="exercise-number">30.</span>
+        <p class="exercise-statement">Determina el M.C.D. de 48 y 72 construyendo sus conjuntos de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution30">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution30" style="display: none;">
+            <p><strong>Solución Ejercicio 30:</strong></p>
+            <p>$\text{Divisores de 48} = \{1, 2, 3, 4, 6, 8, 12, 16, \mathbf{24}, 48\}$</p>
+            <p>$\text{Divisores de 72} = \{1, 2, 3, 4, 6, 8, 9, 12, 18, \mathbf{24}, 36, 72\}$</p>
+            <p>El divisor común más grande entre ambos es 24. El $\text{M.C.D.}(48, 72) = 24$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 31 -->
+    <div class="exercise-item">
+        <span class="exercise-number">31.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de 50 y 75 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution31">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution31" style="display: none;">
+            <p><strong>Solución Ejercicio 31:</strong></p>
+            <p>$\text{Divisores de 50} = \{1, 2, 5, 10, \mathbf{25}, 50\}$</p>
+            <p>$\text{Divisores de 75} = \{1, 3, 5, 15, \mathbf{25}, 75\}$</p>
+            <p>El número 25 es el mayor divisor común. El $\text{M.C.D.}(50, 75) = 25$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 32 -->
+    <div class="exercise-item">
+        <span class="exercise-number">32.</span>
+        <p class="exercise-statement">Halla por listas de divisores el M.C.D. de 36 y 90.</p>
+        <div class="solution-trigger-container" data-solution-id="solution32">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution32" style="display: none;">
+            <p><strong>Solución Ejercicio 32:</strong></p>
+            <p>$\text{Divisores de 36} = \{1, 2, 3, 4, 6, 9, 12, \mathbf{18}, 36\}$</p>
+            <p>$\text{Divisores de 90} = \{1, 2, 3, 5, 6, 9, 10, 15, \mathbf{18}, 30, 45, 90\}$</p>
+            <p>El mayor de los divisores en común es 18. El $\text{M.C.D.}(36, 90) = 18$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 33 -->
+    <div class="exercise-item">
+        <span class="exercise-number">33.</span>
+        <p class="exercise-statement">Determina el M.C.D. de 54 y 81 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution33">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution33" style="display: none;">
+            <p><strong>Solución Ejercicio 33:</strong></p>
+            <p>$\text{Divisores de 54} = \{1, 2, 3, 6, 9, 18, \mathbf{27}, 54\}$</p>
+            <p>$\text{Divisores de 81} = \{1, 3, 9, \mathbf{27}, 81\}$</p>
+            <p>El mayor elemento común es 27. El $\text{M.C.D.}(54, 81) = 27$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 34 -->
+    <div class="exercise-item">
+        <span class="exercise-number">34.</span>
+        <p class="exercise-statement">Calcula el máximo común divisor de 64 y 96.</p>
+        <div class="solution-trigger-container" data-solution-id="solution34">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution34" style="display: none;">
+            <p><strong>Solución Ejercicio 34:</strong></p>
+            <p>$\text{Divisores de 64} = \{1, 2, 4, 8, 16, \mathbf{32}, 64\}$</p>
+            <p>$\text{Divisores de 96} = \{1, 2, 3, 4, 6, 8, 12, 16, 24, \mathbf{32}, 48, 96\}$</p>
+            <p>El divisor común más grande es 32. El $\text{M.C.D.}(64, 96) = 32$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 35 -->
+    <div class="exercise-item">
+        <span class="exercise-number">35.</span>
+        <p class="exercise-statement">Encuentra el M.C.D. de 60 y 100 por el método de definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution35">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution35" style="display: none;">
+            <p><strong>Solución Ejercicio 35:</strong></p>
+            <p>$\text{Divisores de 60} = \{1, 2, 3, 4, 5, 6, 10, 12, 15, \mathbf{20}, 30, 60\}$</p>
+            <p>$\text{Divisores de 100} = \{1, 2, 4, 5, 10, \mathbf{20}, 25, 50, 100\}$</p>
+            <p>El divisor común mayor es el 20. El $\text{M.C.D.}(60, 100) = 20$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 36 -->
+    <div class="exercise-item">
+        <span class="exercise-number">36.</span>
+        <p class="exercise-statement">Halla por definición el M.C.D. de 45 y 105.</p>
+        <div class="solution-trigger-container" data-solution-id="solution36">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution36" style="display: none;">
+            <p><strong>Solución Ejercicio 36:</strong></p>
+            <p>$\text{Divisores de 45} = \{1, 3, 5, 9, \mathbf{15}, 45\}$</p>
+            <p>$\text{Divisores de 105} = \{1, 3, 5, 7, \mathbf{15}, 21, 35, 105\}$</p>
+            <p>El elemento coincidente más alto es 15. El $\text{M.C.D.}(45, 105) = 15$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 37 -->
+    <div class="exercise-item">
+        <span class="exercise-number">37.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de 72 y 108 por listas de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution37">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution37" style="display: none;">
+            <p><strong>Solución Ejercicio 37:</strong></p>
+            <p>$\text{Divisores de 72} = \{1, 2, 3, 4, 6, 8, 9, 12, 18, 24, \mathbf{36}, 72\}$</p>
+            <p>$\text{Divisores de 108} = \{1, 2, 3, 4, 6, 9, 12, 18, 27, \mathbf{36}, 54, 108\}$</p>
+            <p>El mayor de todos los divisores comunes es 36. El $\text{M.C.D.}(72, 108) = 36$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 38 -->
+    <div class="exercise-item">
+        <span class="exercise-number">38.</span>
+        <p class="exercise-statement">Determina el M.C.D. de los números 80 y 120.</p>
+        <div class="solution-trigger-container" data-solution-id="solution38">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution38" style="display: none;">
+            <p><strong>Solución Ejercicio 38:</strong></p>
+            <p>$\text{Divisores de 80} = \{1, 2, 4, 5, 8, 10, 16, 20, \mathbf{40}, 80\}$</p>
+            <p>$\text{Divisores de 120} = \{1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 30, \mathbf{40}, 60, 120\}$</p>
+            <p>El valor del divisor común máximo es 40. El $\text{M.C.D.}(80, 120) = 40$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 39 -->
+    <div class="exercise-item">
+        <span class="exercise-number">39.</span>
+        <p class="exercise-statement">Halla el M.C.D. de 56 y 84 mediante la búsqueda de divisores comunes.</p>
+        <div class="solution-trigger-container" data-solution-id="solution39">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution39" style="display: none;">
+            <p><strong>Solución Ejercicio 39:</strong></p>
+            <p>$\text{Divisores de 56} = \{1, 2, 4, 7, 8, 14, \mathbf{28}, 56\}$</p>
+            <p>$\text{Divisores de 84} = \{1, 2, 3, 4, 6, 7, 12, 14, 21, \mathbf{28}, 42, 84\}$</p>
+            <p>El mayor divisor común es 28. El $\text{M.C.D.}(56, 84) = 28$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 40 -->
+    <div class="exercise-item">
+        <span class="exercise-number">40.</span>
+        <p class="exercise-statement">Calcula por definición el M.C.D. de 90 y 135.</p>
+        <div class="solution-trigger-container" data-solution-id="solution40">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution40" style="display: none;">
+            <p><strong>Solución Ejercicio 40:</strong></p>
+            <p>$\text{Divisores de 90} = \{1, 2, 3, 5, 6, 9, 10, 15, 18, 30, \mathbf{45}, 90\}$</p>
+            <p>$\text{Divisores de 135} = \{1, 3, 5, 9, 15, 27, \mathbf{45}, 135\}$</p>
+            <p>El número coincidente más alto en ambas listas es 45. El $\text{M.C.D.}(90, 135) = 45$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 41 -->
+    <div class="exercise-item">
+        <span class="exercise-number">41.</span>
+        <p class="exercise-statement">Calcula por definición el M.C.D. de los números 6, 12 y 18.</p>
+        <div class="solution-trigger-container" data-solution-id="solution41">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution41" style="display: none;">
+            <p><strong>Solución Ejercicio 41:</strong></p>
+            <p>$\text{Divisores de 6} = \{1, 2, 3, \mathbf{6}\}$</p>
+            <p>$\text{Divisores de 12} = \{1, 2, 3, 4, \mathbf{6}, 12\}$</p>
+            <p>$\text{Divisores de 18} = \{1, 2, 3, \mathbf{6}, 9, 18\}$</p>
+            <p>El número 6 es el mayor divisor que aparece simultáneamente en los tres conjuntos. El $\text{M.C.D.}(6, 12, 18) = 6$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 42 -->
+    <div class="exercise-item">
+        <span class="exercise-number">42.</span>
+        <p class="exercise-statement">Halla el M.C.D. de 8, 12 y 20 por listas de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution42">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution42" style="display: none;">
+            <p><strong>Solución Ejercicio 42:</strong></p>
+            <p>$\text{Divisores de 8} = \{1, 2, \mathbf{4}, 8\}$</p>
+            <p>$\text{Divisores de 12} = \{1, 2, 3, \mathbf{4}, 6, 12\}$</p>
+            <p>$\text{Divisores de 20} = \{1, 2, \mathbf{4}, 5, 10, 20\}$</p>
+            <p>El mayor divisor compartido por los tres números es 4. El $\text{M.C.D.}(8, 12, 20) = 4$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 43 -->
+    <div class="exercise-item">
+        <span class="exercise-number">43.</span>
+        <p class="exercise-statement">Determina el M.C.D. de 15, 25 y 35 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution43">
+            <img src="../Imagenes/versolucion.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution43" style="display: none;">
+            <p><strong>Solución Ejercicio 43:</strong></p>
+            <p>$\text{Divisores de 15} = \{1, 3, \mathbf{5}, 15\}$</p>
+            <p>$\text{Divisores de 25} = \{1, \mathbf{5}, 25\}$</p>
+            <p>$\text{Divisores de 35} = \{1, \mathbf{5}, 7, 35\}$</p>
+            <p>El mayor divisor en común de las tres listas es 5. El $\text{M.C.D.}(15, 25, 35) = 5$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 44 -->
+    <div class="exercise-item">
+        <span class="exercise-number">44.</span>
+        <p class="exercise-statement">Encuentra el M.C.D. de los números 12, 18 y 24.</p>
+        <div class="solution-trigger-container" data-solution-id="solution44">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution44" style="display: none;">
+            <p><strong>Solución Ejercicio 44:</strong></p>
+            <p>$\text{Divisores de 12} = \{1, 2, 3, 4, \mathbf{6}, 12\}$</p>
+            <p>$\text{Divisores de 18} = \{1, 2, 3, \mathbf{6}, 9, 18\}$</p>
+            <p>$\text{Divisores de 24} = \{1, 2, 3, 4, \mathbf{6}, 8, 12, 24\}$</p>
+            <p>El mayor divisor común presente en todos es 6. El $\text{M.C.D.}(12, 18, 24) = 6$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 45 -->
+    <div class="exercise-item">
+        <span class="exercise-number">45.</span>
+        <p class="exercise-statement">Calcula por definición el M.C.D. de 16, 24 y 32.</p>
+        <div class="solution-trigger-container" data-solution-id="solution45">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution45" style="display: none;">
+            <p><strong>Solución Ejercicio 45:</strong></p>
+            <p>$\text{Divisores de 16} = \{1, 2, 4, \mathbf{8}, 16\}$</p>
+            <p>$\text{Divisores de 24} = \{1, 2, 3, 4, 6, \mathbf{8}, 12, 24\}$</p>
+            <p>$\text{Divisores de 32} = \{1, 2, 4, \mathbf{8}, 16, 32\}$</p>
+            <p>El número 8 es el mayor divisor común que comparten. El $\text{M.C.D.}(16, 24, 32) = 8$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 46 -->
+    <div class="exercise-item">
+        <span class="exercise-number">46.</span>
+        <p class="exercise-statement">Determina el M.C.D. de los números 20, 30 y 40.</p>
+        <div class="solution-trigger-container" data-solution-id="solution46">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution46" style="display: none;">
+            <p><strong>Solución Ejercicio 46:</strong></p>
+            <p>$\text{Divisores de 20} = \{1, 2, 4, 5, \mathbf{10}, 20\}$</p>
+            <p>$\text{Divisores de 30} = \{1, 2, 3, 5, 6, \mathbf{10}, 15, 30\}$</p>
+            <p>$\text{Divisores de 40} = \{1, 2, 4, 5, 8, \mathbf{10}, 20, 40\}$</p>
+            <p>El mayor número común en las tres listas es 10. El $\text{M.C.D.}(20, 30, 40) = 10$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 47 -->
+    <div class="exercise-item">
+        <span class="exercise-number">47.</span>
+        <p class="exercise-statement">Halla por listas el M.C.D. de 18, 27 y 36.</p>
+        <div class="solution-trigger-container" data-solution-id="solution47">
+            <img src="../Imagenes/versolucion2.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution47" style="display: none;">
+            <p><strong>Solución Ejercicio 47:</strong></p>
+            <p>$\text{Divisores de 18} = \{1, 2, 3, 6, \mathbf{9}, 18\}$</p>
+            <p>$\text{Divisores de 27} = \{1, 3, \mathbf{9}, 27\}$</p>
+            <p>$\text{Divisores de 36} = \{1, 2, 3, 4, 6, \mathbf{9}, 12, 18, 36\}$</p>
+            <p>El número 9 es el mayor de los divisores comunes. El $\text{M.C.D.}(18, 27, 36) = 9$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 48 -->
+    <div class="exercise-item">
+        <span class="exercise-number">48.</span>
+        <p class="exercise-statement">Calcula el M.C.D. de 24, 36 y 48 por el método de definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution48">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution48" style="display: none;">
+            <p><strong>Solución Ejercicio 48:</strong></p>
+            <p>$\text{Divisores de 24} = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 24\}$</p>
+            <p>$\text{Divisores de 36} = \{1, 2, 3, 4, 6, 9, \mathbf{12}, 18, 36\}$</p>
+            <p>$\text{Divisores de 48} = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 16, 24, 48\}$</p>
+            <p>El mayor divisor común de los tres números es 12. El $\text{M.C.D.}(24, 36, 48) = 12$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 49 -->
+    <div class="exercise-item">
+        <span class="exercise-number">49.</span>
+        <p class="exercise-statement">Determina el M.C.D. de los números 30, 45 y 60 por definición.</p>
+        <div class="solution-trigger-container" data-solution-id="solution49">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution49" style="display: none;">
+            <p><strong>Solución Ejercicio 49:</strong></p>
+            <p>$\text{Divisores de 30} = \{1, 2, 3, 5, 6, 10, \mathbf{15}, 30\}$</p>
+            <p>$\text{Divisores de 45} = \{1, 3, 5, 9, \mathbf{15}, 45\}$</p>
+            <p>$\text{Divisores de 60} = \{1, 2, 3, 4, 5, 6, 10, 12, \mathbf{15}, 20, 30, 60\}$</p>
+            <p>El mayor número coincidente en las tres listas es el 15. El $\text{M.C.D.}(30, 45, 60) = 15$.</p>
+        </div>               
+    </div>
+
+    <!-- Ejercicio 50 -->
+    <div class="exercise-item">
+        <span class="exercise-number">50.</span>
+        <p class="exercise-statement">Halla el M.C.D. de 36, 48 y 72 construyendo sus listas de divisores.</p>
+        <div class="solution-trigger-container" data-solution-id="solution50">
+            <img src="../Imagenes/versolucion3.png" alt="" class="solution-icon">
+            <span class="solution-tooltip">Solución</span>
+        </div>
+        <div id="solution50" style="display: none;">
+            <p><strong>Solución Ejercicio 50:</strong></p>
+            <p>$\text{Divisores de 36} = \{1, 2, 3, 4, 6, 9, \mathbf{12}, 18, 36\}$</p>
+            <p>$\text{Divisores de 48} = \{1, 2, 3, 4, 6, 8, \mathbf{12}, 16, 24, 48\}$</p>
+            <p>$\text{Divisores de 72} = \{1, 2, 3, 4, 6, 8, 9, \mathbf{12}, 18, 24, 36, 72\}$</p>
+            <p>El mayor divisor común absoluto de los tres conjuntos es 12. El $\text{M.C.D.}(36, 48, 72) = 12$.</p>
+        </div>               
+    </div>
+
+</div>
+
+<div id="solutionModal" class="modal-backdrop">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Solución</h2>
+        <div class="modal-body">
+            <p id="solutionText"></p>
+        </div>
+    </div>
+</div>
+
+<script src="..\Pagina_Ejercicios.js"></script>
+
+
+  <div id="solutionModal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Solución</h2>
+            <div class="modal-body">
+                <p id="solutionText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\Pagina_Ejercicios.js"></script>
+
+</body>
+</html>

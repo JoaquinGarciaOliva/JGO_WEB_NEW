@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Máximo Común Divisor (M.C.D.) por Definición</title>
+    <link rel="stylesheet" href="..\Estilo_Ejemplos.css">
+      
+    <!-- 1. Configuración de MathJax (SIEMPRE antes de cargar el script externo) -->
+    <script>
+    window.MathJax = {
+        tex: {
+            packages: {'[+]': ['ams']}, 
+            inlineMath: [['$', '$'], ['\\(', '\\)']],               
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        },
+        chtml: {
+            displayAlign: "left"
+        },
+        startup: {
+            pageReady: () => {
+                // Garantiza que la página y el DOM estén 100% listos antes de renderizar LaTeX
+                return MathJax.startup.defaultPageReady();
+            }
+        }
+    };
+    </script>
+
+    <!-- 2. Carga asíncrona de MathJax v3 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios de Máximo Común Divisor (M.C.D.) por Definición</h1>
+
+        <ol class="mi-lista">
+            <li>
+                Calcula el máximo común divisor de los números 12 y 18: \(\text{M.C.D.}(12, 18)\)
+
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Escribimos todos los divisores positivos de cada número:
+                            $$ \text{Divisores}(12) = \{1, 2, 3, 4, 6, 12\} $$
+                            $$ \text{Divisores}(18) = \{1, 2, 3, 6, 9, 18\} $$
+                        </li>
+                        <li>Buscamos los divisores que tienen en común:
+                            $$ \text{Divisores comunes} = \{1, 2, 3, 6\} $$
+                        </li>
+                        <li>Elegimos el mayor de los divisores comunes:
+                            $$ \text{M.C.D.}(12, 18) = 6 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el máximo común divisor de 20 y 30: \(\text{M.C.D.}(20, 30)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Listamos los divisores de cada número:
+                            $$ \text{Divisores}(20) = \{1, 2, 4, 5, 10, 20\} $$
+                            $$ \text{Divisores}(30) = \{1, 2, 3, 5, 6, 10, 15, 30\} $$
+                        </li>
+                        <li>Identificamos los divisores comunes:
+                            $$ \text{Divisores comunes} = \{1, 2, 5, 10\} $$
+                        </li>
+                        <li>Seleccionamos el mayor divisor común:
+                            $$ \text{M.C.D.}(20, 30) = 10 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina el M.C.D. de los siguientes números: \(\text{M.C.D.}(15, 28)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Escribimos la lista de divisores de cada número:
+                            $$ \text{Divisores}(15) = \{1, 3, 5, 15\} $$
+                            $$ \text{Divisores}(28) = \{1, 2, 4, 7, 14, 28\} $$
+                        </li>
+                        <li>Obtenemos los divisores en común:
+                            $$ \text{Divisores comunes} = \{1\} $$
+                        </li>
+                        <li>Tomamos el mayor número de la lista de comunes (son primos entre sí):
+                            $$ \text{M.C.D.}(15, 28) = 1 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el M.C.D. de 24 y 36: \(\text{M.C.D.}(24, 36)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Escribimos los divisores de ambos números:
+                            $$ \text{Divisores}(24) = \{1, 2, 3, 4, 6, 8, 12, 24\} $$
+                            $$ \text{Divisores}(36) = \{1, 2, 3, 4, 6, 9, 12, 18, 36\} $$
+                        </li>
+                        <li>Buscamos los divisores coincidentes:
+                            $$ \text{Divisores comunes} = \{1, 2, 3, 4, 6, 12\} $$
+                        </li>
+                        <li>Identificamos el mayor divisor común:
+                            $$ \text{M.C.D.}(24, 36) = 12 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Halla el máximo común divisor entre 16, 24 y 32: \(\text{M.C.D.}(16, 24, 32)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Listamos los divisores de los tres números:
+                            $$ \text{Divisores}(16) = \{1, 2, 4, 8, 16\} $$
+                            $$ \text{Divisores}(24) = \{1, 2, 3, 4, 6, 8, 12, 24\} $$
+                            $$ \text{Divisores}(32) = \{1, 2, 4, 8, 16, 32\} $$
+                        </li>
+                        <li>Buscamos los números presentes en las tres listas a la vez:
+                            $$ \text{Divisores comunes} = \{1, 2, 4, 8\} $$
+                        </li>
+                        <li>Elegimos el mayor valor común:
+                            $$ \text{M.C.D.}(16, 24, 32) = 8 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el valor del M.C.D. para 18, 27 y 45: \(\text{M.C.D.}(18, 27, 45)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Escribimos los divisores de cada uno de los términos:
+                            $$ \text{Divisores}(18) = \{1, 2, 3, 6, 9, 18\} $$
+                            $$ \text{Divisores}(27) = \{1, 3, 9, 27\} $$
+                            $$ \text{Divisores}(45) = \{1, 3, 5, 9, 15, 45\} $$
+                        </li>
+                        <li>Encontramos los divisores compartidos por los tres:
+                            $$ \text{Divisores comunes} = \{1, 3, 9\} $$
+                        </li>
+                        <li>Seleccionamos el mayor de ellos:
+                            $$ \text{M.C.D.}(18, 27, 45) = 9 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Determina el M.C.D. de los números 40 y 60: \(\text{M.C.D.}(40, 60)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Calculamos los divisores de cada número:
+                            $$ \text{Divisores}(40) = \{1, 2, 4, 5, 8, 10, 20, 40\} $$
+                            $$ \text{Divisores}(60) = \{1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60\} $$
+                        </li>
+                        <li>Identificamos los elementos comunes:
+                            $$ \text{Divisores comunes} = \{1, 2, 4, 5, 10, 20\} $$
+                        </li>
+                        <li>Tomamos el mayor divisor común:
+                            $$ \text{M.C.D.}(40, 60) = 20 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Calcula el M.C.D. de la siguiente terna numérica: \(\text{M.C.D.}(12, 20, 28)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Escribimos las listas de divisores correspondientes:
+                            $$ \text{Divisores}(12) = \{1, 2, 3, 4, 6, 12\} $$
+                            $$ \text{Divisores}(20) = \{1, 2, 4, 5, 10, 20\} $$
+                            $$ \text{Divisores}(28) = \{1, 2, 4, 7, 14, 28\} $$
+                        </li>
+                        <li>Buscamos las coincidencias en los tres conjuntos:
+                            $$ \text{Divisores comunes} = \{1, 2, 4\} $$
+                        </li>
+                        <li>Extraemos el mayor de ellos:
+                            $$ \text{M.C.D.}(12, 20, 28) = 4 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Encuentra el M.C.D. de los números 42 y 70: \(\text{M.C.D.}(42, 70)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Enumeramos los divisores de ambos enteros:
+                            $$ \text{Divisores}(42) = \{1, 2, 3, 6, 7, 14, 21, 42\} $$
+                            $$ \text{Divisores}(70) = \{1, 2, 5, 7, 10, 14, 35, 70\} $$
+                        </li>
+                        <li>Escribimos los divisores en común:
+                            $$ \text{Divisores comunes} = \{1, 2, 7, 14\} $$
+                        </li>
+                        <li>Determinamos el máximo común divisor:
+                            $$ \text{M.C.D.}(42, 70) = 14 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                Halla el máximo común divisor para los números 20, 50 y 100: \(\text{M.C.D.}(20, 50, 100)\)
+                
+                <div class="solution-box">
+                    <h3>Solución</h3>
+                    <ul>
+                        <li>Listamos el conjunto de divisores para cada número:
+                            $$ \text{Divisores}(20) = \{1, 2, 4, 5, 10, 20\} $$
+                            $$ \text{Divisores}(50) = \{1, 2, 5, 10, 25, 50\} $$
+                            $$ \text{Divisores}(100) = \{1, 2, 4, 5, 10, 20, 25, 50, 100\} $$
+                        </li>
+                        <li>Ubicamos los valores coincidentes entre los tres:
+                            $$ \text{Divisores comunes} = \{1, 2, 5, 10\} $$
+                        </li>
+                        <li>Resaltamos el mayor divisor que comparten:
+                            $$ \text{M.C.D.}(20, 50, 100) = 10 $$
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
