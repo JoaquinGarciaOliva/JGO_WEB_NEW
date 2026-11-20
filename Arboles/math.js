@@ -601,17 +601,17 @@
   <div class="tree-node"
        id="1.3.2.1."
        nivel="4"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.3.2.1.MCD_Definicion_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.3.2.1.MCD_Definicion_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.3.2.1.MCD_Definicion_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.3.2.1.MCD_Definicion_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.3.2.1.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.3.2.1.</span>
     <span class="Arbol_Nombre_4">Definición.</span>
   </div></li>
@@ -619,17 +619,17 @@
   <div class="tree-node"
        id="1.3.2.2."
        nivel="4"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.3.2.2.MCD_Calculo_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.3.2.2.MCD_Calculo_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.3.2.2.MCD_Calculo_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.3.2.2.MCD_Calculo_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.3.2.2.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.3.2.2.</span>
     <span class="Arbol_Nombre_4">Cálculo.</span>
   </div></li>
@@ -637,17 +637,17 @@
   <div class="tree-node"
        id="1.3.2.3."
        nivel="4"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.3.2.3.MCD_Euclides_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.3.2.3.MCD_Euclides_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.3.2.3.MCD_Euclides_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.3.2.3.MCD_Euclides_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.3.2.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.3.2.3.</span>
     <span class="Arbol_Nombre_4">Método Euclides</span>
   </div></li></ul></li></ul>
@@ -673,17 +673,17 @@
   <div class="tree-node"
        id="1.4.1."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.1.5.N_Problemas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.1.5.N_Problemas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.4.1.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.4.1.</span>
     <span class="Arbol_Nombre_3">Pasos a Seguir.</span>
   </div></li>
@@ -691,17 +691,17 @@
   <div class="tree-node"
        id="1.4.2."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.4.2.MCM_Problemas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.4.2.MCM_Problemas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.4.2.MCM_Problemas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.4.2.MCM_Problemas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.4.2.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.4.2.</span>
     <span class="Arbol_Nombre_3">Problemas del M.C.M.</span>
   </div></li>
@@ -709,17 +709,17 @@
   <div class="tree-node"
        id="1.4.3."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=01_Números Naturales/1.4.3.MCD_Problemas_Video.mp4"
+       teoria="Temario/Matematicas/01_Números Naturales/1.4.3.MCD_Problemas_Teoria.html"
+       ejemplos="Temario/Matematicas/01_Números Naturales/1.4.3.MCD_Problemas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/01_Números Naturales/1.4.3.MCD_Problemas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'1.4.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">1.4.3.</span>
     <span class="Arbol_Nombre_3">Problemas del M.C.D.</span>
   </div></li></ul></li></ul>
@@ -763,17 +763,17 @@
   <div class="tree-node"
        id="2.1.1."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.1.1.Z_Definicion_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.1.1.Z_Definicion_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.1.1.Z_Definicion_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.1.1.Z_Definicion_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.1.1.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">2.1.1.</span>
     <span class="Arbol_Nombre_3">Z conjunto de los números enteros.</span>
   </div></li>
@@ -781,17 +781,17 @@
   <div class="tree-node"
        id="2.1.2."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.1.2.Z_Orden_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.1.2.Z_Orden_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.1.2.Z_Orden_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.1.2.Z_Orden_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.1.2.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">2.1.2.</span>
     <span class="Arbol_Nombre_3">Orden. Representación Gráfica.</span>
   </div></li>
@@ -799,17 +799,17 @@
   <div class="tree-node"
        id="2.1.3."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.1.3.Z_ValorAbsoluto_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.1.3.Z_ValorAbsoluto_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.1.3.Z_ValorAbsoluto_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.1.3.Z_ValorAbsoluto_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.1.3.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">2.1.3.</span>
     <span class="Arbol_Nombre_3">Valor Absoluto.</span>
   </div></li>
@@ -817,17 +817,17 @@
   <div class="tree-node"
        id="2.1.4."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.1.4.Z_Opuesto_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.1.4.Z_Opuesto_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.1.4.Z_Opuesto_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.1.4.Z_Opuesto_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.1.4.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">2.1.4.</span>
     <span class="Arbol_Nombre_3">Opuesto.</span>
   </div></li></ul>
@@ -853,17 +853,17 @@
   <div class="tree-node"
        id="2.2.1."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.2.1.Z_Suma_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.2.1.Z_Suma_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.2.1.Z_Suma_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.2.1.Z_Suma_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.2.1.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">2.2.1.</span>
     <span class="Arbol_Nombre_3">Suma y Resta.</span>
   </div></li>
@@ -871,37 +871,19 @@
   <div class="tree-node"
        id="2.2.2."
        nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
+       imagen="Imagenes/JGO_Mat/hoja_green.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.2.2.Z_Multiplicar_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.2.2.Z_Multiplicar_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.2.2.Z_Multiplicar_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.2.2.Z_Multiplicar_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.2.2.')">
 
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
+    <img  class="manImg" src="Imagenes/JGO_Mat/hoja_green.png">
     <span style="display: none;">2.2.2.</span>
     <span class="Arbol_Nombre_3">Multiplicación y División.</span>
-  </div></li>
- <li>
-  <div class="tree-node"
-       id="2.2.3."
-       nivel="3"
-       imagen="Imagenes/arbol/hoja.png"
-       imagen2="Imagenes/"
-       Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
-       interactivo=""
-       onclick="toggleVisibility2(this,'2.2.3.')">
-
-    <img  class="manImg" src="Imagenes/arbol/hoja.png">
-    <span style="display: none;">2.2.3.</span>
-    <span class="Arbol_Nombre_3">Mulitplicaciones Encadenadas.</span>
   </div></li>
  <li>
   <div class="tree-node"
@@ -928,10 +910,10 @@
        imagen="Imagenes/arbol/hoja.png"
        imagen2="Imagenes/"
        Tipo=""
-       Youtube=""
-       teoria=""
-       ejemplos=""
-       ejercicios=""
+       Youtube="Temario/Matematicas/Pagina_video.html?videoId=02_Numeros_Enteros/2.2.4.1.Z_OpCombinadas_Video.mp4"
+       teoria="Temario/Matematicas/02_Numeros_Enteros/2.2.4.1.Z_OpCombinadas_Teoria.html"
+       ejemplos="Temario/Matematicas/02_Numeros_Enteros/2.2.4.1.Z_OpCombinadas_Ejemplos.html"
+       ejercicios="Temario/Matematicas/02_Numeros_Enteros/2.2.4.1.Z_OpCombinadas_Ejercicios.html"
        interactivo=""
        onclick="toggleVisibility2(this,'2.2.4.1.')">
 
